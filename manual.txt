@@ -1,0 +1,2965 @@
+:toc:
+
+Anki User Manual
+__________________
+Damien Elmes
+
+For questions regarding this manual, please see
+http://ankisrs.net/docs/help.html
+
+Introduction
+============
+
+:faq: link:faqs.html[Frequently Asked Questions]
+:website: http://ankisrs.net/[Anki website]
+:ankiweb: https://beta.ankiweb.net/
+
+Anki is a program which makes remembering things easy. Because it is a lot
+more efficient than traditional study methods, you can either greatly decrease
+your time spent studying, or greatly increase the amount you learn.
+
+Anyone who needs to remember things in their daily life can benefit from Anki.
+Since it is content-agnostic and supports images, audio, videos and scientific
+markup (via LaTeX), the possibilities are endless. For example:
+
+ - learning a language
+ - studying for medical and law exams
+ - memorizing people's names and faces
+ - brushing up on geography
+ - mastering long poems
+ - even practicing guitar chords!
+
+There are two simple concepts behind Anki: 'active recall testing' and 'spaced
+repetition'. They are not known to most learners, despite having been written
+about in the scientific literature for many years. Understanding how they work
+will make you a more effective learner.
+
+[[active-recall]]
+Active Recall Testing
+---------------------
+
+'Active recall testing' means being asked a question and trying to remember
+the answer. This is in contrast to 'passive study', where we read, watch or
+listen to something without pausing to consider if we known the answer.
+Research has shown that active recall testing is far more effective at
+building strong memories than passive study. There are two reasons for this:
+
+ - The act of recalling something 'strengthens' the memory, increasing the
+   chances we'll be able to remember it again
+ - When we're unable to answer a question, it tells us we need to return to
+   the material to review or relearn it
+
+You have probably encountered active recall testing in your school years
+without even realizing it. When good teachers give you a series of questions
+to answer after reading an article, or make you take weekly progress-check
+tests, they are not doing it simply to see if you understood the material or
+not. By testing you, they are increasing the chances you will be able to
+remember the material in the future.
+
+A good way to integrate active recall testing into your own studies is to use
+'flashcards'. With traditional paper flashcards, you write a question on one
+side of a card, and the answer on the other side. By not turning the card over
+until you've thought about the answer, you can learn things more
+effectively than passive observation allows.
+
+Use It or Lose It
+------------------
+
+Our brains are efficient machines, and they rapidly discard information that
+doesn't seem useful. Chances are that you don't remember what you had for
+dinner on Monday two weeks ago, because this information is not usually
+useful. If you went to a fantastic restaurant that day and spent the last two
+weeks telling people about how great it was, however, you're likely to still
+remember in vivid detail.
+
+The brain's "use it or lose it" policy applies to everything we learn. If you
+spend an afternoon memorizing some science terms, and then don't think about
+that material for two weeks, you'll probably have forgotten most of it. In
+fact, studies show we forget about 75% of material learnt within a 48 hour
+period. This can seem pretty depressing when you need to learn a lot of
+information.
+
+The solution is simple, however: 'review'. By reviewing newly-learnt
+information, we can greatly reduce forgetting.
+
+The only problem is that traditionally review was not very practical. If you
+are using paper flashcards, it's easy to flick through all of them if you only
+have 30 of them to review, but as the number grows to 300 or 3000, it quickly
+becomes unwieldy.
+
+[[spaced-repetition]]
+Spaced Repetition
+-----------------
+
+The 'spacing effect' was reported by a German psychologist in 1885. He
+observed that we tend to remember things more effectively if we spread reviews
+out over time, instead of studying multiple times in one session. Since the
+1930s there have been a number of proposals for utilizing the spacing effect
+to improve learning, in what has come to be called 'spaced repetition'.
+
+One example is in 1972, when a German scientist called Sebastian Leitner
+popularized a method of spaced repetition with paper flashcards. By separating
+the paper cards up into a series of boxes, and moving the cards to a different
+box on each successful or unsuccessful review, it was possible to see at a
+glance a rough estimate of how well a card was known and when it should be
+reviewed again. This was a great improvement over a single box of cards, and
+it has been widely adopted by computerized flashcard software. It is a rather
+rough approach however, as it can't give you an exact date on which you should
+review something again, and it doesn't cope very well with material of varying
+difficulty.
+
+The biggest developments in the last 30 years have come from the authors of
+SuperMemo, a commercial flashcard program that implements spaced repetition.
+SuperMemo pioneered the concept of a system that keeps track of the ideal time
+to review material and optimizes itself based on the performance of
+the user.
+
+In SuperMemo's spaced repetition system, every time you answer a question, you
+tell the program how well you were able to remember it - whether you forgot
+completely, made a small mistake, remembered with trouble, remembered easily,
+etc. The program uses this feedback to decide the optimal time to show you the
+question again. Since a memory gets stronger each time you successfully recall
+it, the time between reviews gets bigger and bigger - so you may see a
+question for the first time, then 3 days later, 15 days later, 45 days later,
+and so on.
+
+This was a revolution in learning, as it meant material could be learnt and
+retained with the absolute minimum amount of effort necessary. SuperMemo's
+slogan sums it up: with spaced repetition, you can 'forget about forgetting'.
+
+Why Anki?
+---------
+
+While there is no denying the huge impact SuperMemo has had on the field, it
+is not without its problems. The program is often criticized for being buggy
+and difficult to navigate. It only runs on Windows computers. It's proprietary
+software, meaning end-users can't extend it or access the raw data. And while
+very old versions are made available for free, they are quite limited for
+modern use.
+
+Anki addresses these issues. There are free clients for Anki available on many
+platforms, so struggling students and teachers with budgetary constraints are
+not left out. It's open source, with an already flourishing library of add-ons
+contributed by end-users. It's multi-platform, running on Windows, Mac OSX,
+Linux/FreeBSD, and some mobile devices. And it's considerably easier to use
+than SuperMemo.
+
+Internally, Anki's spaced repetition system is based on an older version of
+the SuperMemo algorithm called SM2. Subsequent versions have managed to
+squeeze out a little more learning efficiency, but they come at the cost of
+greatly increased complexity, and they are more susceptible to scheduling
+errors in real-world use. For a more in-depth discussion of this and the
+differences in scheduling algorithms, see the bottom of the {faq}.
+
+[[basics]]
+The Basics
+==========
+
+Cards
+-----
+
+A question and answer pair is called a 'card'. This is based on a paper
+flashcard with a question on one side an the answer on the back. In Anki a
+card doesn't actually look like a physical card, and when you show the answer
+the question remains visible by default. For example, if you're studying basic
+chemistry, you might see a question like:
+
+-----
+Q: Chemical symbol for oxygen?
+-----
+
+After thinking about it, and deciding the answer is O, you click the show
+answer button, and Anki shows you:
+
+-----
+Q: Chemical symbol for oxygen?
+A: O
+-----
+
+After checking you are correct, you can tell Anki how well you remembered, and
+Anki will choose a next time to show you again.
+
+Decks
+-----
+
+A 'deck' is a group of cards. You can place cards in different decks to study
+parts of your card collection instead of studying everything at once. Each
+deck can have different settings, such as how many new cards to show each day,
+or how long to wait until cards are shown again.
+
+Decks can contain other decks, which allows you to organize decks into a tree.
+Anki uses "::" to show different levels. A deck called "Chinese::Hanzi::Lesson
+1" refers to a "Lesson 1" deck, which is part of the Hanzi deck, which is part
+of the Chinese deck. If you select "Lesson 1" then only cards from lesson 1
+will be shown for study; if you select "Chinese" then all Chinese cards will
+be shown.
+
+Notes
+------
+
+Using paper flashcards or a traditional flashcard program, we might make the
+following cards:
+
+-----
+Q: Chemical symbol for oxygen?
+A: O
+-----
+
+and
+
+-----
+Q: Chemical number for oxygen?
+A: 8
+-----
+
+and
+
+-----
+Q: Chemical name for O?
+A: oxygen
+-----
+
+There are a number of downsides to this traditional approach. A lot of typing
+is involved. It's also easy to accidentally make mistakes, and if you later
+realize you spelt oxygen wrong, you have to edit each card in turn to correct
+it. You may also end up seeing one question right after the other, which isn't
+so useful.
+
+In Anki, instead of entering in cards directly, you add notes about things,
+and tell Anki how you want the notes to be turned into cards. In the above
+example, there were three related pieces of information:
+
+-----
+Name: oxygen
+Symbol: O
+Number: 8
+-----
+
+To store this information, we might create a new type of note, and call it
+something like "Atomic Elements", giving it three fields: name, symbol and
+number. We can then tell Anki to create some cards based on those fields.
+
+Templates
+---------
+
+In order for Anki to create cards, we need to give it a blueprint that says
+which fields should be displayed on the front or back of each card. This
+blueprint is called a 'template'.
+
+For example, imagine we have the note mentioned above, and we want a card that
+shows:
+
+-----
+Q: Chemical symbol for oxygen?
+A: O
+-----
+
+To do this, we can set the template question and answer to:
+
+-----
+Q: Chemical symbol for {{Name}}?
+A: {{Symbol}}
+-----
+
+By surrounding a field name in curly brackets, we tell Anki to replace that
+section with the actual information in the field. The information not
+surrounded by curly brackets remains the same on each card.
+
+Now let's create two more templates:
+
+-----
+Q: Chemical number for {{Name}}?
+A: {{Number}}
+-----
+
+and
+
+-----
+Q: Chemical name for {{Symbol}}?
+A: {{Name}}
+-----
+
+Once a template has been created, every time you add a new note, a card will be
+created based on that template. Templates make it easy to keep the formatting
+of your cards consistent, and can greatly reduce the amount of effort involved
+in adding information. They also mean Anki can ensure related cards
+don't appear too close to each other, and mean you can fix a typing mistake
+once and have all the related cards updated at once.
+
+To add and edit templates, click the "Cards..." button while adding or editing
+notes.
+
+Collection
+-----------
+
+Your collection is all the material stored in Anki - your cards, notes, decks,
+templates, and so on.
+
+Adding Material
+================
+
+Downloading Shared Decks
+-------------------------
+
+The easiest way to get started with Anki is to download a deck of cards
+someone has shared.
+
+ 1. Visit {ankiweb} and sign up for a free account.
+ 2. Click the "Decks" tab, and then "Get Shared Decks"
+ 3. When you've found a deck you're interested in, click the "Download" button
+    to add the deck to your online account.
+ 4. After the deck has been added, you'll be asked to choose what you'd like
+    to appear on the front and back of each card. Currently this screen only
+    allows you to choose one card; if you'd like multiple cards they can be
+    added later.
+ 5. Once you've finished setting up the front and back of your cards, you can
+    synchronize your decks to your computer if you'd like to study them
+    offline. To do this, please see the <<syncing,synchronization>> section.
+
+.Self-made versus pre-made
+**********************************************************************
+
+Creating your own deck is the most effective way to learn a complex subject.
+Subjects like languages and the sciences can't be understood simply by
+memorizing facts - they require explanation and context to learn effectively.
+Furthermore, inputting the information yourself forces you to decide what the
+key points are, and leads to a better understanding.
+
+If you are a language learner you may be tempted to download a long list of
+words and their translations, but this won't teach you a language any more
+than memorizing scientific equations will teach you astrophysics. To learn
+properly, you need textbooks, teachers, or exposure to real-world sentences.
+
+ Do not learn if you do not understand.
+ -- SuperMemo
+
+Most shared decks are created by people who are learning material outside of
+Anki - from textbooks, classes, TV, etc. They select the interesting points
+from what they learn and put them into Anki. They make no effort to add
+background information or explanations to the cards, because they already
+understand the material. So when someone else downloads their deck and tries
+to use it, they'll find it very difficult as the background information and
+explanations are missing.
+
+That is not to say shared decks are useless - simply that for complex
+subjects, they should be used as a 'supplement' to external material, not as a
+'replacement' for it. If you're studying textbook ABC and someone has shared a
+deck of ideas from ABC, that's a great way to save some time. And for simple
+subjects that are basically a list of facts, such as capital city names or pub
+quiz trivia, you probably don't need external material. But if you attempt to
+study complex subjects without external material, you will probably meet with
+disappointing results.
+**********************************************************************
+
+[[addingnotes]]
+Adding Cards and Notes
+-----------------------
+
+Recall from the <<basics,basics>> that in Anki we add notes rather than cards,
+and Anki creates cards for us. Click 'Add' in the main window, and the Add
+Notes window will appear.
+
+The top left of the window shows us the current note type. If it does
+not say "Basic", then you may have added some note types when you downloaded a
+shared deck. The text below assumes that "Basic" is selected.
+
+The top right of the window shows us the deck cards will be added to. If you'd
+like to add cards to a new deck, you can click on the button and then click
+"New".
+
+Below the note type, you'll see some buttons, and an area labeled "Front" and
+"Back". Front and Back are called 'fields', and can you can add, remove and
+rename them by clicking the "Fields..." button above.
+
+Below the fields is another area labelled "Tags". Tags are labels that you can
+attach to your notes, to make organizing and finding notes easier. You can
+leave the tags blank if you wish, or add one or more of them. Tags are
+separated by a space. If the tags area says
+
+ vocab check_with_tutor
+
+...then the note you add would have two tags.
+
+When you've entered text into the front and back, you can click the "Add"
+button or press Ctrl+Enter (Command+Enter on a Mac) to add the note to your
+collection. When you do so, a card will be created as well, and placed into
+the deck you chose. If you'd like to edit a card you added, you can click the
+history button to search for a recently added card in the browser.
+
+Anki requires the first field to be non-empty and unique, so you can't have two
+notes with the Front labelled "apple" for example. The uniqueness check is
+limited to the current note type, so if you're studying multiple languages, it
+would be okay to have the same Front as long as each language used a different
+note type.
+
+Anki doesn't allow you to check for duplicates in other fields automatically
+for efficiency reasons, but the browser has a "Find Duplicates" function which
+you can run periodically.
+
+For more information on the buttons between the note type and the fields,
+please see the <<editor,editor>> section.
+
+.Best Practices
+**********************************************************************
+Different people like to review in different ways, but there are some general
+concepts to keep in mind. An excellent introduction is
+http://www.supermemo.com/articles/20rules.htm[this article] on the
+SuperMemo site. In particular:
+
+ * *Keep it simple* The shorter your cards, the easier they are to review. You
+    may be tempted to include lots of information 'just in case', but reviews
+    will quickly become painful.
+
+ * *Don't memorize without understanding* If you're studying a language, try
+    to avoid large lists of words. The best way to learn languages is in
+    context, which means seeing those words used in a sentence. Likewise,
+    imagine you're studying a computer course. If you attempt to memorize the
+    mountain of acronyms, you'll find it very difficult to make progress. But
+    if you take the time to understand the concepts behind the acronyms,
+    learning the acronyms will become a lot easier.
+**********************************************************************
+
+[[notetypes]]
+Adding a Note Type
+-------------------
+
+While basic notes are sufficient for simple cards with only a word or phrase
+on each side, as soon as you find yourself wanting to include more than one
+piece of information on the front or back, it's better to split that
+information up into more fields.
+
+You may find yourself thinking "but I only want one card, so why can't I just
+include the audio, a picture, a hint and the translation in the Front field?"
+If you'd prefer to do that, that's fine. But the disadvantage of that approach
+is that all the information is stuck together. If you wanted to sort your
+cards by the hint, you wouldn't be able to do that as it's mixed in with the
+other content. You also wouldn't be able to do things like move the audio from
+the front to the back, except by laboriously copying and pasting it for every
+note. By keeping content in separate fields, it makes it much easier to adjust
+the layout of your cards in the future.
+
+To create a new type of note, in the Add window, click on the button next to
+"type", and then on the "Manage" button. Then click "Add" to add a new type of
+note. You'll now see another screen that gives you a choice of note types to
+base the new type on. "Add" means to base the newly created type on one that
+comes with Anki. "Clone" means to base the newly created type on one that is
+in your collection. If you'd created a French vocab type already for example,
+you might use that when creating a German vocab type.
+
+After choosing "OK", you'll be asked to name the new type. The subject
+material you're studying is a good choice here - things like "Japanese",
+"Trivia", and so on. Once you've chosen a name, close the Note Types window,
+and you'll return to the Add Notes window.
+
+[[fields]]
+Customizing Fields
+-------------------
+
+To customize fields, click the "Fields..." button when adding or editing a
+note.
+
+*Editing Font* allows you to customize the font and size used when editing
+notes. This is useful if you want to make unimportant information smaller, or
+increase the size of foreign characters which are hard to read. The changes
+you make here do not affect how cards appear when reviewing: to do that,
+please see the <<templates,templates>> section. If you have enabled the type
+in the answer function however, the text you type will use the font size
+defined here.
+
+When *Remember last input...* is checked, Anki will not clear out the field
+content after a note is added. If you find yourself entering the same content
+into multiple notes, you may find this useful.
+
+*Reverse text direction* is useful if you are studying languages that display
+text from right to left, such as Arabic or Hebrew.
+
+After you've added fields, you'll probably want to add them to the front or
+back of your cards. For more information on that, please see the
+<<templates,templates>> section.
+
+Studying
+==========
+
+When you have found a deck you like or entered some notes in, it's time to
+start studying.
+
+Decks
+------
+
+Study in Anki is limited to the currently selected deck, and any decks it
+contains. You can change the currently selected deck by clicking on "Decks" in
+the main window.
+
+On the decks screen, your decks will be displayed in a list. There are two
+number columns, 'due' and 'new'. 'Due' is the count of waiting reviews and
+cards currently in learning. 'New' is the number of new cards that are waiting
+to be learnt that day.
+
+When you click on a deck, it will become the 'current deck', and Anki will
+change to the study screen. 
+
+You can click the gears button to the right of a deck in order to rename or
+delete decks.
+
+Study Overview
+--------------
+
+After clicking on a deck to study, or clicking "Study", you'll see a screen
+that shows you how many cards are due today. There are three types:
+
+ * *New* refers to cards that you have downloaded or entered in, but have
+   never been studied before.
+ * *In Learning* refers to cards that were seen for the first time recently,
+   and are still being learnt.
+ * *To Review* refers to cards that were previously learnt, and now need to be
+   reviewed so you don't forget them.
+
+To start a study session, click the *Study Now* button. Anki will proceed to
+show you cards until the cards to be shown for the day have run out.
+
+Questions
+---------
+
+When a card is shown, only the question is shown at first. After thinking
+about the answer, either click the *Show Answer* button, or press the
+spacebar. The answer will then be shown. It's ok if it takes you a little
+while to recall the answer, but as a general rule if you can't answer within
+about 10 seconds, it's better to give up and show the answer than keep
+struggling to remember.
+
+When the answer is shown, you should compare the answer you thought of with
+the answer which is shown, and tell Anki how well you remembered. If you don't
+trust yourself to compare your answer accurately, you can ask Anki to prompt
+you to type in the answer rather than just showing it to you. If you'd like to
+do this, please see the <<templates,templates>> section.
+
+The number of buttons available for grading depends on whether the card is
+being learnt or reviewed.
+
+[[learning]]
+Learning
+---------
+
+When learning new cards, or when relearning cards that you have forgotten,
+Anki will show you the cards one or more times to help you memorize them. By
+default there are two steps: 1 minute and 10 minutes. You can change the
+number of steps and the delays between them by clicking the *Options* button
+while looking at the study overview.
+
+There are three rating buttons when learning:
+
+*Again* moves the card back to the first step.
+
+*Good* moves the card to the next step. If the card was on the final step, the
+card is converted into a review card. By default, the card will be
+shown again the next day, and then at increasingly long delays.
+
+*Easy* immediately converts the card into a review card, even if there were
+steps remaining. By default, the card will be shown again 4 days later, and
+then at increasingly long delays.
+
+When cards are seen for the first time, they start at step one. This means
+answering *Good* on a card for the first time will show it one more time in 10
+minutes, and the initial 1 minute step will be skipped.
+
+You can use the 1, 2 and 3 keys on your keyboard to select a particular
+button, where 1 = *Again*. Pressing the spacebar will select *Good*.
+
+Reviewing
+---------
+
+When a card has been previously learnt and is ready to be reviewed again,
+there are four buttons to rate your answer:
+
+*Again* marks your answer as incorrect, and asks Anki to show the card more
+frequently in the future. Please see the <<lapses,lapses>> section for more
+information about how lapsed reviews are handled.
+
+*Hard* shows the card at a slightly longer delay than last time, and tells
+Anki to be more conservative when scheduling the card in the future.
+
+*Good* tells Anki that the last delay was about right, and the card easiness
+doesn't need to be adjusted down or up. At the default starting easiness, the
+card will be shown again approximately 2 1/2 times longer than the previous
+time - so if you had waited 10 days to see the card previously, the next delay
+would be about 25 days.
+
+*Easy* tells Anki you're finding the delays too short. The card will be
+scheduled further into the future than 'Good', and Anki will be more
+aggressive in its scheduling of the card in the future. Because 'Easy' rapidly
+increases the delay, it's best left for only the easiest of cards. Usually you
+should find yourself answering 'Good' instead.
+
+Like learning cards, you can use 1-4 on the keyboard to select an answer.
+Pressing the spacebar will select 'Good'.
+
+Due Counts and Time Estimates
+-------------------------------
+
+When only the question is shown, Anki shows three numbers like 12 + 34 + 56.
+They represent new cards, cards in learning, and cards to review. If you'd
+prefer not to see the numbers, you can turn them off in Anki's preferences.
+
+When the answer is shown, Anki shows an estimate of the next time a card will
+be shown above each button. If you'd prefer not to see the estimates, you can
+also disable them in Anki's preferences.
+
+[[editmore]]
+Editing and More
+------------------
+
+You can click the *Edit* button in the bottom left to edit the current note.
+When you finish editing, you'll be returned to study. The editing screen is
+very similar to the <<addingnotes,add notes>> screen.
+
+On the bottom right is a button labeled *More*. This button provides some
+other operations you can do on the current card or note:
+
+ Mark Note ::
+  Adds a "marked" tag to the current note, so it can be easily found in the
+  browser. This is useful when you want to take some action on the note at a
+  later date, such as looking up a word when you get home.
+ Bury Note ::
+  Hides all of the note's cards from review until Anki is reopened. Useful if
+  you want to come back to the card another time.
+ Suspend Note ::
+  Hides all of the note's cards from review until they are manually
+  unsuspended. Useful if you want to avoid reviewing the note for some time,
+  but don't want to delete it.
+ Delete Note ::
+  Deletes the note and all of its cards.
+ Card Options ::
+  Edit the options for the current card.
+ Replay Audio ::
+  If the card has audio on the front or back, it will be played again.
+ Record Own Voice ::
+  Record your own voice for the purposes of checking your pronunciation.
+ Replay Own Voice ::
+  Replay the previous recording of your voice.
+
+Display Order
+--------------
+
+Studying will show cards from the selected deck, and any decks it contains.
+Thus if you select "French", "French::Vocab" and "French::My Textbook::Lesson
+1" and so on will all be shown as well.
+
+For new cards and reviews, Anki fetches cards from the decks in alphabetical
+order. So in the above example, you would get cards first from "French", then
+"My Textbook", and finally "Vocab". You can use this fact to control the order
+cards appear in, placing high priority cards in decks that appear higher in
+the list. When computers sort text alphabetically, the "-" character comes
+before alphabetical characters, and "\~" comes after them. So if you called the
+deck "-Vocab", your vocab cards would appear first, and you could call the
+other deck "~My Textbook" to force it to appear after everything else.
+
+New cards and reviews are fetched separately, and Anki won't wait until both
+queues are empty before moving on to the next deck, so it's possible you'll be
+exposed to new cards from a different deck to the reviews or vice versa. If
+you don't want that, click directly on the deck you want to study instead of
+one of the parent decks.
+
+Cards in learning are fetched from all decks at once, because they are
+somewhat time critical, and shown in the order they are due.
+
+For more fine-grained ordering of new cards, you can change the order in the
+<<browser,browser>>.
+
+To control the order reviews from a given deck appear in, or change new cards
+from ordered to random order, please see the <<deckoptions,deck options>>.
+
+[[studyshortcuts]]
+== Keyboard Shortcuts  ==
+
+Many of the common operations in Anki have keyboard shortcuts. Most of them
+are discoverable in the interface: menu items list their shortcuts next to
+them, and hovering the mouse cursor over a button will generally show its
+shortcut in a tooltip.
+
+When studying, either space or enter will show the answer. When the answer is
+shown, you can use space or enter to select the Good button. You can use the
+1-4 keys to select a specific ease button. Many people find it convenient to
+answer most cards with space and keep one finger on 1 for when they forget.
+
+[[studydeck]]
+The "Study Deck" item in the Tools menu allows you to quickly switch to a deck
+with the keyboard. You can trigger it with the '/' key. When opened, it will
+display all of your decks, and show a filter area at the top. As you type
+characters, Anki will display only decks matching the characters you type. The
+search is non-consecutive, so if you want to select the "Japanese::Lesson 1"
+deck, you could just type "j1" (but not "1j").
+
+[[editor]]
+Editing
+=======
+
+Features
+---------
+
+The editor is shown when <<addingnotes,adding notes>>, <<editmore,editing a
+note>> during reviews, or <<browser,browsing>>.
+
+On the top left are two buttons, which open the <<fields,fields>> and
+<<templates,cards>> windows.
+
+On the right are buttons that control formatting. Bold, italic and underline
+work like in a wordprocessing program. The next two buttons allow you to
+subscript or superscript text, which is useful for chemical compounds like
+H~2~O and or simple math equations like x^2^.
+
+The icon with the red cross clears any formatting in currently selected text.
+This includes colours, bold, etc.
+
+The next button allows you to change text colour.
+
+The paperclip allows you to attach audio, images and videos to your notes. For
+more information, please see the <<media,media>> section.
+
+The red circle button allows you to record your voice and attach it to the note. 
+
+The last button allows you to add advanced mathematical markup called
+<<latex,LaTeX>> to your notes, or edit the underlying formatting.
+
+Most of the buttons have shortcut keys. You can hover the mouse cursor over a
+button to find out its shortcut. For the LaTeX/HTML menu, use Ctrl+t then t, e
+or m to select the three LaTeX types, and Ctrl+shift+x to edit the HTML.
+
+[[cloze]]
+Cloze Deletion
+---------------
+
+Cloze deletion is the process of hiding one or more words in a sentence. For
+example, if you have the sentence:
+
+-----
+Canberra was founded in 1913.
+-----
+
+...and you create a cloze deletion on "1913", then the sentence would become:
+
+-----
+Canberra was founded in [...].
+-----
+
+Anki provides a special cloze deletion type of note, to make creating clozes
+easy. To create a cloze deletion note, select the Cloze note type, and type
+some text into the "Text" field. Then drag the mouse over the text you want to
+hide to select it, and click the [...] button. Anki will replace the text
+with:
+
+-----
+Canberra was founded in {{c1::1913}}.
+-----
+
+The "c1" part means that you've created one cloze deletion on the sentence.
+You can create more than one deletion if you'd like. For example, if you
+select Canberra and click [...] again, the text will now look like:
+
+-----
+{{c2::Canberra}} was founded in {{c1::1913}}.
+-----
+
+When you add the above note, Anki will create two cards. The first card will
+show:
+
+-----
+Canberra was founded in [...].
+-----
+
+...on the question, with the full sentence on the answer. The other card will
+have the following on the question:
+
+-----
+[...] was founded in 1913.
+-----
+
+You can also elide multiple sections at once. In the above example, if you
+change c2 to c1, only one card would be created, with both Canberra and 1913
+hidden. If you hold down alt (option on a Mac) while creating a cloze, Anki
+will automatically use the same number instead of incrementing it.
+
+Cloze deletions don't need to fall on word boundaries, so if you select
+"anberra" rather than "Canberra" in the above example, the question would
+appear as "C[...] was founded in 1913", giving you a hint.
+
+You can also give yourself hints that don't match the text. If you replace the
+original sentence with:
+
+-----
+Canberra::city was founded in 1913
+-----
+
+...and then press [...] after selecting "Canberra::city", Anki will treat the
+text after the two colons as a hint. When the card comes up for review, it
+will appear as:
+
+-----
+[city...] was founded in 1913.
+-----
+
+For information on testing your ability to type in a cloze deletion correctly,
+please see the section on <<typinganswers,templates>>.
+
+Please note that overlapping clozes are not supported. For example, the
+following field is invalid:
+
+-----
+{{c1::Canberra was {{c2::founded}}}} in 1913
+-----
+
+If you need to create clozes from overlapping text, add another Text field to
+your cloze, add it to the <<templates,template>>, and then when creating
+notes, paste the text into two separate fields, like so:
+
+-----
+Text1 field: {{c1::Canberra was founded}} in 1913
+
+Text2 field: {{c2::Canberra}} was founded in 1913
+-----
+
+The default cloze note type has a second field called Extra, that is shown on
+the answer side of each card. It can be used for adding some usage notes or
+extra information.
+
+Inputting Foreign Characters and Accents
+------------------------------------------
+
+Windows, Mac and Linux provide built-in support for other languages. There is
+no need to buy a different keyboard. Some flashcard programs try to save you
+the trouble of enabling support on your computer, and provide a clickable set
+of buttons for each foreign character, or provide their own conversion
+utilities. However, this makes input a lot slower. One person
+http://www.glowingfaceman.com/2008/12/french-revolution-day-7.html[writes]:
+
+ By the way, if you're learning any foreign language with exotic characters,
+ even just the Spanish ñ, I encourage you to look into how to efficiently
+ type those characters. When I first started studying Japanese, I didn't
+ know how to type Japanese characters. I'd just copy-and-paste things to
+ make flashcards and/or communicate with people. And if I wanted to type
+ something original, that meant painstakingly finding, then
+ copying-and-pasting each individual character. With my U.S.-bought
+ computer, it was kind of a pain to get Japanese IME support (and it
+ involved borrowing a Windows XP disk from a friend since you need one to
+ install Microsoft's Japanese IME). But it was worth it a million times
+ over. In retrospect, I should have done that as one of my very first steps
+ when I first set out to learn Japanese.
+
+If you're learning a right to left language, there are lots of other things to
+consider. Please see http://dotancohen.com/howto/rtl_right_to_left.html[this
+page] for more information.
+
+To learn more:
+
+ * http://www.latenightpc.com/french_keyboard.html[French or other accented languages on Windows]
+ * http://greggman.com/japan/xp-ime/xp-ime.htm[Japanese on Windows]
+ * http://library.wcc.hawaii.edu/Computers/Tips_Japanese_Input.pdf[Japanese on OSX]
+
+[[templates]]
+Cards and Templates
+====================
+
+As mentioned in the <<basics,basics>>, Anki creates cards automatically for
+use, based on your notes. You can configure the cards Anki should create and
+what should be shown them when adding or editing material by clicking on the
+"Cards..." button. Please read the basics section if you have not done so
+already, as the rest of this section assumes you have read it.
+
+At the top of the window you'll see a list of cards. You can click the plus on
+the right if you'd like to add another card to the current note type.
+
+On the top left is the front template, on the bottom left is the back
+template, and in between them is the card styling section.
+
+In Anki, templates are written in HTML, which is the language that web pages
+are written in. The styling section is CSS, which is the language used for
+styling web pages.
+
+On the right is a preview of the front and back of the currently selected
+card. If you opened the window while adding notes, the preview will be based
+on the text you had typed into the Add Notes window. If you opened the window
+while editing a note, the preview will be based on that note.
+
+At the bottom of the window are some buttons to rename or reorder the cards.
+Another button labeled "Default Deck..." allows you to change the deck in
+which cards of the current type will be placed into. By default, cards are
+placed into the deck you provide in the Add Notes window. If you set a deck
+here, the button will change to read "Specific Deck...", and that card type
+will be placed into the deck you specified, instead of the deck listed in the
+Add Notes window.
+
+== Basic Templates ==
+
+The most basic template looks something like this:
+
+-----
+{{Front}}
+-----
+
+When you place text within curly brackets, Anki looks for a field by that
+name, and replaces the text with the actual content of the field. You can
+include as many fields as you wish.
+
+Your templates are not limited to a list of fields. You can also include
+arbitrary text on your templates. For example, if you're studying capital
+cities, and you've created a note type with a "Country" field, you might
+create a question like this:
+
+-----
+What's the capital city of {{Country}}?
+-----
+
+The default back template will look something like this:
+
+-----
+{{FrontSide}}
+
+<hr id=answer>
+
+{{Back}}
+-----
+
+This means "show me the text that's on the question, then a divider line, and
+then the back field". 
+
+[[typinganswers]]
+== Checking Your Answer ==
+
+If you'd like to type in the answer and have Anki compare your input to the
+real answer, you can do so by changing your template. Imagine your front
+and back templates look like:
+
+-----
+{{Native Word}}
+-----
+
+-----
+{{FrontSide}}
+
+<hr id=answer>
+
+{{Foreign Word}}
+-----
+
+To type in the foreign word and check if you are correct, you need to edit
+your question template so that it looks like this:
+
+-----
+{{Native Word}}
+{{type:Foreign Word}}
+-----
+
+Note that we have added 'type:' in front of the field we want to compare, and
+it is copied into the answer section as well. If you don't have FrontSide on
+the back of your card, you wil need to add the same type directive to the
+answer side as well.
+
+When reviewing, Anki will display a text box where you can type in the answer,
+and upon hitting enter or showing the answer, Anki will show you which parts
+you got right and which parts you got wrong. The text box's font size will be
+the size you configured for that field (via the "Fields" button when editing).
+
+This feature does not change how the cards are answered, so it's still up to
+you to decide how well you remembered or not.
+
+It is also possible to type in the answer for cloze deletion cards. The front
+and back of your cloze template should look like this:
+
+-----
+{{cloze:Text}}
+-----
+
+To enable typing, add a <br> and append a line like so:
+
+-----
+{{cloze:1:Text}}<br>
+{{type:cloze:Text}}
+-----
+
+If you don't want to see the context in the answer, you can delete the first
+line of the answer template.
+
+== Newlines ==
+
+The template language needs a special command to create a new line. For
+example, if you wrote the following in the template:
+
+-----
+one
+two
+-----
+
+In the preview, you'd actually see:
+
+-----
+one two
+-----
+
+To add a new line, you need to add a <br> code to the end of a line, like so:
+
+-----
+one<br>
+two
+-----
+
+The br code stands for "(line) br(eak)".
+
+The same applies for fields. If you want to display two fields, one on each
+line, you would use
+
+-----
+{{Field 1}}<br>
+{{Field 2}}
+-----
+
+== Card Styling ==
+
+In between the front and back template is the card styling. Here you can
+change the background colour of the card, the default font, the text
+alignment, and so on.
+
+The standard options available to you are:
+
+ font-family ::
+  The name of the font to use on the card. If your font has spaces in it like
+  "MS Unicode", then you need to surround the font name in double quotes as in
+  this sentence. It is also possible to use multiple fonts on one card; for
+  information on that, please see below.
+ font-size ::
+  The size of the font in pixels. When changing it, make sure you leave px at
+  the end.
+ text-align ::
+  Whether the text should be aligned in the center, left, or right.
+ color ::
+  The color of the text. Simple color names like 'blue', 'lightyellow' and so
+  on will work, or you can use HTML color codes to select arbitrary colors.
+  Please see http://htmlcolorcodes.org/[this webpage] for more information.
+ background-color ::
+  The color of the card background.
+
+Arbitrary CSS can be placed in the styling section - advanced users may wish
+to do things like add a background image or gradient for example.
+
+The styling is shared between all cards, which means that when you make an
+adjustment it will affect all cards for that note type. It is also possible to
+specify card-specific styling. The following example will use a yellow
+background on all cards except the first one:
+
+-----
+.card { background-color: yellow; }
+.card1 { background-color: blue; }
+-----
+
+One other thing to note is that Anki shrinks images to fit the screen by
+default. You can change this by adding the following to the bottom of your
+styling section:
+
+-----
+img { max-width: none; max-height: none; }
+-----
+
+== Field Styling ==
+
+The default styling applies to the whole card. You can also make certain
+fields or part of the card use a different font, color, and so on. This is
+particularly important when studying foreign languages, as Anki will sometimes
+be unable to correctly display characters unless an appropriate font has been
+chosen.
+
+Say you have an "Expression" field, and you want to give it the OSX Thai
+font "Ayuthaya". Imagine your template already reads:
+
+-----
+What is {{Expression}}?
+
+{{Notes}}
+-----
+
+What we need to do is wrap the text we want to style in some HTML. We will put
+the following in front of the text:
+
+-----
+<span class=mystyle1>
+-----
+
+And the following behind it:
+
+-----
+</span>
+-----
+
+By wrapping the text like the above, we tell Anki to style the wrapped text
+with a custom style called "mystyle1", which we will create later.
+
+Thus if we wanted the entire "What is ...?" expression to use the Thai font,
+we would use:
+
+-----
+<span class=mystyle1>What is {{Expression}}?</span>
+
+{{Notes}}
+-----
+
+And if we wanted only the expression field itself to use the Thai font, we'd
+use:
+
+-----
+What is <span class=mystyle1>{{Expression}}</span>?
+
+{{Notes}}
+-----
+
+After we've edited the template, we now need to move to the Styling section
+between the templates. Before editing it, it should look something like:
+
+-----
+.card {
+ font-family: arial;
+ font-size: 20px;
+ text-align: center;
+ color: black;
+ background-color: white;
+}
+-----
+
+Add your new style to the bottom, so it looks like:
+
+-----
+.card {
+ font-family: arial;
+ font-size: 20px;
+ text-align: center;
+ color: black;
+ background-color: white;
+}
+
+.mystyle1 {
+ font-family: ayuthaya;
+}
+-----
+
+You can include any styling you want in the style. If you wanted to increase
+the font size too, you'd change the mystyle1 section to look like:
+
+-----
+.mystyle1 {
+ font-family: ayuthaya;
+ font-size: 30px;
+}
+-----
+
+== Hint Fields ==
+
+It's possible to add a field to the front or back of a card, but make it
+hidden until you explicitly show it. We call this a 'hint field'. Before
+adding a hint, please bear in mind that the easier you make it to answer a
+question in Anki, the less likely you are to remember that question when you
+encounter it in real life.
+
+First, you'll need to add a field to store the hint in if you have not already.
+Please see the <<fields,fields>> section if you're not sure how to do this.
+
+Assuming you've created a field called MyField, you can tell Anki to hide it
+by default by adding the following to your template:
+
+-----
+{{hint:MyField}}
+-----
+
+If MyField is blank, nothing will be shown.
+
+== Special Fields ==
+
+There are some special fields you can include in your templates:
+
+-----
+The note's tags: {{Tags}}
+
+The type of note: {{Type}}
+
+The card's deck: {{Deck}}
+
+The type of card ("Forward", etc): {{Card}}
+
+The front text (only valid in back template): {{FrontSide}}
+-----
+
+== Card Generation ==
+
+Anki will not create cards with empty front sides. Thus if "My Field" was
+empty, and one card's front template included only that field, the card would
+not be created.
+
+If no cards can be created, then the Add Notes window will warn you and not
+allow the note to be added until at least one card would be generated.
+
+When you edit a previously added note, Anki will automatically create extra
+cards if they were previously blank, but no longer so.
+
+If your edits have made some cards blank, Anki will not delete them
+immediately, as that could lead to accidental data loss. To remove empty
+cards, in the main window go the Tools menu and choose Maintenance->Empty
+Cards. You will be shown a list of empty cards and be given the option to
+delete them.
+
+Anki does not consider special fields or non-field text for the purposes of
+card generation. Thus if your front template looked like the following, no
+card would be generated if Country was empty:
+
+-----
+Where is {{Country}} on the map?
+-----
+
+== Selective Card Generation ==
+
+Sometimes you may want to generate extra cards for only some of your material,
+such as testing your ability to recall the most important words of a set. You
+can accomplish this by adding an extra field to your note, and adding some
+text into it (such as "1") on the notes you want the extra card. Then in the
+card template, you can make the card's creation depend on that field being
+non-empty. For more information on this, please see the conditional
+replacement section below.
+
+==  Media References ==
+
+Anki previously allowed you to include media references in templates, like:
+
+-----
+<img src="{{Expression}}.jpg">
+
+[sound:{{Word}}]
+
+[latex]{{Field 1}}[/latex]
+-----
+
+This is no longer supported, as it complicates deck sharing and considerably
+slows down checks for unused media. Please see the <<importing,importing>>
+section for information on alternatives.
+
+== Conditional Replacement ==
+
+It is possible to include certain text on your cards only if a field is empty
+or not empty. An example:
+
+-----
+This text is always shown.
+
+{{#FieldName}}
+This text is only shown if FieldName has text in it
+{{/FieldName}}
+
+{{^FieldName}}
+This text is only shown if FieldName is empty
+{{/FieldName}}
+-----
+
+A real life example is only showing a label if the field is not empty:
+
+-----
+{{#Tags}}Tags: {{Tags}}{{/Tags}}
+-----
+
+You can also use conditional replacement to control which cards are generated.
+For example, consider a card with two fields on the front:
+
+-----
+{{Expression}}
+{{Notes}}
+-----
+
+Normally a card would be generated if either the expression or notes field had
+text in it. If you only wanted a card generated if expression was not empty,
+then you could change the template to this:
+
+-----
+{{#Expression}}
+{{Expression}}
+{{Notes}}
+{{/Expression}}
+-----
+
+And if you wanted to require both fields, you could use two conditional
+replacements:
+
+-----
+{{#Expression}}
+{{#Notes}}
+{{Expression}}
+{{Notes}}
+{{/Notes}}
+{{/Expression}}
+-----
+
+The default behaviour can be thought of as an "OR" condition - cards are
+created if the first field is non-empty, OR the second field is non-empty, and
+so on. The behaviour above can be thought of as an "AND" condition - cards are
+created if the first field is non-empty AND the second field is non-empty, and
+so on. 
+
+A caveat: Anki is not currently able to mix AND and OR conditions. Thus the
+following template, which says "require expression and notes, or field 3",
+would not work:
+
+-----
+{{#Expression}}
+{{#Notes}}
+{{Expression}}
+{{Notes}}
+{{/Notes}}
+{{/Expression}}
+
+{{Field 3}}
+-----
+
+Another caveat is that negated expressions can not be used to control card
+generation. That is, wrapping a template in \{\{^Field}} will not do what you
+expect.
+
+[[clozetemplates]]
+== Cloze Templates ==
+
+Please see the <<cloze,cloze deletion>> section for background info.
+
+The cloze note type functions differently from regular note types. Instead of
+a customizable number of card templates, it has a single template which is
+shared by all cloze deletions on a note.
+
+As mentioned in the card generation section above, generation of regular cards
+depends on one or more fields on the question being non-empty. Cloze deletion
+note types are generated differently:
+
+ * Anki looks on the question template for one or more cloze replacements,
+   like \{\{cloze:FieldName}}. 
+ * It then looks in the FieldName field for all cloze references, like
+   \{\{c1:text}}.
+ * For each separate number, a card will be generated.
+
+Conditional generation provides a special field so you can check which card
+you are rendering. If you wanted to display the "hint1" field on the first
+cloze, and "hint2" field on the second cloze for example, you could use the
+following template:
+
+-----
+{{cloze:Text}}
+
+{{#c1}}
+{{Hint1}
+{{/c1}}
+
+{{#c2}}
+{{Hint2}
+{{/c2}}
+-----
+
+== Other HTML ==
+
+Your templates can contain arbitrary HTML, which means that all the layout
+possibilities used on internet web pages can also be used on your cards.
+Things like tables, lists, images, links to external pages and so on are all
+supported. With tables for example, you could change the layout so that the
+front and back of a card appear on the left and right instead of the top and
+bottom.
+
+Covering all of HTML's features is outside the scope of this manual, but there
+are plenty of good introductory guides to HTML available on the web if you'd
+like to learn more.
+
+== Dictionary Links ==
+
+You can also use field replacement to create dictionary links. Imagine you're
+studying a language and your favourite online dictionary allows you to search
+for text using a web URL like:
+
+-----
+http://example.com/search?q=myword
+-----
+
+You could add an automatic link by doing the following in your template:
+
+-----
+{{Expression}}
+
+<a href="http://example.com/search?q={{Expression}}">check in dictionary</a>
+-----
+
+The template above would allow you to search for each note's expression by
+clicking on the link while reviewing. There is a caveat however, so please see
+the next section.
+
+== HTML Stripping ==
+
+Like templates, fields are stored in HTML. In the dictionary link example
+above, if the expression contained the word "myword" without any formatting,
+then the HTML would be the same: "myword". But when you include formatting in
+your fields, extra HTML is included. If "myword" was bolded for example, the
+actual HTML would be "<b>myword</b>".
+
+This can present a problem for things like dictionary links. In the above
+example, the dictionary link would end up being:
+
+-----
+<a href="http://example.com/search?q=<b>myword</b>">check in dictionary</a>
+-----
+
+The extra characters in the link would likely confuse the dictionary site, and
+you're likely not to get any matches.
+
+To solve this, Anki provides the ability to strip formatting from fields when
+they are replaced. If you prefix a field name with text:, Anki will not
+include any formatting. So a dictionary link that worked even with formatted
+text would be:
+
+-----
+<a href="http://example.com/search?q={{text:Expression}}">check in dictionary</a>
+-----
+
+== LaTeX Conflicts ==
+
+It's not uncommon for {{ and }} to pop up in LaTeX code when writing
+mathematical equations. To ensure that your LaTeX equations don't conflict
+with Anki's field replacements, it's possible to change the separator to
+something else.
+
+For example, if you have a template:
+
+-----
+{{latex field}}
+-----
+
+Changing it to the following will make it unlikely that the LaTeX will
+conflict:
+
+-----
+{{=<% %>=}}
+<%latex field%>
+-----
+
+[[columntemplates]]
+== Column Templates ==
+
+If your card templates are complex, it may be difficult to read the question
+and answer columns in the <<cardlist,card list>>. The "column templates"
+option allows you to define a custom template to be used only in the browser,
+so you can include only the important fields and change the order if you
+desire.
+
+[[platformcss]]
+== Platform-Specific CSS ==
+
+Anki defines some special CSS classes that allow you to define different
+styling for different platforms. The example below shows how to vary the font
+depending on where you're reviewing:
+
+-----
+.win .jp { font-family: "MS Mincho"; }
+.mac .jp { font-family: "Hiragino Mincho Pro"; }
+.linux .jp { font-family: "Kochi Mincho"; }
+.mobile .jp { font-family: "Hiragino Mincho ProN"; }
+-----
+
+And in the template:
+
+-----
+<span class=jp>{{Field}}</span>
+-----
+
+[[profileprefs]]
+= Profiles & Preferences =
+
+[[profiles]]
+Profiles
+---------
+
+If more than one person wants to use Anki on your computer, you can set up a
+separate profile for each user. Each user profile has their own collection,
+and own program settings. Profiles are configured by going to the File menu
+and choosing "Switch Profile".
+
+It's possible to assign a password to your profile by going to Anki's
+preferences window. Your collection is not encrypted, and people can still
+tamper with the file if they locate it on your hard disk. The password
+protection is mainly intended to make it harder for students to tamper with
+each other's decks and settings in a classroom environment.
+
+While most people will want to stick to one profile per user, it's possible to
+use extra profiles for testing purposes or for separating decks you want to
+keep on AnkiWeb from ones you do not.
+
+[[preferences]]
+Preferences
+------------
+
+The preferences are available from the Tools menu on Windows/Linux, or the
+Anki menu on a Mac. If you have multiple profiles, any changes you make will
+apply only to the current profile.
+
+*Basic*
+
+The *Strip HTML* option controls whether Anki should strip the formatting from
+text you paste into the editor. By default, Anki strips the formatting from
+pasted text so that you can control formatting in your card templates instead.
+If you'd prefer the formatting to be preserved (so you can paste bolded text,
+etc), you can uncheck this option.
+
+By default Anki pastes images on the clipboard as JPG files, to save disk
+space. You can use the *Paste clipboard images as PNG* option to paste as PNG
+images instead. PNG images support transparent backgrounds and are lossless,
+but they usually result in much large file sizes.
+
+The *Next day starts at* option controls when Anki should start showing the
+next day's cards. The default setting of 4AM ensures that if you're studying
+around midnight, you won't have two days' worth of cards shown to you in one
+session. If you stay up very late or wake up very early, you may want to
+adjust this to a time you're usually sleeping.
+
+The *Learn ahead limit* tells Anki how to behave when there is nothing left to
+study in the current deck but cards in learning. The default setting of 20
+minutes tells Anki that cards should be shown early if they have a delay of
+less than 20 minutes and there's nothing else to do. If you set this to 0,
+Anki will always wait the full delay, showing the congratulations screen until
+the remaining cards are ready to be reviewed.
+
+Timeboxing is a technique to help you focus by dividing a longer activity
+(such as a 30 minute study session) into smaller blocks. If you set the
+*timebox time limit* to a non-zero number of minutes, Anki will periodically
+show you how many cards you've managed to study during the prescribed time
+limit.
+
+[[deckoptions]]
+= Deck Options =
+
+Deck options are accessed by selecting a deck on the 'Decks' screen, and then
+clicking 'Options' at the bottom of the screen.
+
+Anki allows you to share options between different decks, to make updating
+options in many decks at once easy. To do this, options are grouped into an
+'options group'. By default, all newly created decks use the same options
+group, and decks imported from previous versions of Anki have separate option
+groups. If you'd like to alter the settings on one deck but not other decks,
+click the gears icon in the top right and add a new options group.
+
+New Cards
+---------
+
+*Steps* controls the number of learning repetitions, and the delay between
+them. Please see the <<learning,learning>> section for an overview of how the
+steps work.
+
+Steps over a day (1440 minutes) are supported as well - if you want, you can
+define a schedule like 10 minutes, 1 day, 3 days and then finally 7 days
+before the card becomes a review card.
+
+NOTE: If there's nothing else to study, Anki will show cards up to 20 minutes
+early by default. The amount of time to look ahead is configurable in the
+<<preferences,preferences>>. One thing to be aware of is that the due counts
+will differ between the deck screen and study screens in this case. The
+deck screen will not count cards that are not ready, but the study screen
+will. This is done so that you can tell which decks need your attention.
+
+NOTE: Anki treats small steps and steps that cross a day boundary differently.
+With small steps, the cards are shown as soon as the delay has passed, in
+preference to other waiting cards like reviews. This is done so that you can
+answer the card as closely to your requested delay as possible. In contrast,
+cards that cross a day boundary are scheduled on a per-day basis like reviews
+are. When you return to study the next day, the per-day learning cards will
+not be shown first, as that can make the first half of a review session
+frustratingly difficult. Instead, the cards will be shown after reviews are
+completed. They are included in the review count rather than the learning
+count, due to the way they are handled internally.
+
+*Order* controls whether Anki should add new cards into the deck randomly, or
+in order. When you change this option, Anki will re-sort the decks using the
+current option group. One caveat with random order mode: if you review many of
+your new cards and then add more new cards, the newly added material is
+statistically more likely to appear than the previously remaining cards. To
+correct this, you can change the order to ordered mode and back again to force
+a re-sort.
+
+*New cards/day* tells Anki how many new cards you'd like introduced on each
+day you open the program. Missed days will not cause the cards to pile up. The
+limit applies to the current deck and subdecks. This means if "French" has a
+limit of 20 cards and "French::Lesson 1" and "French::Lesson 2" both have
+limits of 15 cards, you'll get 15 cards from lesson 1 but only 5 cards from
+lesson 2.
+
+NOTE: Adding new cards will temporarily increase the number of reviews you
+need to do a day, as freshly learnt material needs to be repeated a number of
+times before the delay between repetitions can increase appreciably. If you
+are consistently adding 20 new cards a day, you can expect your daily reviews
+to be roughly about 200 cards/day. You can decrease the reviews required by
+introducing fewer new cards each day, or by turning off new card display until
+your review burden decreases. More than one Anki user has excitedly added
+hundreds of new cards over their first few days of using the program, and then
+become overwhelmed by the reviews required.
+
+*Graduating interval* is the delay between answering 'Good' on a card with no
+steps left, and seeing the card again.
+
+*Easy* is the delay between answering 'easy' on a card and seeing it again.
+
+When *Try not to show...* is checked, Anki will try not to introduce two new
+cards of the same note next to each other, as seeing one card may make it
+easier to answer another card.
+
+Reviews
+--------
+
+*Maximum reviews/day* allows you to set an upper limit on the number of
+reviews to show each day. When this limit is reached, Anki will not show any
+more review cards for the day, even if there are some waiting. If you study
+consistently, this setting can help to smooth out occasional peaks in due card
+counts, and can save you from a heart attack when returning to Anki after a
+week off. When reviews have been hidden due to this option, a message will
+appear in the congratulations screen, suggesting you consider increasing the
+limit if you have time.
+
+When you answer a review card, Anki tries to place it for review on a day that
+doesn't have any other cards of the same note. The *space siblings* setting
+tells Anki how far it may adjust the ideal interval in order to keep siblings
+separated. The default 5% means that if a card has an interval of 100 days,
+Anki will consider increasing the interval by +/- 5 days.
+
+The *minimum sibling range* allows you to force a minimum number of days to
+consider. With the default setting above, an interval of 10 days at 5% would
+be less than a day, so Anki would not be able to increase or decrease the
+interval at all. The minimum sibling range allows you to force a minimum range
+to consider with small intervals. At its default of 1 day, Anki will consider
+scheduling the card one day more or less than it normally would. If you have
+more than two cards in a note type, you may want to increase this.
+
+*Easy bonus* allows you to set the difference in intervals between answering
+'Good' and 'Easy' on a card.
+
+*Interval modifier* allows you to apply a multiplication factor to the
+intervals Anki generates. At its default of 1 it does nothing; if you set it
+to 0.8 for example, intervals will be generated at 80% of their normal size
+(so a 10 day interval would become 8 days). You can thus use the multiplier to
+make Anki present cards more or less frequently than it would otherwise,
+trading study time for retention or vice versa.
+
+For moderately difficult material, the average user should find they remember
+approximately 90% of mature cards that come up for review. You can find out
+your own performance by opening the graphs/statistics for a deck and looking
+at the Answer Buttons graph - mature retention is the correct% on the right
+side of the graph. If you haven't been studying long you may not have any
+mature cards yet. As performance with new cards and younger cards can vary
+considerably, it's a good idea to wait until you have a reasonable amount of
+mature reviews before you start drawing conclusions about your retention rate.
+
+On the SuperMemo website, they suggest that you can find an appropriate
+multiplier for a desired retention rate. Their formula boils down to:
+
+-----
+log(desired retention%) / log(current retention%)
+-----
+
+Imagine we have a current retention rate of 85% and we want to increase it to
+90%. We'd calculate the modifier as:
+
+-----
+log(90%) / log(85%) = 0.65
+-----
+
+You can use Google to https://www.google.com/search?q=log(90%25)+%2F+log(85%25)[calculate it] for you.
+
+If you plug the resulting 0.65 into the interval modifier, you should find
+over time that your retention moves closer to your desired retention.
+
+One important thing to note however is that the tradeoff between time spent
+studying and retention is not linear: we can see here that to increase our
+retention by 5 percentage points, we'd have to study 35% more frequently. If
+the material you are learning is very important then it may be worth the extra
+effort - that's something you'll need to decide for yourself. If you're simply
+worried that you're forgetting too much, you may find investing more time into
+the initial learning stage and/or making mnemonics gives you more gain for
+less effort.
+
+One final thing to note is that Anki forces a new interval to be at least 1
+day longer than it was previously so that you don't get stuck reviewing with
+the same interval forever. If your goal is to repeat a card once a day for
+multiple days, you can do that by setting more learning mode steps instead of
+by adjusting this modifier.
+
+*Maximum interval* allows you to place an upper limit on the time Anki will
+wait to reshow a card. The default is 100 years; you can decrease this to a
+smaller number if you're willing to trade extra study time for higher
+retention.
+
+[[lapses]]
+Lapses
+------
+
+When you forget a review card, it is said to have 'lapsed'. The default
+behaviour for lapsed reviews is to reset the interval to 1 (ie, make it due
+tomorrow), and put it in the learning queue for a refresher in 10 minutes.
+This behaviour can be customized with the options listed below.
+
+If you leave the steps blank, Anki will not place the card back in the
+learning queue, and it will be rescheduled as a review with its new interval
+determined by the settings below.
+
+NOTE: As the new interval is determined when you answer "Again" to a review
+card, the "Good" and "Easy" buttons during relearing do not alter the interval
+again. If there is only a single step (the default), the "Easy" button will be
+hidden. If you have 2 or more steps, "Easy" is not hidden, to allow you to
+graduate cards from the queue before all of their steps are finished.
+
+'New interval' controls how much Anki should reduce the previous interval by.
+If the card had a 100 day interval, the default of 0% would reduce the
+interval to 0 (but see the next option). If you set this option to 20%, the
+card would have its interval reduced to 20 days instead.
+
+'Minimum interval' allows you to apply a minimum limit to the above option.
+The default setting says that lapses should be reviewed one day later. The
+interval must be 1 day or more.
+
+The leech options control the way Anki handles leeches. Please see the leech
+section for more information.
+
+General
+--------
+
+Anki monitors how long it takes you to answer each question so that it can
+show you how long was spent studying each day. The time taken is not used to
+influence scheduling. If you take longer than 60 seconds, Anki assumes you
+have walked away from your computer or have been distracted, and limits the
+recorded time to 60 seconds, so that you don't end up with inaccurate
+statistics. The 'ignore answer times...' option allows you to adjust the
+cutoff threshold. The minimum cutoff is 30 seconds.
+
+If 'show answer timer' is checked, Anki will display the current time taken
+for each card in the study area.
+
+By default, Anki automatically plays audio on the front and back of cards. If
+you uncheck 'automatically play audio', Anki will not play audio until you
+click the replay audio button.
+
+Description
+------------
+
+This section allows you to edit the deck description, which is shown in the
+study overview. The description is automatically set when downloading shared
+decks. You can delete all the text in the description if you no longer want to
+see it in the study overview area.
+
+[[syncing]]
+= AnkiWeb and Synchronization =
+
+AnkiWeb is a service that allows you to keep your decks synchronized across
+multiple devices, and to study online. Please sign up for a {ankiweb}[free
+account] before following the steps below.
+
+Setup
+------
+
+To start syncing your collection across devices, click the sync button (the
+top right one on the main screen), or press 'y' on your keyboard. You'll be
+prompted for your AnkiWeb ID and password, which you created in the signup
+process. Please make sure you have confirmed your email address before trying
+to sync, as your account will not be activated until your address has been
+confirmed.
+
+When you synchronize your decks for the first time, Anki will not be able
+to merge the content stored on AnkiWeb and the content stored on your
+computer, so you'll need to choose which side you'd like to keep. Once the
+initial setup is completed however, Anki will be able to merge changes from
+multiple locations with a few exceptions.
+
+Automatic Syncing
+------------------
+
+Once syncing is enabled, Anki will automatically sync each time your
+collection is closed or opened. If you would prefer to synchronize manually,
+you can disable automatic syncing in Anki's preferences.
+
+Media
+------
+
+Anki will synchronize any sounds and images used by your notes. It will notice
+when media has been added or removed from your media folder, but will not
+notice if you have edited some existing files without adding or removing any.
+To get your edits noticed, you need to add or remove a file as well.
+
+Conflicts
+----------
+
+Reviews and note edits can be merged, so if you review or edit on two
+different devices before syncing, Anki will preserve your changes from both
+locations. If the same card has been reviewed in two different locations, both
+reviews will be marked in the revision history, and the card will be kept in
+the state it was when it was most recently answered.
+
+There are certain changes that Anki is unable to merge. These mainly relate to
+the format of notes: things like adding a new field, or removing a card
+template. When you perform an operation that can't be merged, Anki will warn
+you, and give you the option of aborting the operation. If you choose to
+continue, you'll be asked to choose whether to keep the local copy or the copy
+on AnkiWeb when your decks are next synchronized.
+
+If you wish to force a full upload or download (because you accidentally
+deleted a deck on one side for example, and want to restore the deck rather
+than having its deletion synchronized), then you can use Tools>Maintenance>Full
+Sync.
+
+Proxies
+--------
+
+Anki syncs over secure HTTP connections. If you need a proxy to access the
+internet, Anki should automatically pick up your system proxy settings if
+you're on Windows or OS X, and will honour the HTTP_PROXY environment variable
+if you're on another platform.
+
+Please note that advanced proxy setup via .pac or .wpad files is not supported
+in Anki.
+
+[[browser]]
+= Browser =
+
+The browser allows you to search through your cards and notes, and to edit
+them. It is opened by clicking on 'Browse' in the main window, or by pressing
+'b' on your keyboard. It is comprised of three sections: the 'sidebar' on the
+left, the 'card list' on the top right, and the 'current note' on the bottom
+right. By positioning the mouse between two sections, it is possible to click
+and drag to expand one section and shrink another.
+
+[[searching]]
+Searching 
+---------
+
+Above the card list is a search box. You can type in various things there to
+search for cards.
+
+=== Simple searches ===
+
+When you type some text into the search box, Anki finds matching notes and
+displays their cards. Some examples:
+
+ dog :: search for "dog" - will match words like "doggy" and "underdog" too
+ dog cat :: finds notes with both "dog" and "cat", such as "a dog and cat"
+ dog or cat :: finds notes with either "dog" or "cat"
+ dog (cat or mouse) :: finds notes with dog and cat, or dog and mouse
+ -cat :: finds notes without the word "cat".
+ -cat -mouse :: finds notes with neither "cat" nor "mouse".
+ -(cat or mouse) :: same as the above.
+ "a dog" :: finds notes with the exact phrase "a dog" on them
+ -"a dog" :: finds notes without the exact phrase "a dog"
+  d_g :: finds notes with d, <a letter>, g, like dog, dig, dug, and so on.
+  d*g :: finds notes with d, <zero or more letters>, g, like dg, dog, dung, etc.
+
+Things to note from the above:
+
+ * Search terms are separated by spaces
+ * When multiple search terms are provided, Anki looks for notes that match
+   all of the terms
+ * You can use "or" if you only need one of the terms to match
+ * You can prepend a minus sign to a term to find notes that don't match
+ * If you want to search for something including a space, enclose it in quotes
+
+=== Limiting to a field ===
+
+You can also ask Anki to match only if a particular field contains some text.
+Unlike the searches above, searching on fields requires an 'exact match' by
+default.
+
+ front:dog :: find notes with a Front field of exactly "dog". A field that
+   says "a dog" will not match.
+ front:*dog* :: find notes with Front field containing dog somewhere
+ front: :: find notes that have an empty Front field
+ -front: :: find notes that have a non-empty Front field
+ front:* :: find notes that have a Front field, empty or not
+
+=== Tags, decks, cards and notes ===
+
+ tag:animal :: find notes with the tag "animal"
+ tag:none :: find notes with no tags
+ tag:ani* :: find notes with tags starting with ani
+
+ deck:french :: find cards in a French deck, or subdecks like French::Vocab
+ deck:french -deck:french::* :: find cards in French, but not subdecks
+ deck:"french vocab" :: searching when a deck has a space
+ "deck:french vocab" :: also ok
+ deck:filtered :: filtered decks only
+ -deck:filtered :: normal decks only
+
+ card:forward :: search for Forward cards
+ card:1 :: search for cards by number - useful for cloze cards
+
+ note:basic :: search for cards with a Basic note type
+
+=== Card types ===
+
+ is:due :: review cards and learning cards waiting to be studied
+ is:new :: new cards
+ is:learn :: cards in learning
+ is:review :: reviews (both due and not due)
+ is:suspended :: cards that have been manually suspended
+
+=== Card properties ===
+
+ prop:ivl>=10 :: cards with interval of 10 days or more
+ prop:due=1 :: cards due tomorrow
+ prop:due=-1 :: cards due yesterday
+ prop:due>-1 prop:due<1 :: cards due between yesterday and tomorrow
+ prop:reps<10 :: cards that have been answered less than 10 times
+ prop:lapses>3 :: cards that have moved into relearning more than 3 times
+ prop:ease!=2.5 :: cards easier or harder than default
+
+Note that due only matches review cards and learning cards with an interval of
+a day or more: cards in learning with small intervals like 10 minutes are not
+included.
+
+=== Recently added ===
+
+ added:1 :: cards added today
+ added:7 :: cards added in last week
+
+The check is made against card creation time rather than note creation time,
+so cards that were generated within the time frame will be included even if
+their notes were added a long time ago.
+
+=== Recently answered ===
+
+ rated:1 :: cards answered today
+ rated:1:2 :: cards answered Hard (2) today
+ rated:7:1 :: cards answered Again (1) over the last 7 days
+ rated:31:4 :: cards answered Easy (4) in the last month
+
+For speed, rating searches are limited to 31 days.
+
+[[cardlist]]
+Card List 
+----------
+
+The card list displays cards that match the current search.
+
+The columns are configurable: right click on one (or ctrl+click on a Mac) to
+choose which columns you'd like to see. You can drag columns to reorder them.
+Clicking on a column will sort by that column; click again to reverse the sort
+order. Not all columns can be sorted on.
+
+When you click on a card, its note will be shown in the bottom section. If you
+drag the mouse or hold ctrl or command to select multiple cards, the editor
+will be temporarily hidden. Various operations (such as changing the deck) can
+operate on multiple cards at once.
+
+The background colour will change depending on the card. Marked cards are a
+shade of purple. Suspended card are a shade of yellow. For more information
+about marked and suspended cards, please see <<editmore,editing and more>>.
+
+One of the available columns is called the 'sort field'. Anki allows you to
+choose one field from each type of note to be used for sorting. You can change
+the sort field by clicking on "Fields..." in the current note section.
+
+The question and answer columns display what you'd see on the question and
+answer while reviewing, except the answer column will strip the question part
+for clarity. You can also choose a <<columntemplates,custom format>> in the
+card template editor instead of showing what would be seen during review.
+
+Current Note
+--------------
+
+The bottom right area displays the currently selected card's note. For more
+information about cards and notes, please see <<basics,the basics>>. For more
+information on formatting buttons, please see <<editor,editing>>.
+
+Sidebar
+--------
+
+The sidebar on the left allows quick access to common search terms. Various
+search terms as described above are listed, along with all deck names and tag
+names. Clicking on an item will search for it. You can hold down ctrl (command
+on a Mac) and click in order to append the clicked item to the current search,
+instead of starting a new search. If you wanted to show learning cards in the
+German deck for instance, you could click on "Learning", then ctrl+click on
+"German". You can also hold down alt (option on a Mac) in order to reverse the
+search (prepend a '-').
+
+Toolbar
+--------
+
+Up the top of the browser window is the toolbar.
+
+'Info' shows various information about the currently selected card, including
+its review history. For more information, see the <<stats,statistics>> section.
+
+'Mark' and 'Suspend' are documented in <<editmore,editing and more>>.
+
+'Change Deck' allows you to move cards to a different deck. Notes also
+remember the deck they were placed in. This allows you to move cards to a
+different deck temporarily, and then later move them back to the deck the note
+is in.
+
+'Add Tags' and 'Remove Tags' allow you to add or remove tags in bulk.
+
+'Delete' removes the selected card(s) and their notes. It is not possible to
+remove individual cards, as individual cards are controlled by the
+<<templates,templates>>.
+
+[[findreplace]]
+Find and Replace
+--------------
+
+This option allows you to replace text in the cards you have selected. The
+regular expression option allows you to perform complex replacements. For
+example, given the following text on a card:
+
+-----
+<img src="pic.jpg">
+-----
+
+Searching for:
+
+-----
+<img src="(.+)">
+-----
+
+And replacing with the regexp:
+
+-----
+\1
+-----
+
+Will change the card to:
+
+-----
+pic.jpg
+-----
+
+A full discussion on regular expressions is outside the scope of this
+document. There are a number of tutorials available on the web. Please see
+http://docs.python.org/library/re.html for the particular format Anki uses.
+
+Finding Duplicates
+-------------------
+
+You can use the Edit>Find Duplicates option to search for notes that have the
+same content. When you open the window, Anki will look at all of your note
+types and present a list of all possible fields. If you want to look for
+duplicates in the "Back" field, you'd select it from the list and then click
+"Search".
+
+Unlike the check that happens when you add cards manually, the duplicate
+finding feature is not limited to a single note type. This means that by
+default, it will search in all note types that have the field you provided.
+
+The search area allows you to narrow down where Anki will look for duplicates.
+If you only want to search for duplicates in the "French Vocab" and "French
+Verbs" note types, you would enter:
+
+-----
+note:'french vocab' or note:'french verbs'
+-----
+
+The search syntax is the same as used when searching in the browser. Please
+see the <<searching,searching>> section for more information.
+
+[[browsermisc]]
+Other Menu Items
+-----------------
+
+Some other items in the Edit menu:
+
+'Reschedule' allows you to move cards to the end of the new card queue, or
+reschedule them as a review card on a given date. The second option is useful
+if you have imported already-learnt material, and you want to start it off
+with higher initial intervals. For example, choosing 60 and 90 will give all
+the imported cards an initial interval of 2 to 3 months.
+
+The card's revision history is not cleared when rescheduling: rescheduling
+changes the current state of a card, but not its history. If you want to
+complete reset a deck, the correct way to do so is to export a copy instead.
+
+'Reposition' allows you to change the order new cards will appear in. You can
+find out the existing positions by enabling the 'due' column, as described in
+the card list section above.
+
+'Change Note Type' allows you to convert the selected notes from one type to
+another type, and/or convert between card templates. For example, imagine you
+have a Russian note type and a Computer note type, and you accidentally added
+some computer-related text into a Russian note. You can use this option to fix
+that mistake. The progress of cards is not reset.
+
+'Select Notes' takes the currently selected cards, finds their notes, and then
+selects all cards of those notes. If your notes have only one card, this does
+nothing.
+
+////
+'Browser options' lets you alter the card list font, and turn on full
+searching. Full searching is necessary if your words are partially formatted.
+For example, if you have the word "hello" and you have bolded only the first
+three characters, a regular search for "hello" will not be able to find the
+word, as there is formatting in the middle of it. Full searching works around
+this problem, but it is considerably slower. Note that searching is able to
+find partially formatted text if it's in the current sort field.
+////
+
+The 'Go' menu exists to provide keyboard shortcuts to jump to various parts of
+the browser, and to go up and down the card list.
+
+[[cramming]]
+[[filtered]]
+= Filtered Decks & Cramming =
+
+When you study a regular deck in Anki, only a limited number of cards are
+shown: the cards Anki thinks you're about to forget, and a daily limit of new
+cards. This is generally useful, as it ensures you don't spend more time
+studying than necessary. But sometimes it can be useful to step outside of
+these normal limits, such as when you need to revise for a test, focus on
+particular material, and so on. To make this possible, Anki provides a
+different type of deck called a 'filtered deck'.
+
+Filtered decks offer a lot of possibilities. They can be used for previewing
+cards, cramming cards before a test, studying particular tags, catching up on
+a backlog with a particular sort order, reviewing ahead of schedule, going
+over the day’s failed cards, and more.
+
+== Creating ==
+
+Filtered decks are created by clicking on the Filter/Cram button from the deck
+list or study overview screens. After giving your deck a name, you're
+presented with some example filters. Choosing an example will fill out the
+settings for you, and you can modify the settings if you wish.
+
+When you click the Build button, Anki finds cards that match the settings you
+specified, and temporarily moves them from their existing decks into your new
+filtered deck for study. Later on, the cards will be moved back to the deck
+they came from.
+
+== Card Selection ==
+
+The *search* area controls what cards Anki will gather. All of the searches
+possible in the browser are also possible for filtered decks, such as limiting
+to tags, finding cards forgotten a certain number of times, and so on. Please
+see the <<searching,searching>> section of the manual for more information on
+the different possibilities.
+
+The *limit* option controls how many cards will be gathered into the deck. The
+order you select controls both the order cards are gathered in, and the order
+they will be reviewed in. If you select "most lapses" and a limit of 20 for
+example, then Anki will show you only the 20 most lapsed cards.
+
+For efficiency reasons, if your cram deck contains more than 1000 cards, only
+1000 cards will be shown as due on the deck list and study screens.
+
+== Home Decks ==
+
+When a card is moved to a filtered deck, it retains a link to the deck it was
+in previously. That previous deck is said to be the card's 'home deck'.
+
+Cards automatically return to their home deck after they are studied in the
+cram deck. This can be after a single review, or after multiple reviews,
+depending on your settings.
+
+It is also possible to move all cards back to their home decks at once:
+
+ * The "Empty" button in the study overview moves all cards in the filtered
+   deck back to their home deck, but does not delete the empty filtered deck.
+   This can be useful if you want to fill it again later.
+ * Deleting a filtered deck does the same thing as "Empty" does, but also
+   removes the emptied deck from the deck list. No cards are deleted when you
+   delete a filtered deck.
+
+== Steps & Returning ==
+
+Please see the section on <<learning,learning>> as a reminder of how steps
+work.
+
+By default, Anki will use the steps of a card's home deck. If a new card would
+normally be reviewed twice when being learnt, the same thing will happen
+when you study it in a filtered deck.
+
+Cards return to their home deck when (re)learning is complete. Thus if you
+have 3 learning steps, a new card will return to its home deck upon three
+presses of "Good" or a single press of "Easy".
+
+The *custom steps* option allows you to override the home deck's
+steps and provide your own steps instead. The provided steps apply to both
+cards being learnt, lapsed reviews, and reviews ahead of time.
+
+== Due Reviews ==
+
+If the filtered deck includes cards that were due for review, they will be
+shown like they would have been in their original deck - they appear in the
+review card count at the bottom of the screen, and there are four choices for
+how well you remembered. Upon a correct answer, the card will be moved back to
+its home deck, and its next delay adjusted using the home deck's settings. If
+you forget the card, it will be shown according to the relearning steps
+defined in the home deck.
+
+== Reviewing Ahead ==
+
+If your search included cards that are not due, Anki will show the reviews
+ahead of time. Anki uses a special algorithm for these reviews that takes into
+account how early you are reviewing.
+
+Early reviews are included in the new card count rather than the review count,
+and will be shown according to the number of relearning steps defined in the
+home deck (unless you have provided custom steps). This means that if you have
+customized the number of relearning steps in the home deck, the non-due card
+may be shown more than once.
+
+If you have multiple steps, Anki will only consider the first answer when
+deciding the next delay, and like relearning in normal decks, "Good" and
+"Easy" differ only in the step change and not the resulting delay.
+
+== Rescheduling ==
+
+By default, Anki will return cards to their home decks with altered scheduling
+based on your performance in the filtered deck. If you disable the *reschedule
+cards based on my answers* option, Anki will return the cards in the same
+state they were in when they were moved into the filtered deck. This is useful
+for quickly flipping through material.
+
+If you have disabled rescheduling, the "Good" and "Easy" buttons will display
+no time above them when pressing them would cause the card to return to its
+home deck with its original scheduling.
+
+Please note that new cards are returned to the end of the new card queue,
+rather than the start of it.
+
+= Leeches =
+
+Leeches are cards that you keep on forgetting. Because they require so many
+reviews, they take up a lot more of your time than other cards.
+
+Anki can help you identify leeches. Each time a review card 'lapses', a
+counter is increased. When that counter reaches 8, the note is tagged as a
+leech, and the card is suspended. The threshold, and whether to suspend or
+not, can be adjusted in the <<deckoptions,deck options>>. 
+
+Anki will continue to issue leech warnings periodically for a difficult card.
+The warning interval is half the initial leech threshold. That is, if you have
+Anki configured to warn at 8 lapses, future warnings will happen every 4
+lapses. (12, 16, etc)
+
+Once a leech is found, there are a number of ways you can handle it.
+
+Waiting
+---------
+
+Some leeches are caused by ''interference''. For example, an English learner
+may have recently learnt the words "disappoint" and "disappear". As they look
+similar, the learner may find themselves confusing the two when trying to
+answer. In these situations, it's often productive to concentrate on just one
+idea. When that idea is firmly ingrained in your mind, you can then return to
+learning the other idea. So in these situations, you may want to leave one of
+the words suspended until you have learnt the other one well, and then
+unsuspend it in the browser.
+
+Deleting
+---------
+
+Another way to manage leeches is to delete them. Consider if the material
+you're struggling with is important enough to make it worth your while. By
+selectively deleting difficult and obscure items, you can dedicate more time
+to learning other material, and studying becomes a lot more fun.
+
+Editing
+--------
+
+Another approach is to change the way the information is presented. Perhaps
+the cards you have created have too much information on them, or perhaps
+you're trying to memorize something without fully understanding it. Sometimes
+spending some time changing the way the card is phrased can help. It's also a
+good time to think about making a mnemonic to help you remember.
+
+[[importing]]
+= Importing =
+
+Anki can import text files, packaged Anki decks created by the export feature,
+Mnemosyne 2.0 .db files, and SuperMemo .xml files. To import a file, click the
+File menu and then "Import".
+
+== Importing text files ==
+
+Any *plain text* file that contains fields separated by commas, semicolons or
+tabs can be imported into Anki, provided some conditions are met.
+
+ * The files must be plain text (myfile.txt). Other formats like myfile.xls,
+   myfile.rtf, myfile.doc must be saved as a plain text file first.
+ * The files must be in UTF-8 format (see below)
+ * Anki determines the number of fields in the file by looking at the first
+   (non-commented) line. Any other lines in the file which don't match this
+   number will be ignored.
+ * The first line also defines the separating character - if Anki finds a ';'
+   on the first line it will use that - if it finds a comma it'll use that,
+   etc.
+
+This is an example of a valid file:
+
+-----
+field1; field2; field3
+foo bar; bar baz; baz quux
+-----
+
+There are two ways to include newlines in fields.
+
+*Escape the multi-lines*:
+
+-----
+hello [tab] "this is
+a two line answer"
+two [tab] this is a one line one
+-----
+
+*Use HTML new lines*:
+
+-----
+hello [tab] this is<br>a two line answer
+two [tab] this is a one line one
+-----
+
+This is an example of a valid file where the first line is ignored (#):
+
+-----
+# this is a comment and is ignored
+field1; field2; field3
+foo bar; bar baz; baz quux
+-----
+
+== Spreadsheets and UTF-8 ==
+
+If you have non-Latin characters in your file (such as accents, Japanese and
+so on), Anki expects files to be saved in a 'UTF-8 encoding'. This easiest way
+to do this is to use the free LibreOffice spreadsheet program instead of Excel
+to edit your file, as it supports UTF-8 natively, and also exports multi-line
+content properly, unlike Excel.
+
+To save your spreadsheet to a file Anki can read, go to File>Save As, and then
+select CSV for the type of file. After accepting the default options,
+LibreOffice will save the file and you can then import the saved file into
+Anki.
+
+== HTML ==
+
+Anki treats text imported from text files as HTML (the language used for web
+pages). This means that text with bold, italics and other formatting can be
+exported to a text file and imported again. But this also means that if you've
+accidentally included HTML characters in plain text, you'll need to modify it.
+
+Specifically:
+
+ * < should be written as &amp;lt;
+ * > should be written as &amp;gt;
+
+You can use your text editor to do a find and replace on those characters if
+you use them.
+
+== Importing Media ==
+
+If you want to include audio and pictures from a text file import, copy the
+files into the yourdeckname.media folder. This folder is located in the same
+directory as your deck. If it doesn't exist, you can create it. *Do not use
+subdirectories, or some features will not work.*
+
+After you've copied the files, change one of the fields in your text file as
+follows.
+
+-----
+<img src="myimage.jpg">
+-----
+
+or
+
+-----
+[sound:myaudio.mp3]
+-----
+
+Alternatively, you can use the find & replace feature to update all the fields
+at once. If each field contains text like "myaudio", and you wish to make it
+play a sound, you'd search for (.*) and replace it with "[sound:$1.mp3]", with
+the 'regular expressions' option enabled.
+
+You might be tempted to do this in a template, like:
+
+-----
+<img src="{{field name}}">
+-----
+
+Anki doesn't support this for two reasons: searching for used media is
+expensive, as each card has to be rendered, and such functionality isn't
+obvious to shared deck users. Please use the find & replace technique instead.
+
+== Adding Tags ==
+
+If you want to add 'tag1' and 'tag2' to every line you're importing, add the
+following to the top of the text file:
+
+-----
+tags:tag1 tag2
+-----
+
+== Duplicates and Updating ==
+
+Anki uses the first field to determine if a note is unique. If the file you
+are importing has a first field that matches one of the existing notes in your
+collection, the existing note's other fields will be updated based on content
+of the imported file.
+
+== Spreadsheet Programs ==
+
+It's possible to edit your data in a spreadsheet program, then export that
+data to a text file so Anki can import it.
+
+It's recommended that you use LibreOffice, as it is free, runs on all major
+platforms, and handles exporting text files well. To save the document as a
+text file, use File>Save As, and choose Text CSV from the file type list.
+
+= Exporting =
+
+Exporting allows you to save part of your collection as a text file or
+packaged Anki deck. To export, click the File menu and choose 'Export'.
+
+== Exporting Text ==
+
+If you choose "Notes in Plain Text", Anki will write the contents of the notes
+into a text file. Each field is separated by a tab. If you edit the resulting
+file and don't modify the first field, you can later import that file back
+into Anki and Anki will update your notes based on your edits. If you find
+yourself needing to edit the first field as well, you'll need to change the
+format of your deck so that the first field is an ID number rather than actual
+text.
+
+In order for formatting to be preserved when you import text back in, the text
+is exported with all the HTML formatting embedded in it.
+
+== Exporting Packaged Decks ==
+
+A 'packaged deck' consists of cards, notes, note types and any sounds or
+images bundled up into a file ending with .apkg. You can use packaged decks to
+transfer cards between people, or for backing up parts of your collection.
+
+= Managing Files and Your Collection =
+
+Checking Your Collection
+--------------------------
+
+It's a good idea to occasionally check your collection file for problems. You
+can do this via the Tools>Check Database menu item. Checking the database
+ensures the file is not corrupted, rebuilds some internal structures, and
+optimizes the file.
+
+When you check the database, your tag list is also rebuilt. When you delete
+individual decks or cards, Anki does not update the list of used tags, as it's
+inefficient to do so. If you want to clear old tags out from the list that are
+no longer in use, checking your database is the way to do it.
+
+Please note that Anki will automatically optimize your collection once every 2
+weeks. This optimization ensures the collection performs well, but it does not
+check for errors or rebuild the tag list when automatically optimizing.
+
+[[files]]
+File Locations
+---------------
+
+On Windows and OSX, Anki stores all of its files in an Anki folder, located in
+your Documents folder. On other operating systems, your files are stored in
+~/Anki by default.
+
+Within the Anki folder, the program-level and profile-level preferences are
+stored in a file called prefs.db.
+
+There is also a separate folder for each profile. The folder contains:
+
+ * Your notes, decks, cards and so on in a file called collection.anki2
+ * Your audio and images in a collection.media folder
+ * A backups folder
+ * Some system files
+
+NOTE: If you want to use Anki on a network drive on Windows, the network drive
+needs to be mapped to a drive letter. If your network administrator has set
+your user directory up as something like "\\server\share\folder", please ask
+them to map the share and change it to something like "z:\folder" instead.
+
+WARNING: You should never copy or move your collection while Anki is open.
+Doing so could cause your collection to become corrupted. Please don't
+move or modify the other files in the folder either.
+
+[[startupopts]]
+Startup Options
+----------------
+
+You can specify a custom folder location by starting Anki with a command line
+like so:
+
+-----
+anki -b /path/to/anki/folder
+-----
+
+* If you have multiple profiles, you can also pass -p to load a specific
+  profile.
+* To change the interface language, start Anki with -l <iso country code>,
+  such as "-l ja" for Japanese.
+
+If you want to permanently change the interface language, delete
+Documents/Anki/prefs.db and the initial startup screen will be shown
+again. After doing so, you'll need to add any profiles you were using again.
+As long as you use the same profile name as before, Anki will pick up the
+files from before.
+
+Backups
+---------
+
+Each time your collection is closed (when closing Anki, switching profiles, or
+synchronizing your deck), Anki copies your collection.anki2 file into the
+backups folder. By default Anki will store up to 30 backups; you can adjust
+this in the <<preferences,preferences>>.
+
+Automatic backups do not protect against disk or computer failure, and do not
+extend to your media. To keep your collections safe, please consider making
+manual backups too.
+
+The easiest way to take a manual backup is to back up your entire Anki folder.
+Please make sure you close Anki first, as backups may be corrupt if run while
+Anki is open.
+
+To restore from a backup, simply close Anki, rename the backup file to
+collection.anki2, and then copy it into your user profile folder. Media can be
+likewise be restored from a manual backup by copying the collection.media
+folder.
+
+It's a good idea to copy the backups rather than move them, so they remain
+pristine in case you need to restore from backup again.
+
+Corrupt Collections
+---------------------
+
+Anki uses a file format that is robust against program and computer crashes,
+but it's still possible for your collection to become corrupt if the files are
+modified while Anki is open, stored on a network drive, or corrupted by a bug.
+
+When you run Tools>Check Database, you will receive a message if Anki detects
+the file has been corrupted. The best way to recover from this is to restore
+from the most recent automatic backup, but if your backup is too old, then you
+can attempt to repair the corruption instead.
+
+On Linux, make sure sqlite3 is installed. On a Mac, it should be installed
+already. On Windows, download http://www.sqlite.org/sqlite-3_6_23.zip.
+
+Next, create a backup of your collection.anki2 file, in case something goes
+wrong with the steps below.
+
+*Linux/OSX*
+
+Open a terminal, change to the folder your collection is located in, and type:
+
+-----
+sqlite3 collection.anki2 .dump | sqlite3 temp.file
+-----
+
+Make sure you use temp.file - do not put collection.anki2 on the right, or you
+will blank out the file. When you're done, proceed to the final step.
+
+*Windows*
+
+Copy the `sqlite3.exe` program and your deck to your desktop. Then go to
+*Start>Run* and type in `cmd.exe`.
+
+If you're on a recent Windows, the command prompt may not start on your
+desktop. If you don't see desktop displayed in the command prompt, type
+something like the following, replacing 'administrator' with your login name.
+
+-----
+cd C:\Users\Administrator\Desktop
+-----
+
+Then type:
+
+-----
+sqlite3 collection.anki2 .dump | sqlite3 temp.file
+-----
+
+Make sure you use temp.file - do not put collection.anki2 on the right, or you
+will blank out the file. When you're done, proceed to the final step.
+
+*Final Step*
+
+Check that you didn't get an error message, and that temp.file is not empty.
+The procedure optimizes the collection in the process, so it's normal for the
+new file to be somewhat smaller than the old one.
+
+When you've confirmed the file is not empty, copy it over collection.anki2,
+making sure you still have a backup of the original version. Then start Anki
+and go to Tools>Check DB to make sure the collection has been successfully
+restored.
+
+[[stats]]
+Graphs and Statistics
+=====================
+
+Card Info
+----------
+
+You can display information about a card by clicking the Info button in the
+toolbar while browsing. Most of the displayed information should be
+self-explanatory. A few notes:
+
+ Position ::
+  Only shown when the card is new, it shows the order the card will appear in
+  relative to other new cards. The position can be changed in the browser.
+ Interval ::
+  The delay from one review to the next. Times are abbreviated; "0s, 1m, 3h, 4d,
+  5mo, 6y" refers to seconds, minutes, hours, days, months and years
+  respectively.
+ Ease ::
+  The approximate amount the interval will grow when you answer a review card
+  with the "Good" button.
+
+Statistics
+-----------
+
+The statistics window is accessed by clicking on the graphs icon in the top
+right of the main window, or by pressing Shift+S. The statistics window will
+show statistics from the currently selected deck and any subdecks. If you
+click on "collection" on the bottom left, statistics will be shown for your
+entire collection instead.
+
+By default Anki will show you statistics for the previous month. You can
+change this to a year scope or deck life scope down the bottom.
+
+Clicking on "Save Image" will save an image of the statistics to a file, to
+make it easy to share your statistics with others.
+
+
+[[media]]
+= Media =
+
+Anki stores the sounds and images used in your notes in a folder next to the
+collection. For more on the folder location, please see the <<files,file
+locations>> section.
+
+When you add media within Anki, Anki will copy it from its original location
+into the media folder. This makes it easy to back up your collection's media
+or move it to another computer. If you'd prefer to have the media removed from
+the original location, you can do so in the <<preferences,preferences>>.
+
+You can use the Tools>Unused Media menu option to scan your notes and media
+folder. It will generate a report of files in the media folder that are not
+used by any notes, and media referenced in notes but missing from your media
+folder. It does not scan question or answer templates, which is why you can't
+place media references to fields in the template. If you need a static image
+or sound on every card, name it with a leading _ (eg _dog.jpg) to tell Anki to
+ignore it when checking for media.
+
+Anki uses a program called mplayer in order to support sounds and videos. A
+wide variety of file formats are supported, but not all of these formats will
+work on AnkiWeb and the mobile clients. MP3 audio and MP4 video seems to be
+the most universally supported.
+
+[[latex]]
+= LaTeX support =
+
+LaTeX is a powerful typesetting system, which is ideal for entering
+mathematical formulas, chemical formulas, musical notation and so on. Anki
+provides some support for LaTeX, allowing you to enter LaTeX code in your
+notes. When you review a card, Anki will call LaTeX and display the generated
+image instead.
+
+Installing and Assumed Knowledge
+---------------------------------
+Anki's LaTeX support is not turn-key: it is assumed that you know how to use
+LaTeX already, and that you have it installed. If you have no experience with
+LaTeX, please consult one of the many guides available on the internet. If you
+are having trouble with markup, please ask on a LaTeX forum.
+
+To install LaTeX, on Windows use MiKTeX; on OSX use MacTex, and on Linux use
+your distro's package manager. Dvipng must also be installed.
+
+NOTE: On Windows, go to Settings in MikTek's maintenance window, and make sure
+"Install missing packages on the fly" is set to "No", not to "Ask me first".
+If you continue to have difficulties, one user reported that running Anki as
+an administrator until all the packages were fetched helped.
+
+NOTE: On OSX, LaTeX has only been tested with MacTex and BasicTex. If you use
+BasicTex, you need to install dvipng separately, with the following command:
+tlmgr update --self && tlmgr install dvipng. If you want to install from
+MacPorts or similar, you will need to figure out any issues yourself.
+
+Example
+--------
+
+The most general way to input LaTeX content is to surround it with
+[latex][/latex] tags. There's a shortcut button for this documented in the
+<<editor,editor>> section.
+
+For example, entering the following on the front of an Anki flashcard:
+
+-----
+Does [latex]\begin{math}\sum_{k = 1}^{\infty}\frac{1}{k}\end{math}[/latex] converge?
+-----
+
+will produce this when the flashcard is viewed:
+
+image:convergence_question.png[]
+
+The formula in the example above is called a 'text formula', because it is displayed right within the non-mathematical text.  In contrast, the following example shows a 'displayed formula':
+
+-----
+Does the sum below converge?
+
+[latex]\begin{displaymath}\sum_{k = 1}^{\infty}\frac{1}{k}\end{displaymath}[/latex]
+-----
+
+image:convergence_question_2.png[]
+
+'Text formulas' and 'display formulas' are the most common type of LaTeX
+ expressions, so Anki provides abbreviated versions of them.  Expressions of
+ the form:
+
+-----
+[latex]\begin{math}...\end{math}[/latex]
+-----
+
+can be shortened to
+
+-----
+[$]...[/$]
+-----
+
+and expressions of the form
+
+-----
+[latex]\begin{displaymath}...\end{displaymath}[/latex]
+-----
+
+can be shortened to
+
+----
+[$$]...[/$$]
+----
+
+For example, the two LaTeX snippets shown before are equivalent to
+
+-----
+Does [$]\sum_{k = 1}^{\infty}\frac{1}{k}[/$] converge?
+-----
+
+and
+
+-----
+Does the sum below converge?
+
+[$$]\sum_{k = 1}^{\infty}\frac{1}{k}[/$$]
+-----
+
+respectively.
+
+== LaTeX packages ==
+
+Anki allows you to customize the LaTeX preamble so you can import custom
+packages for chemistry, music and so on. For example, imagine you find an
+example file for chemtex on the internet:
+
+-----
+\documentclass[a4paper,12pt]{report}
+\usepackage{chemtex}
+\begin{document}
+
+\initial
+\begin{figure}[h]\centering
+\parbox{.3\textwidth}{\ethene{H}{H$_3$C}{CH$_3$}{Br}}
+\hfil
+\parbox{.3\textwidth}{\cbranch{H}{S}{H}{S}{C}{S}{}{S}{H}
+  \xi=-200 \cright{}{Q}{C}{D}{O}{S}{OH}}
+\hfil
+\parbox{.3\textwidth}{\hetisix{Q}{Q}{Q}{Q}{Q}{Q}{O}{Q}{O}
+  \xi=-171 \fuseup{Q}{Q}{Q}{Q}{D}{Q}{D}{Q}{D}}
+\caption{Chemie mit {\tt CHEMTEX}\label{a1}}
+\end{figure}
+
+\end{document}
+-----
+
+Firstly, follow the documentation of the package and MiKTeX/MacTex in order to
+install the package. To check the package is working, you'll want to put code
+like the above into a .latex file and test you can compile it from the command
+line. Once you've confirmed that the package is available and working, we can
+integrate it with Anki.
+
+To use this with Anki, click "Add" in the main window, and then click the
+gears icon to start customizing note types. Choose the note type you plan to
+use, and click "Options". The LaTeX header and footer are shown. The header
+will look something like:
+
+-----
+\documentclass[12pt]{article}
+\special{papersize=3in,5in}
+\usepackage{amssymb,amsmath}
+\pagestyle{empty}
+\setlength{\parindent}{0in}
+\begin{document}
+-----
+
+To use chemtex, you'd add the usepackage line in the earlier example, so it
+looks like:
+
+-----
+\documentclass[12pt]{article}
+\special{papersize=3in,5in}
+\usepackage{amssymb,amsmath}
+\usepackage{chemtex}
+\pagestyle{empty}
+\setlength{\parindent}{0in}
+\begin{document}
+-----
+
+After that, you should be able to include lines like the following in your
+Anki cards:
+
+-----
+[latex]\ethene{H}{H$_3$C}{CH$_3$}{Br}[/latex]
+-----
+
+= Miscellanea =
+
+== Menu Shortcuts ==
+
+On Windows/Linux you can hold down the alt key and press a highlighted letter
+to activate a particular menu.
+
+OS X doesn't support this feature, but it does allow you to assign shortcuts
+to specific menu items instead. Please see
+http://lifehacker.com/343328/create-a-keyboard-shortcut-for-any-menu-action-in-any-program
+for more information.
+
+= Add-ons =
+
+Anki's capabilities can be extended with add-ons. Add-ons can provide features
+like extra support for specific languages, extra control over scheduling, and
+so on.
+
+To browse the list of available add-ons, select the Tools>Add-ons>Browse &
+Install menu item. You can also use Tools>Add-ons to check which add-ons are
+installed.
+
+Some add-ons have options or customizations that are only accessible by
+editing them. To edit an add-on, go to Tools>Add-ons>[add-on name]>Edit.
+Please be careful when editing - special characters and whitespace is
+important, so if you see something like:
+
+-----
+    line1
+    line2
+    line3
+-----
+
+...and you accidentally change it to the following, Anki will throw an error
+when it is restarted:
+
+-----
+    line1
+   line2
+    line3
+-----
+
+Many add-on authors include their email address in the add-on, so if you need
+to get in touch with the author, editing the add-on and looking at the top of
+the file may help.
+
+If you have downloaded an add-on that is not working properly, or if you
+accidentally made a mistake when editing an add-on, you can use the "Delete"
+option in the menu to remove it.
+
+To learn how to write your own add-ons, please see the link:addons.html[add-on writing guide].
+
+= Contributing =
+
+Sharing Decks
+--------------
+
+To share decks with other people, <<syncing,synchronize>> them with AnkiWeb,
+then click on "Share" from the decks list.
+
+Sharing Add-ons
+----------------
+
+Please see the add-on documentation above.
+
+Translations
+-------------
+
+Translations can be done directly from the 
+https://translations.launchpad.net/anki/trunk[translation website].
+
+Launchpad will guess which languages you can translate based on the country
+you're connecting from. If the language you want to translate to doesn't
+appear, sign up for a launchpad account, and in your profile, click the '!'
+next to preferred languages to the language you want to translate.
+
+The translations on the website are divided up into two sections, "libanki"
+and "ankiqt". Both sections need to be translated for the app to be completely
+translated.
+
+There are some special markers in text that you need to be aware of, and
+careful when translating:
+
+ * A string like `Cards: %d` or `Error: %s` means that the % part will be
+   replaced with some other value. The characters must remain the same in the
+   translation, so a translation may look like `カード: %d`.
+ * The same applies to text like `%(a)d of %(b)d` - it would be
+   translated like `%(a)d von %(b)d`. If you need to reverse A and B in your
+   language, that's fine as long as the text remains the same. 
+ * Menu items have an & to indicate which character is the shortcut key, such
+   as `&File`. In languages that use roman text text you can place the & over
+   a different character such as `&Datei`; in other languages there may be a
+   different convention. Japanese for example includes the roman character
+   afterwards instead, like `ファイル (&F)`
+ * Some strings have plural support, so that "0 cards", "1 card", "5 cards"
+   can be represented properly in your language. In these instances you'll
+   need to enter the 2 or 3 different forms.
+
+Sometimes it will not be clear what a string refers to, and you may want to
+see the context. Below every string to be translated, you'll see a line like
+this:
+
+-----
+Located in ../qt/aqt/forms/preferences.py:213 
+-----
+
+If you see '../lib/anki/filename.py', simply visit
+https://github.com/dae/libanki/tree/master/anki, locate the same filename, and
+click on it. The file will be displayed with line numbers on the left, and by
+matching up the line numbers (they may different by a few lines sometimes),
+you may be able to get a better understanding of what the string refers to.
+
+If you see '../qt/aqt/filename.py', follow the same steps as above but visit
+https://github.com/dae/ankiqt/tree/master/aqt instead.
+
+If you see 'forms' in the string like the above example, the strings will
+generally be obvious. If you do need to understand the context however, things
+are a little more complicated, as those files are automatically generated from
+an interface description instead. Please go to
+https://github.com/dae/ankiqt/tree/master/designer and locate the same
+filename and click on it. We can't rely on line numbers in this case, so
+please use the browser's find option to find the string in the file. The lines
+immediately surrounding the found text may give a clue as to its meaning.
+
+If you find a string that you're unsure how to translate, or would like to
+start a discussion with fellow native speakers on the best way to translate
+something, please feel free to start a thread in the Anki forums.
+
+Any translations that were made at least a few hours before a new Anki release
+are automatically included in the next release. If you'd like to see your name
+in the About screen as a contributor, please drop Damien a line.
+
+If you'd like to try out your translations without waiting for a new release,
+download a program called poedit. The translation website provides an option
+for exporting and importing translations as .po files. With an exported .po
+file, you can use poedit to generate a .mo file, which is a compiled version
+of the translations. If you then move that .mo file into Anki's installation
+folder, overwriting an existing .mo file with the same language code (in the
+locale folder), Anki will display the new translations when it is next
+started.
+
+Contributing Code
+-------------------
+
+Anki's source code is available at http://github.com/dae
+
+If you have bugfixes or believe your changes would benefit many people, please
+have a look at the LICENSE file, and if you agree to the license, drop Damien
+an email or a Github pull request.
+
+More Information
+================
+
+ * {faq}
