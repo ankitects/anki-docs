@@ -5,6 +5,8 @@ WEB = /Users/dae/Lib/web/ankisrs.net
 all: $(HTML)
 	rsync -av *.png *.html stylesheets $(WEB)/docs/dev
 	make -C $(WEB)
+	git commit -a -m update
+	git push
 
 %.html: %.txt asciidoc.conf stylesheets/xhtml11.css
 	asciidoc -a stylesdir=$(CWD)/stylesheets $< 
