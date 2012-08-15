@@ -40,7 +40,7 @@ Active Recall Testing
 
 'Active recall testing' means being asked a question and trying to remember
 the answer. This is in contrast to 'passive study', where we read, watch or
-listen to something without pausing to consider if we known the answer.
+listen to something without pausing to consider if we know the answer.
 Research has shown that active recall testing is far more effective at
 building strong memories than passive study. There are two reasons for this:
 
@@ -365,7 +365,7 @@ shared deck. The text below assumes that "Basic" is selected.
 
 The top right of the window shows us the deck cards will be added to. If you'd
 like to add cards to a new deck, you can click on the button and then click
-"New".
+"Add".
 
 Below the note type, you'll see some buttons, and an area labeled "Front" and
 "Back". Front and Back are called 'fields', and can you can add, remove and
@@ -392,9 +392,9 @@ limited to the current note type, so if you're studying multiple languages, it
 would be okay to have the same Front as long as each language used a different
 note type.
 
-Anki doesn't allow you to check for duplicates in other fields automatically
-for efficiency reasons, but the browser has a "Find Duplicates" function which
-you can run periodically.
+Anki doesn't check for duplicates in other fields automatically for efficiency
+reasons, but the browser has a "Find Duplicates" function which you can run
+periodically.
 
 For more information on the buttons between the note type and the fields,
 please see the <<editor,editor>> section.
