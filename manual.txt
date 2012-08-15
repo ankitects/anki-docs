@@ -1462,6 +1462,9 @@ And in the template:
 <span class=jp>{{Field}}</span>
 -----
 
+You can also use properties like .gecko, .opera, and .ie to select particular
+browsers when using AnkiWeb.
+
 [[profileprefs]]
 = Profiles & Preferences =
 
