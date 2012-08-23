@@ -1540,6 +1540,9 @@ group, and decks imported from previous versions of Anki have separate option
 groups. If you'd like to alter the settings on one deck but not other decks,
 click the gears icon in the top right and add a new options group.
 
+Please only change options that you fully understand, as inappropriate
+adjustments may render Anki less effective.
+
 New Cards
 ---------
 
@@ -1597,7 +1600,13 @@ become overwhelmed by the reviews required.
 *Graduating interval* is the delay between answering 'Good' on a card with no
 steps left, and seeing the card again.
 
-*Easy* is the delay between answering 'easy' on a card and seeing it again.
+*Easy interval* is the delay between answering 'easy' on a card and seeing it again.
+
+*Starting ease* controls the easiness that cards start out with. It defaults
+to 250%, meaning that a review card's interval will increase to approximately
+2.5x its previous interval when you answer "Good" (eg 10 days -> 25 days).
+Based upon how you rate the card in subsequent reviews, the easiness may
+increase or decrease from what it starts out as.
 
 When *Try not to show...* is checked, Anki will try not to introduce two new
 cards of the same note next to each other, as seeing one card may make it
@@ -1633,8 +1642,8 @@ more than two cards in a note type, you may want to increase this.
 'Good' and 'Easy' on a card.
 
 *Interval modifier* allows you to apply a multiplication factor to the
-intervals Anki generates. At its default of 1 it does nothing; if you set it
-to 0.8 for example, intervals will be generated at 80% of their normal size
+intervals Anki generates. At its default of 100% it does nothing; if you set it
+to 80% for example, intervals will be generated at 80% of their normal size
 (so a 10 day interval would become 8 days). You can thus use the multiplier to
 make Anki present cards more or less frequently than it would otherwise,
 trading study time for retention or vice versa.
@@ -1664,7 +1673,7 @@ log(90%) / log(85%) = 0.65
 
 You can use Google to https://www.google.com/search?q=log(90%25)+%2F+log(85%25)[calculate it] for you.
 
-If you plug the resulting 0.65 into the interval modifier, you should find
+If you plug the resulting 65% into the interval modifier, you should find
 over time that your retention moves closer to your desired retention.
 
 One important thing to note however is that the tradeoff between time spent
