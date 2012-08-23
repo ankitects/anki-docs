@@ -756,6 +756,51 @@ it contains a fix.
    none; }). Thanks to ospalh.
  * Focus "resume now" button.
 
+= Changes in Beta 19 =
+
+ * Anki should now allow you to double-click on .apkg and .anki files in your
+   file browser in order to import them. This required changes to the
+   installers on all platforms, so please report any issues. This new
+   functionality will be used by the new shared deck system once it's ready:
+   each deck will have a download button, and once you've downloaded the deck
+   you should be able to just double click on it in order to import it into
+   your collection. This should also make private distribution of shared decks
+   easier. The same system will probably be extended to add-on downloading as
+   well in the future.
+ * If an existing instance of Anki is running when you double click on a deck,
+   it will import it into that instance instead of trying to start another
+   copy.
+ * When called from the command line, you can also pass a filename to import,
+   which may be useful if you want to automate importing.
+ * Report time/cards studied at the bottom of the deck list.
+ * Learning intervals are now displayed like "<10m" to reflect the fact that
+   they will be displayed early if nothing else is waiting.
+ * Anki now ensures that each button's interval is at least one day different,
+   so where you would previously see "2, 2, 3", you'll now see "2, 3, 4".
+ * Add "options" to the dropdown in the decks screen.
+ * Add configuration of initial ease factor back to the deck options.
+ * <script> tags on cards are now executed, and a bug with displaying script
+   errors has been fixed.
+ * Fixed bug with initial profile creation on non-English OSes.
+ * Anki will now refuse to run on an unmapped UNC network share.
+ * Report # of cards deleted when reviewing.
+ * Allow the add window to be resized a little smaller.
+ * The reposition command has been fixed to reposition cards in the order they
+   appear listed in the browser.
+ * Backspace will no longer delete cards unless you're on a Mac.
+ * "Study more" now allows increasing the limit more than 100 at a time.
+ * Refuse to rename a profile if the folder already exists.
+ * The current deck is now properly focused when clicking on the deck button
+   from within the Add window.
+ * Fix conflicting shortcut in browser.
+ * Don't attempt to delete if no notes selected.
+ * When encountering a specific problem with Anki 1.2 decks, fix the problem
+   instead of reporting an error.
+ * Ensure repetition and lapse count is cleared when exporting without
+   scheduling info.
+ * Bury will no longer unsuspend siblings.
+ * Hint fields can now be styled with .hint
+
 = Trying It Out =
 
 You can install the program in a separate location to 1.2.x if you want to run
