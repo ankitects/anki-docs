@@ -449,7 +449,7 @@ you might use that when creating a German vocab type.
 After choosing "OK", you'll be asked to name the new type. The subject
 material you're studying is a good choice here - things like "Japanese",
 "Trivia", and so on. Once you've chosen a name, close the Note Types window,
-and you'll return to the Add Notes window.
+and you'll return to the adding window.
 
 [[fields]]
 Customizing Fields
@@ -462,8 +462,8 @@ note.
 notes. This is useful if you want to make unimportant information smaller, or
 increase the size of foreign characters which are hard to read. The changes
 you make here do not affect how cards appear when reviewing: to do that,
-please see the <<templates,templates>> section. If you have enabled the type
-in the answer function however, the text you type will use the font size
+please see the <<templates,templates>> section. If you have enabled the "type
+in the answer" function however, the text you type will use the font size
 defined here.
 
 When *Remember last input...* is checked, Anki will not clear out the field
@@ -509,7 +509,7 @@ that shows you how many cards are due today. There are three types:
 
  * *New* refers to cards that you have downloaded or entered in, but have
    never been studied before.
- * *In Learning* refers to cards that were seen for the first time recently,
+ * *Learning* refers to cards that were seen for the first time recently,
    and are still being learnt.
  * *To Review* refers to cards that were previously learnt, and now need to be
    reviewed so you don't forget them.
@@ -860,8 +860,8 @@ Cards and Templates
 
 As mentioned in the <<basics,basics>>, Anki creates cards automatically for
 use, based on your notes. You can configure the cards Anki should create and
-what should be shown them when adding or editing material by clicking on the
-"Cards..." button. Please read the basics section if you have not done so
+what should be shown on them when adding or editing material by clicking on
+the "Cards..." button. Please read the basics section if you have not done so
 already, as the rest of this section assumes you have read it.
 
 At the top of the window you'll see a list of cards. You can click the plus on
@@ -880,7 +880,7 @@ on the text you had typed into the Add Notes window. If you opened the window
 while editing a note, the preview will be based on that note.
 
 At the bottom of the window are some buttons to rename or reorder the cards.
-Another button labeled "Default Deck..." allows you to change the deck in
+Another button labeled "Deck Override..." allows you to change the deck in
 which cards of the current type will be placed into. By default, cards are
 placed into the deck you provide in the Add Notes window. If you set a deck
 here, the button will change to read "Specific Deck...", and that card type
@@ -950,7 +950,7 @@ your question template so that it looks like this:
 
 Note that we have added 'type:' in front of the field we want to compare, and
 it is copied into the answer section as well. If you don't have FrontSide on
-the back of your card, you wil need to add the same type directive to the
+the back of your card, you will need to add the same type directive to the
 answer side as well.
 
 When reviewing, Anki will display a text box where you can type in the answer,
@@ -1327,7 +1327,7 @@ As mentioned in the card generation section above, generation of regular cards
 depends on one or more fields on the question being non-empty. Cloze deletion
 note types are generated differently:
 
- * Anki looks on the question template for one or more cloze replacements,
+ * Anki looks on the front template for one or more cloze replacements,
    like \{\{cloze:FieldName}}. 
  * It then looks in the FieldName field for all cloze references, like
    \{\{c1:text}}.
