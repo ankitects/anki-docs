@@ -801,6 +801,26 @@ it contains a fix.
  * Bury will no longer unsuspend siblings.
  * Hint fields can now be styled with .hint
 
+= Changes in Release Candidate 1 =
+
+ * The deck list screen now supports expanding/collapsing decks, thanks to a
+   contribution by Chris L.
+ * Deck description now correctly imported from apkg.
+ * Links in deck description now clickable.
+ * Change stats from cards in 5 minutes to cards in 1 minute.
+ * Stats now show exact counts for young/mature/etc in labels.
+ * The review time/history graph in "deck life" mode now derives the period
+   from the deck, not the collection.
+ * The answer buttons graph now honors the selected time period.
+ * Short times like '4d' no longer ignore translations.
+ * Exporting an apkg without scheduling now exports the decks with the default
+   configuration group, so they pick up the default settings in the importing
+   collection.
+ * Failing a review card now honours the minimum interval setting.
+ * Use "command" for tooltips in Add screen on OS X
+ * Don't show interval for learning cards in browser
+ * Don't mark notes as modified when they're imported from an apkg.
+
 = Trying It Out =
 
 You can install the program in a separate location to 1.2.x if you want to run
