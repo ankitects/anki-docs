@@ -1,12 +1,29 @@
-:toc:
-
 _ Changes in Anki 2 _
 
-= Manual =
+= Please Read This =
 
-Below are a list of the more significant changes. For more information, please
-see the link:manual.html[user manual], which has been completely rewritten for
-version 2.
+Your time is precious, and you may not have time to read this whole document -
+that's fine. But please read this section, as it points out a few things that
+are most likely to cause surprises in the new version.
+
+ * Reviews are <<perday,limited>> to 100/day by default.
+ * When you answer "again", there are now two
+   link:manual.html#learning[learning] reviews of the card, so the red count
+   will increase by two.
+ * Cloze deletion has been much improved, but now requires you to select a
+   special cloze type (the top left button in the Add window).
+ * Selective study is still possible, but is done differently. You can either
+   move cards into different decks (via 'Change Deck' in the card browser), or
+   create a <<filtered,filtered deck>> that searches for particular tags, card
+   properties and so on.
+ * If you study material in multiple directions / used multiple card
+   templates, please see <<cardgen,this section>> for info on how cards are
+   selected now.
+ * Anki only checks the <<dupes,first field>> to see if it's unique now.
+
+The rest of this page describes all the changes in more detail. For more
+information, please also see the link:manual.html[user manual], which has been
+completely rewritten for version 2.
 
 = Decks & Profiles =
 
@@ -35,6 +52,7 @@ version 2.
  * You can divide the cards up into separate groups, called 'decks'.
  * 'Plugins' are now called 'add-ons'.
 
+[[perday]]
 = Per-day limiting =
 
  * The new cards per day limit is controllable per deck, and bounded by the
@@ -61,14 +79,11 @@ version 2.
 <img src="2-overview.png" style="float:right; margin: 1em;">
 ++++++++++
 
- * Shared decks are now added via AnkiWeb, and can then be synced to the
-   desktop program or one of the mobile clients.
+ * Shared decks can now be browsed on AnkiWeb, and downloaded from your browser.
  * You can now rate and comment on shared decks.
  * You can now pull in new cards from a previously downloaded shared deck.
- * Shared decks are no longer distributed as a collection of facts and cards.
-   Instead, when downloading a shared deck, a wizard allows you to choose what
-   you want to see on the front and back of your cards.
 
+[[selective]]
 = Selective Study =
 
 Anki's new deck system is based on the following observations:
@@ -174,6 +189,7 @@ per-lesson basis when you're ready to study them. You could do it like this:
    length longer than your session length (eg, 1 hour), and increasing "learn
    ahead limit" in the preferences to that number as well.
 
+[[filtered]]
 = Filtered Decks & Cramming =
 
  * Filtered decks allow you to gather cards from other decks based on specific
@@ -312,6 +328,7 @@ per-lesson basis when you're ready to study them. You could do it like this:
    too, as the divider is included on the template and can be removed if
    desired.
 
+[[cardgen]]
 = Card Generation & Deletion =
 
  * In previous versions of Anki, the cards that were generated when adding
@@ -340,6 +357,7 @@ per-lesson basis when you're ready to study them. You could do it like this:
    delete cards on individual note changes. To remove empty cards, click
    Tools>Maintenance>Empty Cards.
 
+[[dupes]]
 = Fields and Duplicates =
 
  * You can no longer specify whether a field should be unique or required.
@@ -349,6 +367,8 @@ per-lesson basis when you're ready to study them. You could do it like this:
    field is sufficient for determining if a given subject has been entered in
    before. If you wish to look for accidental duplicates in secondary fields
    due to typos, you can use the Find Duplicates feature in the browser.
+
+ * For more info, please see <<dupes2,this question>>.
 
  * Fields can now be marked sticky. This means that when you add notes, the
    field content is not erased and is left in the field. This is useful when
@@ -373,6 +393,7 @@ per-lesson basis when you're ready to study them. You could do it like this:
  * You can now jump to a conflicting note when conflicts are detected
  * Images are shown at a reduced size in editing mode.
 
+[[cloze]]
 = Cloze Deletion =
 
  * Cloze deletion now makes it easy to generate multiple clozes from a single
@@ -483,6 +504,7 @@ keep, you'll need to import the deck with the missing cards into a new profile
 writing an add-on that will alter the cards and allow you to import one
 profile into the other in the future.
 
+[[dupes2]]
 *Why can't we mark an arbitrary number of fields as unique?*
 
 Consider the notes section of link:manual.html#basics[the basics]. All three

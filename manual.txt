@@ -2933,7 +2933,7 @@ Located in ../qt/aqt/forms/preferences.py:213
 If you see '../lib/anki/filename.py', simply visit
 https://github.com/dae/libanki/tree/master/anki, locate the same filename, and
 click on it. The file will be displayed with line numbers on the left, and by
-matching up the line numbers (they may different by a few lines sometimes),
+matching up the line numbers (they may differ by a few lines sometimes),
 you may be able to get a better understanding of what the string refers to.
 
 If you see '../qt/aqt/filename.py', follow the same steps as above but visit
