@@ -307,14 +307,16 @@ someone has shared.
  1. Visit {ankiweb} and sign up for a free account.
  2. Click the "Decks" tab, and then "Get Shared Decks"
  3. When you've found a deck you're interested in, click the "Download" button
-    to add the deck to your online account.
- 4. After the deck has been added, you'll be asked to choose what you'd like
-    to appear on the front and back of each card. Currently this screen only
-    allows you to choose one card; if you'd like multiple cards they can be
-    added later.
- 5. Once you've finished setting up the front and back of your cards, you can
-    synchronize your decks to your computer if you'd like to study them
-    offline. To do this, please see the <<syncing,synchronization>> section.
+    to download a deck package.
+ 4. Double-click on the downloaded package to load it into Anki, or drag the
+    file onto the Anki icon.
+
+Please note that it's not currently possible to add shared decks directly to
+your AnkiWeb account. You need to import them with the desktop program, then
+synchronize to upload them to AnkiWeb.
+
+Please see <<sharingdecks,sharing decks>> for info on sharing your decks with
+others.
 
 .Self-made versus pre-made
 **********************************************************************
@@ -2875,11 +2877,12 @@ To learn how to write your own add-ons, please see the link:addons.html[add-on w
 
 = Contributing =
 
+[[sharingdecks]]
 Sharing Decks
 --------------
 
 To share decks with other people, <<syncing,synchronize>> them with AnkiWeb,
-then click on "Share" from the decks list.
+then click on "Share" from the menu next to the deck you wish to share.
 
 Sharing Add-ons
 ----------------
