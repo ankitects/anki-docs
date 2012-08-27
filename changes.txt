@@ -11,7 +11,7 @@ are most likely to cause surprises in the new version.
    link:manual.html#learning[learning] reviews of the card, so the red count
    will increase by two.
  * Cloze deletion has been much improved, but now requires you to select a
-   special cloze type (the top left button in the Add window).
+   special <<cloze,cloze type>> (the top left button in the Add window).
  * Selective study is still possible, but is done differently. You can either
    move cards into different decks (via 'Change Deck' in the card browser), or
    create a <<filtered,filtered deck>> that searches for particular tags, card
@@ -332,19 +332,20 @@ per-lesson basis when you're ready to study them. You could do it like this:
 = Card Generation & Deletion =
 
  * In previous versions of Anki, the cards that were generated when adding
-   facts depended on whether the cards would be blank or not, and whether a
-   given card type was enabled or disabled. Anki 2 only considers the former
-   now - cards can not be marked inactive. Instead, you can use the
-   conditional replacement features of the templates to control which cards
-   are generated in a predictable way. If you still need control over which
-   cards are generated (such as adding a native->foreign language card for
-   only the most important material), you can either create a separate note
-   type for the important material, or add an extra field to use as a flag.
-   For example, you could add a field called "important", and make the second
-   card's generation depend on the field being non-empty. Then you can just
-   add a character such as "y" to that field on the important cards. Anki will
-   automatically do this for your decks when they are upgraded, so that you
-   don't lose or gain cards when upgrading.
+   facts depended on whether the cards would be blank or not, and whether
+   you'd selected that card in the top right button of the Add window. Anki 2
+   only considers the former now - there's no button anymore to select
+   particular cards. Instead, you can use the conditional replacement features
+   of the templates to control which cards are generated in a predictable way.
+   If you still need control over which cards are generated (such as adding a
+   native->foreign language card for only the most important material), you
+   can either create a separate note type for the important material, or add
+   an extra field to use as a flag. For example, you could add a field called
+   "important", and make the second card's generation depend on the field
+   being non-empty. Then you can just add a character such as "y" to that
+   field on the important cards. Anki will automatically do this for your
+   decks when they are upgraded, so that you don't lose or gain cards when
+   upgrading.
 
  * This change means there is no "generate cards" dialog anymore, nor a
    "delete card" feature, as card existence is now controlled solely by the
