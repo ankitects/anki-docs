@@ -501,7 +501,7 @@ When you click on a deck, it will become the 'current deck', and Anki will
 change to the study screen. 
 
 You can click the gears button to the right of a deck in order to rename or
-delete decks.
+delete decks, or customize their options.
 
 Study Overview
 --------------
