@@ -1895,7 +1895,8 @@ default.
  -deck:filtered :: normal decks only
 
  card:forward :: search for Forward cards
- card:1 :: search for cards by number - useful for cloze cards
+ card:1 :: search for cards by template number - eg, to find the second cloze
+   deletion for a note, you'd use card:2
 
  note:basic :: search for cards with a Basic note type
 
