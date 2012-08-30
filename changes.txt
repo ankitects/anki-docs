@@ -844,24 +844,31 @@ it contains a fix.
  * Don't show interval for learning cards in browser
  * Don't mark notes as modified when they're imported from an apkg.
 
+= Changes in Release Candidate 2 =
+
+ * 1+ day learning cards should now appear in deck list due counts.
+ * Possible workaround for images intermittently failing to show on Windows.
+ * Fix up/down buttons on interval multiplier
+ * Remove 'collapse' from the options menu next to decks.
+ * Improve error message when checking DB on a corrupt collection.
+
 = Trying It Out =
 
 You can install the program in a separate location to 1.2.x if you want to run
 both concurrently.
 
-WARNING: Please read the following points carefully before trying it out:
-
- * Decks created or upgraded with the betas will also work with the final
-   release of Anki 2.
- * You can sync your decks with the beta AnkiWeb at http://beta.ankiweb.net.
- * The alpha version of AnkiDroid is compatible with Anki 2 decks, but
-   sometimes takes a few days to catch up with the latest beta. It can be
-   fetched from http://code.google.com/p/ankidroid/downloads/list
+ * Please read the top of this document for an overview of the changes that
+   cause the most surprises.
+ * Decks created or upgraded with the release candidates will also work with
+   the final release of Anki 2.
+ * You can sync your decks with the beta AnkiWeb at https://beta.ankiweb.net.
+ * The beta version of AnkiDroid is compatible with Anki 2 decks, but
+   sometimes takes a few days to catch up with the latest desktop version. It
+   can be fetched from http://code.google.com/p/ankidroid/downloads/list
  * There is no iPhone version that works with Anki 2 decks at the moment. It's
-   currently being beta tested, but will probably not be ready for general use
-   until the end of August. In the mean time, you can review via the beta
-   AnkiWeb, as the review interface has been updated to appear better on the
-   iPhone.
+   currently being beta tested, but needs a bit more time to stabilize. In the
+   mean time, you can review via the beta AnkiWeb, as the review interface has
+   been updated to appear better on the iPhone.
 
 You can download from http://ankisrs.net/download/mirror/beta/
 
