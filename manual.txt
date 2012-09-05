@@ -989,7 +989,7 @@ line of the answer template.
 
 NOTE: For advanced users, the "the correct answer was" part of the text can be
 styled or hidden in the styling section, with text such as `#rightanswer {
-display: none; }`.
+display: none; }`
 
 == Newlines ==
 
