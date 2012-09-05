@@ -852,6 +852,23 @@ it contains a fix.
  * Remove 'collapse' from the options menu next to decks.
  * Improve error message when checking DB on a corrupt collection.
 
+= Changes in Release Candidate 3 =
+
+ * You can now add notes with duplicate front fields - Anki will colour
+   the field red, but no longer prevent you from adding.
+ * A proper fix for images on the answer side failing to show up on
+   Windows/Linux.
+ * Failing a review card in a filtered deck should now correctly update its
+   interval.
+ * Don't incorrectly warn about missing history when the same card has been
+   reviewed from multiple locations.
+ * Don't scroll to the top of the deck list when updating it.
+ * Fix problems editing filtered deck options from deck list screen.
+ * Fix profile renaming.
+ * The default deck will no longer be shown on the deck list screen if it's
+   empty and there are other decks.
+ * is:learn now matches relearning cards as well
+
 = Trying It Out =
 
 You can install the program in a separate location to 1.2.x if you want to run
