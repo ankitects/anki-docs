@@ -987,6 +987,9 @@ To enable typing, add a <br> and append a line like so:
 If you don't want to see the context in the answer, you can delete the first
 line of the answer template.
 
+NOTE: For advanced users, the "the correct answer was" part of the text can be
+styled or hidden by targeting it with #rightanswer in the styling section.
+
 == Newlines ==
 
 The template language needs a special command to create a new line. For
