@@ -10,6 +10,8 @@ http://ankisrs.net/docs/help.html
 Translations
 =============
 
+This page translated into other languages:
+
  * http://192.167.9.6/Anki_ITA/Manual_ITA.htm[Italiano]
     
 Introduction
