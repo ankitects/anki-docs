@@ -869,6 +869,19 @@ it contains a fix.
    empty and there are other decks.
  * is:learn now matches relearning cards as well
 
+= Changes in Release Candidate 4 =
+
+ * Removed "Study" from the top bar. The associated 's' shortcut key will still
+   work.
+ * The deck list now ignores the per-day review limit when counting 1+ day
+   learning cards.
+ * Fixed some issues with < in a multi-line LaTeX string.
+ * Don't allow profiles with trailing spaces, as Windows can't handle them.
+ * Show the learning queue as orange instead of red.
+ * Handle a few more problems in the DB check.
+ * Fix a bug introduced in rc3 where answering 'soon' on a review card would
+   lead to an error message.
+
 = Trying It Out =
 
 You can install the program in a separate location to 1.2.x if you want to run
