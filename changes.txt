@@ -881,6 +881,7 @@ it contains a fix.
  * Handle a few more problems in the DB check.
  * Fix a bug introduced in rc3 where answering 'soon' on a review card would
    lead to an error message.
+ * Fix importing of media from Anki 1 decks.
 
 = Trying It Out =
 
