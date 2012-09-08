@@ -1,5 +1,5 @@
 :toc:
-_ Writing Anki Add-ons _
+_ Writing Anki 2.0 Add-ons _
 
 Anki is written in a user-friendly language called Python. If you're not
 familiar with Python, please read the http://docs.python.org/tutorial/[Python
