@@ -2526,8 +2526,8 @@ again. After doing so, you'll need to add any profiles you were using again.
 As long as you use the same profile name as before, Anki will pick up the
 files from before.
 
-Running from a flash drive
----------------------------
+Running from a USB flash drive on Windows
+-------------------------------------------
 
 To run Anki from a flash drive:
 
@@ -2541,6 +2541,9 @@ To run Anki from a flash drive:
 
  * Double-clicking on anki.bat should start Anki with the user data stored in
    G:\ankidata.
+
+NOTE: Media syncing with AnkiWeb may not work if your flash drive is formatted
+as FAT32. Please format the drive as NTFS to ensure media syncs correctly.
 
 Backups
 ---------
