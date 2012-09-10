@@ -1804,6 +1804,10 @@ when media has been added or removed from your media folder, but will not
 notice if you have edited some existing files without adding or removing any.
 To get your edits noticed, you need to add or remove a file as well.
 
+NOTE: If you're running Anki off a USB flash drive, you should use an NTFS
+file system, as Anki may not be able to detect media changes on a FAT32
+filesystem.
+
 Conflicts
 ----------
 
