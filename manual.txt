@@ -2905,8 +2905,8 @@ Sharing Add-ons
 
 Please see the add-on documentation above.
 
-Translations
--------------
+App Translations
+-----------------
 
 Translations can be done directly from the 
 https://translations.launchpad.net/anki/trunk[translation website].
@@ -2980,6 +2980,24 @@ of the translations. If you then move that .mo file into Anki's installation
 folder, overwriting an existing .mo file with the same language code (in the
 locale folder), Anki will display the new translations when it is next
 started.
+
+Translating the Manual
+-----------------------
+
+If you're a fairly technical user, you may want to translate the
+https://raw.github.com/dae/ankidocs/master/manual.txt[source file] of the
+manual, and compile it yourself with asciidoc. You can also use that github
+repo to keep track of changes to the manual in the future.
+
+If that sounds complicated, an easier way is to visit the
+http://ankisrs.net/docs/dev/manual.html[manual website] and use File>Save As
+to save the manual to disk. You can then import it into Microsoft Word or
+similar software, and translate it that way.
+
+When you're happy with the translation, you can either put it up on the
+website and I can link to it, or I can host the translated file on Anki's
+website (but if you're planning to make frequent updates, the former is a
+better choice).
 
 Contributing Code
 -------------------
