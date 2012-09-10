@@ -2526,10 +2526,10 @@ again. After doing so, you'll need to add any profiles you were using again.
 As long as you use the same profile name as before, Anki will pick up the
 files from before.
 
-Running from a USB flash drive on Windows
--------------------------------------------
+Running from a Flash Drive
+--------------------------------
 
-To run Anki from a flash drive:
+To run Anki from a flash drive on Windows:
 
  * Copy the \Program Files\Anki folder to the flash drive, so you have a
    folder like G:\Anki.
