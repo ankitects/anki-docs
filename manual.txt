@@ -2526,6 +2526,22 @@ again. After doing so, you'll need to add any profiles you were using again.
 As long as you use the same profile name as before, Anki will pick up the
 files from before.
 
+Running from a flash drive
+---------------------------
+
+To run Anki from a flash drive:
+
+ * Copy the \Program Files\Anki folder to the flash drive, so you have a
+   folder like G:\Anki.
+ * Create a text file called G:\anki.bat with the following text:
+
+-----
+\anki\anki.exe -b \ankidata
+-----
+
+ * Double-clicking on anki.bat should start Anki with the user data stored in
+   G:\ankidata.
+
 Backups
 ---------
 
