@@ -2527,7 +2527,7 @@ As long as you use the same profile name as before, Anki will pick up the
 files from before.
 
 Running from a Flash Drive
---------------------------------
+---------------------------
 
 To run Anki from a flash drive on Windows:
 
