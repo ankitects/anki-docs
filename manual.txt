@@ -1556,6 +1556,10 @@ click the gears icon in the top right and add a new options group.
 Please only change options that you fully understand, as inappropriate
 adjustments may render Anki less effective.
 
+NOTE: Options are not retroactive. For example, if you change an option that
+controls the delay after failing a card, cards that you failed prior to
+changing the option will have the old delay, not the new one.
+
 New Cards
 ---------
 
@@ -1722,11 +1726,14 @@ If you leave the steps blank, Anki will not place the card back in the
 learning queue, and it will be rescheduled as a review with its new interval
 determined by the settings below.
 
-NOTE: As the new interval is determined when you answer "Again" to a review
-card, the "Good" and "Easy" buttons during relearing do not alter the interval
-again. If there is only a single step (the default), the "Easy" button will be
-hidden. If you have 2 or more steps, "Easy" is not hidden, to allow you to
-graduate cards from the queue before all of their steps are finished.
+NOTE: The new interval is determined when you answer "Again" to a review card,
+not when the card finishes its relearning steps. For this reason, the "Good"
+and "Easy" buttons during relearing do not alter the interval again - they
+only control which step you are on. If there is only a single step (the
+default), the "Easy" button will be hidden, since it would accomplish the same
+thing as the "Good" button. If you have 2 or more steps, "Easy" is not hidden,
+to allow you to graduate cards from the queue before all of their steps are
+finished.
 
 'New interval' controls how much Anki should reduce the previous interval by.
 If the card had a 100 day interval, the default of 0% would reduce the
