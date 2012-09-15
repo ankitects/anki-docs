@@ -7,8 +7,14 @@ Damien Elmes
 For questions regarding this manual, please see
 http://ankisrs.net/docs/help.html
 
+Intro Videos
+============
+
+ * http://www.youtube.com/watch?v=QS2G-k2hQyg&feature=plcp[Shared decks and review basics]
+ * http://www.youtube.com/watch?v=7uxVUIYCqEY&feature=plcp[Customizing cards]
+
 Translations
-=============
+============
 
 This page translated into other languages:
 
