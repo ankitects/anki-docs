@@ -638,6 +638,30 @@ media folders in sync between separate computers.
    lead to an error message.
  * Fix importing of media from Anki 1 decks.
 
+= Changes in Release Candidate 5 =
+
+ * Anki will now rename media automatically on import if a different file with
+   the same name already exists in the collection.
+ * Fix importing of Anki 1 media.
+ * Find suspended cards with is:new again
+ * The "check media db" option ignores filenames starting with an underscore. In this
+   RC, files beginning with _ will also be included when exporting.
+ * Add option to sort by reverse order added when filtering.
+ * Fix bug where "0 hours" could be displayed.
+ * When importing has ignored duplicates, report how many were already in the
+   collection.
+ * If you don't map any fields in a CSV file to tags, existing tags will no
+   longer be blanked out.
+ * Fix incorrect formatting after upgrading certain decks.
+ * Fix a bug where Anki would throw an error if you deleted a deck that
+   contained the default deck.
+ * Tweak centering of top bar.
+ * Don't ignore enter key when focus is returned from another app.
+ * If deck contains brackets, quote the deck in a search.
+ * Decrease minimum height of the browser.
+ * If user attempts to import a .anki2 file, explain it can't be imported.
+ * Other small fixes.
+
 = Download =
 
 Download links are available at http://ankisrs.net/anki2.html
