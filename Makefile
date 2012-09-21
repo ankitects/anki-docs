@@ -4,6 +4,7 @@ WEB = /Users/dae/Lib/web/ankisrs.net
 
 all: build
 	rsync -av *.png *.html stylesheets $(WEB)/docs/dev
+	rsync -av *.png *.html stylesheets $(WEB)/docs/
 	make -C $(WEB)
 	git commit -a -m update
 	#git push
