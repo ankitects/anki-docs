@@ -1,0 +1,466 @@
+Anki 1.2 User Manual
+_____________________
+Damien Elmes <anki@ichi2.net>
+
+Anki 2.0
+=========
+
+This manual is for Anki 1.2. If you have upgraded to
+http://ankisrs.net/anki2.html[Anki 2], please see the
+http://ankisrs.net/docs/manual.html[new manual] instead.
+
+Introduction
+============
+
+:faq: http://ichi2.net/anki/wiki/FrequentlyAskedQuestions[Frequently Asked Questions]
+:website: http://ichi2.net/anki/[Anki website]
+
+Anki is a program which makes remembering things easy. Because it is a lot
+more efficient than traditional study methods, you can either greatly decrease
+your time spent studying, or greatly increase the amount you learn.
+
+Anyone who needs to remember things in their daily life can benefit from Anki.
+Since it is content-agnostic and supports images, audio, videos and scientific
+markup (via LaTeX), the possibilities are endless. For example:
+
+ - learning a language
+ - studying for medical and law exams
+ - memorizing people's names and faces
+ - brushing up on geography
+ - mastering long poems
+ - even practicing guitar chords!
+
+There are two simple concepts behind Anki: 'active recall testing' and 'spaced
+repetition'. They are not known to most learners, despite having been written
+about in the scientific literature for many years. Understanding how they work
+will make you a more effective learner.
+
+[[active-recall]]
+Active Recall Testing
+---------------------
+
+'Active recall testing' means being asked a question and trying to remember
+the answer. This is in contrast to 'passive study', where we read, watch or
+listen to something without pausing to consider if we known the answer.
+Research has shown that active recall testing is far more effective at
+building strong memories than passive study. There are two reasons for this:
+
+ - The act of recalling something 'strengthens' the memory, increasing the
+   chances we'll be able to remember it again
+ - When we're unable to answer a question, it tells us we need to return to
+   the material to review or relearn it
+
+You have probably encountered active recall testing in your school years
+without even realizing it. When good teachers give you a series of questions
+to answer after reading an article, or make you take weekly progress-check
+tests, they are not doing it simply to see if you understood the material or
+not. By testing you, they are increasing the chances you will be able to
+remember the material in the future.
+
+A good way to integrate active recall testing into your own studies is to use
+'flashcards'. With traditional paper flashcards, you write a question on one
+side of a card, and the answer on the other side. By not turning the card over
+until you've thought about the answer, you can learn things more
+effectively than passive observation allows.
+
+Use It or Lose It
+------------------
+
+Our brains are efficient machines, and they rapidly discard information that
+doesn't seem useful. Chances are you don't remember what you had for dinner on
+Monday two weeks ago, because this information is not usually useful. If you
+went to a fantastic restaurant that day and spent the last two weeks telling
+people about how great it was, however, you're likely to still remember in
+vivid detail.
+
+The brain's "use it or lose it" policy applies to everything we learn. If you
+spend an afternoon memorizing some science terms, and then don't think about
+that material for two weeks, you'll probably have forgotten most of it. In
+fact, studies show we forget about 75% of material learnt within a 48 hour
+period. This can seem pretty depressing when you need to learn a lot of
+information.
+
+The solution is simple, however: 'review'. By reviewing newly-learnt
+information, we can greatly reduce forgetting.
+
+The only problem is that traditionally review was not very practical. If you
+are using paper flashcards, it's easy to flick through all of them if you only
+have 30 of them to review, but as the number grows to 300 or 3000, it quickly
+becomes unwieldy.
+
+[[spaced-repetition]]
+Spaced Repetition
+-----------------
+
+The 'spacing effect' was reported by a German psychologist in 1885. He
+observed that we tend to remember things more effectively if we spread reviews
+out over time, instead of studying multiple times in one session. Since the
+1930s there have been a number of proposals for utilizing the spacing effect
+to improve learning, in what has come to be called 'spaced repetition'.
+
+One example is in 1972, when a German scientist called Sebastian Leitner
+popularized a method of spaced repetition with paper flashcards. By separating
+the paper cards up into a series of boxes, and moving the cards to a different
+box on each successful or unsuccessful review, it was possible to see at a
+glance a rough estimate of how well a card was known and when it should be
+reviewed again. This was a great improvement over a single box of cards, and
+it has been widely adopted by computerized flashcard software. It is a rather
+rough approach however, as it can't give you an exact date on which you should
+review something again, and it doesn't cope very well with material of varying
+difficulty.
+
+The biggest developments in the last 30 years have come from the authors of
+SuperMemo, a commercial flashcard program that implements spaced repetition.
+SuperMemo pioneered the concept of a system that keeps track of the ideal time
+to review material and optimizes itself based on the performance of
+the user.
+
+In SuperMemo's spaced repetition system, every time you answer a question, you
+tell the program how well you were able to remember it - whether you forgot
+completely, made a small mistake, remembered with trouble, remembered easily,
+etc. The program uses this feedback to decide the optimal time to show you the
+question again. Since a memory gets stronger each time you successfully recall
+it, the time between reviews gets bigger and bigger - so you may see a
+question for the first time, then 3 days later, 15 days later, 45 days later,
+and so on.
+
+This was a revolution in learning, as it meant material could be learnt and
+retained with the absolute minimum amount of effort necessary. SuperMemo's
+slogan sums it up: with spaced repetition, you can 'forget about forgetting'.
+
+Why Anki?
+---------
+
+While there is no denying the huge impact SuperMemo has had on the field, it
+is not without its problems. The program is often criticized for being buggy
+and difficult to navigate. It only runs on Windows computers. It's proprietary
+software, meaning end-users can't extend it or access the raw data. And while
+very old versions are made available for free, they are quite limited for
+modern use.
+
+Anki addresses these issues. There are free clients for Anki available on many
+platforms, so struggling students and teachers with budgetary constraints are
+not left out. It's open source, with an already flourishing library of plugins
+contributed by end-users. It's multi-platform, running on Windows, Mac OSX,
+Linux/FreeBSD, and some mobile devices. And it's considerably easier to use
+than SuperMemo.
+
+Internally, Anki's spaced repetition system is based on an older version of
+the SuperMemo algorithm called SM2. Subsequent versions have managed to
+squeeze out a little more learning efficiency, but they come at the cost of
+greatly increased complexity, and they are more susceptible to scheduling
+errors in real-world use. For a more in-depth discussion of this and the
+differences in scheduling algorithms, see the bottom of {faq}.
+
+The Basics
+==========
+
+Before proceeding, you should download Anki from the {website}.
+
+It's also *highly recommended* that you check out the introductory videos on
+the website, as they will get you up and running quickly. There is a mirror of
+the videos on the Anki website for those who can't access Youtube.
+
+Anki is basically an intelligent electronic flashcard program. You create or
+download sets of questions and answers, and Anki presents the questions to you
+at the optimium time to ensure you don't forget.
+
+Cards
+-----
+
+A question and answer pair is called a 'card'. This is based on a paper
+flashcard with a question on one side an the answer on the back. In Anki a
+card doesn't actually look like a physical card, and when you show the answer
+the question remains visible by default. For example, if you're studying basic
+chemistry, you might see a question like:
+
+-----
+Q: Chemical symbol for oxygen?
+-----
+
+After thinking about it, and deciding the answer is O, you click the show
+answer button, and Anki shows you:
+
+-----
+Q: Chemical symbol for oxygen?
+A: O
+-----
+
+After checking you are correct, you can tell Anki how well you remembered, and
+Anki will choose a next time to show you again.
+
+Decks
+-----
+
+A 'deck' is a file on your computer which contains cards. You can use
+different decks for different topics, or keep all your information in one
+deck.
+
+Facts & Fields
+--------------
+
+Using paper flashcards or a traditional flashcard program, we might make the
+following cards:
+
+-----
+Q: Chemical symbol for oxygen?
+A: O
+-----
+
+and
+
+-----
+Q: Chemical number for oxygen?
+A: 8
+-----
+
+and
+
+-----
+Q: Chemical name for O?
+A: oxygen
+-----
+
+There are a number of downsides to this traditional approach. A lot of typing
+is involved. It's also easy to accidentally make mistakes, and if you later
+realize you spelt oxygen wrong, you have to edit each card in turn to correct
+it. You may also end up seeing one question right after the other, which isn't
+so useful.
+
+To solve this, Anki allows you to enter 'facts'. Facts are a collection of
+related information which is then used to create cards. Facts are made of a
+number of 'fields' - in this case Name, Symbol and Number. To make the above
+questions, you might enter the following information into Anki:
+
+-----
+Name: oxygen
+Symbol: O
+Number: 8
+-----
+
+You can then tell Anki to generate one or more cards based on this
+information.
+
+Templates
+---------
+
+In Anki, instead of entering information directly on cards, you tell Anki what
+type of information you would like to appear on the front and back of the
+card, and Anki automatically fills it in for you. This blueprint for what should
+appear on the front and back is called a 'template', or 'card template'.
+
+For example, imagine we have the fact mentioned above, and we want a card that
+shows:
+
+-----
+Q: Chemical symbol for oxygen?
+A: O
+-----
+
+To do this, we can set the template question and answer to:
+
+-----
+Q: Chemical symbol for {{Name}}?
+A: {{Symbol}}
+-----
+
+By surrounding a field name in curly brackets, we tell Anki to replace that
+section with the actual information in the field. The information not
+surrounded by curly brackets remains the same on each card.
+
+Now let's create two more templates:
+
+-----
+Q: Chemical number for {{Name}}?
+A: {{Number}}
+-----
+
+and
+
+-----
+Q: Chemical name for {{Symbol}}?
+A: {{Name}}
+-----
+
+Once a template has been created, every time you add a new fact, a card will be
+created based on that template. Templates make it easy to keep the formatting
+of your cards consistent, and can greatly reduce the amount of effort involved
+in adding information. They also mean Anki can ensure related cards
+don't appear too close to each other, and mean you can fix a typing mistake
+once and have all the related cards updated at once.
+
+To add and edit templates, click the card layout button while adding items.
+
+Models
+------
+
+Anki allows you to store different types of information within a single deck.
+To do this, it separates each type of information into a separate 'model'. A
+model is a list of templates, and a list of fields to store in a fact. In the
+previous examples we might have a model called "Chemical Elements". It says we
+want three fields: Name, Symbol and Number, and three templates so that for
+each fact we enter, three cards will be created.
+
+If we also wanted to study capital cities in the same deck, we might create a
+new model with the fields Country and Capital, and create one or more
+templates to quiz ourselves on.
+
+Models can be added and edited via the add items screen, the importing screen,
+or via Settings>Deck Properties.
+
+Downloading Material
+====================
+
+The easiest way to get started with Anki is to download a deck of cards
+someone has shared.
+
+ 1. Open Anki.
+ 2. Choose File->Download->Shared Deck, or click the Download button.
+ 3. Type in a string to search for, or scroll through the list.
+ 4. Select a deck you're interested in, and click OK. The deck will be
+ downloaded and will open up.
+
+.Self-made versus pre-made
+**********************************************************************
+
+Creating your own deck is the most effective way to learn a complex subject.
+Subjects like languages and the sciences can't be understood simply by
+memorizing facts - they require explanation and context to learn effectively.
+Furthermore, inputting the information yourself forces you to decide what the
+key points are, and leads to a better understanding.
+
+If you are a language learner you may be tempted to download a long list of
+words and their translations, but this won't teach you a language any more
+than memorizing scientific equations will teach you astrophysics. To learn
+properly, you need textbooks, teachers, or exposure to real-world sentences.
+
+ Do not learn if you do not understand.
+ -- SuperMemo
+
+Most shared decks are created by people who are learning material outside of
+Anki - from textbooks, classes, TV, etc. They select the interesting points
+from what they learn and put them into Anki. They make no effort to add
+background information or explanations to the cards, because they already
+understand the material. But when someone else downloads their deck and tries
+to use it, they'll find it very difficult as the background information and
+explanations are missing.
+
+That is not to say shared decks are useless - simply that for complex
+subjects, they should be used as a 'supplement' to external material, not as a
+'replacement'. If you're studying textbook ABC and someone has shared a deck
+of ideas from ABC, that's a great way to save some time. And for simple
+subjects that are basically a list of facts, such as capital city names or pub
+quiz trivia, you probably don't need external material. But if you attempt to
+study complex subjects without external material, you will probably meet with
+disappointing results.
+**********************************************************************
+
+Creating Material
+=================
+
+Please see the link:AddItems.html[add items] documentation.
+
+
+Reviewing
+=========
+
+When you have found a deck you like or entered some cards in, it's time to
+start reviewing. If the 'Add Items' screen is still open, close it by clicking
+on close or pressing Esc. You should see a screen entitled 'Study Options'.
+Documentation for this screen is available on link:StudyOptions.html[a
+different page].
+
+When you're ready, click 'Start Reviewing'. You'll then see a screen like
+this:
+
+image:images/review1.png[]
+
+Here you need to look at the question and think about the answer. It can help
+to say the answer out loud, but that is not necessary. It's ok if it takes you
+a little while to recall the answer, but as a general rule if you can't answer
+within 10 seconds, you should just show the answer.
+
+When you're ready, click 'Show Answer' or press the spacebar or enter key.
+You'll see something like the following:
+
+image:images/review2.png[]
+
+Now you need to decide how well you remembered.
+
+== Answer Buttons ==
+
+Anki gives you four options. The labels on the buttons will change depending
+on whether you got the card right last time, but the behaviour is the same.
+
+You can use 1 to 4 on the keyboard to choose a button. If you hit space, the
+default option (highlighted in green) will be used.
+
+1: Again:: The card will be shown again shortly - within 10 minutes with the
+default settings. You can use this button if you've forgotten the answer, and
+you can also use it if you remembered, but felt it was too difficult and want
+to practice again. This button also marks a card as progressively more
+difficult, but only when the previous appearance was successfully answered.
+For this reason you can press 'again' many times in a row while learning
+without the difficulty rating becoming exceedingly high.
+
+2: Good / Hard:: Wait 1.2x longer than last time, and tell Anki to mark the
+card as progressively more difficult. As a card's difficulty rating rises,
+buttons 3 and 4 will result in smaller and smaller delay increases.
+
+3: Easy / Good:: Tells Anki to increase a card's delay based on its difficulty
+rating. Answering 3 on a new card will give a delay 2.5x the previous delay.
+Unlike the other buttons, button 3 does not adjust the difficulty level, so by
+using button 3 you are telling Anki that the current difficulty is
+appropriate. There is lower limit on the difficulty rating, meaning that
+pressing button 3 will always result in a delay 1.3x or more than the previous
+delay.
+
+4: Very Easy / Easy:: Tells Anki that the card is too easy. Anki will decrease
+the difficulty rating of the card, meaning that buttons 3 and 4 will give more
+aggressive delays in the future. The next delay is calculated by increasing
+the previous delay like button 3, and then adding an extra 30%. Because this
+button results in a big interval increase and tells Anki to use a bigger
+delay, you should only use it for cards that are extremely easy. In most cases
+you probably want to use button 3 instead.
+
+Each time you answer a card with buttons 2, 3 or 4, the time before it is
+shown again will grow longer. Imagine a user has added two cards to their deck
+- one difficult one, and an easy one. The difficult one is displayed first,
+and the user presses 1. The easy card is shown next and the user already knows
+the answer, so they choose 3. The easy card will be shown again in 3-5 days.
+Next the difficult card is shown again, and this time the user remembers the
+answer, so they choose 2, in order to be able to see the card again the next
+day.
+
+The next day the difficult card appears again, and the user still finds it a
+little difficult, so they choose 2 again. It will then be shown again in about
+2-3 days.
+
+After 3 days have passed, the easy card appears again. The user still finds it
+pretty easy, so they choose 3 again. The card will next be shown about 10 days
+in the future. If they continue to answer it correctly, the times will
+continue to grow.
+
+= The Rest =
+
+The rest of the documentation is currently available on separate pages. Many
+of these pages can also be reached by pressing the help button on the
+appropriate screen in Anki.
+
+ * link:FrequentlyAskedQuestions.html[Frequently Asked Questions]
+ * link:CardLayout.html[Card Layout]
+ * link:Browser.html[Editing Your Deck]
+ * link:FileImport.html[Importing Files]
+ * link:DeckProperties.html[Deck Properties]
+ * link:ModelProperties.html[Model Properties]
+ * link:Preferences.html[Preferences]
+ * link:CramMode.html[Cramming For Tests]
+ * link:SelectiveStudy.html[Selective Study]
+ * link:Graphs.html[Graphs]
+ * link:MediaSync.html[Synchronizing Media]
+ * link:TheTimerAndShortQuestions.html[The Timer]
+ * link:Leeches.html[Leeches]
+ * link:ProgressBars.html[Coloured Bars in Review]
+ * link:CardDisplayOrderAndPriorities.html[Card Priorities]
+ * link:JapaneseSupport.html[Japanese Support]
+ * link:CardStatistics.html[Card Statistics]
