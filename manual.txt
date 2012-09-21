@@ -1,7 +1,7 @@
 :toc:
 
-Anki User Manual
-__________________
+Anki 2.0 User Manual
+____________________
 Damien Elmes
 
 This manual is for http://ankisrs.net/anki2.html[Anki 2]. If you have not
