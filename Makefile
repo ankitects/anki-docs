@@ -6,7 +6,7 @@ all: build
 	rsync -av *.png *.html stylesheets $(WEB)/docs/dev
 	make -C $(WEB)
 	git commit -a -m update
-	git push
+	#git push
 
 build: $(HTML)
 
