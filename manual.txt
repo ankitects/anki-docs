@@ -6,7 +6,7 @@ Damien Elmes
 
 This manual is for http://ankisrs.net/anki2.html[Anki 2]. If you have not
 upgraded to Anki 2 yet, please see the
-http://ankisrs.net/docs/oldmanual.htm[old manual].
+http://ankisrs.net/docs/oldmanual.html[old manual].
 
 For questions regarding this manual, please see
 http://ankisrs.net/docs/help.html
