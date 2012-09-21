@@ -27,9 +27,12 @@ completely rewritten for version 2.
 
 = Decks & Profiles =
 
+
+/////
 ++++++++++
 <img src="1-decks.png" style="float:right; margin: 1em;">
 ++++++++++
+/////
 
  * Instead of storing each deck in a separate file, Anki now stores all of
    your decks in a single file called a 'collection'. This makes it easy to
