@@ -2930,8 +2930,8 @@ To learn how to write your own add-ons, please see the link:addons.html[add-on w
 = Contributing =
 
 [[sharingdecks]]
-Sharing Decks
---------------
+Sharing Decks Publicly
+-----------------------
 
 To share decks with other people, <<syncing,synchronize>> them with AnkiWeb,
 then click on "Share" from the menu next to the deck you wish to share.
@@ -2941,6 +2941,19 @@ you can update it by clicking "Share" as above. Please ensure the name of the
 deck in your account exactly matches the name shown in the shared deck
 listing, or you'll end up creating a new shared deck rather than updating the
 old one. Updating a shared deck will not reset the download counts or ratings.
+
+Sharing Decks Privately
+------------------------
+
+To share a deck privately, use File>Export and export in the packaged Anki
+deck format (including media if necessary). You can then place the resulting
+deck.apkg file on a private website for people to download, or mail it to the
+relevant people.
+
+Both desktop and mobile clients make it easy to import from an apkg file
+simply by clicking on it. AnkiWeb does not have the ability to import apkg
+files however, so the recipients of your deck will need to have the desktop
+client or Anki on their smartphone.
 
 Sharing Add-ons
 ----------------
