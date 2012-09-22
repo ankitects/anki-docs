@@ -237,14 +237,8 @@ per-lesson basis when you're ready to study them. You could do it like this:
    not notice the media is in use when you check the media DB.
 
  * When you upgrade, Anki moves the media in each deck's .media folder into
-   the new collection's media folder. The upgrade routines don't deal with
-   multiple decks using the same image or sound name, as not many users have
-   decks that do. If you have multiple decks with the same media filenames,
-   then you'll need to make the filenames unique before upgrading to Anki 2.
-   The easiest way to do this is to use a batch-renaming program to add a
-   prefix for each deck (eg. deck1_dog.jpg, deck2_dog.jpg),
-   and then use Anki's find & replace feature in the browser to update the media
-   references to match the new filenames.
+   the new collection's media folder. You had different files with the same
+   name in multiple decks, Anki will automatically rename the media for you.
 
  * If for some reason Anki wasn't able to move your media from its old
    location, please manually move the media files from the old .media folders
@@ -315,12 +309,6 @@ per-lesson basis when you're ready to study them. You could do it like this:
    alignment and so on in the GUI, it's all embedded in the template as
    standard HTML and CSS. As a bonus, this allows you to do things like use a
    gradient or image for your card background if you wish.
-
- * For users downloading shared decks, the card creation wizard allows them to
-   add fields to the front and back of cards without having to deal with any
-   HTML. A future version may extend this wizard to the desktop and for
-   editing existing note types, so users can choose between the simple
-   configuration or editing the raw HTML.
 
  * The "hide question when showing answer" option has gone away: Anki always
    replaces the question with the answer now. Templates default to including
