@@ -1614,13 +1614,13 @@ limit of 20 cards and "French::Lesson 1" and "French::Lesson 2" both have
 limits of 15 cards, you'll get 15 cards from lesson 1 but only 5 cards from
 lesson 2.
 
-NOTE: Adding new cards will temporarily increase the number of reviews you
+NOTE: Studying new cards will temporarily increase the number of reviews you
 need to do a day, as freshly learnt material needs to be repeated a number of
 times before the delay between repetitions can increase appreciably. If you
-are consistently adding 20 new cards a day, you can expect your daily reviews
+are consistently learning 20 new cards a day, you can expect your daily reviews
 to be roughly about 200 cards/day. You can decrease the reviews required by
 introducing fewer new cards each day, or by turning off new card display until
-your review burden decreases. More than one Anki user has excitedly added
+your review burden decreases. More than one Anki user has excitedly studied
 hundreds of new cards over their first few days of using the program, and then
 become overwhelmed by the reviews required.
 
