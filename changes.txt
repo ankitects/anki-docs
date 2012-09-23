@@ -650,6 +650,23 @@ media folders in sync between separate computers.
  * If user attempts to import a .anki2 file, explain it can't be imported.
  * Other small fixes.
 
+= Changes in Release Candidate 6 =
+
+ * Automatic backups are now compressed and saved as .apkg (with no media),
+   instead of an .anki2 file. The previous .anki2 files in your backup folder
+   will not be automatically deleted, so you'll need to remove them manually
+   if you need the space.
+ * When importing an .apkg file, you're now given a choice whether to add new
+   content, or replace your entire collection with the file you're importing.
+   This makes it easier to restore from backup or copy your collection from a
+   mobile device: simply double click on the apkg and then choose "replace".
+ * Exporting now defaults to exporting your entire collection as an apkg,
+   with scheduling info and media.
+ * Detect when a profile is corrupt, and display an error instead of a
+   non-functional interface.
+ * Count 1+ day learning cards in card count pie chart.
+ * Fixed some issues with translations.
+
 = Download =
 
 Download links are available at http://ankisrs.net/anki2.html
