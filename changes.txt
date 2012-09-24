@@ -191,7 +191,7 @@ per-lesson basis when you're ready to study them. You could do it like this:
    ahead limit" in the preferences to that number as well.
 
 [[filtered]]
-= Filtered Decks & Cramming =
+= Filtered Decks, Cramming & Reviewing Early =
 
  * Filtered decks allow you to gather cards from other decks based on specific
    criteria and with a specific ordering.
@@ -201,6 +201,10 @@ per-lesson basis when you're ready to study them. You could do it like this:
    ahead, going over the day's failed cards, and more.
  * They can be set to reschedule based on your answers (like Anki 1.2) or
    leave the original cards alone (like Anki 1.0).
+ * Filtered decks also replace the old "review early" button. They offer two
+   advantages: you can now choose how many days to look ahead, and you can
+   close Anki and resume reviewing early where you left off, instead of
+   starting with the same cards again like in Anki 1.2.
  * For more information, please see
    http://ankisrs.net/docs/dev/manual.html#filtered
 

@@ -1080,6 +1080,7 @@ styling section:
 img { max-width: none; max-height: none; }
 -----
 
+[[fieldstyling]]
 == Field Styling ==
 
 The default styling applies to the whole card. You can also make certain
@@ -1169,6 +1170,10 @@ the font size too, you'd change the mystyle1 section to look like:
  font-size: 30px;
 }
 -----
+
+It's also possible to bundle custom fonts with your deck, so you don't need to
+install them on your computer or mobile device. Please see the
+<<installingfonts,installing fonts>> section for more info.
 
 == Hint Fields ==
 
@@ -1487,6 +1492,43 @@ And in the template:
 
 You can also use properties like .gecko, .opera, and .ie to select particular
 browsers when using AnkiWeb.
+
+[[installingfonts]]
+== Installing Fonts ==
+
+If you're using Anki on a work or school computer where you don't have
+permission to install new fonts, or you're using Anki on a mobile device, it's
+possible to add fonts directly to Anki.
+
+To add a font to Anki, it must be in the TrueType format. TrueType fonts have
+a filename ending in .ttf, such as "Arial.ttf". Once you've located a TrueType
+font, we'll need to add it to the media folder:
+
+ . Rename the file, adding an underscore at the start, so it becomes like
+   "_arial.ttf". Adding an underscore will tell Anki that this file will be
+   used on a template, and should not be deleted when checking for unused media.
+ . In your computer's file browser, go to your Documents folder, then the Anki
+   folder inside it, and then a folder called "User 1" (or your profile name
+   if you've renamed/added profiles).
+ . Inside the folder, you should see a folder called collection.media. Drag
+   the renamed file to that folder.
+
+After that, we need to update the template:
+
+ . Click *Add* at the top of the main screen, and then select the note type
+   you want to change with the top left button.
+ . Click *Cards*.
+ . In the styling section, add the following text to the bottom, replacing
+   "_arial.ttf" with the name of the file you copied into your media folder:
+-----
+@font-face { font-family: myfont; src: url('_arial.ttf'); }
+-----
+
+After that, you can either change the font for the entire card, or for
+individual fields. To change the font for the entire card, simply locate the
+font-family: line in the .card section and change the font to "myfont". To
+change the font for only certain fields, please see the <<fieldstyling,Field
+Styling>> instructions above.
 
 [[profileprefs]]
 = Profiles & Preferences =
