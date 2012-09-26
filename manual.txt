@@ -490,7 +490,9 @@ content after a note is added. If you find yourself entering the same content
 into multiple notes, you may find this useful.
 
 *Reverse text direction* is useful if you are studying languages that display
-text from right to left, such as Arabic or Hebrew.
+text from right to left (RTL), such as Arabic or Hebrew. This setting
+currently only controls editing; to make sure the text displays correctly
+during review, you'll need to adjust your <<templatesrtl,template>>.
 
 After you've added fields, you'll probably want to add them to the front or
 back of your cards. For more information on that, please see the
@@ -865,7 +867,7 @@ http://www.glowingfaceman.com/2008/12/french-revolution-day-7.html[writes]:
 
 If you're learning a right to left language, there are lots of other things to
 consider. Please see http://dotancohen.com/howto/rtl_right_to_left.html[this
-page] for more information.
+page] for more information
 
 To learn more:
 
@@ -1469,6 +1471,19 @@ and answer columns in the <<cardlist,card list>>. The "column templates"
 option allows you to define a custom template to be used only in the browser,
 so you can include only the important fields and change the order if you
 desire.
+
+[[templatertl]]
+== RTL (right to left) text =
+
+If you're learning a language that reads from right to left, you'll need to
+adjust the template like so:
+
+-----
+<div dir=rtl>{{FieldThatHasRTLTextInIt}}</div>
+-----
+
+If you were linked directly here, please see the start of this section for
+more information.
 
 [[platformcss]]
 == Platform-Specific CSS ==
