@@ -383,11 +383,11 @@ not say "Basic", then you may have added some note types when you downloaded a
 shared deck. The text below assumes that "Basic" is selected.
 
 The top right of the window shows us the deck cards will be added to. If you'd
-like to add cards to a new deck, you can click on the button and then click
-"Add".
+like to add cards to a new deck, you can click on the deck name button and
+then click "Add".
 
 Below the note type, you'll see some buttons, and an area labeled "Front" and
-"Back". Front and Back are called 'fields', and can you can add, remove and
+"Back". Front and Back are called 'fields', and you can add, remove and
 rename them by clicking the "Fields..." button above.
 
 Below the fields is another area labelled "Tags". Tags are labels that you can
@@ -724,11 +724,11 @@ On the top left are two buttons, which open the <<fields,fields>> and
 <<templates,cards>> windows.
 
 On the right are buttons that control formatting. Bold, italic and underline
-work like in a wordprocessing program. The next two buttons allow you to
+work like they do in a wordprocessing program. The next two buttons allow you to
 subscript or superscript text, which is useful for chemical compounds like
 H~2~O and or simple math equations like x^2^.
 
-The icon with the red cross clears any formatting in currently selected text.
+The icon with the red cross clears any formatting in the currently selected text.
 This includes colours, bold, etc.
 
 The next button allows you to change text colour.
@@ -742,7 +742,7 @@ The last button allows you to add advanced mathematical markup called
 <<latex,LaTeX>> to your notes, or edit the underlying formatting.
 
 Most of the buttons have shortcut keys. You can hover the mouse cursor over a
-button to find out its shortcut. For the LaTeX/HTML menu, use Ctrl+t then t, e
+button to see its shortcut. For the LaTeX/HTML menu, use Ctrl+t then t, e
 or m to select the three LaTeX types, and Ctrl+shift+x to edit the HTML.
 
 [[cloze]]
@@ -869,11 +869,9 @@ If you're learning a right to left language, there are lots of other things to
 consider. Please see http://dotancohen.com/howto/rtl_right_to_left.html[this
 page] for more information
 
-To learn more:
-
- * http://www.latenightpc.com/french_keyboard.html[French or other accented languages on Windows]
- * http://greggman.com/japan/xp-ime/xp-ime.htm[Japanese on Windows]
- * http://library.wcc.hawaii.edu/Computers/Tips_Japanese_Input.pdf[Japanese on OSX]
+To learn more, please search Google for something like "input Japanese on a
+mac" or "input german on windows", as there is plenty of good information
+available.
 
 [[templates]]
 Cards and Templates
