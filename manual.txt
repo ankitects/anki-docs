@@ -320,12 +320,11 @@ Downloading Shared Decks
 The easiest way to get started with Anki is to download a deck of cards
 someone has shared.
 
- 1. Visit {ankiweb} and sign up for a free account.
- 2. Click the "Decks" tab, and then "Get Shared Decks"
- 3. When you've found a deck you're interested in, click the "Download" button
+ 1. Open Anki, and click the "Get Shared" button at the bottom of the deck list.
+ 2. When you've found a deck you're interested in, click the "Download" button
     to download a deck package.
- 4. Double-click on the downloaded package to load it into Anki, or drag the
-    file onto the Anki icon.
+ 3. Double-click on the downloaded package to load it into Anki, or
+    File>Import it.
 
 Please note that it's not currently possible to add shared decks directly to
 your AnkiWeb account. You need to import them with the desktop program, then
@@ -2387,6 +2386,9 @@ tabs can be imported into Anki, provided some conditions are met.
    on the first line it will use that - if it finds a comma it'll use that,
    etc.
 
+Fields in your text file can be mapped to any field in your notes, including
+the tags field.
+
 This is an example of a valid file:
 
 -----
@@ -2622,9 +2624,9 @@ Backups
 ---------
 
 Each time your collection is closed (when closing Anki, switching profiles, or
-synchronizing your deck), Anki copies your collection.anki2 file into the
-backups folder. By default Anki will store up to 30 backups; you can adjust
-this in the <<preferences,preferences>>.
+synchronizing your deck), Anki exports your collection into the backups
+folder. By default Anki will store up to 30 backups; you can adjust this in
+the <<preferences,preferences>>.
 
 Automatic backups do not protect against disk or computer failure, and do not
 extend to your media. To keep your collections safe, please consider making
@@ -2634,13 +2636,9 @@ The easiest way to take a manual backup is to back up your entire Anki folder.
 Please make sure you close Anki first, as backups may be corrupt if run while
 Anki is open.
 
-To restore from a backup, simply close Anki, rename the backup file to
-collection.anki2, and then copy it into your user profile folder. Media can be
-likewise be restored from a manual backup by copying the collection.media
-folder.
-
-It's a good idea to copy the backups rather than move them, so they remain
-pristine in case you need to restore from backup again.
+To restore from a backup, simply close Anki, open Documents/Anki/<profile
+name>/backups, and double-click on the most recent backup in order to import
+name>it.
 
 Corrupt Collections
 ---------------------
@@ -3315,40 +3313,20 @@ in notes:
   different ways, and different dialects may read the same word differently,
   but that is not relevant to the discussion.
 
-== Can I split a field into two fields? ==
+== Can I host my own AnkiWeb? =
 
-Imagine you have a field that has two lines, and you want to put each line in
-a separate field. Provided your deck is formatted consistently, this is
-possible.
-
- . File>export your deck and save it as notes in text format.
- . Add an extra field via the card layout screen. 
- . File>import then text file, and map the field you want to split to the
-   File>newly created field. Then use the update button.
- . You should now have two fields that have the same content in them. Visit
-   the browser, select all the cards and do a find/replace.
- . In the find/replace, enter (.\*)<br />.* as the search string, \1 as the
-   replace string, and enable regular expressions. Apply the search to only
-   one field. It will change a two-line field into the first line only.
- . Repeat for the other field, placing the () around the second .* instead of
-   the first.
-
-== Is the source code to AnkiWeb available? ==
-
-Most of the functionality in AnkiWeb is in the freely available libanki
-library. AnkiWeb itself is not made publicly available, as it will be used
-in the future to fund the further development of Anki. There is no package for
-sale currently, but if you're interested in using AnkiWeb in a business or
-academic setting, please feel free to contact the author and register your
-interest.
+Sorry, AnkiWeb is only available as a hosted service.
 
 == Why is the Android version free when the iPhone version isn't? ==
 
-In order to work on Anki full time, I need some way of paying the bills. The
-iPhone version was written entirely by me, and thus I have the option of
-charging for it. The Android version is the work of a separate group of
-volunteers, who have decided to make it freely available like the Anki desktop
-program.
+Working on Anki desktop, AnkiWeb and AnkiMobile is my full time job, and I
+need some way of paying the bills. Since I make the desktop & web versions
+available for free, I rely on sales of the iPhone app in order to finance
+development.
+
+AnkiDroid is written by a separate group of volunteers. Since they based it on
+the free desktop version I make available (and rely on AnkiWeb in order to
+synchronize decks), they decided to make it freely available as well.
 
 == What spaced repetition algorithm does Anki use? ==
 
@@ -3419,79 +3397,3 @@ Anki's algorithm is based on SM2, but differs from it in some respects.
 
 For a description of the SM2 algorithm, please see
 http://www.supermemo.com/english/ol/sm2.htm
-
-
-////
-== I want to customize fonts and colours ==
-
-You can customize the appearance of cards by clicking "Cards..." while editing.
-
-Other parts of the Anki interface use your system settings for colours and
-fonts. You can customize the colours and fonts for all programs, and Anki will
-inherit those settings.
-
-If you want to force Anki to use different settings to other applications:
-
- 1. Choose Settings > Plugins > Open Plugin Folder
- 2. Go up on level. You'll see a few folders and a 'config.db'.
- 3. Create a new text file called 'style.css'. Edit it as follows.
-
-To change the system font:
-
------
-* { font-family: your_chosen_font_name; }
------
-
-To change the background to a light blue (including study options screen/etc):
-
------
-#mainText, #mainTextFrame > *, #welcomeText { background: #ccccff }
------
-The colours are standard http://www.w3schools.com/Html/html_colors.asp[HTML colours]
-
-To make the next interval area bigger:
-
------
-#easeLabel1, #easeLabel2, #easeLabel3, #easeLabel4 { font-size: 20px; }
------
-
-== Can I run Anki from a flashdrive? ==
-
-Sure. Do it like this:
-
-1. Install Anki.
-
-2. Copy and paste the Anki directory where the program is installed (usually
-"C:\Program Files\Anki") to the root of your USB stick, so you have a
-directory like e:\Anki
-
-3. Go to Start->Run, type "notepad," and press enter.  Type:
-+
---
------
-start anki\anki.exe -b ankiconfig
------
-
-Save the file as a .bat file in the root directory of your USB stick, eg e:\anki.bat
---
-4. To run Anki from the USB stick, open the USB stick and double click on the .bat file.
-
-5. To move existing decks from your computer to the flash drive, use File>Save As
-
-6. To move existing plugins from your computer, use Settings>Plugins>Open Plugin Dir, and copy all the files to the ankiconfig\plugins directory on your flash drive.
-
-Starting Anki via batch file might cause problems using the LaTeX compilation subroutines. If you experience problems compiling new or changed cards, consider launching the Anki executable "e:\Anki\Anki.exe"  directly.
-
-If you're using Japanese support, you'll need to copy tho reading support too. See the link:JapaneseSupport.html[JapaneseSupport] page.
-
-If your on a mac then you can follow these instructions
-
-1. Install Anki.
-
-2. Copy and paste the Anki.app  where the program is installed (usually "/Appications/Anki.app") to the root of your USB stick, so you have a directory like /Volumes/yourusbstickname/anki.app
-
-3. download the Anki.shlink:attachment:AnkiI.sh.html[attachment:AnkiI.sh] to the root directory of your usbstick
-
-Note: when you download shared decks they will still be downloaded in the default documents folder, in Windows XP "C:\My Documents\anki", so unless you move them, they will not be "ported". 
-When you move the downloaded decks to USB remember to open them in anki after the move so Anki can memorize their new position.
-////

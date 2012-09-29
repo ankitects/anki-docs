@@ -12,7 +12,7 @@ http://ankisrs.net/docs/manual.html[new manual] instead.
 Introduction
 ============
 
-:faq: http://ichi2.net/anki/wiki/FrequentlyAskedQuestions[Frequently Asked Questions]
+:faq: http://ichi2.net/anki/wiki/OldFrequentlyAskedQuestions[Frequently Asked Questions]
 :website: http://ichi2.net/anki/[Anki website]
 
 Anki is a program which makes remembering things easy. Because it is a lot
@@ -447,7 +447,7 @@ The rest of the documentation is currently available on separate pages. Many
 of these pages can also be reached by pressing the help button on the
 appropriate screen in Anki.
 
- * link:FrequentlyAskedQuestions.html[Frequently Asked Questions]
+ * link:OldFrequentlyAskedQuestions.html[Frequently Asked Questions]
  * link:CardLayout.html[Card Layout]
  * link:Browser.html[Editing Your Deck]
  * link:FileImport.html[Importing Files]
