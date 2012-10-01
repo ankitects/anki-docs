@@ -2896,7 +2896,7 @@ line. Once you've confirmed that the package is available and working, we can
 integrate it with Anki.
 
 To use the package with Anki, click "Add" in the main window, then click the
-note type selection button. Click the "manage" button, then select the note type
+note type selection button. Click the "Manage" button, then select the note type
 you plan to use and click "Options". The LaTeX header and footer are shown. The
 header will look something like:
 
