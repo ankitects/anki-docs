@@ -2740,6 +2740,8 @@ Clicking on "Save Image" will save an image of the statistics to a file and open
 it in your default image editor, to make it easy to share your statistics with
 others.
 
+The stats window uses some terms that you may not be familiar with:
+
  Mature ::
   A mature card is one that has an interval of 21 days or greater.
  Young ::
