@@ -2895,10 +2895,10 @@ like the above into a .latex file and test you can compile it from the command
 line. Once you've confirmed that the package is available and working, we can
 integrate it with Anki.
 
-To use this with Anki, click "Add" in the main window, and then click the
-gears icon to start customizing note types. Choose the note type you plan to
-use, and click "Options". The LaTeX header and footer are shown. The header
-will look something like:
+To use the package with Anki, click "Add" in the main window, then click the
+note type selection button. Click the "manage" button, then select the note type
+you plan to use and click "Options". The LaTeX header and footer are shown. The
+header will look something like:
 
 -----
 \documentclass[12pt]{article}
