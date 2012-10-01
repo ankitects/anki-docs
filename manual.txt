@@ -3313,7 +3313,7 @@ in notes:
   different ways, and different dialects may read the same word differently,
   but that is not relevant to the discussion.
 
-== Can I host my own AnkiWeb? =
+== Can I host my own AnkiWeb? ==
 
 Sorry, AnkiWeb is only available as a hosted service.
 
