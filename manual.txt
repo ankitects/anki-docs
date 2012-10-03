@@ -1827,7 +1827,7 @@ General
 --------
 
 Anki monitors how long it takes you to answer each question so that it can
-show you how long was spent studying each day. The time taken is not used to
+show you how long was spent studying each day. The time taken does not
 influence scheduling. If you take longer than 60 seconds, Anki assumes you
 have walked away from your computer or have been distracted, and limits the
 recorded time to 60 seconds, so that you don't end up with inaccurate
@@ -1852,7 +1852,7 @@ see it in the study overview area.
 [[syncing]]
 = AnkiWeb and Synchronization =
 
-AnkiWeb is a service that allows you to keep your decks synchronized across
+AnkiWeb is a service that allows you to keep your collection synchronized across
 multiple devices, and to study online. Please sign up for a {ankiweb}[free
 account] before following the steps below.
 
@@ -1866,7 +1866,7 @@ process. Please make sure you have confirmed your email address before trying
 to sync, as your account will not be activated until your address has been
 confirmed.
 
-When you synchronize your decks for the first time, Anki will not be able
+When you synchronize your collection for the first time, Anki will not be able
 to merge the content stored on AnkiWeb and the content stored on your
 computer, so you'll need to choose which side you'd like to keep. Once the
 initial setup is completed however, Anki will be able to merge changes from
@@ -1905,7 +1905,7 @@ the format of notes: things like adding a new field, or removing a card
 template. When you perform an operation that can't be merged, Anki will warn
 you, and give you the option of aborting the operation. If you choose to
 continue, you'll be asked to choose whether to keep the local copy or the copy
-on AnkiWeb when your decks are next synchronized.
+on AnkiWeb when your collection is next synchronized.
 
 If you wish to force a full upload or download (because you accidentally
 deleted a deck on one side for example, and want to restore the deck rather
@@ -2237,6 +2237,10 @@ specified, and temporarily moves them from their existing decks into your new
 filtered deck for study. Later on, the cards will be moved back to the deck
 they came from.
 
+If you wish to fetch cards again using the same filter options (for instance, if
+you want to study all cards with a particular tag every day), you can use the
+Rebuild button at the bottom of the deck overview screen.
+
 == Card Selection ==
 
 The *search* area controls what cards Anki will gather. All of the searches
@@ -2266,7 +2270,8 @@ It is also possible to move all cards back to their home decks at once:
 
  * The "Empty" button in the study overview moves all cards in the filtered
    deck back to their home deck, but does not delete the empty filtered deck.
-   This can be useful if you want to fill it again later.
+   This can be useful if you want to fill it again later (using the Rebuild
+   button).
  * Deleting a filtered deck does the same thing as "Empty" does, but also
    removes the emptied deck from the deck list. No cards are deleted when you
    delete a filtered deck.
@@ -2349,7 +2354,7 @@ Once a leech is found, there are a number of ways you can handle it.
 Waiting
 ---------
 
-Some leeches are caused by ''interference''. For example, an English learner
+Some leeches are caused by 'interference'. For example, an English learner
 may have recently learnt the words "disappoint" and "disappear". As they look
 similar, the learner may find themselves confusing the two when trying to
 answer. In these situations, it's often productive to concentrate on just one
@@ -2464,7 +2469,7 @@ you use them.
 
 If you want to include audio and pictures from a text file import, copy the
 files into the yourdeckname.media folder. This folder is located in the same
-directory as your deck. If it doesn't exist, you can create it. *Do not use
+directory as your collection. If it doesn't exist, you can create it. *Do not use
 subdirectories, or some features will not work.*
 
 After you've copied the files, change one of the fields in your text file as
@@ -2532,8 +2537,8 @@ into a text file. Each field is separated by a tab. If you edit the resulting
 file and don't modify the first field, you can later import that file back
 into Anki and Anki will update your notes based on your edits. If you find
 yourself needing to edit the first field as well, you'll need to change the
-format of your deck so that the first field is an ID number rather than actual
-text.
+format of your note type so that the first field is an ID number rather than
+actual text. (You can install the "Add note id" plugin to make this easier.)
 
 In order for formatting to be preserved when you import text back in, the text
 is exported with all the HTML formatting embedded in it.
@@ -2649,7 +2654,7 @@ Anki is open.
 
 To restore from a backup, simply close Anki, open Documents/Anki/<profile
 name>/backups, and double-click on the most recent backup in order to import
-name>it.
+it.
 
 Corrupt Collections
 ---------------------
@@ -3025,6 +3030,8 @@ you can update it by clicking "Share" as above. Please ensure the name of the
 deck in your account exactly matches the name shown in the shared deck
 listing, or you'll end up creating a new shared deck rather than updating the
 old one. Updating a shared deck will not reset the download counts or ratings.
+You can delete a shared deck that you have uploaded using the Delete button on
+the shared deck's page.
 
 Sharing Decks Privately
 ------------------------
