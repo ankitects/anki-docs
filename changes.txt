@@ -671,6 +671,25 @@ media folders in sync between separate computers.
  * Count 1+ day learning cards in card count pie chart.
  * Fixed some issues with translations.
 
+= Changes in 2.0.0 =
+
+ * Fix upgrade of 1.2 media files on Windows.
+ * If studied for over an hour, report as eg "90 minutes" rather than "1 hour"
+ * Reduce minimum height of add screen.
+ * Friendlier error messages for when temp folder missing or Anki blocked by
+   firewall.
+ * Add is:due to left of browser.
+ * Fix an error about 'raise' when activating a background copy of Anki.
+ * Fix error in type answer when text like "\g" on card.
+ * Allow F5 to replay audio.
+ * Fix issues editing options of filtered deck from deck list.
+ * In the answer button stats, show 3 buttons not 4 for the learning
+   cards graph.
+ * Fix tag:none search.
+ * Change the way the basic note types are added to the decks so that Anki
+   won't break when the translations are wrong.
+ * Other small fixes.
+
 = Download =
 
 Download links are available at http://ankisrs.net/anki2.html
