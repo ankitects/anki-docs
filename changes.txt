@@ -289,9 +289,9 @@ per-lesson basis when you're ready to study them. You could do it like this:
    bar to narrow the selection to only cards that are new. Preserving the
    selection of many cards at once is slow however, so if the selection is too
    large it is discarded on the next search.
- * Rescheduling behaves differently now. Instead of resetting cards, cards are
-   rescheduled with their current ease factor and history intact. If you need
-   to completely reset a card, you can still do it via export.
+ * Rescheduling behaves differently now. Cards have their interval and ease
+   reset but keep their review history. If you need to completely reset a card,
+   you can still do it via export.
  * The browser now exposes the full review history. Click the info button on
    the toolbar to see it. Note that this data was stored differently in
    previous versions, so the display of whether a card was being learnt,
