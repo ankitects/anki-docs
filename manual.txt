@@ -210,6 +210,11 @@ of the Chinese deck. If you select "Lesson 1" then only cards from lesson 1
 will be shown for study; if you select "Chinese" then all Chinese cards will
 be shown.
 
+Anki starts with a deck called "default"; any cards which have somehow become
+separated from other decks will go here. Anki will hide the default deck if it
+contains no cards and you have added other decks.  Alternatively, you may rename
+this deck and use it for other cards.
+
 Notes
 ------
 
