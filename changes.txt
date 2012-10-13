@@ -8,8 +8,8 @@ are most likely to cause surprises in the new version.
 
  * Reviews are <<perday,limited>> to 100/day by default.
  * When you answer "again", there are now two
-   link:manual.html#learning[learning] reviews of the card, so the red count
-   will increase by two.
+   link:manual.html#learning[learning] reviews of the card, so the learning
+   (orange) count will increase by two.
  * Cloze deletion has been much improved, but now requires you to select a
    special <<cloze,cloze type>> (the top left button in the Add window).
  * Selective study is still possible, but is done differently. You can either
