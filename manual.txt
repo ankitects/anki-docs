@@ -2990,6 +2990,22 @@ to specific menu items instead. Please see
 http://lifehacker.com/343328/create-a-keyboard-shortcut-for-any-menu-action-in-any-program
 for more information.
 
+[[manualupgrade]]
+== Upgrade Issues ==
+
+Anki 2 is only able to upgrade error-free decks. If errors are found in a deck
+that prevent the deck from being upgraded, those errors will need to be fixed
+with the old version of Anki first.
+
+ . Download the old version of Anki from the Anki website, and install it.
+   This will not overwrite or delete any of your Anki 2 data.
+ . Open each broken deck in the old Anki. After you open each deck, please run
+   Tools>Advanced>Check Database. Even if it reports "no problems found", the
+   database has been rebuilt, and this has very likely fixed the problem.
+ . When all of your broken decks have been fixed, install the new version of
+   Anki again.
+ . Use File>Import to import each fixed deck into Anki 2.
+
 = Add-ons =
 
 Anki's capabilities can be extended with add-ons. Add-ons can provide features
