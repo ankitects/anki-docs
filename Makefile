@@ -10,7 +10,7 @@ all: build
 	rsync -a am-manual.html $(AMHELP)
 	perl -i -pe 's/(padding-.*?: )2em/$${1}0.5em/g' $(AMHELP)
 	make -C $(WEB)
-	#git commit -a -m update
+	git commit -a -m update
 	#git push
 
 build: $(HTML)
