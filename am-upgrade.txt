@@ -1,0 +1,125 @@
+Upgrading to AnkiMobile 2.0
+___________________________
+
+If you are upgrading from a previous version of AnkiMobile, your decks need to
+be upgraded before they can be used with the new version. This page will guide
+you through upgrading your decks with the desktop program.
+
+= Step 1: Decide which side to keep =
+
+If you last changed your decks on the computer, or if the computer version is
+relatively up to date, the easiest way to upgrade is to upgrade the decks that
+are on your computer. If you'd like to do this, please skip the next step, and
+jump to <<step3,step 3>>.
+
+If you made changes to your decks on your mobile device before you upgraded,
+it's possible to copy your decks to your computer first, and then upgrade
+those. If you'd like to do this, please see the next step.
+
+= Step 2: Copy decks from your mobile device =
+
+To complete this section, you will need a computer with iTunes installed.
+
+ . Connect your Apple device to your computer via the USB cable.
+ . Open iTunes if it doesn't open automatically.
+ . Next we'll open the file sharing section, as documented by http://support.apple.com/kb/HT4094[Apple's instructions]:
+ .. Select your device from the left bar.
+ .. Click on the Apps tab.
+ .. Scroll down and find the file sharing section.
+ .. Click on Anki in the list on the left.
+ .. Your non-upgraded decks should appear on the right. Select them and drag
+    them to your desktop.
+
+Next, we will overwrite the older version of your decks with the ones we've
+just copied from your mobile device.
+
+ . Open your Documents folder, and then the Anki folder. This is where all
+   your decks were stored in previous versions of Anki, unless you manually
+   selected a different location.
+ . Create a backup folder on your desktop, and move all the old .anki files
+   into the backup folder. Please do not move the .media folders.
+ . Drag the .anki files you copied from your mobile device to the Anki folder,
+   where the old decks used to be.
+
+When you've finished, please install Anki 2 and run it for the first time as
+explained in the instructions below.
+
+NOTE: If you installed Anki 2 prior to following this guide, your decks will
+have already been upgraded. To start the upgrade process again once you've
+copied over your decks, please ensure Anki is closed. Then go to your
+Documents folder, then the Anki folder, and move the "User 1" folder to your
+desktop. Then delete the prefs.db file, and when you next start Anki as
+described below, it will commence the upgrade process again.
+
+[[step3]]
+= Step 3: Install the new computer version =
+
+On your computer, please visit the Anki website:
+
+http://ankisrs.net
+
+ . After it has loaded, please click the red "click here" text near the top of
+   the page.
+ . When the new page has loaded, scroll down to the "Download" section.
+ . Click on the link that matches your computer type to start the download.
+ . When the download finishes, install it like you install other software on
+   your computer.
+
+= Step 4: Run the new version for the first time =
+
+Once Anki 2 is installed, please open it. When you run it for the first time,
+it will ask you what your native language is. After answering, an upgrade
+wizard will appear.
+
+Please step through the screens and begin the upgrade. While your decks are
+upgrading, a web page describing changes in the new version should appear.
+It's highly recommended you read this page - especially the top section - as
+it describes some important changes in the new version.
+
+When your decks have finished upgrading, an upgrade log will be displayed.
+Please scroll through it and check to make sure that each deck was upgraded
+successfully. If you see any decks that failed to upgrade automatically, we'll
+need to manually upgrade them as explained below.
+
+= Step 5: Copy or sync your decks back to AnkiMobile =
+
+Now that your decks have been upgraded, it's time to copy them back to
+AnkiMobile. Please see the "Cloud Sync" or "iTunes Import/Export" sections of
+the link:am-manual.html#adding[AnkiMobile 2 user manual] for
+information on how to do this.
+
+NOTE: If you use iTunes to get your decks onto your device, please make sure
+to include media when exporting from the desktop.
+
+= Advanced =
+
+== Manual Upgrading ==
+
+If one or more of your decks failed to upgrade due to an error, please see the
+link:manual.html#manualupgrade[Anki 2 user manual] for more information.
+  
+== Media Handling in iTunes Copy ==
+
+In Anki 2, all decks share a single database and media folder. When you
+upgrade your decks with the desktop program, Anki will automatically rename
+image and sound files if different files have the same name across multiple
+decks. This is why it's important to keep the .media files in your Anki folder
+when you're copying decks across from your device, as Anki may need to rename
+the media files.
+
+If you had any media files on your device that didn't exist on your desktop
+(images you took with the camera, or audio files you recorded), Anki will
+automatically copy them into your 2.0 decks, so they will not be lost.
+
+== Cleaning Up ==
+
+
+To ensure the upgrade process is robust and make it possible to temporarily
+downgrade, your old decks and media are not deleted when you upgrade, meaning
+that they will continue to take up space.
+
+In the settings screen, if you tap "Upgrading", there is an option to remove
+that screen from your settings. Currently this does not delete any old decks
+and media, but it is expected to in a future version. For this reason, it is
+recommended that you don't hide it yet, as if you do the only way to remove
+the old decks and media files will be to uninstall and reinstall the app.
