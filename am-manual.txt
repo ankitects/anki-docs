@@ -255,14 +255,16 @@ section>>.
 
 Download Media :: By default, AnkiMobile will sync sounds and images as well
 as your cards and review history. If you disable this option, sounds and
-images will not be synced by AnkiMobile. Confirm Cell Sync :: When syncing
-over a cellular data connection (not wifi), AnkiMobile will ask you if you
-want to proceed. If you disable this option, AnkiMobile will not ask you. Full
-Sync :: The full sync button allows you to force a full upload or download of
-your cards. This is useful if you accidentally deleted some cards and want to
-revert to the local or remote version, instead of having those deletions
-propagate to other devices. After tapping the button, you'll be given a choice
-of whether you want to upload your collection or download it from AnkiWeb.
+images will not be synced by AnkiMobile.
+Confirm Cell Sync :: When syncing over a cellular data connection (not wifi),
+AnkiMobile will ask you if you want to proceed. If you disable this option,
+AnkiMobile will not ask you.
+Full Sync :: The full sync button allows you to force a full upload or
+download of your cards. This is useful if you accidentally deleted some cards
+and want to revert to the local or remote version, instead of having those
+deletions propagate to other devices. After tapping the button, you'll be
+given a choice of whether you want to upload your deck or download it from
+AnkiWeb.
 
 == Review ==
 
