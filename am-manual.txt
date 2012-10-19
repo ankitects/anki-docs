@@ -1,0 +1,633 @@
+:toc:
+
+AnkiMobile 2.0 User Manual
+___________________________
+
+Introduction
+============
+
+Thank you for buying AnkiMobile! Anki development would not be able to
+continue without your support, so it is greatly appreciated.
+
+As mentioned on the app store page, AnkiMobile is currently intended to be
+used in conjunction with Anki on your computer. While it is possible to
+download shared decks and study without using the desktop version at all, card
+layout and study options can currently only be changed on a computer. While
+this is expected to change over time, for now please ensure you have access to
+a computer in order to perform some of the operations mentioned below.
+
+= Help & Bugs =
+
+If something in the manual is unclear and you need help, please post your
+question on the http://ankisrs.net/docs/help.html[help forum]. I monitor the
+forum on a daily basis, and also employ someone to help answer questions.
+
+If you encounter a bug, please report it on AnkiMobile's
+http://anki.lighthouseapp.com/projects/99709-ankimobile/tickets[issue tracker].
+
+= Changes =
+
+For information on recent changes, please see
+http://ankisrs.net/docs/am-changes.html[this page].
+
+[[adding]]
+= Adding Decks =
+
+To start using AnkiMobile, we need to add some cards to study. We can either
+download card decks that other people have shared, or add existing decks from the
+computer.
+
+== Shared Decks ==
+
+To download a shared deck directly to your mobile device:
+
+ . Ensure you're connected to the internet.
+ . Tap *Import/Export* on the bottom left.
+ . Choose *Download Shared Deck*. AnkiWeb will open.
+ . Select a category, or type in a search.
+ . Tap *Info* on a deck you'd like to study.
+ . Scroll down and tap *Download*.
+ . Safari will download the file and display a button near the top right
+   labeled *Open in Anki*. Tap this button.
+ . AnkiMobile will return, and ask you if you want to add the shared deck, or
+   replace your collection with it. Choose *Add*.
+ . When the import completes, your deck should be ready to study.
+
+Information on reviewing is available further below.
+
+[[ankiweb]]
+== Cloud Sync ==
+
+Anki has a free cloud synchronization service called AnkiWeb that makes it
+easy to keep your card decks in sync between mobile devices and your computer.
+
+To sync with AnkiWeb, you'll first need to create an account. If you have used
+AnkiWeb in the past, you can skip this step.
+
+ . Visit https://ankiweb.net and click the *Sign Up* button.
+ . Type in your email address and a password of your choice.
+
+Once the signup is complete, return to your computer, and simply click the
+synchronization button at the top right of the Anki window - it has two arrows
+in a circle. Anki will upload all your cards, images and audio to AnkiWeb. If
+you have a lot of media, this may take some time.
+
+Once the synchronization has completed, return to your mobile device, and tap
+*Sync* at the bottom of the screen. After entering your email and password,
+AnkiMobile will download all your cards and media, and remember your login
+information for next time.
+
+After the first synchronization has completed, you can click the sync button
+again any time you wish to synchronize your changes to the cloud. Only changes
+made since the previous sync will be sent, so subsequent syncs are a lot
+faster.
+
+If you add some new cards on the desktop computer and want to sync them to
+AnkiMobile, you'd repeat the same process: sync on desktop (or close the
+program, as it syncs automatically on close by default), and then tap the sync
+button on AnkiMobile.
+
+== iTunes Import/Export ==
+
+If you don't have regular internet access, it's still possible to copy decks
+back and forth to your device, by using iTunes. AnkiMobile deals with Anki
+"deck package" files, which end with .apkg.
+
+If you'd like to import data from a plain text file, you'll need to do that
+with the desktop program, and then follow the instructions below.
+
+=== From computer to mobile device ===
+
+On your computer:
+
+ . Open the desktop program.
+ . Choose File>Export from the menu.
+ . Click the 'Export...' button without changing any settings.
+ . You'll be asked to choose a filename and location. Name the file
+   exactly "collection.apkg", and save it on your desktop.
+ . Connect your Apple device to your computer via the USB cable.
+ . Open iTunes if it doesn't open automatically.
+ . Locate Anki's file sharing section with
+   http://support.apple.com/kb/HT4094[Apple's instructions].
+ . Drag the collection.apkg file from your desktop into iTunes.
+ . Click the sync button.
+
+Then in AnkiMobile:
+
+ . Tap the Import/Export button on the bottom left.
+ . Choose *Import from iTunes*, then *Replace*, and confirm.
+
+Once complete, the decks on your device will have been replaced with the decks
+from your desktop.
+
+=== From mobile device to computer ===
+
+On AnkiMobile:
+
+ . Tap the Import/Export button on the bottom left.
+ . Choose *Export to iTunes*, and tap *Export*
+
+Then on your computer:
+
+ . Connect your Apple device to your computer via the USB cable.
+ . Open iTunes if it doesn't open automatically.
+ . Locate Anki's file sharing section with
+   http://support.apple.com/kb/HT4094[Apple's instructions].
+ . Drag the collection.apkg file from iTunes to your desktop.
+ . Double-click on the file to start Anki.
+ . You'll be asked whether you want to add or replace. Choose *Replace*, so
+   that the deck from your mobile device overwrites the old data on your
+   desktop.
+
+= The Deck List =
+
+The deck list is the screen you see when you start AnkiMobile. It displays a
+list of your card decks, and provides buttons for performing various actions.
+
+Next to each deck, two numbers are displayed. The top, green number
+corresponds to how many cards are due to be reviewed again today. On a deck
+you've never studied before, there won't be any cards waiting for review. The
+second, blue number, corresponds to how many new cards you have to learn
+today. Anki will introduce 20 new cards a day by default, and you can
+customize this number if you'd like.
+
+To study cards in a deck, simply tap on the deck, and AnkiMobile will switch
+to study mode.
+
+If you wish to delete a deck, swipe your finger from left to right over it,
+and a delete button will appear.
+
+At the top of the screen, you'll see three buttons. The question mark opens
+this help page. The top right gear/cog button opens the AnkiMobile preferences
+screen. And the other button displays graphs and statistics.
+
+On the bottom of the screen, there are three more buttons. *Import/Export*
+allows you to download shared decks, and import/export .apkg files from
+iTunes. *Sync* synchronizes your cards with the cloud. And *Filter/Cram*
+allows you to create temporary decks based on certain search criteria, like
+"failed today" or "cards with tag HighPriority".
+
+= The Study Screen =
+
+If you have not used Anki on a computer before, please have a look at the
+first http://ankisrs.net/docs/dev/manual.html#_intro_videos[intro video]
+before reading on, as it explains the basic review process.
+
+When you tap on a deck in the deck list, the study screen will load, and if
+any cards are waiting to be studied, a card's question will be shown to you.
+
+If you wish to change to a different deck, you can do so by tapping the top
+left button. The next four buttons allow you to add cards, edit the current
+card, search/browse all cards, and display a list of all possible actions. The
+top right button will open up the <<tools,tools screen>>, where you can modify
+deck options and access more card actions.
+
+On the bottom of the screen you'll see three numbers. From the left, these
+correspond to new cards, learning cards, and cards to review. These are
+explained in more detail in the intro videos for the desktop program, so
+please http://ankisrs.net/docs/dev/manual.html#_intro_videos[check them out]
+if you haven't already.
+
+When you've looked at a card's question and remembered the answer, or decided
+you don't know it, tap anywhere in the card area in order to show the answer.
+When you do, the bottom area will change to display 2-4 answer buttons,
+depending on how you've answered the card previously. The buttons will display
+the time a card will next be shown, so 10m means "10 minutes" and "5d" means
+"5 days". You can tap directly on these buttons to choose a particular answer.
+
+To make reviewing faster, you can also tap on the card in order to answer it.
+For more information on the available taps and how to customize them, please
+see the <<taps,taps>> section.
+
+When you've finished the cards that are due to be studied today, you'll be
+shown a congratulations message. If you have other decks, you can tap the top
+left button to return to the decks list and select a different one. If you've
+finished studying for the day, you can simply tap the home button in order to
+close AnkiMobile (and you can also do this in the middle of reviews if you
+wish).
+
+If you wish to keep studying the same cards after the congratulations message
+is displayed, please see the <<filtered,filtered deck>> section.
+
+[[tools]]
+= The Tools Screen =
+
+The tools screen will open when you tap on the top right button while
+studying.
+
+*Study Options* allows you to configure some options related to the current
+deck, such as the number of new cards and reviews to introduce each day. Some
+options can only be configured by the desktop Anki at the moment, though
+AnkiMobile will honour them when the changes are synced to it.
+
+*Font Scale* allows you to increase or decrease the size of the text on cards
+without modifying how they appear on a computer. It is not specific to a deck
+- when changed, it changes all cards in all decks in the same way.
+
+*Tool Buttons*: Please see the <<toolbuttons,tool buttons>> section.
+
+[[studyopts]]
+= Study Options =
+
+The study options can be accessed from the <<tools,tools>> screen. Currently
+only new cards per day and reviews per day can be adjusted.
+
+If you tap on the study options while reviewing a filtered deck, the filtered
+deck options will open instead.
+
+For more information about the study options, please see the
+http://ankisrs.net/docs/manual.html#deckoptions[desktop documentation].
+
+= Preferences =
+
+The preferences screen can be accessed by tapping on the gear icon at the top
+right of the deck list. It allows you to customize various application
+settings and how AnkiMobile appears.
+
+The Preferences screen is divided up into different sections, which are
+covered below.
+
+== Syncing ==
+
+The syncing screen allows you to customize cloud synchronization with AnkiWeb.
+For more information on syncing with the cloud, please see <<ankiweb,this
+section>>.
+
+Download Media :: By default, AnkiMobile will sync sounds and images as well
+as your cards and review history. If you disable this option, sounds and
+images will not be synced by AnkiMobile. Confirm Cell Sync :: When syncing
+over a cellular data connection (not wifi), AnkiMobile will ask you if you
+want to proceed. If you disable this option, AnkiMobile will not ask you. Full
+Sync :: The full sync button allows you to force a full upload or download of
+your cards. This is useful if you accidentally deleted some cards and want to
+revert to the local or remote version, instead of having those deletions
+propagate to other devices. After tapping the button, you'll be given a choice
+of whether you want to upload your collection or download it from AnkiWeb.
+
+== Review ==
+
+The review screen allows you to customize how AnkiMobile behaves when you're
+reviewing cards.
+
+The top four buttons will be covered later below.
+
+Force Orientation :: Allows you to force the reviewing screen to stay in
+portrait mode or landscape mode.
+Status Bar :: Allows you to hide the top bar that displays the time,
+battery life and so on.
+Navigation Bar :: Allows you to hide the bar that usually says "Decks Add Edit
+Find Tools".
+Tap To Hide Nav :: When enabled, allows you to tap just under the navigation
+bar in order to hide or show it. When disabled, you can tap to show the bar if
+it's hidden, but not to hide it if it's shown.
+Bottom Bar :: Allows you to hide the bar at the bottom of the screen, that
+shows due counts while the question is shown, and answer buttons when the
+answer is shown.
+Next Times :: By default, the answer buttons will display the time a card will
+next be shown. If you disable this option, labels like "Again", "Good" and
+"Easy" will be shown instead.
+Remaining Count :: Allows you to hide the card count, while still showing the
+answer buttons when the answer is shown.
+Audio Buttons :: Allows you to hide the play button that appears on the top
+left of a card that has audio attached to it.
+Pinch Scales Text :: Normally when you do a pinch gesture, Anki will expand or
+contract any images that have been shrunk to fit the screen. If you enable
+this option, the text will also scale when you pinch.
+Never Type Answer :: If you have set up your cards to ask you to type in the
+answer (as explained in http://ankisrs.net/docs/manual.html#templates[this
+section] of the desktop manual), AnkiMobile will display a keyboard on such
+cards and allow you to check your answer. If you find typing on a mobile
+device inconvenient, you can use this option to disable the keyboard for all
+cards.
+Shake Action :: Allows you to customize what happens when you shake your
+device. The default action is to undo the previous answer.
+
+[[actions]]
+=== Actions ===
+
+AnkiMobile allows you to customize the interface, so that actions you perform
+frequently can be accomplished quickly. It's possible to assign actions to
+taps, swipes, buttons on the top bar and buttons in the tools screen.
+
+The following actions are available:
+
+Add :: Opens a new window to add cards to the deck.
+
+Answer "Again" :: When the answer screen is shown, choose the red
+button, indicating you wish to review the card again soon. This is useful when
+you forgot a card or wish to review it more frequently.
+
+Answer "Hard" :: When the answer screen is shown and there are four buttons,
+choose the second button from the left, indicating you found the card hard to
+remember.
+
+Answer "Good" :: When the answer screen is shown, choose the green button.
+This is the button you should end up using the most.
+
+Answer "Easy" :: When the answer screen is shown, choose the button on the
+right, indicating you found the card too easy to remember and would like a
+much longer delay.
+
+Bury :: Hides the current card from review. When you return to the deck list,
+it will be added back for review.
+
+Card Info :: Shows information about the current card.
+
+Deck Info :: Shows graphs and statistics about your deck or collection.
+
+Deck List :: Returns to the deck list.
+
+Delete Note :: Deletes the currently shown note and all of its cards. If
+you're not studying in multiple directions, this will just delete a single
+card.
+
+Edit :: Edits the current card.
+
+Find:: Lets you search/browse your cards.
+
+Mark :: Adds a tag called "Marked" the current note, so it can be easily found
+in a search.
+
+Mark+Bury :: Marks the card, then buries it.
+
+Mark+Suspend :: Marks the card, then suspends it.
+
+More :: Shows a list of all available actions.
+
+Off :: Don't do anything. Useful if you want to disable certain swipes, tap
+zones and so on.
+
+Replay Audio :: Replay the card's audio. You can customize whether the audio
+in the question is replayed while the answer is shown in the computer Anki.
+
+Show Answer :: Reveals the answer when a card's question is shown.
+
+Suspend Card :: Prevent current card from being shown during review until you
+unsuspend it via the search action.
+
+Suspend Note:: Prevent all cards of current note from being shown during
+review until you unsuspend them via the search action.
+
+Tools :: Show the tools screen.
+
+Undo :: Undoes the last action.
+
+[[taps]]
+=== Taps ===
+
+When you're reviewing, you can tap on different parts of a card in order to
+trigger different actions.
+
+Anki divides the screen into 9 sections:
+
+[width="30%",cols="^.^1,^.^1,^.^1"]
+|=====
+|Top Left|Top Center|Top Right
+|Mid Left|Mid Center|Mid Right
+|Bottom Left|Bottom Center|Bottom Right
+|=====
+
+Each section can have a different action assigned to it if you wish, and the
+taps when the question is shown are also different from the taps when the
+answer is shown.
+
+By default, AnkiMobile responds as follows when the question in shown:
+
+[width="30%",cols="^.^1,^.^1,^.^1"]
+|=====
+|Show Answer|Show Answer|Show Answer
+|Show Answer|Show Answer|Show Answer
+|Show Answer|Show Answer|Show Answer
+|=====
+
+In other words, tapping anywhere on the screen will show the answer.
+
+When the answer is shown, by default AnkiMobile responds as follows:
+
+[width="30%",cols="^.^1,^.^1,^.^1"]
+|=====
+|Answer "Again"|Off|Answer "Good"
+|Answer "Again"|Off|Answer "Good"
+|Answer "Again"|Off|Answer "Good"
+|=====
+
+This allows you to tap on the left side of the screen to trigger the red
+button, and the right side of the screen to trigger the green button. Taps
+near the middle of the screen will be ignored.
+
+=== Swipes ===
+
+You can also swipe up, down, left or right across a card to trigger an action.
+
+To ensure swipes don't interfere with your ability to scroll on a large card
+or select text, a swipe must begin from the left or right side of the screen.
+Begin by placing your finger on the left or right side of the screen, and then
+move it up, down, left or right to trigger the relevant swipe.
+
+With the default settings:
+
+ * Swiping left displays the tools window
+ * Swiping right returns to the deck list
+ * Swiping up undoes the last answer
+ * Swiping down marks the current note
+
+[[toolbuttons]]
+=== Tool Buttons ===
+
+In the middle of the tools screen, AnkiMobile displays 6 buttons for commonly
+used operations. By default, the actions are:
+
+[width="30%",cols="^.^1,^.^1"]
+|=====
+|Mark|Delete Note
+|Undo|Card Info
+|Bury|More
+|=====
+
+For descriptions of what each action does, please see the <<actions,action
+descriptions>> above.
+
+[[quickbar]]
+=== Quickbar ===
+
+When studying, the middle buttons at the top of the screen are called the
+'quickbar'. By default they allow you to add cards, edit the current card,
+and search/browse cards.
+
+== Theme ==
+
+The theme screen allows you to customize the colours AnkiMobile uses for the
+interface: the buttons, background image and so on.
+
+To customize the appearance of your cards, it's currently necessary to adjust
+the appearance in the desktop and then sync or copy your cards over to
+AnkiMobile. For more information, please see
+http://ankisrs.net/docs/manual.html#templates[this section] of the desktop manual.
+
+= Adding Material  =
+
+To add cards to a deck, tap the "Add" button while reviewing.
+
+The "Type" button at the top allows you to select the type of note you'd like
+to add. For more information about note types, please see the introduction in
+the http://ankisrs.net/docs/manual.html#basics[desktop manual].
+
+When you tap on a field, a keyboard will come up, allowing you to type in
+information. You can use the next and previous buttons to move between fields,
+and the done button to hide the keyboard.
+
+The camera icon allows you to add an image to your note, either via your
+device's camera (if it has one), or from your photo library. The microphone
+icon allows you to record your voice and place it into a field.
+
+When you've typed in the content of a note, hit the save button to add it to
+your collection.
+
+The magnifying glass at the bottom allows you to see a preview of the card(s)
+which would be added.
+
+= Editing =
+
+To edit a note, tap the "Edit" button while reviewing.
+
+The edit screen is similar to the adding screen mentioned above, with some key
+differences:
+
+ * There is no note type selection button or deck selection button. If you
+   want to change the type of an existing note or which deck it's in, you
+   currently need to do so with the desktop client.
+ * There are two extra buttons at the bottom of the screen. The middle button
+   allows you to perform various actions on the current card or note. Please
+   see the <<actions,action descriptions>> for more information on what each
+   action does.
+ * The trash icon allows you to delete the current note and all its cards.
+
+= Finding/Searching/Browsing =
+
+You can search or browse your deck by tapping the "Find" button while
+reviewing.
+
+The find screen starts by displaying a search bar with the text:
+`deck:current`, and displaying the keyboard. If you tap the return button on
+the keyboard, AnkiMobile will display all cards in the current deck.
+
+You can type text into the search box in order to limit the cards further. If
+you only wanted to show cards in the current deck that contain the text
+"hello" for example, you'd modify the text so it says `deck:current hello` and
+then tap return. If you wish to search across multiple decks, you can remove
+the `deck:current` part.
+
+AnkiMobile supports all the search strings that the desktop version of Anki
+does, allowing you to perform quite complex searches. Some examples:
+
+ tag:marked :: show cards that with the tag "marked"
+ is:due :: show only cards that are waiting for review
+ front:rabbit :: show only cards where the front field is exactly "rabbit" 
+
+For a full list of the possibilities, please see the section in the
+http://ankisrs.net/docs/manual.html#searching[desktop manual].
+
+When a search returns one or more cards, you can tap on a card to edit it, or
+perform various actions like previewing it, deleting it, showing information
+about it, and so on.
+
+[[filtered]]
+= Filtered Decks =
+
+Anki is designed to optimize the learning process, so that you study the
+minimum amount necessary to remember the majority of your cards. Once the
+congratulations screen is reached, further study becomes a case of diminishing
+returns: the amount of extra time spent going over the same cards again is
+generally not worth the moderate increase in retention you'll see.
+
+That said, if you have a test looming, or simply want to pass some time, it's
+possible to keep reviewing once the congratulations screen is reached.
+
+A 'filtered deck' is a temporary deck that contains cards based on various
+criteria, such as "forgotten today", "is tagged 'hard'", and so on. After
+studying cards in a filtered deck, or when the filtered deck is deleted, the
+cards are automatically returned to their original deck.
+
+You can create a filtered deck by tapping the filter/cram button on the deck
+list. After choosing a name for the deck, choose a preset and then tap the
+build deck button in order to create the deck.
+
+For further information on filtered decks, please see the http://ankisrs.net/docs/manual.html#filtered[desktop documentation].
+
+= Scratchpad/Writing Pad =
+
+If you'd like to practice your ability to draw foreign characters like kanji,
+it's possible to embed a writing pad on your cards. To do this, please visit
+the following page for more information: https://ankiweb.net/shared/info/3646117803
+
+= Advanced Features =
+
+== Custom Fonts ==
+
+AnkiMobile allows you to use non-system fonts on your cards. To set them up,
+the desktop client is required. Please see
+http://ankisrs.net/docs/manual.html#installingfonts[the section in the desktop
+manual] for more information.
+
+Please note that AnkiMobile has to load the entire font into memory in order
+to use it, and fonts for Asian languages can be quite large. If you have an
+older device and notice AnkiMobile crashing frequently after installing a
+font, you may have exceeded your device's memory limits.
+
+== Dictionary Links ==
+
+The desktop version of Anki provides the ability to open a web page based on
+the contents of a field, for easily creating a link to an online dictionary
+site. This is documented
+http://ankisrs.net/docs/manual.html#_dictionary_links[in this section] of the
+manual, though please start from the
+http://ankisrs.net/docs/manual.html#templates[cards & templates] section as
+the above link assumes you have read it.
+
+Like the desktop, AnkiMobile supports links to dictionary websites. In
+addition to that, you can also link to different dictionary apps that you have
+installed on your device, by making use of an iOS feature called a 'URL
+Scheme'.
+
+A 'URL Scheme' is like a link to a website, but it instead links to an app. A
+simple example is:
+
+  anki://
+
+If you type this into Safari on your device, you'll see AnkiMobile open up.
+
+Some dictionary apps provide a URL scheme that allows you to provide a
+particular phrase to search for. For example, an app called iDict+ allows the
+following type of URL:
+
+  idictplus://?search=mysearchtext
+
+If you have iDict+ installed and type that into Safari, iDict+ should open up
+and immediately search for "mysearchtext".
+
+iDict+ also supports passing a return link. We can replace the above with:
+
+  idictplus://?search=txt&scheme=anki://
+
+If you type that into Safari, it will search for "mysearchtext" like before,
+but will also provide a "return" button that when pressed will open up Anki.
+
+By taking that text and combining it with the instructions for the desktop
+version linked above, it's possible to have a link on your cards that searches
+for a word in another app, and then allows you to return to Anki when you're
+done.
+
+Unfortunately, there is no standard for URL schemes: some apps implement them,
+some don't, and the way they implement them can different. For example, in the
+app called "Kotoba!", the URL scheme is:
+
+  kotoba://dictionary?word=mysearchtext
+
+Note how not only the app name differs but also the text after it, and how
+Kotoba! doesn't provide the ability to automatically return to the app that
+opened it, meaning that you need to double tap the home button and manually
+return to AnkiMobile.
+
+Some dictionary apps publish their URL scheme in their documentation. If
+you're using a dictionary app that doesn't, please contact the authors and ask
+them for more information.
