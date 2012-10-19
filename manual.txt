@@ -1569,6 +1569,9 @@ font-family: line in the .card section and change the font to "myfont". To
 change the font for only certain fields, please see the <<fieldstyling,Field
 Styling>> instructions above.
 
+NOTE: Please make sure the filenames match exactly. If the file is called
+arial.TTF and you write arial.ttf in your card templates, it will not work.
+
 [[profileprefs]]
 = Profiles & Preferences =
 
