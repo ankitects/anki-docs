@@ -2069,6 +2069,9 @@ choose which columns you'd like to see. You can drag columns to reorder them.
 Clicking on a column will sort by that column; click again to reverse the sort
 order. Not all columns can be sorted on.
 
+NOTE: For new cards, the due column displays a number which indicates the
+order new cards will appear in. The numbers do not correspond to dates.
+
 When you click on a card, its note will be shown in the bottom section. If you
 drag the mouse or hold ctrl or command to select multiple cards, the editor
 will be temporarily hidden. Various operations (such as changing the deck) can
