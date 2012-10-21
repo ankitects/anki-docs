@@ -27,7 +27,7 @@ information, please also see the link:manual.html[user manual], which has been
 completely rewritten for version Pre.
 
 [[beforeupgrade]]
-= Pre-Upgrade =
+= Dropbox =
 
 If you didn't use Dropbox in the previous version of Anki, you can skip this
 section.
