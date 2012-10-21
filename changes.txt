@@ -20,6 +20,7 @@ are most likely to cause surprises in the new version.
    templates, please see <<cardgen,this section>> for info on how cards are
    selected now.
  * Anki only checks the <<dupes,first field>> to see if it's unique now.
+ * If you are missing decks or cards in Anki 2, please see <<missing,this section>>.
 
 The rest of this page describes all the changes in more detail. For more
 information, please also see the link:manual.html[user manual], which has been
