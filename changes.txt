@@ -491,7 +491,9 @@ in Anki 2.
 If you find a deck missing cards or empty when upgrading, this is because in
 the past you have exported cards into another deck and studied both decks in
 parallel. Even if you modified the appearance of the cards in one deck, the
-cards were originally the same, and Anki continues to consider them the same.
+cards were originally the same, and Anki continues to consider them the same,
+as Anki was not intended to be used in this way.
+
 This means that when you try to import the cards in one deck into the other,
 nothing happens (on in the case of 2.0, you end up with the cards in one deck
 appearing but the cards in the other deck not appearing).
