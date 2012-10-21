@@ -474,7 +474,7 @@ per-lesson basis when you're ready to study them. You could do it like this:
  * There's now an add-on writing guide link:addons.html[here] that also covers
    the main things to be aware of when porting an old add-on.
 
-<<missing>>
+[[missing]]
 = Missing Decks/Cards =
 
 == Deck Doesn't Appear ==
