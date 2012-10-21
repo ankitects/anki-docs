@@ -54,6 +54,12 @@ described below, it will commence the upgrade process again.
 [[step3]]
 = Step 3: Install the new computer version =
 
+Now we need to install Anki 2 on the computer.
+
+NOTE: If you used Dropbox in the old version of Anki, please see
+http://ankisrs.net/docs/changes.html#beforeupgrade[this page] before
+continuing.
+
 On your computer, please visit the Anki website:
 
 http://ankisrs.net

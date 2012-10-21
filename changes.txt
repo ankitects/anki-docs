@@ -24,10 +24,20 @@ are most likely to cause surprises in the new version.
 
 The rest of this page describes all the changes in more detail. For more
 information, please also see the link:manual.html[user manual], which has been
-completely rewritten for version 2.
+completely rewritten for version Pre.
+
+[[beforeupgrade]]
+= Pre-Upgrade =
+
+If you didn't use Dropbox in the previous version of Anki, you can skip this
+section.
+
+If you used Dropbox, before upgrading, please go to Settings>Preferences and
+change the media section to "keep media next to deck". After that, please open
+and close each deck in turn in order to move the media back to its original
+location, so that Anki 2 can find it.
 
 = Decks & Profiles =
-
 
 ++++++++++
 <img src="/docs/dev/1-decks.png" width=341 height=318 style="float:right;margin:1em;">
