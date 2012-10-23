@@ -1265,6 +1265,8 @@ Where is {{Country}} on the map?
 
 == Selective Card Generation ==
 
+Please read the above section for background.
+
 Sometimes you may want to generate extra cards for only some of your material,
 such as testing your ability to recall the most important words of a set. You
 can accomplish this by adding an extra field to your note, and adding some
