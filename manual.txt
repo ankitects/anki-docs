@@ -1265,7 +1265,7 @@ Where is {{Country}} on the map?
 
 == Selective Card Generation ==
 
-Please read the above section for background.
+Please read the previous section before you read this.
 
 Sometimes you may want to generate extra cards for only some of your material,
 such as testing your ability to recall the most important words of a set. You
@@ -3168,6 +3168,10 @@ Both desktop and mobile clients make it easy to import from an apkg file
 simply by clicking on it. AnkiWeb does not have the ability to import apkg
 files however, so the recipients of your deck will need to have the desktop
 client or Anki on their smartphone.
+
+When a user imports a .apkg file, any new cards will be added, but deletions
+and edits will not sync across, so currently if you notice a mistake, you will
+need to contact the deck users about it.
 
 Sharing Add-ons
 ----------------
