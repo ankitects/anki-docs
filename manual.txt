@@ -1275,7 +1275,28 @@ replacement section below.
 
 ==  Media References ==
 
-Anki previously allowed you to include media references in templates, like:
+Anki does not scan templates for media references, because it is slow to do
+so. This has implications for including media on the template.
+
+=== Static Sounds/Images ===
+
+If you wish to include images or sounds on your cards that are the same for
+every card (eg, a company logo at the top of each card):
+
+ 1. Rename the file so it starts with an underscore, eg "_logo.jpg". The
+    underscore tells Anki that the file is used by the template and it should
+    be exported when sharing the deck.
+ 2. Add a reference to the media on your front or back template, like:
+
+-----
+<img src="_logo.jpg">
+-----
+
+=== Field References ===
+
+Media references to fields are not allowed. While the following will work
+during review, it will break if you try checking for unused media or
+exporting/sharing the deck:
 
 -----
 <img src="{{Expression}}.jpg">
@@ -1285,9 +1306,8 @@ Anki previously allowed you to include media references in templates, like:
 [latex]{{Field 1}}[/latex]
 -----
 
-This is no longer supported, as it complicates deck sharing and considerably
-slows down checks for unused media. Please see the <<importing,importing>>
-section for information on alternatives.
+Instead, you should include the media references in the field instead. Please
+see the <<importing,importing>> section for more information.
 
 == Conditional Replacement ==
 
