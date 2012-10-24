@@ -539,8 +539,8 @@ delete decks, or customize their options.
 Study Overview
 --------------
 
-After clicking on a deck to study, or clicking "Study", you'll see a screen
-that shows you how many cards are due today. There are three types:
+After clicking on a deck to study, you'll see a screen that shows you how many
+cards are due today. There are three types:
 
  * *New* refers to cards that you have downloaded or entered in, but have
    never been studied before.
@@ -845,7 +845,7 @@ will appear as:
 -----
 
 For information on testing your ability to type in a cloze deletion correctly,
-please see the section on <<typinganswers,templates>>.
+please see the section on <<typinganswers,typing answers>>.
 
 Please note that overlapping clozes are not supported. For example, the
 following field is invalid:
@@ -924,13 +924,14 @@ card. If you opened the window while adding notes, the preview will be based
 on the text you had typed into the Add Notes window. If you opened the window
 while editing a note, the preview will be based on that note.
 
-At the bottom of the window are some buttons to rename or reorder the cards.
-Another button labeled "Deck Override..." allows you to change the deck in
+At the bottom of the window is a More button that gives you options to rename or
+reorder the cards. The "Deck Override" option allows you to change the deck in
 which cards of the current type will be placed into. By default, cards are
 placed into the deck you provide in the Add Notes window. If you set a deck
-here, the button will change to read "Specific Deck...", and that card type
-will be placed into the deck you specified, instead of the deck listed in the
-Add Notes window.
+here, the button will change to read "Specific Deck...", and that card type will
+be placed into the deck you specified, instead of the deck listed in the Add
+Notes window. The Column Templates option allows you to set different (perhaps
+simplified) templates for display in the columns of the browser.
 
 == Basic Templates ==
 
@@ -1613,7 +1614,7 @@ etc), you can uncheck this option.
 By default Anki pastes images on the clipboard as JPG files, to save disk
 space. You can use the *Paste clipboard images as PNG* option to paste as PNG
 images instead. PNG images support transparent backgrounds and are lossless,
-but they usually result in much large file sizes.
+but they usually result in much larger file sizes.
 
 The *Next day starts at* option controls when Anki should start showing the
 next day's cards. The default setting of 4AM ensures that if you're studying
@@ -2078,7 +2079,7 @@ will be temporarily hidden. Various operations (such as changing the deck) can
 operate on multiple cards at once.
 
 The background colour will change depending on the card. Marked cards are a
-shade of purple. Suspended card are a shade of yellow. For more information
+shade of purple. Suspended cards are a shade of yellow. For more information
 about marked and suspended cards, please see <<editmore,editing and more>>.
 
 One of the available columns is called the 'sort field'. Anki allows you to
@@ -2134,9 +2135,9 @@ remove individual cards, as individual cards are controlled by the
 Find and Replace
 --------------
 
-This option allows you to replace text in the cards you have selected. The
-regular expression option allows you to perform complex replacements. For
-example, given the following text on a card:
+This option (Edit>Find and Replace) allows you to replace text in the cards you
+have selected. The regular expression option allows you to perform complex
+replacements. For example, given the following text on a card:
 
 -----
 <img src="pic.jpg">
@@ -2472,7 +2473,7 @@ foo bar; bar baz; baz quux
 == Spreadsheets and UTF-8 ==
 
 If you have non-Latin characters in your file (such as accents, Japanese and
-so on), Anki expects files to be saved in a 'UTF-8 encoding'. This easiest way
+so on), Anki expects files to be saved in a 'UTF-8 encoding'. The easiest way
 to do this is to use the free LibreOffice spreadsheet program instead of Excel
 to edit your file, as it supports UTF-8 natively, and also exports multi-line
 content properly, unlike Excel.
@@ -2519,7 +2520,7 @@ or
 
 Alternatively, you can use the find & replace feature to update all the fields
 at once. If each field contains text like "myaudio", and you wish to make it
-play a sound, you'd search for (.*) and replace it with "[sound:$1.mp3]", with
+play a sound, you'd search for (.*) and replace it with "[sound:\1.mp3]", with
 the 'regular expressions' option enabled.
 
 You might be tempted to do this in a template, like:
@@ -2587,9 +2588,9 @@ Checking Your Collection
 --------------------------
 
 It's a good idea to occasionally check your collection file for problems. You
-can do this via the Tools>Check Database menu item. Checking the database
-ensures the file is not corrupted, rebuilds some internal structures, and
-optimizes the file.
+can do this via the Tools>Maintenance>Check Database menu item. Checking the
+database ensures the file is not corrupted, rebuilds some internal structures,
+and optimizes the file.
 
 When you check the database, your tag list is also rebuilt. When you delete
 individual decks or cards, Anki does not update the list of used tags, as it's
@@ -2865,20 +2866,17 @@ The Graphs
 
 Anki stores the sounds and images used in your notes in a folder next to the
 collection. For more on the folder location, please see the <<files,file
-locations>> section.
+locations>> section. When you add media within Anki, Anki will copy it from its
+original location into the media folder. This makes it easy to back up your
+collection's media or move it to another computer.
 
-When you add media within Anki, Anki will copy it from its original location
-into the media folder. This makes it easy to back up your collection's media
-or move it to another computer. If you'd prefer to have the media removed from
-the original location, you can do so in the <<preferences,preferences>>.
-
-You can use the Tools>Unused Media menu option to scan your notes and media
-folder. It will generate a report of files in the media folder that are not
-used by any notes, and media referenced in notes but missing from your media
-folder. It does not scan question or answer templates, which is why you can't
-place media references to fields in the template. If you need a static image
-or sound on every card, name it with a leading _ (eg _dog.jpg) to tell Anki to
-ignore it when checking for media.
+You can use the Tools>Maintenance>Unused Media menu option to scan your notes
+and media folder. It will generate a report of files in the media folder that
+are not used by any notes, and media referenced in notes but missing from your
+media folder. It does not scan question or answer templates, which is why you
+can't place media references to fields in the template. If you need a static
+image or sound on every card, name it with a leading _ (eg _dog.jpg) to tell
+Anki to ignore it when checking for media.
 
 Anki uses a program called mplayer in order to support sounds and videos. A
 wide variety of file formats are supported, but not all of these formats will
@@ -3177,7 +3175,7 @@ careful when translating:
    translated like `%(a)d von %(b)d`. If you need to reverse A and B in your
    language, that's fine as long as the text remains the same. 
  * Menu items have an & to indicate which character is the shortcut key, such
-   as `&File`. In languages that use roman text text you can place the & over
+   as `&File`. In languages that use roman text, you can place the & over
    a different character such as `&Datei`; in other languages there may be a
    different convention. Japanese for example includes the roman character
    afterwards instead, like `ファイル (&F)`
@@ -3337,7 +3335,7 @@ A: A giraffe.
 Or you can add your own choices:
 
 -----
-Q: What animal has a really long neck? (dog/cat/giraffee/penguin)
+Q: What animal has a really long neck? (dog/cat/giraffe/penguin)
 
 A: A giraffe.
 -----
