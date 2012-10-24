@@ -2644,6 +2644,12 @@ anki -b /path/to/anki/folder
 * To change the interface language, start Anki with -l <iso country code>,
   such as "-l ja" for Japanese.
 
+If you always want to use a custom folder location, you can modify your shortcut
+to Anki. On Windows, right-click on the shortcut, choose Properties, select the
+Shortcut tab, and add "-b /path/to/anki/folder" after the path to the program
+(something like C:\Program Files\Anki\anki.exe). You can also use this with the
+-l option to easily use Anki in different languages. 
+
 If you want to permanently change the interface language, delete
 Documents/Anki/prefs.db and the initial startup screen will be shown
 again. After doing so, you'll need to add any profiles you were using again.
