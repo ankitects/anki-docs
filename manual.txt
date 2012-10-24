@@ -1965,6 +1965,9 @@ if you're on another platform.
 Please note that advanced proxy setup via .pac or .wpad files is not supported
 in Anki.
 
+To override the system proxy settings on Windows or OS X, define a HTTP_PROXY
+environmental variable that points to the proxy server.
+
 [[browser]]
 = Browser =
 
