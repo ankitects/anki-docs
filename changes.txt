@@ -474,15 +474,18 @@ per-lesson basis when you're ready to study them. You could do it like this:
  * There's now an add-on writing guide link:addons.html[here] that also covers
    the main things to be aware of when porting an old add-on.
 
-= Questions =
+<<missing>>
+= Missing Decks/Cards =
 
-*Why are all the decks in one file now?*
+== Deck Doesn't Appear ==
 
-This change makes many parts of the UI simpler, and combined with the
-performance improvements in version 2, actually performs faster than before.
-For scratch decks, you can create a separate profile.
+If a deck doesn't appear at all in Anki 2, then it couldn't be automatically
+upgraded. The upgrade wizard will have mentioned this in the upgrade log. To
+fix this issue, install the old Anki 1.2.8, open the deck, use
+Tools>Advanced>Check DB, and then you should be able to File>Import the deck
+in Anki 2.
 
-*Some of my cards were missing from a deck after I upgraded!*
+== Deck Appears Empty ==
 
 If you find a deck missing cards or empty when upgrading, this is because in
 the past you have exported cards into another deck and studied both decks in
@@ -492,11 +495,19 @@ This means that when you try to import the cards in one deck into the other,
 nothing happens (on in the case of 2.0, you end up with the cards in one deck
 appearing but the cards in the other deck not appearing).
 
-If you have study progress on both versions of the cards that you want to
-keep, you'll need to import the deck with the missing cards into a new profile
-(via the Switch Profile feature) for now. When I'm less busy, I'll look at
-writing an add-on that will alter the cards and allow you to import one
-profile into the other in the future.
+To fix this, please install Anki 1.2.8 again, go to File>Download>Shared
+Plugin, download the plugin called "Make Cards Unique", and then restart Anki.
+After restarting, for each deck that didn't import, open it and choose Tools>Make
+Cards Unique. After you've done this, you should be able to File>Import the
+decks in Anki 2.0.
+
+= Questions =
+
+*Why are all the decks in one file now?*
+
+This change makes many parts of the UI simpler, and combined with the
+performance improvements in version 2, actually performs faster than before.
+For scratch decks, you can create a separate profile.
 
 [[dupes2]]
 *Why can't we mark an arbitrary number of fields as unique?*

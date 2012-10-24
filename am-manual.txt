@@ -191,7 +191,7 @@ if you haven't already.
 When you've looked at a card's question and remembered the answer, or decided
 you don't know it, tap anywhere in the card area in order to show the answer.
 When you do, the bottom area will change to display 2-4 answer buttons,
-depending on how you've reviewed the card previously. The buttons will display
+depending on how you've answered the card previously. The buttons will display
 the time a card will next be shown, so 10m means "10 minutes" and "5d" means
 "5 days". You can tap directly on these buttons to choose a particular answer.
 
@@ -263,7 +263,7 @@ Full Sync :: The full sync button allows you to force a full upload or
 download of your cards. This is useful if you accidentally deleted some cards
 and want to revert to the local or remote version, instead of having those
 deletions propagate to other devices. After tapping the button, you'll be
-given a choice of whether you want to upload your deck or download it from
+given a choice of whether you want to upload your collection or download it from
 AnkiWeb.
 
 == Review ==
@@ -316,7 +316,8 @@ The following actions are available:
 Add :: Opens a new window to add cards to the deck.
 
 Answer "Again" :: When the answer screen is shown, choose the red
-button, indicating you wish to review the card again soon.
+button, indicating you wish to review the card again soon. This is useful when
+you forgot a card or wish to review it more frequently.
 
 Answer "Hard" :: When the answer screen is shown and there are four buttons,
 choose the second button from the left, indicating you found the card hard to
@@ -515,7 +516,8 @@ the keyboard, AnkiMobile will display all cards in the current deck.
 You can type text into the search box in order to limit the cards further. If
 you only wanted to show cards in the current deck that contain the text
 "hello" for example, you'd modify the text so it says `deck:current hello` and
-then tap return.
+then tap return. If you wish to search across multiple decks, you can remove
+the `deck:current` part.
 
 AnkiMobile supports all the search strings that the desktop version of Anki
 does, allowing you to perform quite complex searches. Some examples:

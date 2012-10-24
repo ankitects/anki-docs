@@ -165,7 +165,7 @@ the SuperMemo algorithm called SM2. Subsequent versions have managed to
 squeeze out a little more learning efficiency, but they come at the cost of
 greatly increased complexity, and they are more susceptible to scheduling
 errors in real-world use. For a more in-depth discussion of this and the
-differences in scheduling algorithms, see the bottom of the {faq}.
+differences in scheduling algorithms, see the bottom of the page.
 
 [[basics]]
 The Basics
@@ -723,6 +723,18 @@ display all of your decks, and show a filter area at the top. As you type
 characters, Anki will display only decks matching the characters you type. The
 search is non-consecutive, so if you want to select the "Japanese::Lesson 1"
 deck, you could just type "j1" (but not "1j").
+
+== Falling Behind ==
+
+If you fall behind in your reviews, Anki will prioritize cards that have been
+waiting the longest. It does this by taking the 200 cards that have been waiting
+the longest, and showing them to you in a random order up until your daily
+review limit. This ordering ensures that no cards will be left waiting
+indefinitely, but it means that if you introduce new cards, their reviews
+won't appear until you've gotten through your backlog.
+
+If you wish to change the order the overdue reviews, you can do so by creating
+a filtered deck, as described in a later section of the manual.
 
 [[editor]]
 Editing
@@ -1485,7 +1497,7 @@ so you can include only the important fields and change the order if you
 desire.
 
 [[templatertl]]
-== RTL (right to left) text =
+== RTL (right to left) text ==
 
 If you're learning a language that reads from right to left, you'll need to
 adjust the template like so:
@@ -1556,6 +1568,9 @@ individual fields. To change the font for the entire card, simply locate the
 font-family: line in the .card section and change the font to "myfont". To
 change the font for only certain fields, please see the <<fieldstyling,Field
 Styling>> instructions above.
+
+NOTE: Please make sure the filenames match exactly. If the file is called
+arial.TTF and you write arial.ttf in your card templates, it will not work.
 
 [[profileprefs]]
 = Profiles & Preferences =
@@ -2053,6 +2068,9 @@ The columns are configurable: right click on one (or ctrl+click on a Mac) to
 choose which columns you'd like to see. You can drag columns to reorder them.
 Clicking on a column will sort by that column; click again to reverse the sort
 order. Not all columns can be sorted on.
+
+NOTE: For new cards, the due column displays a number which indicates the
+order new cards will appear in. The numbers do not correspond to dates.
 
 When you click on a card, its note will be shown in the bottom section. If you
 drag the mouse or hold ctrl or command to select multiple cards, the editor

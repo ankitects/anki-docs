@@ -3,8 +3,6 @@
 Changes in AnkiMobile 2
 ________________________
 
-(AnkiMobile 2.0 has been sent to Apple and is awaiting approval)
-
 = Please Read Before Upgrading =
 
 AnkiMobile 2 is a big update, and depending on the features you used

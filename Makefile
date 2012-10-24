@@ -4,6 +4,7 @@ WEB = /Users/dae/Lib/web/ankisrs.net
 AMHELP = ../mob/AnkiMobile/Resources/HTML/help.html
 
 all: build
+	git pull soren master
 	perl -i -pe 's/font-size: 1em;/font-size: 2em;/g' am-upgrade.html
 	rsync -a *.png *.html stylesheets $(WEB)/docs/dev
 	rsync -a *.png *.html stylesheets $(WEB)/docs/
