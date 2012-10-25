@@ -2607,6 +2607,38 @@ A 'packaged deck' consists of cards, notes, note types and any sounds or
 images bundled up into a file ending with .apkg. You can use packaged decks to
 transfer cards between people, or for backing up parts of your collection.
 
+There are two different kinds of packaged decks.
+
+=== Collection Package ===
+
+When you export all decks with scheduling included, this is called a
+'collection package'. Anki will copy your entire collection into a file called
+"collection.apkg", and place it on your desktop.
+
+When this file is later imported, Anki will delete all the current cards in
+the collection, and replace the collection with the items in the
+collection.apkg file. This is useful for copying your collection back and
+forth between devices.
+
+NOTE: Existing media in your collection is not deleted when you import a
+collection.apkg. To delete unused media, use Tools>Maintenance>Unused Medai.
+
+NOTE: Anki's automatic backups are also collection packages. Simply double
+click on one to restore your collection to that backup.
+
+=== Deck Package ===
+
+Deck packages contain a single deck (and any child decks it may have). They
+have a filename ending with .apkg, but a filename other than collection.apkg.
+When you import a deck package, Anki will add the contents into your
+collection, rather than overwriting your collection. If some cards have
+previously been imported, they will not be modified: deck packages only add
+new items.
+
+=== Deck Export ===
+
+NOTE: 
+
 = Managing Files and Your Collection =
 
 Checking Your Collection

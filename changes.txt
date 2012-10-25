@@ -597,65 +597,6 @@ media folders in sync between separate computers.
  * For the initial learning steps where sub-day scheduling is more important,
    you can use Anki's learning mode instead.
 
-= Changes in Release Candidate 1 =
-
- * The deck list screen now supports expanding/collapsing decks, thanks to a
-   contribution by Chris L.
- * Deck description now correctly imported from apkg.
- * Links in deck description now clickable.
- * Change stats from cards in 5 minutes to cards in 1 minute.
- * Stats now show exact counts for young/mature/etc in labels.
- * The review time/history graph in "deck life" mode now derives the period
-   from the deck, not the collection.
- * The answer buttons graph now honors the selected time period.
- * Short times like '4d' no longer ignore translations.
- * Exporting an apkg without scheduling now exports the decks with the default
-   configuration group, so they pick up the default settings in the importing
-   collection.
- * Failing a review card now honours the minimum interval setting.
- * Use "command" for tooltips in Add screen on OS X
- * Don't show interval for learning cards in browser
- * Don't mark notes as modified when they're imported from an apkg.
-
-= Changes in Release Candidate 2 =
-
- * 1+ day learning cards should now appear in deck list due counts.
- * Possible workaround for images intermittently failing to show on Windows.
- * Fix up/down buttons on interval multiplier
- * Remove 'collapse' from the options menu next to decks.
- * Improve error message when checking DB on a corrupt collection.
-
-= Changes in Release Candidate 3 =
-
- * You can now add notes with duplicate front fields - Anki will colour
-   the field red, but no longer prevent you from adding.
- * A proper fix for images on the answer side failing to show up on
-   Windows/Linux.
- * Failing a review card in a filtered deck should now correctly update its
-   interval.
- * Don't incorrectly warn about missing history when the same card has been
-   reviewed from multiple locations.
- * Don't scroll to the top of the deck list when updating it.
- * Fix problems editing filtered deck options from deck list screen.
- * Fix profile renaming.
- * The default deck will no longer be shown on the deck list screen if it's
-   empty and there are other decks.
- * is:learn now matches relearning cards as well
-
-= Changes in Release Candidate 4 =
-
- * Removed "Study" from the top bar. The associated 's' shortcut key will still
-   work.
- * The deck list now ignores the per-day review limit when counting 1+ day
-   learning cards.
- * Fixed some issues with < in a multi-line LaTeX string.
- * Don't allow profiles with trailing spaces, as Windows can't handle them.
- * Show the learning queue as orange instead of red.
- * Handle a few more problems in the DB check.
- * Fix a bug introduced in rc3 where answering 'soon' on a review card would
-   lead to an error message.
- * Fix importing of media from Anki 1 decks.
-
 = Changes in Release Candidate 5 =
 
  * Anki will now rename media automatically on import if a different file with
@@ -715,6 +656,78 @@ media folders in sync between separate computers.
  * Change the way the basic note types are added to the decks so that Anki
    won't break when the translations are wrong.
  * Other small fixes.
+
+= Changes coming in 2.0.1 =
+
+ * The Cards screen now has an "Add Field" button for people who feel
+   uncomfortable editing HTML.
+
+ * Filtered deck changes:
+ ** The filtered deck presets have been moved into a new button called "Custom
+    Study" which appears at the bottom of the overview. Daily new & review
+    limits can also be adjusted from that screen.
+ ** The "filter by tags" preset now presents a dialog like Anki 1.2's active
+    tags dialog, to make it easier to select tags. If the custom study window
+    is opened again later, Anki will remember the previously selected tags for
+    that deck.
+ ** Moved the Filter/Cram button on the decks/overview screen to the tools
+    menu.
+ ** Filtered decks no longer show their search terms, as they're confusing to
+    new users and easily findable in the options.
+ ** Filtered decks now show a brief description of how they work.
+ ** The custom study option automatically names the filtered deck "Custom
+    Study Session", and will reuse an existing deck if one exists. If you wish
+    to keep a custom study session, you can rename it.
+ ** Filtered decks now appear in the deck list as blue.
+ ** When creating a filtered deck, it uses a default name instead of asking
+    you for a name, as you can rename it afterwards if you wish.
+ ** Change Deck will now move cards out of a filtered deck instead of ignoring
+   them.
+
+ * Stats changes:
+ ** Information about the current day is now included at the top.
+ ** The # of cards due tomorrow is listed in the Forecast section. 
+ ** Information about the generated date and limit is included at the bottom.
+ ** "Save Image" now saves the image to the desktop, making it easier for
+    students to locate it. The stats screen also uses a subtle background now,
+    to make it harder for students to fake the graphs.
+
+ * Importing changes:
+ ** When importing a .apkg file, you now have a chance to customize the deck
+    name that it will be imported as. If you leave the deck blank, it will
+    import the cards into the current deck instead.
+ ** When you export your entire collection, it will automatically be named
+    "collection.apkg" and placed on your desktop.
+ ** There is no add/replace question when importing - Anki will ask to replace
+    if the imported file is called collection.apkg or is a backup file, and
+    will otherwise add.
+ ** Use a tooltip instead of a big box when showing "xxx notes imported".
+ ** Imports from a CSV file now give you the option of escaping HTML
+    characters.
+ ** Imports from a CSV file now let you choose whether you want to allow
+    duplicates.
+ ** When importing a CSV file, make sure to update field list when separator
+    is changed.
+
+ * When the browser is opened during study, it will continue to show the
+   current note like before, but you can now hit enter to quickly show all
+   cards in the deck.
+ * Don't return the cursor to the top of the screen when cards are deleted.
+ * Don't throw an error when the edit screen is open and a card is deleted.
+ * Show due date for suspended cards.
+ * Allow 1 field notes.
+ * When the cloze button is clicked in the browser, point the user to the
+   Change Note Type option.
+ * The main window will no longer switch to a "resume now" button as soon as
+   you start typing in the Add window.
+ * Add a "Create Deck" button back to the deck list.
+ * Holding down the delete key will no longer delete multiple cards in the
+   browser.
+ * After media has been added to a field, return focus to that field.
+ * Accept enter/space keys when returning to the answer from a different
+   program.
+ * Properly display minutes when "studied today" exceeds an hour.
+ * Work around a few bugs caused by the mobile clients.
 
 = Download =
 
