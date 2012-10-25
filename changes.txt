@@ -692,6 +692,10 @@ media folders in sync between separate computers.
  ** "Save Image" now saves the image to the desktop, making it easier for
     students to locate it. The stats screen also uses a subtle background now,
     to make it harder for students to fake the graphs.
+ ** Make sure we display the review card/time graphs even if there's only a
+   single data point.
+ ** Fix x-axis on interval graph when using deck life period.
+ ** Fix rounding error in history graphs.
 
  * Importing changes:
  ** When importing a .apkg file, you now have a chance to customize the deck
@@ -709,7 +713,11 @@ media folders in sync between separate computers.
     duplicates.
  ** When importing a CSV file, make sure to update field list when separator
     is changed.
+ ** When importing cards from a filtered deck, convert them to normal cards.
 
+ * Newly created collections now include two new note types: forward&reverse
+   type, and a forward&optional reverse type.
+ * Fixed bugs where counts on the deck list didn't match the overview screen.
  * When the browser is opened during study, it will continue to show the
    current note like before, but you can now hit enter to quickly show all
    cards in the deck.
@@ -721,6 +729,15 @@ media folders in sync between separate computers.
    Change Note Type option.
  * The main window will no longer switch to a "resume now" button as soon as
    you start typing in the Add window.
+ * Better error message when insecure LaTeX word is encountered.
+ * Work around some errors in Anki 1.2 decks when upgrading.
+ * Accept newlines in LaTeX like in Anki 1.2.
+ * When LaTeX fails, point the user to the generated .tex file.
+ * Unbury cards when returning to the deck list.
+ * Don't remove cards from filtered deck when they're buried.
+ * Fix error when renaming decks and mixing upper/lowercase.
+ * When a cloze has a hint, don't show dots.
+ * Fix an error that appeared when editing cards that were in a filtered deck.
  * Add a "Create Deck" button back to the deck list.
  * Holding down the delete key will no longer delete multiple cards in the
    browser.
