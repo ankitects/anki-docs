@@ -138,6 +138,7 @@ Then on your computer:
  . You'll be asked whether you want to add or replace. Choose *Replace*, so
    that the deck from your mobile device overwrites the old data on your
    desktop.
+ . After importing, you can delete the file on your desktop if you wish.
 
 = The Deck List =
 
