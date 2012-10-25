@@ -2545,7 +2545,7 @@ or
 
 Alternatively, you can use the find & replace feature to update all the fields
 at once. If each field contains text like "myaudio", and you wish to make it
-play a sound, you'd search for (.*) and replace it with "[sound:\\1.mp3]", with
+play a sound, you'd search for (.*) and replace it with "[sound:\1.mp3]", with
 the 'regular expressions' option enabled.
 
 You might be tempted to do this in a template, like:
