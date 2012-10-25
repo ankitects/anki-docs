@@ -657,6 +657,7 @@ media folders in sync between separate computers.
    won't break when the translations are wrong.
  * Other small fixes.
 
+[[latest]]
 = Changes coming in 2.0.1 =
 
  * The Cards screen now has an "Add Field" button for people who feel
