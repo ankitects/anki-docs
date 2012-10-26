@@ -6,6 +6,10 @@ Your time is precious, and you may not have time to read this whole document -
 that's fine. But please read this section, as it points out a few things that
 are most likely to cause surprises in the new version.
 
+ * If you used Dropbox with previous versions of Anki, please read the next
+   section before upgrading.
+ * If you ever exported & imported .anki decks in the previous version, please
+   read <<missing,this section>> before upgrading.
  * Reviews are <<perday,limited>> to 100/day by default.
  * When you answer "again", there are now two
    link:manual.html#learning[learning] reviews of the card, so the learning
