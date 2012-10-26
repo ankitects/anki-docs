@@ -2676,14 +2676,18 @@ There is also a separate folder for each profile. The folder contains:
  * A backups folder
  * Some system files
 
+WARNING: You should never copy or move your collection while Anki is open.
+Doing so could cause your collection to become corrupted. Please don't
+move or modify the other files in the folder either.
+
 NOTE: If you want to use Anki on a network drive on Windows, the network drive
 needs to be mapped to a drive letter. If your network administrator has set
 your user directory up as something like "\\server\share\folder", please ask
 them to map the share and change it to something like "z:\folder" instead.
+After the drive has been mapped, your network administrator will either have
+to configure Windows to point your documents folder at the drive location, or
+you will need to start Anki with -b as described in the next section.
 
-WARNING: You should never copy or move your collection while Anki is open.
-Doing so could cause your collection to become corrupted. Please don't
-move or modify the other files in the folder either.
 
 [[startupopts]]
 Startup Options
