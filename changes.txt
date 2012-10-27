@@ -661,11 +661,12 @@ media folders in sync between separate computers.
    won't break when the translations are wrong.
  * Other small fixes.
 
-[[latest]]
-= Changes coming in 2.0.1 =
+= Changes in 2.0.1 =
 
- * The Cards screen now has an "Add Field" button for people who feel
-   uncomfortable editing HTML.
+2.0.1 was a testing release, and it has been released as stable as 2.0.2.
+
+[[latest]]
+= Changes in 2.0.2 =
 
  * Filtered deck changes:
  ** The filtered deck presets have been moved into a new button called "Custom
@@ -675,6 +676,7 @@ media folders in sync between separate computers.
     tags dialog, to make it easier to select tags. If the custom study window
     is opened again later, Anki will remember the previously selected tags for
     that deck.
+ ** Correctly show 3 buttons when showing new cards in a filtered deck.
  ** Moved the Filter/Cram button on the decks/overview screen to the tools
     menu.
  ** Filtered decks no longer show their search terms, as they're confusing to
@@ -702,9 +704,9 @@ media folders in sync between separate computers.
  ** Fix rounding error in history graphs.
 
  * Importing changes:
- ** When importing a .apkg file, you now have a chance to customize the deck
-    name that it will be imported as. If you leave the deck blank, it will
-    import the cards into the current deck instead.
+ ** Fix some issues where your collection could become corrupt if you
+    previously saved or exported a model to different decks and then modified
+    it in different ways.
  ** When you export your entire collection, it will automatically be named
     "collection.apkg" and placed on your desktop.
  ** There is no add/replace question when importing - Anki will ask to replace
@@ -719,12 +721,18 @@ media folders in sync between separate computers.
     is changed.
  ** When importing cards from a filtered deck, convert them to normal cards.
 
+ * The Cards screen now has an "Add Field" button for people who feel
+   uncomfortable editing HTML.
  * Newly created collections now include two new note types: forward&reverse
    type, and a forward&optional reverse type.
+ * Anki is now stricter about invalid CSS, to make it more consistent with the
+   other clients.
+ * Better warning when deleting fields.
  * Fixed bugs where counts on the deck list didn't match the overview screen.
  * When the browser is opened during study, it will continue to show the
    current note like before, but you can now hit enter to quickly show all
    cards in the deck.
+ * The browser will focus on the current card when it's opened.
  * Don't return the cursor to the top of the screen when cards are deleted.
  * Don't throw an error when the edit screen is open and a card is deleted.
  * Show due date for suspended cards.
