@@ -1007,22 +1007,14 @@ the size you configured for that field (via the "Fields" button when editing).
 This feature does not change how the cards are answered, so it's still up to
 you to decide how well you remembered or not.
 
-It is also possible to type in the answer for cloze deletion cards. The front
-and back of your cloze template should look like this:
+It is also possible to type in the answer for cloze deletion cards. To do
+this, add the following to both the front and back template:
 
 -----
 {{cloze:Text}}
 -----
 
-To enable typing, add a <br> and append a line like so:
-
------
-{{cloze:1:Text}}<br>
-{{type:cloze:Text}}
------
-
-If you don't want to see the context in the answer, you can delete the first
-line of the answer template.
+Unlike regular cards, it must be added to both sides on a cloze note type.
 
 NOTE: For advanced users, the "the correct answer was" part of the text can be
 styled or hidden in the styling section, with text such as `#rightanswer {
