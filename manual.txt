@@ -933,6 +933,30 @@ be placed into the deck you specified, instead of the deck listed in the Add
 Notes window. The Column Templates option allows you to set different (perhaps
 simplified) templates for display in the columns of the browser.
 
+== Reverse Cards ==
+If you want to create cards that go in both directions (e.g., both
+"ookii"->"big" and "big"->"ookii"), you have several options. The simplest is to
+select the "Basic (and reversed card)" built-in note type. This will generate
+two cards, one in each direction.
+
+If you want to generate reverse cards for only some of your material (perhaps
+you only want to take the time to study reverses for the most important
+material, or some of your cards don't make sense reversed), you can select the
+"Basic (optional reversed card)" note type. This note type generates a
+forward-only card when you fill in only the first two fields; if you
+additionally enter something in the "Add Reverse" field (like a 'y'), Anki will
+generate a reverse card as well. The contents of this field will never be
+displayed on a card.
+
+If you later decide you don't want a reverse card (or you didn't create one at
+first and now want one), you can change it by editing the "Add Reverse" field.
+If you didn't select the optional reverse note type to begin with, you can use
+Edit>Change Note Type in the browser to change it.
+
+If you wish to generate reverse or certain cards only in certain situations with
+a more complex note type (for instance, one with three cards), please see the
+<<conditionalreplacement,conditional replacement>> section.
+
 == Basic Templates ==
 
 The most basic template looks something like this:
@@ -1304,6 +1328,7 @@ exporting/sharing the deck:
 Instead, you should include the media references in the field instead. Please
 see the <<importing,importing>> section for more information.
 
+[[conditionalreplacement]]
 == Conditional Replacement ==
 
 It is possible to include certain text on your cards only if a field is empty
