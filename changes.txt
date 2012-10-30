@@ -341,32 +341,38 @@ per-lesson basis when you're ready to study them. You could do it like this:
 [[cardgen]]
 = Card Generation & Deletion =
 
- * In previous versions of Anki, the cards that were generated when adding
-   facts depended on whether the cards would be blank or not, and whether
-   you'd selected that card in the top right button of the Add window. Anki 2
-   only considers the former now - there's no button anymore to select
-   particular cards. Instead, you can use the conditional replacement features
-   of the templates to control which cards are generated in a predictable way.
-   If you still need control over which cards are generated (such as adding a
-   native->foreign language card for only the most important material), you
-   can either create a separate note type for the important material, or add
-   an extra field to use as a flag. For example, you could add a field called
-   "important", and make the second card's generation depend on the field
-   being non-empty. Then you can just add a character such as "y" to that
-   field on the important cards. Anki will automatically do this for your
-   decks when they are upgraded, so that you don't lose or gain cards when
-   upgrading.
-
- * This change means there is no "generate cards" dialog anymore, nor a
-   "delete card" feature, as card existence is now controlled solely by the
-   template.
-
- * One caveat: if Anki removed cards as notes were edited, users who deleted
-   the existing content of a field with the intention of replacing it might be
-   surprised to find their cards were reset (as a result of the card being
-   deleted and then added again). To prevent this, Anki will not automatically
-   delete cards on individual note changes. To remove empty cards, click
-   Tools>Maintenance>Empty Cards.
+ * In previous versions of Anki, there was a button in the top right of the
+   add cards screen that let you enable and disable card templates. As the
+   button would only control which cards would be added when you added new
+   content, if you wanted to add extra cards to previously added content, you
+   had to use the "generate cards" feature in the browser. This caused a lot
+   of confusion.
+ * In Anki 2, instead of manually specifying which cards to create, cards are
+   created depending on whether fields are empty or not. By default, a card
+   will be created if at least one field on the front template is non empty.
+   You can change this so that particular non-empty fields are required before
+   a card is generate.
+ * If you wish to selectively add cards (such as adding a reverse card for
+   only your difficult content), you can add a field to your notes that
+   controls whether the reverse card will be generated. If you put any text in
+   the field (such as "y"), the card is generated, and if you leave the field
+   blank, the card is not created.
+ * When Anki 2 upgrades your old decks, it will automatically add such a
+   required field to notes where you have a card enabled for some but not all
+   of the notes.
+ * There is no option to manually delete individual cards in Anki 2, as if you
+   manually deleted a card, Anki would automatically add it again if fields
+   were not empty. Instead, you can remove individual cards by blanking out
+   one of their required fields.
+ * Anki doesn't immediately remove cards when one of their required fields is
+   blanked out, because that could lead to data loss. To remove cards with
+   missing required fields, run Tools>Maintenance>Empty Cards.
+ * As blanking out fields is a few more steps than just pressing the delete
+   button, if you need to remove a number of cards during review, you may find
+   it easier to suspend them instead, and then use find&replace at a later
+   date to blank out a required field for all the suspended cards in one go.
+ * For more information about selectively adding cards, please see
+   link:manual.html#_card_generation[this section] of the manual.
 
 [[dupes]]
 = Fields and Duplicates =
