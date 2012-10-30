@@ -350,8 +350,8 @@ per-lesson basis when you're ready to study them. You could do it like this:
  * In Anki 2, instead of manually specifying which cards to create, cards are
    created depending on whether fields are empty or not. By default, a card
    will be created if at least one field on the front template is non empty.
-   You can change this so that particular non-empty fields are required before
-   a card is generate.
+   You can set Anki up to only create particular cards if certain fields are
+   not blank.
  * If you wish to selectively add cards (such as adding a reverse card for
    only your difficult content), you can add a field to your notes that
    controls whether the reverse card will be generated. If you put any text in
