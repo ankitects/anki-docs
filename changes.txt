@@ -671,7 +671,6 @@ media folders in sync between separate computers.
 
 2.0.1 was a testing release, and it has been released as stable as 2.0.2.
 
-[[latest]]
 = Changes in 2.0.2 =
 
  * Filtered deck changes:
@@ -764,6 +763,33 @@ media folders in sync between separate computers.
    program.
  * Properly display minutes when "studied today" exceeds an hour.
  * Work around a few bugs caused by the mobile clients.
+
+[[latest]]
+= Changes in 2.0.3 =
+
+ * Fix some more issues with importing content that used a modified version of
+   models already present in your collection. Decks (including 1.2 decks) are
+   now imported in such a way that repeatedly importing them will no longer
+   result in duplicate note types, notes or cards. The duplicate check only
+   works against previous imports made in 2.0.3 however, so if you imported
+   decks with divergent models in a previous Anki 2 version, the first time
+   you import that content again, a duplicate will be created.
+ * Fix a few errors that could occur when renaming decks.
+ * Fix timeboxing counting one too many cards on the first session and
+   not accounting for undone reviews.
+ * Suspended cards now have their due date shown surrounded by brackets in the
+   browser.
+ * When a learning card is suspended, it is moved back to new if it was in
+   initial learning, or moved back to a review card if it was in relearning.
+ * Fix 1+ day steps not working for relearning cards.
+ * Fixed some issues with settings not syncing due to the collection being
+   accidentally marked as modified when it was loaded.
+ * Add decimal point to reviews a day statistic.
+ * When creating a filtered deck, default to searching through the current
+   deck.
+ * Display a progress window when closing the collection, as it may take a
+   while.
+ * Fix font size setting in Add Field button.
 
 = Download =
 
