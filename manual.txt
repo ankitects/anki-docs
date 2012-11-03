@@ -1530,11 +1530,11 @@ conflict:
 [[columntemplates]]
 == Column Templates ==
 
-If your card templates are complex, it may be difficult to read the question
-and answer columns in the <<cardlist,card list>>. The "column templates"
-option allows you to define a custom template to be used only in the browser,
-so you can include only the important fields and change the order if you
-desire.
+If your card templates are complex, it may be difficult to read the question and
+answer columns (called "Front" and "Back") in the <<cardlist,card list>>.  The
+"column templates" option allows you to define a custom template to be used only
+in the browser, so you can include only the important fields and change the
+order if you desire. The syntax is the same as in standard card templates.
 
 [[templatertl]]
 == RTL (right to left) text ==
