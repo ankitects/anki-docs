@@ -3002,6 +3002,19 @@ BasicTex, you need to install dvipng separately, with the following command:
 tlmgr update --self && tlmgr install dvipng. If you want to install from
 MacPorts or similar, you will need to figure out any issues yourself.
 
+LaTeX on Web/Mobile
+--------------------
+
+When you review a card with LaTeX on it, Anki will generate an image for that
+LaTeX and place the image in your collection's media folder for future use.
+The web & mobile clients will display these images if they already exist, but
+can not generate the images on their own.
+
+To avoid having to review all your cards at least once before you can study on
+the other clients, Anki can generate the images in bulk for you. To generate
+all the images, please go to Tools>Maintenance>Unused Media. After that,
+syncing should upload the generated media to AnkiWeb and the other clients.
+
 Example
 --------
 
