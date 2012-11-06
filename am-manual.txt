@@ -551,9 +551,13 @@ criteria, such as "forgotten today", "is tagged 'hard'", and so on. After
 studying cards in a filtered deck, or when the filtered deck is deleted, the
 cards are automatically returned to their original deck.
 
-You can create a filtered deck by tapping the filter/cram button on the deck
-list. After choosing a name for the deck, choose a preset and then tap the
-build deck button in order to create the deck.
+The easiest way to create a filtered deck is by using the "custom study"
+feature. A custom study link will appear when you've finished all waiting
+cards in a deck. You can also access custom study ahead of time by clicking
+the tools button, and then choosing "More" and then "Custom Study".
+
+Advanced users can create a filtered deck manually, by clicking the tools
+button, then choosing "More" and then "Filter/Cram".
 
 For further information on filtered decks, please see the http://ankisrs.net/docs/manual.html#filtered[desktop documentation].
 
@@ -591,6 +595,10 @@ Like the desktop, AnkiMobile supports links to dictionary websites. In
 addition to that, you can also link to different dictionary apps that you have
 installed on your device, by making use of an iOS feature called a 'URL
 Scheme'.
+
+NOTE: When tapping on a dictionary link, holding down your finger for a little
+longer than you usually tap to advance to the next card will ensure the tap is
+treated as a tap on the link and not a tap to advance.
 
 A 'URL Scheme' is like a link to a website, but it instead links to an app. A
 simple example is:

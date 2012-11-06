@@ -2297,37 +2297,17 @@ cards, cramming cards before a test, studying particular tags, catching up on
 a backlog with a particular sort order, reviewing ahead of schedule, going
 over the day’s failed cards, and more.
 
-== Creating ==
+== Custom Study ==
 
-Filtered decks are created by clicking on the Filter/Cram button from the deck
-list or study overview screens. After giving your deck a name, you're
-presented with some example filters. Choosing an example will fill out the
-settings for you, and you can modify the settings if you wish.
+The easiest way to create a filtered deck is with the Custom Study button,
+which appears at the bottom of the screen when you click on a deck. It offers
+some convenient presets for common tasks like reviewing the cards you've
+failed that day. It will create a filtered deck called "Custom Study Session",
+and automatically open it for you.
 
-When you click the Build button, Anki finds cards that match the settings you
-specified, and temporarily moves them from their existing decks into your new
-filtered deck for study. Later on, the cards will be moved back to the deck
-they came from.
-
-If you wish to fetch cards again using the same filter options (for instance, if
-you want to study all cards with a particular tag every day), you can use the
-Rebuild button at the bottom of the deck overview screen.
-
-== Card Selection ==
-
-The *search* area controls what cards Anki will gather. All of the searches
-possible in the browser are also possible for filtered decks, such as limiting
-to tags, finding cards forgotten a certain number of times, and so on. Please
-see the <<searching,searching>> section of the manual for more information on
-the different possibilities.
-
-The *limit* option controls how many cards will be gathered into the deck. The
-order you select controls both the order cards are gathered in, and the order
-they will be reviewed in. If you select "most lapses" and a limit of 20 for
-example, then Anki will show you only the 20 most lapsed cards.
-
-For efficiency reasons, if your cram deck contains more than 1000 cards, only
-1000 cards will be shown as due on the deck list and study screens.
+If an existing "Custom Study Session" deck exists, it will be emptied before a
+new one is created. If you wish to keep a custom study deck, you can rename it
+from the deck list.
 
 == Home Decks ==
 
@@ -2335,7 +2315,7 @@ When a card is moved to a filtered deck, it retains a link to the deck it was
 in previously. That previous deck is said to be the card's 'home deck'.
 
 Cards automatically return to their home deck after they are studied in the
-cram deck. This can be after a single review, or after multiple reviews,
+filtered deck. This can be after a single review, or after multiple reviews,
 depending on your settings.
 
 It is also possible to move all cards back to their home decks at once:
@@ -2350,6 +2330,34 @@ It is also possible to move all cards back to their home decks at once:
 
 NOTE: In the current implementation, if you empty or delete a filtered deck
 while cards are still in learning, they will be turned back into new cards.
+
+== Creating Manually ==
+
+Advanced users can create filtered decks with arbitrary search strings,
+instead of relying on set presets. To create a filtered deck manually, choose
+Create Filtered Deck from the Tools menu.
+
+When you click the Build button, Anki finds cards that match the settings you
+specified, and temporarily moves them from their existing decks into your new
+filtered deck for study.
+
+If you wish to fetch cards again using the same filter options (for instance, if
+you want to study all cards with a particular tag every day), you can use the
+Rebuild button at the bottom of the deck's overview screen.
+
+The *search* area controls what cards Anki will gather. All of the searches
+possible in the browser are also possible for filtered decks, such as limiting
+to tags, finding cards forgotten a certain number of times, and so on. Please
+see the <<searching,searching>> section of the manual for more information on
+the different possibilities.
+
+The *limit* option controls how many cards will be gathered into the deck. The
+order you select controls both the order cards are gathered in, and the order
+they will be reviewed in. If you select "most lapses" and a limit of 20 for
+example, then Anki will show you only the 20 most lapsed cards.
+
+For efficiency reasons, if your cram deck contains more than 1000 cards, only
+1000 cards will be shown as due on the deck list and study screens.
 
 == Steps & Returning ==
 
