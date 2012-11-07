@@ -120,3 +120,95 @@ upgrade will bundle up your decks, send them to an internet server, and then
 download the new versions. Because this can fail if you have an unreliable
 internet connection or your decks have problems, it's recommended that you
 upgrade via the desktop instead.
+
+= Changes in 2.0.1 =
+
+2.0.1 was sent to Apple for review on Nov 7 2012.
+
+ * Added "Custom Study" feature from the latest desktop version, which makes
+   it easier to extend the daily new card or review limits, and create
+   filtered decks. Due to time constraints the "limit by tag" option has not
+   been implemented yet; it is expected to come in the next release.
+ * Filtered decks can still be created manually; the screen is now accessed
+   via Tools>More (or can be bound to a tap, swipe, etc).
+ * Added Today section to statistics, like on latest desktop.
+ * Fixed various issues with audio handling:
+ ** Audio now stops when transitioning to different screen.
+ ** AM now honours the "autoplay audio" setting of the desktop.
+ ** AM now honours the "replay question when answer shown" setting of the desktop.
+ ** Fixed bug where multiple audio fields didn't play correctly when card shown.
+ ** Fixed bug where multiple audio clips could play at the same time.
+ ** Fixed bug where question audio was replayed when answer was shown.
+ ** Don't hide replay button if audio in question but not answer.
+ * Import/export improvements:
+ ** You no longer need to choose between adding to or replacing the collection
+    when importing via iTunes or adding a shared deck.
+ ** Shared deck importing is much faster, and no longer can cause AnkiMobile
+    to run out of memory.
+ ** Shared deck importing now copes more gracefully with cards that were
+    originally based on the same note type, and duplicate media names.
+ ** Fixed an issue where an iTunes export wasn't included media even if
+    "include media" was selected.
+ * Fixed an issue where media added on the device via the camera/photo
+   library/recording facility was not being uploaded to AnkiWeb during a sync,
+   which caused a "media sanity check failed" message. If you continue to get
+   such messages, please export your collection with media via iTunes (as
+   described in the manual), and import it into the desktop program. After
+   doing that and syncing, the problem should go away.
+ * Fix an issue where the card count increased by one when returning from the
+   tools screen.
+ * Fix black areas appearing on the deck list on iOS4.3.
+ * Fix searches & filtered decks limited to due date
+ * AnkiMobile now supports .mobile in your templates
+   (http://ankisrs.net/docs/manual.html#platformcss).
+ * Automatically resize quickbar buttons when the device is rotated.
+ * Reviews/day statistics is more precise.
+ * Fixed issues with "reschedule" option on filtered decks being ignored.
+ * Fixed issue where failing a review card would give it the number of
+   learning steps instead of relearning steps.
+ * Fix AnkiMobile reverting to question taps when the device was rotated while
+   the answer was shown.
+ * Fix issues with tapping to hide/show the navigation bar.
+ * Fix issues where the status bar or navigation bar were not reset properly
+   when returning from another screen like the tools screen.
+ * Fix crashes caused by invalid deck names.
+ * Fix an issue where the buttons displayed intervals like "2d 2d 3d" instead
+   of "2d 3d 4d".
+ * More robust handling of dropped connections during sync.
+ * Fix an out of memory condition that could occur when looking for added
+   media.
+ * Don't crash if the user tries to add an empty deck name.
+ * Fix cards being shown twice when returning from edit mode.
+ * Fix reviews being reset to a 1 day interval even if the user had provided a
+   non-zero lapse %.
+ * Made the difference between the normal answer buttons and bigger answer
+   buttons more pronounced.
+ * When adding/editing a card, newlines are now honoured properly.
+ * Fix issues with cloze hints.
+ * Fix type in the answer when used in conjunction with a cloze.
+ * Fix issues with collection-wide settings not being properly synced from the
+   desktop.
+ * When previewing a card, make sure we show the edited card and not the first
+   card of that note type.
+ * Fix inverted find ordering.
+ * Fix inverted order of filtered decks when coming from/going to desktop.
+ * Strip HTML from fields before comparing with the typed in answer.
+ * Fix issue where count on deck list and study screen was inconsistent.
+ * Fix some minor graph issues.
+ * Fix an issue displaying LaTeX that had multiple lines or non-latin
+   characters.
+ * Don't allow cards to be added to a filtered deck.
+ * Fixed a crash when deleting a card via the edit screen.
+ * Show a warning rather than crash when a collection is corrupt.
+ * Fix tags not showing up when editing.
+ * Fix for a blank toolbar appearing after syncing.
+ * Properly sync media when full sync option is triggered in the preferences.
+ * Fixed a crash when using the photo chooser on an iPad.
+ * Support <% %> in LaTeX templates.
+ * Be stricter about invalid CSS, to bring behaviour in line with the desktop.
+ * Don't crash when trying to export to iTunes when the collection is already
+   in iTunes.
+ * You can now pinch to zoom on the statistics screen.
+ * Don't unmark when actions like "mark&suspend" triggered.
+ * Fix difficult to read table headers when certain theme backgrounds
+   selected.
