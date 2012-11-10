@@ -2494,6 +2494,10 @@ tabs can be imported into Anki, provided some conditions are met.
 Fields in your text file can be mapped to any field in your notes, including
 the tags field.
 
+When you import a text file, you can choose what deck to put the cards in. Keep
+in mind that if you have the deck override option set for one or more of your
+templates, the cards will go to that deck rather than the one you've selected.
+
 This is an example of a valid file:
 
 -----
