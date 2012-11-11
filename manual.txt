@@ -2499,6 +2499,10 @@ tabs can be imported into Anki, provided some conditions are met.
 Fields in your text file can be mapped to any field in your notes, including
 the tags field.
 
+When you import a text file, you can choose what deck to put the cards in. Keep
+in mind that if you have the deck override option set for one or more of your
+templates, the cards will go to that deck rather than the one you've selected.
+
 This is an example of a valid file:
 
 -----
@@ -2523,6 +2527,9 @@ hello [tab] this is<br>a two line answer
 two [tab] this is a one line one
 -----
 
+Note that you need to turn on the "allow HTML in fields" checkbox in the import
+dialog for this to work.
+
 This is an example of a valid file where the first line is ignored (#):
 
 -----
@@ -2546,18 +2553,17 @@ Anki.
 
 == HTML ==
 
-Anki treats text imported from text files as HTML (the language used for web
+Anki can treat text imported from text files as HTML (the language used for web
 pages). This means that text with bold, italics and other formatting can be
-exported to a text file and imported again. But this also means that if you've
-accidentally included HTML characters in plain text, you'll need to modify it.
+exported to a text file and imported again. If you want to include HTML
+formatting, you can check the "allow HTML in fields" checkbox when importing.
+You may wish to turn this off if you're trying to import cards whose content
+contains angle brackets or other HTML syntax.
 
-Specifically:
-
- * < should be written as &amp;lt;
- * > should be written as &amp;gt;
-
-You can use your text editor to do a find and replace on those characters if
-you use them.
+If you wish to use HTML for formatting your file but also wish to include angle
+brackets, you may write them differently:
+ * < - &amp;lt;
+ * > - &amp;gt;
 
 == Importing Media ==
 
