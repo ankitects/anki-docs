@@ -600,6 +600,11 @@ minutes, and the initial 1 minute step will be skipped.
 You can use the 1, 2 and 3 keys on your keyboard to select a particular
 button, where 1 = *Again*. Pressing the spacebar will select *Good*.
 
+If there are no other cards to show you that day, Anki will by default show
+learning cards again even if their delay has not elapsed completely. If you'd
+prefer to wait the full learning delay, you can change this behaviour in the
+<<preferences,preferences>>.
+
 Reviewing
 ---------
 
@@ -1145,13 +1150,13 @@ What we need to do is wrap the text we want to style in some HTML. We will put
 the following in front of the text:
 
 -----
-<span class=mystyle1>
+<div class=mystyle1>
 -----
 
 And the following behind it:
 
 -----
-</span>
+</div>
 -----
 
 By wrapping the text like the above, we tell Anki to style the wrapped text
@@ -1161,7 +1166,7 @@ Thus if we wanted the entire "What is ...?" expression to use the Thai font,
 we would use:
 
 -----
-<span class=mystyle1>What is {{Expression}}?</span>
+<div class=mystyle1>What is {{Expression}}?</div>
 
 {{Notes}}
 -----
@@ -1170,7 +1175,7 @@ And if we wanted only the expression field itself to use the Thai font, we'd
 use:
 
 -----
-What is <span class=mystyle1>{{Expression}}</span>?
+What is <div class=mystyle1>{{Expression}}</div>?
 
 {{Notes}}
 -----
@@ -1566,7 +1571,7 @@ depending on where you're reviewing:
 And in the template:
 
 -----
-<span class=jp>{{Field}}</span>
+<div class=jp>{{Field}}</div>
 -----
 
 You can also use properties like .gecko, .opera, and .ie to select particular
