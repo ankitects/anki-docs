@@ -250,12 +250,18 @@ per-lesson basis when you're ready to study them. You could do it like this:
    media folder now, so there are no issues with an out of date media DB like
    there were in the past.
 
- * Media and LaTeX references in templates are not currently supported,
+ * Media and LaTeX references in templates are no longer supported,
    because they don't play well with shared decks. The upgrade routines will
    notice references like [sound:{{field}}.mp3] in your templates and
    automatically create a new field with the media tags embedded in it, like
    [sound:apple.mp3]. If you manually add the references back in, Anki will
    not notice the media is in use when you check the media DB.
+
+ * If you had static media references like `<img src=logo.jpg>` in your
+   templates, those media files will not be imported and you'll need to
+   manually copy them over. It's recommended that you rename them to have a
+   leading underscore, as doing that tells Anki they are used in the template
+   and shouldn't be deleted when checking for unused media.
 
  * When you upgrade, Anki moves the media in each deck's .media folder into
    the new collection's media folder. You had different files with the same
