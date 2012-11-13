@@ -123,7 +123,7 @@ upgrade via the desktop instead.
 
 = Changes in 2.0.1 =
 
-2.0.1 was sent to Apple on Nov 7 2012, and is awaiting their approval.
+2.0.1 was approved by Apple on Nov 13 2012.
 
  * Added "Custom Study" feature from the latest desktop version, which makes
    it easier to extend the daily new card or review limits, and create
