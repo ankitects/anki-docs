@@ -2565,9 +2565,9 @@ brackets, you may write them differently:
 == Importing Media ==
 
 If you want to include audio and pictures from a text file import, copy the
-files into the yourdeckname.media folder. This folder is located in the same
-directory as your collection. If it doesn't exist, you can create it. *Do not use
-subdirectories, or some features will not work.*
+files into the collection.media folder, located in the same directory as your
+collection. If it doesn't exist, you can create it. *Do not put subdirectories
+in the media folder, or some features will not work.*
 
 After you've copied the files, change one of the fields in your text file as
 follows.
