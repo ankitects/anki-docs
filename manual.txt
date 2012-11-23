@@ -207,8 +207,9 @@ Decks can contain other decks, which allows you to organize decks into a tree.
 Anki uses "::" to show different levels. A deck called "Chinese::Hanzi::Lesson
 1" refers to a "Lesson 1" deck, which is part of the Hanzi deck, which is part
 of the Chinese deck. If you select "Lesson 1" then only cards from lesson 1
-will be shown for study; if you select "Chinese" then all Chinese cards will
-be shown.
+will be shown for study. If you select "Chinese," then each of the lessons will
+be shown in sequence. (If you normally want to study the groups in random order,
+you should use tags instead.)
 
 Anki starts with a deck called "default"; any cards which have somehow become
 separated from other decks will go here. Anki will hide the default deck if it
@@ -2569,9 +2570,9 @@ brackets, you may write them differently:
 == Importing Media ==
 
 If you want to include audio and pictures from a text file import, copy the
-files into the yourdeckname.media folder. This folder is located in the same
-directory as your collection. If it doesn't exist, you can create it. *Do not use
-subdirectories, or some features will not work.*
+files into the collection.media folder, located in the same directory as your
+collection. If it doesn't exist, you can create it. *Do not put subdirectories
+in the media folder, or some features will not work.*
 
 After you've copied the files, change one of the fields in your text file as
 follows.
