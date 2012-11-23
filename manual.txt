@@ -2800,6 +2800,14 @@ To restore from a backup, simply close Anki, open Documents/Anki/<profile
 name>/backups, and double-click on the most recent backup in order to import
 it.
 
+Inaccessible Harddisk
+----------------------
+
+If Anki can't write to files in the <<files,Anki folder>>, a message will be
+displayed on startup saying that Anki can't write to the harddisk, and Anki
+will close. If you're unsure how to fix the permissions, please contact
+someone near you who is knowledgable about computers and can help you out.
+
 Corrupt Collections
 ---------------------
 
