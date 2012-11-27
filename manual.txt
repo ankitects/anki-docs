@@ -2646,15 +2646,6 @@ are importing has a first field that matches one of the existing notes in your
 collection, the existing note's other fields will be updated based on content
 of the imported file.
 
-== Spreadsheet Programs ==
-
-It's possible to edit your data in a spreadsheet program, then export that
-data to a text file so Anki can import it.
-
-It's recommended that you use LibreOffice, as it is free, runs on all major
-platforms, and handles exporting text files well. To save the document as a
-text file, use File>Save As, and choose Text CSV from the file type list.
-
 = Exporting =
 
 Exporting allows you to save part of your collection as a text file or
