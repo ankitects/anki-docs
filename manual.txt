@@ -2571,13 +2571,15 @@ foo bar; bar baz; baz quux
 If you have non-Latin characters in your file (such as accents, Japanese and
 so on), Anki expects files to be saved in a 'UTF-8 encoding'. The easiest way
 to do this is to use the free LibreOffice spreadsheet program instead of Excel
-to edit your file, as it supports UTF-8 natively, and also exports multi-line
-content properly, unlike Excel.
+to edit your file, as it supports UTF-8 easily, and also exports multi-line
+content properly, unlike Excel. If you wish to keep using Excel, please see 
+https://groups.google.com/forum/?fromgroups=#!topic/ankisrs/QRzzxYzjTb0[this
+forum post] for more information.
 
-To save your spreadsheet to a file Anki can read, go to File>Save As, and then
-select CSV for the type of file. After accepting the default options,
-LibreOffice will save the file and you can then import the saved file into
-Anki.
+To save your spreadsheet to a file Anki can read with LibreOffice, go to
+File>Save As, and then select CSV for the type of file. After accepting the
+default options, LibreOffice will save the file and you can then import the
+saved file into Anki.
 
 == HTML ==
 
