@@ -2308,12 +2308,38 @@ over the day’s failed cards, and more.
 The easiest way to create a filtered deck is with the Custom Study button,
 which appears at the bottom of the screen when you click on a deck. It offers
 some convenient presets for common tasks like reviewing the cards you've
-failed that day. It will create a filtered deck called "Custom Study Session",
+failed that day. It will create a filtered deck called "Custom Study Session"
 and automatically open it for you.
 
 If an existing "Custom Study Session" deck exists, it will be emptied before a
 new one is created. If you wish to keep a custom study deck, you can rename it
 from the deck list.
+
+Here is a summary of each of the options:
+ Increase today's new card limit ::
+  Add more new cards to the deck you are currently studying. Note that unlike
+  other options, this does 'not' create a new filtered deck, it modifies the
+  existing deck.
+ Increase today's review card limit ::
+  If not all reviews due today were shown due to the daily review limit, this
+  option allows you to show more of them. Like with the new cards option, this
+  modifies the existing deck.
+ Review forgotten cards ::
+  Show all cards that you've answered Again (1) to within a number of days you
+  specify.
+ Review ahead ::
+  Show cards that will be due in the near future (a number of days you specify).
+  This is useful if you know you will be unable to study for a while, such as
+  before you go on a vacation.
+ Study a random selection of cards ::
+  Pick a random number of cards that you specify from the deck and study them.
+  If you wish to see all cards in your deck (for instance, to study before a
+  big test), simply set the number of cards to more than the number of cards
+  in the deck.
+ Preview new cards ::
+  Show cards that you have recently added.
+ Limit to particular tags ::
+  Select certain tags from the deck to study.
 
 == Home Decks ==
 
