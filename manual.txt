@@ -940,10 +940,14 @@ Notes window. The Column Templates option allows you to set different (perhaps
 simplified) templates for display in the columns of the browser.
 
 == Reverse Cards ==
+
+If you want to reverse your existing cards, when editing a card, click the
+Cards button, and then Flip.
+
 If you want to create cards that go in both directions (e.g., both
-"ookii"->"big" and "big"->"ookii"), you have several options. The simplest is to
-select the "Basic (and reversed card)" built-in note type. This will generate
-two cards, one in each direction.
+"ookii"->"big" and "big"->"ookii"), you have several options. The simplest is
+to select the "Basic (and reversed card)" built-in note type. This will
+generate two cards, one in each direction.
 
 If you want to generate reverse cards for only some of your material (perhaps
 you only want to take the time to study reverses for the most important
