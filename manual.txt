@@ -660,8 +660,9 @@ other operations you can do on the current card or note:
   you want to come back to the card another time.
  Suspend Note ::
   Hides all of the note's cards from review until they are manually
-  unsuspended. Useful if you want to avoid reviewing the note for some time,
-  but don't want to delete it.
+  unsuspended (by clicking the suspend button in the browser). Useful if
+  you want to avoid reviewing the note for some time, but don't want to delete
+  it.
  Delete Note ::
   Deletes the note and all of its cards.
  Card Options ::
