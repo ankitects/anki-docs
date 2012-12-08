@@ -2312,6 +2312,7 @@ new one is created. If you wish to keep a custom study deck, you can rename it
 from the deck list.
 
 Here is a summary of each of the options:
+
  Increase today's new card limit ::
   Add more new cards to the deck you are currently studying. Note that unlike
   other options, this does 'not' create a new filtered deck, it modifies the
@@ -2794,6 +2795,13 @@ To run Anki from a flash drive on Windows:
 
 -----
 \anki\anki.exe -b \ankidata
+-----
+
+If you would like to prevent the black command prompt window from remaining
+open, you can instead use:
+
+-----
+start /b \anki\anki.exe -b \ankidata
 -----
 
  * Double-clicking on anki.bat should start Anki with the user data stored in
