@@ -2801,6 +2801,13 @@ To run Anki from a flash drive on Windows:
 \anki\anki.exe -b \ankidata
 -----
 
+If you would like to prevent the black command prompt window from remaining
+open, you can instead use:
+
+-----
+start /b \anki\anki.exe -b \ankidata
+-----
+
  * Double-clicking on anki.bat should start Anki with the user data stored in
    G:\ankidata.
 
