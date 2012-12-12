@@ -667,7 +667,8 @@ other operations you can do on the current card or note:
   Hides all of the note's cards from review until they are manually
   unsuspended (by clicking the suspend button in the browser). Useful if
   you want to avoid reviewing the note for some time, but don't want to delete
-  it.
+  it. If cards were in learning when they are suspended, they are moved back
+  to the new card queue or review queue.
  Delete Note ::
   Deletes the note and all of its cards.
  Card Options ::
@@ -1303,7 +1304,7 @@ card template, you can make the card's creation depend on that field being
 non-empty. For more information on this, please see the conditional
 replacement section below.
 
-==  Media References ==
+==  Media & LaTeX References ==
 
 Anki does not scan templates for media references, because it is slow to do
 so. This has implications for including media on the template.
