@@ -1336,7 +1336,7 @@ exporting/sharing the deck:
 [latex]{{Field 1}}[/latex]
 -----
 
-Instead, you should include the media references in the field instead. Please
+Instead, you should include the media references in the field. Please
 see the <<importing,importing>> section for more information.
 
 [[conditionalreplacement]]
