@@ -1047,12 +1047,10 @@ It is also possible to type in the answer for cloze deletion cards. To do
 this, add the following to both the front and back template:
 
 -----
-{{type:cloze:Text}}
+{{cloze:Text}}
 -----
 
-Unlike regular cards, this must be added to both sides on a cloze note type. If
-there are multiple sections elided, you can separate the answers in the text
-box with a comma.
+Unlike regular cards, it must be added to both sides on a cloze note type.
 
 NOTE: For advanced users, the "the correct answer was" part of the text can be
 styled or hidden in the styling section, with text such as `#rightanswer {
@@ -1940,9 +1938,7 @@ Setup
 To start syncing your collection across devices, click the sync button (the
 top right one on the main screen), or press 'y' on your keyboard. You'll be
 prompted for your AnkiWeb ID and password, which you created in the signup
-process. Please make sure you have confirmed your email address before trying
-to sync, as your account will not be activated until your address has been
-confirmed.
+process.
 
 When you synchronize your collection for the first time, Anki will not be able
 to merge the content stored on AnkiWeb and the content stored on your
@@ -2693,7 +2689,7 @@ collection.apkg file. This is useful for copying your collection back and
 forth between devices.
 
 NOTE: Existing media in your collection is not deleted when you import a
-collection.apkg. To delete unused media, use Tools>Maintenance>Unused Medai.
+collection.apkg. To delete unused media, use Tools>Maintenance>Unused Media.
 
 NOTE: Anki's automatic backups are also collection packages. Simply double
 click on one to restore your collection to that backup.
@@ -2706,10 +2702,6 @@ When you import a deck package, Anki will add the contents into your
 collection, rather than overwriting your collection. If some cards have
 previously been imported, they will not be modified: deck packages only add
 new items.
-
-=== Deck Export ===
-
-NOTE: 
 
 = Managing Files and Your Collection =
 

@@ -119,13 +119,12 @@ automatically copy them into your 2.0 decks, so they will not be lost.
 
 == Cleaning Up ==
 
-
 To ensure the upgrade process is robust and make it possible to temporarily
 downgrade, your old decks and media are not deleted when you upgrade, meaning
 that they will continue to take up space.
 
 In the settings screen, if you tap "Upgrading", there is an option to remove
-that screen from your settings. Currently this does not delete any old decks
-and media, but it is expected to in a future version. For this reason, it is
-recommended that you don't hide it yet, as if you do the only way to remove
-the old decks and media files will be to uninstall and reinstall the app.
+that screen from your settings. If you tap this button it will remove all
+data from the old version, including any .anki files in iTunes. For this
+reason, it is recommended you only do this after you are confident the upgrade
+has gone successfully.
