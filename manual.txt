@@ -2265,7 +2265,10 @@ complete reset a deck, the correct way to do so is to export a copy instead.
 
 'Reposition' allows you to change the order new cards will appear in. You can
 find out the existing positions by enabling the 'due' column, as described in
-the card list section above.
+the card list section above. If you run the reposition command when multiple
+cards are selected, it will apply increasing numbers to each card in turn. By
+default the number increases by one for each card, but this can be adjusted by
+changing the "step" setting.
 
 'Change Note Type' allows you to convert the selected notes from one type to
 another type, and/or convert between card templates. For example, imagine you
