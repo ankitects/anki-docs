@@ -553,4 +553,4 @@ an example, the structure looks like:
 To upload a multi-file add-on, please zip up the folder and the loader .py
 file and upload the zip.
 
-Please upload add-ons to https://beta.ankiweb.net/shared/addons/
+Please upload add-ons to https://ankiweb.net/shared/addons/

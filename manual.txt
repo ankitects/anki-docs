@@ -28,7 +28,7 @@ Introduction
 ============
 
 :website: http://ankisrs.net/[Anki website]
-:ankiweb: https://beta.ankiweb.net/
+:ankiweb: https://ankiweb.net/
 
 Anki is a program which makes remembering things easy. Because it is a lot
 more efficient than traditional study methods, you can either greatly decrease
