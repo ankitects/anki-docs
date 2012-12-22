@@ -805,6 +805,8 @@ media folders in sync between separate computers.
    Tools>Maintenance>Full Sync after upgrading so that the duplicate cache can
    be updated.
  * Anki will now apply a fuzz to review intervals so they spread out more.
+   This fuzz is not reported on the answer buttons, as it is only calculated
+   when the card is actually answered. You can check it in the review history.
  * If you have a failure multiplier set so that failed reviews have their
    interval reduced rather than zero out, that multiplier will now be applied
    if you refail the card in the relearning queue as well.
