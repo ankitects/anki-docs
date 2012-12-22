@@ -797,6 +797,71 @@ media folders in sync between separate computers.
    while.
  * Fix font size setting in Add Field button.
 
+= Changes in coming 2.0.4 =
+
+ * The duplicate check while adding cards now ignores HTML when comparing. If
+   your cards have any bold/italics/colours/etc, please run
+   Tools>Maintenance>Full Sync after upgrading so that the duplicate cache can
+   be updated.
+ * Anki will now apply a fuzz to review intervals so they spread out more.
+ * If you have a failure multiplier set so that failed reviews have their
+   interval reduced rather than zero out, that multiplier will now be applied
+   if you refail the card in the relearning queue as well.
+ * You can now customize note types from the tools menu.
+ * Possible fixes for proxy connections. Thanks to Arfrever for the heads up
+   on the new httplib2 version.
+
+Import/export:
+
+ * Remember the "allow HTML" setting in the import dialog.
+ * Add an option to export card q/a rather than notes.
+ * Fix importing of LaTeX cache files.
+ * When importing a .apkg, make sure the descriptions of the parent decks are
+   imported too.
+
+Browser/Add changes:
+
+ * Allow browser font customization on a per-template basis, via the Cards
+   dialog.
+ * Don't lose card selection when using "change deck".
+ * Newlines in fields should now be converted to a space in the card list.
+ * Allow unlimited nesting of decks in browser sidebar.
+ * Don't show 'marked' tag in browser sidebar, as it's listed near the top already.
+ * When an existing search term is reused, move it to top of the history.
+ * When Add window opened, start with empty tag list instead of last tags used
+   by that note type.
+
+The rest:
+
+ * When restoring from a backup, force a full sync.
+ * Don't autorepeat delete key during review.
+ * Force full sync if any problems found in db check.
+ * When reviewing new cards in a filtered deck, don't log them as a cram
+   review.
+ * Fix bug when renaming foo::bar foo to new parent.
+ * Catch missing notes in DB check.
+ * Fixed a sync error caused by importing note types from an .apkg
+ * When checking if note types match in import, consider question/answer
+   templates as well.
+ * Fix lapsed reviews getting learn steps instead of relearn steps.
+ * Fix pasting of image URLs with %s.
+ * Custom study's "preview" should not reschedule cards.
+ * Fix custom study search for failed cards with 2+ days.
+ * Fix possible error in Makefile
+ * Refuse to run on Qt4.6, as it's broken.
+ * Don't use native filepicker on OSX due to crash.
+ * Force XP theme on Windows so Anki on Win8 looks better.
+ * Add Cmd+W shortcut to add cards window & stats window on OSX
+ * Improve various error messages.
+ * Some tweaks from Ospalh
+ * Addon editor tweaks from Thomas
+ * Update old beta.ankiweb references.
+ * Increase minimum size of editing area so it can't be accidentally hidden.
+ * Fix a bug where a progress window would appear blank.
+ * Display count of notes deleted.
+ * Fix issues where unbolding parts of a field would fail.
+ * Disable undo when switching profiles.
+
 = Download =
 
 Download links are available at http://ankisrs.net/anki2.html
