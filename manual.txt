@@ -3329,14 +3329,10 @@ you're connecting from. If the language you want to translate to doesn't
 appear, sign up for a launchpad account, and in your profile, click the '!'
 next to preferred languages to the language you want to translate.
 
-The translations on the website are divided up into two sections, "libanki"
-and "ankiqt". Both sections need to be translated for the app to be completely
-translated.
-
 There are some special markers in text that you need to be aware of, and
 careful when translating:
 
- * A string like `Cards: %d` or `Error: %s` means that the % part will be
+ * A string like `Cards: %d` or `Error: %s` means that the %d/%s part will be
    replaced with some other value. The characters must remain the same in the
    translation, so a translation may look like `カード: %d`.
  * The same applies to text like `%(a)d of %(b)d` - it would be
@@ -3356,23 +3352,21 @@ see the context. Below every string to be translated, you'll see a line like
 this:
 
 -----
-Located in ../qt/aqt/forms/preferences.py:213 
+Located in ../dtop/aqt/deckbrowser.py:299
 -----
 
-If you see '../lib/anki/filename.py', simply visit
-https://github.com/dae/libanki/tree/master/anki, locate the same filename, and
-click on it. The file will be displayed with line numbers on the left, and by
-matching up the line numbers (they may differ by a few lines sometimes),
-you may be able to get a better understanding of what the string refers to.
-
-If you see '../qt/aqt/filename.py', follow the same steps as above but visit
-https://github.com/dae/ankiqt/tree/master/aqt instead.
+If you strip off the first "../dtop" section, you're left with something like
+"aqt/deckbrowser.py:299". You can then visit https://github.com/dae/anki/,
+locate the same filename, and click on it. The file will be displayed with
+line numbers on the left, and by matching up the line numbers (they may differ
+by a few lines sometimes), you may be able to get a better understanding of
+what the string refers to.
 
 If you see 'forms' in the string like the above example, the strings will
 generally be obvious. If you do need to understand the context however, things
 are a little more complicated, as those files are automatically generated from
 an interface description instead. Please go to
-https://github.com/dae/ankiqt/tree/master/designer and locate the same
+https://github.com/dae/anki/tree/master/designer and locate the same
 filename and click on it. We can't rely on line numbers in this case, so
 please use the browser's find option to find the string in the file. The lines
 immediately surrounding the found text may give a clue as to its meaning.
