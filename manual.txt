@@ -3380,13 +3380,10 @@ are automatically included in the next release. If you'd like to see your name
 in the About screen as a contributor, please drop Damien a line.
 
 If you'd like to try out your translations without waiting for a new release,
-download a program called poedit. The translation website provides an option
-for exporting and importing translations as .po files. With an exported .po
-file, you can use poedit to generate a .mo file, which is a compiled version
-of the translations. If you then move that .mo file into Anki's installation
-folder, overwriting an existing .mo file with the same language code (in the
-locale folder), Anki will display the new translations when it is next
-started.
+you can export a .mo file from the translation website. If you then move that
+.mo file into Anki's installation folder, overwriting an existing .mo file
+with the same language code (in the locale folder), Anki will display the new
+translations when it is next started.
 
 Translating the Manual
 -----------------------
