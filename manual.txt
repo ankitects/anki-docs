@@ -1448,11 +1448,11 @@ following template:
 {{cloze:Text}}
 
 {{#c1}}
-{{Hint1}
+{{Hint1}}
 {{/c1}}
 
 {{#c2}}
-{{Hint2}
+{{Hint2}}
 {{/c2}}
 -----
 
