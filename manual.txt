@@ -211,6 +211,9 @@ will be shown for study. If you select "Chinese," then each of the lessons will
 be shown in sequence. (If you normally want to study the groups in random order,
 you should use tags instead.)
 
+To place decks into a tree, you can either name them with :: between each level
+or drag and drop them from the deck list.
+
 Anki starts with a deck called "default"; any cards which have somehow become
 separated from other decks will go here. Anki will hide the default deck if it
 contains no cards and you have added other decks.  Alternatively, you may rename
