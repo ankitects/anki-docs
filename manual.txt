@@ -1261,6 +1261,7 @@ The type of card ("Forward", etc): {{Card}}
 The front text (only valid in back template): {{FrontSide}}
 -----
 
+[[cardgeneration]]
 == Card Generation ==
 
 Anki will not create cards with empty front sides. Thus if "My Field" was
@@ -1389,6 +1390,11 @@ replacements:
 {{/Notes}}
 {{/Expression}}
 -----
+
+Keep in mind that, as mentioned in the <<cardgeneration,card generation>>
+section, this only works when you place the conditional replacement code on the
+''front'' of the card; if you do this on the back, you will simply end up with
+cards with a blank back side.
 
 The default behaviour can be thought of as an "OR" condition - cards are
 created if the first field is non-empty, OR the second field is non-empty, and
