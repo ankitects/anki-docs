@@ -849,7 +849,7 @@ text after the two colons as a hint. When the card comes up for review, it
 will appear as:
 
 -----
-[city...] was founded in 1913.
+[city] was founded in 1913.
 -----
 
 For information on testing your ability to type in a cloze deletion correctly,
