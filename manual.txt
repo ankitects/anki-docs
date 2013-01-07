@@ -776,7 +776,7 @@ The next button allows you to change text colour.
 The paperclip allows you to attach audio, images and videos to your notes. For
 more information, please see the <<media,media>> section.
 
-The red circle button allows you to record your voice and attach it to the note. 
+The red circle button allows you to record your voice and attach it to the note.
 
 The last button allows you to add advanced mathematical markup called
 <<latex,LaTeX>> to your notes, or edit the underlying formatting.
@@ -801,6 +801,9 @@ Canberra was founded in 1913.
 -----
 Canberra was founded in [...].
 -----
+
+For more information on why you might want to use cloze deletion, see rule
+number 5 http://www.supermemo.com/articles/20rules.htm[here].
 
 Anki provides a special cloze deletion type of note, to make creating clozes
 easy. To create a cloze deletion note, select the Cloze note type, and type
@@ -855,7 +858,7 @@ text after the two colons as a hint. When the card comes up for review, it
 will appear as:
 
 -----
-[city...] was founded in 1913.
+[city] was founded in 1913.
 -----
 
 For information on testing your ability to type in a cloze deletion correctly,
