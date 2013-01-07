@@ -1056,7 +1056,7 @@ It is also possible to type in the answer for cloze deletion cards. To do
 this, add the following to both the front and back template:
 
 -----
-{{cloze:Text}}
+{{type:cloze:Text}}
 -----
 
 Unlike regular cards, it must be added to both sides on a cloze note type.
