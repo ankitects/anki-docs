@@ -46,7 +46,7 @@ location, so that Anki 2 can find it.
 = Decks & Profiles =
 
 ++++++++++
-<img src="/docs/dev/1-decks.png" width=341 height=318 style="float:right;margin:1em;">
+<img src="/docs/1-decks.png" width=341 height=318 style="float:right;margin:1em;">
 ++++++++++
 
  * Instead of storing each deck in a separate file, Anki now stores all of
@@ -223,7 +223,7 @@ per-lesson basis when you're ready to study them. You could do it like this:
    close Anki and resume reviewing early where you left off, instead of
    starting with the same cards again like in Anki 1.2.
  * For more information, please see
-   http://ankisrs.net/docs/dev/manual.html#filtered
+   http://ankisrs.net/docs/manual.html#filtered
 
 = Syncing =
 

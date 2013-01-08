@@ -182,7 +182,7 @@ allows you to create temporary decks based on certain search criteria, like
 = The Study Screen =
 
 If you have not used Anki on a computer before, please have a look at the
-first http://ankisrs.net/docs/dev/manual.html#_intro_videos[intro video]
+first http://ankisrs.net/docs/manual.html#_intro_videos[intro video]
 before reading on, as it explains the basic review process.
 
 When you tap on a deck in the deck list, the study screen will load, and if
@@ -197,7 +197,7 @@ deck options and access more card actions.
 On the bottom of the screen you'll see three numbers. From the left, these
 correspond to new cards, learning cards, and cards to review. These are
 explained in more detail in the intro videos for the desktop program, so
-please http://ankisrs.net/docs/dev/manual.html#_intro_videos[check them out]
+please http://ankisrs.net/docs/manual.html#_intro_videos[check them out]
 if you haven't already.
 
 When you've looked at a card's question and remembered the answer, or decided

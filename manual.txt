@@ -3406,10 +3406,9 @@ https://raw.github.com/dae/ankidocs/master/manual.txt[source file] of the
 manual, and compile it yourself with asciidoc. You can also use that github
 repo to keep track of changes to the manual in the future.
 
-If that sounds complicated, an easier way is to visit the
-http://ankisrs.net/docs/dev/manual.html[manual website] and use File>Save As
-to save the manual to disk. You can then import it into Microsoft Word or
-similar software, and translate it that way.
+If that sounds complicated, an easier way is to visit this page and use
+File>Save As to save the manual to disk. You can then import it into Microsoft
+Word or similar software, and translate it that way.
 
 When you're happy with the translation, you can either put it up on the
 website and I can link to it, or I can host the translated file on Anki's
