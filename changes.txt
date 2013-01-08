@@ -770,7 +770,6 @@ media folders in sync between separate computers.
  * Properly display minutes when "studied today" exceeds an hour.
  * Work around a few bugs caused by the mobile clients.
 
-[[latest]]
 = Changes in 2.0.3 =
 
  * Fix some more issues with importing content that used a modified version of
@@ -797,9 +796,11 @@ media folders in sync between separate computers.
    while.
  * Fix font size setting in Add Field button.
 
-[[beta]]
+[[latest]]
 = Changes in coming 2.0.4 =
 
+ * You should no longer need to fix decks in Anki 1 when upgrading; if any
+   errors are found, Anki 2 should automatically fix them.
  * The duplicate check while adding cards now ignores HTML when comparing. If
    your cards have any bold/italics/colours/etc, please run
    Tools>Maintenance>Full Sync after upgrading so that the duplicate cache can
@@ -817,6 +818,7 @@ media folders in sync between separate computers.
 Import/export:
 
  * Remember the "allow HTML" setting in the import dialog.
+ * Remember import mode across invocations.
  * Add an option to export card q/a rather than notes.
  * Fix importing of LaTeX cache files.
  * When importing a .apkg, make sure the descriptions of the parent decks are
@@ -825,14 +827,16 @@ Import/export:
 Browser/Add changes:
 
  * Allow browser font customization on a per-template basis, via the Cards
-   dialog.
+   dialog. Should default to system font.
  * Don't lose card selection when using "change deck".
  * Newlines in fields should now be converted to a space in the card list.
  * Allow unlimited nesting of decks in browser sidebar.
- * Don't show 'marked' tag in browser sidebar, as it's listed near the top already.
+ * Don't show 'marked' or 'leeched' tag in browser sidebar, as it's listed
+   near the top already.
  * When an existing search term is reused, move it to top of the history.
  * When Add window opened, start with empty tag list instead of last tags used
    by that note type.
+ * Disable editor buttons until a field is focused.
 
 The rest:
 
@@ -864,6 +868,11 @@ The rest:
  * Display count of notes deleted.
  * Fix issues where unbolding parts of a field would fail.
  * Disable undo when switching profiles.
+ * Fix issues with clozes and <% %>.
+ * Prevent access to main window while auth dialog shown.
+ * Don't rename if note type rename cancelled.
+ * Sort clone: note type items.
+ * Clarify that deck description is not in option group.
 
 = Download =
 
