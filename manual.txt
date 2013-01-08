@@ -935,14 +935,15 @@ card. If you opened the window while adding notes, the preview will be based
 on the text you had typed into the Add Notes window. If you opened the window
 while editing a note, the preview will be based on that note.
 
-At the bottom of the window is a More button that gives you options to rename or
-reorder the cards. The "Deck Override" option allows you to change the deck in
-which cards of the current type will be placed into. By default, cards are
+At the bottom of the window is a More button that gives you options to rename
+or reorder the cards. The "Deck Override" option allows you to change the deck
+in which cards of the current type will be placed into. By default, cards are
 placed into the deck you provide in the Add Notes window. If you set a deck
-here, the button will change to read "Specific Deck...", and that card type will
-be placed into the deck you specified, instead of the deck listed in the Add
-Notes window. The Column Templates option allows you to set different (perhaps
-simplified) templates for display in the columns of the browser.
+here, that card type will be placed into the deck you specified, instead of the
+deck listed in the Add Notes window. (You can check which deck the cards are
+currently going to be choosing Deck Override again.) The Column Templates
+option allows you to set different (perhaps simplified) templates for display
+in the columns of the browser.
 
 == Reverse Cards ==
 If you want to create cards that go in both directions (e.g., both
