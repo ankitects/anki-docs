@@ -797,7 +797,7 @@ media folders in sync between separate computers.
  * Fix font size setting in Add Field button.
 
 [[latest]]
-= Changes in coming 2.0.4 =
+= Changes in 2.0.4 =
 
  * You should no longer need to fix decks in Anki 1 when upgrading; if any
    errors are found, Anki 2 should automatically fix them.
