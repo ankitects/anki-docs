@@ -1684,6 +1684,18 @@ space. You can use the *Paste clipboard images as PNG* option to paste as PNG
 images instead. PNG images support transparent backgrounds and are lossless,
 but they usually result in much larger file sizes.
 
+The first drop-down box controls how note types and decks interact. The default
+of "When adding, default to current deck" means that Anki saves the last-used
+note type for each deck and selects it again then next time you choose the deck
+(and, in addition, will start with the current deck selected when choosing Add
+from anywhere). The other option, "Change deck depending on note type," saves
+the last-used deck for each note type (and opens the add window to the
+last-used note type when you choose Add). This may be more convenient if you
+always use a single note type for each deck.
+
+The second drop-down box controls when new cards are shown: either mixed with,
+before, or after all reviews.
+
 The *Next day starts at* option controls when Anki should start showing the
 next day's cards. The default setting of 4AM ensures that if you're studying
 around midnight, you won't have two days' worth of cards shown to you in one
