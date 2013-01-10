@@ -874,6 +874,13 @@ The rest:
  * Sort clone: note type items.
  * Clarify that deck description is not in option group.
 
+Add-on authors:
+
+2.0.4 removed some unnecessary imports, which unfortunately broke some add-ons
+that assumed those imports would exist. One example is add-ons that import
+'anki' and then try to access 'anki.stats' without specifically importing
+'anki.stats' first.
+
 = Download =
 
 Download links are available at http://ankisrs.net/anki2.html
