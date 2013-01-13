@@ -12,7 +12,7 @@ all: save build
 
 save:
 	-git commit -a -m update && git push
-	git pull soren master --no-edit
+	git pull --no-edit soren master
 
 build: $(HTML)
 
