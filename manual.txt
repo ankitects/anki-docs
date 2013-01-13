@@ -2201,10 +2201,9 @@ its review history. For more information, see the <<stats,statistics>> section.
 
 'Mark' and 'Suspend' are documented in <<editmore,editing and more>>.
 
-'Change Deck' allows you to move cards to a different deck. Notes also
-remember the deck they were placed in. This allows you to move cards to a
-different deck temporarily, and then later move them back to the deck the note
-is in.
+'Change Deck' allows you to move cards to a different deck. Cards can be placed
+in different decks, so if you want to move all cards in a note, you should
+first use Edit > Select Notes.
 
 'Add Tags' and 'Remove Tags' allow you to add or remove tags in bulk.
 
