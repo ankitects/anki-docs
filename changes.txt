@@ -255,7 +255,10 @@ per-lesson basis when you're ready to study them. You could do it like this:
    notice references like [sound:{{field}}.mp3] in your templates and
    automatically create a new field with the media tags embedded in it, like
    [sound:apple.mp3]. If you manually add the references back in, Anki will
-   not notice the media is in use when you check the media DB.
+   not notice the media is in use when you check the media DB. Please note
+   that if you had media references comprised of more than one field (eg
+   [sound:{{field1}} - {{field2}}.mp3], these will not be imported
+   automatically and you will manually have to sort this out.
 
  * If you had static media references like `<img src=logo.jpg>` in your
    templates, those media files will not be imported and you'll need to
