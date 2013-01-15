@@ -799,7 +799,6 @@ media folders in sync between separate computers.
    while.
  * Fix font size setting in Add Field button.
 
-[[latest]]
 = Changes in 2.0.4 =
 
  * You should no longer need to fix decks in Anki 1 when upgrading; if any
@@ -883,6 +882,27 @@ Add-on authors:
 that assumed those imports would exist. One example is add-ons that import
 'anki' and then try to access 'anki.stats' without specifically importing
 'anki.stats' first.
+
+[[latest]]
+= Changes in 2.0.5 =
+
+ * Possible fix for "host not found" errors when syncing via proxy.
+ * A field reference on a template followed by a newline will have a line
+   break automatically added, like previous versions.
+ * Fix a problem when creating filtered deck for deck with spaces.
+ * Don't fail when importing decks that contain media references to subdirs.
+ * Don't open a web browser when 'more...' clicked on study overview.
+ * Add "Close" to browser edit menu; support Command+W to close.
+ * Better warning when trying to import non-UTF8 content.
+ * Possible fix for supermemo importer.
+ * Fix 'show duplicates' when fields contain newlines/formatting.
+ * When a user has multiple note types with the same name, clicking on one in
+   the browser will now show only cards for that note type, not all of them.
+ * Fix bug caused by applying settings to subdecks when a subdeck was a
+   filtered deck.
+ * Fix errors caused by burying (re)learning cards. Like suspending, burying
+   now removes the cards from the learning queue first.
+ * Other minor updates.
 
 = Download =
 
