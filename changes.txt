@@ -887,8 +887,6 @@ that assumed those imports would exist. One example is add-ons that import
 = Changes in 2.0.5 =
 
  * Possible fix for "host not found" errors when syncing via proxy.
- * A field reference on a template followed by a newline will have a line
-   break automatically added, like previous versions.
  * Fix a problem when creating filtered deck for deck with spaces.
  * Don't fail when importing decks that contain media references to subdirs.
  * Don't open a web browser when 'more...' clicked on study overview.
