@@ -1060,6 +1060,9 @@ the size you configured for that field (via the "Fields" button when editing).
 This feature does not change how the cards are answered, so it's still up to
 you to decide how well you remembered or not.
 
+NOTE: Only one typing comparison can be used on a card. If you add the above
+text multiple times, it will not work.
+
 It is also possible to type in the answer for cloze deletion cards. To do
 this, add the following to both the front and back template:
 
