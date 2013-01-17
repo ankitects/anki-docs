@@ -11,7 +11,9 @@ Intro Videos
 ============
 
  * http://www.youtube.com/watch?v=QS2G-k2hQyg&feature=plcp[Shared decks and review basics]
- * http://www.youtube.com/watch?v=7uxVUIYCqEY&feature=plcp[Customizing cards]
+ * http://www.youtube.com/watch?v=DnbKwHEQ1mA[Switching Card Order]
+ * http://www.youtube.com/watch?v=F1j1Zx0mXME[Styling Cards]
+ * http://www.youtube.com/watch?v=5tYObQ3ocrw[Typing in the Answer]
 
 Translations
 ============
@@ -932,6 +934,9 @@ In Anki, templates are written in HTML, which is the language that web pages
 are written in. The styling section is CSS, which is the language used for
 styling web pages.
 
+You can watch http://www.youtube.com/watch?v=F1j1Zx0mXME[a video about
+this styling cards] on YouTube.
+
 On the right is a preview of the front and back of the currently selected
 card. If you opened the window while adding notes, the preview will be based
 on the text you had typed into the Add Notes window. If you opened the window
@@ -948,6 +953,9 @@ option allows you to set different (perhaps simplified) templates for display
 in the columns of the browser.
 
 == Reverse Cards ==
+
+You can watch http://www.youtube.com/watch?v=DnbKwHEQ1mA[a video about
+reversing cards] on YouTube.
 
 If you want to reverse your existing cards, when editing a card, click the
 Cards button, and then Flip.
@@ -1011,6 +1019,9 @@ then the back field".
 
 [[typinganswers]]
 == Checking Your Answer ==
+
+You can watch http://www.youtube.com/watch?v=5tYObQ3ocrw[a video about
+this feature] on YouTube.
 
 If you'd like to type in the answer and have Anki compare your input to the
 real answer, you can do so by changing your template. Imagine your front
