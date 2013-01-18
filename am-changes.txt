@@ -196,7 +196,7 @@ upgrade via the desktop instead.
  * Don't allow adding to a filtered deck.
  * Support landscape of the filtered deck screen.
  * Theme handling screen has been simplified.
- * Fix 'answer hard' action choosing the wrong answer in learning mode.
+ * Fix "answer hard" action choosing the wrong answer in learning mode.
  * When daily limits have changed, make sure to update counts.
  * Fix stretching buttons in iOS4.
  * The about screen now shows the exact version you're running.
@@ -207,9 +207,9 @@ upgrade via the desktop instead.
  * Fix some cloze issues.
  * The "preview" custom study option should not reschedule cards.
  * Include exact counts in card types graph.
- * Remove unused 'preset' button from iPad filter/cram screen.
- * Allow 'tap to show navigation bar' on the finished screen.
- * Add missing 'correct'  text to today stats.
+ * Remove unused "preset" button from iPad filter/cram screen.
+ * Allow "tap to show navigation bar" on the finished screen.
+ * Add missing "correct"  text to today stats.
  * Fix issues with answer bar being overlapped.
  * Fixed display of some LaTeX.
  * Fixed an issue where particular non-latin text could cause a card not to display.
