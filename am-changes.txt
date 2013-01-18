@@ -123,6 +123,97 @@ upgrade via the desktop instead.
 
 = Changes in 2.0.1 =
 
+2.0.2 was submitted to Apple on Jan 18 2013 and is awaiting their approval.
+
+ * AnkiMobile now takes automatic backups of your collection once a day. If
+   you accidentally make a mistake, you can restore a backup via iTunes.
+ * Audio replay buttons are now displayed on your card for each audio file you
+   have attached, like previous AnkiMobile versions did.
+ * Custom study now has a limit to tags option that allows you to select tags
+   to include and exclude like the desktop version, instead of having to type
+   them in.
+ * AnkiMobile now has a native scratchpad, which can be enabled from
+   Settings>Review. If you were previously using the scratchpad add-on, you
+   can remove the old scratchpad from your cards by going to Edit>Cards in the
+   desktop version of Anki and deleting all the scratchpad-related text.
+ * When a link on a card is tapped, it's now opened in an external Safari window
+   instead of within Anki, so that children can't use Anki to circumvent
+   content restrictions. You can double tap the home button and click on Anki
+   to quickly return to study.
+ * If you upgraded from Anki 1, you should have an "Upgrading" option in the
+   settings screen. If you go into that and choose to remove that option, it
+   will clean up any old .anki decks and media you had in the old version,
+   freeing up space.
+ * Automatically replay audio after it's recorded.
+ * When creating a filtered deck, it defaults to searching in the current deck
+   now.
+ * Tapping on links on cards will no longer accidentally trigger a tap as
+   well.
+ * Tapping to advance to the answer or next card will no longer accidentally
+   trigger a link as well.
+ * AnkiMobile now shrinks images to a more usable size when added from the
+   camera.
+ * Notify when a leech is encountered.
+ * Add confirmation to note delete.
+ * Fixed a bug where syncing would fail after a shared deck was added to your
+   collection.
+ * Fixed a bug where syncing would fail after a previous sync was interrupted
+   by network trouble.
+ * If a bug in syncing is encountered, the next sync will now ask you which
+   side you wish to keep in order to fix the problem.
+ * Up to date with the desktop 2.0.5 version. Among other things:
+   * Review dates now have a random factor applied like previous versions so
+     they spread out more.
+   * Fails in relearning apply the failure multiplier each time.
+   * Fix issues with clozes and <% %> in templates.
+ * Fix a crash when the user had two identical deck names with different
+   unicode encoding. 
+ * Possible fix for issues syncing over a proxy server that requires
+   authentication.
+ * When notes are buried, they should be removed from learning to avoid errors.
+ * If you cancel out of a filtered deck creation, it will no longer stick around.
+ * Fix an issue where the sync screen sometimes didn't disappear when the network
+   connection was flaky.
+ * Fix crash when searching for decks with a wildcard.
+ * Fix issue where AnkiMobile could run out of memory when importing a large
+   collection from iTunes.
+ * Don't allow custom study on a filtered deck, as it's not valid.
+ * Fix alignment issues with the type in the answer feature.
+ * Fix issues where tags could be blanked out when editing if you saved before
+   they appeared on screen.
+ * Fix importing of LaTeX images from shared decks.
+ * Fix crash when renaming deck to child of itself.
+ * Fix some issues where the graphs were inconsistent with the desktop
+   version.
+ * Fix the next/previous buttons sometimes not scrolling when editing.
+ * Fix a bug where the decks list was reloaded when the app was resumed, even
+   if the deck list was not visible.
+ * Tidy up some sync messages.
+ * Tweaks to the graphs so numbers are less likely to overlap the graph.
+ * Don't revert to question when marking.
+ * Fix undo issue
+ * Don't crash in stats in new decks.
+ * Don't allow adding to a filtered deck.
+ * Support landscape of the filtered deck screen.
+ * Theme handling screen has been simplified.
+ * Fix 'answer hard' action choosing the wrong answer in learning mode.
+ * When daily limits have changed, make sure to update counts.
+ * Fix stretching buttons in iOS4.
+ * The about screen now shows the exact version you're running.
+ * Fixed an issue where an interrupted import could leave the database in an
+   inconsistent state.
+ * Fixed a crash when decks had a @ in the name.
+ * When showing the question, scroll back up to top.
+ * Fix some cloze issues.
+ * The "preview" custom study option should not reschedule cards.
+ * Include exact counts in card types graph.
+ * Remove unused 'preset' button from iPad filter/cram screen.
+ * Allow 'tap to show navigation bar' on the finished screen.
+ * Add missing 'correct'  text to today stats.
+ * Fix issues with answer bar being overlapped.
+ * Fixed display of some LaTeX.
+ * Fixed an issue where particular non-latin text could cause a card not to display.
+
 2.0.1 was approved by Apple on Nov 13 2012.
 
  * Added "Custom Study" feature from the latest desktop version, which makes
