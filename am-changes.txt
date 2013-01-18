@@ -121,7 +121,7 @@ download the new versions. Because this can fail if you have an unreliable
 internet connection or your decks have problems, it's recommended that you
 upgrade via the desktop instead.
 
-= Changes in 2.0.1 =
+= Changes in 2.0.2 =
 
 2.0.2 was submitted to Apple on Jan 18 2013 and is awaiting their approval.
 
@@ -213,6 +213,8 @@ upgrade via the desktop instead.
  * Fix issues with answer bar being overlapped.
  * Fixed display of some LaTeX.
  * Fixed an issue where particular non-latin text could cause a card not to display.
+
+= Changes in 2.0.1 =
 
 2.0.1 was approved by Apple on Nov 13 2012.
 
