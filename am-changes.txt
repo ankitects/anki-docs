@@ -125,7 +125,7 @@ upgrade via the desktop instead.
 
 2.0.2 was submitted to Apple on Jan 18 2013 and is awaiting their approval.
 
- * AnkiMobile now takes automatic backups of your collection once a day. If
+ * AnkiMobile now takes automatic backups of your collection once an hour. If
    you accidentally make a mistake, you can restore a backup via iTunes.
  * Audio replay buttons are now displayed on your card for each audio file you
    have attached, like previous AnkiMobile versions did.
