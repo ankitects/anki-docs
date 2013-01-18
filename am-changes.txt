@@ -162,10 +162,10 @@ upgrade via the desktop instead.
  * If a bug in syncing is encountered, the next sync will now ask you which
    side you wish to keep in order to fix the problem.
  * Up to date with the desktop 2.0.5 version. Among other things:
-   * Review dates now have a random factor applied like previous versions so
+   ** Review dates now have a random factor applied like previous versions so
      they spread out more.
-   * Fails in relearning apply the failure multiplier each time.
-   * Fix issues with clozes and <% %> in templates.
+   ** Fails in relearning apply the failure multiplier each time.
+   ** Fix issues with clozes and <% %> in templates.
  * Fix a crash when the user had two identical deck names with different
    unicode encoding. 
  * Possible fix for issues syncing over a proxy server that requires
