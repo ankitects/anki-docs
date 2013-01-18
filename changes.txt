@@ -27,6 +27,9 @@ are most likely to cause surprises in the new version.
  * If you are missing decks or cards in Anki 2, please see <<missing,this section>>.
  * If you delete a deck and sync, that deck will now be deleted on your other
    devices as well.
+ * If you use "hide" on any decks in Anki 1, Anki 2 will not automatically
+   import them. You can still import them manually, via File>Import. Anki 1
+   decks were stored in Documents\Anki by default.
 
 The rest of this page describes all the changes in more detail. For more
 information, please also see the link:manual.html[user manual], which has been
