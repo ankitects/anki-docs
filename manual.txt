@@ -2797,6 +2797,13 @@ After the drive has been mapped, your network administrator will either have
 to configure Windows to point your documents folder at the drive location, or
 you will need to start Anki with -b as described in the next section.
 
+NOTE: On Unix systems, Anki deliberately uses ~/Anki rather than a hidden
+folder. The bulk of the data stored in that folder is important user data
+rather than easily restored preferences, and it would be a disaster if a user
+lost it because they overlooked it when backing up files. There are also more
+and more Linux users who are not familiar with hidden folders. If you're an
+advanced user, you can specify a custom folder with a command line argument,
+described in the next section.
 
 [[startupopts]]
 Startup Options
