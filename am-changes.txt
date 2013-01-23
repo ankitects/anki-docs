@@ -10,8 +10,9 @@ previously and how comfortable you are with computers, it may take a little
 while to set up and get used to.
 
 [red]*Please do not upgrade before a test or when you do not have access to a
-computer*. The old synchronization service will continue to work for at least
-a month, so if you are busy, you can continue to use the old version for now.
+computer*. The old synchronization service will continue to work until Feb 4,
+so if you are busy, you can continue to use the old version for a little while
+longer.
 
 As Apple do not provide the ability to download previous versions from the app
 store, you may also want to <<backup,create a backup of the old version>> before
