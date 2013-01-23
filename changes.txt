@@ -886,7 +886,6 @@ that assumed those imports would exist. One example is add-ons that import
 'anki' and then try to access 'anki.stats' without specifically importing
 'anki.stats' first.
 
-[[latest]]
 = Changes in 2.0.5 =
 
  * Possible fix for "host not found" errors when syncing via proxy.
@@ -904,6 +903,21 @@ that assumed those imports would exist. One example is add-ons that import
  * Fix errors caused by burying (re)learning cards. Like suspending, burying
    now removes the cards from the learning queue first.
  * Other minor updates.
+
+[[latest]]
+= Changes in 2.0.6 =
+
+ * Fix a bug where suspended cards imported from Anki 1 would have the wrong
+   due date.
+ * Fix a bug where re-failing a relearning card would not honour the minimum
+   interval setting.
+ * Anki will now automatically recover from a syncing error instead of asking
+   the user to post a bunch of numbers on the forum.
+ * Fix a bug when anki1.2 decks that hadn't been opened in Anki 1.2.8 were
+   failing to import.
+ * Change from ospalh to make it easier to style the type in the answer box.
+ * Remove automatic newlines after field reference that were added in 2.0.5.
+ * Fix bug when appending note type to an existing search.
 
 = Download =
 
