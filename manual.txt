@@ -3004,6 +3004,11 @@ Clicking on "Save Image" will save an image of the statistics to a file and open
 it in your default image editor, to make it easy to share your statistics with
 others.
 
+NOTE: When you delete notes, their review history is maintained in Anki. It
+will not be included when looking at statistics for a specific deck (as Anki
+has no way of knowing which deck the deleted cards belonged to), but will be
+included when you look at statistics for the whole collection.
+
 [[cardtypedefinitions]]
 Types of Cards
 ---------------
@@ -3286,22 +3291,6 @@ OS X doesn't support this feature, but it does allow you to assign shortcuts
 to specific menu items instead. Please see
 http://lifehacker.com/343328/create-a-keyboard-shortcut-for-any-menu-action-in-any-program
 for more information.
-
-[[manualupgrade]]
-== Upgrade Issues ==
-
-Anki 2 is only able to upgrade error-free decks. If errors are found in a deck
-that prevent the deck from being upgraded, those errors will need to be fixed
-with the old version of Anki first.
-
- . Download the old version of Anki from the Anki website, and install it.
-   This will not overwrite or delete any of your Anki 2 data.
- . Open each broken deck in the old Anki. After you open each deck, please run
-   Tools>Advanced>Check Database. Even if it reports "no problems found", the
-   database has been rebuilt, and this has very likely fixed the problem.
- . When all of your broken decks have been fixed, install the new version of
-   Anki again.
- . Use File>Import to import each fixed deck into Anki 2.
 
 = Add-ons =
 
@@ -3747,11 +3736,11 @@ Anki's algorithm is based on SM2, but differs from it in some respects.
    bonus to the current interval calculation. Thus, answering 'remembered
    easily' is a little more aggressive than the standard SM2 algorithm.
 
- * Successive failures while cards are 'young' (under 21 days) do not result
-   in further decreases to the card's ease. A common complaint with the
-   standard SM algorithms is that repeated failings of a card cause the card
-   to get stuck in "low interval hell". In Anki, the initial acquisition
-   process does not influence a card's ease.
+ * Successive failures while cards are in learning do not result in further
+   decreases to the card's ease. A common complaint with the standard SM
+   algorithms is that repeated failings of a card cause the card to get stuck
+   in "low interval hell". In Anki, the initial acquisition process does not
+   influence a card's ease.
 
 For a description of the SM2 algorithm, please see
 http://www.supermemo.com/english/ol/sm2.htm

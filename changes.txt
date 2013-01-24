@@ -8,8 +8,9 @@ are most likely to cause surprises in the new version.
 
  * If you used Dropbox with previous versions of Anki, please read the next
    section before upgrading.
- * If you ever exported & imported .anki decks in the previous version, please
-   read <<missing,this section>> before upgrading.
+ * If you ever exported & imported .anki decks in the previous version, or
+   find you are missing cards after upgrading, please read <<missing,this
+   section>>.
  * Reviews are <<perday,limited>> to 100/day by default.
  * When you answer "again", there are now two
    link:manual.html#learning[learning] reviews of the card, so the learning
@@ -24,7 +25,6 @@ are most likely to cause surprises in the new version.
    templates, please see <<cardgen,this section>> for info on how cards are
    selected now.
  * Anki only checks the <<dupes,first field>> to see if it's unique now.
- * If you are missing decks or cards in Anki 2, please see <<missing,this section>>.
  * If you delete a deck and sync, that deck will now be deleted on your other
    devices as well.
  * If you use "hide" on any decks in Anki 1, Anki 2 will not automatically
@@ -512,16 +512,6 @@ per-lesson basis when you're ready to study them. You could do it like this:
 [[missing]]
 = Missing Decks/Cards =
 
-== Deck Doesn't Appear ==
-
-If a deck doesn't appear at all in Anki 2, then it couldn't be automatically
-upgraded. The upgrade wizard will have mentioned this in the upgrade log. To
-fix this issue, install the old Anki 1.2.8, open the deck, use
-Tools>Advanced>Check DB, and then you should be able to File>Import the deck
-in Anki 2.
-
-== Deck Appears Empty ==
-
 If you find a deck missing cards or empty when upgrading, this is because in
 the past you have exported cards into another deck and studied both decks in
 parallel. Even if you modified the appearance of the cards in one deck, the
@@ -532,11 +522,11 @@ This means that when you try to import the cards in one deck into the other,
 nothing happens (on in the case of 2.0, you end up with the cards in one deck
 appearing but the cards in the other deck not appearing).
 
-To fix this, please install Anki 1.2.8 again, go to File>Download>Shared
-Plugin, download the plugin called "Make Cards Unique", and then restart Anki.
-After restarting, for each deck that didn't import, open it and choose Tools>Make
-Cards Unique. After you've done this, you should be able to File>Import the
-decks in Anki 2.0.
+To fix this, please install Anki 1.2.8 again from the bottom of the Anki 2
+page, go to File>Download>Shared Plugin, download the plugin called "Make
+Cards Unique", and then restart Anki. After restarting, for each deck that
+didn't import, open it and choose Tools>Make Cards Unique. After you've done
+this, you should be able to File>Import the decks in Anki 2.0.
 
 = Questions =
 
