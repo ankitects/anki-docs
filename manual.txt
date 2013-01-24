@@ -2041,7 +2041,22 @@ Please note that advanced proxy setup via .pac or .wpad files is not supported
 in Anki.
 
 To override the system proxy settings on Windows or OS X, define a HTTP_PROXY
-environmental variable that points to the proxy server.
+environmental variable that points to the proxy server. It will look like:
+
+-----
+http://user:pass@proxy.company.com:8080
+-----
+
+If your username or password contains an @ (eg user@workdomain.com), you need
+to change it to %40, like so:
+
+-----
+http://user%40workdomain.com:pass@proxy.company.com:8080
+-----
+
+If for some reason Anki is unable to pick up your system settings on Windows,
+please use an http://www.itechtalk.com/thread3595.html[environmental variable]
+instead, as described above.
 
 [[browser]]
 = Browser =
