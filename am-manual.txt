@@ -577,7 +577,7 @@ For further information on filtered decks, please see the http://ankisrs.net/doc
 
 = Automatic Backups =
 
-AnkiMobile 2.0.2+ will automatically create backups of your collection for
+AnkiMobile will automatically create backups of your collection for
 you. The backups include all your cards and statistics, but do not include
 sounds or images.
 
