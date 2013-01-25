@@ -124,7 +124,7 @@ upgrade via the desktop instead.
 
 = Changes in 2.0.2 =
 
-2.0.2 was submitted to Apple on Jan 18 2013 and is awaiting their approval.
+2.0.2 was approved by Jan 25 2013, and is now in the app store.
 
  * AnkiMobile now takes automatic backups of your collection once an hour. If
    you accidentally make a mistake, you can restore a backup via iTunes.
