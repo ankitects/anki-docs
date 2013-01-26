@@ -597,6 +597,22 @@ to a particular backup:
  * Drag the file back into the iTunes file sharing area
  * In AnkiMobile, tap Import/Export and choose to import from iTunes.
 
+It is also possible to customize the frequency and amount of backups that are
+created, though this can only be done with the desktop software the moment. To
+do so, please sync your collection with the desktop client, and then type the
+following commands via the http://ankisrs.net/docs/manual.html#debug[debug
+console]:
+
+-----
+mw.col.conf['amBackups'] = 15
+mw.col.conf['amBackupMins'] = 3600
+mw.col.setMod()
+-----
+
+You can change 15 to a different number to adjust the number of backups, and
+3600 to a different number to adjust the number of minutes between backups (by
+default, 1 hour).
+
 = Advanced Features =
 
 == Custom Fonts ==
