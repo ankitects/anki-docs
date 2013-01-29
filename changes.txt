@@ -609,47 +609,6 @@ media folders in sync between separate computers.
  * For the initial learning steps where sub-day scheduling is more important,
    you can use Anki's learning mode instead.
 
-= Changes in Release Candidate 5 =
-
- * Anki will now rename media automatically on import if a different file with
-   the same name already exists in the collection.
- * Fix importing of Anki 1 media.
- * Find suspended cards with is:new again
- * The "check media db" option ignores filenames starting with an underscore. In this
-   RC, files beginning with _ will also be included when exporting.
- * Add option to sort by reverse order added when filtering.
- * Fix bug where "0 hours" could be displayed.
- * When importing has ignored duplicates, report how many were already in the
-   collection.
- * If you don't map any fields in a CSV file to tags, existing tags will no
-   longer be blanked out.
- * Fix incorrect formatting after upgrading certain decks.
- * Fix a bug where Anki would throw an error if you deleted a deck that
-   contained the default deck.
- * Tweak centering of top bar.
- * Don't ignore enter key when focus is returned from another app.
- * If deck contains brackets, quote the deck in a search.
- * Decrease minimum height of the browser.
- * If user attempts to import a .anki2 file, explain it can't be imported.
- * Other small fixes.
-
-= Changes in Release Candidate 6 =
-
- * Automatic backups are now compressed and saved as .apkg (with no media),
-   instead of an .anki2 file. The previous .anki2 files in your backup folder
-   will not be automatically deleted, so you'll need to remove them manually
-   if you need the space.
- * When importing an .apkg file, you're now given a choice whether to add new
-   content, or replace your entire collection with the file you're importing.
-   This makes it easier to restore from backup or copy your collection from a
-   mobile device: simply double click on the apkg and then choose "replace".
- * Exporting now defaults to exporting your entire collection as an apkg,
-   with scheduling info and media.
- * Detect when a profile is corrupt, and display an error instead of a
-   non-functional interface.
- * Count 1+ day learning cards in card count pie chart.
- * Fixed some issues with translations.
-
 = Changes in 2.0.0 =
 
  * Fix upgrade of 1.2 media files on Windows.
@@ -894,7 +853,6 @@ that assumed those imports would exist. One example is add-ons that import
    now removes the cards from the learning queue first.
  * Other minor updates.
 
-[[latest]]
 = Changes in 2.0.6 =
 
  * Fix a bug where suspended cards imported from Anki 1 would have the wrong
@@ -908,6 +866,26 @@ that assumed those imports would exist. One example is add-ons that import
  * Change from ospalh to make it easier to style the type in the answer box.
  * Remove automatic newlines after field reference that were added in 2.0.5.
  * Fix bug when appending note type to an existing search.
+
+[[latest]]
+= Changes in 2.0.7 =
+
+ * Add a "suspend card" option to the review screen.
+ * Don't set browser font/size when cards are created, so they take on the
+   system font until customized.
+ * Work around slow initial audio playing on Windows caused by antivirus
+   software.
+ * Allow Qt4.6 again, but warn on startup that it has known issues.
+ * Work around for Japanese furigana on Qt4.6
+ * Fix incorrect error message when media sync fails.
+ * Fix crashes on Windows/Linux when performing a long search operation in the
+   browser.
+ * Fix links appearing twice when clicked in card layout window.
+ * Conditional tags now ignore formatting, and require actual text to be
+   considered non-empty.
+ * Don't trigger links when ctrl+shift etc pressed on Windows
+ * Better warning when sync fails due to Linux distro packaging error.
+ * Fix "Focus Note" menu option in the browser.
 
 = Download =
 
