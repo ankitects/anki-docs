@@ -1351,9 +1351,9 @@ every card (eg, a company logo at the top of each card):
 
 === Field References ===
 
-Media references to fields are not allowed. While the following will work
-during review, it will break if you try checking for unused media or
-exporting/sharing the deck:
+Media references to fields are not allowed. They may or may not display during
+review, and will not work when checking for unused media, importing/exporting,
+and so on. Examples that won't work:
 
 -----
 <img src="{{Expression}}.jpg">
