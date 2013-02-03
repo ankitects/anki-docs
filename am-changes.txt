@@ -133,7 +133,7 @@ upgrade via the desktop instead.
  ** Fixed a bug where only the first image would have its size changed.
  * Fixed a bug that could cause a partially-completed sync or import to be
    saved if the app was killed by the user.
- * When comparing typed in answer in cloze field, make sure to properly strip
+ * When comparing typed-in answer in cloze field, make sure to properly strip
    optional hint.
  * The scratchpad is now slightly larger, with an option in the review
    settings to increase its size further.
@@ -146,7 +146,7 @@ upgrade via the desktop instead.
  * Fix bug where the list of the tags in the browser would disappear when
    collection uploaded from AnkiMobile. If you were affected by this,
    Tools>Maintenance>Check DB in the desktop should bring the list of tags
-   Tools>Maintenance>back.
+   back.
  * Fix answer ticks appearing in wrong place when device rotated on deck list
    screen.
  * When using a filtered deck with rescheduling disabled, on the last step

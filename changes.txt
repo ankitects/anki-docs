@@ -1,5 +1,11 @@
 _ Changes in Anki 2 _
 
+= Translations =
+
+This page in other languages:
+
+ * http://rightstuff.luminousspice.com/2013/02/changeinanki2/[日本語]
+
 = Please Read This =
 
 Your time is precious, and you may not have time to read this whole document -
