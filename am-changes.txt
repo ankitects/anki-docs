@@ -122,6 +122,62 @@ download the new versions. Because this can fail if you have an unreliable
 internet connection or your decks have problems, it's recommended that you
 upgrade via the desktop instead.
 
+= Changes in 2.0.3 =
+
+2.0.3 was sent to Apple on Feb 3 2013, and is awaiting Apple's approval.
+
+ * A number of improvements to pinching to zoom:
+ ** Pinching now updates the size as you pinch, instead of only when you've
+    finished pinching.
+ ** The size increase is more gradual now.
+ ** Fixed a bug where only the first image would have its size changed.
+ * Fixed a bug that could cause a partially-completed sync or import to be
+   saved if the app was killed by the user.
+ * When comparing typed in answer in cloze field, make sure to properly strip
+   optional hint.
+ * The scratchpad is now slightly larger, with an option in the review
+   settings to increase its size further.
+ * Another fix for taps on links or audio buttons being accidentally
+   interpreted as a tap to advance.
+ * When review card repeatedly failed in relearning, make sure interval
+   doesn't decrease below the minimum interval the user has set.
+ * Ignore formatting tags in {{#Field}} replacements.
+ * When adding, show note types in alphabetical order.
+ * Fix bug where the list of the tags in the browser would disappear when
+   collection uploaded from AnkiMobile. If you were affected by this,
+   Tools>Maintenance>Check DB in the desktop should bring the list of tags
+   Tools>Maintenance>back.
+ * Fix answer ticks appearing in wrong place when device rotated on deck list
+   screen.
+ * When using a filtered deck with rescheduling disabled, on the last step
+   show "(end)" instead of nothing.
+ * Strip leading/trailing whitespace in tags, which fixes {{#Tags}} and also
+   slight misalignment when included on cards.
+ * Don't crash when user tries to set zero backups.
+ * Don't crash when trying to add cards from within a filtered deck.
+ * Fixed a bug where no counts were underlined when you switched from a
+   finished deck to a non-finished one.
+ * Fix "Replay" action when user has replay buttons disabled.
+ * Fixed a bug where media deleted on the desktop was not deleted on
+   AnkiMobile on the next sync.
+ * Fixed a bug where a random order custom study deck created on AnkiMobile
+   could not be edited with the desktop.
+ * Fix tap zones moving up/down when the navigation bar is hidden/shown with a
+   tap.
+ * Fixed a bug that was causing the app to crash when visiting the upgrade
+   screen on some iOS versions.
+ * If the collection somehow gets into an unreadable state, it is now backed
+   up to iTunes and a new one put in its place.
+ * Fixed a crash on some iOS versions when a sync failed.
+ * Make sure we show the replay button even if user has disabled autoplay.
+ * Fix play button on sound files with non-latin text.
+ * Fixed a bug where the finished message would not display when the daily
+   review limit had been exceeded.
+ * Fixed issue with image resizing where landscape images were being cropped.
+ * Fix an issue where audio occasionally wouldn't autoplay when going through
+   cards quickly.
+ * Other minor fixes.
+
 = Changes in 2.0.2 =
 
 2.0.2 was approved by Jan 25 2013, and is now in the app store.
