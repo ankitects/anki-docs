@@ -123,7 +123,7 @@ upgrade via the desktop instead.
 
 = Changes in 2.0.3 =
 
-2.0.3 was sent to Apple on Feb 3 2013, and is awaiting Apple's approval.
+2.0.3 was approved by Apple on Feb 7 2013, and is available in the app store.
 
  * A number of improvements to pinching to zoom:
  ** Pinching now updates the size as you pinch, instead of only when you've
