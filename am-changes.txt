@@ -9,10 +9,9 @@ AnkiMobile 2 is a big update, and depending on the features you used
 previously and how comfortable you are with computers, it may take a little
 while to set up and get used to.
 
-[red]*Please do not upgrade before a test or when you do not have access to a
-computer*. The old synchronization service will continue to work until Feb 4,
-so if you are busy, you can continue to use the old version for a little while
-longer.
+As the old AnkiWeb was shut down on Feb 7 2013, the old version will no longer
+be able to sync, but you can continue to use iTunes to transfer decks to and
+from a computer.
 
 As Apple do not provide the ability to download previous versions from the app
 store, you may also want to <<backup,create a backup of the old version>> before
