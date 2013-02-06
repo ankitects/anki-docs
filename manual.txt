@@ -2708,7 +2708,8 @@ tags:tag1 tag2
 
 Anki uses the first field to determine if a note is unique. If the file you
 are importing has a first field that matches one of the existing notes in your
-collection, the existing note's other fields will be updated based on content
+collection and that existing note is the same type as the type you're
+importing, the existing note's other fields will be updated based on content
 of the imported file.
 
 = Exporting =
