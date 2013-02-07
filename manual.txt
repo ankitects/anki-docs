@@ -2068,6 +2068,18 @@ left, the 'card list' on the top right, and the 'current note' on the bottom
 right. By positioning the mouse between two sections, it is possible to click
 and drag to expand one section and shrink another.
 
+Sidebar
+--------
+
+The sidebar on the left allows quick access to common search terms. Various
+search terms as described below are listed, along with all deck names and tag
+names. Clicking on an item will search for it. You can hold down ctrl (command
+on a Mac) and click in order to append the clicked item to the current search,
+instead of starting a new search. If you wanted to show learning cards in the
+German deck for instance, you could click on "Learning", then ctrl+click on
+"German". You can also hold down alt (option on a Mac) in order to reverse the
+search (prepend a '-').
+
 [[searching]]
 Searching 
 ---------
@@ -2213,18 +2225,6 @@ Current Note
 The bottom right area displays the currently selected card's note. For more
 information about cards and notes, please see <<basics,the basics>>. For more
 information on formatting buttons, please see <<editor,editing>>.
-
-Sidebar
---------
-
-The sidebar on the left allows quick access to common search terms. Various
-search terms as described above are listed, along with all deck names and tag
-names. Clicking on an item will search for it. You can hold down ctrl (command
-on a Mac) and click in order to append the clicked item to the current search,
-instead of starting a new search. If you wanted to show learning cards in the
-German deck for instance, you could click on "Learning", then ctrl+click on
-"German". You can also hold down alt (option on a Mac) in order to reverse the
-search (prepend a '-').
 
 Toolbar
 --------
