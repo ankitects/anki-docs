@@ -752,6 +752,11 @@ won't appear until you've gotten through your backlog.
 If you wish to change the order the overdue reviews, you can do so by creating
 a filtered deck, as described in a later section of the manual.
 
+When you answer cards that have been waiting for a while, Anki factors in that
+delay when determining the next time a card should be shown. Please see the
+frequently asked questions section at the bottom of the manual for more
+information.
+
 [[editor]]
 Editing
 =======
