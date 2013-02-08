@@ -529,10 +529,20 @@ nothing happens (on in the case of 2.0, you end up with the cards in one deck
 appearing but the cards in the other deck not appearing).
 
 To fix this, please install Anki 1.2.8 again from the bottom of the Anki 2
-page, go to File>Download>Shared Plugin, download the plugin called "Make
-Cards Unique", and then restart Anki. After restarting, for each deck that
-didn't import, open it and choose Tools>Make Cards Unique. After you've done
-this, you should be able to File>Import the decks in Anki 2.0.
+page. Then:
+
+ * Download
+   http://ankisrs.net/download/mirror/archive/plugins-1.2/Make_cards_unique.zip[this
+   zip file]
+ * Open Anki 1.2, and go to Settings>Plugins>Open Plugin Folder
+ * Extract the .py file from the .zip you downloaded, and place it in the
+   plugins folder.
+ * Restart Anki 1.2
+ * For each deck that didn't import, open it and choose Tools>Make Cards
+   Unique.
+
+After you've done this, you should be able to File>Import the decks in Anki
+2.0.
 
 = Questions =
 
