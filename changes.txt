@@ -883,7 +883,6 @@ that assumed those imports would exist. One example is add-ons that import
  * Remove automatic newlines after field reference that were added in 2.0.5.
  * Fix bug when appending note type to an existing search.
 
-[[latest]]
 = Changes in 2.0.7 =
 
  * Add a "suspend card" option to the review screen.
@@ -902,6 +901,23 @@ that assumed those imports would exist. One example is add-ons that import
  * Don't trigger links when ctrl+shift etc pressed on Windows
  * Better warning when sync fails due to Linux distro packaging error.
  * Fix "Focus Note" menu option in the browser.
+
+[[latest]]
+= Changes in 2.0.8 =
+
+ * Fix recording on Windows.
+ * Better error when Anki blocked by firewall.
+ * Fixed an issue with upgrading some Anki 1 decks.
+ * Allow apostrophe in deck names.
+ * Some changes which should speed up upgrading old Anki 1 decks.
+ * When rescheduling is off in a filtered deck, show "(end)" on buttons that
+   will end studying of that card.
+ * Fix extra spaces being included when showing tags on card.
+ * Make sure we switch back to the previous deck when creation of a filtered
+   deck cancelled.
+ * Fix a bug that was causing the automatically generated Reading field in the
+   Japanese Support add-on to be blanked out again if you clicked directly on
+   the Reading field.
 
 = Download =
 
