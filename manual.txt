@@ -2154,6 +2154,12 @@ show a number rather than a due date, which indicates the order the new cards
 will be presented in. Cards in (re)learning and reviews will both show a due
 date, but when sorting they are first grouped by type and then sorted by date.
 
+NOTE: The "edited" and "changed" columns sound the same but track different
+things. "Edited" tracks the last time changes were made to the 'note' (e.g.,
+when the content of a field was edited), while "changed" tracks the last time
+changes were made to the 'card' (e.g., when you reviewed the card and the
+review history and interval were updated).
+
 When you click on a card, its note will be shown in the bottom section. If you
 drag the mouse or hold ctrl or command to select multiple cards, the editor
 will be temporarily hidden. Various operations (such as changing the deck) can
