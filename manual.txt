@@ -412,11 +412,11 @@ collection. When you do so, a card will be created as well, and placed into
 the deck you chose. If you'd like to edit a card you added, you can click the
 history button to search for a recently added card in the browser.
 
-Anki requires the first field to be non-empty and unique, so you can't have two
-notes with the Front labelled "apple" for example. The uniqueness check is
-limited to the current note type, so if you're studying multiple languages, it
-would be okay to have the same Front as long as each language used a different
-note type.
+Anki checks the first field for uniqueness, so it will warn you if you enter
+two cards with a Front field of "apple" (for example). The uniqueness check is
+limited to the current note type, so if you're studying multiple languages, two
+cards with the same Front would not be listed as duplicates as long as you had
+a different note type for each language.
 
 Anki doesn't check for duplicates in other fields automatically for efficiency
 reasons, but the browser has a "Find Duplicates" function which you can run
