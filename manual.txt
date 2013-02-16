@@ -1296,6 +1296,10 @@ The type of card ("Forward", etc): {{Card}}
 The front text (only valid in back template): {{FrontSide}}
 -----
 
+FrontSide will not include any audio that was on the front side of the card.
+If you wish to have the same audio play on both the front and back of the
+card, you'll need to manually include the audio fields on the back as well.
+
 [[cardgeneration]]
 == Card Generation ==
 
@@ -1964,6 +1968,11 @@ for each card in the study area.
 By default, Anki automatically plays audio on the front and back of cards. If
 you uncheck 'automatically play audio', Anki will not play audio until you
 click the replay audio button.
+
+The 'when answer shown, replay both question and answer audio' option controls
+what happens when you choose to replay audio while the answer is shown. Please
+note that it does not control what happens when you show the answer; for that
+please see <<specialfields,this section>>.
 
 Description
 ------------
