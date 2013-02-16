@@ -1281,7 +1281,7 @@ If MyField is blank, nothing will be shown.
 
 If you show the hint on the question and then reveal the answer, the hint will
 be hidden again. If you want to have the hint always revealed when the answer
-is shown, you will need to remove {{FrontSide}} from your back template and
+is shown, you will need to remove \{{FrontSide}} from your back template and
 manually add the fields you wish to appear.
 
 [[specialfields]]
