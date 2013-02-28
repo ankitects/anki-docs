@@ -2289,7 +2289,8 @@ the imported cards an initial interval of 2 to 3 months.
 
 The card's revision history is not cleared when rescheduling: rescheduling
 changes the current state of a card, but not its history. If you want to
-complete reset a deck, the correct way to do so is to export a copy instead.
+complete reset a deck, the correct way to do so is to export a copy (without
+scheduling information) instead.
 
 'Reposition' allows you to change the order new cards will appear in. You can
 find out the existing positions by enabling the 'due' column, as described in
@@ -2716,7 +2717,8 @@ There are two different kinds of packaged decks.
 
 When you export all decks with scheduling included, this is called a
 'collection package'. Anki will copy your entire collection into a file called
-"collection.apkg", and place it on your desktop.
+"collection.apkg", and place it on your desktop. A collection package is
+used to back up your collection or to synchronize to AnkiMobile via iTunes.
 
 When this file is later imported, Anki will delete all the current cards in
 the collection, and replace the collection with the items in the
