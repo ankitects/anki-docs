@@ -3805,3 +3805,13 @@ Anki's algorithm is based on SM2, but differs from it in some respects.
 
 For a description of the SM2 algorithm, please see
 http://www.supermemo.com/english/ol/sm2.htm
+
+= Resources =
+
+The SuperMemo site has a lot of good information about spaced repetition and
+memory: http://www.supermemo.com/
+
+There's a free list of open college courses available at
+http://www.onlinecourses.com/
+
+
