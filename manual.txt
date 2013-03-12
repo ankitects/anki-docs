@@ -2484,6 +2484,30 @@ example, then Anki will show you only the 20 most lapsed cards.
 For efficiency reasons, if your cram deck contains more than 1000 cards, only
 1000 cards will be shown as due on the deck list and study screens.
 
+== Order ==
+The "cards selected by" option controls the order that cards will appear in. If
+the maximum number of cards you select is lower than the number of cards that
+match the filter criteria, Anki will exclude the cards at the end of this
+sorted list first.
+
+ Oldest seen first ::
+  Display cards that you haven't seen in reviews for the longest time first.
+ Random ::
+  Randomize the order of all cards that match the filter criteria (use no set
+  order).
+ Increasing intervals ::
+  Display cards that have the smallest interval first.
+ Decreasing intervals ::
+  Display cards that have the largest interval first.
+ Most lapses ::
+  Display cards that you have failed the most times first.
+ Order added ::
+  Display cards that you added first (have the earliest creation date) first.
+ Order due ::
+  Display cards with the earliest due date first.
+ Latest seen first ::
+  Display cards that you've seen most recently in reviews first.
+
 == Steps & Returning ==
 
 Please see the section on <<learning,learning>> as a reminder of how steps
