@@ -265,8 +265,8 @@ To store this information, we might create a new type of note, and call it
 something like "Atomic Elements", giving it three fields: name, symbol and
 number. We can then tell Anki to create some cards based on those fields.
 
-Templates
----------
+Card Templates
+--------------
 
 In order for Anki to create cards, we need to give it a blueprint that says
 which fields should be displayed on the front or back of each card. This
