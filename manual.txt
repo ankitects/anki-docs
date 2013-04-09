@@ -2963,7 +2963,9 @@ Anki is open.
 
 To restore from a backup, simply close Anki, open Documents/Anki/<profile
 name>/backups, and double-click on the most recent backup in order to import
-it.
+it. If you use AnkiWeb, after restoring your deck, please use
+Tools>Maintenance>Full Sync and force an upload of the restored collection to
+AnkiWeb.
 
 Inaccessible Harddisk
 ----------------------
