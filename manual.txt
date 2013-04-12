@@ -2793,7 +2793,9 @@ is exported with all the HTML formatting embedded in it.
 
 A 'packaged deck' consists of cards, notes, note types and any sounds or
 images bundled up into a file ending with .apkg. You can use packaged decks to
-transfer cards between people, or for backing up parts of your collection.
+transfer cards between people, or for backing up parts of your collection. A
+packaged deck is compressed, so it will be smaller than the sum of the files
+in your profile folder.
 
 There are two different kinds of packaged decks.
 
