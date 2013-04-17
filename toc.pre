@@ -1,0 +1,15 @@
+<%block name="head">
+ <link type="text/css" rel="stylesheet" href="/css/jquery.tocify.css"/>
+ <script src="/js/jquery.min.js"></script>
+ <script src="/js/jquery-ui-1.10.2.custom.min.js"></script>
+ <script src="/js/jquery.tocify.min.js"></script>
+ <script>
+ $(function () {
+ $("#toc").tocify({hashGenerator: "pretty", theme: "none", selectors: "h2,h3"});
+ });
+ </script>
+</%block>
+
+<div class="row-fluid">
+<div class="span4 hidden-phone" id="toc"></div>
+<div class="span8 offset4">

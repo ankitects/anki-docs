@@ -1,0 +1,46 @@
+_ Getting Help _
+
+[subs="none"]
+++++++++++++++++++++++++++++++
+<script>
+    document.getElementById("navhelp").className += " active";
+</script>
+++++++++++++++++++++++++++++++
+
+= Before Asking =
+
+Before asking for help, please have a look in the manual. The top of the
+manual provides some links to some short intro videos that address some common
+topics.
+
+ * link:/docs/manual.html[User Manual]
+ * link:/docs/manual.html#_intro_videos[Short Intro Videos]
+
+If the intro videos do not address your issue, please try searching the manual
+with your browser's find command (Ctrl+F, or on a Mac, Command+F).
+
+[[support]]
+= Support Sites =
+
+If you were unable to find what you needed in the manual, please visit the
+relevant support site:
+
+ * https://anki.tenderapp.com/[Computers, AnkiWeb, and Apple Devices]
+ * https://code.google.com/p/ankidroid/wiki/Index#Contact[Android Devices]
+ * https://groups.google.com/forum/#!forum/anki-addons[Add-ons]
+
+Please don't forget to be polite! We understand it can be frustrating when you
+can't find what you're looking for quickly, but please resist the temptation
+to take out your frustration on us. The majority of the questions we answer
+are from people who have not contributed to Anki, so it is mostly volunteer
+work. As the adage goes, "you can catch more flies with honey than with
+vinegar", and if you're polite and courteous, we're much more likely to answer
+your questions or go the extra mile to help you out.
+
+= Community =
+
+There's also a community forum, so that users can ask other users for advice
+on how to format cards, discuss effective learning strategies, and suggest new
+features. It's available
+https://groups.google.com/forum/#!forum/anki-users[here]. *If you have usage
+questions or bug reports, please use the support sites listed above instead.*
