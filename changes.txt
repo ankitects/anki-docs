@@ -1,652 +1,185 @@
-_ Changes in Anki 2 _
+++++++++++++++++++++++
+<br><br><b>Users upgrading from Anki 1: please see <a href="#v2">here</a></b>.
+++++++++++++++++++++++
 
-= Translations =
+[[latest]]
+= Changes in 2.0.8 =
 
-This page in other languages:
+ * Fix recording on Windows.
+ * Better error when Anki blocked by firewall.
+ * Fixed an issue with upgrading some Anki 1 decks.
+ * Allow apostrophe in deck names.
+ * Some changes which should speed up upgrading old Anki 1 decks.
+ * When rescheduling is off in a filtered deck, show "(end)" on buttons that
+   will end studying of that card.
+ * Fix extra spaces being included when showing tags on card.
+ * Make sure we switch back to the previous deck when creation of a filtered
+   deck cancelled.
+ * Fix a bug that was causing the automatically generated Reading field in the
+   Japanese Support add-on to be blanked out again if you clicked directly on
+   the Reading field.
 
- * http://rightstuff.luminousspice.com/2013/02/changeinanki2/[日本語]
+= Changes in 2.0.7 =
 
-= Please Read This =
+ * Add a "suspend card" option to the review screen.
+ * Don't set browser font/size when cards are created, so they take on the
+   system font until customized.
+ * Work around slow initial audio playing on Windows caused by antivirus
+   software.
+ * Allow Qt4.6 again, but warn on startup that it has known issues.
+ * Work around for Japanese furigana on Qt4.6
+ * Fix incorrect error message when media sync fails.
+ * Fix crashes on Windows/Linux when performing a long search operation in the
+   browser.
+ * Fix links appearing twice when clicked in card layout window.
+ * Conditional tags now ignore formatting, and require actual text to be
+   considered non-empty.
+ * Don't trigger links when ctrl+shift etc pressed on Windows
+ * Better warning when sync fails due to Linux distro packaging error.
+ * Fix "Focus Note" menu option in the browser.
 
-Your time is precious, and you may not have time to read this whole document -
-that's fine. But please read this section, as it points out a few things that
-are most likely to cause surprises in the new version.
+= Changes in 2.0.6 =
 
- * If you used Dropbox with previous versions of Anki, please read the next
-   section before upgrading.
- * If you ever exported & imported .anki decks in the previous version, or
-   find you are missing cards after upgrading, please read <<missing,this
-   section>>.
- * Reviews are <<perday,limited>> to 100/day by default.
- * When you answer "again", there are now two
-   link:manual.html#learning[learning] reviews of the card, so the learning
-   (orange) count will increase by two.
- * Cloze deletion has been much improved, but now requires you to select a
-   special <<cloze,cloze type>> (the top left button in the Add window).
- * Selective study is still possible, but is done differently. You can either
-   move cards into different decks (via 'Change Deck' in the card browser), or
-   create a <<filtered,filtered deck>> that searches for particular tags, card
-   properties and so on.
- * If you study material in multiple directions / used multiple card
-   templates, please see <<cardgen,this section>> for info on how cards are
-   selected now.
- * Anki only checks the <<dupes,first field>> to see if it's unique now.
- * If you delete a deck and sync, that deck will now be deleted on your other
-   devices as well.
- * If you use "hide" on any decks in Anki 1, Anki 2 will not automatically
-   import them. You can still import them manually, via File>Import. Anki 1
-   decks were stored in Documents\Anki by default.
+ * Fix a bug where suspended cards imported from Anki 1 would have the wrong
+   due date.
+ * Fix a bug where re-failing a relearning card would not honour the minimum
+   interval setting.
+ * Anki will now automatically recover from a syncing error instead of asking
+   the user to post a bunch of numbers on the forum.
+ * Fix a bug when anki1.2 decks that hadn't been opened in Anki 1.2.8 were
+   failing to import.
+ * Change from ospalh to make it easier to style the type in the answer box.
+ * Remove automatic newlines after field reference that were added in 2.0.5.
+ * Fix bug when appending note type to an existing search.
 
-The rest of this page describes all the changes in more detail. For more
-information, please also see the link:manual.html[user manual], which has been
-completely rewritten for version Pre.
+= Changes in 2.0.5 =
 
-[[beforeupgrade]]
-= Dropbox =
+ * Possible fix for "host not found" errors when syncing via proxy.
+ * Fix a problem when creating filtered deck for deck with spaces.
+ * Don't fail when importing decks that contain media references to subdirs.
+ * Don't open a web browser when 'more...' clicked on study overview.
+ * Add "Close" to browser edit menu; support Command+W to close.
+ * Better warning when trying to import non-UTF8 content.
+ * Possible fix for supermemo importer.
+ * Fix 'show duplicates' when fields contain newlines/formatting.
+ * When a user has multiple note types with the same name, clicking on one in
+   the browser will now show only cards for that note type, not all of them.
+ * Fix bug caused by applying settings to subdecks when a subdeck was a
+   filtered deck.
+ * Fix errors caused by burying (re)learning cards. Like suspending, burying
+   now removes the cards from the learning queue first.
+ * Other minor updates.
 
-If you didn't use Dropbox in the previous version of Anki, you can skip this
-section.
+= Changes in 2.0.4 =
 
-If you used Dropbox, before upgrading, please go to Settings>Preferences and
-change the media section to "keep media next to deck". After that, please open
-and close each deck in turn in order to move the media back to its original
-location, so that Anki 2 can find it.
+ * You should no longer need to fix decks in Anki 1 when upgrading; if any
+   errors are found, Anki 2 should automatically fix them.
+ * The duplicate check while adding cards now ignores HTML when comparing. If
+   your cards have any bold/italics/colours/etc, please run
+   Tools>Maintenance>Full Sync after upgrading so that the duplicate cache can
+   be updated.
+ * Anki will now apply a fuzz to review intervals so they spread out more.
+   This fuzz is not reported on the answer buttons, as it is only calculated
+   when the card is actually answered. You can check it in the review history.
+ * If you have a failure multiplier set so that failed reviews have their
+   interval reduced rather than zero out, that multiplier will now be applied
+   if you refail the card in the relearning queue as well.
+ * You can now customize note types from the tools menu.
+ * Possible fixes for proxy connections. Thanks to Arfrever for the heads up
+   on the new httplib2 version.
 
-= Decks & Profiles =
+Import/export:
 
-++++++++++
-<img src="/docs/1-decks.png" width=341 height=318 style="float:right;margin:1em;">
-++++++++++
+ * Remember the "allow HTML" setting in the import dialog.
+ * Remember import mode across invocations.
+ * Add an option to export card q/a rather than notes.
+ * Fix importing of LaTeX cache files.
+ * When importing a .apkg, make sure the descriptions of the parent decks are
+   imported too.
 
- * Instead of storing each deck in a separate file, Anki now stores all of
-   your decks in a single file called a 'collection'. This makes it easy to
-   move cards between decks, and different decks can now share models and
-   facts.
- * Decks can now be organized in a tree. Use "::" to mark descending levels,
-   like "German::My textbook::Lesson 1".
- * Multiple decks can share the same settings group, so updating the settings
-   for one deck updates the settings for the other decks using that group.
- * If more than one person uses Anki on your computer, you can now create a
-   separate user profile for each user. Each user profile has their own
-   collection of decks, and Anki will remember settings separately for each
-   user. link:manual.html#profiles[More info].
+Browser/Add changes:
 
-= Terminology =
+ * Allow browser font customization on a per-template basis, via the Cards
+   dialog. Should default to system font.
+ * Don't lose card selection when using "change deck".
+ * Newlines in fields should now be converted to a space in the card list.
+ * Allow unlimited nesting of decks in browser sidebar.
+ * Don't show 'marked' or 'leeched' tag in browser sidebar, as it's listed
+   near the top already.
+ * When an existing search term is reused, move it to top of the history.
+ * When Add window opened, start with empty tag list instead of last tags used
+   by that note type.
+ * Disable editor buttons until a field is focused.
 
- * A 'fact' is now called a 'note'.
- * Instead of talking about a note's 'model', we now talk about a note's 'type'.
- * A 'collection' stores all your notes, cards, and so on.
- * You can divide the cards up into separate groups, called 'decks'.
- * 'Plugins' are now called 'add-ons'.
+The rest:
 
-[[perday]]
-= Per-day limiting =
+ * When restoring from a backup, force a full sync.
+ * Don't autorepeat delete key during review.
+ * Force full sync if any problems found in db check.
+ * When reviewing new cards in a filtered deck, don't log them as a cram
+   review.
+ * Fix bug when renaming foo::bar foo to new parent.
+ * Catch missing notes in DB check.
+ * Fixed a sync error caused by importing note types from an .apkg
+ * When checking if note types match in import, consider question/answer
+   templates as well.
+ * Fix lapsed reviews getting learn steps instead of relearn steps.
+ * Fix pasting of image URLs with %s.
+ * Custom study's "preview" should not reschedule cards.
+ * Fix custom study search for failed cards with 2+ days.
+ * Fix possible error in Makefile
+ * Refuse to run on Qt4.6, as it's broken.
+ * Don't use native filepicker on OSX due to crash.
+ * Force XP theme on Windows so Anki on Win8 looks better.
+ * Add Cmd+W shortcut to add cards window & stats window on OSX
+ * Improve various error messages.
+ * Some tweaks from Ospalh
+ * Addon editor tweaks from Thomas
+ * Update old beta.ankiweb references.
+ * Increase minimum size of editing area so it can't be accidentally hidden.
+ * Fix a bug where a progress window would appear blank.
+ * Display count of notes deleted.
+ * Fix issues where unbolding parts of a field would fail.
+ * Disable undo when switching profiles.
+ * Fix issues with clozes and <% %>.
+ * Prevent access to main window while auth dialog shown.
+ * Don't rename if note type rename cancelled.
+ * Sort clone: note type items.
+ * Clarify that deck description is not in option group.
 
- * The new cards per day limit is controllable per deck, and bounded by the
-   parent decks. This means if "French" has a limit of 20 cards and
-   "French::Lesson 1" and "French::Lesson 2" both have limits of 15 cards,
-   you'll get 15 cards from lesson 1 but only 5 cards from lesson 2.
+Add-on authors:
 
- * Decks now have a limit on daily reviews as well, which defaults to 100.
-   When the limit is reached, Anki will not present further reviews from that
-   deck, even if there are cards waiting. When the congratulations page is
-   reached, a notice will be displayed, advising the user that for optimum
-   memory, they should consider increasing the daily limit. This change is
-   intended to reduce the sense of being overwhelmed that people feel after
-   returning to Anki from a break. Large due counts can be off-putting, and
-   while it's not optimal for a user to leave due cards waiting, if they give
-   up in frustration that's an even worse outcome.
+2.0.4 removed some unnecessary imports, which unfortunately broke some add-ons
+that assumed those imports would exist. One example is add-ons that import
+'anki' and then try to access 'anki.stats' without specifically importing
+'anki.stats' first.
 
- * No limit is applied to cards in learning, as the learning count is a
-   product of the number of new cards and reviews that are done each day.
+= Changes in 2.0.3 =
 
-= Shared Decks =
-
-++++++++++
-<img src="2-overview.png" style="float:right; margin: 1em;">
-++++++++++
-
- * Shared decks can now be browsed on AnkiWeb, and downloaded from your browser.
- * You can now rate and comment on shared decks.
- * You can now pull in new cards from a previously downloaded shared deck.
-
-[[selective]]
-= Selective Study =
-
-Anki's new deck system is based on the following observations:
-
- * Nested categories like "French->Book 1->Lesson 3" are more intuitive to the
-   typical user than the tags "french book1 lesson3".
- * Many users struggled with the old selective study system, be it because
-   they'd accidentally used overlapping tags that cancelled out what they
-   wanted to do, or because they'd removed particular tags from review and
-   forgotten they'd done so.
- * Tag-based limiting did not perform well - slowdowns of 10x or more were not
-   uncommon.
- * Some users wished to assign different study settings to different cards.
-   This is not practical with tags, as they overlap, and it would require an
-   elaborate system of defining which tags should take precedence for that to
-   work.
-
-Those issues are addressed as follows:
-
- * In Anki 2, the standard review system is based on the 'current deck',
-   rather than a list of allowed/disallowed tags. Decks can be nested,
-   allowing you to define the order cards should appear in and allowing you to
-   focus on specific subsections individually.
- * Tag-based study is still possible via a flexible filtered deck
-   system, described further below.
-
-As there's no way to directly map the old selective study feature into the new
-way of doing things, a little manual setup is required after upgrading if you
-were using selective study before.
-
-If you had a small number of tags which you switched between, such as
-"Japanese" and "French", then your best bet is probably to search for each tag
-in turn in the browser, and use "Change Deck" to move the resulting cards into
-separate decks.
-
-If you were using selective study to control introduction of new cards (such
-as blocking lessons 5-18 from being displayed), you could also convert each
-lesson into a deck, but that's somewhat cumbersome. An easier method would be
-to suspend the cards you're not ready for, and then unsuspend them on a
-per-lesson basis when you're ready to study them. You could do it like this:
-
- 1. Search for "tag:lesson* is:new" to find all new cards with a lesson tag.
-    Select them all, and suspend them.
- 2. Assuming you were halfway through lesson4 before upgrading, search for
-    tag:lesson4 is:new" and unsuspend any cards that got suspended by the
-    previous step.
- 3. When you're ready to move on to lesson 5, search for "tag:lesson5" and
-    unsuspend the cards.
-
-= Priorities =
-
- * Like selective study, card display order is now controlled via nested decks
-   instead of tags. When you select a given deck, Anki walks the deck
-   and its subdecks in alphabetical order looking for cards. So if you have
-   cards in "French::Vocab", "French::Sentences" and "French:Misc" and you
-   select the "French" deck, cards will be fetched first from Misc, then
-   Sentences, and then Vocab, as that is the alphabetical order of those
-   decks. You can use this property to ensure certain cards are reviewed
-   earlier or later than normal: prepending a "!" like "!Vocab" would ensure
-   vocab cards come first, and prepending a "_" would ensure they come last.
-
- * For more fine-grained reordering of new card presentation order, the
-   browser now has a reposition command which can change the order of new
-   cards in the queue. You can use this for prioritizing material, changing
-   the order cards of different types will be mixed together, and so on.
-
-= Scheduling =
-
-++++++++++
-<img src="3-review.png" style="float:right; margin: 1em;">
-++++++++++
-
- * Anki has a much-improved learning mode. When new cards are introduced or
-   old cards forgotten, they can now be shown over a number of increasing
-   intervals before they graduate into normal reviews cards. More information
-   in the manual: link:manual.html#learning[learning]
- * Reviews are only scheduled on a per-day basis now. If you wish to divide a
-   day's cards into multiple sessions, you can either use the timeboxing
-   feature or simply do a certain number of cards and stop until later.
- * Only when you fail a review card is the card's lapse count increased. This
-   means that failures while the card is in learning no longer count towards a
-   card being a leech.
- * You can customize the behaviour when failing reviews. By default failed
-   reviews are put back in the learn queue to be relearnt. You can have a
-   different set of steps for cards that are being relearnt, which allows you
-   to reduce the steps required or require longer waits compared to cards that
-   are being learnt for the first time.
- * A multiplier is now available to cause Anki to schedule reviews more
-   frequently or less frequently than it would otherwise.
- * Due counts are now displayed in the more logical new -> learning ->
-   reviewing order. The ETA and progress bars have been removed, and the timer
-   is off by default (in the above screenshot, the due counts are not shown as
-   they are only shown while the question is visible)
- * The learning count is the count of how many answers are required to
-   complete the queue, not how many cards. With the default settings of two
-   reviews to graduate, the learning count will be twice the number of cards
-   to learn.
- * In normal study, reviews are always sorted by due order now. If you need to
-   change the order to deal with a backlog, you can do it with a filtered
+ * Fix some more issues with importing content that used a modified version of
+   models already present in your collection. Decks (including 1.2 decks) are
+   now imported in such a way that repeatedly importing them will no longer
+   result in duplicate note types, notes or cards. The duplicate check only
+   works against previous imports made in 2.0.3 however, so if you imported
+   decks with divergent models in a previous Anki 2 version, the first time
+   you import that content again, a duplicate will be created.
+ * Fix a few errors that could occur when renaming decks.
+ * Fix timeboxing counting one too many cards on the first session and
+   not accounting for undone reviews.
+ * Suspended cards now have their due date shown surrounded by brackets in the
+   browser.
+ * When a learning card is suspended, it is moved back to new if it was in
+   initial learning, or moved back to a review card if it was in relearning.
+ * Fix 1+ day steps not working for relearning cards.
+ * Fixed some issues with settings not syncing due to the collection being
+   accidentally marked as modified when it was loaded.
+ * Add decimal point to reviews a day statistic.
+ * When creating a filtered deck, default to searching through the current
    deck.
- * While there is no explicit option for "show failed cards at end" anymore,
-   you can achieve the same behaviour by setting the learning steps to a
-   length longer than your session length (eg, 1 hour), and increasing "learn
-   ahead limit" in the preferences to that number as well.
+ * Display a progress window when closing the collection, as it may take a
+   while.
+ * Fix font size setting in Add Field button.
 
-[[filtered]]
-= Filtered Decks, Cramming & Reviewing Early =
-
- * Filtered decks allow you to gather cards from other decks based on specific
-   criteria and with a specific ordering.
- * They are very flexible: they can be used for previewing cards, cramming
-   them before a test, studying particular tags like the old selective study
-   feature, catching up on a backlog with a particular sort order, reviewing
-   ahead, going over the day's failed cards, and more.
- * They can be set to reschedule based on your answers (like Anki 1.2) or
-   leave the original cards alone (like Anki 1.0).
- * Filtered decks also replace the old "review early" button. They offer two
-   advantages: you can now choose how many days to look ahead, and you can
-   close Anki and resume reviewing early where you left off, instead of
-   starting with the same cards again like in Anki 1.2.
- * For more information, please see
-   http://ankisrs.net/docs/manual.html#filtered
-
-= Syncing =
-
- * In most cases, you can now merge changes from multiple devices instead of
-   having to choose which side to keep.
- * Full syncs are only necessary on the first sync and after changing things
-   like the number of fields in a note. If you're about to make a change that
-   would force a full sync, you're warned about it and given the option of
-   aborting.
- * Modifying many cards or notes no longer forces a full sync - incremental
-   syncs can now handle even large amounts of data.
- * Clock drift will no longer lead to incorrect syncs. That said, it's still
-   confusing to move to another machine with a different clock and find
-   greater or fewer cards due, so Anki will still require the clock to be
-   within 5 minutes of the real time.
- * All data is encrypted before being sent over the internet.
- * If the connection times out, Anki will automatically retry.
-
-= Media & LaTeX =
-
- * AnkiWeb now supports media natively, instead of requiring a third-party
-   service like DropBox. No special setup is required - when you sync your
-   decks, their media will be automatically synced with it. Anki monitors the
-   media folder now, so there are no issues with an out of date media DB like
-   there were in the past.
-
- * Media and LaTeX references in templates are no longer supported,
-   because they don't play well with shared decks. The upgrade routines will
-   notice references like [sound:{{field}}.mp3] in your templates and
-   automatically create a new field with the media tags embedded in it, like
-   [sound:apple.mp3]. If you manually add the references back in, Anki will
-   not notice the media is in use when you check the media DB. Please note
-   that if you had media references comprised of more than one field (eg
-   [sound:{{field1}} - {{field2}}.mp3], these will not be imported
-   automatically and you will manually have to sort this out.
-
- * If you had static media references like `<img src=logo.jpg>` in your
-   templates, those media files will not be imported and you'll need to
-   manually copy them over. It's recommended that you rename them to have a
-   leading underscore, as doing that tells Anki they are used in the template
-   and shouldn't be deleted when checking for unused media.
-
- * When you upgrade, Anki moves the media in each deck's .media folder into
-   the new collection's media folder. You had different files with the same
-   name in multiple decks, Anki will automatically rename the media for you.
-
- * If for some reason Anki wasn't able to move your media from its old
-   location, please manually move the media files from the old .media folders
-   into your Documents/Anki/User 1/collection.media folder.
-
-= The Browser =
-
-++++++++++
-<img src="4-browsing.png" style="float:right; margin: 1em;">
-++++++++++
-
- * Tags and decks are displayed in a panel on the left, and can be clicked to
-   search for. Hold down ctrl or command while clicking to append the item to
-   the search string.
- * Columns are now configurable - right click on the header and you can enable
-   and disable the columns you want to search on. Click on a column to sort by
-   it; drag a column to move it to a different place.
- * Previously you could ask the browser to sort by a particular field, but
-   doing so caused any notes without that field not to show. In 2.0, each note
-   type has a "sort field". The sort field can be shown as a column, and can
-   be sorted on. Click the "Fields..." button to change the sort field. Anki
-   will automatically sort in numeric order if the field contains only
-   numbers; you don't have to tell it a field is numeric anymore.
- * Many search operations are faster than before, but some cases are slower.
-   The search box now requires you to hit enter; it will not automatically
-   search as you type, as some people type slower than others and for
-   expensive searches, automatic searching can be painful.
- * In 1.2, a copy of each field was kept with style information stripped, so
-   that you could search for a word and have matches appear even if part of
-   the word contained style information (bold, etc). Anki 2 drops this cache,
-   as it was expensive to maintain. In Anki 2 if you want to search for
-   partially-styled text, you need to limit yourself to the current
-   sort field (which Anki can use when searching)
-
-////
-, or go to Edit>Browser
-   Options where you can enable searching in formatting. Beware that when you
-   turn on full searching, searches will be considerably slower on large
-   decks.
-////
-
- * Selections are now preserved when the search criteria is changed, so you
-   can do things like select a bunch of cards, then click on "New" in the side
-   bar to narrow the selection to only cards that are new. Preserving the
-   selection of many cards at once is slow however, so if the selection is too
-   large it is discarded on the next search.
- * Rescheduling behaves differently now. Cards have their interval and ease
-   reset but keep their review history. If you need to completely reset a card,
-   you can still do it via export.
- * The browser now exposes the full review history. Click the info button on
-   the toolbar to see it. Note that this data was stored differently in
-   previous versions, so the display of whether a card was being learnt,
-   reviewed, relearnt or so on may not always be correct for old data.
-
-= Card Layout =
-
-++++++++++
-<img src="5-templates.png">
-++++++++++
-
- * In Anki 1.2, {{ field }} references were automatically wrapped in style
-   information. This meant that the prompt text and field text of a template
-   like "What is the capital city of {{ country }}?" often ended up different,
-   and users had to use {{{ field }}} instead and figure out the necessary
-   HTML.
-
- * In 2.0, there is no implicit styling: instead of choosing fonts, colors,
-   alignment and so on in the GUI, it's all embedded in the template as
-   standard HTML and CSS. As a bonus, this allows you to do things like use a
-   gradient or image for your card background if you wish.
-
- * The "hide question when showing answer" option has gone away: Anki always
-   replaces the question with the answer now. Templates default to including
-   the question fields on the answer text however, so Anki will behave like
-   always. The "show divider between question and answer" option has gone away
-   too, as the divider is included on the template and can be removed if
-   desired.
-
-[[cardgen]]
-= Card Generation & Deletion =
-
- * In previous versions of Anki, there was a button in the top right of the
-   add cards screen that let you enable and disable card templates. As the
-   button would only control which cards would be added when you added new
-   content, if you wanted to add extra cards to previously added content, you
-   had to use the "generate cards" feature in the browser. This caused a lot
-   of confusion.
- * In Anki 2, instead of manually specifying which cards to create, cards are
-   created depending on whether fields are empty or not. By default, a card
-   will be created if at least one field on the front template is non empty.
-   You can set Anki up to only create particular cards if certain fields are
-   not blank.
- * If you wish to selectively add cards (such as adding a reverse card for
-   only your difficult content), you can add a field to your notes that
-   controls whether the reverse card will be generated. If you put any text in
-   the field (such as "y"), the card is generated, and if you leave the field
-   blank, the card is not created.
- * When Anki 2 upgrades your old decks, it will automatically add such a
-   required field to notes where you have a card enabled for some but not all
-   of the notes.
- * There is no option to manually delete individual cards in Anki 2, as if you
-   manually deleted a card, Anki would automatically add it again if fields
-   were not empty. Instead, you can remove individual cards by blanking out
-   one of their required fields.
- * Anki doesn't immediately remove cards when one of their required fields is
-   blanked out, because that could lead to data loss. To remove cards with
-   missing required fields, run Tools>Maintenance>Empty Cards.
- * As blanking out fields is a few more steps than just pressing the delete
-   button, if you need to remove a number of cards during review, you may find
-   it easier to suspend them instead, and then use find&replace at a later
-   date to blank out a required field for all the suspended cards in one go.
- * For more information about selectively adding cards, please see
-   link:manual.html#_card_generation[this section] of the manual.
-
-[[dupes]]
-= Fields and Duplicates =
-
- * You can no longer specify whether a field should be unique or required.
-   Anki makes sure the first field is both provided and unique, but does not
-   check the other fields. Anki did not perform well when many cards were
-   marked unique (since it has to cache all that information), and a single
-   field is sufficient for determining if a given subject has been entered in
-   before. If you wish to look for accidental duplicates in secondary fields
-   due to typos, you can use the Find Duplicates feature in the browser.
-
- * For more info, please see <<dupes2,this question>>.
-
- * Fields can now be marked sticky. This means that when you add notes, the
-   field content is not erased and is left in the field. This is useful when
-   you're adding a series of notes that have similar field content.
-
-= Performance =
-
- * Decks are considerably smaller now. Most people should see a size drop of
-   3-6x.
- * Many operations have been optimized. You should find your decks load much
-   faster now, and studying should be smoother. These changes should be
-   especially pronounced on the mobile clients.
- * Anki should now perform much better when your hard disk is being heavily
-   accessed.
- * Graphs load much faster, and it's now possible to see graphs of your entire
-   collection at once.
-
-= The Editor =
-
- * Fields now dynamically expand to fit their content.
- * Fields can now display complex HTML without mangling it.
- * You can now jump to a conflicting note when conflicts are detected
- * Images are shown at a reduced size in editing mode.
-
-[[cloze]]
-= Cloze Deletion =
-
- * Cloze deletion now makes it easy to generate multiple clozes from a single
-   body of text. All of the clozes share the same note, and edits to the note
-   will update all cards at once.
- * Cloze deletion works with LaTeX now, too.
- * Clozes appear as bold and blue like before, but they can now be customized
-   in the template.
- * Clozes made with previous versions will not be converted to the new
-   style; it only applies to newly made cards.
-
-= Graphs and Stats =
-
-++++++++++
-<img src="6-graphs.png"  style="float:right; margin: 1em;">
-++++++++++
-
- * The deck statistics and graphs have been merged into a single report that
-   contains both text and graphs, and they have been completely rewritten in
-   the process. There's now more information available, and it's easier to
-   compare things like the cumulative work spent on reviews vs relearning vs
-   initial learning.
-
- * The old period selection boxes have been replaced with a single box down
-   the bottom, allowing you to change between a monthly, yearly, and deck life
-   view of the data. The data is chunked into weeks or months in the larger
-   graphs, which both performs better and offers a clearer view of trends.
-
- * There is a button to save the graphs to an image, to make it easier to
-   share your graphs with friends or teachers.
-
-= Spacing Siblings =
-
- * When you start studying, the new cards for the day are gathered - 20 by
-   default. When each card is shown, all its siblings are moved to the end of
-   the queue, so they're spaced as far apart in those 20 cards as possible.
- * If you want new siblings to be introduced further apart, you can put them
-   in different decks or use the reposition feature of the browser.
- * When determining the next review time of a review card, Anki now checks the
-   surrounding days and tries to place the review on a day when no siblings
-   have reviews. The possibilities to consider are configurable.
-
-= Saving & Undoing =
-
- * The "save" and "save as" operations have been removed. Saving is now
-   transparent to the user, and happens every 5 minutes of adding/reviews, and
-   after various other operations. By having more control over the saving
-   process, Anki can save more efficiently, and revert changes when an
-   operation goes wrong.
- * The undo system has been simplified. The old method was comprehensive, but
-   made updates to the deck considerably more expensive, and could cause
-   inconsistencies under rare circumstances. Multi-level undo has been
-   preserved for reviews, but other destructive operations now have a single
-   level undo, which is guaranteed to restore the deck to a consistent state.
-
-= License =
-
- * In 2.0, Anki will be moving from the GNU GPL3 license to another GNU
-   license: the AGPL3. The Affero license is compatible with the GPL3, so
-   existing plugins do not need to be relicensed. The major difference from
-   the GPL3 is that the license requires people who modify the code and run it
-   on a web service to make that modified code available to users of the web
-   service. It effectively means a company can't make an online service using
-   Anki's code unless they reciprocate by sharing their changes. This clause
-   should not affect regular users at all.
-
- * Also of note is that ankiqt is now dual licensed like libanki was. I don't
-   have any immediate plans to take advantage of this, but it opens up the
-   possibility of custom versions in the future for companies who want to
-   distribute a stripped down and/or content-protected version of Anki with their
-   content for a fee. The desktop version will continue to be released as open
-   source, and I have no plans to change that.
-   
- * Because much of the code has been rewritten in 2.0 there is very little
-   code contributed by other people remaining. I've contacted the authors of
-   the remaining code and asked for their permission for the licensing change.
-   I don't think I've missed anyone, but if I have, please let me know.
-
-= Add-ons =
-
- * Because of the extensive changes, almost all add-ons will require some
-   level of modification to work with 2.0. Some add-ons have been ported
-   already, others will likely come in the future.
- * There's now an add-on writing guide link:addons.html[here] that also covers
-   the main things to be aware of when porting an old add-on.
-
-[[missing]]
-= Missing Decks/Cards =
-
-If you find a deck missing cards or empty when upgrading, this is because in
-the past you have exported cards into another deck and studied both decks in
-parallel. Even if you modified the appearance of the cards in one deck, the
-cards were originally the same, and Anki continues to consider them the same,
-as Anki was not intended to be used in this way.
-
-This means that when you try to import the cards in one deck into the other,
-nothing happens (on in the case of 2.0, you end up with the cards in one deck
-appearing but the cards in the other deck not appearing).
-
-To fix this, please install Anki 1.2.8 again from the bottom of the Anki 2
-page. Then:
-
- * Download
-   http://ankisrs.net/download/mirror/archive/plugins-1.2/Make_cards_unique.zip[this
-   zip file]
- * Open Anki 1.2, and go to Settings>Plugins>Open Plugin Folder
- * Extract the .py file from the .zip you downloaded, and place it in the
-   plugins folder.
- * Restart Anki 1.2
- * For each deck that didn't import, open it and choose Tools>Make Cards
-   Unique.
-
-After you've done this, you should be able to File>Import the decks in Anki
-2.0.
-
-= Questions =
-
-*Why are all the decks in one file now?*
-
-This change makes many parts of the UI simpler, and combined with the
-performance improvements in version 2, actually performs faster than before.
-For scratch decks, you can create a separate profile.
-
-[[dupes2]]
-*Why can't we mark an arbitrary number of fields as unique?*
-
-Consider the notes section of link:manual.html#basics[the basics]. All three
-of those fields are unique, and so users could (and often did) mark all of
-them as unique in previous versions. The problem is that in order to show
-duplicates, Anki needs to either search all similar fields (which is slow), or
-maintain a cache that rapidly grows in size as more fields are added to it.
-
-In the above example, only one field is actually required for determining if
-you've entered a given element before. Whether it's the element name, number
-or symbol you've chosen, by the time you type the first field, you'll be aware
-if you've previously entered the same note before. For the purposes of
-stopping you from adding duplicate notes that you'll have to delete, one field
-is enough.
-
-Languages are a different matter. If you're studying from foreign->native and
-native->foreign, and you're studying individual words without context, you may
-find you've entered the same meaning on two different notes. While it's not
-optimal that you're no longer notified in such a case, there's a key
-difference between this case and the case above: in the case above, if we
-weren't notified, then we'd have wasted effort typing in the same information
-twice. In this case, the duplicate information doesn't need to be thrown away,
-but simply augmented so that it can be distinguished from the existing
-material. While you're likely to realize you have duplicate meaning during
-reviews when you see a prompt and think of a different answer, there is also a
-"Find Duplicates" function in the browser.
-
-Because "Find Duplicates" doesn't need to run each time you press a key, it
-could potentially be more sophisticated in the future. While it is limited to
-exact matches at the moment, extending it to fuzzy matching in the future is
-not out of the question.
-
-*Why are you moving away from DropBox?*
-
-Anki 1.2's media syncing caused more confusion than almost any other aspect of
-the app. Even when it was working as designed, it was difficult for users to
-set up, and was prone to errors when users changed their media folder without
-updating the media database. Its usability decreased even further when DropBox
-pushed out a silent update that broke third-party apps that were trying to
-locate the DropBox folder location. And at the end of July 2012, DropBox will
-completely stop providing Public links to new accounts, indicating they don't
-want apps providing functionality like Anki did.
-
-I have no immediate plans to charge for media hosting, but in the longer term
-I will probably need to introduce premium accounts for people with media over
-a certain size so that I can cover the increased hosting costs which I'm
-currently paying for out of my pocket.
-
-If you're concerned about having to pay in the future, media syncing can be
-disabled in Anki's settings so that only the card/note data is synchronized.
-You are then free to use any third-party synchronization service to keep the
-media folders in sync between separate computers.
-
-*Why are reviews only scheduled on a per-day basis now?*
-
- * The SuperMemo algorithm was not designed to work on a sub-day basis, and is
-   not accurate to that level.
- * In previous versions of Anki, in order to review in the evening and then
-   again the next morning, cards had to be scheduled with small intervals like
-   8 hours. Unfortunately this meant that cards reviewed in the morning would
-   become due again in the evening, when they are better reviewed after a
-   night's sleep.
- * By making all of a day's reviews due in the morning, you can both see at a
-   glance how many cards are due that day, and study as many or as few as you
-   desire. When you have a busy morning you can leave the cards until later,
-   and likewise when you have a lot of free time, you can do all the cards in
-   one session. When cards become due throughout the day, it's not easy to
-   find out how many more need to be done that day, and you have to jump
-   through hoops to study more than are currently due.
- * For the initial learning steps where sub-day scheduling is more important,
-   you can use Anki's learning mode instead.
-
-= Changes in 2.0.0 =
-
- * Fix upgrade of 1.2 media files on Windows.
- * If studied for over an hour, report as eg "90 minutes" rather than "1 hour"
- * Reduce minimum height of add screen.
- * Friendlier error messages for when temp folder missing or Anki blocked by
-   firewall.
- * Add is:due to left of browser.
- * Fix an error about 'raise' when activating a background copy of Anki.
- * Fix error in type answer when text like "\g" on card.
- * Allow F5 to replay audio.
- * Fix issues editing options of filtered deck from deck list.
- * In the answer button stats, show 3 buttons not 4 for the learning
-   cards graph.
- * Fix tag:none search.
- * Change the way the basic note types are added to the decks so that Anki
-   won't break when the translations are wrong.
- * Other small fixes.
-
-= Changes in 2.0.1 =
-
-2.0.1 was a testing release, and it has been released as stable as 2.0.2.
 
 = Changes in 2.0.2 =
 
@@ -741,184 +274,653 @@ media folders in sync between separate computers.
  * Properly display minutes when "studied today" exceeds an hour.
  * Work around a few bugs caused by the mobile clients.
 
-= Changes in 2.0.3 =
+= Changes in 2.0.1 =
 
- * Fix some more issues with importing content that used a modified version of
-   models already present in your collection. Decks (including 1.2 decks) are
-   now imported in such a way that repeatedly importing them will no longer
-   result in duplicate note types, notes or cards. The duplicate check only
-   works against previous imports made in 2.0.3 however, so if you imported
-   decks with divergent models in a previous Anki 2 version, the first time
-   you import that content again, a duplicate will be created.
- * Fix a few errors that could occur when renaming decks.
- * Fix timeboxing counting one too many cards on the first session and
-   not accounting for undone reviews.
- * Suspended cards now have their due date shown surrounded by brackets in the
-   browser.
- * When a learning card is suspended, it is moved back to new if it was in
-   initial learning, or moved back to a review card if it was in relearning.
- * Fix 1+ day steps not working for relearning cards.
- * Fixed some issues with settings not syncing due to the collection being
-   accidentally marked as modified when it was loaded.
- * Add decimal point to reviews a day statistic.
- * When creating a filtered deck, default to searching through the current
+2.0.1 was a testing release, and it has been released as stable as 2.0.2.
+
+= Changes in 2.0.0 =
+
+ * Fix upgrade of 1.2 media files on Windows.
+ * If studied for over an hour, report as eg "90 minutes" rather than "1 hour"
+ * Reduce minimum height of add screen.
+ * Friendlier error messages for when temp folder missing or Anki blocked by
+   firewall.
+ * Add is:due to left of browser.
+ * Fix an error about 'raise' when activating a background copy of Anki.
+ * Fix error in type answer when text like "\g" on card.
+ * Allow F5 to replay audio.
+ * Fix issues editing options of filtered deck from deck list.
+ * In the answer button stats, show 3 buttons not 4 for the learning
+   cards graph.
+ * Fix tag:none search.
+ * Change the way the basic note types are added to the decks so that Anki
+   won't break when the translations are wrong.
+ * Other small fixes.
+
+[[v2]]
+= Changes in 2.0 =
+
+== Translations ==
+
+This page in other languages:
+
+ * http://rightstuff.luminousspice.com/2013/02/changeinanki2/[日本語]
+
+== Please Read This ==
+
+Your time is precious, and you may not have time to read this whole document -
+that's fine. But please read this section, as it points out a few things that
+are most likely to cause surprises in the new version.
+
+ * If you used Dropbox with previous versions of Anki, please read the next
+   section before upgrading.
+ * If you ever exported & imported .anki decks in the previous version, or
+   find you are missing cards after upgrading, please read <<missing,this
+   section>>.
+ * Reviews are <<perday,limited>> to 100/day by default.
+ * When you answer "again", there are now two
+   link:manual.html#learning[learning] reviews of the card, so the learning
+   (orange) count will increase by two.
+ * Cloze deletion has been much improved, but now requires you to select a
+   special <<cloze,cloze type>> (the top left button in the Add window).
+ * Selective study is still possible, but is done differently. You can either
+   move cards into different decks (via 'Change Deck' in the card browser), or
+   create a <<filtered,filtered deck>> that searches for particular tags, card
+   properties and so on.
+ * If you study material in multiple directions / used multiple card
+   templates, please see <<cardgen,this section>> for info on how cards are
+   selected now.
+ * Anki only checks the <<dupes,first field>> to see if it's unique now.
+ * If you delete a deck and sync, that deck will now be deleted on your other
+   devices as well.
+ * If you use "hide" on any decks in Anki 1, Anki 2 will not automatically
+   import them. You can still import them manually, via File>Import. Anki 1
+   decks were stored in Documents\Anki by default.
+
+The rest of this page describes all the changes in more detail. For more
+information, please also see the link:manual.html[user manual], which has been
+completely rewritten for version Pre.
+
+[[beforeupgrade]]
+== Dropbox ==
+
+If you didn't use Dropbox in the previous version of Anki, you can skip this
+section.
+
+If you used Dropbox, before upgrading, please go to Settings>Preferences and
+change the media section to "keep media next to deck". After that, please open
+and close each deck in turn in order to move the media back to its original
+location, so that Anki 2 can find it.
+
+== Decks & Profiles ==
+
+++++++++++
+<img src="img/1-decks.png" width=341 height=318 style="float:right;margin:1em;">
+++++++++++
+
+ * Instead of storing each deck in a separate file, Anki now stores all of
+   your decks in a single file called a 'collection'. This makes it easy to
+   move cards between decks, and different decks can now share models and
+   facts.
+ * Decks can now be organized in a tree. Use "::" to mark descending levels,
+   like "German::My textbook::Lesson 1".
+ * Multiple decks can share the same settings group, so updating the settings
+   for one deck updates the settings for the other decks using that group.
+ * If more than one person uses Anki on your computer, you can now create a
+   separate user profile for each user. Each user profile has their own
+   collection of decks, and Anki will remember settings separately for each
+   user. link:manual.html#profiles[More info].
+
+== Terminology ==
+
+ * A 'fact' is now called a 'note'.
+ * Instead of talking about a note's 'model', we now talk about a note's 'type'.
+ * A 'collection' stores all your notes, cards, and so on.
+ * You can divide the cards up into separate groups, called 'decks'.
+ * 'Plugins' are now called 'add-ons'.
+
+[[perday]]
+== Per-day limiting ==
+
+ * The new cards per day limit is controllable per deck, and bounded by the
+   parent decks. This means if "French" has a limit of 20 cards and
+   "French::Lesson 1" and "French::Lesson 2" both have limits of 15 cards,
+   you'll get 15 cards from lesson 1 but only 5 cards from lesson 2.
+
+ * Decks now have a limit on daily reviews as well, which defaults to 100.
+   When the limit is reached, Anki will not present further reviews from that
+   deck, even if there are cards waiting. When the congratulations page is
+   reached, a notice will be displayed, advising the user that for optimum
+   memory, they should consider increasing the daily limit. This change is
+   intended to reduce the sense of being overwhelmed that people feel after
+   returning to Anki from a break. Large due counts can be off-putting, and
+   while it's not optimal for a user to leave due cards waiting, if they give
+   up in frustration that's an even worse outcome.
+
+ * No limit is applied to cards in learning, as the learning count is a
+   product of the number of new cards and reviews that are done each day.
+
+== Shared Decks ==
+
+++++++++++
+<img src="img/2-overview.png" style="float:right; margin: 1em;">
+++++++++++
+
+ * Shared decks can now be browsed on AnkiWeb, and downloaded from your browser.
+ * You can now rate and comment on shared decks.
+ * You can now pull in new cards from a previously downloaded shared deck.
+
+[[selective]]
+== Selective Study ==
+
+Anki's new deck system is based on the following observations:
+
+ * Nested categories like "French->Book 1->Lesson 3" are more intuitive to the
+   typical user than the tags "french book1 lesson3".
+ * Many users struggled with the old selective study system, be it because
+   they'd accidentally used overlapping tags that cancelled out what they
+   wanted to do, or because they'd removed particular tags from review and
+   forgotten they'd done so.
+ * Tag-based limiting did not perform well - slowdowns of 10x or more were not
+   uncommon.
+ * Some users wished to assign different study settings to different cards.
+   This is not practical with tags, as they overlap, and it would require an
+   elaborate system of defining which tags should take precedence for that to
+   work.
+
+Those issues are addressed as follows:
+
+ * In Anki 2, the standard review system is based on the 'current deck',
+   rather than a list of allowed/disallowed tags. Decks can be nested,
+   allowing you to define the order cards should appear in and allowing you to
+   focus on specific subsections individually.
+ * Tag-based study is still possible via a flexible filtered deck
+   system, described further below.
+
+As there's no way to directly map the old selective study feature into the new
+way of doing things, a little manual setup is required after upgrading if you
+were using selective study before.
+
+If you had a small number of tags which you switched between, such as
+"Japanese" and "French", then your best bet is probably to search for each tag
+in turn in the browser, and use "Change Deck" to move the resulting cards into
+separate decks.
+
+If you were using selective study to control introduction of new cards (such
+as blocking lessons 5-18 from being displayed), you could also convert each
+lesson into a deck, but that's somewhat cumbersome. An easier method would be
+to suspend the cards you're not ready for, and then unsuspend them on a
+per-lesson basis when you're ready to study them. You could do it like this:
+
+ 1. Search for "tag:lesson* is:new" to find all new cards with a lesson tag.
+    Select them all, and suspend them.
+ 2. Assuming you were halfway through lesson4 before upgrading, search for
+    tag:lesson4 is:new" and unsuspend any cards that got suspended by the
+    previous step.
+ 3. When you're ready to move on to lesson 5, search for "tag:lesson5" and
+    unsuspend the cards.
+
+== Priorities ==
+
+ * Like selective study, card display order is now controlled via nested decks
+   instead of tags. When you select a given deck, Anki walks the deck
+   and its subdecks in alphabetical order looking for cards. So if you have
+   cards in "French::Vocab", "French::Sentences" and "French:Misc" and you
+   select the "French" deck, cards will be fetched first from Misc, then
+   Sentences, and then Vocab, as that is the alphabetical order of those
+   decks. You can use this property to ensure certain cards are reviewed
+   earlier or later than normal: prepending a "!" like "!Vocab" would ensure
+   vocab cards come first, and prepending a "_" would ensure they come last.
+
+ * For more fine-grained reordering of new card presentation order, the
+   browser now has a reposition command which can change the order of new
+   cards in the queue. You can use this for prioritizing material, changing
+   the order cards of different types will be mixed together, and so on.
+
+== Scheduling ==
+
+++++++++++
+<img src="img/3-review.png" style="float:right; margin: 1em;">
+++++++++++
+
+ * Anki has a much-improved learning mode. When new cards are introduced or
+   old cards forgotten, they can now be shown over a number of increasing
+   intervals before they graduate into normal reviews cards. More information
+   in the manual: link:manual.html#learning[learning]
+ * Reviews are only scheduled on a per-day basis now. If you wish to divide a
+   day's cards into multiple sessions, you can either use the timeboxing
+   feature or simply do a certain number of cards and stop until later.
+ * Only when you fail a review card is the card's lapse count increased. This
+   means that failures while the card is in learning no longer count towards a
+   card being a leech.
+ * You can customize the behaviour when failing reviews. By default failed
+   reviews are put back in the learn queue to be relearnt. You can have a
+   different set of steps for cards that are being relearnt, which allows you
+   to reduce the steps required or require longer waits compared to cards that
+   are being learnt for the first time.
+ * A multiplier is now available to cause Anki to schedule reviews more
+   frequently or less frequently than it would otherwise.
+ * Due counts are now displayed in the more logical new -> learning ->
+   reviewing order. The ETA and progress bars have been removed, and the timer
+   is off by default (in the above screenshot, the due counts are not shown as
+   they are only shown while the question is visible)
+ * The learning count is the count of how many answers are required to
+   complete the queue, not how many cards. With the default settings of two
+   reviews to graduate, the learning count will be twice the number of cards
+   to learn.
+ * In normal study, reviews are always sorted by due order now. If you need to
+   change the order to deal with a backlog, you can do it with a filtered
    deck.
- * Display a progress window when closing the collection, as it may take a
-   while.
- * Fix font size setting in Add Field button.
+ * While there is no explicit option for "show failed cards at end" anymore,
+   you can achieve the same behaviour by setting the learning steps to a
+   length longer than your session length (eg, 1 hour), and increasing "learn
+   ahead limit" in the preferences to that number as well.
 
-= Changes in 2.0.4 =
+[[filtered]]
+== Filtered Decks, Cramming & Reviewing Early ==
 
- * You should no longer need to fix decks in Anki 1 when upgrading; if any
-   errors are found, Anki 2 should automatically fix them.
- * The duplicate check while adding cards now ignores HTML when comparing. If
-   your cards have any bold/italics/colours/etc, please run
-   Tools>Maintenance>Full Sync after upgrading so that the duplicate cache can
-   be updated.
- * Anki will now apply a fuzz to review intervals so they spread out more.
-   This fuzz is not reported on the answer buttons, as it is only calculated
-   when the card is actually answered. You can check it in the review history.
- * If you have a failure multiplier set so that failed reviews have their
-   interval reduced rather than zero out, that multiplier will now be applied
-   if you refail the card in the relearning queue as well.
- * You can now customize note types from the tools menu.
- * Possible fixes for proxy connections. Thanks to Arfrever for the heads up
-   on the new httplib2 version.
+ * Filtered decks allow you to gather cards from other decks based on specific
+   criteria and with a specific ordering.
+ * They are very flexible: they can be used for previewing cards, cramming
+   them before a test, studying particular tags like the old selective study
+   feature, catching up on a backlog with a particular sort order, reviewing
+   ahead, going over the day's failed cards, and more.
+ * They can be set to reschedule based on your answers (like Anki 1.2) or
+   leave the original cards alone (like Anki 1.0).
+ * Filtered decks also replace the old "review early" button. They offer two
+   advantages: you can now choose how many days to look ahead, and you can
+   close Anki and resume reviewing early where you left off, instead of
+   starting with the same cards again like in Anki 1.2.
+ * For more information, please see
+   http://ankisrs.net/docs/manual.html#filtered
 
-Import/export:
+== Syncing ==
 
- * Remember the "allow HTML" setting in the import dialog.
- * Remember import mode across invocations.
- * Add an option to export card q/a rather than notes.
- * Fix importing of LaTeX cache files.
- * When importing a .apkg, make sure the descriptions of the parent decks are
-   imported too.
+ * In most cases, you can now merge changes from multiple devices instead of
+   having to choose which side to keep.
+ * Full syncs are only necessary on the first sync and after changing things
+   like the number of fields in a note. If you're about to make a change that
+   would force a full sync, you're warned about it and given the option of
+   aborting.
+ * Modifying many cards or notes no longer forces a full sync - incremental
+   syncs can now handle even large amounts of data.
+ * Clock drift will no longer lead to incorrect syncs. That said, it's still
+   confusing to move to another machine with a different clock and find
+   greater or fewer cards due, so Anki will still require the clock to be
+   within 5 minutes of the real time.
+ * All data is encrypted before being sent over the internet.
+ * If the connection times out, Anki will automatically retry.
 
-Browser/Add changes:
+== Media & LaTeX ==
 
- * Allow browser font customization on a per-template basis, via the Cards
-   dialog. Should default to system font.
- * Don't lose card selection when using "change deck".
- * Newlines in fields should now be converted to a space in the card list.
- * Allow unlimited nesting of decks in browser sidebar.
- * Don't show 'marked' or 'leeched' tag in browser sidebar, as it's listed
-   near the top already.
- * When an existing search term is reused, move it to top of the history.
- * When Add window opened, start with empty tag list instead of last tags used
-   by that note type.
- * Disable editor buttons until a field is focused.
+ * AnkiWeb now supports media natively, instead of requiring a third-party
+   service like DropBox. No special setup is required - when you sync your
+   decks, their media will be automatically synced with it. Anki monitors the
+   media folder now, so there are no issues with an out of date media DB like
+   there were in the past.
 
-The rest:
+ * Media and LaTeX references in templates are no longer supported,
+   because they don't play well with shared decks. The upgrade routines will
+   notice references like [sound:{{field}}.mp3] in your templates and
+   automatically create a new field with the media tags embedded in it, like
+   [sound:apple.mp3]. If you manually add the references back in, Anki will
+   not notice the media is in use when you check the media DB. Please note
+   that if you had media references comprised of more than one field (eg
+   [sound:{{field1}} - {{field2}}.mp3], these will not be imported
+   automatically and you will manually have to sort this out.
 
- * When restoring from a backup, force a full sync.
- * Don't autorepeat delete key during review.
- * Force full sync if any problems found in db check.
- * When reviewing new cards in a filtered deck, don't log them as a cram
-   review.
- * Fix bug when renaming foo::bar foo to new parent.
- * Catch missing notes in DB check.
- * Fixed a sync error caused by importing note types from an .apkg
- * When checking if note types match in import, consider question/answer
-   templates as well.
- * Fix lapsed reviews getting learn steps instead of relearn steps.
- * Fix pasting of image URLs with %s.
- * Custom study's "preview" should not reschedule cards.
- * Fix custom study search for failed cards with 2+ days.
- * Fix possible error in Makefile
- * Refuse to run on Qt4.6, as it's broken.
- * Don't use native filepicker on OSX due to crash.
- * Force XP theme on Windows so Anki on Win8 looks better.
- * Add Cmd+W shortcut to add cards window & stats window on OSX
- * Improve various error messages.
- * Some tweaks from Ospalh
- * Addon editor tweaks from Thomas
- * Update old beta.ankiweb references.
- * Increase minimum size of editing area so it can't be accidentally hidden.
- * Fix a bug where a progress window would appear blank.
- * Display count of notes deleted.
- * Fix issues where unbolding parts of a field would fail.
- * Disable undo when switching profiles.
- * Fix issues with clozes and <% %>.
- * Prevent access to main window while auth dialog shown.
- * Don't rename if note type rename cancelled.
- * Sort clone: note type items.
- * Clarify that deck description is not in option group.
+ * If you had static media references like `<img src=logo.jpg>` in your
+   templates, those media files will not be imported and you'll need to
+   manually copy them over. It's recommended that you rename them to have a
+   leading underscore, as doing that tells Anki they are used in the template
+   and shouldn't be deleted when checking for unused media.
 
-Add-on authors:
+ * When you upgrade, Anki moves the media in each deck's .media folder into
+   the new collection's media folder. You had different files with the same
+   name in multiple decks, Anki will automatically rename the media for you.
 
-2.0.4 removed some unnecessary imports, which unfortunately broke some add-ons
-that assumed those imports would exist. One example is add-ons that import
-'anki' and then try to access 'anki.stats' without specifically importing
-'anki.stats' first.
+ * If for some reason Anki wasn't able to move your media from its old
+   location, please manually move the media files from the old .media folders
+   into your Documents/Anki/User 1/collection.media folder.
 
-= Changes in 2.0.5 =
+== The Browser ==
 
- * Possible fix for "host not found" errors when syncing via proxy.
- * Fix a problem when creating filtered deck for deck with spaces.
- * Don't fail when importing decks that contain media references to subdirs.
- * Don't open a web browser when 'more...' clicked on study overview.
- * Add "Close" to browser edit menu; support Command+W to close.
- * Better warning when trying to import non-UTF8 content.
- * Possible fix for supermemo importer.
- * Fix 'show duplicates' when fields contain newlines/formatting.
- * When a user has multiple note types with the same name, clicking on one in
-   the browser will now show only cards for that note type, not all of them.
- * Fix bug caused by applying settings to subdecks when a subdeck was a
-   filtered deck.
- * Fix errors caused by burying (re)learning cards. Like suspending, burying
-   now removes the cards from the learning queue first.
- * Other minor updates.
+++++++++++
+<img src="img/4-browsing.png" style="float:right; margin: 1em;">
+++++++++++
 
-= Changes in 2.0.6 =
+ * Tags and decks are displayed in a panel on the left, and can be clicked to
+   search for. Hold down ctrl or command while clicking to append the item to
+   the search string.
+ * Columns are now configurable - right click on the header and you can enable
+   and disable the columns you want to search on. Click on a column to sort by
+   it; drag a column to move it to a different place.
+ * Previously you could ask the browser to sort by a particular field, but
+   doing so caused any notes without that field not to show. In 2.0, each note
+   type has a "sort field". The sort field can be shown as a column, and can
+   be sorted on. Click the "Fields..." button to change the sort field. Anki
+   will automatically sort in numeric order if the field contains only
+   numbers; you don't have to tell it a field is numeric anymore.
+ * Many search operations are faster than before, but some cases are slower.
+   The search box now requires you to hit enter; it will not automatically
+   search as you type, as some people type slower than others and for
+   expensive searches, automatic searching can be painful.
+ * In 1.2, a copy of each field was kept with style information stripped, so
+   that you could search for a word and have matches appear even if part of
+   the word contained style information (bold, etc). Anki 2 drops this cache,
+   as it was expensive to maintain. In Anki 2 if you want to search for
+   partially-styled text, you need to limit yourself to the current
+   sort field (which Anki can use when searching)
 
- * Fix a bug where suspended cards imported from Anki 1 would have the wrong
-   due date.
- * Fix a bug where re-failing a relearning card would not honour the minimum
-   interval setting.
- * Anki will now automatically recover from a syncing error instead of asking
-   the user to post a bunch of numbers on the forum.
- * Fix a bug when anki1.2 decks that hadn't been opened in Anki 1.2.8 were
-   failing to import.
- * Change from ospalh to make it easier to style the type in the answer box.
- * Remove automatic newlines after field reference that were added in 2.0.5.
- * Fix bug when appending note type to an existing search.
+////
+, or go to Edit>Browser
+   Options where you can enable searching in formatting. Beware that when you
+   turn on full searching, searches will be considerably slower on large
+   decks.
+////
 
-= Changes in 2.0.7 =
+ * Selections are now preserved when the search criteria is changed, so you
+   can do things like select a bunch of cards, then click on "New" in the side
+   bar to narrow the selection to only cards that are new. Preserving the
+   selection of many cards at once is slow however, so if the selection is too
+   large it is discarded on the next search.
+ * Rescheduling behaves differently now. Cards have their interval and ease
+   reset but keep their review history. If you need to remove a card's review
+   history, please search for rescheduling in the manual.
+ * The browser now exposes the full review history. Click the info button on
+   the toolbar to see it. Note that this data was stored differently in
+   previous versions, so the display of whether a card was being learnt,
+   reviewed, relearnt or so on may not always be correct for old data.
 
- * Add a "suspend card" option to the review screen.
- * Don't set browser font/size when cards are created, so they take on the
-   system font until customized.
- * Work around slow initial audio playing on Windows caused by antivirus
-   software.
- * Allow Qt4.6 again, but warn on startup that it has known issues.
- * Work around for Japanese furigana on Qt4.6
- * Fix incorrect error message when media sync fails.
- * Fix crashes on Windows/Linux when performing a long search operation in the
-   browser.
- * Fix links appearing twice when clicked in card layout window.
- * Conditional tags now ignore formatting, and require actual text to be
-   considered non-empty.
- * Don't trigger links when ctrl+shift etc pressed on Windows
- * Better warning when sync fails due to Linux distro packaging error.
- * Fix "Focus Note" menu option in the browser.
+== Card Layout ==
 
-[[latest]]
-= Changes in 2.0.8 =
+++++++++++
+<img src="img/5-templates.png">
+++++++++++
 
- * Fix recording on Windows.
- * Better error when Anki blocked by firewall.
- * Fixed an issue with upgrading some Anki 1 decks.
- * Allow apostrophe in deck names.
- * Some changes which should speed up upgrading old Anki 1 decks.
- * When rescheduling is off in a filtered deck, show "(end)" on buttons that
-   will end studying of that card.
- * Fix extra spaces being included when showing tags on card.
- * Make sure we switch back to the previous deck when creation of a filtered
-   deck cancelled.
- * Fix a bug that was causing the automatically generated Reading field in the
-   Japanese Support add-on to be blanked out again if you clicked directly on
-   the Reading field.
+ * In Anki 1.2, {{ field }} references were automatically wrapped in style
+   information. This meant that the prompt text and field text of a template
+   like "What is the capital city of {{ country }}?" often ended up different,
+   and users had to use {{{ field }}} instead and figure out the necessary
+   HTML.
 
-= Download =
+ * In 2.0, there is no implicit styling: instead of choosing fonts, colors,
+   alignment and so on in the GUI, it's all embedded in the template as
+   standard HTML and CSS. As a bonus, this allows you to do things like use a
+   gradient or image for your card background if you wish.
 
-Download links are available at http://ankisrs.net/anki2.html
+ * The "hide question when showing answer" option has gone away: Anki always
+   replaces the question with the answer now. Templates default to including
+   the question fields on the answer text however, so Anki will behave like
+   always. The "show divider between question and answer" option has gone away
+   too, as the divider is included on the template and can be removed if
+   desired.
+
+[[cardgen]]
+== Card Generation & Deletion ==
+
+ * In previous versions of Anki, there was a button in the top right of the
+   add cards screen that let you enable and disable card templates. As the
+   button would only control which cards would be added when you added new
+   content, if you wanted to add extra cards to previously added content, you
+   had to use the "generate cards" feature in the browser. This caused a lot
+   of confusion.
+ * In Anki 2, instead of manually specifying which cards to create, cards are
+   created depending on whether fields are empty or not. By default, a card
+   will be created if at least one field on the front template is non empty.
+   You can set Anki up to only create particular cards if certain fields are
+   not blank.
+ * If you wish to selectively add cards (such as adding a reverse card for
+   only your difficult content), you can add a field to your notes that
+   controls whether the reverse card will be generated. If you put any text in
+   the field (such as "y"), the card is generated, and if you leave the field
+   blank, the card is not created.
+ * When Anki 2 upgrades your old decks, it will automatically add such a
+   required field to notes where you have a card enabled for some but not all
+   of the notes.
+ * There is no option to manually delete individual cards in Anki 2, as if you
+   manually deleted a card, Anki would automatically add it again if fields
+   were not empty. Instead, you can remove individual cards by blanking out
+   one of their required fields.
+ * Anki doesn't immediately remove cards when one of their required fields is
+   blanked out, because that could lead to data loss. To remove cards with
+   missing required fields, run Tools>Maintenance>Empty Cards.
+ * As blanking out fields is a few more steps than just pressing the delete
+   button, if you need to remove a number of cards during review, you may find
+   it easier to suspend them instead, and then use find&replace at a later
+   date to blank out a required field for all the suspended cards in one go.
+ * For more information about selectively adding cards, please see
+   link:manual.html#_card_generation[this section] of the manual.
+
+[[dupes]]
+== Fields and Duplicates ==
+
+ * You can no longer specify whether a field should be unique or required.
+   Anki makes sure the first field is both provided and unique, but does not
+   check the other fields. Anki did not perform well when many cards were
+   marked unique (since it has to cache all that information), and a single
+   field is sufficient for determining if a given subject has been entered in
+   before. If you wish to look for accidental duplicates in secondary fields
+   due to typos, you can use the Find Duplicates feature in the browser.
+
+ * For more info, please see <<dupes2,this question>>.
+
+ * Fields can now be marked sticky. This means that when you add notes, the
+   field content is not erased and is left in the field. This is useful when
+   you're adding a series of notes that have similar field content.
+
+== Performance ==
+
+ * Decks are considerably smaller now. Most people should see a size drop of
+   3-6x.
+ * Many operations have been optimized. You should find your decks load much
+   faster now, and studying should be smoother. These changes should be
+   especially pronounced on the mobile clients.
+ * Anki should now perform much better when your hard disk is being heavily
+   accessed.
+ * Graphs load much faster, and it's now possible to see graphs of your entire
+   collection at once.
+
+== The Editor ==
+
+ * Fields now dynamically expand to fit their content.
+ * Fields can now display complex HTML without mangling it.
+ * You can now jump to a conflicting note when conflicts are detected
+ * Images are shown at a reduced size in editing mode.
+
+[[cloze]]
+== Cloze Deletion ==
+
+ * Cloze deletion now makes it easy to generate multiple clozes from a single
+   body of text. All of the clozes share the same note, and edits to the note
+   will update all cards at once.
+ * Cloze deletion works with LaTeX now, too.
+ * Clozes appear as bold and blue like before, but they can now be customized
+   in the template.
+ * Clozes made with previous versions will not be converted to the new
+   style; it only applies to newly made cards.
+
+== Graphs and Stats ==
+
+++++++++++
+<img src="img/6-graphs.png"  style="float:right; margin: 1em;">
+++++++++++
+
+ * The deck statistics and graphs have been merged into a single report that
+   contains both text and graphs, and they have been completely rewritten in
+   the process. There's now more information available, and it's easier to
+   compare things like the cumulative work spent on reviews vs relearning vs
+   initial learning.
+
+ * The old period selection boxes have been replaced with a single box down
+   the bottom, allowing you to change between a monthly, yearly, and deck life
+   view of the data. The data is chunked into weeks or months in the larger
+   graphs, which both performs better and offers a clearer view of trends.
+
+ * There is a button to save the graphs to an image, to make it easier to
+   share your graphs with friends or teachers.
+
+== Spacing Siblings ==
+
+ * When you start studying, the new cards for the day are gathered - 20 by
+   default. When each card is shown, all its siblings are moved to the end of
+   the queue, so they're spaced as far apart in those 20 cards as possible.
+ * If you want new siblings to be introduced further apart, you can put them
+   in different decks or use the reposition feature of the browser.
+ * When determining the next review time of a review card, Anki now checks the
+   surrounding days and tries to place the review on a day when no siblings
+   have reviews. The possibilities to consider are configurable.
+
+== Saving & Undoing ==
+
+ * The "save" and "save as" operations have been removed. Saving is now
+   transparent to the user, and happens every 5 minutes of adding/reviews, and
+   after various other operations. By having more control over the saving
+   process, Anki can save more efficiently, and revert changes when an
+   operation goes wrong.
+ * The undo system has been simplified. The old method was comprehensive, but
+   made updates to the deck considerably more expensive, and could cause
+   inconsistencies under rare circumstances. Multi-level undo has been
+   preserved for reviews, but other destructive operations now have a single
+   level undo, which is guaranteed to restore the deck to a consistent state.
+
+== License ==
+
+ * In 2.0, Anki will be moving from the GNU GPL3 license to another GNU
+   license: the AGPL3. The Affero license is compatible with the GPL3, so
+   existing plugins do not need to be relicensed. The major difference from
+   the GPL3 is that the license requires people who modify the code and run it
+   on a web service to make that modified code available to users of the web
+   service. It effectively means a company can't make an online service using
+   Anki's code unless they reciprocate by sharing their changes. This clause
+   should not affect regular users at all.
+
+ * Also of note is that ankiqt is now dual licensed like libanki was. I don't
+   have any immediate plans to take advantage of this, but it opens up the
+   possibility of custom versions in the future for companies who want to
+   distribute a stripped down and/or content-protected version of Anki with their
+   content for a fee. The desktop version will continue to be released as open
+   source, and I have no plans to change that.
+   
+ * Because much of the code has been rewritten in 2.0 there is very little
+   code contributed by other people remaining. I've contacted the authors of
+   the remaining code and asked for their permission for the licensing change.
+   I don't think I've missed anyone, but if I have, please let me know.
+
+== Add-ons ==
+
+ * Because of the extensive changes, almost all add-ons will require some
+   level of modification to work with 2.0. Some add-ons have been ported
+   already, others will likely come in the future.
+ * There's now an add-on writing guide link:addons.html[here] that also covers
+   the main things to be aware of when porting an old add-on.
+
+[[missing]]
+== Missing Decks/Cards ==
+
+If you find a deck missing cards or empty when upgrading, this is because in
+the past you have exported cards into another deck and studied both decks in
+parallel. Even if you modified the appearance of the cards in one deck, the
+cards were originally the same, and Anki continues to consider them the same,
+as Anki was not intended to be used in this way.
+
+This means that when you try to import the cards in one deck into the other,
+nothing happens (on in the case of 2.0, you end up with the cards in one deck
+appearing but the cards in the other deck not appearing).
+
+To fix this, please install Anki 1.2.8 again from the bottom of the Anki 2
+page. Then:
+
+ * Download
+   http://ankisrs.net/download/mirror/archive/plugins-1.2/Make_cards_unique.zip[this
+   zip file]
+ * Open Anki 1.2, and go to Settings>Plugins>Open Plugin Folder
+ * Extract the .py file from the .zip you downloaded, and place it in the
+   plugins folder.
+ * Restart Anki 1.2
+ * For each deck that didn't import, open it and choose Tools>Make Cards
+   Unique.
+
+After you've done this, you should be able to File>Import the decks in Anki
+2.0.
+
+== Questions ==
+
+*Why are all the decks in one file now?*
+
+This change makes many parts of the UI simpler, and combined with the
+performance improvements in version 2, actually performs faster than before.
+For scratch decks, you can create a separate profile.
+
+[[dupes2]]
+*Why can't we mark an arbitrary number of fields as unique?*
+
+Consider the notes section of link:manual.html#basics[the basics]. All three
+of those fields are unique, and so users could (and often did) mark all of
+them as unique in previous versions. The problem is that in order to show
+duplicates, Anki needs to either search all similar fields (which is slow), or
+maintain a cache that rapidly grows in size as more fields are added to it.
+
+In the above example, only one field is actually required for determining if
+you've entered a given element before. Whether it's the element name, number
+or symbol you've chosen, by the time you type the first field, you'll be aware
+if you've previously entered the same note before. For the purposes of
+stopping you from adding duplicate notes that you'll have to delete, one field
+is enough.
+
+Languages are a different matter. If you're studying from foreign->native and
+native->foreign, and you're studying individual words without context, you may
+find you've entered the same meaning on two different notes. While it's not
+optimal that you're no longer notified in such a case, there's a key
+difference between this case and the case above: in the case above, if we
+weren't notified, then we'd have wasted effort typing in the same information
+twice. In this case, the duplicate information doesn't need to be thrown away,
+but simply augmented so that it can be distinguished from the existing
+material. While you're likely to realize you have duplicate meaning during
+reviews when you see a prompt and think of a different answer, there is also a
+"Find Duplicates" function in the browser.
+
+Because "Find Duplicates" doesn't need to run each time you press a key, it
+could potentially be more sophisticated in the future. While it is limited to
+exact matches at the moment, extending it to fuzzy matching in the future is
+not out of the question.
+
+*Why are you moving away from DropBox?*
+
+Anki 1.2's media syncing caused more confusion than almost any other aspect of
+the app. Even when it was working as designed, it was difficult for users to
+set up, and was prone to errors when users changed their media folder without
+updating the media database. Its usability decreased even further when DropBox
+pushed out a silent update that broke third-party apps that were trying to
+locate the DropBox folder location. And at the end of July 2012, DropBox will
+completely stop providing Public links to new accounts, indicating they don't
+want apps providing functionality like Anki did.
+
+I have no immediate plans to charge for media hosting, but in the longer term
+I will probably need to introduce premium accounts for people with media over
+a certain size so that I can cover the increased hosting costs which I'm
+currently paying for out of my pocket.
+
+If you're concerned about having to pay in the future, media syncing can be
+disabled in Anki's settings so that only the card/note data is synchronized.
+You are then free to use any third-party synchronization service to keep the
+media folders in sync between separate computers.
+
+*Why are reviews only scheduled on a per-day basis now?*
+
+ * The SuperMemo algorithm was not designed to work on a sub-day basis, and is
+   not accurate to that level.
+ * In previous versions of Anki, in order to review in the evening and then
+   again the next morning, cards had to be scheduled with small intervals like
+   8 hours. Unfortunately this meant that cards reviewed in the morning would
+   become due again in the evening, when they are better reviewed after a
+   night's sleep.
+ * By making all of a day's reviews due in the morning, you can both see at a
+   glance how many cards are due that day, and study as many or as few as you
+   desire. When you have a busy morning you can leave the cards until later,
+   and likewise when you have a lot of free time, you can do all the cards in
+   one session. When cards become due throughout the day, it's not easy to
+   find out how many more need to be done that day, and you have to jump
+   through hoops to study more than are currently due.
+ * For the initial learning steps where sub-day scheduling is more important,
+   you can use Anki's learning mode instead.

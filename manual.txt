@@ -1,11 +1,10 @@
-:toc:
+++++++++++++++++++++++++++++++
+<h1>Anki 2.0 User Manual</h1>
 
-Anki 2.0 User Manual
-____________________
-Damien Elmes
-
-For questions regarding this manual, please see
-http://ankisrs.net/docs/help.html
+<script>
+    document.getElementById("navmanual").className += " active";
+</script>
+++++++++++++++++++++++++++++++
 
 Intro Videos
 ============
@@ -2716,8 +2715,7 @@ brackets, you may write them differently:
 == Importing Media ==
 
 If you want to include audio and pictures from a text file import, copy the
-files into the collection.media folder, located in the same directory as your
-collection. If it doesn't exist, you can create it. *Do not put subdirectories
+files into the <<files,collection.media folder>>. *Do not put subdirectories
 in the media folder, or some features will not work.*
 
 After you've copied the files, change one of the fields in your text file as
@@ -3233,7 +3231,7 @@ Does [latex]\begin{math}\sum_{k = 1}^{\infty}\frac{1}{k}\end{math}[/latex] conve
 
 will produce this when the flashcard is viewed:
 
-image:convergence_question.png[]
+image:img/convergence_question.png[]
 
 The formula in the example above is called a 'text formula', because it is displayed right within the non-mathematical text.  In contrast, the following example shows a 'displayed formula':
 
@@ -3243,7 +3241,7 @@ Does the sum below converge?
 [latex]\begin{displaymath}\sum_{k = 1}^{\infty}\frac{1}{k}\end{displaymath}[/latex]
 -----
 
-image:convergence_question_2.png[]
+image:img/convergence_question_2.png[]
 
 'Text formulas' and 'display formulas' are the most common type of LaTeX
  expressions, so Anki provides abbreviated versions of them.  Expressions of
@@ -3849,5 +3847,3 @@ memory: http://www.supermemo.com/
 
 There's a free list of open college courses available at
 http://www.onlinecourses.com/
-
-
