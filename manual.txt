@@ -1482,7 +1482,7 @@ note types are generated differently:
  * Anki looks on the front template for one or more cloze replacements,
    like \{\{cloze:FieldName}}. 
  * It then looks in the FieldName field for all cloze references, like
-   \{\{c1:text}}.
+   \{\{c1::text}}.
  * For each separate number, a card will be generated.
 
 Conditional generation provides a special field so you can check which card
@@ -1586,11 +1586,11 @@ conflict:
 -----
 
 [[columntemplates]]
-== Column Templates ==
+== Browser Appearance ==
 
 If your card templates are complex, it may be difficult to read the question and
 answer columns (called "Front" and "Back") in the <<cardlist,card list>>.  The
-"column templates" option allows you to define a custom template to be used only
+"browser appearance" option allows you to define a custom template to be used only
 in the browser, so you can include only the important fields and change the
 order if you desire. The syntax is the same as in standard card templates.
 
