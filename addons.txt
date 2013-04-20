@@ -16,6 +16,15 @@ not only can they extend the program, but they can also modify arbitrary
 aspects of it, such as altering the way scheduling works, modifying the UI,
 and so on.
 
+No special development environment is required to develop add-ons. All you
+need is a text editor. If you're on Windows or a Mac, please use the packaged
+version of Anki that's provided on the website, as there are no instructions
+available for building it from scratch on those platforms.
+
+While you can write plugins in a simple text editor like notepad, you may want
+to look into an editor that can provide syntax highlighting (colouring of the
+code) to make things easier.
+
 Anki is comprised of two parts: 
 
 'libanki' contains all the "backend" code - opening collections, fetching and
@@ -26,11 +35,6 @@ in command line programs to access Anki decks without the GUI.
 bindings for the cross-platform GUI toolkit Qt. PyQt follows Qt's API very
 closely, so the http://doc.qt.nokia.com/4.7/index.html[Qt documentation] can
 be very useful when you want to know how to use a particular GUI component.
-
-No special development environment is required to develop plugins. All you
-need is a text editor. While you can write plugins in a simple text editor
-like notepad, you may want to look into an editor that can provide syntax
-highlighting (colouring of the code) to make things easier.
 
 When Anki starts up, it checks for .py files in the Documents/Anki/addons
 folder, and runs each one it finds. When add-ons are run, they typically
