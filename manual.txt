@@ -2578,6 +2578,8 @@ Filtered decks can be useful for catching up when you've fallen behind in your
 reviews. One Anki user describes the way they use the filtered decks to catch
 up as follows:
 
+[quote, Andreas Klauer, Community Forum]
+____
   I did this for a backlog of 800 cards with filtered subdecks. Worked very well
   for me.
   
@@ -2597,6 +2599,7 @@ up as follows:
   addition to the ones that become due regularly. You can still motor through
   them when you feel like it - or you can do a specific number per day like
   you would for new cards. Up to you.
+_____
   
 = Leeches =
 
