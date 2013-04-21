@@ -6,9 +6,6 @@ TOC_FILES = manual.mako am-manual.mako changes.mako addons.mako \
     am-changes.mako
 
 all: save build
-	@echo building mako
-	@rsync -a *.mako $(WEB)/docs/
-	@make -C $(WEB) build
 	#perl -i -pe 's/font-size: 1em;/font-size: 2em;/g' am-upgrade.html
 	rsync -a img $(WEB)/docs/
 	rsync -a $(WEB)/docs/am-manual.html $(AMHELP)
@@ -20,6 +17,9 @@ save:
 	git pull --no-edit soren master
 
 build: $(MAKO)
+	@echo building mako
+	@rsync -a *.mako $(WEB)/docs/
+	@make -C $(WEB) build
 
 $(TOC_FILES): TOC := 1
 
