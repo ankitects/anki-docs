@@ -1,6 +1,6 @@
 MAKO := $(patsubst %.txt,%.mako,$(wildcard *.txt))
 CWD = $(shell pwd)
-WEB = /Users/dae/Lib/web/ankisrs.net
+WEB = /Users/dae/Web/ankisrs.net
 AMHELP = ../mob/AnkiMobile/Resources/HTML/help.html
 TOC_FILES = manual.mako am-manual.mako changes.mako addons.mako \
     am-changes.mako
