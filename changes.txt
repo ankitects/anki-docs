@@ -812,6 +812,9 @@ per-lesson basis when you're ready to study them. You could do it like this:
  * Because of the extensive changes, almost all add-ons will require some
    level of modification to work with 2.0. Some add-ons have been ported
    already, others will likely come in the future.
+ * After upgrading, please visit the add-ons site to look for new versions of
+   the add-ons you were using in Anki 1. The add-ons site is available from
+   the Tools>Add-Ons menu inside Anki 2.
  * There's now an add-on writing guide link:addons.html[here] that also covers
    the main things to be aware of when porting an old add-on.
 
