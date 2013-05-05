@@ -1586,6 +1586,10 @@ conflict:
 <%latex field%>
 -----
 
+While this most commonly occurs with LaTeX, the solution presented here will
+work in any situation where you need to include {{ }} on cards, regardless of
+whether LaTeX is used or not.
+
 [[columntemplates]]
 == Column Templates ==
 
