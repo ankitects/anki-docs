@@ -133,7 +133,7 @@ mw.reset()
 
 -----
 from anki.importing import TextImporter
-file = open("/path/to/text.txt")
+file = u"/path/to/text.txt"
 # change to the basic note type
 m = mw.col.models.byName("Basic")
 mw.col.models.setCurrent(m)
