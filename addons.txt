@@ -157,6 +157,10 @@ from anki import Collection
 col = Collection("/path/to/collection.anki2")
 -----
 
+If you make any modifications to the collection outside of Anki,
+you must make sure to call col.close() when you're done,
+or those changes will be lost.
+
 = The Database =
 
 When you need to perform operations that are not already supported by libanki,
