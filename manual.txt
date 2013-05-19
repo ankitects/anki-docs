@@ -748,7 +748,7 @@ review limit. This ordering ensures that no cards will be left waiting
 indefinitely, but it means that if you introduce new cards, their reviews
 won't appear until you've gotten through your backlog.
 
-If you wish to change the order the overdue reviews, you can do so by creating
+If you wish to change the order of the overdue reviews, you can do so by creating
 a filtered deck, as described in a later section of the manual.
 
 When you answer cards that have been waiting for a while, Anki factors in that
