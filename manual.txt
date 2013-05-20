@@ -2136,7 +2136,8 @@ Things to note from the above:
    all of the terms
  * You can use "or" if you only need one of the terms to match
  * You can prepend a minus sign to a term to find notes that don't match
- * If you want to search for something including a space, enclose it in quotes
+ * If you want to search for something including a space or parenthese, enclose
+   it in quotes.
 
 === Limiting to a field ===
 
