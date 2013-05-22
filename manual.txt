@@ -543,6 +543,15 @@ change to the study screen.
 You can click the gears button to the right of a deck in order to rename or
 delete decks, or customize their options.
 
+WARNING: Decks are designed to divide your content up into broad categories
+that you wish to study separately, such as English, Geography, and so on. Please
+don't go crazy and add hundreds of decks, as this will make Anki slower,
+especially on mobile clients. For more fine-grained categorization, it's a good
+idea to use tags instead, or separate fields on your notes such as "book" and
+"page number". Anki's filtered deck feature allows you to create temporary
+decks from tags or field content when you need to focus on particular material,
+without needing to keep around many decks all the time.
+
 Study Overview
 --------------
 
