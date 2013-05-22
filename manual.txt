@@ -533,7 +533,8 @@ recommended, for the following reasons:
     or you've added a number of decks under a single parent deck, you'll end up
     seeing all the "chapter 1" or "food verb" cards together. This makes it
     easier to answer the cards, as you can guess them from the context, which
-    leads to weaker memories.
+    leads to weaker memories. When you need to recall the word or phrase outside
+    Anki, you won't have the luxury of being shown related content first!
   * Creating all the separate decks also slows down the inputting stage.
   * Anki was not designed to handle many decks, and it will slow down as you
     add more - especially if you're studying on a mobile client.
