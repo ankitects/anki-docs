@@ -485,6 +485,17 @@ Customizing Fields
 To customize fields, click the "Fields..." button when adding or editing a
 note.
 
+You can add, remove, or rename fields by clicking the appropriate buttons. To
+switch the order in which the fields appear in this dialog and the add notes
+dialog, you can use the reposition button, which asks for the numerical
+position you want the field to have. So if you want to move a field to be the
+new first field, enter "1".
+
+The options at the bottom of the screen allow you to edit various properties of
+the fields to be used when adding and editing the cards. This is not where you
+customize what appears on your cards when reviewing; for this, please see
+<<templates,templates>>.
+
 *Editing Font* allows you to customize the font and size used when editing
 notes. This is useful if you want to make unimportant information smaller, or
 increase the size of foreign characters which are hard to read. The changes
@@ -1079,8 +1090,11 @@ this, add the following to both the front and back template:
 {{type:cloze:Text}}
 -----
 
-Unlike regular cards, this must be added to both sides on a cloze note type. If
-there are multiple sections elided, you can separate the answers in the text
+Unlike regular cards, this must be added to both sides on a cloze note type.
+Both {{cloze:Text}} ''and'' {{type:cloze:Text}} must be present on the back
+template for it to work.
+
+If there are multiple sections elided, you can separate the answers in the text
 box with a comma.
 
 NOTE: For advanced users, the "the correct answer was" part of the text can be
