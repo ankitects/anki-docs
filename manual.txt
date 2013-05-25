@@ -1083,16 +1083,21 @@ you to decide how well you remembered or not.
 NOTE: Only one typing comparison can be used on a card. If you add the above
 text multiple times, it will not work.
 
-It is also possible to type in the answer for cloze deletion cards. To do
-this, add the following to both the front and back template:
+It is also possible to type in the answer for cloze deletion cards. To do this,
+add {{type:cloze:Text}} to both the front and back template, so the back looks
+something like this:
 
 -----
+{{FrontSide}}
+
+<hr id=answer>
+
+{{cloze:Text}}
 {{type:cloze:Text}}
 -----
 
-Unlike regular cards, this must be added to both sides on a cloze note type.
-Both {{cloze:Text}} ''and'' {{type:cloze:Text}} must be present on the back
-template for it to work.
+Note that unlike with regular cards, this must be added to both sides on a
+cloze note type.
 
 If there are multiple sections elided, you can separate the answers in the text
 box with a comma.
