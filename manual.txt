@@ -342,7 +342,7 @@ Each type of note has its own set of fields and card templates. It's a good
 idea to create a separate note type for each broad topic you're studying. In
 the above French example, we might create a note type called "French" for
 that. If we wanted to learn capitals cities, we could create a separate note
-type for that as well.
+type for that as well, with fields such as "Country" and "Capital City".
 
 When Anki checks for duplicates, it only compares other notes of the same
 type. Thus if you add a capital city called "orange" using the capital city
