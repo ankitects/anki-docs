@@ -216,10 +216,10 @@ this deck and use it for other cards.
 
 Decks are best used to hold broad categories of cards, rather than specific
 topics such as "food verbs" or "lesson 1". For more info on this, please see
-<<manydecks,this section>>.
+the <<manydecks,using decks appropriately>> section.
 
 For information on how decks affect the order cards are displayed in, please
-see <<displayorder,this section>>.
+see <<displayorder,display order>> section.
 
 Notes & Fields
 ---------------
