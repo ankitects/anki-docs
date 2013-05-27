@@ -1181,7 +1181,7 @@ NOTE: Only one typing comparison can be used on a card. If you add the above
 text multiple times, it will not work.
 
 It is also possible to type in the answer for cloze deletion cards. To do this,
-add {{type:cloze:Text}} to both the front and back template, so the back looks
+add \{\{type:cloze:Text}} to both the front and back template, so the back looks
 something like this:
 
 -----
