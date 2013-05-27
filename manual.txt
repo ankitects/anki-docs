@@ -201,12 +201,10 @@ deck can have different settings, such as how many new cards to show each day,
 or how long to wait until cards are shown again.
 
 Decks can contain other decks, which allows you to organize decks into a tree.
-Anki uses "::" to show different levels. A deck called "Chinese::Hanzi::Lesson
-1" refers to a "Lesson 1" deck, which is part of the Hanzi deck, which is part
-of the Chinese deck. If you select "Lesson 1" then only cards from lesson 1
-will be shown for study. If you select "Chinese," then each of the lessons will
-be shown in sequence. (If you normally want to study the groups in random order,
-you should use tags instead.)
+Anki uses "::" to show different levels. A deck called "Chinese::Hanzi" refers
+to a "Hanzi" deck, which is part of a "Chinese" deck. If you select "Hanzi"
+then only the Hanzi cards will be shown; if you select "Chinese" then all
+Chinese cards, including Hanzi cards, will be shown.
 
 To place decks into a tree, you can either name them with "::" between each level,
 or drag and drop them from the deck list.
@@ -216,103 +214,164 @@ separated from other decks will go here. Anki will hide the default deck if it
 contains no cards and you have added other decks.  Alternatively, you may rename
 this deck and use it for other cards.
 
+Decks are best used to hold broad categories of cards, rather than specific
+topics such as "food verbs" or "lesson 1". For more info on this, please see
+<<manydecks,this section>>.
+
 For information on how decks affect the order cards are displayed in, please
 see <<displayorder,this section>>.
 
-Notes
-------
+Notes & Fields
+---------------
 
-Using paper flashcards or a traditional flashcard program, we might make the
-following cards:
+When making flashcards, it's often desirable to make more than one card that
+relates to some information. For example, if you're learning French, and you
+learn that the word "bonjour" means "hello", you may wish to create one card
+that shows you "bonjour" and asks you to remember "hello", and another card
+that shows you "hello" and asks you to remember "bonjour". One card is testing
+your ability to recognize the foreign word, and the other card is testing your
+ability to produce it.
 
------
-Q: Chemical symbol for oxygen?
-A: O
------
+When using paper flashcards, your only option in this case is to write out the
+information twice, once for each card. Some computer flashcard programs make
+life easier by providing a feature to flip the front and back sides. This is
+an improvement over the paper situation, but there are two major downsides:
 
-and
+ * Because such programs don't track your performance of recognition and
+ production separately, cards will tend not to be shown to you at the optimum
+ time, meaning you forget more than you'd like, or you study more than is
+ necessary.
+ * Reversing the question and answer only works when you want exactly the same
+ content on each side. This means it's not possible to display extra info on the
+ back of each card for example.
 
------
-Q: Chemical number for oxygen?
-A: 8
------
+Anki solves these problems by allowing you to split the content of your cards
+up into separate pieces of information. You can then tell Anki which pieces of
+information you want on each card, and Anki will take care of creating the
+cards for you, and updating them if you make any edits in the future.
 
-and
-
------
-Q: Chemical name for O?
-A: oxygen
------
-
-There are a number of downsides to this traditional approach. A lot of typing
-is involved. It's also easy to accidentally make mistakes, and if you later
-realize you spelt oxygen wrong, you have to edit each card in turn to correct
-it. You may also end up seeing one question right after the other, which isn't
-so useful.
-
-In Anki, instead of entering in cards directly, you add notes about things,
-and tell Anki how you want the notes to be turned into cards. In the above
-example, there were three related pieces of information:
+Imagine we want to study French vocabulary, and we want to include the page
+number on the back of each cards. We want our cards to look like this:
+like this:
 
 -----
-Name: oxygen
-Symbol: O
-Number: 8
+Q: Bonjour
+A: Hello
+   Page #12
 -----
 
-To store this information, we might create a new type of note, and call it
-something like "Atomic Elements", giving it three fields: name, symbol and
-number. We can then tell Anki to create some cards based on those fields.
+And:
+
+-----
+Q: Hello
+A: Bonjour
+   Page #12
+-----
+
+In this example, we have three pieces of related information: a French word,
+an English meaning, and a page number. If we put them together, they'd look
+like this:
+
+-----
+French: Bonjour
+English: Hello
+Page: 12
+-----
+
+In Anki, this related information is called a 'note', and each piece of
+information is called a 'field'. So we can say that this type of note has
+three fields: French, English and Page.
 
 Card Templates
 --------------
 
-In order for Anki to create cards, we need to give it a blueprint that says
-which fields should be displayed on the front or back of each card. This
-blueprint is called a 'template'.
+In order for Anki to create cards based on our notes, we need to give it a
+blueprint that says which fields should be displayed on the front or back of
+each card. This blueprint is called a 'card template'. Different types of
+notes can have different templates.
 
-For example, imagine we have the note mentioned above, and we want a card that
-shows:
+In the above French example, we wanted the recognition card to look like this:
 
 -----
-Q: Chemical symbol for oxygen?
-A: O
+Q: Bonjour
+A: Hello
+   Page #12
 -----
 
 To do this, we can set the template question and answer to:
 
 -----
-Q: Chemical symbol for {{Name}}?
-A: {{Symbol}}
+Q: {{French}}
+A: {{English}}<br>
+   Page #{{Page}}
 -----
 
 By surrounding a field name in curly brackets, we tell Anki to replace that
 section with the actual information in the field. The information not
 surrounded by curly brackets remains the same on each card.
 
-Now let's create two more templates:
+The <br> is a special code that tells Anki to move to the next line. More
+information is available in the Cards & Templates section.
+
+Notice how we don't have to type "Page #" when adding material - it's added
+automatically to every card.
+
+The production card template is created in a similar way:
 
 -----
-Q: Chemical number for {{Name}}?
-A: {{Number}}
+Q: {{English}}
+A: {{French}}<br>
+   Page #{{Page}}
 -----
 
-and
+Once a card template has been created, every time you add a new note, a card
+will be created based on that template. Templates make it easy to keep the
+formatting of your cards consistent, and can greatly reduce the amount of
+effort involved in adding information. They also mean Anki can ensure related
+cards don't appear too close to each other, and mean you can fix a typing
+mistake once and have all the related cards updated at once.
 
------
-Q: Chemical name for {{Symbol}}?
-A: {{Name}}
------
+To add and edit card templates, click the "Cards..." button while adding or
+editing notes.
 
-Once a template has been created, every time you add a new note, a card will be
-created based on that template. Templates make it easy to keep the formatting
-of your cards consistent, and can greatly reduce the amount of effort involved
-in adding information. They also mean Anki can ensure related cards
-don't appear too close to each other, and mean you can fix a typing mistake
-once and have all the related cards updated at once.
+Note Types
+----------
 
-To add and edit templates, click the "Cards..." button while adding or editing
-notes.
+Anki allows you to create different types of notes for different material.
+Each type of note has its own set of fields and card templates. It's a good
+idea to create a separate note type for each broad topic you're studying. In
+the above French example, we might create a note type called "French" for
+that. If we wanted to learn capitals cities, we could create a separate note
+type for that as well.
+
+When Anki checks for duplicates, it only compares other notes of the same
+type. Thus if you add a capital city called "orange" using the capital city
+note type, you won't see a duplicate message when it comes time to learn how
+to say "orange" in French.
+
+When you create a new collection, Anki automatically adds some standard note
+types to it. These note types are provided to make Anki easier for new users,
+but in the long run it's recommended you define your own note types for the
+content you are learning. The standard note types are as follows:
+
+ Basic :: Has Front and Back fields, and will create one card. Text you
+ entered in Front will appear on the front of the card, and text you entered
+ in Back will appear on the back of the card.
+
+ Basic (and reversed card) :: Creates two cards for the text you enter: one
+ from front->back and one from back->front.
+
+ Basic (optional reversed card) :: This a front->back card, and optionally a
+ back->front card. To do this, it has a third field called "Add Reverse". If
+ you enter any text into that field, a reverse card will be created. More
+ information about this is available in the Cards & Templates section.
+
+ Cloze :: A note type which makes it easy to select text and turn it into a
+ cloze deletion (eg "Man landed on the moon in [...]" -> "Man landed on the
+ moon in [1979]"). More information is available in later sections.
+
+To add your own note types and modify existing ones, you can use Tools>Manage
+Note Types.
 
 Collection
 -----------
@@ -530,6 +589,7 @@ your note types.
 Searching is non-consecutive - please see <<studydeck,this section>> for more
 information.
 
+[[manydecks]]
 Using Decks Appropriately
 --------------------------
 
