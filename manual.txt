@@ -345,7 +345,7 @@ that. If we wanted to learn capitals cities, we could create a separate note
 type for that as well, with fields such as "Country" and "Capital City".
 
 When Anki checks for duplicates, it only compares other notes of the same
-type. Thus if you add a capital city called "orange" using the capital city
+type. Thus if you add a capital city called "Orange" using the capital city
 note type, you won't see a duplicate message when it comes time to learn how
 to say "orange" in French.
 
@@ -1424,7 +1424,7 @@ If you wish to have the same audio play on both the front and back of the
 card, you'll need to manually include the audio fields on the back as well.
 
 [[cardgeneration]]
-== Card Generation ==
+== Card Generation & Deletion ==
 
 Anki will not create cards with empty front sides. Thus if "My Field" was
 empty, and one card's front template included only that field, the card would
@@ -1441,6 +1441,12 @@ immediately, as that could lead to accidental data loss. To remove empty
 cards, in the main window go the Tools menu and choose Maintenance->Empty
 Cards. You will be shown a list of empty cards and be given the option to
 delete them.
+
+It is not possible to manually delete individual cards, because they would end
+up being recreated again the next time the note was edited. Instead, you can
+either make the relevant fields empty and then use Empty Cards option, or you
+can suspend the unwanted cards. If you need to edit multiple fields at once,
+you can use the find&replace feature in the browser.
 
 Anki does not consider special fields or non-field text for the purposes of
 card generation. Thus if your front template looked like the following, no
