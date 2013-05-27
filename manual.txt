@@ -484,6 +484,17 @@ Customizing Fields
 To customize fields, click the "Fields..." button when adding or editing a
 note.
 
+You can add, remove, or rename fields by clicking the appropriate buttons. To
+switch the order in which the fields appear in this dialog and the add notes
+dialog, you can use the reposition button, which asks for the numerical
+position you want the field to have. So if you want to move a field to be the
+new first field, enter "1".
+
+The options at the bottom of the screen allow you to edit various properties of
+the fields to be used when adding and editing the cards. This is not where you
+customize what appears on your cards when reviewing; for this, please see
+<<templates,templates>>.
+
 *Editing Font* allows you to customize the font and size used when editing
 notes. This is useful if you want to make unimportant information smaller, or
 increase the size of foreign characters which are hard to read. The changes
@@ -1109,15 +1120,23 @@ you to decide how well you remembered or not.
 NOTE: Only one typing comparison can be used on a card. If you add the above
 text multiple times, it will not work.
 
-It is also possible to type in the answer for cloze deletion cards. To do
-this, add the following to both the front and back template:
+It is also possible to type in the answer for cloze deletion cards. To do this,
+add {{type:cloze:Text}} to both the front and back template, so the back looks
+something like this:
 
 -----
+{{FrontSide}}
+
+<hr id=answer>
+
+{{cloze:Text}}
 {{type:cloze:Text}}
 -----
 
-Unlike regular cards, this must be added to both sides on a cloze note type. If
-there are multiple sections elided, you can separate the answers in the text
+Note that unlike with regular cards, this must be added to both sides on a
+cloze note type.
+
+If there are multiple sections elided, you can separate the answers in the text
 box with a comma.
 
 NOTE: For advanced users, the "the correct answer was" part of the text can be
