@@ -3,6 +3,194 @@
 ++++++++++++++++++++++
 
 [[latest]]
+= Changes in 2.0.9 =
+
+* Improvements to the type answer feature: no more "the correct answer was"
+  text, clearer indications of typed vs correct answer, customizable colours
+  (.typeBad/.typeGood/.typeMissed), monospace by default so input+correct
+  lines up (code#typeans), an example comparison in the Cards dialog,
+  and automatic moving of the answer comparison underneath the Q/A line.
+  Example attached.
+* The browser now has a preview button that makes it easier to quickly browse
+  previews of cards.
+* The 'limit to tags' and 'study a random selection of cards' options in the
+  custom study dialog have been merged together into a single new option that
+  allows you to study new cards, due cards or all cards (cram), optionally
+  limiting to particular tags as well.
+* If Anki detects that the media is out of sync, it will now automatically
+  recover on the next sync. Furthermore, it no longer needs to send files that
+  already exist on each side, so when this change is incorporated into the
+  mobile clients you'll be able to copy media over to them to avoid a long
+  initial media sync.
+* When media is deleted via a sync or unused media, it's now placed in the
+  OS's trash folder instead of deleted completely. Likewise for rotated
+  backups and profile deletions.
+* When notes are deleted, their content is logged in a file called deleted.txt
+  in your profile folder.
+* The filter area when selecting decks or note types now matches on
+  consecutive characters, and uses spaces to separate search terms. So if you
+  had a deck called "German::Verbs", you can search for it with "man verb",
+  but not "grman"
+* You can now choose a font size > 20px for the card list. It's not possible
+  to resize the line height for each individual card, so choosing a large font
+  size in one note type will make the line height large for all cards.
+* Anki should output BRs instead of DIV tags when you hit enter in the editor
+  now, which should make editing the resulting text on mobile clients easier.
+  Note this will only apply to content you add after upgrading.
+* Card types are removed with an X on the tab instead of an item in More.
+* Check Database, Unused Media and Empty Cards are now in the Tools menu,
+  instead of a submenu.
+* Full Sync is now in the preferences, not in the menu.
+* Syncing now checks to see if the database is consistent prior to syncing,
+  and if it finds any errors, it recommends a database check rather than a
+  full sync.
+* If a database check finds any errors, it automatically forces a full sync.
+* When closing the collection, check for corruption. This makes closing Anki
+  and switching profiles a bit slower, but ensures that corruption is detected
+  early so that backups are useful.
+* If user has Add window open and syncs, ask if they want to keep the content
+  and cancel sync if so.
+* After uploading a collection, notify user they need to download on other
+  devices.
+* More verbose sync conflict message.
+* Shift clicking on a sidebar item in the browser will now OR it with the
+  current search.
+* Prioritize HTML over images, so pasting from Microsoft apps pastes text
+  again.
+* Timeboxing now pops up dialog instead of a tooltip, with options to
+   continue or finish.
+* Don't import notes multiple times when the note type has been modified
+* Add mature correct/today stat to graphs.
+* You can now hold down the shift key while starting Anki to disable add-on
+  loading and automatic syncing (except if you're on an old Linux distro).
+* Make sure to update card order when changing, adding or deleting option
+  groups.
+* Make sure to shuffle after importing txt or apkg files if your deck options
+  say to shuffle.
+* When exporting to an .apkg with scheduling off (or when sharing a deck on
+  AnkiWeb), new cards now have their current order preserved.
+* Anki will now warn when you try to add a cloze deletion note without any
+  deletions.
+* Anki will allow you to cloze delete when a normal note type is selected,
+  with a popup warning instead of an error.
+* Anki should now run on an unmapped network drive on Windows and display
+  images correctly.
+* Ctrl+Shift+T (Command+Shift+T on a Mac) now jumps to the Tags entry field.
+* When pasting from field to field, strip <span> tags that were being inserted
+  by WebKit.
+* When importing from a text file, include a list of all updated or duplicated
+  notes in the import log.
+* Fix unused media spuriously reporting unused media with leading underscores.
+* Fix cloze+latex issue where multiple answer images were generated.
+* Fix cloze+latex issue where unused media deleted used images and created
+  others.
+* Fix error when trying to reschedule with min>max
+* Add scrollbar to About dialog.
+* Don't allow images to be dragged (and deleted) from the review window.
+* Better warning when importing invalid .apkg file
+* When saving a note, strip quotes from the tags and sort tags in alphabetical
+  order.
+* Fix an issue with images failing to show up when they had an apostrophe in
+  them.
+* Fix issues with pasting links to sounds/images where the filenames had
+  non-latin characters or punctuation characters.
+* Fix issues with pasting invalid links.
+* Deck descriptions are now always displayed verbatim, and not truncated.
+* Fix issues with syncing media on a vfat drive.
+* When inserting a media file that already exists in the media folder,
+  checksum all alternative filenames (thanks to Julien Baley)
+* Fix a bug where the number of buttons would decrease from 3 to 2 on the
+  second answer of new cards in a filtered deck.
+* Make it clearer when changing deck options will affect multiple decks.
+* Fix an issue where invalid filenames were generated when pasting a link to a
+  remote filename with non-latin characters.
+* Fix an issue where rescheduling of relearning cards into new cards would
+  cause a later "download the fix assertion addon" message.
+* Allow pasting of a few more audio formats.
+* Fix main window appearing on top after pasting on Windows.
+* The 'show duplicates' feature when adding now correctly shows all duplicates
+  in the browser, regardless of their embedded formatting.
+* Allow canceling of note type selection.
+* When clicking Add, make sure to reshow Add window if it'd been minimized.
+* Make desktop folder if it was missing when saving stats to image.
+* More checks for the Check Database routine.
+* Fixed a bug where some Windows users were unable to start Anki.
+* Allow overwriting existing files in export (thanks to Chris Burel)
+* Fix an error when user comments out type answer field (thanks to Ospalh)
+* Fixed an issue where a field: search that didn't match would prevent the
+  search from matching anything.
+* Handle cloned note types in mnemosyne importer.
+* Don't save note if no changes have been made.
+* Fix an issue with unused media and different file name representations
+  (thanks to Ospalh)
+* When changing deck in Add window, switch review deck too.
+* Don't play audio twice when changing templates
+* When hitting 's' on a deck with no due cards, display a tooltip.
+* Handle non-breaking spaces in furigana markup.
+* Fix bug where some text was being swallowed in error messages.
+* Fix a bug where leading whitespace was being cut off in text imports.
+* Fix inverted sub/superscript shortcuts
+* Make sure sort field is updated when field is deleted
+* Allow HTML in Mnemosyne import
+* Fix downloading of add-ons when running from USB disk
+* Fix field outline (thanks to Frostschutz)
+* Workaround a Qt bug that was preventing clicks on the sidebar in the browser
+  (thanks to Frostshutz)
+* Pauker importer (thanks to Frostshutz)
+* Added --version option (thanks to Hut)
+* Fixed an error upgrading very old Anki 1 decks.
+* Use "question" and "answer" for browser labels, instead of "front" and
+  "back".
+* When using 'change deck', select the current deck by default.
+* When searching in the browser, use double quotes rather than single quotes.
+* Don't allow invalid characters in filenames when exporting.
+* Allow enter to close the change note type dialog.
+* Fixed a bug where rescheduling learning cards as reviews could cause the
+  cards to be in an invalid state.
+* If Anki config can't be loaded, start with new prefs.db
+* Fixed a bug where Anki would close without saving when it was closed while
+  another window was focused.
+* Catch another firewall error.
+* Various other minor fixes.
+* Add shortcut key for history button
+* Work around an issue when backspacing over all text that was formatted.
+* Fix a bug that was causing formatting to be lost when copying between
+  fields.
+* Fix line disappearing in card layout.
+* Resize deck options dialog when it's opened.
+* Ensure cards have correct due number to make sibling spacing work when
+  importing.
+* Show profile name in title bar
+* Make sure we focus first field when adding next note when JP support add-on
+  installed.
+* Fix a bug where hitting enter in the tags completion list could select the
+  wrong tag.
+* When studying a filtered card, clicking Add will default to that deck.
+* Add a hideable warning to the bottom of the deck list when there are over 25
+  decks.
+* Fix issues where images with extra properties weren't being found in unused
+  media.
+* Don't copy the implicit max-width property on images when pasting between fields.
+* Fix a non-rounded number issue in stats
+* Use correct extension when exporting notes/cards as text.
+* Fix alignment issues in top and bottom toolbars
+* Work around a startup problem on misconfigured Windows systems
+* Ignore sticky fields when checking if blank when add window closed
+* Allow multiple spaces in type answer
+* Work around broken images when pasting/attaching on Linux
+* Fix error when sending non-Latin text to trash on Linux
+* Fix a timer bug (thanks to Frostschutz)
+* Fix unicode error on export
+* Fix enter key in add/remove tags dialog
+* Only show browser close menu item on mac
+* Change the way we deal with non-latin chars in filenames on Windows
+* Include full info on sync error
+* Fix modification check in note merge
+* The 'full sync' option should force a sync even if no other changes were
+  made
+* Various fixes to the Mnemosyne importer
+* Fix find duplicates feature when fieldname case differs
+
 = Changes in 2.0.8 =
 
  * Fix recording on Windows.
