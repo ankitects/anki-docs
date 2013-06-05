@@ -368,7 +368,7 @@ content you are learning. The standard note types are as follows:
 
  Cloze :: A note type which makes it easy to select text and turn it into a
  cloze deletion (eg "Man landed on the moon in [...]" -> "Man landed on the
- moon in [1979]"). More information is available in later sections.
+ moon in [1969]"). More information is available in later sections.
 
 To add your own note types and modify existing ones, you can use Tools>Manage
 Note Types.
