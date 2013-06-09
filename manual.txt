@@ -841,12 +841,13 @@ shown, you can use space or enter to select the Good button. You can use the
 answer most cards with space and keep one finger on 1 for when they forget.
 
 [[studydeck]]
-The "Study Deck" item in the Tools menu allows you to quickly switch to a deck
-with the keyboard. You can trigger it with the '/' key. When opened, it will
-display all of your decks, and show a filter area at the top. As you type
-characters, Anki will display only decks matching the characters you type. The
-search is non-consecutive, so if you want to select the "Japanese::Lesson 1"
-deck, you could just type "j1" (but not "1j").
+The "Study Deck" item in the Tools menu allows you to quickly
+switch to a deck with the keyboard. You can trigger it with the '/' key. When
+opened, it will display all of your decks, and show a filter area at the top.
+As you type characters, Anki will display only decks matching the characters
+you type. If you type a space, Anki will restart the search at any following
+point in the deck's name, so if you're trying to activate the Japanese::Lesson1
+deck, you can type "j 1".
 
 == Falling Behind ==
 
@@ -1041,8 +1042,10 @@ what should be shown on them when adding or editing material by clicking on
 the "Cards..." button. Please read the basics section if you have not done so
 already, as the rest of this section assumes you have read it.
 
-At the top of the window you'll see a list of cards. You can click the plus on
-the right if you'd like to add another card to the current note type.
+At the top of the window you'll see a set of tabs listing the current cards.
+You can click the plus on the right if you'd like to add another card to the
+current note type. Similarly, if you'd like to delete one, you can do so by
+clicking the X on the tab.
 
 On the top left is the front template, on the bottom left is the back
 template, and in between them is the card styling section.
@@ -1198,10 +1201,6 @@ cloze note type.
 
 If there are multiple sections elided, you can separate the answers in the text
 box with a comma.
-
-NOTE: For advanced users, the "the correct answer was" part of the text can be
-styled or hidden in the styling section, with text such as `#rightanswer {
-display: none; }`
 
 == Newlines ==
 
@@ -1437,10 +1436,9 @@ When you edit a previously added note, Anki will automatically create extra
 cards if they were previously blank, but no longer so.
 
 If your edits have made some cards blank, Anki will not delete them
-immediately, as that could lead to accidental data loss. To remove empty
-cards, in the main window go the Tools menu and choose Maintenance->Empty
-Cards. You will be shown a list of empty cards and be given the option to
-delete them.
+immediately, as that could lead to accidental data loss. To remove empty cards,
+in the main window go the Tools menu and choose Empty Cards. You will be shown
+a list of empty cards and be given the option to delete them.
 
 It is not possible to manually delete individual cards, because they would end
 up being recreated again the next time the note was edited. Instead, you can
@@ -2172,10 +2170,11 @@ you, and give you the option of aborting the operation. If you choose to
 continue, you'll be asked to choose whether to keep the local copy or the copy
 on AnkiWeb when your collection is next synchronized.
 
-If you wish to force a full upload or download (because you accidentally
-deleted a deck on one side for example, and want to restore the deck rather
-than having its deletion synchronized), then you can use Tools>Maintenance>Full
-Sync.
+If you wish to force a full upload or download (for example, because you
+accidentally deleted a deck on one side and want to restore the deck rather
+than having its deletion synchronized), you can check the "On next sync, force
+changes in one direction" box in Tools>Preferences>Network, then sync as usual.
+(You'll be given the option to choose which side you want to use.)
 
 Proxies
 --------
@@ -2221,15 +2220,23 @@ Sidebar
 
 The sidebar on the left allows quick access to common search terms. Various
 search terms as described below are listed, along with all deck names and tag
-names. Clicking on an item will search for it. You can hold down ctrl (command
-on a Mac) and click in order to append the clicked item to the current search,
-instead of starting a new search. If you wanted to show learning cards in the
-German deck for instance, you could click on "Learning", then ctrl+click on
-"German". You can also hold down alt (option on a Mac) in order to reverse the
-search (prepend a '-').
+names. Clicking on an item will search for it.
+
+You can hold down ctrl (command on a Mac) and click in order to append the
+clicked item to the current search with an AND condition, instead of starting a
+new search. If you wanted to show learning cards that were also in the German
+deck for instance, you could click on "Learning", then ctrl+click on "German".
+
+You can hold down shift to create an OR search instead of an AND (for example,
+you could click one deck, then shift-click another to show cards from either of
+the decks in the same view).
+
+You can hold down alt (option on a Mac) in order to reverse the search (prepend
+a '-') (for instance, to show all cards in a current deck that do _not_ have a
+certain tag).
 
 [[searching]]
-Searching 
+Searching
 ---------
 
 Above the card list is a search box. You can type in various things there to
@@ -2380,6 +2387,9 @@ Current Note
 The bottom right area displays the currently selected card's note. For more
 information about cards and notes, please see <<basics,the basics>>. For more
 information on formatting buttons, please see <<editor,editing>>.
+
+You can see a preview of what the currently selected card would look like when
+reviewing by clicking the "preview" button next to the search box.
 
 Toolbar
 --------
@@ -2552,15 +2562,15 @@ Here is a summary of each of the options:
   Show cards that will be due in the near future (a number of days you specify).
   This is useful if you know you will be unable to study for a while, such as
   before you go on a vacation.
- Study a random selection of cards ::
-  Pick a random number of cards that you specify from the deck and study them.
-  If you wish to see all cards in your deck (for instance, to study before a
-  big test), simply set the number of cards to more than the number of cards
-  in the deck.
  Preview new cards ::
   Show cards that you have recently added.
- Limit to particular tags ::
-  Select certain tags from the deck to study.
+ Study by card state or tag ::
+  Select a certain number of cards from the current deck to study. You can
+  choose to select new cards only, due cards only, or all cards; after you
+  click "Choose Tags", you can also limit the selected cards by tags. If you
+  wish to see all the cards in the deck (for instance, to study before a big
+  test), you can set the number of cards to more than the number of cards in
+  the deck.
 
 == Home Decks ==
 
@@ -2968,7 +2978,7 @@ collection.apkg file. This is useful for copying your collection back and
 forth between devices.
 
 NOTE: Existing media in your collection is not deleted when you import a
-collection.apkg. To delete unused media, use Tools>Maintenance>Unused Media.
+collection.apkg. To delete unused media, use Tools>Unused Media.
 
 NOTE: Anki's automatic backups are also collection packages. Simply double
 click on one to restore your collection to that backup.
@@ -2988,9 +2998,9 @@ Checking Your Collection
 --------------------------
 
 It's a good idea to occasionally check your collection file for problems. You
-can do this via the Tools>Maintenance>Check Database menu item. Checking the
-database ensures the file is not corrupted, rebuilds some internal structures,
-and optimizes the file.
+can do this via the Tools>Check Database menu item. Checking the database
+ensures the file is not corrupted, rebuilds some internal structures, and
+optimizes the file.
 
 When you check the database, your tag list is also rebuilt. When you delete
 individual decks or cards, Anki does not update the list of used tags, as it's
@@ -3023,14 +3033,6 @@ WARNING: You should never copy or move your collection while Anki is open.
 Doing so could cause your collection to become corrupted. Please don't
 move or modify the other files in the folder either.
 
-NOTE: If you want to use Anki on a network drive on Windows, the network drive
-needs to be mapped to a drive letter. If your network administrator has set
-your user directory up as something like "\\server\share\folder", please ask
-them to map the share and change it to something like "z:\folder" instead.
-After the drive has been mapped, your network administrator will either have
-to configure Windows to point your documents folder at the drive location, or
-you will need to start Anki with -b as described in the next section.
-
 NOTE: On Unix systems, Anki deliberately uses ~/Anki rather than a hidden
 folder. The bulk of the data stored in that folder is important user data
 rather than easily restored preferences, and it would be a disaster if a user
@@ -3043,6 +3045,14 @@ described in the next section.
 Startup Options
 ----------------
 
+If you have made a destructive change on one computer and have an undamaged
+copy on another computer, you may wish to start Anki without syncing in order
+to use the full sync option without first downloading the changes. Similarly,
+if you are experiencing problems with Anki, you might want to (or might be
+instructed to) disable add-ons temporarily to see if one might be causing the
+problem. You can do both of these things by holding down the Shift key while
+starting Anki.
+
 You can specify a custom folder location by starting Anki with a command line
 like so:
 
@@ -3050,9 +3060,9 @@ like so:
 anki -b /path/to/anki/folder
 -----
 
-* If you have multiple profiles, you can also pass -p to load a specific
+* If you have multiple profiles, you can pass -p to load a specific
   profile.
-* To change the interface language, start Anki with -l <iso country code>,
+* To change the interface language, use -l <iso country code>,
   such as "-l ja" for Japanese.
 
 If you always want to use a custom folder location, you can modify your
@@ -3061,7 +3071,6 @@ select the Shortcut tab, and add "-b \path\to\data\folder" after the path to
 the program, which should leave you with something like "C:\Program
 Files\Anki\anki.exe -b C:\AnkiDataFolder". You can also use this technique with
 the -l option to easily use Anki in different languages.
-
 
 NOTE: On Windows, you should use a backslash (\) not a forward slash (/).
 
@@ -3121,9 +3130,7 @@ Anki is open.
 
 To restore from a backup, simply close Anki, open Documents/Anki/<profile
 name>/backups, and double-click on the most recent backup in order to import
-it. If you use AnkiWeb, after restoring your deck, please use
-Tools>Maintenance>Full Sync and force an upload of the restored collection to
-AnkiWeb.
+it.
 
 Inaccessible Harddisk
 ----------------------
@@ -3192,8 +3199,8 @@ new file to be somewhat smaller than the old one.
 
 When you've confirmed the file is not empty, copy it over collection.anki2,
 making sure you still have a backup of the original version. Then start Anki
-and go to Tools>Check DB to make sure the collection has been successfully
-restored.
+and go to Tools>Check Database to make sure the collection has been
+successfully restored.
 
 [[stats]]
 Graphs and Statistics
@@ -3226,12 +3233,12 @@ show statistics from the currently selected deck and any subdecks. If you
 click on "collection" on the bottom left, statistics will be shown for your
 entire collection instead.
 
-By default Anki will show you statistics for the previous month. You can
-change this to a year scope or deck life scope at the bottom.
+By default Anki will show you statistics for the previous month. You can change
+this to a year scope or deck life scope at the bottom. (The "today" section at
+the top is of course unaffected by this selection.)
 
-Clicking on "Save Image" will save an image of the statistics to a file and open
-it in your default image editor, to make it easy to share your statistics with
-others.
+Clicking on "Save Image" will save an image of the statistics to a file on your
+desktop to make it easy to share your statistics with others.
 
 NOTE: When you delete notes, their review history is maintained in Anki. It
 will not be included when looking at statistics for a specific deck (as Anki
@@ -3319,13 +3326,15 @@ locations>> section. When you add media within Anki, Anki will copy it from its
 original location into the media folder. This makes it easy to back up your
 collection's media or move it to another computer.
 
-You can use the Tools>Maintenance>Unused Media menu option to scan your notes
-and media folder. It will generate a report of files in the media folder that
-are not used by any notes, and media referenced in notes but missing from your
-media folder. It does not scan question or answer templates, which is why you
-can't place media references to fields in the template. If you need a static
-image or sound on every card, name it with a leading _ (eg _dog.jpg) to tell
-Anki to ignore it when checking for media.
+You can use the Tools>Unused Media menu option to scan your notes and media
+folder. It will generate a report of files in the media folder that are not
+used by any notes, and media referenced in notes but missing from your media
+folder. It does not scan question or answer templates, which is why you can't
+place media references to fields in the template. If you need a static image or
+sound on every card, name it with a leading _ (eg _dog.jpg) to tell Anki to
+ignore it when checking for media. If you delete media using the unused media
+check, Anki will move it into your operating system's trash folder, so you can
+recover if you accidentally delete media that shouldn't have been deleted.
 
 Anki uses a program called mplayer in order to support sounds and videos. A
 wide variety of file formats are supported, but not all of these formats will
@@ -3371,8 +3380,8 @@ can not generate the images on their own.
 
 To avoid having to review all your cards at least once before you can study on
 the other clients, Anki can generate the images in bulk for you. To generate
-all the images, please go to Tools>Maintenance>Unused Media. After that,
-syncing should upload the generated media to AnkiWeb and the other clients.
+all the images, please go to Tools>Unused Media. After that, syncing should
+upload the generated media to AnkiWeb and the other clients.
 
 Example
 --------
