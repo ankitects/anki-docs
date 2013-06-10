@@ -845,9 +845,9 @@ The "Study Deck" item in the Tools menu allows you to quickly
 switch to a deck with the keyboard. You can trigger it with the '/' key. When
 opened, it will display all of your decks, and show a filter area at the top.
 As you type characters, Anki will display only decks matching the characters
-you type. If you type a space, Anki will restart the search at any following
-point in the deck's name, so if you're trying to activate the Japanese::Lesson1
-deck, you can type "j 1".
+you type. You can add a space to separate multiple search terms, and Anki will
+show only decks that match all the terms. So "ja 1" or "on1 ja" would both
+match a deck called "Japanese::Lesson1".
 
 == Falling Behind ==
 
@@ -1201,6 +1201,10 @@ cloze note type.
 
 If there are multiple sections elided, you can separate the answers in the text
 box with a comma.
+
+Advanced users can override the default type-answer colours with the css
+classes typeGood, typeBad and typeMissed. At the time of writing, only the
+computer version of Anki supports these classes.
 
 == Newlines ==
 
@@ -3131,6 +3135,12 @@ Anki is open.
 To restore from a backup, simply close Anki, open Documents/Anki/<profile
 name>/backups, and double-click on the most recent backup in order to import
 it.
+
+Anki also logs deleted notes to a text file called deleted.txt in your profile
+folder. These notes are in a text format that can be read by File>Import,
+though please note the import feature only supports a single note type at one
+time, so if you have deleted notes from different note types, you'll need to
+split the file into separate files for each note type first.
 
 Inaccessible Harddisk
 ----------------------
