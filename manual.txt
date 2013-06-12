@@ -2317,7 +2317,7 @@ default.
 
  prop:ivl>=10 :: cards with interval of 10 days or more
  prop:due=1 :: cards due tomorrow
- prop:due=-1 :: cards due yesterday
+ prop:due=-1 :: cards due yesterday that haven't been answered yet
  prop:due>-1 prop:due<1 :: cards due between yesterday and tomorrow
  prop:reps<10 :: cards that have been answered less than 10 times
  prop:lapses>3 :: cards that have moved into relearning more than 3 times
