@@ -5,6 +5,8 @@
 [[latest]]
 = Changes in 2.0.10 =
 
+If you're upgrading from 2.0.8, please also see the 2.0.9 changes below.
+
 * Fix pasting of images
 * Fix error when syncing media on an unmapped network drive
 * Fix issues with non-latin text in images in card layout and preview windows
