@@ -172,9 +172,7 @@ screen. And the other button displays graphs and statistics.
 
 On the bottom of the screen, there are three more buttons. *Import/Export*
 allows you to download shared decks, and import/export .apkg files from
-iTunes. *Sync* synchronizes your cards with the cloud. And *Filter/Cram*
-allows you to create temporary decks based on certain search criteria, like
-"failed today" or "cards with tag HighPriority".
+iTunes. *Sync* synchronizes your cards with the cloud.
 
 = The Study Screen =
 
@@ -358,6 +356,10 @@ card.
 Edit :: Edits the current card.
 
 Find:: Lets you search/browse your cards.
+
+Filter/cram:: Allows you to create a temporary deck based on search criteria such as
+"tag:hard". Please see the documentation of the computer version for more
+information on filtered decks.
 
 Mark :: Adds a tag called "Marked" the current note, so it can be easily found
 in a search.
