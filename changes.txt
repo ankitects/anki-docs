@@ -3,9 +3,20 @@
 ++++++++++++++++++++++
 
 [[latest]]
+= Changes in 2.0.11 =
+
+If you're upgrading from 2.0.8, please also see the 2.0.9 & 2.0.10 changes
+below.
+
+* 2.0.9 introduced a change that produced cleaner HTML output when editing
+  fields, but unfortunately this revealed a bug in the GUI toolkit which could
+  cause Anki to crash when editing those fields. So the 2.0.9 change has been
+  reverted, and Anki will output divs instead of br tags again.
+* Fix problems syncing when Anki's running on a mapped network drive
+* Fix problems reporting correct error message when sync fails
+
 = Changes in 2.0.10 =
 
-If you're upgrading from 2.0.8, please also see the 2.0.9 changes below.
 
 * Fix pasting of images
 * Fix error when syncing media on an unmapped network drive
