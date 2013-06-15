@@ -559,7 +559,7 @@ are most likely to cause surprises in the new version.
 
 The rest of this page describes all the changes in more detail. For more
 information, please also see the link:manual.html[user manual], which has been
-completely rewritten for version Pre.
+completely rewritten for version 2.
 
 [[beforeupgrade]]
 == Dropbox ==
