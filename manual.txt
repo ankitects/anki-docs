@@ -467,9 +467,11 @@ separated by a space. If the tags area says
 
 When you've entered text into the front and back, you can click the "Add"
 button or press Ctrl+Enter (Command+Enter on a Mac) to add the note to your
-collection. When you do so, a card will be created as well, and placed into
-the deck you chose. If you'd like to edit a card you added, you can click the
-history button to search for a recently added card in the browser.
+collection. When you do so, a card will be created as well, and placed into the
+deck you chose. If you'd like to edit a card you added, you can click the
+history button to search for a recently added card in the browser. (The browser
+is a separate window that allows you to look at, search for, and modify cards
+in your collection.)
 
 Anki checks the first field for uniqueness, so it will warn you if you enter
 two cards with a Front field of "apple" (for example). The uniqueness check is
@@ -2228,12 +2230,13 @@ instead, as described above.
 [[browser]]
 = Browser =
 
-The browser allows you to search through your cards and notes, and to edit
-them. It is opened by clicking on 'Browse' in the main window, or by pressing
-'b' on your keyboard. It is comprised of three sections: the 'sidebar' on the
-left, the 'card list' on the top right, and the 'current note' on the bottom
-right. By positioning the mouse between two sections, it is possible to click
-and drag to expand one section and shrink another.
+The browser (which has nothing to do with web browsers such as Mozilla Firefox)
+allows you to search through your cards and notes and edit them. It is opened
+by clicking on 'Browse' in the main window, or by pressing 'b' on your
+keyboard. It is comprised of three sections: the 'sidebar' on the left, the
+'card list' on the top right, and the 'current note' on the bottom right.  By
+positioning the mouse between two sections, it is possible to click and drag to
+expand one section and shrink another.
 
 Sidebar
 --------
