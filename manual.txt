@@ -3481,7 +3481,8 @@ Does the sum below converge?
 
 respectively.
 
-== LaTeX packages ==
+LaTeX packages
+---------------
 
 Anki allows you to customize the LaTeX preamble so you can import custom
 packages for chemistry, music and so on. For example, imagine you find an
@@ -3547,7 +3548,8 @@ Anki cards:
 [latex]\ethene{H}{H$_3$C}{CH$_3$}{Br}[/latex]
 -----
 
-== Unsafe commands ==
+Unsafe commands
+-----------------
 
 Anki prohibits certain commands like \\input from being used on cards or in
 templates, because to allow them could allow malicious shared decks to damage
