@@ -3544,7 +3544,12 @@ Anki cards:
 [latex]\ethene{H}{H$_3$C}{CH$_3$}{Br}[/latex]
 -----
 
-= Miscellanea =
+== Unsafe commands ==
+
+Anki prohibits certain commands like \\input from being used on cards or in
+templates, because to allow them could allow malicious shared decks to damage
+your system. If you need these commands, please add them to a system package,
+and import that package as described in the previous section.
 
 == Menu Shortcuts ==
 
