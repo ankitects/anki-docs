@@ -3556,6 +3556,8 @@ templates, because to allow them could allow malicious shared decks to damage
 your system. If you need these commands, please add them to a system package,
 and import that package as described in the previous section.
 
+= Miscellanea =
+
 == Menu Shortcuts ==
 
 On Windows/Linux you can hold down the alt key and press a highlighted letter
