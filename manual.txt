@@ -800,7 +800,10 @@ other operations you can do on the current card or note:
  Replay Audio ::
   If the card has audio on the front or back, it will be played again.
  Record Own Voice ::
-  Record your own voice for the purposes of checking your pronunciation.
+  Record your own voice for the purposes of checking your pronunciation. (This
+  recording is temporary and will go away when you move to the next card. If
+  you want to add audio to a card permanently, you can do that in the edit
+  window.)
  Replay Own Voice ::
   Replay the previous recording of your voice.
 
