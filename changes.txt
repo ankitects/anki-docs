@@ -3,10 +3,49 @@
 ++++++++++++++++++++++
 
 [[latest]]
+= Changes in 2.0.12 =
+
+NOTE: If you use LaTeX for mathematical equations on your cards, and study with
+AnkiMobile or AnkiDroid, please revert to 2.0.8 (available on the Anki
+website) until the mobile clients receive an update.
+
+* Changed the way pastes and drag&drops are handled. This should hopefully fix
+  various issues people were having with Google Images, and will now
+  automatically add any images in a chunk of selected text to your collection
+  if you have HTML stripping turned off.
+* Fixed errors caused by importing notes with a changed schema
+* Revert a change made in 2.0.9 where Anki would switch the active review deck
+  when a different deck was selected in the add screen. This caused issues
+  where the note type would change invisibly and some people objected to the
+  new behaviour.
+* Work around a crash when closing Anki on Windows caused by a toolkit bug.
+* Make sure we always show 3 buttons for cards in initial learning in a
+  filtered deck.
+* Improve the checking for and stripping of filename characters that can't be
+  stored on some filesystems.
+* Fixed an error when pasting media with non-latin characters in the URL.
+* Don't throw an error if user adds cloze reference to a non-cloze note type.
+* Fix error shown when importing csv file with blank first line.
+* Fix year and all time review graph.
+* If the user's recycle bin is broken, just delete the file instead.
+* Don't send old backups to the recycle bin.
+* Fix duplicates not being detected when pasting text.
+* Fix a bug where the clipboard was being clobbered after the first paste.
+* When pasting images between fields, don't try to download them.
+* Allow includegraphics in LaTeX
+* You can now view stats on filtered decks.
+* Warn when prefs.db is corrupt, and catch another corruption case
+* Allow searches for decks with + in their name.
+* Work around linux crash on paste of invalid image.
+* Fix an issue where duplicates were not being detected on paste
+* Ensure starting ease can't be set below 130%.
+* Make sure we include 'px' in stats (thanks to steveaw)
+* Fix error shown when importing from command line (thanks to Hans)
+* Fix incorrect instructions to "maintenance" menu (thanks to Soren)
+* Unused media now shows "no missing media" message in a tooltip (thanks to Julien)
+
 = Changes in 2.0.11 =
 
-If you're upgrading from 2.0.8, please also see the 2.0.9 & 2.0.10 changes
-below.
 
 * 2.0.9 introduced a change that produced cleaner HTML output when editing
   fields, but unfortunately this revealed a bug in the GUI toolkit which could
