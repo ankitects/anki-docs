@@ -100,7 +100,7 @@ within a few days.
 * Fix handling of the interval multiplier option for cards in the learn queue.
 * Fix card:n search
 * Confirm note delete in edit window
-* Fix some option changes not taking affect until app restarted.
+* Fix some option changes not taking effect until app restarted.
 * Enable autocorrect and capitalization when adding/editing notes.
 * Work around obscure iOS6 bug that was causing toolbar buttons on the deck
   list to disappear
@@ -111,6 +111,7 @@ within a few days.
 * If no camera available, show image library.
 * Hide default deck if empty.
 * Make sure we don't hide the marked star when rotating the screen.
+* Other minor fixes.
 
 = Changes in 2.0.3 =
 
