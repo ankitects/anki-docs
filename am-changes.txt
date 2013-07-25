@@ -1,7 +1,9 @@
-:toc:
-
 AnkiMobile Changes
 __________________
+
+++++++++++++++++++++++
+<br><br><b>Users upgrading from AnkiMobile 1: please see <a href="#v2">here</a></b>.
+++++++++++++++++++++++
 
 = Changes in 2.0.4 =
 
@@ -365,6 +367,7 @@ As Apple do not provide the ability to download previous versions from the app
 store, you may also want to <<backup,create a backup of the old version>> before
 upgrading.
 
+[[v2]]
 = What's New in 2.0 =
 
 AnkiMobile 2.0 is based on Anki 2.0, a new version for computers that has been
