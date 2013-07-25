@@ -1,125 +1,114 @@
 :toc:
 
-Changes in AnkiMobile 2
-________________________
+AnkiMobile Changes
+__________________
 
-= Please Read Before Upgrading =
+= Changes in 2.0.4 =
 
-AnkiMobile 2 is a big update, and depending on the features you used
-previously and how comfortable you are with computers, it may take a little
-while to set up and get used to.
+2.0.4 is undergoing final beta testing and is expected to be sent to Apple
+within a few days.
 
-As the old AnkiWeb was shut down on Feb 7 2013, the old version will no longer
-be able to sync, but you can continue to use iTunes to transfer decks to and
-from a computer.
+* Syncing improvements:
+** Check that the collection is consistent before syncing, and catch more
+   problems than before.
+** When problems are found while syncing, suggest a database check instead of
+   always (and sometimes inappropriately) forcing a full sync.
+** Fix an issue where a problem syncing media was incorrectly reported as a
+   problem with regular syncing, leading to unnecessary full syncs.
+** When Anki detects a problem syncing media, it is now able to recover on the
+   next sync.
+** Media syncing no longer needs to send all files on the first sync, so if
+   you have a lot of media you can import it via iTunes and media syncing will
+   not need to transfer it again.
+** Fixed an issue with leaking resources that could cause long media downloads
+   to fail.
+** Play a sound on sync completion, like in Anki 1.
+** Syncing finishes faster in the no changes case, and should perform
+   a bit better in other cases too.
+** Fix an issue where a full sync wasn't being forced when it should have been.
 
-As Apple do not provide the ability to download previous versions from the app
-store, you may also want to <<backup,create a backup of the old version>> before
-upgrading.
+* Integrated database check function, so it's no longer necessary to use
+  the computer version to fix some errors.
+* Faster startup and resume, especially when the user has lots of decks.
+* Anki will no longer time out on startup when the user has hundreds or
+  thousands of decks (though it's still recommended to reduce them to a more
+  manageable number).
 
-= What's New =
+* Audio changes:
+** Anki will now play audio even if the mute switch is on, as this was a
+  common source of confusion in the past.
+** By default, if music is playing in the background, its volume will be
+  lowered while Anki is active so that any audio on the cards can be heard
+  easily. You can use the Settings>Review>Quieten Music option to change this
+  behaviour.
+** Fixed a bug where tapping on a replay audio button could show the answer or
+  advance to the next card.
+** Fixed a bug where a replay audio button that appeared under your finger
+  when showing the answer or next card could trigger audio to play.
+** Make sure audio is properly configured when switching back to Anki.
 
-AnkiMobile 2.0 is based on Anki 2.0, a new version for computers that has been
-in development for over a year and a half. It's faster, has much-improved
-synchronization, and introduces some useful new features.
+* Importing changes:
+** Faster importing.
+** Fixed a bug where importing decks with modified note types could result
+   in duplicates being imported.
+** If the default deck options are set to random order, randomize cards
+   when importing a shared deck.
+** Fixed a resource leak in importing.
 
-It's highly recommended that you check out the
-http://ankisrs.net/docs/changes.html[desktop changes page]. The top section
-lists the most important changes, and many of the changes also apply to
-AnkiMobile.
+* Scratchpad improvements
+** The scratchpad is now hidden and shown via actions, so you can bind it to
+  taps, quickbar buttons and so on, or access it via Tools>All Actions.
+** The on/off state of the scratchpad is now remembered per card type, rather
+  than per deck.
 
-As for mobile-specific changes compared to the previous release:
+* Tap handling improvements:
+** Taps are now honored even in the left and right margins where the gesture
+   zones exist - previously it was not possible to tap on links that fell in
+   those areas.
+** Fixed various issues where a tap could trigger links in the resulting card
+   transition.
+** Fixed tapping on "Show Hint" being interpreted as a tap to reveal answer.
 
- * AnkiMobile has been rewritten from scratch to avoid all the problems that
-   were caused by the old toolkit. Combined with the improvements in Anki 2,
-   almost every action is noticeably faster, and the app is more stable.
- * Syncing of sounds and images has been greatly simplified due to Anki 2.0's
-   integrated media syncing: no more messing around with Dropbox or being
-   unable to sync media added on your device back to the desktop.
- * Shared decks can now be added directly from your mobile device, without
-   requiring access to a computer.
- * You can now add privately shared decks as well, either from a private
-   website, a mail attachment, or any other app that supports the "Open in..."
-   protocol.
- * AnkiMobile now provides the same graphs and statistics that Anki 2 does.
- * You can now customize the colours of the app, with more customizations
-   likely to come in the future.
- * Support for the iPhone 5.
- * iOS4.2 support has been dropped, as Apple don't make it possible to support
-   the iPhone 5's bigger screen and iOS4.2 at the same time.
- * Swiping has been considerably improved. Instead of requiring a long press
-   before the swipe is recognized, swipes start from the left or right side of
-   the screen. You no longer have to choose between text selection and swipes:
-   both can be used at once.
- * Searching/browsing no longer limits you to 100 matches: it can display your
-   entire deck at once, even if it's thousands of cards big.
- * Searching is much, much faster.
- * Searching supports the same searches as Anki 2, including queries such as
-   "cards with tag 'Important'", "cards with interval over 3 years", "cards
-   failed today", and so on. Please see the updated manual for more
-   information.
- * iTunes import/export is a lot easier now. To move cards to your mobile
-   device for example, you just file>export on the desktop, copy the resulting
-   single file to iTunes, and import from AnkiMobile. Media is automatically
-   packaged into the single file when you export, and filenames with foreign
-   character are handled without issue. Exporting is even easier: export from
-   AnkiMobile, drag the file from iTunes, and double click on it to open up
-   the desktop client and replace your collection with the updated version.
-   More information is available in the manual.
- * And more!
-
-In the interests of not delaying the 2.0 release, the old Lookup action has
-only been partially ported. While it's still possible to open a dictionary app
-from a link on your card, it's not currently possible to open a dictionary
-based on the currently selected text. There are also some usability issues
-with the scratchpad at the moment, where short taps will be treated as a tap
-action. This should be fixed in the next release.
-
-Screenshots from the new version:
-
-|=====
-|image:am2shots/phone5-1.png[height=568,width=320]|image:am2shots/phone5-2.png[height=568,width=320]
-|image:am2shots/phone5-3.png[height=548,width=320]|image:am2shots/phone5-4.png[height=548,width=320]
-|image:am2shots/phone5-5.png[height=548,width=320]|
-|=====
-
-[[backup]]
-= Backing Up AnkiMobile 1 =
-
-To create a backup of the old version of AnkiMobile so that it's possible to
-revert to it if you desire, please follow the following steps:
-
- . Connect your device via the USB cable.
- . Open iTunes if it's not already open.
- . Wait until your device finishes syncing, or sync manually if you have
-   disabled automatic syncing.
- . In the top left "Library" section, click on "Apps".
- . Locate Anki in your list of apps, and right click on it. (Ctrl+click on a
-   Mac)
- . Choose "Show in Finder" or similar, to open your file browser.
- . You should see a file like "AnkiMobile 1.8.ipa". Copy this file somewhere
-   else in order to back it up.
-
-If you accidentally upgraded before syncing, you may be able to recover the
-old version from your trash or recycling bin, as iTunes automatically places
-it there when you sync a new version.
-
-To revert to the old version, drag the .ipa file onto iTunes. After confirming
-that you want to replace the app with a previous version, sync your device
-again to load the old version back onto it.
-
-= The Upgrade Process =
-
-The fastest and most reliable way to upgrade is to ensure your decks are
-synced or copied to your computer prior to upgrading, and then to perform the
-upgrade on the computer. This is documented in more detail in the
-link:am-upgrade.html[upgrade documentation].
-
-AnkiMobile also provides an online upgrade for use in emergencies. This
-upgrade will bundle up your decks, send them to an internet server, and then
-download the new versions. Because this can fail if you have an unreliable
-internet connection or your decks have problems, it's recommended that you
-upgrade via the desktop instead.
+* The custom study cram and tag study options have been merged into a single
+  option that allows you to choose tags and card type, like the latest
+  computer version of Anki.
+* Bring LaTeX handling in line with the latest computer version of Anki.
+* Fix an issue where the wrong number of answer buttons would appear in some
+  circumstances.
+* Add "mature correct" statistics to the graphs.
+* Fix an issue where users couldn't sync in iOS7.
+* When adding cards, default to the note type for current deck.
+* Show filtered decks in blue in the deck list.
+* Confirm deletion of non-filtered decks.
+* When exiting the filtered deck options, only remove an empty filtered deck
+  if it was just created.
+* Fixed an issue that could cause crashes or DB corruption under rare
+  circumstances.
+* Improved database performance.
+* Fixed a bug that could cause a background backup to get stuck.
+* Fixed an issue with searching in field text.
+* Don't save note if no changes have been made.
+* Make sure to display furigana correctly when it has non-breaking spaces in it.
+* Various minor fixes to stats
+* The "Tap to hide nav bar" option now controls behaviour of both hiding and
+  showing.
+* Fixed an issue where the bottom of an answer could be hidden by the bottom
+  bar, especially when "bigger answer buttons" was turned on.
+* Fix some issues with pinching to expand/shrink images.
+* Fix handling of the interval multiplier option for cards in the learn queue.
+* Fix card:n search
+* Confirm note delete in edit window
+* Fix some option changes not taking affect until app restarted.
+* Enable autocorrect and capitalization when adding/editing notes.
+* Work around obscure iOS6 bug that was causing toolbar buttons on the deck
+  list to disappear
+* Fixed an issue where the counts of subdecks was not being tallied correctly
+  in some cases, which could lead to syncs failing.
+* Add Rebuild & Empty actions for filtered decks, which can be bound to taps,
+  swipes, etc.
+* If no camera available, show image library.
+* Hide default deck if empty.
+* Make sure we don't hide the marked star when rotating the screen.
 
 = Changes in 2.0.3 =
 
@@ -361,3 +350,121 @@ upgrade via the desktop instead.
  * Don't unmark when actions like "mark&suspend" triggered.
  * Fix difficult to read table headers when certain theme backgrounds
    selected.
+
+= Please Read Before Upgrading to 2.0 =
+
+AnkiMobile 2 is a big update, and depending on the features you used
+previously and how comfortable you are with computers, it may take a little
+while to set up and get used to.
+
+As the old AnkiWeb was shut down on Feb 7 2013, the old version will no longer
+be able to sync, but you can continue to use iTunes to transfer decks to and
+from a computer.
+
+As Apple do not provide the ability to download previous versions from the app
+store, you may also want to <<backup,create a backup of the old version>> before
+upgrading.
+
+= What's New in 2.0 =
+
+AnkiMobile 2.0 is based on Anki 2.0, a new version for computers that has been
+in development for over a year and a half. It's faster, has much-improved
+synchronization, and introduces some useful new features.
+
+It's highly recommended that you check out the
+http://ankisrs.net/docs/changes.html[desktop changes page]. The top section
+lists the most important changes, and many of the changes also apply to
+AnkiMobile.
+
+As for mobile-specific changes compared to the previous release:
+
+ * AnkiMobile has been rewritten from scratch to avoid all the problems that
+   were caused by the old toolkit. Combined with the improvements in Anki 2,
+   almost every action is noticeably faster, and the app is more stable.
+ * Syncing of sounds and images has been greatly simplified due to Anki 2.0's
+   integrated media syncing: no more messing around with Dropbox or being
+   unable to sync media added on your device back to the desktop.
+ * Shared decks can now be added directly from your mobile device, without
+   requiring access to a computer.
+ * You can now add privately shared decks as well, either from a private
+   website, a mail attachment, or any other app that supports the "Open in..."
+   protocol.
+ * AnkiMobile now provides the same graphs and statistics that Anki 2 does.
+ * You can now customize the colours of the app, with more customizations
+   likely to come in the future.
+ * Support for the iPhone 5.
+ * iOS4.2 support has been dropped, as Apple don't make it possible to support
+   the iPhone 5's bigger screen and iOS4.2 at the same time.
+ * Swiping has been considerably improved. Instead of requiring a long press
+   before the swipe is recognized, swipes start from the left or right side of
+   the screen. You no longer have to choose between text selection and swipes:
+   both can be used at once.
+ * Searching/browsing no longer limits you to 100 matches: it can display your
+   entire deck at once, even if it's thousands of cards big.
+ * Searching is much, much faster.
+ * Searching supports the same searches as Anki 2, including queries such as
+   "cards with tag 'Important'", "cards with interval over 3 years", "cards
+   failed today", and so on. Please see the updated manual for more
+   information.
+ * iTunes import/export is a lot easier now. To move cards to your mobile
+   device for example, you just file>export on the desktop, copy the resulting
+   single file to iTunes, and import from AnkiMobile. Media is automatically
+   packaged into the single file when you export, and filenames with foreign
+   character are handled without issue. Exporting is even easier: export from
+   AnkiMobile, drag the file from iTunes, and double click on it to open up
+   the desktop client and replace your collection with the updated version.
+   More information is available in the manual.
+ * And more!
+
+In the interests of not delaying the 2.0 release, the old Lookup action has
+only been partially ported. While it's still possible to open a dictionary app
+from a link on your card, it's not currently possible to open a dictionary
+based on the currently selected text. There are also some usability issues
+with the scratchpad at the moment, where short taps will be treated as a tap
+action. This should be fixed in the next release.
+
+Screenshots from the new version:
+
+|=====
+|image:am2shots/phone5-1.png[height=568,width=320]|image:am2shots/phone5-2.png[height=568,width=320]
+|image:am2shots/phone5-3.png[height=548,width=320]|image:am2shots/phone5-4.png[height=548,width=320]
+|image:am2shots/phone5-5.png[height=548,width=320]|
+|=====
+
+[[backup]]
+= Backing Up AnkiMobile 1 =
+
+To create a backup of the old version of AnkiMobile so that it's possible to
+revert to it if you desire, please follow the following steps:
+
+ . Connect your device via the USB cable.
+ . Open iTunes if it's not already open.
+ . Wait until your device finishes syncing, or sync manually if you have
+   disabled automatic syncing.
+ . In the top left "Library" section, click on "Apps".
+ . Locate Anki in your list of apps, and right click on it. (Ctrl+click on a
+   Mac)
+ . Choose "Show in Finder" or similar, to open your file browser.
+ . You should see a file like "AnkiMobile 1.8.ipa". Copy this file somewhere
+   else in order to back it up.
+
+If you accidentally upgraded before syncing, you may be able to recover the
+old version from your trash or recycling bin, as iTunes automatically places
+it there when you sync a new version.
+
+To revert to the old version, drag the .ipa file onto iTunes. After confirming
+that you want to replace the app with a previous version, sync your device
+again to load the old version back onto it.
+
+= The Upgrade Process =
+
+The fastest and most reliable way to upgrade is to ensure your decks are
+synced or copied to your computer prior to upgrading, and then to perform the
+upgrade on the computer. This is documented in more detail in the
+link:am-upgrade.html[upgrade documentation].
+
+AnkiMobile also provides an online upgrade for use in emergencies. This
+upgrade will bundle up your decks, send them to an internet server, and then
+download the new versions. Because this can fail if you have an unreliable
+internet connection or your decks have problems, it's recommended that you
+upgrade via the desktop instead.
