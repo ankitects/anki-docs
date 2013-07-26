@@ -1956,6 +1956,13 @@ statistically more likely to appear than the previously remaining cards. To
 correct this, you can change the order to ordered mode and back again to force
 a re-sort.
 
+NOTE: When you select random order, Anki will randomize your notes, keeping
+the cards of a given note close together. The cards of a given note are shown
+in the order their card templates appear in, so that siblings are introduced
+consistently - otherwise you could end up in a state where some notes had all
+their cards introduced and other notes had only one or two. Please see the
+"try not to show" option below for more info.
+
 *New cards/day* tells Anki how many new cards you'd like introduced on each
 day you open the program. Missed days will not cause the cards to pile up. The
 limit applies to the current deck and subdecks. This means if "French" has a
@@ -1988,7 +1995,10 @@ out as.
 
 When *Try not to show...* is checked, Anki will try not to introduce two new
 cards of the same note next to each other, as seeing one card may make it
-easier to answer another card.
+easier to answer another card. For this to work, your new cards/day setting
+needs to be large enough for the cards of multiple notes to be included, and
+the cards of the same note need to have the same due number in the browser
+(which is usually the case unless you have manually repositioned them).
 
 Reviews
 --------
