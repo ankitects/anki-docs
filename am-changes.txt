@@ -37,8 +37,10 @@ within a few days.
   manageable number).
 
 * Audio changes:
-** Anki will now play audio even if the mute switch is on, as this was a
-  common source of confusion in the past.
+** Anki will now play audio even if the silent mode switch is on, as this was
+  a common source of confusion in the past. If you need to study in public
+  without sound, please hold down the lower volume key briefly to mute the
+  audio.
 ** By default, if music is playing in the background, its volume will be
   lowered while Anki is active so that any audio on the cards can be heard
   easily. You can use the Settings>Review>Quieten Music option to change this
