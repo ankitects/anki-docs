@@ -783,7 +783,8 @@ other operations you can do on the current card or note:
  Mark Note ::
   Adds a "marked" tag to the current note, so it can be easily found in the
   browser. This is useful when you want to take some action on the note at a
-  later date, such as looking up a word when you get home.
+  later date, such as looking up a word when you get home. Marked cards also
+  show a small star in the upper-right-hand corner during reviews.
  Bury Note ::
   Hides all of the note's cards from review until Anki is reopened. Useful if
   you want to come back to the card another time.
