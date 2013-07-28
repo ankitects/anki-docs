@@ -2964,11 +2964,16 @@ tags:tag1 tag2
 
 == Duplicates and Updating ==
 
-Anki uses the first field to determine if a note is unique. If the file you
-are importing has a first field that matches one of the existing notes in your
-collection and that existing note is the same type as the type you're
-importing, the existing note's other fields will be updated based on content
-of the imported file.
+When importing text files, Anki uses the first field to determine if a note is
+unique. By default, if the file you are importing has a first field that
+matches one of the existing notes in your collection and that existing note is
+the same type as the type you're importing, the existing note's other fields
+will be updated based on content of the imported file. A drop-down box in the
+import screen allows you to change this behaviour, to either ignore duplicates
+completely, or import them as new notes instead of updating existing ones.
+
+For info on how duplicates are handled in .apkg files, please see the
+<<apkg-export,Deck Packages>> section below.
 
 = Exporting =
 
@@ -3019,6 +3024,7 @@ collection.apkg. To delete unused media, use Tools>Unused Media.
 NOTE: Anki's automatic backups are also collection packages. Simply double
 click on one to restore your collection to that backup.
 
+[[apkg-export]]
 === Deck Package ===
 
 Deck packages contain a single deck (and any child decks it may have). They
