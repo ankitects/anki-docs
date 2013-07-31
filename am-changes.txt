@@ -7,8 +7,8 @@ __________________
 
 = Changes in 2.0.4 =
 
-2.0.4 is undergoing final beta testing and is expected to be sent to Apple
-within a few days.
+2.0.4 was approved by Apple on Aug 1 2013, and should be available as a free
+update to existing users within 24 hours.
 
 * Syncing improvements:
 ** Check that the collection is consistent before syncing, and catch more
@@ -81,7 +81,6 @@ within a few days.
   circumstances.
 * Add "mature correct" statistics to the graphs.
 * Fix an issue where users couldn't sync in iOS7.
-* When adding cards, default to the note type for current deck.
 * Show filtered decks in blue in the deck list.
 * Confirm deletion of non-filtered decks.
 * When exiting the filtered deck options, only remove an empty filtered deck
