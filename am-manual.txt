@@ -302,6 +302,8 @@ to hide or show a writing pad, that you can use to practice writing things
 like foreign characters.
 Audio Buttons :: Allows you to hide the play button that appears on the top
 left of a card that has audio attached to it.
+Quieten Music :: When on, Anki will lower the volume of background music while
+Anki is active, so that audio on cards can be better heard.
 Pinch Scales Text :: Normally when you do a pinch gesture, Anki will expand or
 contract any images that have been shrunk to fit the screen. If you enable
 this option, the text will also scale when you pinch.

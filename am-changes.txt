@@ -15,6 +15,12 @@ one of their decks to an empty/blank string. Renaming the deck will
 https://anki.tenderapp.com/discussions/ankimobile/465-cant-launch-anki-for-iphone-204[fix
 the startup issue].
 
+NOTE: The "quieten music" option is not working correctly in this release -
+when turned off it will silence background music instead of leaving it
+untouched, and it defaults to off. This will be fixed in the next release; in
+the mean time please turn the option off then on again if you wish to listen
+to music in the background.
+
 * Syncing improvements:
 ** Check that the collection is consistent before syncing, and catch more
    problems than before.
