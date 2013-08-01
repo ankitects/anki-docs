@@ -10,6 +10,11 @@ __________________
 2.0.4 was approved by Apple on Aug 1 2013, and should be available as a free
 update to existing users within 24 hours.
 
+NOTE: Some users have reported a problem starting the app if they've renamed
+one of their decks to an empty/blank string. Renaming the deck will
+https://anki.tenderapp.com/discussions/ankimobile/465-cant-launch-anki-for-iphone-204[fix
+the startup issue].
+
 * Syncing improvements:
 ** Check that the collection is consistent before syncing, and catch more
    problems than before.
