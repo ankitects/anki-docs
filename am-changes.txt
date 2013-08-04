@@ -5,6 +5,22 @@ __________________
 <br><br><b>Users upgrading from AnkiMobile 1: please see <a href="#v2">here</a></b>.
 ++++++++++++++++++++++
 
+= Changes in 2.0.5 =
+
+2.0.5 is currently awaiting Apple's approval.
+
+* Fixed an issue where "quieten music" would silence the music when turned
+off, instead of leaving it alone. This option now also defaults to off for new
+users.
+* Scratchpad changes:
+** Can now toggle scratchpad from All Actions screen.
+** Scratchpad background is lighter for better contrast with the pen.
+** Scratchpad won't be automatically cleared when you toggle it off and on
+again on the same card.
+* When an empty card shows up for review, don't automatically advance to the
+next card.
+* Bring handling of empty clozes in line with computer version.
+
 = Changes in 2.0.4 =
 
 2.0.4 was approved by Apple on Aug 1 2013, and should be available as a free
