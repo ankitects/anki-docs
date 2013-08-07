@@ -7,7 +7,12 @@ __________________
 
 = Changes in 2.0.5 =
 
-2.0.5 is currently awaiting Apple's approval.
+2.0.5 was approved by Apple on Aug 8 2013.
+
+NOTE: Some users have reported a problem starting the app if they've renamed
+one of their decks to an empty/blank string. Renaming the deck will
+https://anki.tenderapp.com/discussions/ankimobile/465-cant-launch-anki-for-iphone-204[fix
+the startup issue].
 
 * Fixed an issue where "quieten music" would silence the music when turned
 off, instead of leaving it alone. This option now also defaults to off for new
@@ -25,11 +30,6 @@ next card.
 
 2.0.4 was approved by Apple on Aug 1 2013, and should be available as a free
 update to existing users within 24 hours.
-
-NOTE: Some users have reported a problem starting the app if they've renamed
-one of their decks to an empty/blank string. Renaming the deck will
-https://anki.tenderapp.com/discussions/ankimobile/465-cant-launch-anki-for-iphone-204[fix
-the startup issue].
 
 NOTE: The "quieten music" option is not working correctly in this release -
 when turned off it will silence background music instead of leaving it
