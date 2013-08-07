@@ -1711,31 +1711,6 @@ text would be:
 <a href="http://example.com/search?q={{text:Expression}}">check in dictionary</a>
 -----
 
-== LaTeX Conflicts ==
-
-It's not uncommon for {{ and }} to pop up in LaTeX code when writing
-mathematical equations. To ensure that your LaTeX equations don't conflict
-with Anki's field replacements, it's possible to change the separator to
-something else.
-
-For example, if you have a template:
-
------
-{{latex field}}
------
-
-Changing it to the following will make it unlikely that the LaTeX will
-conflict:
-
------
-{{=<% %>=}}
-<%latex field%>
------
-
-While this most commonly occurs with LaTeX, the solution presented here will
-work in any situation where you need to include {{ }} on cards, regardless of
-whether LaTeX is used or not.
-
 [[columntemplates]]
 == Browser Appearance ==
 
@@ -3567,6 +3542,46 @@ Anki cards:
 -----
 [latex]\ethene{H}{H$_3$C}{CH$_3$}{Br}[/latex]
 -----
+
+== LaTeX Conflicts ==
+
+It's not uncommon for {{ and }} to pop up in LaTeX code when writing
+mathematical equations. To ensure that your LaTeX equations don't conflict
+with Anki's field replacements, it's possible to change the separator to
+something else.
+
+For example, if you have a template:
+
+-----
+{{latex field}}
+-----
+
+Changing it to the following will make it unlikely that the LaTeX will
+conflict:
+
+-----
+{{=<% %>=}}
+<%latex field%>
+-----
+
+While this most commonly occurs with LaTeX, the solution presented here will
+work in any situation where you need to include {{ }} on cards, regardless of
+whether LaTeX is used or not.
+
+When using cloze deletions, you cannot change the double braces used to mark cloze deletions; instead, you can put a space between any double closing braces that do not indicate the end of the cloze, so
+
+-----
+{{c1::[$]\frac{foo}{\frac{bar}{baz}}[/$] blah blah blah.}}
+-----
+
+will not work, but
+
+-----
+{{c1::[$]\frac{foo}{\frac{bar}{baz} }[/$] blah blah blah.}}
+-----
+
+will.
+
 
 Unsafe commands
 -----------------
