@@ -297,9 +297,6 @@ next be shown. If you disable this option, labels like "Again", "Good" and
 "Easy" will be shown instead.
 Remaining Count :: Allows you to hide the card count, while still showing the
 answer buttons when the answer is shown.
-Scratch Pad :: When enabled, an icon will appear during study that allows you
-to hide or show a writing pad, that you can use to practice writing things
-like foreign characters.
 Audio Buttons :: Allows you to hide the play button that appears on the top
 left of a card that has audio attached to it.
 Quieten Music :: When on, Anki will lower the volume of background music while
@@ -385,6 +382,10 @@ unsuspend it via the search action.
 
 Suspend Note:: Prevent all cards of current note from being shown during
 review until you unsuspend them via the search action.
+
+Toggle Scratchpad :: Will show or hide the writing pad, allowing you to
+practice writing characters during review. Anki will remember the on/off state
+for each card type.
 
 Tools :: Show the tools screen.
 
