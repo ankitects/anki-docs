@@ -565,6 +565,10 @@ please see the <<templates,templates>> section. If you have enabled the "type
 in the answer" function however, the text you type will use the font size
 defined here.
 
+*Sort by this field...* tells Anki to show this field in the Sort Field column
+of the browser, and you can use this to sort cards by that field. Only one
+field can be the sort field at once.
+
 When *Remember last input...* is checked, Anki will not clear out the field
 content after a note is added. If you find yourself entering the same content
 into multiple notes, you may find this useful.
@@ -588,9 +592,6 @@ While adding, you can click on the top left button to change note type, and
 the top right button to change deck. The window that opens up will not only
 allow you to select a deck or note type, but also to add new decks or manage
 your note types.
-
-Searching is non-consecutive - please see <<studydeck,this section>> for more
-information.
 
 [[manydecks]]
 Using Decks Appropriately
@@ -2281,6 +2282,13 @@ Things to note from the above:
  * You can prepend a minus sign to a term to find notes that don't match
  * If you want to search for something including a space or parenthese, enclose
    it in quotes.
+ * Anki is only able to search within formatting in the <<fields,sort
+field>> you've configured. For example, if you add "**exa**mple" to one of your
+fields, this will not be matched when searching for "example" unless that
+field is the sort field.
+
+internallyAnki
+will only be able to find the card when searching for "example" ifAnki can only search within formatting
 
 === Limiting to a field ===
 
@@ -2890,8 +2898,9 @@ contains angle brackets or other HTML syntax.
 
 If you wish to use HTML for formatting your file but also wish to include angle
 brackets, you may write them differently:
- * < - &amp;lt;
- * > - &amp;gt;
+
+ * For "<", use "&amp;lt;"
+ * For ">", use "&amp;gt;"
 
 == Importing Media ==
 
