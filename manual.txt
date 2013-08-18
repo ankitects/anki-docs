@@ -2287,9 +2287,6 @@ field>> you've configured. For example, if you add "**exa**mple" to one of your
 fields, this will not be matched when searching for "example" unless that
 field is the sort field.
 
-internallyAnki
-will only be able to find the card when searching for "example" ifAnki can only search within formatting
-
 === Limiting to a field ===
 
 You can also ask Anki to match only if a particular field contains some text.
