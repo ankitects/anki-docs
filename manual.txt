@@ -2578,8 +2578,9 @@ Here is a summary of each of the options:
   specify.
  Review ahead ::
   Show cards that will be due in the near future (a number of days you specify).
-  This is useful if you know you will be unable to study for a while, such as
-  before you go on a vacation.
+  This is useful for working through some of your older cards before a
+  vacation, but it will not help with cards you have learnt recently. Please
+  see the <<reviewingahead,reviewing ahead>> section below for more info.
  Preview new cards ::
   Show cards that you have recently added.
  Study by card state or tag ::
@@ -2697,11 +2698,20 @@ its home deck, and its next delay adjusted using the home deck's settings. If
 you forget the card, it will be shown according to the relearning steps
 defined in the home deck.
 
+[[reviewingahead]]
 == Reviewing Ahead ==
 
 If your search included cards that are not due, Anki will show the reviews
-ahead of time. Anki uses a special algorithm for these reviews that takes into
-account how early you are reviewing.
+ahead of time.
+
+Anki uses a special algorithm for these reviews that takes into
+account how early you are reviewing. If the cards were almost due to be shown,
+they will be given a new delay similar to what they would have received when
+you reviewed them on time. If the cards are reviewed very early however, their
+new delay will be similar to their previous delay. Thus if you have a card
+that was reviewed today and scheduled for tomorrow, reviewing it again today
+will not change when it is due - it will still be due tomorrow because no
+appreciable time has passed since you last reviewed it.
 
 Early reviews are included in the new card count rather than the review count,
 and will be shown according to the number of relearning steps defined in the
