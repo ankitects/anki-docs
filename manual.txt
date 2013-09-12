@@ -2831,8 +2831,8 @@ templates, the cards will go to that deck rather than the one you've selected.
 This is an example of a valid file:
 
 -----
-field1; field2; field3
 foo bar; bar baz; baz quux
+field1; field2; field3
 -----
 
 There are two ways to include newlines in fields.
@@ -2855,12 +2855,19 @@ two [tab] this is a one line one
 Note that you need to turn on the "allow HTML in fields" checkbox in the import
 dialog for this to work.
 
+You can also include tags in another field and select it as a tags field in the
+import dialog:
+
+-----
+first field; second field; tags
+-----
+
 This is an example of a valid file where the first line is ignored (#):
 
 -----
 # this is a comment and is ignored
-field1; field2; field3
 foo bar; bar baz; baz quux
+field1; field2; field3
 -----
 
 == Spreadsheets and UTF-8 ==
