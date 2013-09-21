@@ -612,8 +612,9 @@ You can change 15 to a different number to adjust the number of backups, and
 3600 to a different number to adjust the number of minutes between backups (by
 default, 1 hour).
 
-After you've done so and closed the debug window, please sync to have your
-settings updated on AnkiMobile.
+After you've entered the commands, please press Ctrl-Enter to execute them,
+then close the debug window and sync to have your settings updated on
+AnkiMobile.
 
 = Advanced Features =
 
