@@ -611,13 +611,14 @@ mw.col.conf['amBackupMins'] = 3600
 mw.col.setMod()
 -----
 
-You can change 15 to a different number to adjust the number of backups, and
-3600 to a different number to adjust the number of minutes between backups (by
-default, 1 hour).
+You can change 15 to a different number to adjust the number of backups - set
+it to zero to disable backups completely. amBackupMins specifies the number of
+seconds (not minutes) between backups. The default 3600 seconds means a backup
+is taken once an hour.
 
-After you've entered the commands, please press Ctrl-Enter to execute them,
-then close the debug window and sync to have your settings updated on
-AnkiMobile.
+After you've entered the commands, please use the key combination described in
+the link above in order to execute them, then close the debug window and sync
+to have your settings updated on AnkiMobile.
 
 = Advanced Features =
 
