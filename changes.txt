@@ -9,17 +9,17 @@
 
 - Sibling handling has been reworked, which should better ensure that cards
 from the same note don't appear together:
--- When you answer a card, Anki will automatically bury any siblings that are
+** When you answer a card, Anki will automatically bury any siblings that are
 in the new queue or review queue. Cards in the (re)learning queue can not be
 buried, but reviewing those cards will cause any new & review cards to be buried.
--- Cards are no longer unburied when returing to the deck list, but can be
+** Cards are no longer unburied when returing to the deck list, but can be
 unburied with a button on the study overview screen.
--- To avoid problems during the upgrade period, cards are currently unburied
+** To avoid problems during the upgrade period, cards are currently unburied
 when you sync or close your collection. When all clients have been updated,
 this behaviour will change so that cards are only automatically unburied when
 a day has passed. You will still be able to manually unbury them if you wish.
--- This new behaviour ensures that siblings are spaced even in filtered decks.
--- Burying of new cards can be disabled in the options if you
+** This new behaviour ensures that siblings are spaced even in filtered decks.
+** Burying of new cards can be disabled in the options if you
   want to introduce related cards in the same session. If disabled,
   Anki will try to spread out the siblings like it does in
   2.0.12, though like 2.0.12 spacing is not guaranteed and may
