@@ -3,11 +3,75 @@
 ++++++++++++++++++++++
 
 [[latest]]
-= Changes in 2.0.12 =
+= Changes in 2.0.13 =
 
-NOTE: If you use LaTeX for mathematical equations on your cards, and study with
-AnkiMobile or AnkiDroid, please revert to 2.0.8 (available on the Anki
-website) until the mobile clients receive an update.
+(currently in beta; not released yet)
+
+- Sibling handling has been reworked, which should better ensure that cards
+from the same note don't appear together:
+-- When you answer a card, Anki will automatically bury any siblings that are
+in the new queue or review queue. Cards in the (re)learning queue can not be
+buried, but reviewing those cards will cause any new & review cards to be buried.
+-- Cards are no longer unburied when returing to the deck list, but can be
+unburied with a button on the study overview screen.
+-- To avoid problems during the upgrade period, cards are currently unburied
+when you sync or close your collection. When all clients have been updated,
+this behaviour will change so that cards are only automatically unburied when
+a day has passed. You will still be able to manually unbury them if you wish.
+-- This new behaviour ensures that siblings are spaced even in filtered decks.
+-- Burying of new cards can be disabled in the options if you
+  want to introduce related cards in the same session. If disabled,
+  Anki will try to spread out the siblings like it does in
+  2.0.12, though like 2.0.12 spacing is not guaranteed and may
+  fail when you edit cards or perform operations that require a
+  queue rebuild.
+- When importing an .apkg file, existing notes will be updated if
+  they are newer in the .apkg file, and the note types are
+  compatible. Cards are not touched, so existing progress will be
+  retained. This means content authors can now easily distribute
+  not only new content, but updates to existing content as well.
+- Filtered decks have a new "relative overdueness" sort option that will sort
+  cards by how overdue they are compared to their interval, in the same manner
+  Anki did a few years ago.
+- You can now show tags as a browser column.
+- Fix an issue with importing when a filtered deck was selected in the main
+  window.
+- Don't treat modified q/a templates as an incompatible note type. 
+- Anki now enforces a standard encoding of media files with non-latin text,
+  which should fix some issues moving media between Mac and non-Mac computers,
+  and will ensure you don't end up with multiple files in your media folder
+  that look like they have the same filename but actually have a different
+  encoding.
+- The 'unused media' menu option has been renamed back to "Check Media", and
+  it is now capable of renaming fields and media filenames to ensure they're
+  consistent.
+- Fix an issue where dragging files from the desktop on Linux was pasting a
+  URL instead of embedding the file 
+- Fixed a bug where Anki failed to start on Linux distributions with an older
+Python version.
+- Anki now allows you to import .apkgs which have been renamed to .zip, as
+  unfortunately some browsers "helpfully" rename the files when downloading
+  them. 
+- The "Find Duplicates" function in the browser now ignores HTML when
+  comparing duplicates, and provides an option to tag the duplicates.
+- Fix an error in showing an error when downloading addons 
+- Fix < and > in a field causing text to disappear when typing in the answer .
+- The "study deck" and deck/note type selection windows now remember their
+  size and position. 
+- Fix an issue showing clozes when the user's mistyped the cloze characters. 
+- Tolerate Windows trash errors .
+- Fix an error when upgrading some Anki 1 decks.
+- Separate users on the same machine can now run Anki concurrently.
+- Anki should no longer have issues starting upon Linux after a previous
+  instance didn't terminate properly.
+- Fix some issues with suspending, burying & rescheduling learning cards that
+  could cause a later "download the fix assertion addon" message.
+- After syncing once, the sync username should become visible in the
+  preferences dialog.
+- When adding a new column in the browser, scroll it into view.
+- When adding or importing note types, ensure they have a unique name.
+
+= Changes in 2.0.12 =
 
 * Changed the way pastes and drag&drops are handled. This should hopefully fix
   various issues people were having with Google Images, and will now
