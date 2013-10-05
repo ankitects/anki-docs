@@ -610,9 +610,10 @@ recommended, for the following reasons:
     easier to answer the cards, as you can guess them from the context, which
     leads to weaker memories. When you need to recall the word or phrase outside
     Anki, you won't have the luxury of being shown related content first!
-  * Creating all the separate decks also slows down the inputting stage.
   * Anki was not designed to handle many decks, and it will slow down as you
-    add more - especially if you're studying on a mobile client.
+    add more - especially if you're studying on a mobile client. A few extra decks
+    is not going to make a noticeable difference, but if you have many decks the
+    delays will start to add up.
 
 Instead of creating lots of little decks, it's a better idea to use tags and/or
 fields to classify your content. Instead of creating a "food verbs" decks for
@@ -631,15 +632,10 @@ make this especially powerful, as you can create temporary decks out of
 search terms. This allows you to review your content mixed together in a
 single deck most of the time (for optimum memory), but also create temporary
 decks when you need to focus on particular material, such as before a test.
-
-If you're here because you've received a message in Anki that states you have a
-lot of decks and prompts you to visit this page, please note that it is only a
-suggestion that you remove some. While having a lot of decks tends to indicate
-you are not using decks as they were designed to be used, it is possible that
-you are simply studying a lot of different broad categories. And while Anki is
-likely to slow down if you add too many decks as mentioned above, just being a
-few over the point where Anki shows you this warning is not likely to cause any
-serious issues.
+The general rule is that if you always want to be able to study some content
+separately, it should be in a normal deck, and if you only occasionally need
+to be able to study it separately (for a test, when under a backlog, etc),
+tags/fields and filtered decks are better.
 
 Studying
 ==========
