@@ -5,8 +5,6 @@
 [[latest]]
 = Changes in 2.0.13 =
 
-(currently in beta; not released yet)
-
 - Sibling handling has been reworked, which should better ensure that cards
 from the same note don't appear together:
 ** When you answer a card, Anki will automatically bury any siblings that are
@@ -70,6 +68,7 @@ Python version.
   preferences dialog.
 - When adding a new column in the browser, scroll it into view.
 - When adding or importing note types, ensure they have a unique name.
+- Speed improvements to some text operations, thanks to hssm.
 
 = Changes in 2.0.12 =
 

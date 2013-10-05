@@ -789,7 +789,8 @@ other operations you can do on the current card or note:
   show a small star in the upper-right-hand corner during reviews.
  Bury Note ::
   Hides all of the note's cards from review until Anki is reopened. Useful if
-  you want to come back to the card another time.
+  you want to come back to the card another time. Burying can also <<siblings,happen
+  automatically>> for cards of the same note.
  Suspend Note ::
   Hides all of the note's cards from review until they are manually
   unsuspended (by clicking the suspend button in the browser). Useful if
@@ -841,6 +842,33 @@ For more fine-grained ordering of new cards, you can change the order in the
 
 To control the order reviews from a given deck appear in, or change new cards
 from ordered to random order, please see the <<deckoptions,deck options>>.
+
+[[siblings]]
+== Siblings and Burying ==
+
+Recall from <<basics,the basics>> that Anki can create more than one card for
+each thing you input, such as front->back card and back->front card. These
+related cards are called 'siblings'. Anki tries to ensure siblings are not
+shown close together, as that's usually not helpful.
+
+When you answer a card that has siblings, Anki prevents the card's siblings
+from being shown in the same session by automatically burying them. Buried
+cards are hidden from review until you close Anki, sync with AnkiWeb, the
+clock rolls over to a new day, or you manually unbury them using the "Unbury"
+button that's visible at the bottom of the screen after clicking on a deck in
+the deck list.
+
+Anki will only bury siblings that are new cards, or review cards. It will not
+hide cards in learning, as time is of the essence for those cards, and
+technical reasons also prevent this. On the other hand, when you study a
+learning card, any new/review siblings will be buried.
+
+If you want to see more than one card of a note when learning new cards, you
+can stop Anki from burying cards in the deck options, described further below.
+
+NOTE: In the future, cards will not be unburied when closing Anki or syncing.
+It currently performs this way because all Anki clients need to be updated
+before it can be changed.
 
 [[studyshortcuts]]
 == Keyboard Shortcuts  ==
@@ -1971,12 +1999,11 @@ the next delay would be 25 days). Based upon how you rate the card in
 subsequent reviews, the easiness may increase or decrease from what it starts
 out as.
 
-When *Try not to show...* is checked, Anki will try not to introduce two new
-cards of the same note next to each other, as seeing one card may make it
-easier to answer another card. For this to work, your new cards/day setting
-needs to be large enough for the cards of multiple notes to be included, and
-the cards of the same note need to have the same due number in the browser
-(which is usually the case unless you have manually repositioned them).
+Turning off *bury related...* will prevent Anki from <<siblings,burying
+siblings>>, and instead Anki will just try to avoid showing siblings directly
+after one another another in the same session. For this to work, your new
+cards/day setting needs to be large enough for the cards of multiple notes to
+be included.
 
 Reviews
 --------
@@ -1989,20 +2016,6 @@ counts, and can save you from a heart attack when returning to Anki after a
 week off. When reviews have been hidden due to this option, a message will
 appear in the congratulations screen, suggesting you consider increasing the
 limit if you have time.
-
-When you answer a review card, Anki tries to place it for review on a day that
-doesn't have any other cards of the same note. The *space siblings* setting
-tells Anki how far it may adjust the ideal interval in order to keep siblings
-separated. The default 5% means that if a card has an interval of 100 days,
-Anki will consider increasing the interval by +/- 5 days.
-
-The *minimum sibling range* allows you to force a minimum number of days to
-consider. With the default setting above, an interval of 10 days at 5% would
-be less than a day, so Anki would not be able to increase or decrease the
-interval at all. The minimum sibling range allows you to force a minimum range
-to consider with small intervals. At its default of 1 day, Anki will consider
-scheduling the card one day more or less than it normally would. If you have
-more than two cards in a note type, you may want to increase this.
 
 *Easy bonus* allows you to set the difference in intervals between answering
 'Good' and 'Easy' on a card.
