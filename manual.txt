@@ -632,6 +632,15 @@ search terms. This allows you to review your content mixed together in a
 single deck most of the time (for optimum memory), but also create temporary
 decks when you need to focus on particular material, such as before a test.
 
+If you're here because you've received a message in Anki that states you have a
+lot of decks and prompts you to visit this page, please note that it is only a
+suggestion that you remove some. While having a lot of decks tends to indicate
+you are not using decks as they were designed to be used, it is possible that
+you are simply studying a lot of different broad categories. And while Anki is
+likely to slow down if you add too many decks as mentioned above, just being a
+few over the point where Anki shows you this warning is not likely to cause any
+serious issues.
+
 Studying
 ==========
 
