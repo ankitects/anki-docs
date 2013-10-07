@@ -3679,7 +3679,8 @@ Sharing Decks Publicly
 -----------------------
 
 To share decks with other people, <<syncing,synchronize>> them with AnkiWeb,
-then click on "Share" from the menu next to the deck you wish to share.
+then log into AnkiWeb and click on "Share" from the menu next to the deck you
+wish to share.
 
 If you shared a deck previously (including with previous versions of Anki),
 you can update it by clicking "Share" as above. Please ensure the name of the
