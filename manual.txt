@@ -1973,7 +1973,7 @@ the cards of a given note close together. The cards of a given note are shown
 in the order their card templates appear in, so that siblings are introduced
 consistently - otherwise you could end up in a state where some notes had all
 their cards introduced and other notes had only one or two. Please see the
-"try not to show" option below for more info.
+"bury related" option below for more info.
 
 *New cards/day* tells Anki how many new cards you'd like introduced on each
 day you open the program. Missed days will not cause the cards to pile up. The
@@ -2007,9 +2007,9 @@ out as.
 
 Turning off *bury related...* will prevent Anki from <<siblings,burying
 siblings>>, and instead Anki will just try to avoid showing siblings directly
-after one another another in the same session. For this to work, your new
-cards/day setting needs to be large enough for the cards of multiple notes to
-be included.
+after one another in the same session. For this to work, your new cards/day
+setting needs to be large enough for the cards of multiple notes to be
+included.
 
 Reviews
 --------
