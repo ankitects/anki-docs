@@ -20,6 +20,7 @@ Translations
 This page translated into other languages:
 
  * http://192.167.9.6/Anki_ITA/Manual_ITA.htm[Italiano]
+ * http://wikiwiki.jp/rage2050/?FrontPage[日本語]
     
 Introduction
 ============
@@ -564,6 +565,10 @@ please see the <<templates,templates>> section. If you have enabled the "type
 in the answer" function however, the text you type will use the font size
 defined here.
 
+*Sort by this field...* tells Anki to show this field in the Sort Field column
+of the browser, and you can use this to sort cards by that field. Only one
+field can be the sort field at once.
+
 When *Remember last input...* is checked, Anki will not clear out the field
 content after a note is added. If you find yourself entering the same content
 into multiple notes, you may find this useful.
@@ -588,9 +593,6 @@ the top right button to change deck. The window that opens up will not only
 allow you to select a deck or note type, but also to add new decks or manage
 your note types.
 
-Searching is non-consecutive - please see <<studydeck,this section>> for more
-information.
-
 [[manydecks]]
 Using Decks Appropriately
 --------------------------
@@ -608,9 +610,10 @@ recommended, for the following reasons:
     easier to answer the cards, as you can guess them from the context, which
     leads to weaker memories. When you need to recall the word or phrase outside
     Anki, you won't have the luxury of being shown related content first!
-  * Creating all the separate decks also slows down the inputting stage.
   * Anki was not designed to handle many decks, and it will slow down as you
-    add more - especially if you're studying on a mobile client.
+    add more - especially if you're studying on a mobile client. A few extra decks
+    is not going to make a noticeable difference, but if you have many decks the
+    delays will start to add up.
 
 Instead of creating lots of little decks, it's a better idea to use tags and/or
 fields to classify your content. Instead of creating a "food verbs" decks for
@@ -629,15 +632,10 @@ make this especially powerful, as you can create temporary decks out of
 search terms. This allows you to review your content mixed together in a
 single deck most of the time (for optimum memory), but also create temporary
 decks when you need to focus on particular material, such as before a test.
-
-If you're here because you've received a message in Anki that states you have a
-lot of decks and prompts you to visit this page, please note that it is only a
-suggestion that you remove some. While having a lot of decks tends to indicate
-you are not using decks as they were designed to be used, it is possible that
-you are simply studying a lot of different broad categories. And while Anki is
-likely to slow down if you add too many decks as mentioned above, just being a
-few over the point where Anki shows you this warning is not likely to cause any
-serious issues.
+The general rule is that if you always want to be able to study some content
+separately, it should be in a normal deck, and if you only occasionally need
+to be able to study it separately (for a test, when under a backlog, etc),
+tags/fields and filtered decks are better.
 
 Studying
 ==========
@@ -796,7 +794,8 @@ other operations you can do on the current card or note:
   show a small star in the upper-right-hand corner during reviews.
  Bury Note ::
   Hides all of the note's cards from review until Anki is reopened. Useful if
-  you want to come back to the card another time.
+  you want to come back to the card another time. Burying can also <<siblings,happen
+  automatically>> for cards of the same note.
  Suspend Note ::
   Hides all of the note's cards from review until they are manually
   unsuspended (by clicking the suspend button in the browser). Useful if
@@ -848,6 +847,33 @@ For more fine-grained ordering of new cards, you can change the order in the
 
 To control the order reviews from a given deck appear in, or change new cards
 from ordered to random order, please see the <<deckoptions,deck options>>.
+
+[[siblings]]
+== Siblings and Burying ==
+
+Recall from <<basics,the basics>> that Anki can create more than one card for
+each thing you input, such as a front->back card and a back->front card. These
+related cards are called 'siblings'. Anki tries to ensure siblings are not
+shown close together, as that's usually not helpful.
+
+When you answer a card that has siblings, Anki prevents the card's siblings
+from being shown in the same session by automatically burying them. Buried
+cards are hidden from review until you close Anki, sync with AnkiWeb, the
+clock rolls over to a new day, or you manually unbury them using the "Unbury"
+button that's visible at the bottom of the screen after clicking on a deck in
+the deck list.
+
+Anki will only bury siblings that are new cards, or review cards. It will not
+hide cards in learning, as time is of the essence for those cards, and
+technical reasons also prevent this. On the other hand, when you study a
+learning card, any new/review siblings will be buried.
+
+If you want to see more than one card of a note when learning new cards, you
+can stop Anki from burying cards in the <<newopts,deck options>>.
+
+NOTE: In the future, cards will not be unburied when closing Anki or syncing.
+It currently performs this way because all Anki clients need to be updated
+before it can be changed.
 
 [[studyshortcuts]]
 == Keyboard Shortcuts  ==
@@ -1904,6 +1930,7 @@ NOTE: Options are not retroactive. For example, if you change an option that
 controls the delay after failing a card, cards that you failed prior to
 changing the option will have the old delay, not the new one.
 
+[[newopts]]
 New Cards
 ---------
 
@@ -1978,12 +2005,11 @@ the next delay would be 25 days). Based upon how you rate the card in
 subsequent reviews, the easiness may increase or decrease from what it starts
 out as.
 
-When *Try not to show...* is checked, Anki will try not to introduce two new
-cards of the same note next to each other, as seeing one card may make it
-easier to answer another card. For this to work, your new cards/day setting
-needs to be large enough for the cards of multiple notes to be included, and
-the cards of the same note need to have the same due number in the browser
-(which is usually the case unless you have manually repositioned them).
+Turning off *bury related...* will prevent Anki from <<siblings,burying
+siblings>>, and instead Anki will just try to avoid showing siblings directly
+after one another another in the same session. For this to work, your new
+cards/day setting needs to be large enough for the cards of multiple notes to
+be included.
 
 Reviews
 --------
@@ -1996,20 +2022,6 @@ counts, and can save you from a heart attack when returning to Anki after a
 week off. When reviews have been hidden due to this option, a message will
 appear in the congratulations screen, suggesting you consider increasing the
 limit if you have time.
-
-When you answer a review card, Anki tries to place it for review on a day that
-doesn't have any other cards of the same note. The *space siblings* setting
-tells Anki how far it may adjust the ideal interval in order to keep siblings
-separated. The default 5% means that if a card has an interval of 100 days,
-Anki will consider increasing the interval by +/- 5 days.
-
-The *minimum sibling range* allows you to force a minimum number of days to
-consider. With the default setting above, an interval of 10 days at 5% would
-be less than a day, so Anki would not be able to increase or decrease the
-interval at all. The minimum sibling range allows you to force a minimum range
-to consider with small intervals. At its default of 1 day, Anki will consider
-scheduling the card one day more or less than it normally would. If you have
-more than two cards in a note type, you may want to increase this.
 
 *Easy bonus* allows you to set the difference in intervals between answering
 'Good' and 'Easy' on a card.
@@ -2289,6 +2301,10 @@ Things to note from the above:
  * You can prepend a minus sign to a term to find notes that don't match
  * If you want to search for something including a space or parenthese, enclose
    it in quotes.
+ * Anki is only able to search within formatting in the <<fields,sort
+field>> you've configured. For example, if you add "**exa**mple" to one of your
+fields, this will not be matched when searching for "example" unless that
+field is the sort field.
 
 === Limiting to a field ===
 
@@ -2581,8 +2597,9 @@ Here is a summary of each of the options:
   specify.
  Review ahead ::
   Show cards that will be due in the near future (a number of days you specify).
-  This is useful if you know you will be unable to study for a while, such as
-  before you go on a vacation.
+  This is useful for working through some of your older cards before a
+  vacation, but it will not help with cards you have learnt recently. Please
+  see the <<reviewingahead,reviewing ahead>> section below for more info.
  Preview new cards ::
   Show cards that you have recently added.
  Study by card state or tag ::
@@ -2700,11 +2717,28 @@ its home deck, and its next delay adjusted using the home deck's settings. If
 you forget the card, it will be shown according to the relearning steps
 defined in the home deck.
 
+[[reviewingahead]]
 == Reviewing Ahead ==
 
 If your search included cards that are not due, Anki will show the reviews
-ahead of time. Anki uses a special algorithm for these reviews that takes into
-account how early you are reviewing.
+ahead of time.
+
+Anki uses a special algorithm for these reviews that takes into account how
+early you are reviewing. If the cards were almost due to be shown,
+they will be given a new delay similar to what they would have received if
+you  had reviewed them on time. If the cards are reviewed soon after they
+were scheduled however, their new delay will be similar to their previous
+delay. This calculation works on a sliding scale.
+
+NOTE: Because reviewing a card shortly after it is scheduled has little
+impact on scheduling (eg, a card due tomorrow will remain due tomorrow if
+reviewed early), *the "review early" custom study setting is not appropriate
+for repeated use*. If used to go through a week's worth of cards before a
+trip, the mature cards will be rescheduled into the future and the new cards
+will remain at small intervals, because you don't know them well enough for
+them to be rescheduled further. If you review early again the next day,
+all you'll end up doing is going through those same new cards again,
+to little benefit.
 
 Early reviews are included in the new card count rather than the review count,
 and will be shown according to the number of relearning steps defined in the
@@ -2905,8 +2939,9 @@ contains angle brackets or other HTML syntax.
 
 If you wish to use HTML for formatting your file but also wish to include angle
 brackets, you may write them differently:
- * < - &amp;lt;
- * > - &amp;gt;
+
+ * For "<", use "&amp;lt;"
+ * For ">", use "&amp;gt;"
 
 == Importing Media ==
 
@@ -2956,11 +2991,16 @@ tags:tag1 tag2
 
 == Duplicates and Updating ==
 
-Anki uses the first field to determine if a note is unique. If the file you
-are importing has a first field that matches one of the existing notes in your
-collection and that existing note is the same type as the type you're
-importing, the existing note's other fields will be updated based on content
-of the imported file.
+When importing text files, Anki uses the first field to determine if a note is
+unique. By default, if the file you are importing has a first field that
+matches one of the existing notes in your collection and that existing note is
+the same type as the type you're importing, the existing note's other fields
+will be updated based on content of the imported file. A drop-down box in the
+import screen allows you to change this behaviour, to either ignore duplicates
+completely, or import them as new notes instead of updating existing ones.
+
+For info on how duplicates are handled in .apkg files, please see the
+<<apkg-export,Deck Packages>> section below.
 
 = Exporting =
 
@@ -3011,6 +3051,7 @@ collection.apkg. To delete unused media, use Tools>Unused Media.
 NOTE: Anki's automatic backups are also collection packages. Simply double
 click on one to restore your collection to that backup.
 
+[[apkg-export]]
 === Deck Package ===
 
 Deck packages contain a single deck (and any child decks it may have). They
@@ -4095,6 +4136,3 @@ http://www.supermemo.com/english/ol/sm2.htm
 
 The SuperMemo site has a lot of good information about spaced repetition and
 memory: http://www.supermemo.com/
-
-There's a free list of open college courses available at
-http://www.onlinecourses.com/

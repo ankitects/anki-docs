@@ -13,33 +13,8 @@ AnkiMobile is available on the http://itunes.apple.com/us/app/ankisrs/id37349338
 
 = The Price =
 
-For the last six years, I have invested thousands of hours on
-making a robust, powerful cross platform desktop application freely available.
-What started as a hobby has grown into a full time job. Some kind people have
-donated to the project, but sadly donations are not enough to live on. So I
-created this app to raise money for the Anki project, while also making
-something people wanted.
-
-Taken alone, AnkiMobile is expensive for an app. However, AnkiMobile is not a
-standalone app, but part of an ecosystem, and the $17.50 Apple gives me on
-each sale (after they take their 30% cut of the $25) goes towards the
-development of that whole ecosystem. For the price, you get not only the app,
-but a powerful desktop application, a free online synchronization service, and
-mobile clients for various platforms. The desktop application is open source,
-which is essential for ensuring you won't get locked out in the future. If I'm
-ever run over by a bus, somebody else could take over development, and the
-content of your cards and your learning history is in an open format which
-makes it easy to move into a different learning system if you choose.
-
-That said, if you don't have much experience with Anki, or study infrequently,
-you may find the learning curve to be steep initially. For serious studiers
-the initial setup is definitely worth it - when you're looking at studying
-material for months or years, Anki's proven algorithms, cross platform
-support, and open file format are essential for ensuring the integrity of your
-studies regardless of which device or program you choose to use in the future.
-But if you're just looking to review a few questions before a test, and don't
-care much about the long term, you may be better off with a cheaper
-alternative.
+Surprised by the price? Please see
+https://anki.tenderapp.com/kb/anki-ecosystem/why-does-ankimobile-cost-more-than-a-typical-mobile-app[this page].
 
 = Getting Started =
 
