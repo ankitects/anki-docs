@@ -5,6 +5,48 @@ __________________
 <br><br><b>Users upgrading from AnkiMobile 1: please see <a href="#v2">here</a></b>.
 ++++++++++++++++++++++
 
+= Changes in 2.0.6 =
+
+2.0.6 is in the final stages of beta testing and is due out soon.
+
+* iOS7 users were finding the answer was sometimes slow to appear; this has
+  been worked around.
+* A native iOS7 look is planned for the next release - some outstanding issues
+  meant it couldn't be included in this one.
+* Fixed a bug on iOS7 where new, empty decks couldn't be added.
+* 2.0.6 introduces the new sibling handling from the 2.0.13 computer version,
+ which does a better job of ensuring you don't see siblings close to each
+ other. For more information, please see the desktop changelog:
+ http://ankisrs.net/docs/changes.html
+* When you import a shared deck, it will now update any notes that have been
+  changed in the shared deck, provided the note types are compatible. Any
+  review progress is preserved.
+* Support a new sort type for filtered decks that allows you to order by
+  relative priority.
+* Automatic backups are no longer compressed, which can result in backups
+  that are up to 4-5x faster.
+* AnkiMobile now clears the deletion log and optimizes the collection before
+  doing a full upload, leading to a smaller upload.
+* Fixed a bug where failures at certain points of the sync process were
+  failing silently instead of being reported, and syncing now waits longer
+  before deciding to give up.
+* Fixed audio recording on iPhone 5s devices.
+* Fixed the "quieten audio" option again.
+* Fixed the recording playback confirmation coming out of the top speaker.
+* Don't show (un)marked, (un)suspend etc; change text depending on current state.
+* When importing, note types are now renamed if their name is a duplicate
+  of an existing note type.
+* Fix a crash when user types anki:/// into Safari.
+* When making gestures in the study area, the card will no longer scroll off
+  the top or bottom of the screen, and the amount of scrolling is reduced.
+* Disable autocorrection in the add&edit screens, as it's too problematic
+  when dealing with multiple languages.
+* Faster toggling of the scratchpad with complicated note types.
+* Fixed a problem in automatic leech suspension that could cause errors down
+  the road.
+* Fix the quickbar appearing on the wrong screens after certain actions.
+* Don't hide the default deck if it has subdecks.
+
 = Changes in 2.0.5 =
 
 2.0.5 was approved by Apple on Aug 8 2013.
