@@ -46,6 +46,7 @@ __________________
   the road.
 * Fix the quickbar appearing on the wrong screens after certain actions.
 * Don't hide the default deck if it has subdecks.
+* Various other changes from 2.0.13 have been ported over.
 
 = Changes in 2.0.5 =
 
