@@ -3238,7 +3238,16 @@ wrong with the steps below.
 Open a terminal, change to the folder your collection is located in, and type:
 
 -----
-sqlite3 collection.anki2 .dump | sqlite3 temp.file
+sqlite3 collection.anki2 .dump > dump.txt
+-----
+
+Open the resulting dump.txt file in a text editor, and look at the final line.
+If it reads "rollback;", change it to "commit;"
+
+Then run the following in a terminal:
+
+-----
+cat dump.txt | sqlite3 temp.file
 -----
 
 Make sure you use temp.file - do not put collection.anki2 on the right, or you
@@ -3260,7 +3269,16 @@ cd C:\Users\Administrator\Desktop
 Then type:
 
 -----
-sqlite3 collection.anki2 .dump | sqlite3 temp.file
+sqlite3 collection.anki2 .dump > dump.txt
+-----
+
+Open the resulting dump.txt file in a text editor, and look at the final line.
+If it reads "rollback;", change it to "commit;"
+
+Then run the following in a terminal:
+
+-----
+type dump.txt | sqlite3 temp.file
 -----
 
 Make sure you use temp.file - do not put collection.anki2 on the right, or you
