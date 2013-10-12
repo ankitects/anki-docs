@@ -2506,6 +2506,12 @@ note:'french vocab' or note:'french verbs'
 The search syntax is the same as used when searching in the browser. Please
 see the <<searching,searching>> section for more information.
 
+You can click one of the links in the search results list to display the
+duplicate notes in that set. If the search brings up a large number of
+duplicates, you may wish to instead click the Tag Duplicates button, which will
+tag all matching notes with "duplicate." You can then search for this tag in
+the browser and handle them all from the same screen.
+
 [[browsermisc]]
 Other Menu Items
 -----------------
