@@ -3,6 +3,22 @@
 ++++++++++++++++++++++
 
 [[latest]]
+= Changes in 2.0.14 =
+
+Please see the 2.0.13 notes below for larger changes, such as the new
+sibling handling.
+
+* Fix a bug that was causing proxy authentication errors to be reported
+  when the issue was something else.
+* A full upload now removes the deletion log, which can save a lot of space
+  if you've added many notes and deleted them again.
+* Better feedback when a sync is aborted due to concurrent access from
+  another device.
+* Stop errors from appearing when the tags column is enabled in the browser
+  and the user has non-latin text in tags.
+* Fix an issue that was causing note types to be renamed when they shouldn't
+  be.
+
 = Changes in 2.0.13 =
 
 - Sibling handling has been reworked, which should better ensure that cards
