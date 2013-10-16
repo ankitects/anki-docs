@@ -7,7 +7,7 @@ __________________
 
 = Changes in 2.0.6 =
 
-2.0.6 is in the final stages of beta testing and is due out soon.
+2.0.6 was approved by Apple on Oct 17 2013.
 
 * iOS7 users were finding the answer was sometimes slow to appear; this has
   been worked around.
