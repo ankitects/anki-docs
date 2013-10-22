@@ -3222,6 +3222,27 @@ displayed on startup saying that Anki can't write to the harddisk, and Anki
 will close. If you're unsure how to fix the permissions, please contact
 someone near you who is knowledgable about computers and can help you out.
 
+Permissions of Temp Folder
+---------------------------
+
+Anki uses the system's temporary folder to store temporary data. If the
+permissions of this folder have been changed from the default settings by a
+rogue app or buggy antivirus app, Anki will not function properly.
+
+If you're on a Windows 7 machine, the general steps to fix the problem are
+listed below. As this is somewhat complicated, please ask someone knowledgeable
+about Windows if you are not sure.
+
+. Click on the start bar, and type in %temp% (including the percents), then
+hit enter.
+. Go up one folder, and locate the temp folder. Right click on it, and choose
+Properties.
+. In the security tab, click on Advanced.
+. Click on the Owner tab. If you're not listed as the owner, click the button
+  to take ownership.
+. On the permissions tab, ensure that you have full control. On a default W7
+install the control will actually be inherited from c:\users\your-username.
+
 Corrupt Collections
 ---------------------
 
