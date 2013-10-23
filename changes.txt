@@ -3,10 +3,30 @@
 ++++++++++++++++++++++
 
 [[latest]]
-= Changes in 2.0.14 =
+= Changes in 2.0.15 =
 
 Please see the 2.0.13 notes below for larger changes, such as the new
 sibling handling.
+
+* Add an option to disable burying of reviews.
+* Added a "bury card" option to the review screen, and changed the shortcut to
+  bury a note to "=".
+* Added a new is:buried search, and is:suspend no longer shows buried cards.
+* Added a new cid:<card id> search to search for a particular card by its ID,
+  and IDs are now shown in the Card Info screen.
+* Don't mark cards as modified when automatically burying, which could
+  potentially cause issues.
+* Increase sync timeout
+* When Anki detects the clock is wrong, it now shows how far it is off.
+* Fix an issue working around a broken trash folder on Windows.
+* Fix problems double clicking on files to import when path contains non-latin
+  text, thanks to wlhuang.
+* Display a more informative error when the user's temp folder permissions are
+  wrong.
+* When double-clicking on a backup file to restore, skip the sync on startup.
+* Log some scheduling operations to make it easier to debug issues.
+
+= Changes in 2.0.14 =
 
 * Fix a bug that was causing proxy authentication errors to be reported
   when the issue was something else.
