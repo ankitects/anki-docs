@@ -2690,6 +2690,13 @@ sorted list first.
   Display cards with the earliest due date first.
  Latest seen first ::
   Display cards that you've seen most recently in reviews first.
+ Relative overdueness ::
+  Display cards that are most overdue in relation to their current interval
+  first (for instance, a card with a current interval of 5 days overdue by 2
+  days displays before a card with a current interval of 5 years overdue by a
+  week). This is useful if you have a large backlog that may take some time to
+  get through and want to review the cards you're most in danger of forgetting
+  first.
 
 == Steps & Returning ==
 
