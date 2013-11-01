@@ -3,10 +3,23 @@
 ++++++++++++++++++++++
 
 [[latest]]
-= Changes in 2.0.15 =
+= Changes in 2.0.16 =
 
 Please see the 2.0.13 notes below for larger changes, such as the new
 sibling handling.
+
+* Fix a regression that was causing new cards to be shown in creation order
+  instead of their assigned due order.
+* Fix an issue where Anki was returning to the study screen early when burying
+  was disabled for a deck.
+* Fix cards not being completely reset when exported from a filtered deck.
+* Fix font alignment and crash issues on OSX.
+* Fix "check media" not fixing some encoding issues that it should have been.
+* Tweaks to the debug logging in 2.0.15 that improve performance with some
+  add-ons.
+* Translation updates
+
+= Changes in 2.0.15 =
 
 * Add an option to disable burying of reviews.
 * Added a "bury card" option to the review screen, and changed the shortcut to
