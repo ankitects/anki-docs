@@ -5,6 +5,32 @@ __________________
 <br><br><b>Users upgrading from AnkiMobile 1: please see <a href="#v2">here</a></b>.
 ++++++++++++++++++++++
 
+= Changes in 2.0.7 =
+
+2.0.7 is in the final stages of beta testing and is expected
+to be sent to Apple soon.
+
+* On iOS7 devices, AnkiMobile now uses the iOS7 design language instead of the old
+  provided themes.
+* Fix a bug that could leave the collection in an inconsistent state when
+  a sync failed partway through.
+* Fix another issue where a full sync would sometimes be required if the
+  previous sync failed due to an unreliable connection.
+* Burying of reviews can now be disabled via the computer version.
+* When burying disabled, don't terminate review before all the cards are done.
+* Fix a regression where new cards were being shown in creation order instead
+  of their repositioned order or randomized order.
+* Support is:buried in searches, like on computer version.
+* You should no longer have to wait for a second after scrolling to be able
+  to tap on links.
+* A possible fix for a hang when returning from card edit screen.
+* Fix a crash when doing a complicated field search in a large collection.
+* Show "1000+" like computer version if count over 1000.
+* Don't mark cards as modified when automatically unburying, which could
+  lead to progress being reset on sync in certain circumstances.
+* "Download media" option renamed to "Transfer media", as it also affects
+  uploads.
+
 = Changes in 2.0.6 =
 
 2.0.6 was approved by Apple on Oct 17 2013.
