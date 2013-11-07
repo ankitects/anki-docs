@@ -3,6 +3,12 @@
 ++++++++++++++++++++++
 
 [[latest]]
+= Changes in 2.0.17 =
+
+* Fix a delay when showing the next card on some computers.
+* Make sure suspended & buried cards are reset when exporting without
+  scheduling information.
+
 = Changes in 2.0.16 =
 
 Please see the 2.0.13 notes below for larger changes, such as the new
