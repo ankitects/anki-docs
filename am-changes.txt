@@ -7,8 +7,7 @@ __________________
 
 = Changes in 2.0.7 =
 
-2.0.7 is in the final stages of beta testing and is expected
-to be sent to Apple soon.
+2.0.7 was approved by Apple on Nov 7 2013.
 
 * On iOS7 devices, AnkiMobile now uses the iOS7 design language instead of the old
   provided themes.
