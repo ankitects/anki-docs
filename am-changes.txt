@@ -5,6 +5,35 @@ __________________
 <br><br><b>Users upgrading from AnkiMobile 1: please see <a href="#v2">here</a></b>.
 ++++++++++++++++++++++
 
+= Changes in 2.0.8 =
+
+2.0.8 is in the final stages of beta testing, and is expected to be sent
+to Apple within a few days.
+
+* Fix layout issues and a crash in the custom study screen caused by the
+  previous update to iOS7.
+* Default to a darker theme on iOS7. The blue one can be selected in the
+  preferences if you prefer it.
+* Add an option in the settings screen to enable autocorrection when
+  adding/editing
+* The navigation bar hiding has been reworked: instead of a thin line at the
+  top of the screen which people found difficult to tap, the navigation bar
+  is now shown or hidden by an action that can be assigned to a tap or swipe
+  in the preferences screen. If you wish to leave it permanently off, you
+  can toggle it off with the action, and then assign the tap or swipe to
+  something else.
+* In the interests of a timely release, hiding the navigation bar will
+  now hide the status bar as well, which works around a layout issue.
+  If possible, the status bar will be made independent again in a future
+  release.
+* Fix an issue with burying cards in a filtered deck.
+* Fix a crash when a sync found inconsistencies.
+* Fix a crash caused by a deck with an empty name is in the collection.
+* Fix the card counts failing to appear when navigation bar hidden.
+* Fix graph axis labels appearing in wrong location on iOS7
+* Fix field labels when editing appearing in a difficult to read colour
+  if you had used certain themes in previous versions.
+
 = Changes in 2.0.7 =
 
 2.0.7 was approved by Apple on Nov 7 2013.
