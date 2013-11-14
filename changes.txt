@@ -3,6 +3,23 @@
 ++++++++++++++++++++++
 
 [[latest]]
+= Changes in 2.0.18 =
+
+* Fix a bug that could cause invalid scheduling when a card was manually
+  buried while in a filtered deck. For now, burying in a filtered deck
+  will mean that the card returns to the home deck.
+* Fix an issue where Anki was failing to start if prefs.db was corrupt.
+* Don't create a .log file when exporting files.
+* Rotate log files when they hit 10MB.
+* Warn user when they have filenames with an invalid encoding.
+* Fix a long error being shown when syncing without a net connection on
+  some Linux computers.
+* Update "check database" to catch an issue with note types.
+* Fix issues on some Linux systems that had simplejson installed.
+* Fix some issues that were masking actual connection errors.
+* Catch more temp folder issues.
+* Possible fix for OSX crash when editing.
+
 = Changes in 2.0.17 =
 
 * Fix a delay when showing the next card on some computers.
