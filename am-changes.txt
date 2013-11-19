@@ -7,8 +7,7 @@ __________________
 
 = Changes in 2.0.8 =
 
-2.0.8 is in the final stages of beta testing, and is expected to be sent
-to Apple within a few days.
+2.0.8 was approved by Apple on Nov 19 2013.
 
 * Fix layout issues and a crash in the custom study screen caused by the
   previous update to iOS7.
