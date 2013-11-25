@@ -1836,7 +1836,7 @@ arial.TTF and you write arial.ttf in your card templates, it will not work.
 
 NOTE: Due to a bug in the toolkit Anki uses, embedded fonts can cause crashes
 on OS X. A workaround is posted on
-https://groups.google.com/forum/?fromgroups=#!topic/ankisrs/eR1jVzeOtgo
+https://anki.tenderapp.com/discussions/ankidesktop/4161-crash-when-showing-answer-with-custom-font-mac-109anki-2018#comment_30164833
 
 [[profileprefs]]
 = Profiles & Preferences =
