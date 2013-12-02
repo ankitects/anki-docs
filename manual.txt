@@ -2083,6 +2083,10 @@ wait to reshow a card. The default is 100 years; you can decrease this to a
 smaller number if you're willing to trade extra study time for higher
 retention.
 
+Turning off *bury related...* will prevent Anki from <<siblings,burying
+siblings>>, and instead Anki will just try to avoid showing siblings directly
+after one another in the same session.
+
 [[lapses]]
 Lapses
 ------
