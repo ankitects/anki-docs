@@ -586,13 +586,5 @@ again to load the old version back onto it.
 
 = The Upgrade Process =
 
-The fastest and most reliable way to upgrade is to ensure your decks are
-synced or copied to your computer prior to upgrading, and then to perform the
-upgrade on the computer. This is documented in more detail in the
+Upgrading will require access to a computer.This is documented in more detail in the
 link:am-upgrade.html[upgrade documentation].
-
-AnkiMobile also provides an online upgrade for use in emergencies. This
-upgrade will bundle up your decks, send them to an internet server, and then
-download the new versions. Because this can fail if you have an unreliable
-internet connection or your decks have problems, it's recommended that you
-upgrade via the desktop instead.
