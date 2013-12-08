@@ -1060,18 +1060,19 @@ of buttons for each foreign character, or provide their own conversion
 utilities. However, this makes input a lot slower. One person
 http://www.glowingfaceman.com/2008/12/french-revolution-day-7.html[writes]:
 
- By the way, if you're learning any foreign language with exotic characters,
- even just the Spanish ñ, I encourage you to look into how to efficiently
- type those characters. When I first started studying Japanese, I didn't
- know how to type Japanese characters. I'd just copy-and-paste things to
- make flashcards and/or communicate with people. And if I wanted to type
- something original, that meant painstakingly finding, then
- copying-and-pasting each individual character. With my U.S.-bought
- computer, it was kind of a pain to get Japanese IME support (and it
- involved borrowing a Windows XP disk from a friend since you need one to
- install Microsoft's Japanese IME). But it was worth it a million times
- over. In retrospect, I should have done that as one of my very first steps
- when I first set out to learn Japanese.
+[quote]
+By the way, if you're learning any foreign language with exotic characters,
+even just the Spanish ñ, I encourage you to look into how to efficiently
+type those characters. When I first started studying Japanese, I didn't
+know how to type Japanese characters. I'd just copy-and-paste things to
+make flashcards and/or communicate with people. And if I wanted to type
+something original, that meant painstakingly finding, then
+copying-and-pasting each individual character. With my U.S.-bought
+computer, it was kind of a pain to get Japanese IME support (and it
+involved borrowing a Windows XP disk from a friend since you need one to
+install Microsoft's Japanese IME). But it was worth it a million times
+over. In retrospect, I should have done that as one of my very first steps
+when I first set out to learn Japanese.
 
 If you're learning a right to left language, there are lots of other things to
 consider. Please see http://dotancohen.com/howto/rtl_right_to_left.html[this
