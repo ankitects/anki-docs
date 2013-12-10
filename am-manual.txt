@@ -695,3 +695,14 @@ return to AnkiMobile.
 Some dictionary apps publish their URL scheme in their documentation. If
 you're using a dictionary app that doesn't, please contact the authors and ask
 them for more information.
+
+== Debug Log ==
+
+If you're encountering a problem with Anki and we've asked you to provide
+a debug log, please follow the following steps:
+
+ . Connect your device via USB.
+ . Open iTunes if it doesn't open automatically.
+ . Locate Anki's file sharing section with
+   http://support.apple.com/kb/HT4094[Apple's instructions].
+ . Drag the debug.log file on to your desktop, then attach it to your support ticket.
