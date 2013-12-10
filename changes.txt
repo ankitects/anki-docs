@@ -3,6 +3,26 @@
 ++++++++++++++++++++++
 
 [[latest]]
+= Changes in 2.0.19 =
+
+* When resizing columns in the browser, move the others.
+* Fix a bug in the "reschedule as new" feature that could lead to cards ending
+  up in an inconsistent state in some circumstances.
+* Fix card layout screen jumping to original tab when flipping.
+* Fix an error in syncing when time passed between connections.
+* Fix a bug in "check media".
+* When rescheduling in the browser, automatically remove from a filtered deck
+  instead of ignoring filtered cards. Same with buried/suspended.
+* If a non-media URL is pasted in, paste it verbatim instead of ignoring it.
+* Change import default for new users to ignore duplicates, instead of updating them.
+* Fix a bug in the pasting of certain image links.
+* Fix a error that could occur on Windows when switching profiles or syncing.
+* Add a more description error message to certain network issues.
+* Fix an issue with media resyncing on Macs.
+* Fix the message that displays when the clock is incorrect.
+* Add an option to the preferences to disable compression of backups for slow computers.
+* Fix an install error on FreeBSD.
+
 = Changes in 2.0.18 =
 
 * Fix a bug that could cause invalid scheduling when a card was manually

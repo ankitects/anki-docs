@@ -5,6 +5,15 @@ __________________
 <br><br><b>Users upgrading from AnkiMobile 1: please see <a href="#v2">here</a></b>.
 ++++++++++++++++++++++
 
+= Changes in 2.0.9 =
+
+2.0.9 was sent to Apple on Dec 10 and is awaiting their approval.
+
+* Fix a crash that some users were encountering when syncing or viewing the list of decks.
+* Fix a crash when returning from the card edit screen.
+* Fix a few issues with syncing media.
+* Fix a small white line appearing above the counts when your cards had non-white background colour.
+
 = Changes in 2.0.8 =
 
 2.0.8 was approved by Apple on Nov 19 2013.
