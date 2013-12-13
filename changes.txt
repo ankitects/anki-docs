@@ -3,6 +3,11 @@
 ++++++++++++++++++++++
 
 [[latest]]
+= Changes in 2.0.20 =
+
+* Fixed a bug where "check media" could incorrectly report media as unused
+  when the media filenames were encoding incorrectly.
+
 = Changes in 2.0.19 =
 
 * When resizing columns in the browser, move the others.
