@@ -3943,8 +3943,8 @@ treats the delay differently depending on your answer. If you find a card
 easy, the last interval plus the full delay are added together, and then used
 to calculate the next interval. When you answer good, only half the delay is
 used. And when you answer hard, only a quarter of the delay is used. So if a
-card was due in 5 days, and it's answered 20 days late, the next times you'd
-end up with are approximately:
+card was due in 5 days, and it's answered 20 days late (it's 20 days overdue),
+the next times you'd end up with are approximately:
 
  * Hard: (5 + 20/4) * 1.2 = 12 days
  * Good: (5 + 20/2) * 2.5 = 37.5 days
