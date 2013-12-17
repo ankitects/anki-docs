@@ -3219,7 +3219,11 @@ Anki is open.
 
 To restore from a backup, simply close Anki, open Documents/Anki/<profile
 name>/backups, and double-click on the most recent backup in order to import
-it.
+it. This will overwrite your whole collection with the backup copy. If you need
+to import only part of a backup (for instance, a single deck you messed up),
+you can do so by creating a new <<profiles,profile>> and importing the backup
+into there, then exporting the deck you want to restore and importing it into
+the other profile.
 
 Anki also logs deleted notes to a text file called deleted.txt in your profile
 folder. These notes are in a text format that can be read by File>Import,
