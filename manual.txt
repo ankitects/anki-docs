@@ -714,8 +714,8 @@ There are three rating buttons when learning:
 *Again* moves the card back to the first step.
 
 *Good* moves the card to the next step. If the card was on the final step, the
-card is converted into a review card. By default, the card will be
-shown again the next day, and then at increasingly long delays.
+card is converted into a review card (it 'graduates'). By default, the card
+will be shown again the next day, and then at increasingly long delays.
 
 *Easy* immediately converts the card into a review card, even if there were
 steps remaining. By default, the card will be shown again 4 days later, and
@@ -3219,7 +3219,11 @@ Anki is open.
 
 To restore from a backup, simply close Anki, open Documents/Anki/<profile
 name>/backups, and double-click on the most recent backup in order to import
-it.
+it. This will overwrite your whole collection with the backup copy. If you need
+to import only part of a backup (for instance, a single deck you messed up),
+you can do so by creating a new <<profiles,profile>> and importing the backup
+into there, then exporting the deck you want to restore and importing it into
+the other profile.
 
 Anki also logs deleted notes to a text file called deleted.txt in your profile
 folder. These notes are in a text format that can be read by File>Import,
