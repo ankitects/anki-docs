@@ -5,6 +5,12 @@ __________________
 <br><br><b>Users upgrading from AnkiMobile 1: please see <a href="#v2">here</a></b>.
 ++++++++++++++++++++++
 
+= Changes in 2.0.10 =
+
+2.0.10 was approved by Apple on Dec 20 2013.
+
+* Fix a problem syncing media with non-latin text filenames.
+
 = Changes in 2.0.9 =
 
 2.0.9 was approved by Apple on Dec 13 2013.
