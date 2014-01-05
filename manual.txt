@@ -3152,7 +3152,7 @@ anki -b /path/to/anki/folder
 
 * If you have multiple profiles, you can pass -p to load a specific
   profile.
-* To change the interface language, use -l <iso country code>,
+* To change the interface language, use -l <iso 639-1 language code>,
   such as "-l ja" for Japanese.
 
 If you always want to use a custom folder location, you can modify your
