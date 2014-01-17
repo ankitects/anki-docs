@@ -610,10 +610,10 @@ recommended, for the following reasons:
     easier to answer the cards, as you can guess them from the context, which
     leads to weaker memories. When you need to recall the word or phrase outside
     Anki, you won't have the luxury of being shown related content first!
-  * Anki was not designed to handle many decks, and it will slow down as you
-    add more - especially if you're studying on a mobile client. A few extra decks
-    is not going to make a noticeable difference, but if you have many decks the
-    delays will start to add up.
+  * Anki was not designed to handle many decks (more than several dozen), and
+    it will slow down as you add more - especially if you're studying on a mobile
+    client. A few extra decks is not going to make a noticeable difference, but
+    if you have many decks the delays will start to add up.
 
 Instead of creating lots of little decks, it's a better idea to use tags and/or
 fields to classify your content. Instead of creating a "food verbs" decks for
