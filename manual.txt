@@ -610,10 +610,10 @@ recommended, for the following reasons:
     easier to answer the cards, as you can guess them from the context, which
     leads to weaker memories. When you need to recall the word or phrase outside
     Anki, you won't have the luxury of being shown related content first!
-  * Anki was not designed to handle many decks, and it will slow down as you
-    add more - especially if you're studying on a mobile client. A few extra decks
-    is not going to make a noticeable difference, but if you have many decks the
-    delays will start to add up.
+  * Anki was not designed to handle many decks (more than several dozen), and
+    it will slow down as you add more - especially if you're studying on a mobile
+    client. A few extra decks is not going to make a noticeable difference, but
+    if you have many decks the delays will start to add up.
 
 Instead of creating lots of little decks, it's a better idea to use tags and/or
 fields to classify your content. Instead of creating a "food verbs" decks for
@@ -719,7 +719,8 @@ will be shown again the next day, and then at increasingly long delays.
 
 *Easy* immediately converts the card into a review card, even if there were
 steps remaining. By default, the card will be shown again 4 days later, and
-then at increasingly long delays.
+then at increasingly long delays. The easy button will not be shown if it would
+give the same interval as "good."
 
 When cards are seen for the first time, they start at step one. This means
 answering *Good* on a card for the first time will show it one more time in 10
@@ -3151,7 +3152,7 @@ anki -b /path/to/anki/folder
 
 * If you have multiple profiles, you can pass -p to load a specific
   profile.
-* To change the interface language, use -l <iso country code>,
+* To change the interface language, use -l <iso 639-1 language code>,
   such as "-l ja" for Japanese.
 
 If you always want to use a custom folder location, you can modify your

@@ -284,14 +284,11 @@ Force Orientation :: Allows you to force the reviewing screen to stay in
 portrait mode or landscape mode.
 Status Bar :: Allows you to hide the top bar that displays the time,
 battery life and so on.
-Navigation Bar :: Allows you to hide the bar that usually says "Decks Add Edit
-Find Tools".
-Tap To Hide Nav :: When enabled, allows you to tap just under the navigation
-bar in order to hide or show it. When disabled, you can tap to show the bar if
-it's hidden, but not to hide it if it's shown.
 Bottom Bar :: Allows you to hide the bar at the bottom of the screen, that
 shows due counts while the question is shown, and answer buttons when the
 answer is shown.
+Bigger Answer Buttons :: Makes the answer buttons taller so you can press them
+more easily.
 Next Times :: By default, the answer buttons will display the time a card will
 next be shown. If you disable this option, labels like "Again", "Good" and
 "Easy" will be shown instead.
@@ -344,6 +341,10 @@ it will be added back for review.
 
 Card Info :: Shows information about the current card.
 
+Custom Study :: Allows you to study outside of the normal schedule. Please see
+the documentation of the computer version for more information on custom study
+presets.
+
 Deck Info :: Shows graphs and statistics about your deck or collection.
 
 Deck List :: Returns to the deck list.
@@ -356,21 +357,24 @@ Edit :: Edits the current card.
 
 Find:: Lets you search/browse your cards.
 
-Filter/cram:: Allows you to create a temporary deck based on search criteria such as
+Filter/Cram:: Allows you to create a temporary deck based on search criteria such as
 "tag:hard". Please see the documentation of the computer version for more
 information on filtered decks.
 
 Mark :: Adds a tag called "Marked" the current note, so it can be easily found
 in a search.
 
-Mark+Bury :: Marks the card, then buries it.
+Mark & Bury :: Marks the card, then buries it.
 
-Mark+Suspend :: Marks the card, then suspends it.
+Mark & Suspend :: Marks the card, then suspends it.
 
 More :: Shows a list of all available actions.
 
 Off :: Don't do anything. Useful if you want to disable certain swipes, tap
 zones and so on.
+
+Rebuild :: When in a filtered or custom study deck, rerun the search to fetch
+any cards that may newly match the criteria.
 
 Replay Audio :: Replay the card's audio. You can customize whether the audio
 in the question is replayed while the answer is shown in the computer Anki.
@@ -383,11 +387,14 @@ unsuspend it via the search action.
 Suspend Note:: Prevent all cards of current note from being shown during
 review until you unsuspend them via the search action.
 
-Toggle Scratchpad :: Will show or hide the writing pad, allowing you to
+Tools :: Show the tools screen.
+
+Toggle Nav. Bar :: Display or hide the navigation bar (the part between the
+status bar and the review screen).
+
+Toggle ScratchPad :: Show or hide the writing pad, allowing you to
 practice writing characters during review. Anki will remember the on/off state
 for each card type.
-
-Tools :: Show the tools screen.
 
 Undo :: Undoes the last action.
 
@@ -447,8 +454,6 @@ With the default settings:
 
  * Swiping left displays the tools window
  * Swiping right returns to the deck list
- * Swiping up undoes the last answer
- * Swiping down marks the current note
 
 [[toolbuttons]]
 === Tool Buttons ===
