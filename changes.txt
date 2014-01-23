@@ -3,6 +3,28 @@
 ++++++++++++++++++++++
 
 [[latest]]
+= Changes in 2.0.21 =
+
+* Now that AnkiDroid has been updated, buried cards will now only be
+automatically unburied when a new day rolls over, and not when you sync or
+restart Anki. If you sync from this version to AnkiWeb and then to the mobile
+clients, they should also switch over to this new behaviour.
+* New users will now need to confirm their choice of interface language before
+  proceeding.
+* Increase filtered deck max size to 99999
+* Fix drag&drop of Google images from Safari
+* Ignore filtered cards when determining min/max in reposition dialog
+* When a corrupt collection is found, rename it so the profile can be loaded
+again and restored from backup.
+* Fix a regression in displaying startup errors and quitting from the profile
+manager
+* Display a better error message when a sync times out
+* Fix an error caused by an add-on that changes browser columns
+* Fix a bug where the forward & optional reverse note type was invalid when
+added in languages other than English.
+* If the same word has been cloze-deleted multiple times in a cloze, only
+require it to be typed once in the type in the answer feature.
+
 = Changes in 2.0.20 =
 
 * Fixed a bug where "check media" could incorrectly report media as unused
