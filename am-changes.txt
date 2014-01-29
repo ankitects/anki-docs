@@ -5,6 +5,21 @@ __________________
 <br><br><b>Users upgrading from AnkiMobile 1: please see <a href="#v2">here</a></b>.
 ++++++++++++++++++++++
 
+= Changes in 2.0.11 =
+
+2.0.11 was sent to Apple on Jan 30 2013, and is awaiting approval.
+
+* AnkiMobile now requires iOS5.0 or later.
+* Added support for multiple profiles on devices running iOS6 or iOS7.
+  You can switch profiles from the settings screen, and each profile has its
+  own syncing account and settings like the computer version.
+* Tweaks to the pinch-to-zoom code so that minor movements and finger releases
+  do not cause the zoom to jump.
+* Fix a bug that could lead to a corrupt deck list when one deck's name was
+  the prefix of another deck.
+* Filtered and custom study decks can now be up to 99999 cards.
+* Fix a bug where the next/prev buttons stopped working after adding a card.
+
 = Changes in 2.0.10 =
 
 2.0.10 was approved by Apple on Dec 20 2013.

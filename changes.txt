@@ -3,6 +3,12 @@
 ++++++++++++++++++++++
 
 [[latest]]
+= Changes in 2.0.22 =
+
+* Fix a regression in the type-answer feature where multiple clozes
+  were not presented in order.
+* Some tweaks to the SuperMemo importer, thanks to jmaatta.
+
 = Changes in 2.0.21 =
 
 * Now that AnkiDroid has been updated, buried cards will now only be
