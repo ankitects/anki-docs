@@ -3813,9 +3813,12 @@ simply by clicking on it. AnkiWeb does not have the ability to import apkg
 files however, so the recipients of your deck will need to have the desktop
 client or Anki on their smartphone.
 
-When a user imports a .apkg file, any new cards will be added, but deletions
-and edits will not sync across, so currently if you notice a mistake, you will
-need to contact the deck users about it.
+When a user imports a .apkg file, cards that already exist in their collection
+will be ignored and any new cards will be added. As long as they use the same
+note type, modified cards will also be updated. To prevent data loss, cards
+that have been deleted in the new apkg file will not be deleted in the user's
+collection, so if you need to delete cards from users' decks for whatever
+reason, you will need to contact them about it.
 
 Sharing Add-ons
 ----------------
