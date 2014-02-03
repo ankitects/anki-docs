@@ -4,7 +4,20 @@
  <script src="/js/jquery-ui-1.10.2.custom.min.js"></script>
  <script src="/js/jquery.tocify.min.js"></script>
  <script>
- $(function () {
+     function hashGen(str, elem) {
+         var val = str.replace("?", "-");
+         val = val.toLowerCase().replace(/\s/g, "-");
+         // fix double hyphens
+         while (val.indexOf("--") > -1) {
+             val = val.replace(/--/g, "-");
+         }
+         // fix colon-space instances
+         while (val.indexOf(":-") > -1) {
+             val = val.replace(/:-/g, "-");
+         }
+     }
+
+     $(function () {
  $("#toc").tocify({hashGenerator: "pretty", theme: "none", selectors: "h2,h3"});
  });
  </script>
