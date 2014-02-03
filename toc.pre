@@ -18,7 +18,7 @@
      }
 
      $(function () {
- $("#toc").tocify({hashGenerator: "pretty", theme: "none", selectors: "h2,h3"});
+ $("#toc").tocify({hashGenerator: hashGen, theme: "none", selectors: "h2,h3"});
  });
  </script>
 </%block>
