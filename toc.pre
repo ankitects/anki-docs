@@ -5,7 +5,7 @@
  <script src="/js/jquery.tocify.min.js"></script>
  <script>
      function hashGen(str, elem) {
-         var val = str.replace(/\?/g, "-");
+         var val = str.replace(/[?!'"]/g, "-");
          val = val.toLowerCase().replace(/\s/g, "-");
          // fix double hyphens
          while (val.indexOf("--") > -1) {
