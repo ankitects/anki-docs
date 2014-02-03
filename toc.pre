@@ -15,6 +15,7 @@
          while (val.indexOf(":-") > -1) {
              val = val.replace(/:-/g, "-");
          }
+         return val;
      }
 
      $(function () {
