@@ -7,7 +7,7 @@ __________________
 
 = Changes in 2.0.11 =
 
-2.0.11 was sent to Apple on Jan 30 2013, and is awaiting approval.
+2.0.11 was approved by Apple on Feb 4 2013.
 
 * AnkiMobile now requires iOS5.0 or later.
 * Added support for multiple profiles on devices running iOS6 or iOS7.
