@@ -3683,7 +3683,9 @@ While this most commonly occurs with LaTeX, the solution presented here will
 work in any situation where you need to include {{ }} on cards, regardless of
 whether LaTeX is used or not.
 
-When using cloze deletions, you cannot change the double braces used to mark cloze deletions; instead, you can put a space between any double closing braces that do not indicate the end of the cloze, so
+When using cloze deletions, you cannot change the double braces used to mark
+cloze deletions; instead, you can put a space between any double closing braces
+that do not indicate the end of the cloze, so
 
 -----
 {{c1::[$]\frac{foo}{\frac{bar}{baz}}[/$] blah blah blah.}}
@@ -3695,7 +3697,7 @@ will not work, but
 {{c1::[$]\frac{foo}{\frac{bar}{baz} }[/$] blah blah blah.}}
 -----
 
-will.
+will (and LaTeX ignores spaces in math mode, so your equation will render the same).
 
 
 Unsafe commands
