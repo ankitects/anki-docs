@@ -873,10 +873,6 @@ learning card, any new/review siblings will be buried.
 If you want to see more than one card of a note when learning new cards, you
 can stop Anki from burying cards in the <<newopts,deck options>>.
 
-NOTE: In the future, cards will not be unburied when closing Anki or syncing.
-It currently performs this way because all Anki clients need to be updated
-before it can be changed.
-
 [[studyshortcuts]]
 == Keyboard Shortcuts  ==
 
