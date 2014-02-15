@@ -134,12 +134,14 @@ mw.reset()
 -----
 from anki.importing import TextImporter
 file = u"/path/to/text.txt"
-# change to the basic note type
+# select deck
+did = mw.col.decks.id("ImportDeck")
+mw.col.decks.select(did)
+# set note type for deck
 m = mw.col.models.byName("Basic")
-mw.col.models.setCurrent(m)
-# set 'Import' as the target deck
-m['did'] = mw.col.decks.id("Import")
-mw.col.models.save(m)
+deck = mw.col.decks.get(did)
+deck['mid'] = m['id']
+mw.col.decks.save(deck)
 # import into the collection
 ti = TextImporter(mw.col, file)
 ti.initMapping()
