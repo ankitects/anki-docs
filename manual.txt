@@ -860,10 +860,9 @@ that's usually not helpful.
 
 When you answer a card that has siblings, Anki prevents the card's siblings
 from being shown in the same session by automatically burying them. Buried
-cards are hidden from review until you close Anki, sync with AnkiWeb, the
-clock rolls over to a new day, or you manually unbury them using the "Unbury"
-button that's visible at the bottom of the screen after clicking on a deck in
-the deck list.
+cards are hidden from review until the clock rolls over to a new day or you
+manually unbury them using the "Unbury" button that's visible at the bottom of
+the screen after clicking on a deck in the deck list.
 
 Anki will only bury siblings that are new cards, or review cards. It will not
 hide cards in learning, as time is of the essence for those cards, and
