@@ -794,8 +794,9 @@ other operations you can do on the current card or note:
   later date, such as looking up a word when you get home. Marked cards also
   show a small star in the upper-right-hand corner during reviews.
  Bury Card / Note ::
-  Hides a card or all of the note's cards from review until Anki is reopened. Useful if
-  you want to come back to the card another time. Burying can also <<siblings,happen
+  Hides a card or all of the note's cards from review until you use "unbury" on
+  the deck overview screen or the next day rolls around. Useful if you want to
+  come back to the card another time. Burying can also <<siblings,happen
   automatically>> for cards of the same note.
  Suspend Card / Note ::
   Hides a card or all of the note's cards from review until they are manually
