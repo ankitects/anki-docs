@@ -777,6 +777,11 @@ When the answer is shown, Anki shows an estimate of the next time a card will
 be shown above each button. If you'd prefer not to see the estimates, you can
 also disable them in Anki's preferences.
 
+NOTE: Anki additionally adds a small amount of random variation to the next due
+times, in order to prevent cards that were introduced together and always rated
+the same from always staying next to each other. This variation is not shown on
+the time estimates but will be applied after selecting the button.
+
 [[editmore]]
 Editing and More
 ------------------
@@ -3158,9 +3163,14 @@ anki -b /path/to/anki/folder
 If you always want to use a custom folder location, you can modify your
 shortcut to Anki. On Windows, right-click on the shortcut, choose Properties,
 select the Shortcut tab, and add "-b \path\to\data\folder" after the path to
-the program, which should leave you with something like "C:\Program
-Files\Anki\anki.exe -b C:\AnkiDataFolder". You can also use this technique with
-the -l option to easily use Anki in different languages.
+the program, which should leave you with something like
+
+-----
+"C:\Program Files\Anki\anki.exe" -b "C:\AnkiDataFolder"
+-----
+
+You can also use this technique with the -l option to easily use Anki in
+different languages.
 
 NOTE: On Windows, you should use a backslash (\) not a forward slash (/).
 
