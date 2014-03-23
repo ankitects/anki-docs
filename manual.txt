@@ -374,6 +374,15 @@ content you are learning. The standard note types are as follows:
 To add your own note types and modify existing ones, you can use Tools>Manage
 Note Types.
 
+Many new users incorrectly believe that decks have associated note types and
+that all notes in a given deck must have the same note type. This is not the
+case; decks do not have any settings that relate to note types, and a given
+deck can contain notes of as many different note types as you like. When you
+add notes using the Add window, you can select what note type to use and what
+deck to use, and these choices are completely independent of each other. You
+can also change the note type of some notes <<browsermisc,after you've already
+created them>>.
+
 Collection
 -----------
 
