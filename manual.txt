@@ -3023,6 +3023,16 @@ Anki doesn't support this for two reasons: searching for used media is
 expensive, as each card has to be rendered, and such functionality isn't
 obvious to shared deck users. Please use the find & replace technique instead.
 
+=== Bulk media imports ===
+
+Another option for importing large amounts of media at once is to use the
+https://ankiweb.net/shared/info/1531997860[media import add-on]. This add-on
+will automatically create notes for all files in a folder you select, with the
+filenames on the front (minus the file extension, so if you have a file named
+apple.jpg, the front would say 'apple') and the images or audio on the back. If
+you would like a different arrangement of media and filenames, you can
+<<browsermisc,change the note type>> of the created cards afterwards.
+
 == Adding Tags ==
 
 If you want to add 'tag1' and 'tag2' to every line you're importing, add the
