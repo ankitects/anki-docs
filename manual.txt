@@ -3110,9 +3110,13 @@ click on one to restore your collection to that backup.
 Deck packages contain a single deck (and any child decks it may have). They
 have a filename ending with .apkg, but a filename other than collection.apkg.
 When you import a deck package, Anki will add the contents into your
-collection, rather than overwriting your collection. If some cards have
-previously been imported, they will not be modified: deck packages only add
-new items.
+collection, rather than overwriting your collection.
+
+If some notes in the deck package have previously been imported, Anki will keep
+the version with the most recent modification time. So if you download an
+updated deck, the edits that have been made in the updated version will be made
+in your collection as well, but if you re-import an unchanged deck after making
+edits in your collection, the changes in your collection will be kept.
 
 = Managing Files and Your Collection =
 
