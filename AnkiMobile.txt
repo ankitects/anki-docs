@@ -9,7 +9,7 @@ AnkiMobile is a native client for Apple devices that allows you to use your
 desktop decks on the go. It supports offline media and editing features, and
 is being actively developed.
 
-<a href="http://itunes.apple.com/us/app/ankisrs/id373493387?mt=8"><img src="appbadge.png"></a>
+pass:[<a href="http://itunes.apple.com/us/app/ankisrs/id373493387?mt=8"><img src="appbadge.png"></a>]
 
 = The Price =
 
@@ -33,6 +33,7 @@ Please have a look at the dedicated
 http://ankisrs.net/docs/am-changes.html[changes] page.
 
 pass:[
+<hr>
 <div style="font-size:80%; color: #aaa;">
 Apple, the Apple logo, iPhone, iPad and iPod Touch are trademarks of Apple Inc.,
 registered in the U.S. and other countries. App Store is a service mark of
