@@ -20,6 +20,7 @@ save:
 build: $(MAKO)
 	@echo building mako
 	@rsync -a *.mako $(WEB)/docs/
+	@rsync -a *.png $(WEB)/docs/
 	@make -C $(WEB) build
 
 $(TOC_FILES): TOC := 1
