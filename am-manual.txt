@@ -713,3 +713,11 @@ a debug log, please follow the following steps:
  . Drag the debug.log file on to your desktop, then attach it to your support ticket.
  . If a debug.mdb file is there too, and you're having issues with syncing,
    please include that file as well.
+
+pass:[
+<hr>
+<div style="font-size:80%; color: #aaa;">
+Apple, the Apple logo, iPhone, iPad and iPod Touch are trademarks of Apple Inc.,
+registered in the U.S. and other countries. App Store is a service mark of
+Apple Inc.
+</div>]
