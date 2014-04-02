@@ -32,8 +32,9 @@ and also employ someone to help answer questions.
 Please have a look at the dedicated
 http://ankisrs.net/docs/am-changes.html[changes] page.
 
+pass:[
 <div style="font-size:80%; color: #aaa;">
 Apple, the Apple logo, iPhone, iPad and iPod Touch are trademarks of Apple Inc.,
 registered in the U.S. and other countries. App Store is a service mark of
 Apple Inc.
-</div>
+</div>]
