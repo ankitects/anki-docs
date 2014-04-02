@@ -5,7 +5,7 @@ _ Anki for iPhone/iPod Touch/iPad _
 //  pass:[<img src="mobile4.png" style="float:right;margin-top:1em;margin-right:2em;"] 
 pass:[<hr>]
 
-pass:[<a style="float:right;margin:10px;" href="http://itunes.apple.com/us/app/ankisrs/id373493387?mt=8"><img src="appbadge.png"></a>]
+pass:[<a style="float:right;margin-left:10px;margin-right:10px;" href="http://itunes.apple.com/us/app/ankisrs/id373493387?mt=8"><img src="appbadge.png"></a>]
 
 AnkiMobile is a native client for Apple devices that allows you to use your
 desktop decks on the go. It supports offline media and editing features, and
