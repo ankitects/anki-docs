@@ -374,13 +374,13 @@ content you are learning. The standard note types are as follows:
 To add your own note types and modify existing ones, you can use Tools>Manage
 Note Types.
 
-Note: Notes and note types are stored in your collection rather than in an individual
-deck. This means you can use many different types of notes in a particular deck,
-or have different cards of a given note in different decks. When you
-add notes using the Add window, you can select what note type to use and what
-deck to use, and these choices are completely independent of each other. You
-can also change the note type of some notes <<browsermisc,after you've already
-created them>>.
+NOTE: Notes and note types are stored in your collection rather than in an
+individual deck. This means you can use many different types of notes in a
+particular deck, or have different cards of a given note in different decks.
+When you add notes using the Add window, you can select what note type to use
+and what deck to use, and these choices are completely independent of each
+other. You can also change the note type of some notes <<browsermisc,after
+you've already created them>>.
 
 Collection
 -----------
@@ -3110,9 +3110,13 @@ click on one to restore your collection to that backup.
 Deck packages contain a single deck (and any child decks it may have). They
 have a filename ending with .apkg, but a filename other than collection.apkg.
 When you import a deck package, Anki will add the contents into your
-collection, rather than overwriting your collection. If some cards have
-previously been imported, they will not be modified: deck packages only add
-new items.
+collection, rather than overwriting your collection.
+
+If some notes in the deck package have previously been imported, Anki will keep
+the version with the most recent modification time. So if you download an
+updated deck, the edits that have been made in the updated version will be made
+in your collection as well, but if you re-import an unchanged deck after making
+edits in your collection, the changes in your collection will be kept.
 
 = Managing Files and Your Collection =
 
