@@ -12,8 +12,8 @@ is being actively developed.
 
 = Download =
 
-<a href="http://itunes.apple.com/us/app/ankisrs/id373493387?mt=8"><img
-src="appbadge.png"></a>
+pass:[<a href="http://itunes.apple.com/us/app/ankisrs/id373493387?mt=8"><img
+src="appbadge.png"></a>]
 
 = The Price =
 
