@@ -14,7 +14,7 @@ is being actively developed.
 
 Click below to open the app store page:
 
-pass:[<a style="margin:1em;" href="http://itunes.apple.com/us/app/ankisrs/id373493387?mt=8"><img
+pass:[<a style="margin-top:2em;" href="http://itunes.apple.com/us/app/ankisrs/id373493387?mt=8"><img
 src="appbadge.png"></a>]
 
 = The Price =
