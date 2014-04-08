@@ -810,13 +810,14 @@ other operations you can do on the current card or note:
   Hides a card or all of the note's cards from review until you use "unbury" on
   the deck overview screen or the next day rolls around. Useful if you want to
   come back to the card another time. Burying can also <<siblings,happen
-  automatically>> for cards of the same note.
+  automatically>> for cards of the same note. If cards were in learning when they
+  are buried, they are moved back to the new card queue or review queue prior to being buried.
  Suspend Card / Note ::
   Hides a card or all of the note's cards from review until they are manually
   unsuspended (by clicking the suspend button in the browser). Useful if
   you want to avoid reviewing the note for some time, but don't want to delete
   it. If cards were in learning when they are suspended, they are moved back
-  to the new card queue or review queue.
+  to the new card queue or review queue prior to being suspended.
  Delete Note ::
   Deletes the note and all of its cards.
  Card Options ::
