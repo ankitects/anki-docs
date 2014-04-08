@@ -12,7 +12,9 @@ is being actively developed.
 
 = Download =
 
-pass:[<a href="http://itunes.apple.com/us/app/ankisrs/id373493387?mt=8"><img
+Click below to open the app store page:
+
+pass:[<a style="margin:1em;" href="http://itunes.apple.com/us/app/ankisrs/id373493387?mt=8"><img
 src="appbadge.png"></a>]
 
 = The Price =
