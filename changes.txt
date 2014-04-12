@@ -7,7 +7,7 @@
 = Changes in 2.0.24 =
 
 * A required upgrade to continue syncing, as the encryption certificate
-has been updated. More info will be posted on the announcements forum.
+has been updated. More info is available at https://anki.tenderapp.com/discussions/announcements/60-anki-and-heartbleed
 
 * An alternative build is now provided which uses an older version of the
   toolkit. This addresses the Thai slowdown issue on Windows, and continues
