@@ -3,6 +3,39 @@
 ++++++++++++++++++++++
 
 [[latest]]
+
+= Changes in 2.0.24 =
+
+* A required upgrade to continue syncing, as the encryption certificate
+has been updated. More info will be posted on the announcements forum.
+
+* An alternative build is now provided which uses an older version of the
+  toolkit. This addresses the Thai slowdown issue on Windows, and continues
+  support for OSX 10.5 on Mac, as the primary build now requires 10.6 or later.
+
+* For people using add-ons that used multiple colons such as
+'{{ring:my_tag:file.mp3}}', you should update your template to '{{ring
+(my_tag):file.mp3}}'. For add-on authors, this change is an improvement by
+Julian that allows multiple filters to be chained together.
+
+* The deck list in the browser sidebar is now collapsible. This and a few
+  other changes thanks to Houssam.
+* Include buried cards in the suspended count of the graphs.
+* Fix crashes and corruption in column headers on qt5.2 (only relevant for Linux users at the moment)
+* Fix for warnings in console on bleeding edge Linux distros, thanks to ospalh.
+* Remove leech tag on undo if it was added during review.
+* Allow copy context menu for things like card preview.
+* Tweaks to supermemo importer thanks to Bryan.
+* Remove marked and leech tags when exporting without scheduling.
+* More friendly error when ssl fails.
+* Fix 1000 cap in overview screen.
+* Catch another invalid temp folder message.
+* Disallow \r and \n in filenames, and ./.. in profile names.
+
+= Changes in 2.0.23 =
+
+Due to a build error, this version was skipped.
+
 = Changes in 2.0.22 =
 
 * Fix a regression in the type-answer feature where multiple clozes
