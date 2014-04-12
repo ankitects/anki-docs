@@ -18,6 +18,9 @@ has been updated. More info is available at https://anki.tenderapp.com/discussio
 (my_tag):file.mp3}}'. For add-on authors, this change is an improvement by
 Julian that allows multiple filters to be chained together.
 
+* If you get an error message about pyqtconfig, please contact the author of the failing add-on and ask them
+  to update the add-on to use qtmajor/qtminor instead, as pyqtconfig was obsoleted a while ago.
+
 * The deck list in the browser sidebar is now collapsible. This and a few
   other changes thanks to Houssam.
 * Include buried cards in the suspended count of the graphs.
