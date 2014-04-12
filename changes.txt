@@ -11,7 +11,8 @@ has been updated. More info is available at https://anki.tenderapp.com/discussio
 
 * An alternative build is now provided which uses an older version of the
   toolkit. This addresses the Thai slowdown issue on Windows, and continues
-  support for OSX 10.5 on Mac, as the primary build now requires 10.6 or later.
+  support for OSX 10.5 & 10.6 on Mac, as the primary build now requires 10.7
+  or later.
 
 * For people using add-ons that used multiple colons such as
 '{\{ring:my_tag:file.mp3}}', you should update your template to '\{{ring
