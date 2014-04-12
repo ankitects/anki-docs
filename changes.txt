@@ -14,7 +14,7 @@ has been updated. More info is available at https://anki.tenderapp.com/discussio
   support for OSX 10.5 on Mac, as the primary build now requires 10.6 or later.
 
 * For people using add-ons that used multiple colons such as
-'{{ring:my_tag:file.mp3}}', you should update your template to '{{ring
+'{\{ring:my_tag:file.mp3}}', you should update your template to '\{{ring
 (my_tag):file.mp3}}'. For add-on authors, this change is an improvement by
 Julian that allows multiple filters to be chained together.
 
