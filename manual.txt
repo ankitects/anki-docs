@@ -21,7 +21,7 @@ This page translated into other languages:
 
  * http://192.167.9.6/Anki_ITA/Manual_ITA.htm[Italiano]
  * http://wikiwiki.jp/rage2050/?FrontPage[日本語]
-    
+
 Introduction
 ============
 
@@ -664,7 +664,7 @@ cards currently in learning. 'New' is the number of new cards that are waiting
 to be learnt that day.
 
 When you click on a deck, it will become the 'current deck', and Anki will
-change to the study screen. 
+change to the study screen.
 
 You can click the gears button to the right of a deck in order to rename or
 delete decks, or customize their options.
@@ -1026,7 +1026,7 @@ You can also give yourself hints that don't match the text. If you replace the
 original sentence with:
 
 -----
-Canberra::city was founded in 1913
+{{Canberra::city}} was founded in 1913
 -----
 
 ...and then press [...] after selecting "Canberra::city", Anki will treat the
@@ -1060,6 +1060,10 @@ Text2 field: {{c2::Canberra}} was founded in 1913
 The default cloze note type has a second field called Extra, that is shown on
 the answer side of each card. It can be used for adding some usage notes or
 extra information.
+
+The cloze note type is treated specially by Anki, and can not be created
+based on a regular note type. If you wish to customize it, please make sure
+to clone the existing Cloze type instead of another type of note.
 
 Inputting Foreign Characters and Accents
 ------------------------------------------
@@ -1197,7 +1201,7 @@ The default back template will look something like this:
 -----
 
 This means "show me the text that's on the question, then a divider line, and
-then the back field". 
+then the back field".
 
 [[typinganswers]]
 == Checking Your Answer ==
@@ -1645,7 +1649,7 @@ The default behaviour can be thought of as an "OR" condition - cards are
 created if the first field is non-empty, OR the second field is non-empty, and
 so on. The behaviour above can be thought of as an "AND" condition - cards are
 created if the first field is non-empty AND the second field is non-empty, and
-so on. 
+so on.
 
 A caveat: Anki is not currently able to mix AND and OR conditions. Thus the
 following template, which says "require expression and notes, or field 3",
@@ -1680,7 +1684,7 @@ depends on one or more fields on the question being non-empty. Cloze deletion
 note types are generated differently:
 
  * Anki looks on the front template for one or more cloze replacements,
-   like \{\{cloze:FieldName}}. 
+   like \{\{cloze:FieldName}}.
  * It then looks in the FieldName field for all cloze references, like
    \{\{c1::text}}.
  * For each separate number, a card will be generated.
@@ -2847,7 +2851,7 @@ reviews, they take up a lot more of your time than other cards.
 Anki can help you identify leeches. Each time a review card 'lapses', a
 counter is increased. When that counter reaches 8, the note is tagged as a
 leech, and the card is suspended. The threshold, and whether to suspend or
-not, can be adjusted in the <<deckoptions,deck options>>. 
+not, can be adjusted in the <<deckoptions,deck options>>.
 
 Anki will continue to issue leech warnings periodically for a difficult card.
 The warning interval is half the initial leech threshold. That is, if you have
@@ -3874,7 +3878,7 @@ Please see the add-on documentation above.
 App Translations
 -----------------
 
-Translations can be done directly from the 
+Translations can be done directly from the
 https://translations.launchpad.net/anki/trunk[translation website].
 
 Launchpad will guess which languages you can translate based on the country
@@ -3890,7 +3894,7 @@ careful when translating:
    translation, so a translation may look like `カード: %d`.
  * The same applies to text like `%(a)d of %(b)d` - it would be
    translated like `%(a)d von %(b)d`. If you need to reverse A and B in your
-   language, that's fine as long as the text remains the same. 
+   language, that's fine as long as the text remains the same.
  * Menu items have an & to indicate which character is the shortcut key, such
    as `&File`. In languages that use roman text, you can place the & over
    a different character such as `&Datei`; in other languages there may be a
