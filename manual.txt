@@ -2325,7 +2325,7 @@ Things to note from the above:
    all of the terms
  * You can use "or" if you only need one of the terms to match
  * You can prepend a minus sign to a term to find notes that don't match
- * If you want to search for something including a space or parenthese, enclose
+ * If you want to search for something including a space or parenthesis, enclose
    it in quotes.
  * Anki is only able to search within formatting in the <<fields,sort
 field>> you've configured. For example, if you add "**exa**mple" to one of your
