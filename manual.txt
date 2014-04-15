@@ -2325,7 +2325,7 @@ Things to note from the above:
    all of the terms
  * You can use "or" if you only need one of the terms to match
  * You can prepend a minus sign to a term to find notes that don't match
- * If you want to search for something including a space or parenthese, enclose
+ * If you want to search for something including a space or parenthesis, enclose
    it in quotes.
  * Anki is only able to search within formatting in the <<fields,sort
 field>> you've configured. For example, if you add "**exa**mple" to one of your
@@ -2569,7 +2569,12 @@ find out the existing positions by enabling the 'due' column, as described in
 the card list section above. If you run the reposition command when multiple
 cards are selected, it will apply increasing numbers to each card in turn. By
 default the number increases by one for each card, but this can be adjusted by
-changing the "step" setting.
+changing the "step" setting. The 'shift position of existing cards' option
+allows you to insert cards between currently existing ones. For instance, if
+you have five cards and you want to move 3, 4, and 5 between 1 and 2, selecting
+this setting would cause the cards to end up in the order 1, 3, 4, 5, 2. By
+contrast, if you turn this option off, 2 and 3 will get the same position
+number (and it will thus be random which one comes up first).
 
 'Change Note Type' allows you to convert the selected notes from one type to
 another type, and/or convert between card templates. For example, imagine you
