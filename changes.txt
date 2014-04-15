@@ -4,6 +4,18 @@
 
 [[latest]]
 
+= Changes in 2.0.25 =
+
+* Fix copy right click menu not appearing when reviewing.
+* Possible fix for shortcut issues with some add-ons when reviewing.
+* Fix from Julien to fail more gracefully when templates need updating.
+* Fix Qt4.7 Windows build failing to start.
+* Workaround a crash on Macs that was happening when a progress bar was shown.
+* Roll back to a previous mplayer version on OSX to fix some audio playing
+  too fast.
+* Fix Anki failing to recognize clozes when user had defined multiple cloze
+  fields on a single line in their template.
+
 = Changes in 2.0.24 =
 
 * A required upgrade to continue syncing, as the encryption certificate
