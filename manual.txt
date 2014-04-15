@@ -3129,6 +3129,10 @@ updated deck, the edits that have been made in the updated version will be made
 in your collection as well, but if you re-import an unchanged deck after making
 edits in your collection, the changes in your collection will be kept.
 
+If you choose not to include scheduling information, Anki will assume that you
+are sharing the deck with other people, and will remove marked and leech tags
+so that they will have a clean copy of it.
+
 = Managing Files and Your Collection =
 
 Checking Your Collection
