@@ -2259,9 +2259,18 @@ to change it to %40, like so:
 http://user%40workdomain.com:pass@proxy.company.com:8080
 -----
 
-If for some reason Anki is unable to pick up your system settings on Windows,
-please use an http://www.itechtalk.com/thread3595.html[environmental variable]
-instead, as described above.
+To set environmental variables on Windows, please see
+http://www.itechtalk.com/thread3595.html
+
+If you're on a Mac, please see http://stackoverflow.com/questions/135688/setting-environment-variables-in-os-x
+
+NOTE: The toolkit Anki is built on is unfortunately not currently able to
+pick up your proxy username and password from your system settings. This means
+that if you use a proxy that requires authentication, syncing will fail. In
+this case, you will need to use an environmental variable that defines your
+proxy details as described above, or use a personal proxy server that you
+route traffic through, which in turn connects to the upstream proxy that requires
+authentication.
 
 [[browser]]
 = Browser =
