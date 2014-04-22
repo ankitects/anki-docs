@@ -4,6 +4,17 @@
 
 [[latest]]
 
+= Changes in 2.0.26 =
+
+* Fix more crashes on Macs.
+* Fix pasting from office applications on Macs.
+* Fix recorded audio playing back at wrong speed on Mac computers that couldn't
+  record at CD quality.
+* Fix cloze markers appearing on cards when multiple cloze fields were listed
+  in the template on a single line.
+* Fixes to source code tests, thanks to ispedals and julienbaley.
+* Add some hooks for add-on authors, thanks to sagittarian.
+
 = Changes in 2.0.25 =
 
 * Fix copy right click menu not appearing when reviewing.
