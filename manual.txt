@@ -2107,6 +2107,13 @@ Turning off *bury related...* will prevent Anki from <<siblings,burying
 siblings>>, and instead Anki will just try to avoid showing siblings directly
 after one another in the same session.
 
+NOTE: Review cards are always shown in random order. If you wish to see them in
+a different order, you can use a <<filtered,filtered deck>>. More specifically,
+Anki randomizes reviews by grabbing batches of 50 cards in the order that they
+exist in the database, randomizing each batch, then putting them together. This
+means that there is a slight bias towards older cards being shown first, but it
+prevents individual cards from showing up in a predictable order.
+
 [[lapses]]
 Lapses
 ------
@@ -3119,7 +3126,7 @@ collection.apkg file. This is useful for copying your collection back and
 forth between devices.
 
 NOTE: Existing media in your collection is not deleted when you import a
-collection.apkg. To delete unused media, use Tools>Unused Media.
+collection.apkg. To delete unused media, use Tools>Check Media.
 
 NOTE: Anki's automatic backups are also collection packages. Simply double
 click on one to restore your collection to that backup.
@@ -3530,7 +3537,7 @@ locations>> section. When you add media within Anki, Anki will copy it from its
 original location into the media folder. This makes it easy to back up your
 collection's media or move it to another computer.
 
-You can use the Tools>Unused Media menu option to scan your notes and media
+You can use the Tools>Check Media menu option to scan your notes and media
 folder. It will generate a report of files in the media folder that are not
 used by any notes, and media referenced in notes but missing from your media
 folder. It does not scan question or answer templates, which is why you can't
@@ -3586,7 +3593,7 @@ can not generate the images on their own.
 
 To avoid having to review all your cards at least once before you can study on
 the other clients, Anki can generate the images in bulk for you. To generate
-all the images, please go to Tools>Unused Media. After that, syncing should
+all the images, please go to Tools>Check Media. After that, syncing should
 upload the generated media to AnkiWeb and the other clients.
 
 Example
