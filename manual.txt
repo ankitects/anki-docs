@@ -4088,9 +4088,9 @@ Imagine are you studying Japanese and aiming to be able to both recognize and
 reproduce the Japanese. You may enter the word "ookii", which means "big", and
 tell Anki to generate two cards - ookii->big and big->ookii.
 
-In the above situation Anki can space reviews of those two sibling cards out
-so that they don't appear one after the other (see "delayed cards" in the link
-at the top of this document).
+In the above situation Anki can space reviews of those two sibling cards out so
+that they don't appear one after the other (see <<siblings,sibling spacing>> in
+the link at the top of this document).
 
 Some people want to extend this link between arbitrary cards. They want to be
 able to tell Anki "after showing me this card, show me that card", or "don't
