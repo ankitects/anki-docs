@@ -2339,17 +2339,22 @@ displays their cards. Some examples:
 
 Things to note from the above:
 
- * Search terms are separated by spaces
+ * Search terms are separated by spaces.
  * When multiple search terms are provided, Anki looks for notes that match
-   all of the terms
- * You can use "or" if you only need one of the terms to match
- * You can prepend a minus sign to a term to find notes that don't match
+   all of the terms.
+ * You can use "or" if you only need one of the terms to match.
+ * You can prepend a minus sign to a term to find notes that don't match.
  * If you want to search for something including a space or parenthesis, enclose
    it in quotes.
+ * You can group search terms by placing them in parentheses, as in the *dog
+   (cat or mouse)* example. This becomes important when combining OR and AND
+   searches -- in the example, with the parentheses, it matches either 'dog
+   cat' or 'dog mouse', whereas without them it would match either 'dog and
+   cat' or 'mouse'.
  * Anki is only able to search within formatting in the <<fields,sort
-field>> you've configured. For example, if you add "**exa**mple" to one of your
-fields, this will not be matched when searching for "example" unless that
-field is the sort field.
+   field>> you've configured. For example, if you add "**exa**mple" to one of your
+   fields, this will not be matched when searching for "example" unless that field
+   is the sort field.
 
 === Limiting to a field ===
 
