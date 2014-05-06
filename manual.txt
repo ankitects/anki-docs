@@ -2323,7 +2323,9 @@ search for cards.
 === Simple searches ===
 
 When you type some text into the search box, Anki finds matching notes and
-displays their cards. Some examples:
+displays their cards. Anki searches in all fields of the notes, but does not
+search for tags (see later in this section for how to search for tags). Some
+examples:
 
  dog :: search for "dog" - will match words like "doggy" and "underdog" too
  dog cat :: finds notes with both "dog" and "cat", such as "a dog and cat"
