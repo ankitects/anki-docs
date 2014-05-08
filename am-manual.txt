@@ -163,7 +163,7 @@ customize this number if you'd like.
 To study cards in a deck, simply tap on the deck, and AnkiMobile will switch
 to study mode.
 
-If you wish to delete a deck, swipe your finger from left to right over it,
+If you wish to delete a deck, swipe your finger from right to left over it,
 and a delete button will appear.
 
 At the top of the screen, you'll see three buttons. The question mark opens
