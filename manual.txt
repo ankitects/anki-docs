@@ -1026,12 +1026,17 @@ You can also give yourself hints that don't match the text. If you replace the
 original sentence with:
 
 -----
-{{Canberra::city}} was founded in 1913
+Canberra::city was founded in 1913
 -----
 
 ...and then press [...] after selecting "Canberra::city", Anki will treat the
-text after the two colons as a hint. When the card comes up for review, it
-will appear as:
+text after the two colons as a hint, changing the text into:
+
+-----
+{{c1::Canberra::city}} was founded in 1913
+-----
+
+When the card comes up for review, it will appear as:
 
 -----
 [city] was founded in 1913.
