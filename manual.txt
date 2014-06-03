@@ -1,4 +1,8 @@
 ++++++++++++++++++++++++++++++
+<%def name="title()">
+Anki Manual
+</%def>
+
 <h1>Anki 2.0 User Manual</h1>
 
 <script>
