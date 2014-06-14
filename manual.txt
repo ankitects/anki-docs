@@ -1885,7 +1885,9 @@ rather than doing things like document.write.
 Functions like window.alert are also not available. Anki will write
 javascript errors to the terminal, so if you're running on a Mac or Windows
 computer, you'll need to manually catch the errors and write them to the
-document to see them.
+document to see them. There is no debugger available, so to figure out
+problems you'll need to break down your code until you discover which parts
+are causing problems.
 
 [[profileprefs]]
 = Profiles & Preferences =
