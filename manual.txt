@@ -1868,6 +1868,25 @@ NOTE: Due to a bug in the toolkit Anki uses, embedded fonts can cause crashes
 on OS X. A workaround is posted on
 https://anki.tenderapp.com/discussions/ankidesktop/4161-crash-when-showing-answer-with-custom-font-mac-109anki-2018#comment_30164833
 
+== Javascript ==
+
+As Anki cards are treated like webpages, it is possible to embed some
+Javascript on your cards via inline script tags in the template. As this is an
+advanced feature, we can not guarantee any particular Javascript will work,
+and can not provide any assisstance when things are not working. If in doubt,
+it's best to avoid it.
+
+Each Anki client may implement card display differently, so you will need to
+test the behaviour across platforms. A number of clients are implemented
+by keeping a long running webpage and dynamically updating parts of it as cards
+are reviewed, so your Javascript will need to update sections of the document
+rather than doing things like document.write.
+
+Functions like window.alert are also not available. Anki will write
+javascript errors to the terminal, so if you're running on a Mac or Windows
+computer, you'll need to manually catch the errors and write them to the
+document to see them.
+
 [[profileprefs]]
 = Profiles & Preferences =
 
