@@ -3125,6 +3125,11 @@ current deck. If Anki is indicating that notes have not changed when you
 expected them to be imported, please check that the notes are not already in
 your collection somewhere.
 
+If you have updating turned on and older versions of the notes you're importing
+are already in your collection, they will be updated in place (in their
+current decks) rather than being moved to the deck you have set in the import
+dialog.
+
 For info on how duplicates are handled in .apkg files, please see the
 <<apkg-export,Deck Packages>> section below.
 
