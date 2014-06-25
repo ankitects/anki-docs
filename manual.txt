@@ -3829,9 +3829,12 @@ will (and LaTeX ignores spaces in math mode, so your equation will render the sa
 Unsafe commands
 -----------------
 
-Anki prohibits certain commands like \input from being used on cards or in
-templates, because to allow them could allow malicious shared decks to damage
-your system. If you need these commands, please add them to a system package,
+Anki prohibits certain commands like \input or \def from being used on cards or
+in templates, because allowing them could allow malicious shared decks to
+damage your system. (To be on the safe side, these commands are prohibited even
+in comments, so if you're getting this error but don't think you've used one,
+please double-check any comments you have in your headers, templates, and
+cards.) If you need to use these commands, please add them to a system package
 and import that package as described in the previous section.
 
 = Miscellanea =
