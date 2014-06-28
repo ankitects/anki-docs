@@ -1370,6 +1370,14 @@ styling section:
 img { max-width: none; max-height: none; }
 -----
 
+NOTE: If you try to change the style for images and find that the star that appears
+on a card is affected (for instance, it becomes way too large), you can target
+it with the following:
+
+-----
+img#star { ... }
+-----
+
 [[fieldstyling]]
 == Field Styling ==
 
