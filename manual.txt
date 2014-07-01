@@ -1370,6 +1370,14 @@ styling section:
 img { max-width: none; max-height: none; }
 -----
 
+NOTE: If you try to change the style for images and find that the star that appears
+on a card is affected (for instance, it becomes way too large), you can target
+it with the following:
+
+-----
+img#star { ... }
+-----
+
 [[fieldstyling]]
 == Field Styling ==
 
@@ -3120,6 +3128,16 @@ will be updated based on content of the imported file. A drop-down box in the
 import screen allows you to change this behaviour, to either ignore duplicates
 completely, or import them as new notes instead of updating existing ones.
 
+NOTE: The duplicate check is done for your 'entire collection', not just in the
+current deck. If Anki is indicating that notes have not changed when you
+expected them to be imported, please check that the notes are not already in
+your collection somewhere.
+
+If you have updating turned on and older versions of the notes you're importing
+are already in your collection, they will be updated in place (in their
+current decks) rather than being moved to the deck you have set in the import
+dialog.
+
 For info on how duplicates are handled in .apkg files, please see the
 <<apkg-export,Deck Packages>> section below.
 
@@ -3819,9 +3837,12 @@ will (and LaTeX ignores spaces in math mode, so your equation will render the sa
 Unsafe commands
 -----------------
 
-Anki prohibits certain commands like \input from being used on cards or in
-templates, because to allow them could allow malicious shared decks to damage
-your system. If you need these commands, please add them to a system package,
+Anki prohibits certain commands like \input or \def from being used on cards or
+in templates, because allowing them could allow malicious shared decks to
+damage your system. (To be on the safe side, these commands are prohibited even
+in comments, so if you're getting this error but don't think you've used one,
+please double-check any comments you have in your headers, templates, and
+cards.) If you need to use these commands, please add them to a system package
 and import that package as described in the previous section.
 
 = Miscellanea =
