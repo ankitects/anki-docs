@@ -947,15 +947,19 @@ On the top left are two buttons, which open the <<fields,fields>> and
 On the right are buttons that control formatting. Bold, italic and underline
 work like they do in a wordprocessing program. The next two buttons allow you to
 subscript or superscript text, which is useful for chemical compounds like
-H~2~O and or simple math equations like x^2^.
+H~2~O or simple math equations like x^2^.
 
 The icon with the red cross clears any formatting in the currently selected text.
 This includes colours, bold, etc.
 
 The next button allows you to change text colour.
 
-The paperclip allows you to attach audio, images and videos to your notes. For
-more information, please see the <<media,media>> section.
+You can use the paperclip button to select audio, images and videos from your
+computer's hard drive to attach to your notes. Alternatively, you can copy the
+media onto your computer's clipboard (for instance, by right-clicking an image
+on the web and choosing 'Copy Image') and paste it into the field that you want
+to place it in. For more information about media, please see the
+<<media,media>> section.
 
 The red circle button allows you to record your voice and attach it to the note.
 
@@ -3592,16 +3596,17 @@ The Graphs
 
 Anki stores the sounds and images used in your notes in a folder next to the
 collection. For more on the folder location, please see the <<files,file
-locations>> section. When you add media within Anki, Anki will copy it from its
-original location into the media folder. This makes it easy to back up your
-collection's media or move it to another computer.
+locations>> section. When you add media within Anki, either by using the
+paperclip icon in the <<editor,editor>> or by pasting it into a field, Anki
+will copy it from its original location into the media folder. This makes it
+easy to back up your collection's media or move it to another computer.
 
 You can use the Tools>Check Media menu option to scan your notes and media
 folder. It will generate a report of files in the media folder that are not
 used by any notes, and media referenced in notes but missing from your media
 folder. It does not scan question or answer templates, which is why you can't
 place media references to fields in the template. If you need a static image or
-sound on every card, name it with a leading _ (eg _dog.jpg) to tell Anki to
+sound on every card, name it with a leading _ (e.g., ''_dog.jpg'') to tell Anki to
 ignore it when checking for media. If you delete media using the unused media
 check, Anki will move it into your operating system's trash folder, so you can
 recover if you accidentally delete media that shouldn't have been deleted.
