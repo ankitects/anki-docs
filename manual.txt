@@ -27,6 +27,10 @@ This page translated into other languages:
  * http://192.167.9.6/Anki_ITA/Manual_ITA.htm[Italiano]
  * http://wikiwiki.jp/rage2050/?FrontPage[日本語]
 
+These translations are contributed by volunteers. If you would like to help
+translate the manual into a different language, please see the
+<<translatingmanual,translating the manual>> section.
+
 Introduction
 ============
 
@@ -4036,6 +4040,7 @@ you can export a .mo file from the translation website. If you then move that
 with the same language code (in the locale folder), Anki will display the new
 translations when it is next started.
 
+[[translatingmanual]]
 Translating the Manual
 -----------------------
 
@@ -4051,7 +4056,22 @@ Word or similar software, and translate it that way.
 When you're happy with the translation, you can either put it up on your
 website and I can link to it, or I can host the translated file on Anki's
 website (but if you're planning to make frequent updates, the former is a
-better choice).
+better choice). If you'd like, you can post it before you're done and we can
+link to it in the list of in-progress translations below.
+
+Another option is to put your translation on a wiki, so that other users can
+contribute to it. There are many sites such as http://www.wikia.com[Wikia] that
+will allow you to easily create your own wiki for free. (The English version
+once used a wiki; we found that we got too many unhelpful contributions and had
+to spend too much time correcting them, but your mileage may vary.)
+
+The following translations are currently in progress:
+* German
+* Chinese
+
+If you would like to help with one of these translations, please contact us on
+TenderApp and we will put you in touch with the user(s) currently working on
+it.
 
 Contributing Code
 -------------------
