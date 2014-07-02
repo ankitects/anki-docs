@@ -3,7 +3,7 @@ CWD = $(shell pwd)
 WEB = /Users/dae/Public/anki/ankisrs.net
 AMHELP = ../mob/AnkiMobile/Resources/HTML/help.html
 TOC_FILES = manual.mako am-manual.mako changes.mako addons.mako \
-    am-changes.mako
+    am-changes.mako manual.fr.mako
 
 all: save build
 	#perl -i -pe 's/font-size: 1em;/font-size: 2em;/g' am-upgrade.html
