@@ -4066,7 +4066,8 @@ once used a wiki; we found that we got too many unhelpful contributions and had
 to spend too much time correcting them, but your mileage may vary.)
 
 The following translations are currently in progress:
-* https://docs.google.com/file/d/0BztmnLeHvsKeRDZ4cmxCc0ctWUU/edit[German]
+
+* https://docs.google.com/file/d/0BztmnLeHvsKeWmkwNjlxNTJiaFE/edit[German]
 * Chinese
 
 If you would like to help with one of these translations, please contact us on
