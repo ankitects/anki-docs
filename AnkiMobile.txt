@@ -14,7 +14,7 @@ is being actively developed.
 
 Click below to open the app store page:
 
-pass:[<a style="margin-top:2em;"
+pass:[<a
 href="https://itunes.apple.com/us/app/ankimobile-flashcards/id373493387?mt=8&uo=4&at=11lJ6Y"
 target="itunes_store"
 style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/htmlResources/assets/en_us//images/web/linkmaker/badge_appstore-lrg.png)
