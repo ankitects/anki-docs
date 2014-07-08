@@ -4069,7 +4069,7 @@ The following translations are currently in progress:
 
 * https://docs.google.com/file/d/0BztmnLeHvsKeWmkwNjlxNTJiaFE/edit[German]
 * Chinese
-* Polish[http://ankisrs.net/docs/manual.pl.html]
+* http://ankisrs.net/docs/manual.pl.html[Polish]
 
 If you would like to help with one of these translations, please contact us on
 TenderApp and we will put you in touch with the user(s) currently working on
