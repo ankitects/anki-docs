@@ -3310,11 +3310,12 @@ As long as you use the same profile name as before, Anki will pick up the
 files from before.
 
 [[thirdpartysync]]
-DropBox and similar file sync services
----------------------------------------
+DropBox and File Syncing
+-------------------------
 
-We do not recommend you sync your Anki folder directly with a synchronization service,
-as it can lead to database corruption when files are synced while in use.
+We do not recommend you sync your Anki folder directly with a third-party
+synchronization service, as it can lead to database corruption when files are
+synced while in use.
 
 If you just want to synchronize your media, you can link external folders
 into services like DropBox. Please see
