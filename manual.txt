@@ -3303,17 +3303,35 @@ different languages.
 
 NOTE: On Windows, you should use a backslash (\) not a forward slash (/).
 
-WARNING: If you place the Anki folder on a network drive or synced folder like
-Dropbox or Google Drive, if the synced service makes a mistake, your collection
-is likely to become corrupted. Regular DB checks are recommended, or better
-yet, make a script which copies the collection from the shared folder to the
-local disk before running Anki, and moves it back when you're done.
-
 NOTE: If you want to permanently change the interface language, delete
 Documents/Anki/prefs.db and the initial startup screen will be shown
 again. After doing so, you'll need to add any profiles you were using again.
 As long as you use the same profile name as before, Anki will pick up the
 files from before.
+
+[[thirdpartysync]]
+DropBox and similar file sync services
+---------------------------------------
+
+We do not recommend you sync your Anki folder directly with a synchronization service,
+as it can lead to database corruption when files are synced while in use.
+
+If you just want to synchronize your media, you can link external folders
+into services like DropBox. Please see
+http://www.dropboxwiki.com/tips-and-tricks/sync-other-folders for more info.
+
+If you wish to keep your collection in sync as well, it is strongly recommended
+that you create a script that copies your files from your synced folder to a local
+folder, launches Anki, and then copies the files back when Anki is closed. This
+will ensure that the files are never synchronized while they are open.
+
+Network Filesystems
+--------------------
+
+We strongly recommend you have Anki store your files on a local hard disk, as
+network filesystems can lead to database corruption. If a network filesystem
+is your only option, regular use of Tools>Check Database to detect corruption
+is recommended.
 
 Running from a Flash Drive
 ---------------------------
