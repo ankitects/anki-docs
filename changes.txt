@@ -18,8 +18,8 @@
 ** When resuming from a connection error, less data needs to be sent than before.
 ** When deauthorizing sync, the media syncing state is reset.
 
-* On Linux, the Anki folder is now ~/Documents/Anki, which matches the other
-  platforms. Anki will use a previous ~/Anki folder if it exists, so please
+* On Linux, the Anki folder is now Documents/Anki, which matches the other
+  platforms. Anki will use a previous Anki folder if it exists, so please
   rename it manually if you wish to use the new location.
 
 * Searches in the Browse screen can now be saved into the sidebar, and the
