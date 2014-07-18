@@ -4,6 +4,109 @@
 
 [[latest]]
 
+= Changes in 2.0.27 =
+
+* Media syncing has been rewritten to be more reliable:
+** It no longer locks the account, so multiple clients can sync media at the same
+   time (but please do not attempt this with the mobile clients yet,
+   as they have not yet been updated). This is also paving the way towards
+   background syncing of media in the future.
+** The initial sync on a new device can now avoid both sending and receiving
+   files that already exist on both ends.
+** A large number of deleted files could cause timeouts in the past;
+   this is no longer the case.
+** When resuming from a connection error, less data needs to be sent than before.
+** When deauthorizing sync, the media syncing state is reset.
+
+* On Linux, the Anki folder is now ~/Documents/Anki, which matches the other
+  platforms. Anki will use a previous ~/Anki folder if it exists, so please
+  rename it manually if you wish to use the new location.
+
+* Searches in the Browse screen can now be saved into the sidebar, and the
+tab key order has been improved (thanks to Houssam). These changes conflict
+with previous versions of the Advanced Browser add-on, so please ensure you
+download the latest version if you use this add-on.
+
+* Fixed a bug where a filtered deck with 'or' in it could mistakenly
+  include suspended or buried cards.
+
+* Fixed crashes in the alternate Mac build.
+
+* The Preview window now has a "replay audio" button, with the shortcut 'R' like
+in the review screen.
+
+* The post-import log now lists the number of notes that were unchanged by a text
+import. "Unchanged" includes notes that were present in your collection as
+well as the imported file but were not updated in your collection, whether
+because the update option was off or they were not changed.
+
+* The options menu next to each deck in the deck list now has an "export"
+button, which opens the export dialog with that deck already selected.
+
+* Don't display the "added duplicate" message multiple times when a note is
+already duplicated in the collection but only one new duplicate was added.
+
+* Fix a bug where Anki was inserting <br>s into the text of imported cards if
+ using quoted multi-line notes, with HTML disabled.
+
+* Provide more helpful errors when importing corrupt collection packages or
+.anki2 files.
+
+* Anki now remembers the previous position and size of various dialogs it
+didn't previously.
+
+* The "suspended" label in the card types graph has been changed to
+"Suspended+Buried" since that category also counts buried cards.
+
+* Anki now makes sure the Get Addons dialog opens at an appropriate size when
+ the system font size is unusual.
+
+* Check that saving a statistics image was successful before displaying a
+success message, and give a warning if Anki doesn't have permission to write
+to the desktop.
+
+* Give a less confusing error when Anki can't create a profile folder.
+
+* Don't throw an error when attempting to delete unused media that has
+already been removed.
+
+* Fix for exporting to csv with quotes in a field (thanks to Rubyu)
+
+* Tweaks to latex handling which will allow add-ons to switch to pdftex (thanks to Joel)
+
+* Round cards/minute stat instead of truncating it (thanks to Markus)
+* Fix errors when importing Mnemosyne's latest db format.
+* Support pasting of m4a urls.
+* Add a fix for an AnkiDroid bug to the Check DB function (thanks to Houssam)
+* Fix tooltip colour for inverted colour schemes. (Thanks to Pat)
+* Don't trigger help when enter pressed in preferences screen.
+
+* Fix a bug on Windows where the main window was left open when a corrupt
+collection was detected.
+
+* Fix error when Anki is running for multiple users on a multi-user machine.
+
+* Don't try to authenticate username and password if user cancels login dialog.
+
+* Allow changing case of profile name on Windows.
+
+* Update all duplicates when importing in update mode.
+
+* Remove initial search text when ctrl-clicking a left panel item.
+
+* Fix rounding of cards/minute in stats; use 1 decimal place.
+* Fix error when exporting w/ non-latin text in profile name.
+* Prevent profiles from getting out of sync when rename fails.
+* Update note type on apkg import when only templates have changed
+
+* Search terms in the browser and filtered decks can now be separated by a
+full width space (thanks to Paul)
+
+* Catch some rare startup errors on Windows and show them in a dialog box
+  instead of exiting silently.
+
+A special thanks to Soren, who contributed many of the bugfixes in this release.
+
 = Changes in 2.0.26 =
 
 * Fix more crashes on Macs.
