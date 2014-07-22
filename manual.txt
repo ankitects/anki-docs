@@ -2444,8 +2444,14 @@ default.
  is:due :: review cards and learning cards waiting to be studied
  is:new :: new cards
  is:learn :: cards in learning
- is:review :: reviews (both due and not due)
+ is:review :: reviews (both due and not due) and lapsed cards
  is:suspended :: cards that have been manually suspended
+
+Cards that have lapsed fall into several of these categories, so it may be useful to combine them to get more precise results:
+ is:learn is:review :: cards that have lapsed and are awaiting relearning
+ -is:learn is:review :: review cards, not including lapsed cards
+ is:learn -is:review :: cards that are in learning for the first time
+
 
 === Card properties ===
 
