@@ -3624,6 +3624,61 @@ The Graphs
   section, and the total number of cards is displayed to the side.
 
 
+Manual analysis
+----------------
+
+If you're interested in getting information from your statistics other than what
+Anki provides, you have several options.
+
+One is to <<add-ons,write an add-on>> that adds another graph or more details to
+the statistics window. There are several add-ons of this sort on AnkiWeb
+already, which you can look at to get an idea of how it works.
+
+A more powerful and more complex option is to extract the review log information
+directly from Anki's database and analyze it in an external program. Anki uses a
+database format called SQLite. There are many tools available for working with
+SQLite databases; one of the easiest to start with is called
+http://sqlitebrowser.org/[SQLite Browser], which will allow you to look around
+the database as well as export a CSV version of tables for import into another
+program.
+
+The most important table for statistics is the ''revlog'' table, which stores an
+entry for each review that you conduct. The columns are as follows:
+
+id ::
+  The time at which the review was conducted, as the number of milliseconds that
+  had passed since midnight UTC on January 1, 1970. (This is sometimes known as
+  'Unix epoch time', especially when in straight seconds instead of
+  milliseconds.)
+cid ::
+  The ID of the card that was reviewed. You can look up this value in the id
+  field of the ''cards'' table to get more information about the card, although
+  note that the card could have changed between when the revlog entry was
+  recorded and when you are looking it up. It is also the millisecond timestamp
+  of the card's creation time.
+usn ::
+  This column is used to keep track of the sync state of reviews and provides no
+  useful information for analysis.
+ease ::
+  Which button you pressed at the end of the review (1 for Again, 4 for Easy).
+ivl ::
+  The new interval that the card was pushed to after the review.
+lastIvl ::
+  The interval the card had before the review. 0 indicates that the card was
+  previously in (re)learning.
+factor ::
+  The new ease factor of the card in permille (parts per thousand). If the ease
+  factor is 2500, the card's interval will be multiplied by 2.5 the next time
+  you press Good.
+time ::
+  The amount of time (in milliseconds) you spent on the question and
+  answer sides of the card before selecting an ease button.
+type ::
+  This is 0 for learning cards, 1 for review cards, 2 for relearn cards, and 3
+  for "cram" cards (cards being studied in a filtered deck when they are not
+  due).
+
+
 [[media]]
 = Media =
 
@@ -3914,6 +3969,7 @@ paste in the top section. When you've done so, please press Ctrl+Return
 If you've been asked to paste the resulting output, please copy it from the
 bottom area, and paste it back to the support person.
 
+[[add-ons]]
 = Add-ons =
 
 Anki's capabilities can be extended with add-ons. Add-ons can provide features
