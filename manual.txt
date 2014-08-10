@@ -3624,7 +3624,7 @@ The Graphs
   section, and the total number of cards is displayed to the side.
 
 
-Manual analysis
+Manual Analysis
 ----------------
 
 If you're interested in getting information from your statistics other than what
