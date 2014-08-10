@@ -1225,6 +1225,13 @@ The default back template will look something like this:
 This means "show me the text that's on the question, then a divider line, and
 then the back field".
 
+The 'id=answer' part tells Anki where the divider is between the question and
+the answer. This allows Anki to automatically scroll to the spot where the
+answer starts when you press 'show answer' on a long card (especially useful on
+mobile devices with small screens). If you don't want a horizontal line at the
+beginning of the answer, you can use another HTML element such as a paragraph
+or div instead.
+
 [[typinganswers]]
 == Checking Your Answer ==
 
