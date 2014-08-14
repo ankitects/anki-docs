@@ -1203,6 +1203,9 @@ When you place text within curly brackets, Anki looks for a field by that
 name, and replaces the text with the actual content of the field. You can
 include as many fields as you wish.
 
+NOTE: Field names are case sensitive. If you have a field named "Front",
+writing {{front}} will not work properly.
+
 Your templates are not limited to a list of fields. You can also include
 arbitrary text on your templates. For example, if you're studying capital
 cities, and you've created a note type with a "Country" field, you might
@@ -1541,6 +1544,8 @@ The front text (only valid in back template): {{FrontSide}}
 FrontSide will not include any audio that was on the front side of the card.
 If you wish to have the same audio play on both the front and back of the
 card, you'll need to manually include the audio fields on the back as well.
+
+As with other fields, special field names are case sensitive.
 
 [[cardgeneration]]
 == Card Generation & Deletion ==
@@ -4123,8 +4128,10 @@ start a discussion with fellow native speakers on the best way to translate
 something, please feel free to start a thread in the Anki forums.
 
 Any translations that were made at least a few hours before a new Anki release
-are automatically included in the next release. If you'd like to see your name
-in the About screen as a contributor, please drop Damien a line.
+are automatically included in the next release. Entirely new languages need to
+be added manually, so please contact us if that applies to your translation. If
+you'd like to see your name in the About screen as a contributor, please drop
+Damien a line.
 
 If you'd like to try out your translations without waiting for a new release,
 you can export a .mo file from the translation website. If you then move that
