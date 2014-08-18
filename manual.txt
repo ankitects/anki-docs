@@ -24,6 +24,7 @@ Translations
 This page translated into other languages:
 
  * http://ankisrs.net/docs/manual.fr.html[Français]
+ * https://www.dropbox.com/sh/kidooy6zygx01w9/AAAcTv91cXZhB2UeTLw_sSYXa[German]
  * http://192.167.9.6/Anki_ITA/Manual_ITA.htm[Italiano]
  * http://wikiwiki.jp/rage2050/?FrontPage[日本語]
  * http://www.ankichina.net/anki20.html[简体中文]
@@ -4166,7 +4167,6 @@ to spend too much time correcting them, but your mileage may vary.)
 
 The following translations are currently in progress:
 
-* https://docs.google.com/file/d/0BztmnLeHvsKeWmkwNjlxNTJiaFE/edit[German]
 * Chinese
 * http://ankisrs.net/docs/manual.pl.html[Polish]
 
