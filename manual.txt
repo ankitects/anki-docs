@@ -3637,7 +3637,7 @@ The Graphs
   section, and the total number of cards is displayed to the side.
 
 
-Manual analysis
+Manual Analysis
 ----------------
 
 If you're interested in getting information from your statistics other than what
@@ -3675,10 +3675,11 @@ usn ::
 ease ::
   Which button you pressed at the end of the review (1 for Again, 4 for Easy).
 ivl ::
-  The new interval that the card was pushed to after the review.
+  The new interval that the card was pushed to after the review. Positive values
+  are in days; negative values are in seconds (for learning cards).
 lastIvl ::
-  The interval the card had before the review. 0 indicates that the card was
-  previously in (re)learning.
+  The interval the card had before the review. Cards introduced for the first time
+  have a last interval equal to the Again delay.
 factor ::
   The new ease factor of the card in permille (parts per thousand). If the ease
   factor is 2500, the card's interval will be multiplied by 2.5 the next time
@@ -3690,7 +3691,6 @@ type ::
   This is 0 for learning cards, 1 for review cards, 2 for relearn cards, and 3
   for "cram" cards (cards being studied in a filtered deck when they are not
   due).
-
 
 [[media]]
 = Media =
