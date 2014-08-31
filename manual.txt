@@ -1934,15 +1934,17 @@ separate profile for each user. Each user profile has their own collection,
 and own program settings. Profiles are configured by going to the File menu
 and choosing "Switch Profile".
 
+NOTE: Profiles are intended to be used by different people, and each AnkiWeb
+account can only keep one profile in sync. For dividing up your own content,
+you should use separate decks rather than separate profiles, except when using
+extra profiles for experimenting with changes you don't plan to sync
+to other devices.
+
 It's possible to assign a password to your profile by going to Anki's
 preferences window. Your collection is not encrypted, and people can still
 tamper with the file if they locate it on your hard disk. The password
 protection is mainly intended to make it harder for students to tamper with
 each other's decks and settings in a classroom environment.
-
-While most people will want to stick to one profile per user, it's possible to
-use extra profiles for testing purposes or for separating decks you want to
-keep on AnkiWeb from ones you do not.
 
 [[preferences]]
 Preferences
@@ -2266,6 +2268,11 @@ to merge the content stored on AnkiWeb and the content stored on your
 computer, so you'll need to choose which side you'd like to keep. Once the
 initial setup is completed however, Anki will be able to merge changes from
 multiple locations with a few exceptions.
+
+NOTE: If you have multiple people using Anki on one machine and have
+created a profile for each user, each user will need to create their own
+AnkiWeb account to sync with. If you attempt to synchronize multiple profiles
+with a single AnkiWeb account, you will lose data.
 
 Automatic Syncing
 ------------------
