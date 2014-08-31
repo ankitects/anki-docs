@@ -3280,7 +3280,7 @@ WARNING: You should never copy or move your collection while Anki is open.
 Doing so could cause your collection to become corrupted. Please don't
 move or modify the other files in the folder either.
 
-NOTE: On Unix systems, Anki deliberately uses ~/Anki rather than a hidden
+NOTE: On Unix systems, Anki deliberately uses ~/Documents/Anki rather than a hidden
 folder. The bulk of the data stored in that folder is important user data
 rather than easily restored preferences, and it would be a disaster if a user
 lost it because they overlooked it when backing up files. There are also more
@@ -3300,14 +3300,17 @@ instructed to) disable add-ons temporarily to see if one might be causing the
 problem. You can do both of these things by holding down the Shift key while
 starting Anki.
 
-You can specify a custom folder location by starting Anki with a command line
-like so:
+It is possible to specify a custom folder location during startup. This is
+an advanced feature that is primarily intended to be used with portable
+installations, and we recommend you use the default location in most circumstances.
+
+The syntax to specify an alternate folder is as follows:
 
 -----
 anki -b /path/to/anki/folder
 -----
 
-* If you have multiple profiles, you can pass -p to load a specific
+* If you have multiple profiles, you can pass -p <name> to load a specific
   profile.
 * To change the interface language, use -l <iso 639-1 language code>,
   such as "-l ja" for Japanese.
@@ -3325,6 +3328,13 @@ You can also use this technique with the -l option to easily use Anki in
 different languages.
 
 NOTE: On Windows, you should use a backslash (\) not a forward slash (/).
+
+On a Mac there is no easy way to alter the behaviour when clicking on the Anki
+icon, but it is possibile to start Anki with a custom base folder from a terminal:
+
+-----
+open /Applications/Anki.app --args -b ~/myankifolder
+-----
 
 NOTE: If you want to permanently change the interface language, delete
 Documents/Anki/prefs.db and the initial startup screen will be shown
