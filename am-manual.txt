@@ -46,8 +46,6 @@ To download a shared deck directly to your mobile device:
  . Scroll down and tap *Download*.
  . Safari will download the file and display a button near the top right
    labeled *Open in Anki*. Tap this button.
- . AnkiMobile will return, and ask you if you want to add the shared deck, or
-   replace your collection with it. Choose *Add*.
  . When the import completes, your deck should be ready to study.
 
 Information on reviewing is available further below.
