@@ -1314,6 +1314,10 @@ cloze note type.
 If there are multiple sections elided, you can separate the answers in the text
 box with a comma.
 
+NOTE: Type answer boxes will not appear in the <<currentnote-preview,"preview"
+dialog>> in the browser. When you review or look at the preview in the card
+types window, they should display.
+
 == Newlines ==
 
 The template language needs a special command to create a new line. For
@@ -2556,6 +2560,7 @@ answer while reviewing, except the answer column will strip the question part
 for clarity. You can also choose a <<columntemplates,custom format>> in the
 card template editor instead of showing what would be seen during review.
 
+[[currentnote-preview]]
 Current Note
 --------------
 
@@ -2564,7 +2569,9 @@ information about cards and notes, please see <<basics,the basics>>. For more
 information on formatting buttons, please see <<editor,editing>>.
 
 You can see a preview of what the currently selected card would look like when
-reviewing by clicking the "preview" button next to the search box.
+reviewing by clicking the "preview" button next to the search box. Note that
+this will not display any type answer fields on your cards, which makes it
+easier to preview cards quickly.
 
 Toolbar
 --------
