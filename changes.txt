@@ -4,6 +4,51 @@
 
 [[latest]]
 
+= Changes in 2.0.29 =
+
+* Fix "app is damaged" message on OSX Yosemite
+* A new "added" graph that shows how many new cards have been added to the
+collection.
+* When exporting notes as text, say the number of notes that were exported,
+not the number of cards.
+* Add keyboard shortcut Ctrl-Shift-N for the Manage Note Types dialog.
+* Allow tags to be separated with an ideographic space character (eg. Japanese
+  full width space)
+* Allow closing the edit current dialog with Ctrl-Enter.
+* Show more info when syncing media, so you can see it's progressing and get
+an idea of how long is left.
+* All the web components in Anki default to accepting focus and allowing
+copying now, which should fix issues with some screens not allowing copy to
+the clipboard, such as the card info screen.
+* Fix a bug where <br> tags were being inserted in place of newlines when
+importing with html enabled.
+* Fix a bug when trying to recover from a corrupt profile.
+* Fix addons being downloaded with double newlines on Windows.
+* If an existing anki instance is hung, start a new instance when user clicks
+ on anki icon.
+* A few translation fixes thanks to Derbeth.
+* Disable a better error message when some ssl errors occur.
+* Make the tab width in the template editor reasonable.
+* Strip any formatting when pasting into the template editor, as rich text
+has no meaning there.
+* If the computer has no desktop folder, place collection packages in the
+user's home directory.
+* Fix a bug that was allowing nesting other decks under filtered decks.
+* Fix a bug that was causing templates to get out of sync with field names on
+ renaming if more than one filter was used (e.g., {{type:cloze:Text}}).
+* Don't jump around in the browser's card list when deleting cards.
+* On Linux systems that don't have a documents folder defined, default to
+~/Documents/Anki (in English) for the profile folder.
+* We no longer encode and decode %20 and so on when fields are edited.
+  This should fix the bug where users were having text with percent
+  signs in it being turned into other characters.
+* Tags that differ only in case are no longer allowed, as tags were sometimes
+ case-sensitive and sometimes not. The case that you use the first time you
+ enter will be used for all future cards added with that tag. If you want to
+ change the capitalization of that tag, you can temporarily remove the tag
+ from all cards and then add it again with the new case.
+* Ignore >100MB files when syncing instead of having the server throw an error.
+
 = Changes in 2.0.28 =
 
 * Fix media syncing state not being properly reset when deauthorizing.
