@@ -736,7 +736,8 @@ There are three rating buttons when learning:
 *Again* moves the card back to the first step.
 
 *Good* moves the card to the next step. If the card was on the final step, the
-card is converted into a review card (it 'graduates'). By default, the card
+card is converted into a review card (it 'graduates'). By default, once
+the card has reached the end of the learning steps, the card
 will be shown again the next day, and then at increasingly long delays.
 
 *Easy* immediately converts the card into a review card, even if there were
