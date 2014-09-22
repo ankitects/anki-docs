@@ -11,7 +11,6 @@
 collection.
 * When exporting notes as text, say the number of notes that were exported,
 not the number of cards.
-* Add keyboard shortcut Ctrl-Shift-N for the Manage Note Types dialog.
 * Allow tags to be separated with an ideographic space character (eg. Japanese
   full width space)
 * Allow closing the edit current dialog with Ctrl-Enter.
