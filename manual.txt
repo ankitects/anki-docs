@@ -2475,6 +2475,7 @@ default.
  is:suspended :: cards that have been manually suspended
 
 Cards that have lapsed fall into several of these categories, so it may be useful to combine them to get more precise results:
+
  is:learn is:review :: cards that have lapsed and are awaiting relearning
  -is:learn is:review :: review cards, not including lapsed cards
  is:learn -is:review :: cards that are in learning for the first time
