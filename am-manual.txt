@@ -118,6 +118,7 @@ On your computer:
  . Anki will automatically create a collection.apkg on your desktop. If the
    file is named something else, please see the previous step again.
  . Connect your Apple device to your computer via the USB cable.
+ (If you’re using a Mac, you may be able to connect over wi-fi.)
  . Open iTunes if it doesn't open automatically.
  . Locate Anki's file sharing section with
    http://support.apple.com/kb/HT4094[Apple's instructions].
@@ -549,7 +550,7 @@ does, allowing you to perform quite complex searches. Some examples:
 
  tag:marked :: show cards that with the tag "marked"
  is:due :: show only cards that are waiting for review
- front:rabbit :: show only cards where the front field is exactly "rabbit" 
+ front:rabbit :: show only cards where the front field is exactly "rabbit"
 
 For a full list of the possibilities, please see the section in the
 http://ankisrs.net/docs/manual.html#searching[desktop manual].
@@ -599,8 +600,9 @@ store the last 15 backups.
 There is no way to restore from a backup directly from AnkiMobile at the
 moment. AnkiMobile places the backup files into the iTunes file sharing area,
 so they can be retrieved by connecting your device via USB and then following
-the instructions on the iTunes exporting section above. To restore AnkiMobile
-to a particular backup:
+the instructions on the iTunes exporting section above. (If you’re using a Mac,
+you may be able to do this over a wi-fi connection.) To restore AnkiMobile to a
+particular backup:
 
  * Drag the backup from the iTunes file sharing area to the desktop
  * Rename the file to collection.apkg
