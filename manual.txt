@@ -741,8 +741,8 @@ will be shown again the next day, and then at increasingly long delays.
 
 *Easy* immediately converts the card into a review card, even if there were
 steps remaining. By default, the card will be shown again 4 days later, and
-then at increasingly long delays. The easy button will not be shown if it would
-give the same interval as "good."
+then at increasingly long delays. The easy button will not be shown if you are
+in relearning mode and it would give the same interval as "good."
 
 When cards are seen for the first time, they start at step one. This means
 answering *Good* on a card for the first time will show it one more time in 10
