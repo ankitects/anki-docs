@@ -46,7 +46,7 @@ has no meaning there.
 user's home directory.
 * Fix a bug that was allowing nesting other decks under filtered decks.
 * Fix a bug that was causing templates to get out of sync with field names on
- renaming if more than one filter was used (e.g., \{{type:cloze:Text}}).
+ renaming if more than one filter was used (e.g., \{\{type:cloze:Text}}).
 * Don't jump around in the browser's card list when deleting cards.
 * On Linux systems that don't have a documents folder defined, default to
 ~/Documents/Anki (in English) for the profile folder.
