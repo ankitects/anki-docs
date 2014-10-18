@@ -12,7 +12,7 @@ is necessary to keep syncing.
 * Disable embedded fonts on OSX to prevent crashes.
 * The Browse screen on OSX now deletes cards when you press Fn+Del, not
   Del.
-* Fix a syncing bug triggered by importing apks with custom deck options.
+* Fix a syncing bug triggered by importing apkgs with custom deck options.
 * Fix saved searches not being synced (thanks to Houssam).
 * Fix "check database" not saving changes after fixing an AnkiDroid problem.
 
