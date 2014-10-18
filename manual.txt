@@ -2117,7 +2117,7 @@ appear in the congratulations screen, suggesting you consider increasing the
 limit if you have time.
 
 *Easy bonus* allows you to set the difference in intervals between answering
-'Good' and 'Easy' on a card.
+'Good' and 'Easy' on a card. For instance, with the default value of 130%, Easy will give an interval that is 1.3 times the Good interval.
 
 *Interval modifier* allows you to apply a multiplication factor to the
 intervals Anki generates. At its default of 100% it does nothing; if you set it
@@ -2158,7 +2158,7 @@ One important thing to note however is that the tradeoff between time spent
 studying and retention is not linear: we can see here that to increase our
 retention by 5 percentage points, we'd have to study 35% more frequently. If
 the material you are learning is very important then it may be worth the extra
-effort - that's something you'll need to decide for yourself. If you're simply
+effort – that's something you'll need to decide for yourself. If you're simply
 worried that you're forgetting too much, you may find investing more time into
 the initial learning stage and/or making mnemonics gives you more gain for
 less effort.
@@ -4492,6 +4492,44 @@ Anki's algorithm is based on SM2, but differs from it in some respects.
 
 For a description of the SM2 algorithm, please see
 http://www.supermemo.com/english/ol/sm2.htm
+
+You can also check out 'sched.py' in Anki’s source code for the scheduling
+code. Here is a summary (see the <<deckoptions,deck options>> section for the
+options that are mentioned in 'italics').
+
+If you press...
+
+ Again ::
+  The card is placed into relearning mode, the ease is decreased by 20%, and
+  the current interval is multiplied by the value of 'new interval' (this
+  interval will be used when the card exits relearning mode).
+ Hard ::
+  The card’s ease is decreased by 15% and the current interval is multiplied by
+  1.2.
+ Good ::
+  The current interval is multiplied by the current ease. The ease is unchanged.
+ Easy ::
+  The current interval is multiplied by the current ease times the 'easy bonus'
+  and the ease is increased by 15%.
+
+For Hard, Good, and Easy, the next interval is additionally multiplied by the
+'interval modifier'. If the card is being reviewed late, the number of days
+that the card is overdue will be added to the current interval before doing
+these calculations.
+
+There are a few limitations on the scheduling values that cards can take. Eases
+will never be decreased below 130%; SuperMemo’s research has shown that eases
+below 130% tend to result in cards becoming due more often than is useful and
+annoying users. Intervals will never be increased beyond the value of 'maximum
+interval'. Finally, all new intervals (except Again) will always be at least
+one day longer than the previous interval.
+
+NOTE: After you select an ease button, Anki also applies a small amount of
+random “fuzz” to prevent cards that were introduced at the same time and given
+the same ratings from sticking together and always coming up for review on the
+same day. This fuzz does not appear on the interval buttons, so if you’re
+noticing a slight discrepancy between what you select and the intervals your
+cards actually get, this is probably the cause.
 
 = Resources =
 
