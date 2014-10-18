@@ -4,6 +4,18 @@
 
 [[latest]]
 
+= Changes in 2.0.30 =
+
+If you're using the alternate build on an older Mac, this upgrade
+is necessary to keep syncing.
+
+* Disable embedded fonts on OSX to prevent crashes.
+* The Browse screen on OSX now deletes cards when you press Fn+Del, not
+  just Del.
+* Fix a syncing bug triggered by importing apks with custom deck options.
+* Fix saved searches not being synced (thanks to Houssam).
+* Fix "check database" not saving changes after fixing an AnkiDroid problem.
+
 = Changes in 2.0.29 =
 
 * Fix "app is damaged" message on OSX Yosemite
