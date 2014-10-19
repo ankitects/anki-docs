@@ -3,6 +3,9 @@
 ++++++++++++++++++++++
 
 [[latest]]
+= Changes in 2.0.31 =
+
+* Fix a problem where large regular syncs sometimes timed out.
 
 = Changes in 2.0.30 =
 
