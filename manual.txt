@@ -1893,6 +1893,8 @@ After that, we need to update the template:
 @font-face { font-family: myfont; src: url('_arial.ttf'); }
 -----
 
+NOTE: Only change the "arial" part, not the "myfont" part.
+
 After that, you can either change the font for the entire card, or for
 individual fields. To change the font for the entire card, simply locate the
 font-family: line in the .card section and change the font to "myfont". To
@@ -1902,10 +1904,34 @@ Styling>> instructions above.
 NOTE: Please make sure the filenames match exactly. If the file is called
 arial.TTF and you write arial.ttf in your card templates, it will not work.
 
-NOTE: Due to a bug in the toolkit Anki uses, embedded fonts can cause crashes
-on OS X. A workaround is posted on
-https://anki.tenderapp.com/discussions/ankidesktop/4161-crash-when-showing-answer-with-custom-font-mac-109anki-2018#comment_30164833
+=== Fonts on a Mac ===
 
+Embedded fonts currently do not work on OS X. It is still possible to use
+custom fonts, but they need to be installed system wide.
+
+To install a font on your system, please see http://support.apple.com/kb/HT2435?viewlocale=en_US&locale=en_US
+
+You can set up Anki to use the system font on a Mac computer, and an embedded
+font elsewhere.
+
+On your front or back template, wrap the field you want to style in the following
+code, replacing "FieldName" with the name of your field.
+
+-----
+<span style="mystyle">{{FieldName}}</span>
+-----
+
+In the styling section, in addition to the font-face line described above,
+add the following:
+
+-----
+.mystyle { font-family: myfont; }
+.mac .mystyle { font-family: Helvetica; }
+-----
+
+Replace "Helvetica" with the name of the font you installed on your system.
+Keep "myfont" as is, as it references the font you embedded.
+ 
 == Javascript ==
 
 As Anki cards are treated like webpages, it is possible to embed some
