@@ -3061,8 +3061,12 @@ hello [tab] this is<br>a two line answer
 two [tab] this is a one line one
 -----
 
-Note that you need to turn on the "allow HTML in fields" checkbox in the import
-dialog for this to work.
+You need to turn on the "allow HTML in fields" checkbox in the import dialog
+for HTML newlines to work.
+
+NOTE: Escaped multi-lines will not work correctly if you are using cloze
+deletions that span multiple lines. In this case, please use HTML newlines
+instead.
 
 You can also include tags in another field and select it as a tags field in the
 import dialog:
