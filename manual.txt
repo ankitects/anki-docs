@@ -185,7 +185,7 @@ Cards
 -----
 
 A question and answer pair is called a 'card'. This is based on a paper
-flashcard with a question on one side an the answer on the back. In Anki a
+flashcard with a question on one side and the answer on the back. In Anki a
 card doesn't actually look like a physical card, and when you show the answer
 the question remains visible by default. For example, if you're studying basic
 chemistry, you might see a question like:
@@ -222,11 +222,12 @@ Chinese cards, including Hanzi cards, will be shown.
 To place decks into a tree, you can either name them with "::" between each
 level, or drag and drop them from the deck list. Decks that have been nested
 under another deck (that is, that have at least one "::" in their names) are
-often called 'subdecks', and top-level decks are sometimes called 'superdecks'.
+often called 'subdecks', and top-level decks are sometimes called 'superdecks'
+or 'parent decks'.
 
 Anki starts with a deck called "default"; any cards which have somehow become
 separated from other decks will go here. Anki will hide the default deck if it
-contains no cards and you have added other decks.  Alternatively, you may rename
+contains no cards and you have added other decks. Alternatively, you may rename
 this deck and use it for other cards.
 
 Decks are best used to hold broad categories of cards, rather than specific
@@ -234,7 +235,7 @@ topics such as "food verbs" or "lesson 1". For more info on this, please see
 the <<manydecks,using decks appropriately>> section.
 
 For information on how decks affect the order cards are displayed in, please
-see <<displayorder,display order>> section.
+see the <<displayorder,display order>> section.
 
 Notes & Fields
 ---------------
@@ -267,7 +268,6 @@ cards for you, and updating them if you make any edits in the future.
 
 Imagine we want to study French vocabulary, and we want to include the page
 number on the back of each cards. We want our cards to look like this:
-like this:
 
 -----
 Q: Bonjour
@@ -295,17 +295,21 @@ Page: 12
 
 In Anki, this related information is called a 'note', and each piece of
 information is called a 'field'. So we can say that this type of note has
-three fields: French, English and Page.
+three fields: French, English, and Page.
 
-Card Templates
---------------
+[cardtypes]
+Card Types
+----------
 
 In order for Anki to create cards based on our notes, we need to give it a
 blueprint that says which fields should be displayed on the front or back of
-each card. This blueprint is called a 'card template'. Different types of
-notes can have different templates.
+each card. This blueprint is called a 'card type'. Each type of note can have
+one or more card types; when you add a note, Anki will create one card for each
+card type.
 
-In the above French example, we wanted the recognition card to look like this:
+Each card type has two 'templates', one for the question and one for the
+answer. In the above French example, we wanted the recognition card to look
+like this:
 
 -----
 Q: Bonjour
@@ -313,7 +317,7 @@ A: Hello
    Page #12
 -----
 
-To do this, we can set the template question and answer to:
+To do this, we can set the question and answer templates to:
 
 -----
 Q: {{French}}
@@ -322,16 +326,13 @@ A: {{English}}<br>
 -----
 
 By surrounding a field name in curly brackets, we tell Anki to replace that
-section with the actual information in the field. The information not
-surrounded by curly brackets remains the same on each card.
+section with the actual information in the field. Anything not surrounded by
+curly brackets remains the same on each card. (For instance, we don't have to
+type "Page #" into the Page field when adding material – it's added
+automatically to every card.) <br> is a special code that tells Anki to move to
+the next line; more details are available in the <<templates,templates>> section.
 
-The <br> is a special code that tells Anki to move to the next line. More
-information is available in the Cards & Templates section.
-
-Notice how we don't have to type "Page #" when adding material - it's added
-automatically to every card.
-
-The production card template is created in a similar way:
+The production card templates work in a similar way:
 
 -----
 Q: {{English}}
@@ -339,25 +340,27 @@ A: {{French}}<br>
    Page #{{Page}}
 -----
 
-Once a card template has been created, every time you add a new note, a card
-will be created based on that template. Templates make it easy to keep the
-formatting of your cards consistent, and can greatly reduce the amount of
-effort involved in adding information. They also mean Anki can ensure related
-cards don't appear too close to each other, and mean you can fix a typing
-mistake once and have all the related cards updated at once.
+Once a card type has been created, every time you add a new note, a card will
+be created based on that card type. Card types make it easy to keep the
+formatting of your cards consistent and can greatly reduce the amount of effort
+involved in adding information. They also mean Anki can ensure related cards
+don't appear too close to each other, and allow you to fix a typing mistake or
+factual error once and have all the related cards updated at once.
 
-To add and edit card templates, click the "Cards..." button while adding or
-editing notes.
+To add and edit card types, click the "Cards..." button while adding or editing
+notes. For more information on card types, please see the <<templates,Cards and
+Templates>> section.
+
 
 Note Types
 ----------
 
-Anki allows you to create different types of notes for different material.
-Each type of note has its own set of fields and card templates. It's a good
-idea to create a separate note type for each broad topic you're studying. In
-the above French example, we might create a note type called "French" for
-that. If we wanted to learn capitals cities, we could create a separate note
-type for that as well, with fields such as "Country" and "Capital City".
+Anki allows you to create different types of notes for different material. Each
+type of note has its own set of fields and card types. It's a good idea to
+create a separate note type for each broad topic you're studying. In the above
+French example, we might create a note type called "French" for that. If we
+wanted to learn capital cities, we could create a separate note type for that
+as well, with fields such as "Country" and "Capital City".
 
 When Anki checks for duplicates, it only compares other notes of the same
 type. Thus if you add a capital city called "Orange" using the capital city
@@ -379,13 +382,15 @@ content you are learning. The standard note types are as follows:
  Basic (optional reversed card) :: This a front->back card, and optionally a
  back->front card. To do this, it has a third field called "Add Reverse". If
  you enter any text into that field, a reverse card will be created. More
- information about this is available in the Cards & Templates section.
+ information about this is available in the <<templates,Cards and Templates>>
+ section.
 
  Cloze :: A note type which makes it easy to select text and turn it into a
- cloze deletion (eg "Man landed on the moon in [...]" -> "Man landed on the
- moon in [1969]"). More information is available in later sections.
+ cloze deletion (e.g., "Man landed on the moon in [...]" -> "Man landed on the
+ moon in 1969"). More information is available in the <<cloze,cloze deletion>>
+ section.
 
-To add your own note types and modify existing ones, you can use Tools>Manage
+To add your own note types and modify existing ones, you can use Tools → Manage
 Note Types.
 
 NOTE: Notes and note types are stored in your collection rather than in an
@@ -399,8 +404,8 @@ you've already created them>>.
 Collection
 -----------
 
-Your collection is all the material stored in Anki - your cards, notes, decks,
-templates, and so on.
+Your 'collection' is all the material stored in Anki - your cards, notes, decks,
+note types, deck options, and so on.
 
 Adding Material
 ================
@@ -984,7 +989,7 @@ or m to select the three LaTeX types, and Ctrl+shift+x to edit the HTML.
 Cloze Deletion
 ---------------
 
-Cloze deletion is the process of hiding one or more words in a sentence. For
+'Cloze deletion' is the process of hiding one or more words in a sentence. For
 example, if you have the sentence:
 
 -----
@@ -1115,24 +1120,25 @@ when I first set out to learn Japanese.
 
 If you're learning a right to left language, there are lots of other things to
 consider. Please see http://dotancohen.com/howto/rtl_right_to_left.html[this
-page] for more information
+page] for more information.
 
 To learn more, please search Google for something like "input Japanese on a
-mac" or "input german on windows", as there is plenty of good information
+mac" or "input German on windows", as there is plenty of good information
 available.
 
 [[templates]]
 Cards and Templates
 ====================
 
-As mentioned in the <<basics,basics>>, Anki creates cards automatically for
-use, based on your notes. You can configure the cards Anki should create and
-what should be shown on them when adding or editing material by clicking on
-the "Cards..." button. Please read the basics section if you have not done so
-already, as the rest of this section assumes you have read it.
+As mentioned in the <<cardtypes,basics>> section, Anki creates cards
+automatically for use, based on your notes. You can configure the cards Anki
+should create and what should be shown on them when adding or editing material
+by clicking on the "Cards..." button. Please read the basics section if you
+have not done so already, as the rest of this section assumes that you have
+read it.
 
-At the top of the window you'll see a set of tabs listing the current cards.
-You can click the plus on the right if you'd like to add another card to the
+At the top of the window you'll see a set of tabs, one for each card type. You
+can click the plus on the right if you'd like to add another card type to the
 current note type. Similarly, if you'd like to delete one, you can do so by
 clicking the X on the tab.
 
@@ -1143,24 +1149,30 @@ In Anki, templates are written in HTML, which is the language that web pages
 are written in. The styling section is CSS, which is the language used for
 styling web pages.
 
+On the right is a preview of the front and back of the currently selected card.
+If you opened the window while adding notes, the preview will be based on the
+text you had typed into the Add Notes window. If you opened the window while
+editing a note, the preview will be based on the content of that note. If you
+opened the window from Tools → Manage Note Types, Anki will display each
+field's name in parentheses in place of content.
+
 You can watch http://www.youtube.com/watch?v=F1j1Zx0mXME[a video about
 this styling cards] on YouTube.
 
-On the right is a preview of the front and back of the currently selected
-card. If you opened the window while adding notes, the preview will be based
-on the text you had typed into the Add Notes window. If you opened the window
-while editing a note, the preview will be based on that note.
-
 At the bottom of the window is a More button that gives you options to rename
-or reorder the cards. The "Deck Override" option allows you to change the deck
-in which cards of the current type will be placed into. By default, cards are
-placed into the deck you provide in the Add Notes window. If you set a deck
-here, that card type will be placed into the deck you specified, instead of the
-deck listed in the Add Notes window. (You can check which deck the cards are
-currently going to be choosing Deck Override again.) The Browser Appearance
-option allows you to set different (perhaps simplified) templates for display
-in the Question and Answer columns of the browser; see
-<<columntemplates, browser appearance>> for more information.
+or reorder the cards, as well as the following two options:
+
+ * The "Deck Override" option allows you to change the deck that cards generated
+from the current card type will be placed into. By default, cards are placed
+into the deck you provide in the Add Notes window. If you set a deck here, that
+card type will be placed into the deck you specified, instead of the deck
+listed in the Add Notes window. This can be used if you want to separate cards
+into different decks (for instance, for studying a language, to put production
+cards in one deck and recognition cards in another). You can check which deck
+the cards are currently going to by choosing Deck Override again.
+ * The Browser Appearance option allows you to set different (perhaps simplified)
+templates for display in the Question and Answer columns of the browser; see
+<<columntemplates,browser appearance>> for more information.
 
 == Reverse Cards ==
 
@@ -1723,9 +1735,9 @@ expect.
 
 Please see the <<cloze,cloze deletion>> section for background info.
 
-The cloze note type functions differently from regular note types. Instead of
-a customizable number of card templates, it has a single template which is
-shared by all cloze deletions on a note.
+The cloze note type functions differently from regular note types. Instead of a
+customizable number of card types, it has a single type which is shared by all
+cloze deletions on a note.
 
 As mentioned in the card generation section above, generation of regular cards
 depends on one or more fields on the question being non-empty. Cloze deletion
@@ -2061,9 +2073,9 @@ statistically more likely to appear than the previously remaining cards. To
 correct this, you can change the order to ordered mode and back again to force
 a re-sort.
 
-NOTE: When you select random order, Anki will randomize your notes, keeping
-the cards of a given note close together. The cards of a given note are shown
-in the order their card templates appear in, so that siblings are introduced
+NOTE: When you select random order, Anki will randomize your notes, keeping the
+cards of a given note close together. The cards of a given note are shown in
+the order their card types appear in, so that siblings are introduced
 consistently - otherwise you could end up in a state where some notes had all
 their cards introduced and other notes had only one or two. Please see the
 "bury related" option below for more info.
@@ -2560,7 +2572,7 @@ the sort field by clicking on "Fields..." in the current note section.
 The question and answer columns display what you'd see on the question and
 answer while reviewing, except the answer column will strip the question part
 for clarity. You can also choose a <<columntemplates,custom format>> in the
-card template editor instead of showing what would be seen during review.
+card type editor instead of showing what would be seen during review.
 
 [[currentnote-preview]]
 Current Note
@@ -2690,10 +2702,10 @@ option off, 2 and 3 will get the same position number (and it will thus be
 random which one comes up first).
 
 'Change Note Type' allows you to convert the selected notes from one type to
-another type, and/or convert between card templates. For example, imagine you
-have a Russian note type and a Computer note type, and you accidentally added
-some computer-related text into a Russian note. You can use this option to fix
-that mistake. The progress of cards is not reset.
+another. For example, imagine you have a Russian note type and a Computer note
+type, and you accidentally added some computer-related text into a Russian
+note. You can use this option to fix that mistake. The scheduling of cards is
+not affected.
 
 'Select Notes' takes the currently selected cards, finds their notes, and then
 selects all cards of those notes. If your notes have only one card, this does
