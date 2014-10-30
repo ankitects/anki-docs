@@ -1174,6 +1174,7 @@ the cards are currently going to by choosing Deck Override again.
 templates for display in the Question and Answer columns of the browser; see
 <<columntemplates,browser appearance>> for more information.
 
+[[reversingcards]]
 == Reverse Cards ==
 
 You can watch http://www.youtube.com/watch?v=DnbKwHEQ1mA[a video about
@@ -1196,14 +1197,20 @@ additionally enter something in the "Add Reverse" field (like a 'y'), Anki will
 generate a reverse card as well. The contents of this field will never be
 displayed on a card.
 
-If you later decide you don't want a reverse card (or you didn't create one at
-first and now want one), you can change it by editing the "Add Reverse" field.
-If you didn't select the optional reverse note type to begin with, you can use
-Edit>Change Note Type in the browser to change it.
+If you later decide you don't want a reverse card that you added, you can
+delete it by removing the text from the "Add Reverse" field. Similarly, if you
+want to add a reverse card, you can add text to the “Add Reverse” field. If you
+didn't select the optional reverse note type to begin with, you can use Edit →
+Change Note Type in the browser to change it.
 
-If you wish to generate reverse or certain cards only in certain situations with
-a more complex note type (for instance, one with three cards), please see the
-<<conditionalreplacement,conditional replacement>> section.
+NOTE: To avoid loss of scheduling information if you make an editing mistake,
+Anki does not automatically delete cards after you remove the text from the
+“add reverse” field. To complete the deletion, run Tools → Empty Cards from the
+main window.
+
+If you’re using a more complex note type (for instance, one with three cards)
+and you wish to generate specific cards only in certain situations, please see
+the <<conditionalreplacement,conditional replacement>> section.
 
 == Basic Templates ==
 
@@ -1580,14 +1587,17 @@ cards if they were previously blank, but no longer so.
 
 If your edits have made some cards blank, Anki will not delete them
 immediately, as that could lead to accidental data loss. To remove empty cards,
-in the main window go the Tools menu and choose Empty Cards. You will be shown
-a list of empty cards and be given the option to delete them.
+in the main window go to Tools → Empty Cards. You will be shown a list of empty
+cards and be given the option to delete them.
 
-It is not possible to manually delete individual cards, because they would end
-up being recreated again the next time the note was edited. Instead, you can
-either make the relevant fields empty and then use Empty Cards option, or you
-can suspend the unwanted cards. If you need to edit multiple fields at once,
-you can use the find&replace feature in the browser.
+It is not possible to manually delete individual cards (rather than notes),
+because they would end up being recreated the next time the note was edited.
+Instead, you should make the relevant conditional replacement fields empty and
+then use the Empty Cards option. (If you don’t have fields set up to control
+card generation, please see the sections on <<reversingcards,reversed cards>>
+and <<selectivegeneration,selective card generation>>.) If you need to do this
+for many notes at once, you can use the <<findreplace,find and replace>>
+feature in the browser.
 
 Anki does not consider special fields or non-field text for the purposes of
 card generation. Thus if your front template looked like the following, no
@@ -1597,6 +1607,7 @@ card would be generated if Country was empty:
 Where is {{Country}} on the map?
 -----
 
+[[selectivegeneration]]
 == Selective Card Generation ==
 
 Please read the previous section before you read this.
@@ -1670,7 +1681,9 @@ A real life example is only showing a label if the field is not empty:
 -----
 
 You can also use conditional replacement to control which cards are generated.
-For example, consider a card with two fields on the front:
+This works since Anki will not <<cardgeneration,generate cards>> which would
+have a blank front side. For example, consider a card with two fields on the
+front:
 
 -----
 {{Expression}}
@@ -1703,7 +1716,14 @@ replacements:
 Keep in mind that, as mentioned in the <<cardgeneration,card generation>>
 section, this only works when you place the conditional replacement code on the
 ''front'' of the card; if you do this on the back, you will simply end up with
-cards with a blank back side.
+cards with a blank back side. Similarly, since this works by checking if the front field would be empty, it is important to make sure you wrap the 'entire' front side in the conditional replacement; for instance, the following would not work as expected:
+
+-----
+{{#Expression}}
+{{Expression}}
+{{/Expression}}
+{{Notes}}
+-----
 
 The default behaviour can be thought of as an "OR" condition - cards are
 created if the first field is non-empty, OR the second field is non-empty, and
