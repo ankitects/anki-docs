@@ -4536,17 +4536,19 @@ options that are mentioned in 'italics').
 If you press...
 
  Again ::
-  The card is placed into relearning mode, the ease is decreased by 20%, and
-  the current interval is multiplied by the value of 'new interval' (this
-  interval will be used when the card exits relearning mode).
+  The card is placed into relearning mode, the ease is decreased by 20
+  percentage points (that is, 20 is subtracted from the 'ease' value, which is
+  in units of percentage points), and the current interval is multiplied by
+  the value of 'new interval' (this interval will be used when the card exits
+  relearning mode).
  Hard ::
-  The card’s ease is decreased by 15% and the current interval is multiplied by
-  1.2.
+  The card’s ease is decreased by 15 percentage points and the current interval
+  is multiplied by 1.2.
  Good ::
   The current interval is multiplied by the current ease. The ease is unchanged.
  Easy ::
   The current interval is multiplied by the current ease times the 'easy bonus'
-  and the ease is increased by 15%.
+  and the ease is increased by 15 percentage points.
 
 For Hard, Good, and Easy, the next interval is additionally multiplied by the
 'interval modifier'. If the card is being reviewed late, the number of days
