@@ -58,7 +58,7 @@ user's home directory.
   signs in it being turned into other characters.
 * Tags that differ only in case are no longer allowed, as tags were sometimes
  case-sensitive and sometimes not. The case that you use the first time you
- enter will be used for all future cards added with that tag. If you want to
+ enter the tag will be used for all future cards added with that tag. If you want to
  change the capitalization of that tag, you can temporarily remove the tag
  from all cards and then add it again with the new case.
 * Ignore >100MB files when syncing instead of having the server throw an error.
