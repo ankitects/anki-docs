@@ -297,7 +297,7 @@ In Anki, this related information is called a 'note', and each piece of
 information is called a 'field'. So we can say that this type of note has
 three fields: French, English, and Page.
 
-[cardtypes]
+[[cardtypes]]
 Card Types
 ----------
 
