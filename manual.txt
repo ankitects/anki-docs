@@ -4047,6 +4047,10 @@ paste in the top section. When you've done so, please press Ctrl+Return
 If you've been asked to paste the resulting output, please copy it from the
 bottom area, and paste it back to the support person.
 
+If you press Ctrl+Shift+Return instead of just Ctrl+Return, Anki will try to
+print the result rather than doing what you asked it to. If you are getting
+unexpected errors, please make sure you’re not holding down the Shift key.
+
 [[add-ons]]
 = Add-ons =
 
