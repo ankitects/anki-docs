@@ -3,6 +3,21 @@
 ++++++++++++++++++++++
 
 [[latest]]
+= Changes in 2.0.31 =
+
+* Fix a problem where large regular syncs sometimes timed out.
+
+= Changes in 2.0.30 =
+
+If you're using the alternate build on an older Mac, this upgrade
+is necessary to keep syncing.
+
+* Disable embedded fonts on OSX to prevent crashes.
+* The Browse screen on OSX now deletes cards when you press Fn+Del, not
+  Del.
+* Fix a syncing bug triggered by importing apkgs with custom deck options.
+* Fix saved searches not being synced (thanks to Houssam).
+* Fix "check database" not saving changes after fixing an AnkiDroid problem.
 
 = Changes in 2.0.29 =
 
@@ -34,7 +49,7 @@ has no meaning there.
 user's home directory.
 * Fix a bug that was allowing nesting other decks under filtered decks.
 * Fix a bug that was causing templates to get out of sync with field names on
- renaming if more than one filter was used (e.g., {{type:cloze:Text}}).
+ renaming if more than one filter was used (e.g., \{\{type:cloze:Text}}).
 * Don't jump around in the browser's card list when deleting cards.
 * On Linux systems that don't have a documents folder defined, default to
 ~/Documents/Anki (in English) for the profile folder.
