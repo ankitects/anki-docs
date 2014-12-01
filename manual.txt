@@ -2175,7 +2175,8 @@ become overwhelmed by the reviews required.
 *Graduating interval* is the delay between answering 'Good' on a card with no
 steps left, and seeing the card again.
 
-*Easy interval* is the delay between answering 'easy' on a card and seeing it again.
+*Easy interval* is the delay between answering 'easy' on a learning card and
+seeing it in review mode for the first time.
 
 *Starting ease* controls the easiness that cards start out with. It is set
 when a card graduates from learning for the first time. It defaults to 250%,
@@ -4292,6 +4293,7 @@ to spend too much time correcting them, but your mileage may vary.)
 
 The following translations are currently in progress:
 
+* Spanish
 * Chinese
 * http://ankisrs.net/docs/manual.pl.html[Polish]
 
