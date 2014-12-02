@@ -3706,6 +3706,33 @@ The stats window uses some terms that you may not be familiar with:
   cards, especially when they are in the "new" queue to be shown for the first
   time.
 
+Today
+-----
+
+At the top of the statistics window is a brief list of textual statistics about
+the reviews that you have completed today. A “review” in this context is 'one
+answering of a card', so a card might count as multiple reviews if it needed to
+be seen multiple times, and a learning card could count as a “review.” A couple
+of the stats whose meaning may not be immediately obvious:
+
+ Again count ::
+  This is the number of reviews that you have failed (i.e., pressed Again on).
+  The correct percentage listed afterwards is the again count divided by the
+  total number of cards you’ve studied.
+ Learn, Review, Relearn, Filtered ::
+  The number of reviews that were learning cards, review cards, relearning
+  cards, or studied in a filtered deck when not due.
+
+The stats for the current day are not a good overall indicator of your learning
+progress; everyone has bad days and good days, and seeing that you got a lower
+percentage correct on a particular day should not be cause for concern. The
+remainder of the stats, which take longer periods of time into account, will
+give more useful information if you wish to try to change your study habits or
+scheduling settings based on your performance.
+
+The “today” statistics are unaffected by the time period selected at the bottom
+of the window.
+
 The Graphs
 -----------
 
