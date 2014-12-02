@@ -3717,8 +3717,8 @@ of the stats whose meaning may not be immediately obvious:
 
  Again count ::
   This is the number of reviews that you have failed (i.e., pressed Again on).
-  The correct percentage listed afterwards is the again count divided by the
-  total number of cards you’ve studied.
+  The correct percentage listed afterwards is the number of cards you did 'not'
+  fail divided by the total number of cards you studied.
  Learn, Review, Relearn, Filtered ::
   The number of reviews that were learning cards, review cards, relearning
   cards, or studied in a filtered deck when not due.
