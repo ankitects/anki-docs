@@ -1981,7 +1981,7 @@ On your front or back template, wrap the field you want to style in the followin
 code, replacing "FieldName" with the name of your field.
 
 -----
-<span style="mystyle">{{FieldName}}</span>
+<span class="mystyle">{{FieldName}}</span>
 -----
 
 In the styling section, in addition to the font-face line described above,
