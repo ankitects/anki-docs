@@ -24,6 +24,7 @@ Translations
 This page translated into other languages:
 
  * http://www.dennisproksch.de/anki[Deutsch]
+ * http://ankisrs.net/docs/manual.es.html[Español]
  * http://ankisrs.net/docs/manual.fr.html[Français]
  * http://192.167.9.6/Anki_ITA/Manual_ITA.htm[Italiano]
  * http://wikiwiki.jp/rage2050/?FrontPage[日本語]
@@ -1980,7 +1981,7 @@ On your front or back template, wrap the field you want to style in the followin
 code, replacing "FieldName" with the name of your field.
 
 -----
-<span style="mystyle">{{FieldName}}</span>
+vl <span class="mystyle">{{FieldName}}</span>
 -----
 
 In the styling section, in addition to the font-face line described above,
