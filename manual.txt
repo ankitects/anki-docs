@@ -4215,7 +4215,7 @@ This will produce an .apkg file which you can share with others.
 
 You can share the .apkg file by emailing it to people, placing it on a website
 or shared folder, or using a free file sharing service like Dropbox or Google
-Drive and sending people a link to that.
+Drive and sending people a link.
 
 Both the computer version and mobile clients make it easy to import from an
 apkg file simply by clicking or tapping on it. AnkiWeb does not have the
