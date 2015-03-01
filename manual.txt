@@ -2479,6 +2479,9 @@ You can hold down alt (option on a Mac) in order to reverse the search (prepend
 a '-') (for instance, to show all cards in a current deck that do _not_ have a
 certain tag).
 
+To remove tags that are not used by any notes, use Tools>Check Database from
+the main window.
+
 [[searching]]
 Searching
 ---------
@@ -2679,7 +2682,9 @@ its review history. For more information, see the <<stats,statistics>> section.
 in different decks, so if you want to move all cards in a note, you should
 first use Edit > Select Notes.
 
-'Add Tags' and 'Remove Tags' allow you to add or remove tags in bulk.
+'Add Tags' and 'Remove Tags' allow you to add or remove tags from notes in
+bulk. To remove unused tags from the list on the left, use Tools>Check
+Database from the main window.
 
 'Delete' removes the selected card(s) and their notes. It is not possible to
 remove individual cards, as individual cards are controlled by the
@@ -4204,15 +4209,18 @@ able to update the existing copy.
 Sharing Decks Privately
 ------------------------
 
-To share a deck privately, use File>Export and export in the packaged Anki
-deck format (including media if necessary). You can then place the resulting
-deck.apkg file on a private website for people to download, or mail it to the
-relevant people.
+To share a deck privately, go to the File menu and choose Export. Select a
+single deck (not "All Decks"), and turn off "include scheduling information".
+This will produce an .apkg file which you can share with others.
 
-Both desktop and mobile clients make it easy to import from an apkg file
-simply by clicking on it. AnkiWeb does not have the ability to import apkg
-files however, so the recipients of your deck will need to have the desktop
-client or Anki on their smartphone.
+You can share the .apkg file by emailing it to people, placing it on a website
+or shared folder, or using a free file sharing service like Dropbox or Google
+Drive and sending people a link to that.
+
+Both the computer version and mobile clients make it easy to import from an
+apkg file simply by clicking or tapping on it. AnkiWeb does not have the
+ability to import apkg files however, so the recipients of your deck will need
+to have the computer version or Anki on their mobile device.
 
 When a user imports a .apkg file, cards that already exist in their collection
 will be ignored and any new cards will be added. As long as they use the same
