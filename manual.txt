@@ -3380,7 +3380,7 @@ File Locations
 
 On Windows and OSX, Anki stores all of its files in an Anki folder, located in
 your Documents folder. On other operating systems, your files are stored in
-~/Anki by default.
+~/Documents/Anki by default.
 
 Within the Anki folder, the program-level and profile-level preferences are
 stored in a file called prefs.db.

@@ -203,6 +203,13 @@ To make reviewing faster, you can also tap on the card in order to answer it.
 For more information on the available taps and how to customize them, please
 see the <<taps,taps>> section.
 
+If you are studying content for which it is useful to sketch something before
+showing the answer on the card (e.g., characters in a foreign language),
+AnkiMobile provides a feature called the 'scratchpad' (the analogous feature is
+called the 'whiteboard' in AnkiDroid). To use the scratchpad, you first need to
+add the 'Toggle ScratchPad' <<actions,action>> to a <<taps,tap>>, swipe,
+quickbar action, or tool button.
+
 When you've finished the cards that are due to be studied today, you'll be
 shown a congratulations message. If you have other decks, you can tap the top
 left button to return to the decks list and select a different one. If you've
