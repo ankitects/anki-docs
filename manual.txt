@@ -4222,7 +4222,7 @@ apkg file simply by clicking or tapping on it. AnkiWeb does not have the
 ability to import apkg files however, so the recipients of your deck will need
 to have the computer version or Anki on their mobile device.
 
-When a user imports a .apkg file, cards that already exist in their collection
+When a user imports an .apkg file, cards that already exist in their collection
 will be ignored and any new cards will be added. As long as they use the same
 note type, modified cards will also be updated. To prevent data loss, cards
 that have been deleted in the new apkg file will not be deleted in the user's
