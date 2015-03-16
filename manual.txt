@@ -1950,7 +1950,7 @@ After that, we need to update the template:
  . Click *Add* at the top of the main screen, and then select the note type
    you want to change with the top left button.
  . Click *Cards*.
- . In the styling section, add the following text to the bottom, replacing
+ . In the styling section, add the following text to the bottom (i.e. outside the .card{} curly braces), replacing
    "_arial.ttf" with the name of the file you copied into your media folder:
 -----
 @font-face { font-family: myfont; src: url('_arial.ttf'); }
