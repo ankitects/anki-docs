@@ -1921,6 +1921,8 @@ And in the template:
 <div class=jp>{{Field}}</div>
 -----
 
+For different iOS devices, you can use '.iphone' and '.ipad'.
+
 You can also use properties like .gecko, .opera, and .ie to select particular
 browsers when using AnkiWeb. Please see
 http://rafael.adm.br/css_browser_selector/ for a full list of options.
