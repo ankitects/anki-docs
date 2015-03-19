@@ -3119,12 +3119,12 @@ tabs can be imported into Anki, provided some conditions are met.
 
  * The files must be plain text (myfile.txt). Other formats like myfile.xls,
    myfile.rtf, myfile.doc must be saved as a plain text file first.
- * The files must be in UTF-8 format (see below)
+ * The files must be in UTF-8 format (see below).
  * Anki determines the number of fields in the file by looking at the first
-   (non-commented) line. Any other lines in the file which don't match this
-   number will be ignored.
- * The first line also defines the separating character - if Anki finds a ';'
-   on the first line it will use that - if it finds a comma it'll use that,
+   (non-commented) line. Any lines in the file which have a different number of
+   fields will be ignored.
+ * The first line also defines the separating character – if Anki finds a ';'
+   on the first line it will use that, if it finds a comma it'll use that,
    etc.
 
 Fields in your text file can be mapped to any field in your notes, including
@@ -3139,24 +3139,24 @@ This is an example of a valid file:
 
 -----
 foo bar; bar baz; baz quux
-field1; field2; field3
+apple; banana; grape
 -----
 
 There are two ways to include newlines in fields.
 
-*Escape the multi-lines*:
+*Escape the multi-lines by placing the contents of the field in quotation marks*:
 
 -----
-hello [tab] "this is
+hello; "this is
 a two line answer"
-two [tab] this is a one line one
+two; this is a one line one
 -----
 
 *Use HTML new lines*:
 
 -----
-hello [tab] this is<br>a two line answer
-two [tab] this is a one line one
+hello; this is<br>a two line answer
+two; this is a one line one
 -----
 
 You need to turn on the "allow HTML in fields" checkbox in the import dialog
