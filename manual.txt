@@ -2740,9 +2740,9 @@ Unlike the check that happens when you add cards manually, the duplicate
 finding feature is not limited to a single note type. This means that by
 default, it will search in all note types that have the field you provided.
 
-The search area allows you to narrow down where Anki will look for duplicates.
-If you only want to search for duplicates in the "French Vocab" and "French
-Verbs" note types, you would enter:
+The 'optional limit' text box allows you to narrow down where Anki will look
+for duplicates. If you only want to search for duplicates in the "French Vocab"
+and "French Verbs" note types, you would enter:
 
 -----
 note:'french vocab' or note:'french verbs'
