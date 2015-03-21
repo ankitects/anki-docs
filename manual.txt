@@ -1690,8 +1690,8 @@ see the <<importing,importing>> section for more information.
 [[conditionalreplacement]]
 == Conditional Replacement ==
 
-It is possible to include certain text on your cards only if a field is empty
-or not empty. An example:
+It is possible to include certain text, fields, or HTML on your cards only if a
+field is empty or not empty. An example:
 
 -----
 This text is always shown.
@@ -1710,6 +1710,18 @@ A real life example is only showing a label if the field is not empty:
 -----
 {{#Tags}}Tags: {{Tags}}{{/Tags}}
 -----
+
+Or say you want to display a specific field in blue on the front of your card
+if there are extra notes on the back (perhaps the fact that there are notes
+serves as a reminder that you should spend more time thinking about the
+answer). You can style the field as follows:
+
+-----
+{{#Notes}}<span style="color:blue;">{{/Notes}}
+{{FieldToFormat}}
+{{#Notes}}</span>{{/Notes}}
+-----
+
 
 You can also use conditional replacement to control which cards are generated.
 This works since Anki will not <<cardgeneration,generate cards>> which would
