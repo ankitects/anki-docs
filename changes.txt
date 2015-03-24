@@ -8,13 +8,13 @@
 * Fixed a syncing bug that could lead to lost reviews and sanity check errors
   when deleting a filtered deck before syncing.
 * Make default note type titles consistent (thanks to Soren).
-- Load saved searches in alphabetical order (thanks to Houssam).
-- Fix some fields not being renamed in template when renaming field (thanks to Dave).
-- Fixed an error message that could occur in add-ons (thanks to Thomas) .
-- Add a few more media types in the file selector (thanks to Jonathan).
-- Report an error if an add-on download is corrupt.
-- Fix sync error being shown twice.
-- Updated translations, thanks to the translators.
+* Load saved searches in alphabetical order (thanks to Houssam).
+* Fix some fields not being renamed in template when renaming field (thanks to Dave).
+* Fixed an error message that could occur in add-ons (thanks to Thomas) .
+* Add a few more media types in the file selector (thanks to Jonathan).
+* Report an error if an add-on download is corrupt.
+* Fix sync error being shown twice.
+* Updated translations, thanks to the translators.
 
 = Changes in 2.0.31 =
 
