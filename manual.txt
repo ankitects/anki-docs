@@ -4359,6 +4359,7 @@ The following translations are currently in progress:
 * Spanish
 * Chinese
 * http://ankisrs.net/docs/manual.pl.html[Polish]
+* Hungarian
 
 If you would like to help with one of these translations, please contact us on
 TenderApp and we will put you in touch with the user(s) currently working on
