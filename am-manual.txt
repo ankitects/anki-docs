@@ -586,6 +586,16 @@ button, then choosing "More" and then "Filter/Cram".
 
 For further information on filtered decks, please see the http://ankisrs.net/docs/manual.html#filtered[desktop documentation].
 
+= Profiles =
+
+Profiles allow multiple users to study with the same device. You can add
+profiles from the settings screen. To remove a profile, hold down on it
+for a few seconds.
+
+Each profile needs to be synced with its own AnkiWeb account. Please be careful
+not to sync two profiles with the same AnkiWeb ID, as this could lead to data
+loss.
+
 = Automatic Backups =
 
 AnkiMobile will automatically create backups of your collection for
