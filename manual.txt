@@ -1395,9 +1395,14 @@ line, you would use
 You can watch http://www.youtube.com/watch?v=F1j1Zx0mXME[a video about
 styling cards] on YouTube.
 
-In between the front and back template is the card styling. Here you can
-change the background colour of the card, the default font, the text
-alignment, and so on.
+In between the front and back template is the card styling. Here you can change
+the background colour of the card, the default font, the text alignment, and so
+on.
+
+NOTE: This is 'not' where you change the font for type answer
+comparisons, type answer textboxes, or editing textboxes; to learn how to
+change these fonts, please see the <<typinganswers,checking your answer>> and
+<<fields,customizing fields>> sections.
 
 The standard options available to you are:
 
@@ -1758,7 +1763,7 @@ replacements:
 
 Keep in mind that, as mentioned in the <<cardgeneration,card generation>>
 section, this only works when you place the conditional replacement code on the
-''front'' of the card; if you do this on the back, you will simply end up with
+'front' of the card; if you do this on the back, you will simply end up with
 cards with a blank back side. Similarly, since this works by checking if the front field would be empty, it is important to make sure you wrap the 'entire' front side in the conditional replacement; for instance, the following would not work as expected:
 
 -----
@@ -3830,7 +3835,7 @@ http://sqlitebrowser.org/[SQLite Browser], which will allow you to look around
 the database as well as export a CSV version of tables for import into another
 program.
 
-The most important table for statistics is the ''revlog'' table, which stores an
+The most important table for statistics is the 'revlog' table, which stores an
 entry for each review that you conduct. The columns are as follows:
 
 id ::
@@ -3840,7 +3845,7 @@ id ::
   milliseconds.)
 cid ::
   The ID of the card that was reviewed. You can look up this value in the id
-  field of the ''cards'' table to get more information about the card, although
+  field of the 'cards' table to get more information about the card, although
   note that the card could have changed between when the revlog entry was
   recorded and when you are looking it up. It is also the millisecond timestamp
   of the card's creation time.
@@ -3882,7 +3887,7 @@ folder. It will generate a report of files in the media folder that are not
 used by any notes, and media referenced in notes but missing from your media
 folder. It does not scan question or answer templates, which is why you can't
 place media references to fields in the template. If you need a static image or
-sound on every card, name it with a leading _ (e.g., ''_dog.jpg'') to tell Anki to
+sound on every card, name it with a leading _ (e.g., '_dog.jpg') to tell Anki to
 ignore it when checking for media. If you delete media using the unused media
 check, Anki will move it into your operating system's trash folder, so you can
 recover if you accidentally delete media that shouldn't have been deleted.
