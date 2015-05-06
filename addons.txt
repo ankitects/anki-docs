@@ -405,7 +405,7 @@ hook to be added.
 
 = Qt =
 
-As mentioned above, the http://doc.qt.nokia.com/4.7/index.html[Qt
+As mentioned above, the http://doc.qt.io/qt-4.8/index.html[Qt
 documentation] is invaluable for learning how to display different GUI
 widgets.
 

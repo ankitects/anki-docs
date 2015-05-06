@@ -21,8 +21,8 @@ Ta strona została również przetłumaczona na:
 
  * http://192.167.9.6/Anki_ITA/Manual_ITA.htm[Włoski]
  * http://wikiwiki.jp/rage2050/?FrontPage[Japoński]
- * http://wstawic_link/[Francuski]
-    
+ * http://ankisrs.net/docs/manual.fr.html/[Francuski]
+
 Wprowadzenie
 ============
 

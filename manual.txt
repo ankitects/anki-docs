@@ -960,7 +960,7 @@ creating a <<filtered,filtered deck>>.
 
 When you answer cards that have been waiting for a while, Anki factors in that
 delay when determining the next time a card should be shown. Please see the
-section on Anki’s spaced-repetition <<whatalgorithm,algorithm>> for more
+section on Anki’s spaced-repetition <<what-algorithm,algorithm>> for more
 information.
 
 [[editor]]
