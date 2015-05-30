@@ -2557,7 +2557,7 @@ default.
    says "a dog" will not match.
  front:*dog* :: find notes with Front field containing dog somewhere
  front: :: find notes that have an empty Front field
- -front: :: find notes that have a non-empty Front field
+ front:_* :: find notes that have a non-empty Front field
  front:* :: find notes that have a Front field, empty or not
 
 === Tags, decks, cards and notes ===
