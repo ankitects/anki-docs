@@ -2545,7 +2545,8 @@ Things to note from the above:
  * Anki is only able to search within formatting in the <<fields,sort
    field>> you've configured. For example, if you add "**exa**mple" to one of your
    fields, this will not be matched when searching for "example" unless that field
-   is the sort field.
+   is the sort field. If a word is not formatted, or the formatting does not change
+   in the middle of the word, then Anki will be able to find it in any field.
 
 === Limiting to a field ===
 
