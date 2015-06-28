@@ -2963,8 +2963,9 @@ sorted list first.
   Display cards that you added first (have the earliest creation date) first.
  Order due ::
   Display cards with the earliest due date first.
- Latest seen first ::
-  Display cards that you've seen most recently in reviews first.
+ Latest added first ::
+  Display cards that you've most recently added to the deck first. (This is the
+  opposite of 'Order added'.)
  Relative overdueness ::
   Display cards that are most overdue in relation to their current interval
   first (for instance, a card with a current interval of 5 days overdue by 2
