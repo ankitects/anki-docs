@@ -2479,6 +2479,7 @@ keyboard. It is comprised of three sections: the 'sidebar' on the left, the
 positioning the mouse between two sections, it is possible to click and drag to
 expand one section and shrink another.
 
+[[sidebar]]
 Sidebar
 --------
 
@@ -2507,7 +2508,8 @@ Searching
 ---------
 
 Above the card list is a search box. You can type in various things there to
-search for cards.
+search for cards. (If you’d rather select what you’re looking for in a list,
+please take a look at the <<sidebar,sidebar>> section above.)
 
 === Simple searches ===
 
