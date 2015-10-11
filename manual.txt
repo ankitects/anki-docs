@@ -2487,18 +2487,19 @@ The sidebar on the left allows quick access to common search terms. Various
 search terms as described below are listed, along with all deck names and tag
 names. Clicking on an item will search for it.
 
-You can hold down ctrl (command on a Mac) and click in order to append the
+You can hold down Ctrl (command on a Mac) and click in order to append the
 clicked item to the current search with an AND condition, instead of starting a
 new search. If you wanted to show learning cards that were also in the German
 deck for instance, you could click on "Learning", then ctrl+click on "German".
 
-You can hold down shift to create an OR search instead of an AND (for example,
+You can hold down Shift to create an OR search instead of an AND. For example,
 you could click one deck, then shift-click another to show cards from either of
-the decks in the same view).
+the decks in the same view.
 
-You can hold down alt (option on a Mac) in order to reverse the search (prepend
-a '-') (for instance, to show all cards in a current deck that do _not_ have a
-certain tag).
+You can hold down Alt (option on a Mac) in order to reverse the search (prepend
+a '-') – for instance, to show all cards in a current deck that do _not_ have a
+certain tag. Alt/option can be combined with either Ctrl or Shift (e.g., Ctrl-Alt-clicking will result in adding a new search term that is negated).
+
 
 To remove tags that are not used by any notes, use Tools>Check Database from
 the main window.
