@@ -3,6 +3,23 @@
 ++++++++++++++++++++++
 
 [[latest]]
+= Changes in 2.0.33 =
+
+* Fixed a bug in importing that could lead to corrupted notes if the note
+type of the source and destination decks didn't match
+* Fix Anki completely breaking on recent Linux installs with pysqlite > 2.6
+* Fix down arrow being displayed as a box in the deck list on English Windows
+ 10 installs
+* Fix Anki not finding LaTeX on OS X 10.11
+* Fix field searches in multi line fields (thanks to Avi)
+* Show mark star even when card is scrolled down during review
+* Allow LaTeX commands like \includegraphics (thanks to Arne)
+* Fixed a bug triggered by adding or removing a saved search (thanks to
+Houssam)
+* Fixed a crash dialog showing up in some Linux installs when Anki is closed
+with the preferences window open (thanks to Christian)
+* Updated translations, thanks to the contributors.
+
 = Changes in 2.0.32 =
 
 * Fixed a syncing bug that could lead to lost reviews and sanity check errors
