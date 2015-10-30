@@ -2583,7 +2583,7 @@ default.
 
  note:basic :: search for cards with a Basic note type
 
-=== Card types ===
+=== Card state ===
 
  is:due :: review cards and learning cards waiting to be studied
  is:new :: new cards
