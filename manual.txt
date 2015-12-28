@@ -269,7 +269,7 @@ information you want on each card, and Anki will take care of creating the
 cards for you and updating them if you make any edits in the future.
 
 Imagine we want to study French vocabulary, and we want to include the page
-number on the back of each cards. We want our cards to look like this:
+number on the back of each card. We want our cards to look like this:
 
 -----
 Q: Bonjour
@@ -4443,7 +4443,7 @@ to recognize the correct answer even if they can't produce it themselves.
 
 Furthermore, good multiple choice questions have well chosen "distractors" -
 answers that are similar to the correct answer. A computer can look for
-similary spelt words, but it is not capable of chosing good distractors for
+similarly spelt words, but it is not capable of choosing good distractors for
 more complicated topics.
 
 If you are studying for a test and you have a sample test with a multiple
