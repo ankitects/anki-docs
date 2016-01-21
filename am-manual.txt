@@ -82,12 +82,12 @@ button on AnkiMobile.
 If you don't have regular internet access, it's still possible to copy decks
 back and forth to your device, by using iTunes.
 
-The iTunes import/export works by importing or exporting all your decks at
-once. This means that unlike syncing via AnkiWeb, you can't make changes from
-two locations at once and then merge them. Instead, if you wish to add cards
-on the desktop, you need to make sure you export the latest version of your
-collection from your mobile device first, or you'll end up losing any reviews
-done on the mobile device.
+The iTunes import/export works by importing or exporting *all your decks at
+once*, in a special file called collection.apkg. This means that unlike syncing
+via AnkiWeb, you can't make changes from
+two locations at once and then merge them - you need to make sure you've imported
+any recent changes from your other device before you make changes, or you'll
+end up losing the changes made on one device.
 
 Thus the workflow you would typically use is to export your collection from
 your mobile device and import it into the desktop, make modifications on the
@@ -122,6 +122,8 @@ Then in AnkiMobile:
 
  . Tap the Import/Export button on the bottom left.
  . Choose *Import from iTunes*, then confirm the replacement.
+ . If you receive a message about "No file found to import", please read the "on
+   the computer" section above again.
 
 Once complete, the decks on your device will have been replaced with the decks
 from your desktop.
