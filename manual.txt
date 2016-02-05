@@ -2917,7 +2917,9 @@ It is also possible to move all cards back to their home decks at once:
    delete a filtered deck.
 
 NOTE: In the current implementation, if you empty or delete a filtered deck
-while cards are still in learning, they will be turned back into new cards.
+while cards are still in learning, they will be turned back into new cards. In
+the case of failed reviews in relearning, any remaining relearning steps will be
+skipped.
 
 == Creating Manually ==
 
