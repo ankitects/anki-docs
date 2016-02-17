@@ -507,67 +507,52 @@ Ketika sebuah kartu sudah dipelajari sebelumnya dan sudah siap untuk direview la
 
 Seperti kartu yang masih dipelajari, kamu bisa menggunakan 1-4 di keyboard untuk memilih jawaba. Menekan spacebar akan memilih 'Good'.
 
-Due Counts and Time Estimates
--------------------------------
+Due Count dan Estimasi Waktu
+----------------------------
 
-When only the question is shown, Anki shows three numbers like 12 + 34 + 56.
-They represent the new cards, cards in learning, and cards to review. If you'd
-prefer not to see the numbers, you can turn them off in Anki's preferences.
+Ketika hanya pertanyaan yang ditampilkan, Anki menampilkan tiga angka seperti 12 + 34 + 56.
+Mereka merepresentasikan kartu-kartu baru, kartu-kartu yang sedang dipelajari, dan kartu-kartu untuk direview.
+Jika kamu ingin tidak melihat angka-angka, kamu bisa mematikan mereka di preferences Anki.
 
-NOTE: By default, when you forget a card Anki will show it after 1 minute and
-then 10 minutes. Because two reviews are required, failing a card will
-increase the middle (orange) count by two.
+NOTE: By default, ketika kamu lupa sebuah kartu, Anki akan menunjukkannya setelah 1 menit dan kemudian 10 menit.
+Karena dua review dibutuhkan, gagal mengingat sebuah kartu akan menambahkan angka yang tengah (oranye) dengan 2.
 
-When the answer is shown, Anki shows an estimate of the next time a card will
-be shown above each button. If you'd prefer not to see the estimates, you can
-also disable them in Anki's preferences.
+Ketika jawabannya ditampilkan, Anki menunjukkan estimasi kapan kartu akan ditunjukkan lagi di atas setiap tombol.
+Jika kamu ingin tidak melihat estimasinya, kamu juga bisa mendisable mereka di preferences Anki.
 
-NOTE: Anki additionally adds a small amount of random variation to the next due
-times, in order to prevent cards that were introduced together and always rated
-the same from always staying next to each other. This variation is not shown on
-the time estimates but will be applied after selecting the button.
+NOTE: Anki menambahkan sedikit variasi random ke waktu kartu ditunjukkan berikutnya, untuk mencegah kartu yang di-input bersama dan selalu di-rate sama selalu tampil berbarengan.
+Variasi ini tidak ditampilkan di estimasi waktu tapi akan diaplikasikan setelah memilih tombol.
 
 [[editmore]]
-Editing and More
-------------------
+Editing dan Lain-Lain
+---------------------
 
-You can click the *Edit* button in the bottom left to edit the current note.
-When you finish editing, you'll be returned to study. The editing screen is
-very similar to the <<addingnotes,add notes>> screen.
+Kamu bisa mengklik tombol *Edit* di pojok kiri bawah untuk mengedit current note.
+Ketika kamu selesai mengedit, kamu akan kembali ke study.
+Layar editing sangat mirip dengan layar <<addingnotes,add notes>>.
 
-On the bottom right is a button labeled *More*. This button provides some
-other operations you can do on the current card or note:
+Di pojok kanan bawah adalah tombol berlabel *More*.
+Tombol ini menyediakan beberapa operasi lain yang bisa kamu lakukan di current card / note:
 
  Mark Note ::
-  Adds a "marked" tag to the current note, so it can be easily found in the
-  browser. This is useful when you want to take some action on the note at a
-  later date, such as looking up a word when you get home. Marked cards also
-  show a small star in the upper-right-hand corner during reviews.
- Bury Card / Note ::
-  Hides a card or all of the note's cards from review until you use "unbury" on
-  the deck overview screen or the next day rolls around. Useful if you want to
-  come back to the card another time. Burying can also <<siblings,happen
-  automatically>> for cards of the same note. If cards were in learning when they
-  are buried, they are moved back to the new card queue or review queue prior to being buried.
- Suspend Card / Note ::
-  Hides a card or all of the note's cards from review until they are manually
-  unsuspended (by clicking the suspend button in the browser). Useful if
-  you want to avoid reviewing the note for some time, but don't want to delete
-  it. If cards were in learning when they are suspended, they are moved back
-  to the new card queue or review queue prior to being suspended.
- Delete Note ::
-  Deletes the note and all of its cards.
+  Tambahkan tag "marked" ke current note, supaya note ini bisa ditemukan dengan mudah  di browser.
+  Fitur ini berguna ketika kamu ingin mengambil sebuah tindakan ke note ini di lain waktu, seperti me-lookup sebuah kata ketika kamu pulang.
+  Kartu yang di-mark juga menunjukkan bintang kecil di pojok kanan atas pada saat review.
+ Kubur Kartu / Note ::
+  Sembunyikan sebuah kartu atau semua kartu dari sebuah note dari proses review sampai mereka secara manual di-unsuspend (dengan cara mengklik tombol suspend di browser).
+  Berguna jika kamu tidak ingin me-review sebuah kartu untuk jangka waktu tertentu, tapi tidak ingin menghapusnya.
+ Hapus Note ::
+  Menghapus note dan semua kartunya.
  Card Options ::
-  Edit the options for the current card.
+  Mengedit opsi-opsi untuk current card.
  Replay Audio ::
-  If the card has audio on the front or back, it will be played again.
- Record Own Voice ::
-  Record your own voice for the purposes of checking your pronunciation. (This
-  recording is temporary and will go away when you move to the next card. If
-  you want to add audio to a card permanently, you can do that in the edit
-  window.)
- Replay Own Voice ::
-  Replay the previous recording of your voice.
+  Jika kartu punya audio, maka audionya akan diputar kembali.
+ Rekam Suara Sendiri ::
+  Merekan suaramu sendiri untuk tujuan mengecek pronunciation.
+  (Rekaman ini bersifat temporary dan akan hilang ketika kamu berpindah ke kartu berikut.
+  Jika kamu ingin menambahkan audio ke kartu secara permanen, kamu bisa melakukan itu di window edit.)
+ Replay Suara Sendiri ::
+  Replay rekaman sebelumnya dari suara kita sendiri.
 
 [[displayorder]]
 Display Order
