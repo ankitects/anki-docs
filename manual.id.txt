@@ -507,25 +507,21 @@ Ketika sebuah kartu sudah dipelajari sebelumnya dan sudah siap untuk direview la
 
 Seperti kartu yang masih dipelajari, kamu bisa menggunakan 1-4 di keyboard untuk memilih jawaba. Menekan spacebar akan memilih 'Good'.
 
-Due Counts and Time Estimates
--------------------------------
+Due Count dan Estimasi Waktu
+----------------------------
 
-When only the question is shown, Anki shows three numbers like 12 + 34 + 56.
-They represent the new cards, cards in learning, and cards to review. If you'd
-prefer not to see the numbers, you can turn them off in Anki's preferences.
+Ketika hanya pertanyaan yang ditampilkan, Anki menampilkan tiga angka seperti 12 + 34 + 56.
+Mereka merepresentasikan kartu-kartu baru, kartu-kartu yang sedang dipelajari, dan kartu-kartu untuk direview.
+Jika kamu ingin tidak melihat angka-angka, kamu bisa mematikan mereka di preferences Anki.
 
-NOTE: By default, when you forget a card Anki will show it after 1 minute and
-then 10 minutes. Because two reviews are required, failing a card will
-increase the middle (orange) count by two.
+NOTE: By default, ketika kamu lupa sebuah kartu, Anki akan menunjukkannya setelah 1 menit dan kemudian 10 menit.
+Karena dua review dibutuhkan, gagal mengingat sebuah kartu akan menambahkan angka yang tengah (oranye) dengan 2.
 
-When the answer is shown, Anki shows an estimate of the next time a card will
-be shown above each button. If you'd prefer not to see the estimates, you can
-also disable them in Anki's preferences.
+Ketika jawabannya ditampilkan, Anki menunjukkan estimasi kapan kartu akan ditunjukkan lagi di atas setiap tombol.
+Jika kamu ingin tidak melihat estimasinya, kamu juga bisa mendisable mereka di preferences Anki.
 
-NOTE: Anki additionally adds a small amount of random variation to the next due
-times, in order to prevent cards that were introduced together and always rated
-the same from always staying next to each other. This variation is not shown on
-the time estimates but will be applied after selecting the button.
+NOTE: Anki menambahkan sedikit variasi random ke waktu kartu ditunjukkan berikutnya, untuk mencegah kartu yang di-input bersama dan selalu di-rate sama selalu tampil berbarengan.
+Variasi ini tidak ditampilkan di estimasi waktu tapi akan diaplikasikan setelah memilih tombol.
 
 [[editmore]]
 Editing and More
