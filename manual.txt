@@ -23,10 +23,10 @@ Translations
 
 This page translated into other languages:
 
+ * http://ankisrs.net/docs/manual.id.html[Bahasa Indonesia]
  * http://www.dennisproksch.de/anki[Deutsch]
  * http://ankisrs.net/docs/manual.es.html[Español]
  * http://ankisrs.net/docs/manual.fr.html[Français]
- * http://ankisrs.net/docs/manual.id.html[Français]
  * http://192.167.9.6/Anki_ITA/Manual_ITA.htm[Italiano]
  * http://wikiwiki.jp/rage2050/?FrontPage[日本語]
  * http://www.ankichina.net/anki20.html[简体中文]
