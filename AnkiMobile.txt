@@ -36,11 +36,6 @@ There's a dedicated http://ankisrs.net/docs/help.html[support site] for
 questions, suggestions and bug reports. I monitor the site on a daily basis,
 and also employ someone to help answer questions.
 
-= Changes =
-
-Please have a look at the dedicated
-http://ankisrs.net/docs/am-changes.html[changes] page.
-
 pass:[
 <hr>
 <div style="font-size:80%; color: #aaa;">
