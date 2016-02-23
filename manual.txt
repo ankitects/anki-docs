@@ -788,7 +788,7 @@ frequently in the future. The card is said to have 'lapsed'. Please see the
 handled.
 
 *Hard* shows the card at a slightly longer delay than last time, and tells
-Anki to be more conservative when scheduling the card in the future.
+Anki to show the card more frequently in the future.
 
 *Good* tells Anki that the last delay was about right, and the card easiness
 doesn't need to be adjusted down or up. At the default starting easiness, the
@@ -797,8 +797,8 @@ time, so if you had waited 10 days to see the card previously, the next delay
 would be about 25 days.
 
 *Easy* tells Anki you found the delay too short. The card will be
-scheduled further into the future than 'Good', and Anki will be more aggressive
-in its scheduling of the card in the future. Because 'Easy' rapidly increases
+scheduled further into the future than 'Good', and Anki will schedule the card
+less frequently in the future. Because 'Easy' rapidly increases
 the delay, it's best used for only the easiest of cards. Usually you should
 find yourself answering 'Good' instead.
 
