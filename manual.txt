@@ -3318,9 +3318,10 @@ expected them to be imported, please check that the notes are not already in
 your collection somewhere.
 
 If you have updating turned on and older versions of the notes you're importing
-are already in your collection, they will be updated in place (in their
-current decks) rather than being moved to the deck you have set in the import
-dialog.
+are already in your collection, they will be updated in place (in their current
+decks) rather than being moved to the deck you have set in the import dialog.
+If notes are updated in place, the existing scheduling information on all their
+cards will be preserved.
 
 For info on how duplicates are handled in .apkg files, please see the
 <<apkg-export,Deck Packages>> section below.
