@@ -3,8 +3,13 @@
 AnkiMobile 2.0 User Manual
 ___________________________
 
-Introduction
-============
+= Help & Bugs =
+
+There's a dedicated http://help.ankisrs.net[support site] for
+questions, suggestions and bug reports. I monitor the site on a daily basis,
+and also employ someone to help answer questions.
+
+= Introduction =
 
 Thank you for buying AnkiMobile! Anki development would not be able to
 continue without your support, so it is greatly appreciated.
@@ -15,12 +20,6 @@ download shared decks, study, and edit the content of your notes, card layout
 is currently only possible on the computer version. While this is expected
 to change over time, for now please ensure you have access to a computer in
 order to perform some of the operations mentioned below.
-
-= Help & Bugs =
-
-There's a dedicated http://help.ankisrs.net[support site] for
-questions, suggestions and bug reports. I monitor the site on a daily basis,
-and also employ someone to help answer questions.
 
 = Searching =
 
