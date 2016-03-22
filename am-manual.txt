@@ -16,6 +16,12 @@ is currently only possible on the computer version. While this is expected
 to change over time, for now please ensure you have access to a computer in
 order to perform some of the operations mentioned below.
 
+= Help & Bugs =
+
+There's a dedicated http://help.ankisrs.net[support site] for
+questions, suggestions and bug reports. I monitor the site on a daily basis,
+and also employ someone to help answer questions.
+
 = Searching =
 
 If you are looking for something in particular in this manual, most web
@@ -26,12 +32,6 @@ the top, and when a list of possible matches appears, choose the "Find on
 page" option at the bottom to search through this page.
 
 *On a computer*, choose Find from the Edit menu in most browsers.
-
-= Help & Bugs =
-
-There's a dedicated http://ankisrs.net/docs/help.html[support site] for
-questions, suggestions and bug reports. I monitor the site on a daily basis,
-and also employ someone to help answer questions.
 
 [[adding]]
 = Adding Decks =
