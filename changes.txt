@@ -3,6 +3,30 @@
 ++++++++++++++++++++++
 
 [[latest]]
+= Changes in 2.0.34 =
+
+- The interface will now scale depending on your DPI size on Windows. This will
+make images and text more blocky if your DPI is up very high, but the buttons
+and text will be more readable. The alternate installer retains the old behaviour.
+- Exports of .apkg files now support media folders with >2GB / 64k files.
+- Importing and exporting of collection.apkg has been sped up, and we no longer
+compress media files in the .apkg, as most media files do not benefit from
+compression.
+- Importing and exporting now show progress.
+- Don't convert newlines into <br> tags in text export.
+- Limit tags in custom study screen to the tags that are available (thanks to
+bogdanteleaga).
+- Don't include media files starting with _ in deck export unless they're
+referenced on template (thanks to Tim).
+- Fix crashes caused by other clients allowing huge daily card limits.
+- Fix an issue with overriding decks, thanks to Dave.
+- Ctrl/Cmd+E shortcut to add note in browser thanks to Glutanimate.
+- Don't restore previous folder when importing if the folder no longer exists
+(some users reported hangs).
+- If an invalid deck override has been set, ignore it (thanks to Tim).
+- Fix a bug in showing an error when an add-on download failed.
+- Keyboard shortcuts for suspend card (thanks Glutanimate) and reposition in browser.
+
 = Changes in 2.0.33 =
 
 * Fixed a bug in importing that could lead to corrupted notes if the note
