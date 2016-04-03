@@ -2458,7 +2458,7 @@ http://user%40workdomain.com:pass@proxy.company.com:8080
 -----
 
 To set environmental variables on Windows, please see
-http://www.itechtalk.com/thread3595.html
+https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/sysdm_advancd_environmnt_addchange_variable.mspx?mfr=true
 
 If you're on a Mac, please see http://stackoverflow.com/questions/135688/setting-environment-variables-in-os-x
 
