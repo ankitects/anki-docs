@@ -3,6 +3,11 @@
 ++++++++++++++++++++++
 
 [[latest]]
+= Changes in 2.0.35 =
+
+- The interface language can now be changed from the preferences screen.
+- Fix shortcut keys not working in Spanish translation.
+
 = Changes in 2.0.34 =
 
 - The interface will now scale depending on your DPI size on Windows. This will
