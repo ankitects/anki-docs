@@ -3,6 +3,11 @@
 ++++++++++++++++++++++
 
 [[latest]]
+= Changes in 2.0.36 =
+
+- Fix a problem starting the app on Vista. If you don't have trouble starting
+  2.0.35, there is no need to upgrade.
+
 = Changes in 2.0.35 =
 
 - The interface language can now be changed from the preferences screen.
