@@ -327,6 +327,10 @@ answer buttons when the answer is shown.
 Audio Buttons :: Allows you to hide the play button that appears for each
 audio file you've placed on the card. Useful if you'd rather replay audio via
 the "Replay Audio" action bound to a swipe or tap.
+Always Duck + Ignore Mute :: While AnkiMobile is running, any music that is
+playing in other apps will be played at a reduced volume to make it easier to
+hear the audio on your cards. When enabled, this option will also allow audio
+to play automatically even when the mute/vibrate/silent switch is turned on.
 Pinch Scales Text :: Normally when you do a pinch gesture, Anki will expand or
 contract any images that have been shrunk to fit the screen. If you enable
 this option, the text will also scale when you pinch.
