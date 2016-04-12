@@ -916,7 +916,9 @@ When you answer a card that has siblings, Anki prevents the card's siblings
 from being shown in the same session by automatically 'burying' them. Buried
 cards are hidden from review until the clock rolls over to a new day or you
 manually unbury them using the “Unbury” button that's visible at the bottom of
-the <<deckoverview,deck overview>> screen.
+the <<deckoverview,deck overview>> screen. Anki will bury siblings even if the
+siblings are not in the same deck (for instance, if you use the
+<<deckoverride,deck override>> feature).
 
 Anki will only bury siblings that are new or review cards. It will not hide
 cards in learning, as time is of the essence for those cards. On the other
@@ -1187,6 +1189,7 @@ field's name in parentheses in place of content.
 At the bottom of the window is a More button that gives you options to rename
 or reorder the cards, as well as the following two options:
 
+[[deckoverride]]
  * The 'Deck Override' option allows you to change the deck that cards generated
 from the current card type will be placed into. By default, cards are placed
 into the deck you provide in the Add Notes window. If you set a deck here, that
