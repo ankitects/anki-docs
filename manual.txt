@@ -2033,7 +2033,8 @@ Each Anki client may implement card display differently, so you will need to
 test the behaviour across platforms. A number of clients are implemented
 by keeping a long running webpage and dynamically updating parts of it as cards
 are reviewed, so your Javascript will need to update sections of the document
-rather than doing things like document.write.
+using things like document.getElementById() rather than doing things like
+document.write().
 
 Functions like window.alert are also not available. Anki will write
 javascript errors to the terminal, so if you're running on a Mac or Windows
