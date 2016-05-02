@@ -3,7 +3,7 @@ _ Writing Anki 2.0 Add-ons _
 
 = Translations =
 
- * 日本語: http://rightstuff.luminousspice.com/2012/09/anki2addons/
+ * 日本語: http://rs.luminousspice.com/anki2addons/
 
 = Overview =
 
@@ -27,11 +27,11 @@ code) to make things easier.
 
 Anki is comprised of two parts: 
 
-'libanki' contains all the "backend" code - opening collections, fetching and
+'anki' contains all the "backend" code - opening collections, fetching and
 answering cards, and so on. It is used by Anki's GUI, and can also be included
 in command line programs to access Anki decks without the GUI.
 
-'ankiqt' contains the UI part of Anki. Anki's UI is built upon PyQt, Python
+'aqt' contains the UI part of Anki. Anki's UI is built upon PyQt, Python
 bindings for the cross-platform GUI toolkit Qt. PyQt follows Qt's API very
 closely, so the http://doc.qt.io/qt-4.8/index.html[Qt documentation] can
 be very useful when you want to know how to use a particular GUI component.
@@ -45,7 +45,7 @@ modify existing code or add new menu items to provide a new feature.
 Add the following to a test.py file in your add-ons folder:
 
 -----
-# import the main window object (mw) from ankiqt
+# import the main window object (mw) from aqt
 from aqt import mw
 # import the "show info" tool from utils.py
 from aqt.utils import showInfo
@@ -148,7 +148,7 @@ ti.initMapping()
 ti.run()
 -----
     
-Almost every GUI operation has an associated function in libanki, so any of
+Almost every GUI operation has an associated function in anki, so any of
 the operations that Anki makes available can also be called in an add-on.
 
 If you want to access the collection outside of the GUI, you can do so with
@@ -165,7 +165,7 @@ or those changes will be lost.
 
 = The Database =
 
-When you need to perform operations that are not already supported by libanki,
+When you need to perform operations that are not already supported by anki,
 you can access the database directly. Anki collections are stored in SQLite
 files. Please see the http://www.sqlite.org/lang.html[SQLite documentation]
 for more information.
@@ -228,7 +228,7 @@ easier. There are two types: 'hooks' take some arguments and return no value,
 and 'filters' take a value and return it (perhaps modified).
 
 A simple example of the former is in the leech handling. When the scheduler
-(libanki/sched.py) discovers a leech, it calls:
+(anki/sched.py) discovers a leech, it calls:
 
 -----
 runHook("leech", card)
@@ -317,7 +317,7 @@ addHook('editFocusLost', onFocusLost)
 
 The first argument of a filter is the argument that should be returned. In the
 focus lost filter this is a flag, but in other cases it may be some other
-object. For example, in libanki/collection.py, _renderQA() calls the "mungeQA"
+object. For example, in anki/collection.py, _renderQA() calls the "mungeQA"
 filter which contains the generated HTML for the front and back of cards.
 latex.py uses this filter to convert text in LaTeX tags into images.
 
@@ -511,12 +511,12 @@ debugger on an uncaught exception.
 
 = Learning More =
 
-Both libanki and ankiqt are available at http://github.com/dae/. The
-colllection object is defined in libanki's collection.py. Other useful files
+Both anki and aqt are available at http://github.com/dae/. The
+colllection object is defined in anki's collection.py. Other useful files
 to check out are cards.py, notes.py, sched.py, models.py and decks.py.
 
-It can also be helpful to look in the ankiqt source to see how it's calling
-libanki for a particular operation, or to learn more about the GUI.
+It can also be helpful to look in the aqt source to see how it's calling
+anki for a particular operation, or to learn more about the GUI.
 
 Much of the GUI is defined in designer files. You can use the Qt Designer
 program to open the .ui files and browse the GUI in a convenient way. 
