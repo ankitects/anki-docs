@@ -1602,6 +1602,8 @@ The type of note: {{Type}}
 
 The card's deck: {{Deck}}
 
+The card's subdeck: {{Subdeck}}
+
 The type of card ("Forward", etc): {{Card}}
 
 The content of the front template (only valid in back template): {{FrontSide}}
