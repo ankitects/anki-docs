@@ -4705,13 +4705,14 @@ If you press...
   the value of 'new interval' (this interval will be used when the card exits
   relearning mode).
  Hard ::
-  The card’s ease is decreased by 15 percentage points and the current interval
-  is multiplied by 1.2.
+  The card’s ease is decreased by 15 percentage points and the sum of current interval
+  plus delay divide 4 quotient is multiplied by 1.2.
  Good ::
-  The current interval is multiplied by the current ease. The ease is unchanged.
+  The card’s ease is unchanged. The sum of current interval plus delay divide 2 quotient 
+  is multiplied by the current ease. 
  Easy ::
-  The current interval is multiplied by the current ease times the 'easy bonus'
-  and the ease is increased by 15 percentage points.
+  The card’s ease is increased by 15 percentage points and the current interval 
+  is multiplied by the current ease times the 'easy bonus'.
 
 For Hard, Good, and Easy, the next interval is additionally multiplied by the
 'interval modifier'. If the card is being reviewed late, the number of days
