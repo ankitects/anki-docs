@@ -2283,7 +2283,8 @@ the initial learning stage and/or making mnemonics gives you more gain for
 less effort.
 
 One final thing to note is that Anki forces a new interval to be at least 1
-day longer than it was previously so that you don't get stuck reviewing with
+day longer than it was previously (till it does not reach the maximal interval
+set by user) so that you don't get stuck reviewing with
 the same interval forever. If your goal is to repeat a card once a day for
 multiple days, you can do that by setting more learning mode steps instead of
 by adjusting this modifier.
