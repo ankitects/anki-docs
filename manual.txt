@@ -891,10 +891,10 @@ alphabetical characters, and “\~” comes after them. So you could call the de
 Textbook” to force it to appear after everything else.
 
 New cards and reviews are fetched separately, and Anki won't wait until both
-queues are empty before moving on to the next deck, so it's possible you'll be
-exposed to new cards from a different deck to the reviews or vice versa. If
-you don't want this, click directly on the deck you want to study instead of
-one of the parent decks.
+queues are empty before moving on to the next deck, so it's possible you'll
+be exposed to new cards one deck while seeing reviews from another deck, or
+vice versa. If you don't want this, click directly on the deck you want to
+study instead of one of the parent decks.
 
 Since cards in learning are somewhat time-critical, they are fetched from all
 decks at once and shown in the order they are due.
