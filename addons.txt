@@ -240,7 +240,7 @@ code:
 
 -----
 from anki.hooks import addHook
-from aqt.mw import mw
+from aqt import mw
 
 def onLeech(card):
     # can modify without .flush(), as scheduler will do it for us
