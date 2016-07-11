@@ -4262,6 +4262,12 @@ old one. Updating a shared deck will not reset the download counts or ratings.
 You can delete a shared deck that you have uploaded using the Delete button on
 the shared deck's page.
 
+When you update a shared deck, users who downloaded the deck previously will not
+automatically receive updates. If they download the deck again and re-import it,
+newly added material will be imported without altering their existing study
+progress, provided neither you nor the user has altered the note type since the
+first import.
+
 NOTE: When updating a deck, AnkiWeb expects the deck to be at the same
 location as before. If you shared a deck when it was called "Korean Verbs" for
 example, and then renamed it to "Korean::Korean Verbs", resharing will not be
