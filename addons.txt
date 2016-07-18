@@ -65,7 +65,7 @@ def testFunction():
 # create a new menu item, "test"
 action = QAction("test", mw)
 # set it to call testFunction when it's clicked
-mw.connect(action, SIGNAL("triggered()"), testFunction)
+action.triggered.connect(testFunction)
 # and add it to the tools menu
 mw.form.menuTools.addAction(action)
 -----
