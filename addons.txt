@@ -450,7 +450,7 @@ example session follows:
 >>> mw
 <no output>
 
->>> print mw
+>>> print(mw)
 <aqt.main.AnkiQt object at 0x10c0ddc20>
 
 >>> invalidName
@@ -461,8 +461,8 @@ Traceback (most recent call last):
 NameError: name 'invalidName' is not defined
 
 >>> a = [a for a in dir(mw.form) if a.startswith("action")]
-... print a
-... print
+... print(a)
+... print()
 ... pp(a)
 ['actionAbout', 'actionCheckMediaDatabase', ...]
 
