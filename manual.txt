@@ -4415,11 +4415,9 @@ it.
 Contributing Code
 -------------------
 
-Anki's source code is available at http://github.com/dae
+Anki's source code is available at https://github.com/dae/anki
 
-If you have bugfixes or believe your changes would benefit many people, please
-have a look at the LICENSE file, and if you agree to the license, drop Damien
-an email or a Github pull request.
+Before contributing, please see the README.contributing file in that repo.
 
 Frequently Asked Questions
 ===========================
