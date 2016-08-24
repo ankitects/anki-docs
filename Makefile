@@ -6,10 +6,7 @@ TOC_FILES = manual.mako am-manual.mako changes.mako addons.mako \
     am-changes.mako manual.fr.mako manual.pl.mako manual.es.mako
 
 all: save build
-	#perl -i -pe 's/font-size: 1em;/font-size: 2em;/g' am-upgrade.html
 	rsync -a img $(WEB)/docs/
-	#rsync -a $(WEB)/docs/am-manual.html $(AMHELP)
-	#perl -i -pe 's/(padding-.*?: )2em/$${1}0.5em/g' $(AMHELP)
 	make -C $(WEB)
 
 save:
