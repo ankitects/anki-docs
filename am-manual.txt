@@ -571,15 +571,22 @@ store the last 15 backups.
 To restore from a backup, open the Backups section in the preferences, and tap
 on the backup you wish to restore to.
 
-If you're unable to get AnkiMobile to start due to a serious error, you can
-still retrieve the backups from the iTunes file sharing area - please see the
-iTunes syncing section above for more information.
-
 It is also possible to customize the frequency and amount of backups that are
 created, via the settings at the top of the backups section. You can change 15
 to a different number to adjust the number of backups - set it to zero to
 disable backups completely.
 
+If you're unable to get AnkiMobile to start due to a serious error, you can
+still retrieve the backups from the iTunes file sharing area:
+
+ . Connect your Apple device to your computer via the USB cable.
+ . Open iTunes if it doesn't open automatically.
+ . Locate Anki's file sharing section with
+   http://support.apple.com/kb/HT4094[Apple's instructions].
+ . Drag the your backup files from iTunes to your desktop.
+ . File>Open the latest backup in Anki to confirm that it's ok. If it is corrupt,
+   you can try a previous backup.
+ 
 == Check Database ==
 
 This will check your collection for a number of possible errors and fix them
