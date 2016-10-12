@@ -586,7 +586,7 @@ still retrieve the backups from the iTunes file sharing area:
  . Drag the your backup files from iTunes to your desktop.
  . File>Open the latest backup in Anki to confirm that it's ok. If it is corrupt,
    you can try a previous backup.
- 
+
 == Check Database ==
 
 This will check your collection for a number of possible errors and fix them
