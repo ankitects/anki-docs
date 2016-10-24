@@ -3543,7 +3543,7 @@ is recommended.
 Running from a Flash Drive
 ---------------------------
 
-Anki can be installed on a flash drive and run as a portable application:
+Anki can be installed on a USB / flash drive and run as a portable application:
 
  * Copy the \Program Files\Anki folder to the flash drive, so you have a
    folder like G:\Anki.
