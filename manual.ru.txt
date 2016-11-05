@@ -1,37 +1,22 @@
 ++++++++++++++++++++++++++++++
 <%def name="title()">
-Anki Manual
+Руководство Anki
 </%def>
 
-<h1>Anki 2.0 User Manual</h1>
+<h1>Руководство Anki 2.0</h1>
 
 <script>
     document.getElementById("navmanual").className += " active";
 </script>
 ++++++++++++++++++++++++++++++
 
-Intro Videos
-============
 
- * http://www.youtube.com/watch?v=QS2G-k2hQyg&feature=plcp[Shared Decks and Review Basics]
- * http://www.youtube.com/watch?v=DnbKwHEQ1mA[Switching Card Order]
- * http://www.youtube.com/watch?v=F1j1Zx0mXME[Styling Cards]
- * http://www.youtube.com/watch?v=5tYObQ3ocrw[Typing in the Answer]
 
-Translations
-============
 
-This page translated into other languages:
 
  * http://ankisrs.net/docs/manual.id.html[Bahasa Indonesia]
  * http://www.dennisproksch.de/anki[Deutsch]
- * http://ankisrs.net/docs/manual.es.html[Español]
- * http://ankisrs.net/docs/manual.fr.html[Français]
- * https://web.archive.org/web/20160423223801/http://192.167.9.6/Anki_ITA/Manual_ITA.htm[Italiano]
- * http://ankisrs.net/docs/manual.pl.html[Polski]
- * http://ankisrs.net/docs/manual.ir.pdf[فارسى]
- * http://wikiwiki.jp/rage2050/?FrontPage[日本語]
- * http://www.ankichina.net/anki20.html[简体中文]
+
 
 These translations are contributed by volunteers. If you would like to help
 translate the manual into a different language, or you would like to look at
@@ -44,323 +29,289 @@ Introduction
 :website: http://ankisrs.net/[Anki website]
 :ankiweb: https://ankiweb.net/
 
-Anki is a program which makes remembering things easy. Because it is a lot
-more efficient than traditional study methods, you can either greatly decrease
-your time spent studying, or greatly increase the amount you learn.
-
-Anyone who needs to remember things in their daily life can benefit from Anki.
-Since it is content-agnostic and supports images, audio, videos and scientific
-markup (via LaTeX), the possibilities are endless. For example:
-
- - learning a language
- - studying for medical and law exams
- - memorizing people's names and faces
- - brushing up on geography
- - mastering long poems
- - even practicing guitar chords!
-
-There are two simple concepts behind Anki: 'active recall testing' and 'spaced
-repetition'. They are not known to most learners, despite having been written
-about in the scientific literature for many years. Understanding how they work
-will make you a more effective learner.
+Anki — компьютерная программа, которая упрощает процесс запоминания информации. 
+Метод, положенный в ее основу, намного эффективнее традиционных методов 
+запоминания, что позволяет в значительной степени уменьшить время, затрачиваемое
+на обучение и увеличить результат от него. 
+При работе с Anki вы можете использовать любые виды информации, например:
+изображения, аудио, видео, математические и химические формулы. Возможности,
+предоставляемые Anki, безграничны и зависят только от вас. Например, вы можете:
+ - изучать языки
+ - готовиться к экзаменам
+ - запоминать портреты известных личностей
+ - учить наизусть стихи
+ - и даже практиковаться в гитарных аккордах!
+ 
+В основе Anki лежит две простые концепции: запоминание через отвечание на вопросы
+и повторение. Большинство людей не знает о них, не смотря на то, что эффект
+от их применения был давно описан в научной литературе. Понимание принципа их
+работы поможет вам учиться эффективнее.   
 
 [[active-recall]]
 Active Recall Testing
 ---------------------
+Выделяют два вида повторения: пассивное и активное. При активном повторении
+человеку необходимо вспомнить ответ на заданный ему вопрос. В противположность
+активному, при пассивном человек воспринимает информацию, а не воспроизводит ее,
+например, читает, слушает или смотрит обучающий материал. 
+Исследования показали, что активное повторение позволяет намного эффективнее 
+запоминать информацию, чем пассивное, и этому есть две причины:
+ - отвечая на вопросы, мы укрепляем знания, увеличиваем шансы вспомнить это снова
+ - когда мы не можем ответить на вопрос, это значит нам необходимо повторить материал  
+Возможно, вы сталкивались с активным повторением в школе, даже не понимая этого.
+Когда хороший учитель спрашивает пару вопросов после прочтения параграфа, или
+проводит раз в неделю опрос по пройденному материалу, он делает это не только для того,
+чтобы проверить, запомнили ли вы материал, но также и для того, чтобы увеличить ваши
+шансы вспомнить его снова в будущем. 
+Хороший способ применять активное повторение самостоятельно без учителей 
+- использовать бумажные двусторонние карточки, на одной стороне которых пишется вопрос,
+а на другой - ответ. Такой подход эффективен тем, что, прежде чем увидеть ответ,
+вы подумаете над ним и только потом перевернете карточку. 
 
-'Active recall testing' means being asked a question and trying to remember
-the answer. This is in contrast to 'passive study', where we read, watch or
-listen to something without pausing to consider if we know the answer.
-Research has shown that active recall testing is far more effective at
-building strong memories than passive study. There are two reasons for this:
-
- - The act of recalling something 'strengthens' the memory, increasing the
-   chances we'll be able to remember it again.
- - When we're unable to answer a question, it tells us we need to return to
-   the material to review or relearn it.
-
-You have probably encountered active recall testing in your school years
-without even realizing it. When good teachers give you a series of questions
-to answer after reading an article, or make you take weekly progress-check
-tests, they are not doing it simply to see if you understood the material or
-not. By testing you, they are increasing the chances you will be able to
-remember the material in the future.
-
-A good way to integrate active recall testing into your own studies is to use
-'flashcards'. With traditional paper flashcards, you write a question on one
-side of a card, and the answer on the other side. By not turning the card over
-until you've thought about the answer, you can learn things more
-effectively than passive observation allows.
-
-Use It or Lose It
+Помнить только нужное
 ------------------
-
-Our brains are efficient machines, and they rapidly discard information that
-doesn't seem useful. Chances are that you don't remember what you had for
-dinner on Monday two weeks ago, because this information is not usually
-useful. If you went to a fantastic restaurant that day and spent the last two
-weeks telling people about how great it was, however, you're likely to still
-remember in vivid detail.
-
-The brain's “use it or lose it” policy applies to everything we learn. If you
-spend an afternoon memorizing some science terms, and then don't think about
-that material for two weeks, you'll probably have forgotten most of it. In
-fact, studies show we forget about 75% of material learnt within a 48 hour
-period. This can seem pretty depressing when you need to learn a lot of
-information.
-
-The solution is simple, however: 'review'. By reviewing newly-learnt
-information, we can greatly reduce forgetting.
-
-The only problem is that traditionally review was not very practical. If you
-are using paper flashcards, it's easy to flick through all of them if you only
-have 30 of them to review, but as the number grows to 300 or 3000, it quickly
-becomes unwieldy.
+Наш мозг - очень эффективный механизм, который отсеивает неиспользуемую информацию. 
+Скорее всего, вы не помните, что ели на обед в понедельник две недели назад, потому
+что эта информация не очень полезна. Хотя, если тогда вы ели в роскошном ресторане и
+эти две недели рассказывали всем как это было великолепно, вы наверняка помните
+все в подробнейших деталях. 
+Из всего того, что мы учим, мозг запоминает только то, что используется. Если
+весь день вы заучивали научные термины, а после две недели не вспоминали о них, то 
+вы, скорее всего, забудете большую их часть. Как показывают исследования, на самом деле
+мы забываем около 75% изученного материала в течение 48 часов. Это может навевать тоску,
+особенно, если вам необходимо выучить много информации.
+Решение, однако, очень простое - повторение мать ученья. Повторяя и закрепляя информацию,
+мы можем значительно снизить ее забывание.
+Проблема традиционного повторения с помощью бумажных карточек заключается в том,
+что, когда их становится слишком много, с ними сложно работать. Anki предлагает
+новый, современный подход к работе с карточками. 
 
 [[spaced-repetition]]
-Spaced Repetition
+Периодические повторения
 -----------------
-
-The 'spacing effect' was reported by a German psychologist in 1885. He
-observed that we tend to remember things more effectively if we spread reviews
-out over time, instead of studying multiple times in one session. Since the
-1930s there have been a number of proposals for utilizing the spacing effect
-to improve learning, in what has come to be called 'spaced repetition'.
-
-One example is in 1972, when a German scientist called Sebastian Leitner
-popularized a method of spaced repetition with paper flashcards. By separating
-the paper cards up into a series of boxes, and moving the cards to a different
-box on each successful or unsuccessful review, it was possible to see at a
-glance a rough estimate of how well a card was known and when it should be
-reviewed again. This was a great improvement over a single box of cards, and
-it has been widely adopted by computerized flashcard software. It is a rather
-rough approach however, as it can't give you an exact date on which you should
-review something again, and it doesn't cope very well with material of varying
-difficulty.
-
-The biggest developments in the last 30 years have come from the authors of
-SuperMemo, a commercial flashcard program that implements spaced repetition.
-SuperMemo pioneered the concept of a system that keeps track of the ideal time
-to review material and optimizes itself based on the performance of
-the user.
-
-In SuperMemo's spaced repetition system, every time you answer a question, you
-tell the program how well you were able to remember it – whether you forgot
-completely, made a small mistake, remembered with trouble, remembered easily,
-etc. The program uses this feedback to decide the optimal time to show you the
-question again. Since a memory gets stronger each time you successfully recall
-it, the time between reviews gets bigger and bigger – so you may see a
-question for the first time, then 3 days later, 15 days later, 45 days later,
-and so on.
-
-This was a revolution in learning, as it meant material could be learnt and
-retained with the absolute minimum amount of effort necessary. SuperMemo's
-slogan sums it up: with spaced repetition, you can 'forget about forgetting'.
-
-Why Anki?
+Эффект периодических повторений (англ. the spacing effect) впервые описал
+немецкий ученый в 1885. Он обнаружил, что эффективнее запоминать информацию,
+повторяя ее не несколько раз подряд сразу, а через некоторые промежутки времени.
+С 30-х годов XX века возникла идея использовать этот эффект для запоминания информации.
+Сегодня такой подход запоминания обычно называют периодическими повторениями (англ. spaced repition).
+Так, в 1972 году немецкий ученый Себастьян Лейтнер популяризировал свою 
+идею использования раннее упомянутых бумажных карточек для периодических 
+повторений. Идея заключалась в том, чтобы помещать карточки в разные коробки
+в зависимости от того, как хорошо удалось вспомнить ответ для карточки. 
+Каждая коробка предполагала повторение через свой определенный интервал времени.
+Такой подход значительно эффективнее, потому что вместо того, чтобы повторять 
+все карточки без разбору, можно было повторять только то, что запоминается плохо.
+Однако бумашные карточки имеют ряд недостатков. Коробки с карточками не
+сообщают точную дату, когда карточки в ней нужно повторить, а лишь указывают
+через какое количество дней это следует сделать. Также бумажные карточки 
+предназначены только для работы с текстовой и графической информацией. 
+Все эти недостатки были исправлены в компьютерных программах, имитирующих
+работу с карточками. 
+Самые большие продвижения за последние 30 лет в этом деле совершили авторы 
+платной программы SuperMemo, реализующей карты и периодическое повторение. 
+Авторы SuperMemo первые создали систему, которая автоматически рассчитывает
+наилучшее время, когда информация должна быть повторена снова.
+В SuperMemo каждый раз, когда вы отвечаете на вопрос, программа просит указать, 
+как хорошо вам удалось вспомнить ответ, хоть вы полностью забыли его,
+хоть совершили небольшую ошибку. Основываясь на этой информации, программа
+подсчитывает оптимальное время для того, чтобы задать этот вопрос снова.  
+С каждым разом вы запоминаете ответ все лучше, и программа задает вам этот
+вопрос все реже. Так вы можете увидеть этот вопрос через 3 дня, затем через 15 дней,
+через 45 и так далее.  
+Это было настоящая революция в обучении, поскольку для запоминания информации 
+теперь нужно применять минимум усилий. Слоган SuperMemo подтверждает это:
+"с интервальными повторениями вы можете забыть о том, что значит забыть". 
+  
+Почему Anki?
 ---------
-
-While there is no denying the huge impact SuperMemo has had on the field, it
-is not without its problems. The program is often criticized for being buggy
-and difficult to navigate. It only runs on Windows computers. It's proprietary
-software, meaning end-users can't extend it or access the raw data. And while
-very old versions are made available for free, they are quite limited for
-modern use.
-
-Anki addresses these issues. There are free clients for Anki available on many
-platforms, so struggling students and teachers with budgetary constraints are
-not left out. It's open source, with an already flourishing library of add-ons
-contributed by end-users. It's multi-platform, running on Windows, Mac OSX,
-Linux/FreeBSD, and some mobile devices. And it's considerably easier to use
-than SuperMemo.
-
-Internally, Anki's spaced repetition system is based on an older version of the
-SuperMemo algorithm called SM2. Subsequent versions have managed to squeeze out
-a little more learning efficiency, but they come at the cost of greatly
-increased complexity, and they are more susceptible to scheduling errors in
-real-world use. For a more in-depth discussion of this and the differences in
-scheduling algorithms, see the appropriate <<what-algorithm, section in the
-FAQ>>.
+Несомненно, вклад программы SuperMemo огромен, однако и она не без изъяна.
+SuperMemo часто критиковали за то, что в ней сложно ориентироваться и
+она работает с ошибками. Supermemo запускается только на компьютерах с 
+Windows. Это проприетарное программное обеспечение, то есть пользователи 
+не могут просмотреть ее исходные коды. Бесплатными были только очень ограниченные
+старые версии. 
+Anki лишена всех этих проблем. Бесплатно скачать и установить Anki можно на
+многие платформы: Windows, Linux/FreeBSD, MacOS X, Android, что делает ее
+доступной для очень большого количества людей. Anki является открытым 
+программным обеспечением. Для Anki существует большое количество расширений,
+создаваемых обычными пользователями. Anki значительно проще и удобнее в работе,
+чем SuperMemo.   
+Механизм интервальных повторений Anki основан на алгоритме старых версий SuperMemo,
+который называется SM2. В последующих версиях алгоритма авторы SuperMemo
+совсем немного увеличили его эффективность ценой больших усложнений, что
+сделало их использование более затруднительным.
+Чтобы подробнее узнать об отличиях между этими алгоритмами,
+смотрите <<what-algorithm, FAQ>>.
 
 [[basics]]
-The Basics
+Основы
 ==========
 
-Cards
+Карточки
 -----
-
-A question and answer pair is called a 'card'. This is based on a paper
-flashcard with a question on one side and the answer on the back. In Anki a
-card doesn't actually look like a physical card, and when you show the answer
-the question remains visible by default. For example, if you're studying basic
-chemistry, you might see a question like:
-
------
-Q: Chemical symbol for oxygen?
------
-
-After thinking about it, and deciding the answer is O, you click the show
-answer button, and Anki shows you:
+Подобно бумажным карточкам, в Anki пара "вопрос-ответ" называется карточкой. 
+В Anki карточки не выглядят как бумажные. Также, когда вы показываете на 
+экране ответ, то вопрос никуда не исчезает. Например, если вы изучаете
+общую химию, то карточка до того, как вы ответите, может выглядеть примерно
+так:
 
 -----
-Q: Chemical symbol for oxygen?
+В: Химический символ для кислорода?
+-----
+
+Обдумав ответ и решив, что это - "O", вы нажимаете кнопку "показать ответ",
+и Anki показывает его примерно так:
+
+-----
+Q: Химический символ для кислорода?
 A: O
 -----
 
-After confirming that you are correct, you can tell Anki how well you
-remembered, and Anki will choose a next time to show you again.
+После сравнения вашего ответа с тем, что показала Anki, вы сообщаете Anki,
+быстро ли вы вспомнили ответ или нет. На основе этого ответа Anki выберет
+время для следующего показа этой карточки.
 
-Decks
+Колоды
 -----
 
-A 'deck' is a group of cards. You can place cards in different decks to study
-parts of your card collection instead of studying everything at once. Each
-deck can have different settings, such as how many new cards to show each day,
-or how long to wait until cards are shown again.
+Колода - группа карточек. Вы можете поместить карточки в разные колоды,
+чтобы объединить их по темам, что позволяет изучать карточки по одной теме
+вместе и не смешивать разные темы. Каждая колода может иметь свои уникальные
+настройки. Например, можно настроить, сколько новых карточек Anki следует 
+показывать в день, или через какой промежуток времени Anki должна повторять
+карточки. 
+Колоды могут содержать помимо кард другие колоды. Это позволяет организовать 
+их в виде древовидной иерархии. Для обозначения уровня в иерархии колод в их названии
+используется символ "::". Например, колода, названная "Английский::идиомы",
+содержится в колоде "Английский". Если вы выберете колоду "идиомы", то будут
+показаны карточки только из колоды "идиомы". Если вы выберете колоду "Английский",
+то будут показаны все карточки по английскому языку, в том число карточки из колоды "идиомы".
+Чтобы организовать колоды в виде древовидной структуры, в названии колод
+между каждым уровнем вставьте "::" или просто перетащите мышкой одну колоду
+на другую сверху. Вложенные колоды (то есть содержащие "::" в своем названии)
+часто называют суб-колодами.
+По умолчанию в Anki есть всего одна колода "default". Все карточки, которые
+по какой-то причине оказались без колоды, помещаются в колоду "default". 
+Anki скроет колоду стандартную колоду "default", если она пуста и у вас есть 
+другие колоды. Вы можете переименовать ее и использовать для других карточек.
 
-Decks can contain other decks, which allows you to organize decks into a tree.
-Anki uses “::” to show different levels. A deck called “Chinese::Hanzi” refers
-to a “Hanzi” deck, which is part of a “Chinese” deck. If you select “Hanzi”
-then only the Hanzi cards will be shown; if you select “Chinese” then all
-Chinese cards, including Hanzi cards, will be shown.
+Лучше всего использовать колоды для группирования карточек по темам,
+например: "животные по-китайски" или "урок 1". Узнайте больше об этом в разделе
+<<manydecks,правильного применения колод>>.
 
-To place decks into a tree, you can either name them with “::” between each
-level, or drag and drop them from the deck list. Decks that have been nested
-under another deck (that is, that have at least one “::” in their names) are
-often called 'subdecks', and top-level decks are sometimes called 'superdecks'
-or 'parent decks'.
+О том, как колоды влияют на порядок показа карточек, смотрите раздел <<displayorder,порядок показа>>.
 
-Anki starts with a deck called “default”; any cards which have somehow become
-separated from other decks will go here. Anki will hide the default deck if it
-contains no cards and you have added other decks. Alternatively, you may rename
-this deck and use it for other cards.
-
-Decks are best used to hold broad categories of cards, rather than specific
-topics such as “food verbs” or “lesson 1”. For more info on this, please see
-the <<manydecks,using decks appropriately>> section.
-
-For information on how decks affect the order cards are displayed in, please
-see the <<displayorder,display order>> section.
-
-Notes & Fields
+Записи и поля
 ---------------
+При создании карточек иногда бывает нужно сделать больше одной карточки по
+этому вопросу. Например, если вы изучаете французский и хотите выучить слово
+"привет" по-французски, возможно, вы захотите создать две карточки: одна из которых
+показывает вам слово “bonjour” и просит вас вспомнить перевод на русский, а другая
+показывает слово "привет" и спрашивает как сказать его по-французски. Первая карточка
+проверяет, как хорошо вы можете понять слово на иностранном языке, а вторая -
+как хорошо вы можете это слово вспомнить. 
 
-When making flashcards, it’s often desirable to make more than one card that
-relates to some information. For example, if you’re learning French, and you
-learn that the word “bonjour” means “hello”, you may wish to create one card
-that shows you “bonjour” and asks you to remember “hello”, and another card
-that shows you “hello” and asks you to remember “bonjour”. One card is testing
-your ability to recognize the foreign word, and the other card is testing your
-ability to produce it.
+Используя бумажные карточки, все, что вы можете сделать в такой ситуации - написать
+одну и ту же карточку дважды. Некоторые компьютерные программы делают жизнь проще, 
+автоматически создавая две карточки, в которых вопрос и ответ заменены местами.
+Однако эти программы делают это с двумя недостатками:
+ * они отслеживают прогресс в изучении этих двух карточек по-отдельности,
+ поэтому вы больше забываете и вам приходится учить больше, чем необходимо на самом деле
+ * они позволяют создавать перевернутые карточки, полностью идентичные, то есть вы не 
+ можете показывать при ответе дополнительную информацию
+ 
+Anki решает эти проблемы, позволяя разделять содержимое карточек на блоки
+информации. Вы можете сообщить Anki, какие блоки ей следует отображать на
+каждой карточке, и Anki автоматически создаст карточки такими, какими вы хотите, и
+если вы обновите какой-то блок, обновит и карточки, содержащие его. 
 
-When using paper flashcards, your only option in this case is to write out the
-information twice, once for each card. Some computer flashcard programs make
-life easier by providing a feature to flip the front and back sides. This is
-an improvement over the paper situation, but there are two major downsides:
-
- * Because such programs don’t track your performance of recognition and
- production separately, cards will tend not to be shown to you at the optimum
- time, meaning you forget more than you’d like, or you study more than is
- necessary.
- * Reversing the question and answer only works when you want exactly the same
- content on each side. This means it’s not possible to display extra info on the
- back of each card for example.
-
-Anki solves these problems by allowing you to split the content of your cards
-up into separate pieces of information. You can then tell Anki which pieces of
-information you want on each card, and Anki will take care of creating the
-cards for you and updating them if you make any edits in the future.
-
-Imagine we want to study French vocabulary, and we want to include the page
-number on the back of each card. We want our cards to look like this:
+Представьте, что вы изучаете француские слова и хотите показывать себе номер
+страницы в учебнике на задней стороне каждой карточки, чтобы в случае чего
+открыть эту страницу. Тогда вы хотите получить что-то такое:
 
 -----
 Q: Bonjour
-A: Hello
-   Page #12
+A: Привет
+   Страница №12
 -----
 
-And:
+И на перевернутой карточке:
 
 -----
-Q: Hello
+Q: Привет
 A: Bonjour
-   Page #12
+   Страница №12
 -----
 
-In this example, we have three pieces of related information: a French word,
-an English meaning, and a page number. If we put them together, they'd look
-like this:
+В этом примере, у нас есть три отдельных блока информации: слово на французском
+языке, значение слова и номер страницы:
 
 -----
-French: Bonjour
-English: Hello
-Page: 12
+Слово: Bonjour
+Значение: Привет
+Страница: 12
 -----
 
-In Anki, this related information is called a 'note', and each piece of
-information is called a 'field'. So we can say that this type of note has
-three fields: French, English, and Page.
+В Anki такая связь блоков называют "записью", а каждый блок называют "полем".
+В нашем случае мы можем сказать, что этот тип записи содержит три поля: слово,
+значение и страница. 
 
-To add and edit fields, click the “Fields...” button while adding or editing
-notes. For more information on fields, please see the <<fields,Customizing
-Fields>> section.
+Чтобы добавить или изменить поля, нажмите кнопку "Поля..." в окне добавления или
+редактирования записей. Больше о полях узнайте в разделе <<fields,настройки полей>>. 
 
 [[cardtypes]]
 Card Types
 ----------
 
-In order for Anki to create cards based on our notes, we need to give it a
-blueprint that says which fields should be displayed on the front or back of
-each card. This blueprint is called a 'card type'. Each type of note can have
-one or more card types; when you add a note, Anki will create one card for each
-card type.
+Для того чтобы создавать карточки, основанные на записях, нам необходимо
+указать, какие поля должны показываться на лицевой стороне карточек, а какие 
+- на задней. Шаблон, в котором это задается, называют "типом карточки".
+Каждая запись может иметь несколько типов карточек. Когда вы добавляете запись,
+Anki создаст одну карточку для каждого типа карточки. 
 
-Each card type has two 'templates', one for the question and one for the
-answer. In the above French example, we wanted the recognition card to look
-like this:
-
------
-Q: Bonjour
-A: Hello
-   Page #12
------
-
-To do this, we can set the question and answer templates to:
+Каждый тип карточки имеет два шаблона, один для лицевой стороны карточки, другой 
+- для задней. 
+Например, в нашем примере мы хотели, чтобы карточка выглядела так:
 
 -----
-Q: {{French}}
-A: {{English}}<br>
-   Page #{{Page}}
+В: Bonjour
+О: Привет
+   Страница №12
 -----
 
-By surrounding a field name in double curly brackets, we tell Anki to replace
-that section with the actual information in the field. Anything not surrounded
-by curly brackets remains the same on each card. (For instance, we don't have
-to type “Page #” into the Page field when adding material – it's added
-automatically to every card.) <br> is a special code that tells Anki to move to
-the next line; more details are available in the <<templates,templates>>
-section.
-
-The production card templates work in a similar way:
+Чтобы сделать это, мы должны задать шаблон для вопроса и ответа следующим образом:
 
 -----
-Q: {{English}}
-A: {{French}}<br>
-   Page #{{Page}}
+В: {{слово}}
+О: {{значение}}<br>
+   Страница №{{страница}}
 -----
 
-Once a card type has been created, every time you add a new note, a card will
-be created based on that card type. Card types make it easy to keep the
-formatting of your cards consistent and can greatly reduce the amount of effort
-involved in adding information. They also mean Anki can ensure related cards
-don't appear too close to each other, and they allow you to fix a typing
-mistake or factual error once and have all the related cards updated at once.
+Записывая имя поля в двойные фигурные скобки "{{}}", мы говорим Anki заменить это
+место на информацию, которая содержится в поле этой карточки. 
+Все, что не заключено в двойные фигурные скобки, выглядит одинаково на
+каждой карточке. Поэтому при добавлении карточек нам не нужно каждый
+раз в поле "страница" добавлять "Страница №", Anki это сделает за нас.  
 
-To add and edit card types, click the “Cards...” button while adding or editing
-notes. For more information on card types, please see the <<templates,Cards and
-Templates>> section.
+<br> - специальная команда, которая сообщает Anki переместиться на следующую
+строку. Больше об этом можно узнать в разделе <<templates,шаблоны>>. 
 
+Шаблон для перевернутых карточек делается похожим образом:
+-----
+Q: {{значение}}
+A: {{слово}}<br>
+   Страница №{{страница}}
+-----
+
+Создав тип карточки один раз, вы можете использовать его сколько угодно раз. 
+Типы карточек позволяют сделать все карточки в одном стиле, при этом не тратя
+огромное количество времени. Они также позволяют Anki научиться не показывать
+связанные друг с другом карточки слишком близко, и позволяют вам исправлять
+допушенную ошибку сразу во всех карточках, где она была допущена. 
+
+Чтобы добавить или изменить типы карточек, нажмите кнопку "Карточки..." в
+окне добавления и изменения записей. Больше о типах карточек узнайте в
+разделе <<templates,карточки и шаблоны>>.
 
 Note Types
 ----------
