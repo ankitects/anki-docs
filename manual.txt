@@ -2603,7 +2603,7 @@ default.
  is:learn :: cards in learning
  is:review :: reviews (both due and not due) and lapsed cards
  is:suspended :: cards that have been manually suspended
- is:buried :: cards that have been buried, either <<automatically,siblings>> or manually
+ is:buried :: cards that have been buried, either <<siblings,automatically>> or manually
 
 Cards that have lapsed fall into several of these categories, so it may be useful to combine them to get more precise results:
 
