@@ -3787,8 +3787,8 @@ Today
 At the top of the statistics window is a brief list of textual statistics about
 the reviews that you have completed today. A “review” in this context is 'one
 answering of a card', so a card might count as multiple reviews if it needed to
-be seen multiple times, and a learning card could count as a “review.” A couple
-of the stats whose meaning may not be immediately obvious:
+be seen multiple times, and a learning card answered also counts as a “review.”
+A couple of the stats whose meaning may not be immediately obvious:
 
  Again count ::
   This is the number of reviews that you have failed (i.e., pressed Again on).
@@ -3820,7 +3820,7 @@ The Graphs
   does not count reviews that are currently overdue, so if you have a large
   backlog, the overdue cards will not be displayed.
  Review Count ::
-  This graph shows how many cards you have studied in the past. The bars may
+  This graph counts the number of card reviews you have done. The bars may
   correspond to days, weeks, or months, depending on the time period you've
   selected at the bottom of the screen. The differently colored blocks show how
   many of the cards you answered on each day were <<cardtypedefinitions,mature>>, young,
