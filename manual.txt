@@ -3049,11 +3049,11 @@ delay. This calculation works on a sliding scale.
 
 NOTE: Because reviewing a card shortly after it is scheduled has little impact
 on scheduling (eg, a card due tomorrow with a one day interval will remain due
-tomorrow if reviewed early), *the "review early" custom study setting is not
+tomorrow if reviewed early), *the "review ahead" custom study setting is not
 appropriate for repeated use*. If used to go through a week's worth of cards
 before a trip, the mature cards will be rescheduled into the future and the
 new cards will remain at small intervals, because you don't know them well
-enough for them to be rescheduled further. If you review early again the next
+enough for them to be rescheduled further. If you review ahead again the next
 day, all you'll end up doing is going through those same new cards again, to
 little benefit.
 
