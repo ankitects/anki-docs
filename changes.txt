@@ -3,6 +3,22 @@
 ++++++++++++++++++++++
 
 [[latest]]
+= Changes in 2.0.37 =
+
+- The Mac version now stores user data in Library/Application Support/Anki2
+instead of Documents/Anki, as the new macOS 'Desktop & Documents in iCloud'
+feature can cause data corruption. Anki will put a link to the folder in your
+documents folder to make it easy to access. If you're making manual backups,
+please make sure you update your backup scripts to copy files from the new
+location.
+- The Linux version is now available as a compiled version, with most of the
+required libraries built in. This is a bigger download, but will ensure you are
+able to run Anki even if your distribution has the wrong library version.
+- Fix adding clozes in a filtered deck (thanks to Michael)
+- Preserve identical fields when switching note type (thanks to Glutanimate)
+- Fix an issue that could allow cards to be imported even if the note type had changed
+- Tweaks for add-on writers, and some tooltips (thanks to Dmitry)
+
 = Changes in 2.0.36 =
 
 - Fix a problem starting the app on Vista. If you don't have trouble starting
