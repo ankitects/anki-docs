@@ -3,6 +3,12 @@
 ++++++++++++++++++++++
 
 [[latest]]
+= Changes in 2.0.38 =
+
+- Fix the Mac builds not including 2.0.37 updates
+- Fix 'make install' on the Linux build
+- Fix the menus not being translated
+
 = Changes in 2.0.37 =
 
 - The Mac version now stores user data in Library/Application Support/Anki2
