@@ -7,7 +7,6 @@ TOC_FILES = manual.mako am-manual.mako changes.mako addons.mako \
 
 all: save build
 	rsync -a img $(WEB)/docs/
-	make -C $(WEB)
 
 save:
 	-git commit -a -m update && git push
@@ -18,7 +17,6 @@ build: $(MAKO)
 	@echo building mako
 	@rsync -a *.mako $(WEB)/docs/
 	@rsync -a *.png $(WEB)/docs/
-	@make -C $(WEB) build
 
 $(TOC_FILES): TOC := 1
 
