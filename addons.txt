@@ -4,6 +4,7 @@ _ Writing Anki 2.0 Add-ons _
 = Translations =
 
  * 日本語: http://rs.luminousspice.com/anki2addons/
+ * по-русски: http://finpapa.ucoz.ru/ankitest-addons.html
 
 = Overview =
 
