@@ -32,6 +32,7 @@ This page translated into other languages:
  * http://ankisrs.net/docs/manual.ir.pdf[فارسى]
  * http://wikiwiki.jp/rage2050/?FrontPage[日本語]
  * https://www.ankichina.net/anki20.html[简体中文]
+ * http://finpapa.ucoz.ru/ankitest-manual.html[по-русски]
 
 These translations are contributed by volunteers. If you would like to help
 translate the manual into a different language, or you would like to look at
