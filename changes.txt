@@ -6,8 +6,12 @@
 = Changes in 2.0.40 =
 
 - A Mac-only release that fixes an error on startup when the Documents folder is
-on a different drive. For users upgrading from an earlier version, please see
-the change notes for 2.0.37.
+on a different drive.
+- For people upgrading from 2.0.36 or earlier, please note that Anki will move
+your Anki data out of Documents/Anki and into Library/Application Support/Anki2,
+to prevent problems people were having with the new macOS. If you have enabled
+'desktop and documents' syncing in the iCloud preferences, we recommend taking a
+backup of your Documents/Anki folder prior to upgrading.
 
 = Changes in 2.0.39 =
 
