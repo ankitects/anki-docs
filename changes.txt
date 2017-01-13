@@ -3,6 +3,12 @@
 ++++++++++++++++++++++
 
 [[latest]]
+= Changes in 2.0.40 =
+
+- A Mac-only release that fixes an error on startup when the Documents folder is
+on a different drive. For users upgrading from an earlier version, please see
+the change notes for 2.0.37.
+
 = Changes in 2.0.39 =
 
 - A Linux-only release that fixes some issues with the makefile.
