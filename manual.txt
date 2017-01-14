@@ -1972,7 +1972,7 @@ font, we'll need to add it to the media folder:
    "_arial.ttf". Adding an underscore will tell Anki that this file will be
    used on a template, and should not be deleted when checking for unused media.
  . In your computer's file browser, go to your <<files,Anki Folder>>, and then a
-   folder called "User 1" (or your profile nameif you've renamed/added profiles).
+   folder called "User 1" (or your profile name if you've renamed/added profiles).
  . Inside the folder, you should see a folder called collection.media. Drag
    the renamed file to that folder.
 
