@@ -1971,9 +1971,8 @@ font, we'll need to add it to the media folder:
  . Rename the file, adding an underscore at the start, so it becomes like
    "_arial.ttf". Adding an underscore will tell Anki that this file will be
    used on a template, and should not be deleted when checking for unused media.
- . In your computer's file browser, go to your Documents folder, then the Anki
-   folder inside it, and then a folder called "User 1" (or your profile name
-   if you've renamed/added profiles).
+ . In your computer's file browser, go to your <<files,Anki Folder>>, and then a
+   folder called "User 1" (or your profile nameif you've renamed/added profiles).
  . Inside the folder, you should see a folder called collection.media. Drag
    the renamed file to that folder.
 
@@ -3436,9 +3435,11 @@ check for errors or rebuild the tag list when automatically optimizing.
 File Locations
 ---------------
 
-On Windows and OSX, Anki stores all of its files in an Anki folder, located in
-your Documents folder. On other operating systems, your files are stored in
-~/Documents/Anki by default.
+On Windows and Linux, Anki stores all of its files in the Documents/Anki folder.
+
+On Mac computers, your Anki stores all its files in the Library/Application
+Support/Anki2 folder. The Library folder is hidden by default, but can be
+revealed in Finder by holding down the option key while clicking on the Go menu.
 
 Within the Anki folder, the program-level and profile-level preferences are
 stored in a file called prefs.db.
@@ -3509,12 +3510,6 @@ icon, but it is possibile to start Anki with a custom base folder from a termina
 -----
 open /Applications/Anki.app --args -b ~/myankifolder
 -----
-
-NOTE: If you want to permanently change the interface language, delete
-Documents/Anki/prefs.db and the initial startup screen will be shown
-again. After doing so, you'll need to add any profiles you were using again.
-As long as you use the same profile name as before, Anki will pick up the
-files from before.
 
 [[thirdpartysync]]
 DropBox and File Syncing
@@ -3588,12 +3583,11 @@ To restore from a backup:
  . First create a copy of your backups folder, as each time you close Anki it
    deletes the oldest backup, and if you're trying different backup files you
    could accidentally end up deleting the backup you need. To do this, locate
-   your Documents/Anki/User 1/backups folder, and copy the entire folder
+   your <<files,Anki folder>>, and copy the entire folder
    somewhere safe, like your desktop.
  . Open Anki and the profile you want to restore. If your profile is corrupt and
-   won't open, you can rename your Documents/Anki/User 1/collection.anki2 file
-   to something else to tell Anki to recreate an empty collection when you next
-   open the profile.
+   won't open, you can rename the User 1/collection.anki2 file to something else
+   to tell Anki to recreate an empty collection when you next open the profile.
  . With the profile open, use File>Import and import a backup from the copy of
    the backups folder you created on your desktop. In the file selection dialog,
    you can set it to detail mode using one of the icons so that the modification
