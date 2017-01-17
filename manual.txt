@@ -1127,40 +1127,41 @@ the existing Cloze type instead of another type of note.
 Inputting Foreign Characters and Accents
 ------------------------------------------
 
-Windows, Mac and Linux provide built-in support for typing most languages.
-There is no need to buy a different keyboard. Some flashcard programs try to
-save you the trouble of enabling support on your computer by providing a
-clickable set of buttons for each foreign character or their own conversion
-utilities. However, this makes input a lot slower. One person
-http://www.glowingfaceman.com/2008/12/french-revolution-day-7.html[writes]:
+All modern computers have built in support for typing
+accents and foreign characters, and multiple ways to go
+about it. The method we recommend is using a keyboard layout
+for the language you want to learn.
 
-[quote]
-By the way, if you're learning any foreign language with exotic characters,
-even just the Spanish ñ, I encourage you to look into how to efficiently
-type those characters. When I first started studying Japanese, I didn't
-know how to type Japanese characters. I'd just copy-and-paste things to
-make flashcards and/or communicate with people. And if I wanted to type
-something original, that meant painstakingly finding, then
-copying-and-pasting each individual character. With my U.S.-bought
-computer, it was kind of a pain to get Japanese IME support (and it
-involved borrowing a Windows XP disk from a friend since you need one to
-install Microsoft's Japanese IME). But it was worth it a million times
-over. In retrospect, I should have done that as one of my very first steps
-when I first set out to learn Japanese.
+Languages with a separate script like Japanese, Chinese,
+Thai and so on have their own layouts specifically for that
+language.
 
-If you're learning a right to left language, there are lots of other things to
-consider. Please see http://dotancohen.com/howto/rtl_right_to_left.html[this
+European languages that use accents may have their own
+layout, but can often by typed on a generic "international
+keyboard" layout. These work by typing the accent, then the
+character you want accented - eg ' then a gives á.
+
+To add the international keyboard on Windows machines, please see
+https://support.microsoft.com/en-au/kb/306560
+
+To add it on Macs, please see
+http://www.macworld.com/article/1147039/os-x/accentinput.html
+
+Keyboards for a specific language are added in a similar
+way, but we can not cover them all here. For more
+information, please try searching Google for "input Japanese
+on a mac", "type Chinese on Windows 10", and so on.
+
+If you're learning a right to left language, there are lots
+of other things to consider. Please see
+http://dotancohen.com/howto/rtl_right_to_left.html[this
 page] for more information.
 
-To learn more, please search Google for something like “input Japanese on a
-mac” or “input German on windows”, as there is plenty of good information
-available.
-
-NOTE: The toolkit Anki is built on has trouble dealing with a few input
-methods, such as holding down keys to select accented characters on Mac OS X,
-and typing characters by holding down a key and typing an numeric code.
-Fortunately, there are usually other input methods that will work properly and
-then tend to be faster – please research other options for your operating system.
+NOTE: The toolkit Anki is built on has trouble dealing with
+a few input methods, such as holding down keys to select
+accented characters on Mac OS X, and typing characters by
+holding down the alt key and typing a numeric code on
+Windows.
 
 [[templates]]
 Cards and Templates
