@@ -1139,7 +1139,8 @@ language.
 European languages that use accents may have their own
 layout, but can often by typed on a generic "international
 keyboard" layout. These work by typing the accent, then the
-character you want accented - eg ' then a gives á.
+character you want accented - eg an apostrophe (') then the
+letter a (a) gives á.
 
 To add the international keyboard on Windows machines, please see
 https://support.microsoft.com/en-au/kb/306560
