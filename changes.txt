@@ -4,7 +4,7 @@
 
 [[latest]]
 = Changes in 2.0.40 =
-Released 2016-01-13.
+Released 2017-01-13.
 
 - A Mac-only release that fixes an error on startup when the Documents folder is
 on a different drive.
