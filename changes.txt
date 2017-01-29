@@ -9,6 +9,7 @@ Released 2017-01-29.
 
 - Shave a second or two off sync times in certain circumstances.
 - Fix for errors on latest sqlite on Linux (thanks to dequis)
+- OS X alternate version rebuilt on 2017-01-30 to fix an issue with playing sounds.
 
 = Changes in 2.0.40 =
 
