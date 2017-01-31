@@ -19,9 +19,13 @@ Released 2017-01-13.
 on a different drive.
 - For people upgrading from 2.0.36 or earlier, please note that Anki will move
 your Anki data out of Documents/Anki and into Library/Application Support/Anki2,
-to prevent problems people were having with the new macOS. If you have enabled
-'desktop and documents' syncing in the iCloud preferences, we recommend taking a
-backup of your Documents/Anki folder prior to upgrading.
+to prevent problems people were having with the new macOS. If you are using
+the latest OS (macOS Sierra), we recommend you take a backup before upgrading:
+
+ https://anki.tenderapp.com/kb/problems/macos-sierras-documents-in-icloud-feature-can-cause-data-loss
+
+To locate the new folder, please see
+https://apps.ankiweb.net/docs/manual.html#file-locations
 
 = Changes in 2.0.39 =
 
