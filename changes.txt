@@ -22,7 +22,7 @@ your Anki data out of Documents/Anki and into Library/Application Support/Anki2,
 to prevent problems people were having with the new macOS. If you are using
 the latest OS (macOS Sierra), we recommend you take a backup before upgrading:
 
- https://anki.tenderapp.com/kb/problems/macos-sierras-documents-in-icloud-feature-can-cause-data-loss
+https://anki.tenderapp.com/kb/problems/macos-sierras-documents-in-icloud-feature-can-cause-data-loss
 
 To locate the new folder, please see
 https://apps.ankiweb.net/docs/manual.html#file-locations
