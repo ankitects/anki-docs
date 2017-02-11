@@ -1,4 +1,4 @@
-﻿++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++
 <h1>Anki 2.0 Podręcznik użytkownika</h1>
 
 <script>
@@ -426,7 +426,7 @@ Do oceny karty możesz również używać przycisków 1, 2 oraz 3 znajdujących 
 W sytuacji, gdy danego dnia nie ma już innych kart do nauki Anki domyślnie pokaże nowe karty, nawet kiedy, gdy nie upłynął jeszcze czas oczekiwania na nie. Jeśli jednak chciałbyś/chciałabyś czekać pełen czas na kartę, to w <<preferences,ustawieniach>> możesz zmienić ich zachowanie.
 
 Powtórka znanych kart
-------------------
+---------------------
 
 Jeżeli karta została już kiedyś wyświetlona w którejś z wcześniejszych powtórek będzie ona posiadała cztery przyciski oceny:
 
@@ -523,10 +523,10 @@ Gdy przeglądasz karty, które oczekiwały już jakiś czas na powtórkę Anki u
 
 [[editor]]
 Edytowanie
-===========
+==========
 
 Funkcje
----------
+-------
 
 Okno edycji wyświetlane jest w trakcie <<addingnotes,dodawania notatki>, <<editmore,edycji notatki>> w czasie powtórki lub w <<browser,przeglądarce>>.
 
@@ -548,7 +548,7 @@ Większość z opisanych tutaj przycisków posiada własne skróty klawiszowe. A
 
 [[cloze]]
 Nauka z lukami
----------------
+--------------
 
 Nauka z lukami polega na ukryciu jednego lub większej liczby słów w zdaniu. Przykład: 
 
@@ -1192,7 +1192,7 @@ Możesz teraz, zmienić czcionkę dla całej karty, lub tylko dla pojedynczych p
 
 -----
 font-family: myfont; src: url('_arial.ttf');
----
+-----
 
 w klasie .card , zaś zamiast nazwy czcionki wpisz "myfont". Aby dowiedzieć się jak zmienia się czcionkę dla pojedynczego pola, przejdź prosżę do rozdziału <<fieldstyling, Style CSS pól>>.
 
@@ -1748,7 +1748,7 @@ Please note that new cards are returned to the end of the new card queue, rather
 
 Filtered decks can be useful for catching up when you've fallen behind in your reviews. One Anki user describes the way they use the filtered decks to catch up as follows:
 
-++++++++
+++++
 <i>
 <p>I did this for a backlog of 800 cards with filtered subdecks. Worked very
 well for me.
@@ -1762,7 +1762,7 @@ well for me.
 
 <p>How long it takes depends on how many overdue cards you study each day in addition to the ones that become due regularly. You can still motor through them when you feel like it - or you can do a specific number per day like you would for new cards. Up to you.
 </i>
-+++++++++
+++++
 
 = Pijawki =
 
@@ -1775,7 +1775,7 @@ Anki will continue to issue leech warnings periodically for a difficult card. Th
 Once a leech is found, there are a number of ways you can handle it.
 
 Oczekiwanie
----------
+-----------
 
 Some leeches are caused by 'interference'. For example, an English learner may have recently learnt the words "disappoint" and "disappear". As they look similar, the learner may find themselves confusing the two when trying to answer. In these situations, it's often productive to concentrate on just one idea. When that idea is firmly ingrained in your mind, you can then return to learning the other idea. So in these situations, you may want to leave one of the words suspended until you have learnt the other one well, and then unsuspend it in the browser.
 
@@ -1785,7 +1785,7 @@ Usunięcie
 Another way to manage leeches is to delete them. Consider if the material you're struggling with is important enough to make it worth your while. By selectively deleting difficult and obscure items, you can dedicate more time to learning other material, and studying becomes a lot more fun.
 
 Edycja
---------
+------
 
 Another approach is to change the way the information is presented. Perhaps the cards you have created have too much information on them, or perhaps you're trying to memorize something without fully understanding it. Sometimes spending some time changing the way the card is phrased can help. It's also agood time to think about making a mnemonic to help you remember.
 
@@ -1949,7 +1949,7 @@ If some notes in the deck package have previously been imported, Anki will keep 
 = Managing Files and Your Collection =
 
 Checking Your Collection
---------------------------
+------------------------
 
 It's a good idea to occasionally check your collection file for problems. You can do this via the Tools>Check Database menu item. Checking the database ensures the file is not corrupted, rebuilds some internal structures, and optimizes the file.
 
@@ -1978,7 +1978,7 @@ UWAGA: On Unix systems, Anki deliberately uses ~/Anki rather than a hidden folde
 
 [[startupopts]]
 Atrybuty uruchamiania
-----------------------
+---------------------
 
 Jeżeli kopia programu na twoim komputerze uległa zniszczeniu lub uruchamia się z błędami, a na innym komputerze posiadasz działające Anki, możesz dokonać pełnej synchronizacji tej kopii bez pobierania plików z serwera. Takie działanie uchroni sprawną kopię przed pobraniem z konta AnkiWeb uszkodzonych danych i umożliwi wprowadzenie do niego działającej kopii. Możesz sprawdzić również czy któryś z zainstalowanych dodatków jest przyczyną błędów. Obydwie z wymienionych wyżej czynności możesz wykonać uruchamiając Anki z jednocześnie wciśniętym klawiszem Shift. 
 
@@ -2006,7 +2006,7 @@ OSTRZEŻENIE: If you place the Anki folder on a network drive or synced folder l
 UWAGA: If you want to permanently change the interface language, delete Documents/Anki/prefs.db and the initial startup screen will be shown again. After doing so, you'll need to add any profiles you were using again. As long as you use the same profile name as before, Anki will pick up the files from before.
 
 Uruchamianie z pendrivea
----------------------------
+------------------------
 
 Anki can be installed on a flash drive and run as a portable application:
 
@@ -2030,7 +2030,7 @@ start /b \anki\anki.exe -b \ankidata
 UWAGA: Media syncing with AnkiWeb may not work if your flash drive is formatted as FAT32. Please format the drive as NTFS to ensure media syncs correctly.
 
 Kopie zapasowe
-----------------
+--------------
 
 Each time your collection is closed (when closing Anki, switching profiles, or synchronizing your deck), Anki exports your collection into the backups folder. By default Anki will store up to 30 backups; you can adjust this in the <<preferences,preferences>>.
 
@@ -2048,7 +2048,7 @@ Brak dostępu do dysku twardego
 If Anki can't write to files in the <<files,Anki folder>>, a message will be displayed on startup saying that Anki can't write to the harddisk, and Anki will close. If you're unsure how to fix the permissions, please contact someone near you who is knowledgable about computers and can help you out.
 
 Permissions of Temp Folder
----------------------------
+--------------------------
 
 Anki uses the system's temporary folder to store temporary data. If the permissions of this folder have been changed from the default settings by a rogue app or buggy antivirus app, Anki will not function properly.
 
@@ -2061,7 +2061,7 @@ If you're on a Windows 7 machine, the general steps to fix the problem are liste
 . On the permissions tab, ensure that you have full control. On a default W7 install the control will actually be inherited from c:\users\your-username.
 
 Zepsuta kolekcja
-------------------
+----------------
 
 Anki uses a file format that is robust against program and computer crashes, but it's still possible for your collection to become corrupt if the files are modified while Anki is open, stored on a network drive, or corrupted by a bug.
 
@@ -2125,10 +2125,10 @@ When you've confirmed the file is not empty, copy it over collection.anki2, maki
 
 [[stats]]
 Wykresy i statystki
-=====================
+===================
 
 Informacje o karcie
----------------------
+-------------------
 
 You can display information about a card by clicking the Info button in the toolbar while browsing. Most of the displayed information should be self-explanatory. A few notes:
 
@@ -2140,7 +2140,7 @@ You can display information about a card by clicking the Info button in the tool
   The approximate amount the interval will grow when you answer a review card with the "Good" button.
 
 Statystki
------------
+---------
 
 Okno statystyk dostępne jest pod przyciskiem znajdującym się w prawym górnym rogu okna głównego Anki lub za pomocą kombinacji klawiszy Shift+S. Okno statystyk pokaże statystki z aktualnie wybranej talii i talii podrzędnych. Dane dotyczące całej kolekcji dostępne są po wybraniu "kolekcja" u dołu okna statystk.
 
@@ -2152,7 +2152,7 @@ UWAGA: Jeżeli usuniesz któreś z notatek ich ślad cały czas pozostaje w stat
 
 [[cardtypedefinitions]]
 Typy kart
----------------
+---------
 W oknie Statystki czasami mogą być użyte terminy i nazwy, których jeszcze nie znasz:
 
  Dojrzałe ::
@@ -2167,8 +2167,7 @@ W oknie Statystki czasami mogą być użyte terminy i nazwy, których jeszcze ni
   Karty, które zostały niedawno dodane do twojej kolekcji, ale nie zostały ci jeszcze wyświetlone do nauki. Można je nazywać również kartami 'nowymi'. 
 
 Wykresy
------------
-
+-------
  Prognoza ::
   Wykres wyświetla przybliżoną liczbę kart, które będą powtarzane w przyszłości, bez uwzględnienia kart nowych i uczonych na nowo. Do osi pionowej z lewej strony odnosi się wykres słupkowy. Kolumny oznaczają liczbę kart, które zostaną wyświetlone do powtórki w kolejnych dniach. Do osi pionowej z prawej strony odnosi się wykres ciągły, na którym przedstawiona jest skumulowana liczba powtórek. Wykres prognozy nie uwzględnia kart zaległych, które nagromadziły się w wyniku np. kilkudniowej przerwy w pracy z Anki. Te karty nie są widoczne na wykresie.
  Liczba powtórek ::
@@ -2195,7 +2194,7 @@ recover if you accidentally delete media that shouldn't have been deleted.
 Anki uses a program called mplayer in order to support sounds and videos. A wide variety of file formats are supported, but not all of these formats will work on AnkiWeb and the mobile clients. MP3 audio and MP4 video seems to be the most universally supported.
 
 [[latex]]
-= LaTeX support =
+== LaTeX support ==
 
 LaTeX is a powerful typesetting system, which is ideal for entering mathematical formulas, chemical formulas, musical notation and so on. Anki provides some support for LaTeX, allowing you to enter LaTeX code in your notes. When you review a card, Anki will call LaTeX and display the generated image instead.
 
@@ -2427,7 +2426,7 @@ Jeżeli którykolwiek z zainstalowanych przez ciebie dodatków nie działa popra
 
 Aby dowiedzieć się w jaki sposób napisać swój własny dodatek zajrzyj proszę na link:addons.html[tę stronę]
 
-= Współtworzenie =
+== Współtworzenie ==
 
 [[sharingdecks]]
 Udostępnianie talii
@@ -2636,6 +2635,6 @@ Anki's algorithm is based on SM2, but differs from it in some respects.
 For a description of the SM2 algorithm, please see
 http://www.supermemo.com/english/ol/sm2.htm
 
-= Resources =
+== Resources ==
 
 The SuperMemo site has a lot of good information about spaced repetition and memory: http://www.supermemo.com/
