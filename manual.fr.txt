@@ -72,7 +72,7 @@ d’un texte ou qu’ils vous faisaient passer des tests de connaissance toutes 
 semaines, ce n’était pas seulement pour voir si vous aviez révisé vos leçons :
 ils entraînaient et fortifiaient surtout votre mémoire.
 
-Les « http://fr.wikipedia.org/wiki/Carte_m%C3%A9moire_%28apprentissage%29[flashcards] » sont un bon moyen d’utiliser la révision active. Prenez des cartes classiques, écrivez la question d’un côté et la réponse de l’autre. En
+Les http://fr.wikipedia.org/wiki/Carte_m%C3%A9moire_%28apprentissage%29[« flashcards »] sont un bon moyen d’utiliser la révision active. Prenez des cartes classiques, écrivez la question d’un côté et la réponse de l’autre. En
 pensant à la réponse avant de la regarder, vous apprendrez plus efficacement
 qu’avec la révision passive.
 
@@ -2792,7 +2792,7 @@ Les paquets filtrés sont utiles pour rattraper du retard accumulé. Un
 utilisateur d’Anki témoigne de la façon dont il les utilise pour rattraper son
 retard :
 
-++++++++
+++++
 <i>
 <p>Je l’ai utilisé sur une liste de 800 cartes, avec des sous-paquets filtrés.
 Cela a très bien marché pour moi.
@@ -2816,7 +2816,7 @@ nombre de cartes que vous étudiez par jour. Cela dépend de vous : vous pouvez
 toutes les faire en une seule fois, ou en faire chaque jour un petit peu, comme
 si c’était des nouvelles cartes.
 </i>
-+++++++++
+++++
 
 = Cartes pénibles =
 
@@ -3490,7 +3490,7 @@ et sur certains téléphones. Le MP3 et le MP4 (pour respectivement l’audio et
 la vidéo) semblent poser le moins de problèmes.
 
 [[latex]]
-= Utiliser LaTeX =
+== Utiliser LaTeX ==
 
 Anki supporte LaTeX, un système de composition très riche permettant d’intégrer
 formules mathématiques, chimiques et notations musicales dans vos cartes.
@@ -3771,7 +3771,7 @@ menu.
 
 link:addons.html[Un guide] est disponible si vous souhaitez écrire vos propres greffons.
 
-= Contribuer =
+== Contribuer ==
 
 [[sharingdecks]]
 Partager un paquet public
@@ -4177,7 +4177,7 @@ L’algorithme d’Anki reprend SM2, à quelques points près.
 
 Voyez http://www.supermemo.com/english/ol/sm2.htm pour une description de SM2.
 
-= Ressources =
+== Ressources ==
 
 Le site de SuperMemo est une mine d’informations à propos de la répétition
 espacée et de la mémoire : http://www.supermemo.com/
