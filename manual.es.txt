@@ -1814,7 +1814,7 @@ Por favor nota que las tarjetas nuevas serán regresadas al final de la cola de 
 
 Los mazos filtrados pueden ser útiles para ponerte al día cuando estás atrasado en tus repasos. Un usuario de Anki describe la forma en que ellos usan los mazos filtrados para ponerse al día:
 
-++++++++
+++++
 <i>
 <p>Yo hice esto para mis 800 tarjetas pendientes con mazos filtrados. Funcionó muy bien para mí.
 
@@ -1827,7 +1827,7 @@ Los mazos filtrados pueden ser útiles para ponerte al día cuando estás atrasa
 
 <p>Que tanto tiempo te tome depende de que tantas tarjetas atrasadas tengas que estudiar cada día en adición a las que se vuelven pendientes de repaso regularmente. Tu aún puedes trabajar con ellas cuando lo desees  o podrías estudiar un número específico de tarjetas cada día de igual forma a como trabajarías con tarjetas nuevas. Depende de ti.
 </i>
-+++++++++
+++++
 
 = Sanguijuelas =
 
@@ -2239,7 +2239,8 @@ NOTA: Cuando tu eliminas notas, la historia de repaso de estas se mantienen dent
 
 [[cardtypedefinitions]]
 Tipos de Tarjetas
----------------
+-----------------
+
 La ventana de estadísticas muestra algunos términos con los cuales tal vez no estés familiarizado aún:
 
  Maduras ::
@@ -2313,7 +2314,7 @@ Si tu necesitas una imagen estática o sonido en cada tarjeta, nombra el archivo
 Anki usa un programa llamado mplayer para reproducir sonidos y videos. El programa soporta una gran variedad de formatos de archivo, pero no todos los formatos funcionarán en AnkiWeb y los clientes portátiles. Los archivos de audio en MP3 y videos en MP4 parecen ser los formatos más soportados universalmente.
 
 [[latex]]
-= Soporte de LaTeX =
+== Soporte de LaTeX ==
 
 LaTeX es un poderoso sistema de composición tipográfica que es ideal para ingresar fórmulas matemáticas, formulas químicas, notación musical, entre otras. Anki provee algo de soporte para LaTeX, permitiéndote ingresar código en LaTeX en tus notas. Cuando repases una tarjeta, Anki usará LaTeX y mostrará la imagen generada en su lugar.
 
@@ -2546,7 +2547,7 @@ Si tu has descargado un complemento que no está funcionando apropiadamente, o s
 
 Para aprender como escribir tus propios complementos, por favor lee la guía: link:addons.html[add-on writing guide].
 
-= Contribuyendo =
+== Contribuyendo ==
 
 [[sharingdecks]]
 Compartiendo Mazos Públicamente
@@ -2604,7 +2605,7 @@ Si te gustaría probar tus traducciones sin esperar a que se publique una nueva 
 
 [[translatingmanual]]
 Traduciendo el Manual
------------------------
+---------------------
 
 Si eres un usuario con buenos conocimientos técnicos, tal vez quieras traducir el https://raw.github.com/dae/ankidocs/master/manual.txt[archivo fuente] del manual, y compilarlo tu mismo en asciidoc. Tu también puedes usar esa reposición de github para estar pendiente de los cambios que se le hagan al manual en el futuro.
 
