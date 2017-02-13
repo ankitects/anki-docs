@@ -3710,9 +3710,11 @@ Check that you didn't get an error message, and that temp.file is not empty.
 The procedure optimizes the collection in the process, so it's normal for the
 new file to be somewhat smaller than the old one.
 
-When you've confirmed the file is not empty, copy it over collection.anki2,
-making sure you still have a backup of the original version. Then start Anki
-and go to Tools>Check Database to make sure the collection has been
+When you've confirmed the file is not empty:
+
+- rename the original collection.anki2 file to something else
+- rename temp.file to collection.anki2
+- start Anki and go to Tools>Check Database to make sure the collection has been
 successfully restored.
 
 [[stats]]
