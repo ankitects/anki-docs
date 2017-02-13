@@ -3714,6 +3714,7 @@ When you've confirmed the file is not empty:
 
 - rename the original collection.anki2 file to something else
 - rename temp.file to collection.anki2
+- move collection.anki2 back into your collection folder, overwriting the old version
 - start Anki and go to Tools>Check Database to make sure the collection has been
 successfully restored.
 
