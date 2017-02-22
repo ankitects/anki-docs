@@ -5,8 +5,11 @@ AMHELP = ../mob/AnkiMobile/Resources/HTML/help.html
 TOC_FILES = manual.mako am-manual.mako changes.mako addons.mako \
     am-changes.mako manual.fr.mako manual.pl.mako manual.es.mako
 
-all: save build
+all: build
+	@echo "remember to run 'make commit' to commit changes"
 	rsync -a img $(WEB)/docs/
+
+commit: save build
 
 save:
 	-git commit -a -m update && git push

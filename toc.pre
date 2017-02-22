@@ -29,3 +29,7 @@
 <div class="row-fluid">
 <div class="span4 hidden-phone" id="toc"></div>
 <div class="span8 offset4">
+<style>
+.monospaced { font-family: monospace; background-color: #eee; padding-left:
+0.3em; padding-right: 0.3em; }
+</style>
