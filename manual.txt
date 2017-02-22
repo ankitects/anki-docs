@@ -3468,14 +3468,6 @@ WARNING: You should never copy or move your collection while Anki is open.
 Doing so could cause your collection to become corrupted. Please don't
 move or modify the other files in the folder either.
 
-NOTE: On Unix systems, Anki deliberately uses ~/Documents/Anki rather than a hidden
-folder. The bulk of the data stored in that folder is important user data
-rather than easily restored preferences, and it would be a disaster if a user
-lost it because they overlooked it when backing up files. There are also more
-and more Linux users who are not familiar with hidden folders. If you're an
-advanced user, you can specify a custom folder with a command line argument,
-described in the next section.
-
 [[startupopts]]
 Startup Options
 ---------------
