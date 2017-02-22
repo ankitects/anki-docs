@@ -3441,18 +3441,18 @@ File Locations
 
 On *Windows*, the latest Anki versions store your Anki files in your appdata
 folder. You can access it by opening the file manager, and typing
-_%APPDATA%\Anki2_ in the location field. Older versions of Anki stored
-your Anki files in a folder called _Anki_ in your _Documents_ folder.
+`%APPDATA%\Anki2` in the location field. Older versions of Anki stored
+your Anki files in a folder called `Anki` in your `Documents` folder.
 
 On *Mac* computers, recent Anki versions store all their files in the
-_~/Library/Application Support/Anki2_ folder. The Library folder is hidden by
+`~/Library/Application Support/Anki2` folder. The Library folder is hidden by
 default, but can be revealed in Finder by holding down the option key while
 clicking on the Go menu. If you're on an older Anki version, your Anki files
-will be in your _Documents/Anki_ folder.
+will be in your `Documents/Anki` folder.
 
-On *Linux*, recent Anki versions store your data in _~/.local/share/Anki2_, or
-_$XDG_DATA_HOME/Anki2_ if you have set a custom data path. Older versions of Anki
-stored your files in _~/Documents/Anki_ or _~/Anki_.
+On *Linux*, recent Anki versions store your data in `~/.local/share/Anki2`, or
+`$XDG_DATA_HOME/Anki2` if you have set a custom data path. Older versions of Anki
+stored your files in `~/Documents/Anki` or `~/Anki`.
 
 Within the Anki folder, the program-level and profile-level preferences are
 stored in a file called prefs.db.
