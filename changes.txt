@@ -3,6 +3,13 @@
 ++++++++++++++++++++++
 
 [[latest]]
+= Changes in 2.0.44 =
+
+Released 2017-02-25.
+
+A release for Windows. Fixes issues people were having running Anki when their
+Windows login name contained non-Latin characters.
+
 = Changes in 2.0.43 =
 
 Released 2017-02-22.
