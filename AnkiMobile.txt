@@ -16,9 +16,7 @@ Click below to open the app store page:
 
 pass:[<a
 href="https://itunes.apple.com/us/app/ankimobile-flashcards/id373493387?mt=8&uo=4&at=11lJ6Y"
-target="itunes_store"
-style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/htmlResources/assets/en_us//images/web/linkmaker/badge_appstore-lrg.png)
-no-repeat;width:135px;height:40px;@media only screen{background-image:url(https://linkmaker.itunes.apple.com/htmlResources/assets/en_us//images/web/linkmaker/badge_appstore-lrg.svg);}"></a>]
+target="itunes_store">Download</a>]
 
 = The Price =
 
