@@ -13,7 +13,7 @@ Anki Manual
 Intro Videos
 ============
 
- * http://www.youtube.com/watch?v=QS2G-k2hQyg&feature=plcp[Shared Decks and Review Basics]
+ * http://www.youtube.com/watch?v=QS2G-k2hQyg&yt:cc=on[Shared Decks and Review Basics]
  * http://www.youtube.com/watch?v=DnbKwHEQ1mA&yt:cc=on[Switching Card Order]
  * http://www.youtube.com/watch?v=F1j1Zx0mXME[Styling Cards]
  * http://www.youtube.com/watch?v=5tYObQ3ocrw[Typing in the Answer]
