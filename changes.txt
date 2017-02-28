@@ -17,7 +17,10 @@ Released 2017-02-22.
 A release for Windows and Linux machines that moves Anki's files out of the
 Documents folder like we did for the Mac in 2.0.37. This should work around
 issues with OneDrive setting files in the Documents folder to read only, and
-puts the files in a more standard location on Linux.
+puts the files in a more standard location on Linux. The move will be
+instantaneous for most people, but if your Documents folder and the new folder
+are located on separate filesystems, initial startup may take a while as files
+are copied over.
 
 The manual has been updated to reflect the new locations:
 
