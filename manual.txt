@@ -3957,7 +3957,7 @@ work on AnkiWeb and the mobile clients. MP3 audio and MP4 video seems to be
 the most universally supported.
 
 [[latex]]
-== LaTeX support ==
+= LaTeX support =
 
 LaTeX is a powerful typesetting system, which is ideal for entering
 mathematical formulas, chemical formulas, musical notation and so on. Anki
