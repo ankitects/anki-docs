@@ -15,8 +15,8 @@ Intro Videos
 
  * http://www.youtube.com/watch?v=QS2G-k2hQyg&yt:cc=on[Shared Decks and Review Basics]
  * http://www.youtube.com/watch?v=DnbKwHEQ1mA&yt:cc=on[Switching Card Order]
- * http://www.youtube.com/watch?v=F1j1Zx0mXME[Styling Cards]
- * http://www.youtube.com/watch?v=5tYObQ3ocrw[Typing in the Answer]
+ * http://www.youtube.com/watch?v=F1j1Zx0mXME&yt:cc=on[Styling Cards]
+ * http://www.youtube.com/watch?v=5tYObQ3ocrw&yt:cc=on[Typing in the Answer]
 
 Translations
 ============
@@ -423,6 +423,8 @@ Adding Material
 
 Downloading Shared Decks
 ------------------------
+
+You can watch http://www.youtube.com/watch?v=QS2G-k2hQyg&yt:cc=on[a video about Shared Decks and Review Basics] on YouTube.
 
 The easiest way to get started with Anki is to download a deck of cards
 someone has shared:
@@ -1213,7 +1215,7 @@ templates for display in the Question and Answer columns of the browser; see
 [[reversingcards]]
 == Reverse Cards ==
 
-You can watch http://www.youtube.com/watch?v=DnbKwHEQ1mA[a video about
+You can watch http://www.youtube.com/watch?v=DnbKwHEQ1mA&yt:cc=on[a video about
 reversing cards] on YouTube.
 
 If you want to create cards that go in both directions (e.g., both
@@ -1292,7 +1294,7 @@ or div instead.
 [[typinganswers]]
 == Checking Your Answer ==
 
-You can watch http://www.youtube.com/watch?v=5tYObQ3ocrw[a video about
+You can watch http://www.youtube.com/watch?v=5tYObQ3ocrw&yt:cc=on[a video about
 this feature] on YouTube.
 
 If you'd like to type in the answer and have Anki compare your input to the
@@ -1405,7 +1407,7 @@ line, you would use
 [[cardstyling]]
 == Card Styling ==
 
-You can watch http://www.youtube.com/watch?v=F1j1Zx0mXME[a video about
+You can watch http://www.youtube.com/watch?v=F1j1Zx0mXME&yt:cc=on[a video about
 styling cards] on YouTube.
 
 In between the front and back template is the card styling. Here you can change
