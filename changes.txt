@@ -2,6 +2,11 @@
 <br><br><b>Users upgrading from Anki 1: please see <a href="#v2">here</a></b>.
 ++++++++++++++++++++++
 
+= Translations =
+
+ * http://rs.luminousspice.com/changeinanki2/[日本語]
+ * http://finpapa.ucoz.ru/ankitest-changes.html[по-русски] 
+
 [[latest]]
 = Changes in 2.0.44 =
 
