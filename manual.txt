@@ -2362,7 +2362,7 @@ for each card in the study area.
 
 By default, Anki automatically plays audio on the front and back of cards. If
 you uncheck 'automatically play audio', Anki will not play audio until you
-click the replay audio button.
+press the replay audio key, `r` or `F5`.
 
 The 'when answer shown, replay both question and answer audio' option controls
 what happens when you choose to replay audio while the answer is shown. Please
