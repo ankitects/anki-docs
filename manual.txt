@@ -4216,10 +4216,11 @@ check something. Unless asked to enter text in the "debug console", you will
 probably not need this. Advanced users may like to read more about it in the
 add-ons page, linked below.
 
-When asked to enter text into the "debug console", please start Anki, and in
-the main window, press Ctrl+: (that is the control key and colon key at the
-same time), or on a Mac, Command+: (command key and colon key at the same
-time). When you do so, a new window should pop up.
+When asked to enter text into the "debug console", please start Anki, and in the
+main window, press Ctrl+: (that is the control key and colon key at the same
+time - you may need to also press shift), or on a Mac, Command+: (command key
+and colon key at the same time - you may need to also press shift). When you do
+so, a new window should pop up.
 
 In the window that has popped up, please paste the text you were asked to
 paste in the top section. When you've done so, please press Ctrl+Return
