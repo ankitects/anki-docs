@@ -2441,6 +2441,11 @@ you, and give you the option of aborting the operation. If you choose to
 continue, you'll be asked to choose whether to keep the local copy or the copy
 on AnkiWeb when your collection is next synchronized.
 
+If you choose Upload to make the content on AnkiWeb a copy of the content on
+your local device, you then need to sync any other devices you use, and choose
+Download, so they too have the same content. Once all devices have the same
+content, future syncs will be able to merge again.
+
 If you wish to force a full upload or download (for example, because you
 accidentally deleted a deck on one side and want to restore the deck rather
 than having its deletion synchronized), you can check the "On next sync, force
