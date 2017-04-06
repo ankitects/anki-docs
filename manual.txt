@@ -1692,6 +1692,7 @@ every card (eg, a company logo at the top of each card):
 <img src="_logo.jpg">
 -----
 
+[[mediarefs]]
 === Field References ===
 
 Media references to fields are not allowed. They may or may not display during
@@ -4018,6 +4019,8 @@ Example
 The most general way to input LaTeX content is to surround it with
 [latex][/latex] tags. There's a shortcut button for this documented in the
 <<editor,editor>> section.
+
+WARNING: [latex] tags must be used inside a field - placing them in the card template will <<mediarefs,cause problems>>.
 
 For example, entering the following on the front of an Anki flashcard:
 

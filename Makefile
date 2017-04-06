@@ -28,6 +28,7 @@ $(TOC_FILES): TOC := 1
 	@echo asciidoc $<
 	@asciidoc -s -b html5 -o $@ $<
 	@echo '<%inherit file="/base.inc"/>' > $@.tmp
+	@cat style.inc >> $@.tmp
 	@if [ x$(TOC) != x ]; then cat toc.pre >> $@.tmp; fi
 	@cat $@ >> $@.tmp
 	@if [ x$(TOC) != x ]; then cat toc.post >> $@.tmp; fi
