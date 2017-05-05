@@ -3408,7 +3408,7 @@ There are two different kinds of packaged decks.
 When you export all decks with scheduling included, this is called a
 'collection package'. Anki will copy your entire collection into a file called
 "collection.apkg", and place it on your desktop. A collection package is
-used to back up your collection or to synchronize to AnkiMobile via iTunes.
+used to back up your collection, or copy it to another device.
 
 When this file is later imported, Anki will delete all the current cards in
 the collection, and replace the collection with the items in the
