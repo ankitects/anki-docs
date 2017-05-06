@@ -584,9 +584,10 @@ still retrieve the backups from the iTunes file sharing area:
  . Locate Anki's file sharing section with
    http://support.apple.com/kb/HT4094[Apple's instructions].
  . Drag the your backup files from iTunes to your desktop.
- . Create a new, empty profile via File>Switch Profile, and then File>Import
-   the latest backup apkg from within that profile to confirm that it's ok.
-   If it is corrupt, you can try a previous backup.
+ . With the computer version of Anki, create a new, empty profile via
+   File>Switch Profile, and then File>Import the latest backup apkg from
+   within that profile to confirm that it's ok. If it is corrupt, you can try
+   a previous backup.
 
 == Check Database ==
 
