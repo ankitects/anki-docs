@@ -751,7 +751,9 @@ following keys must always be provided:
 - deck=<deck name>
 
 Fields are entered by prefixing their name with "fld". So if your first field
-is called "Text", the key would be "fldText".
+is called "Text", the key would be "fldText". The field text is interpreted as
+HTML, so if you wanted a newline in the text you'd use something like "line
+1<br>line 2".
 
 The remaining keys are optional:
 
