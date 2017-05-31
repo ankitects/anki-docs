@@ -14,7 +14,6 @@ commit: save build
 save:
 	-git commit -a -m update && git push
 	git pull
-	git pull --no-edit soren master
 	git push
 
 build: $(MAKO)

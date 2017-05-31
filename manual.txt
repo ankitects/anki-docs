@@ -3887,12 +3887,13 @@ The Graphs
 Manual Analysis
 ---------------
 
-If you're interested in getting information from your statistics other than what
-Anki provides, you have several options.
+If you're interested in getting information from your statistics other than
+what Anki provides, it is possible to access the data directly. Because of the
+complexity involved, this is not something we can provide any support for.
 
-One is to <<add-ons,write an add-on>> that adds another graph or more details to
-the statistics window. There are several add-ons of this sort on AnkiWeb
-already, which you can look at to get an idea of how it works.
+One option is to <<add-ons,write an add-on>> that adds another graph or more
+details to the statistics window. There are several add-ons of this sort on
+AnkiWeb already, which you can look at to get an idea of how it works.
 
 A more powerful and more complex option is to extract the review log information
 directly from Anki's database and analyze it in an external program. Anki uses a
