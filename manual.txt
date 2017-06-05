@@ -2973,7 +2973,8 @@ Here is a summary of each of the options:
   vacation, but it will not help with cards you have learnt recently. Please
   see the <<reviewingahead,reviewing ahead>> section below for more info.
  Preview new cards ::
-  Show cards that you have recently added.
+  Show cards that you have recently added, without converting them to review
+  cards as they are answered.
  Study by card state or tag ::
   Select a certain number of cards from the current deck to study. You can
   choose to select new cards only, due cards only, or all cards; after you
