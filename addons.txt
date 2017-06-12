@@ -442,8 +442,9 @@ exception handler (which catches anything written to stderr). If you need to
 print information for debugging purposes, you can use aqt.utils.showInfo, or
 write it to stderr with sys.stderr.write("text\n").
 
-Anki also includes a REPL. From within the program, press Ctrl+: or Command+:
-and a window will open up. You can enter expressions or statements into the
+Anki also includes a REPL. From within the program, press Ctrl+Shift+: or
+Command+Shift+: and a window will open up.
+You can enter expressions or statements into the
 top area, and then press ctrl+return/command+return to evaluate them. An
 example session follows:
 
