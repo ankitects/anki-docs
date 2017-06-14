@@ -19,7 +19,7 @@ Tłumaczenia
 
 Ta strona została również przetłumaczona na:
 
- * https://web.archive.org/web/20160423223801/http://192.167.9.6/Anki_ITA/Manual_ITA.htm
+ * https://web.archive.org/web/20160423223801/http://192.167.9.6/Anki_ITA/Manual_ITA.htm[Włoski]
  * http://wikiwiki.jp/rage2050/?FrontPage[Japoński]
  * https://apps.ankiweb.net/docs/manual.fr.html/[Francuski]
 
