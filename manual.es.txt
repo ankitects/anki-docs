@@ -26,7 +26,7 @@ Esta página ha sido traducida a otros idiomas:
  * https://apps.ankiweb.net/docs/manual.html[English (Original)]
  * https://apps.ankiweb.net/docs/manual.fr.html[Français]
  * http://www.dennisproksch.de/anki[German]
- * http://192.167.9.6/Anki_ITA/Manual_ITA.htm[Italiano]
+ * https://web.archive.org/web/20160423223801/http://192.167.9.6/Anki_ITA/Manual_ITA.htm
  * http://wikiwiki.jp/rage2050/?FrontPage[日本語]
  * http://www.ankichina.net/anki20.html[简体中文]
 
