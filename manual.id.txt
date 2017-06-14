@@ -27,7 +27,7 @@ Halaman ini dalam bahasa lain:
 
  * https://apps.ankiweb.net/docs/manual.fr.html[Prancis]
  * http://www.dennisproksch.de/anki[Jerman]
- * http://192.167.9.6/Anki_ITA/Manual_ITA.htm[Italia]
+ * https://web.archive.org/web/20160423223801/http://192.167.9.6/Anki_ITA/Manual_ITA.htm[Italia]
  * http://wikiwiki.jp/rage2050/?FrontPage[Jepang]
  * http://www.ankichina.net/anki20.html[简体中文]
  * https://apps.ankiweb.net/docs/manual.html[Inggris]
