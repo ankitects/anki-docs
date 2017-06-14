@@ -101,9 +101,9 @@ any recent changes from your other device before you make changes, or you'll
 end up losing the changes made on one device.
 
 Thus the workflow you would typically use is to export your collection from
-your mobile device and import it into the computer version, make
-modifications, and then export your collection and import it back into your
-mobile device.
+your mobile device and import it into the computer version, make modifications
+(such as importing a shared deck you downloaded to your computer), and then
+export your collection and import it back into your mobile device.
 
 AnkiMobile can't directly import text files. If you wish to do that, you'll
 need to do that with the computer program, and then import your collection into
