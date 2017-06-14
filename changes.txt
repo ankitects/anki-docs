@@ -1337,7 +1337,7 @@ per-lesson basis when you're ready to study them. You could do it like this:
    close Anki and resume reviewing early where you left off, instead of
    starting with the same cards again like in Anki 1.2.
  * For more information, please see
-   http://ankisrs.net/docs/manual.html#filtered
+   https://apps.ankiweb.net/docs/manual.html#filtered
 
 == Syncing ==
 
@@ -1640,7 +1640,7 @@ To fix this, please install Anki 1.2.8 again from the bottom of the Anki 2
 page. Then:
 
  * Download
-   http://ankisrs.net/download/mirror/archive/plugins-1.2/Make_cards_unique.zip[this
+   https://apps.ankiweb.net/download/mirror/archive/plugins-1.2/Make_cards_unique.zip[this
    zip file]
  * Open Anki 1.2, and go to Settings>Plugins>Open Plugin Folder
  * Extract the .py file from the .zip you downloaded, and place it in the
