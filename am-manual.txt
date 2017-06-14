@@ -200,7 +200,7 @@ button yellow even if you do not study any cards.
 = The Study Screen =
 
 If you have not used Anki on a computer before, please have a look at the
-first http://ankisrs.net/docs/manual.html#_intro_videos[intro video]
+first https://apps.ankiweb.net/docs/manual.html#_intro_videos[intro video]
 before reading on, as it explains the basic review process.
 
 When you tap on a deck in the deck list, the study screen will load, and if
