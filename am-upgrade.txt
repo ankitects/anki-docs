@@ -58,12 +58,12 @@ described below, it will commence the upgrade process again.
 Now we need to install Anki 2 on the computer.
 
 NOTE: If you used Dropbox in the old version of Anki, please see
-http://ankisrs.net/docs/changes.html#beforeupgrade[this page] before
+https://apps.ankiweb.net/docs/changes.html#beforeupgrade[this page] before
 continuing.
 
 On your computer, please visit the Anki website:
 
-http://ankisrs.net
+https://apps.ankiweb.net/
 
  . After it has loaded, please click the red "click here" text near the top of
    the page.
