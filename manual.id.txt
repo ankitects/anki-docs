@@ -30,7 +30,7 @@ Halaman ini dalam bahasa lain:
  * http://192.167.9.6/Anki_ITA/Manual_ITA.htm[Italia]
  * http://wikiwiki.jp/rage2050/?FrontPage[Jepang]
  * http://www.ankichina.net/anki20.html[简体中文]
- * https://ankiweb.net/docs/manual.html[Inggris]
+ * https://apps.ankiweb.net/docs/manual.html[Inggris]
 
 Terjemahan ini dibuat oleh relawan.
 Jika anda ingin membantu menerjemahkan buku petunjuk ini ke bahasa lain, atau jika anda ingin melihat terjemahan yang sedang dalam proses pengerjaan, silahkan lihat bagian <<translatingmanual,translating the manual>>.
