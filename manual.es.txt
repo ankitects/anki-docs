@@ -23,8 +23,8 @@ Traducciones
 
 Esta página ha sido traducida a otros idiomas:
 
-  * http://ankisrs.net/docs/manual.html[English (Original)]
- * http://ankisrs.net/docs/manual.fr.html[Français]
+ * https://apps.ankiweb.net/docs/manual.html[English (Original)]
+ * https://apps.ankiweb.net/docs/manual.fr.html[Français]
  * http://www.dennisproksch.de/anki[German]
  * http://192.167.9.6/Anki_ITA/Manual_ITA.htm[Italiano]
  * http://wikiwiki.jp/rage2050/?FrontPage[日本語]
@@ -35,7 +35,7 @@ Estas traducciones son la contribución de varios voluntarios. Si te gustaría a
 Introducción
 ============
 
-:website: http://ankisrs.net/[Sitio web de Anki]
+:website: https://apps.ankiweb.net/[Sitio web de Anki]
 :ankiweb: https://ankiweb.net/
 
 Anki es un programa que hace que recordar cosas sea sencillo. Como usar Anki es mucho más eficiente que los métodos de estudio convencionales, puedes tanto disminuir el tiempo que inviertes estudiando como aumentar la cantidad de cosas que aprendes.
@@ -2618,7 +2618,7 @@ Otra opción es poner tu traducción en una wiki, de tal forma que otros usuario
 Las siguientes traducciones aún están en progreso:
 
 * Chino
-* http://ankisrs.net/docs/manual.pl.html[Polaco]
+* https://apps.ankiweb.net/docs/manual.pl.html[Polaco]
 
 Si te gustaría ayudar con una de estas traducciones, por favor contáctanos en nuestra página de TenderApp y te pondremos en contacto con el(los) usuario(s) trabajando en dicha traducción.
 
