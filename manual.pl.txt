@@ -21,12 +21,12 @@ Ta strona została również przetłumaczona na:
 
  * http://192.167.9.6/Anki_ITA/Manual_ITA.htm[Włoski]
  * http://wikiwiki.jp/rage2050/?FrontPage[Japoński]
- * http://ankisrs.net/docs/manual.fr.html/[Francuski]
+ * https://apps.ankiweb.net/docs/manual.fr.html/[Francuski]
 
 Wprowadzenie
 ============
 
-:website: http://ankisrs.net/[Oficjalna strona Anki]
+:website: https://apps.ankiweb.net/[Oficjalna strona Anki]
 :ankiweb: https://ankiweb.net/
 
 Anki jest programem, który sprawia, że zapamiętywanie różnych rzeczy staje się łatwe. Anki posługuje się metodą nauki, która jest dużo bardziej wydajna niż metody tradycyjne i sprawi, że spędzisz na nauce dużo mniej czasu albo w tym samym czasie co dotąd nauczysz się dużo więcej. 
