@@ -25,12 +25,12 @@ https://anki.tenderapp.com/kb/anki-ecosystem/why-does-ankimobile-cost-more-than-
 
 = Getting Started =
 
-Please have a look at the http://ankisrs.net/docs/am-manual.html[online
+Please have a look at the https://apps.ankiweb.net/docs/am-manual.html[online
 manual].
 
 = Getting Help =
 
-There's a dedicated http://ankisrs.net/docs/help.html[support site] for
+There's a dedicated https://apps.ankiweb.net/docs/help.html[support site] for
 questions, suggestions and bug reports. I monitor the site on a daily basis,
 and also employ someone to help answer questions.
 
