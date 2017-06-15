@@ -666,7 +666,7 @@ does, allowing you to perform quite complex searches. Some examples:
  front:rabbit :: show only cards where the front field is exactly "rabbit"
 
 For a full list of the possibilities, please see the section in the
-http://apps.ankiweb.net/docs/manual.html#searching[desktop manual].
+https://apps.ankiweb.net/docs/manual.html#searching[desktop manual].
 
 When a search returns one or more cards, you can tap on a card to edit it, or
 perform various actions like previewing it, deleting it, showing information
