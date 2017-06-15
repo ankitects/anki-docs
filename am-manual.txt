@@ -5,7 +5,7 @@ ___________________________
 
 = Help & Bugs =
 
-There's a dedicated http://help.ankisrs.net[support site] for
+There's a dedicated https://anki.tenderapp.com/[support site] for
 questions, suggestions and bug reports. I monitor the site on a daily basis,
 and also employ someone to help answer questions.
 
@@ -200,7 +200,7 @@ button yellow even if you do not study any cards.
 = The Study Screen =
 
 If you have not used Anki on a computer before, please have a look at the
-first http://ankisrs.net/docs/manual.html#_intro_videos[intro video]
+first https://apps.ankiweb.net/docs/manual.html#_intro_videos[intro video]
 before reading on, as it explains the basic review process.
 
 When you tap on a deck in the deck list, the study screen will load, and if
@@ -215,7 +215,7 @@ actions.
 On the bottom of the screen you'll see three numbers. From the left, these
 correspond to new cards, learning cards, and cards to review. These are
 explained in more detail in the intro videos for the desktop program, so
-please http://ankisrs.net/docs/manual.html#_intro_videos[check them out]
+please https://apps.ankiweb.net/docs/manual.html#_intro_videos[check them out]
 if you haven't already.
 
 When you've looked at a card's question and remembered the answer, or decided
@@ -275,7 +275,7 @@ in the computer version of Anki.
 The study options can be accessed from the <<tools,tools>> screen. Almost all
 the options available in the computer version can also be adjusted in
 AnkiMobile. For a description of what everything does, please see the
-http://ankisrs.net/docs/manual.html#deckoptions[computer documentation]. While
+https://apps.ankiweb.net/docs/manual.html#deckoptions[computer documentation]. While
 some of the options have different wording, the behave the same as the
 computer version.
 
@@ -335,7 +335,7 @@ Pinch Scales Text :: Normally when you do a pinch gesture, Anki will expand or
 contract any images that have been shrunk to fit the screen. If you enable
 this option, the text will also scale when you pinch.
 Never Type Answer :: If you have set up your cards to ask you to type in the
-answer (as explained in http://ankisrs.net/docs/manual.html#templates[this
+answer (as explained in https://apps.ankiweb.net/docs/manual.html#templates[this
 section] of the desktop manual), AnkiMobile will display a keyboard on such
 cards and allow you to check your answer. If you find typing on a mobile
 device inconvenient, you can use this option to disable the keyboard for all
@@ -544,7 +544,7 @@ interface: the buttons, background image and so on.
 To customize the appearance of your cards, it's currently necessary to adjust
 the appearance in the computer version and then sync or copy your cards over to
 AnkiMobile. For more information, please see
-http://ankisrs.net/docs/manual.html#templates[this section] of the computer
+https://apps.ankiweb.net/docs/manual.html#templates[this section] of the computer
 version's manual.
 
 == Profiles ==
@@ -610,7 +610,7 @@ To add cards to a deck, tap the "Add" button while reviewing.
 
 The "Type" button at the top allows you to select the type of note you'd like
 to add. For more information about note types, please see the introduction in
-the http://ankisrs.net/docs/manual.html#basics[computer version's manual].
+the https://apps.ankiweb.net/docs/manual.html#basics[computer version's manual].
 
 When you tap on a field, a keyboard will come up, allowing you to type in
 information. You can use the next and previous buttons to move between fields,
@@ -666,7 +666,7 @@ does, allowing you to perform quite complex searches. Some examples:
  front:rabbit :: show only cards where the front field is exactly "rabbit"
 
 For a full list of the possibilities, please see the section in the
-http://ankisrs.net/docs/manual.html#searching[desktop manual].
+http://apps.ankiweb.net/docs/manual.html#searching[desktop manual].
 
 When a search returns one or more cards, you can tap on a card to edit it, or
 perform various actions like previewing it, deleting it, showing information
@@ -701,7 +701,7 @@ Advanced users can create a filtered deck manually, by clicking the tools
 button, then choosing "More" and then "Filter/Cram".
 
 For further information on filtered decks, please see the
-http://ankisrs.net/docs/manual.html#filtered[computer version's documentation].
+https://apps.ankiweb.net/docs/manual.html#filtered[computer version's documentation].
 
 = Advanced Features =
 
@@ -709,7 +709,7 @@ http://ankisrs.net/docs/manual.html#filtered[computer version's documentation].
 
 AnkiMobile allows you to use non-system fonts on your cards. To set them up,
 the desktop client is required. Please see
-http://ankisrs.net/docs/manual.html#installingfonts[the section in the desktop
+https://apps.ankiweb.net/docs/manual.html#installingfonts[the section in the desktop
 manual] for more information.
 
 Please note that AnkiMobile has to load the entire font into memory in order
@@ -770,9 +770,9 @@ If a field you provide is a link to an image or audio file, AnkiMobile will auto
 The desktop version of Anki provides the ability to open a web page based on
 the contents of a field, for easily creating a link to an online dictionary
 site. This is documented
-http://ankisrs.net/docs/manual.html#_dictionary_links[in this section] of the
+https://apps.ankiweb.net/docs/manual.html#_dictionary_links[in this section] of the
 manual, though please start from the
-http://ankisrs.net/docs/manual.html#templates[cards & templates] section as
+https://apps.ankiweb.net/docs/manual.html#templates[cards & templates] section as
 the above link assumes you have read it.
 
 Like the desktop, AnkiMobile supports links to dictionary websites. In

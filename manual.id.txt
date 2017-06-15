@@ -25,12 +25,12 @@ Terjemahan
 
 Halaman ini dalam bahasa lain:
 
- * http://ankisrs.net/docs/manual.fr.html[Prancis]
+ * https://apps.ankiweb.net/docs/manual.fr.html[Prancis]
  * http://www.dennisproksch.de/anki[Jerman]
- * http://192.167.9.6/Anki_ITA/Manual_ITA.htm[Italia]
+ * https://web.archive.org/web/20160423223801/http://192.167.9.6/Anki_ITA/Manual_ITA.htm[Italia]
  * http://wikiwiki.jp/rage2050/?FrontPage[Jepang]
  * http://www.ankichina.net/anki20.html[简体中文]
- * http://ankisrs.net/docs/manual.html[Inggris]
+ * https://apps.ankiweb.net/docs/manual.html[Inggris]
 
 Terjemahan ini dibuat oleh relawan.
 Jika anda ingin membantu menerjemahkan buku petunjuk ini ke bahasa lain, atau jika anda ingin melihat terjemahan yang sedang dalam proses pengerjaan, silahkan lihat bagian <<translatingmanual,translating the manual>>.
@@ -38,7 +38,7 @@ Jika anda ingin membantu menerjemahkan buku petunjuk ini ke bahasa lain, atau ji
 Pengenalan
 ==========
 
-:website: http://ankisrs.net/[Anki website]
+:website: https://apps.ankiweb.net/[Anki website]
 :ankiweb: https://ankiweb.net/
 
 Anki adalah program yang membuat mengingat berbagai hal menjadi mudah.
@@ -3961,7 +3961,7 @@ to spend too much time correcting them, but your mileage may vary.)
 The following translations are currently in progress:
 
 * Chinese
-* http://ankisrs.net/docs/manual.pl.html[Polish]
+* https://apps.ankiweb.net/docs/manual.pl.html[Polish]
 
 If you would like to help with one of these translations, please contact us on
 TenderApp and we will put you in touch with the user(s) currently working on
