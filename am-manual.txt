@@ -317,8 +317,7 @@ Force Orientation :: Allows you to force the reviewing screen to stay in
 portrait mode or landscape mode.
 Answer Buttons :: Allows you to hide the answer buttons at the bottom of the
 screen, if you prefer to answer via taps/swipes.
-Bigger Answer Buttons :: Makes the answer buttons taller so you can press them
-more easily.
+Button Size :: Lets you control the size of the answer buttons.
 Next Times :: By default, the answer buttons will display the time a card will
 next be shown. If you disable this option, labels like "Again", "Good" and
 "Easy" will be shown instead.
@@ -331,9 +330,9 @@ Always Duck + Ignore Mute :: While AnkiMobile is running, any music that is
 playing in other apps will be played at a reduced volume to make it easier to
 hear the audio on your cards. When enabled, this option will also allow audio
 to play automatically even when the mute/vibrate/silent switch is turned on.
-Pinch Scales Text :: Normally when you do a pinch gesture, Anki will expand or
-contract any images that have been shrunk to fit the screen. If you enable
-this option, the text will also scale when you pinch.
+Answer Keeps Zoom :: By default, if you have zoomed in on a card, the screen
+will zoom out when you reveal the answer. If you enable this option,
+AnkiMobile will not zoom out.
 Never Type Answer :: If you have set up your cards to ask you to type in the
 answer (as explained in https://apps.ankiweb.net/docs/manual.html#templates[this
 section] of the desktop manual), AnkiMobile will display a keyboard on such
@@ -391,6 +390,10 @@ next day, or when you manually unbury cards.
 
 Card Info :: Shows information about the current card.
 
+Current Audio +5s :: Jump forward 5 seconds in the currently playing audio.
+
+Current Audio -5s :: Jump backward 5 seconds in the currently playing audio.
+
 Custom Study :: Allows you to study outside of the normal schedule. Please see
 the documentation of the computer version for more information on custom study
 presets.
@@ -409,6 +412,8 @@ Empty :: Removes all cards from the current filtered deck.
 
 Find:: Lets you search/browse your cards.
 
+Forget :: Turn the current card back into a new card.
+
 Filter/Cram:: Allows you to create a temporary deck based on search criteria such as
 "tag:hard". Please see the documentation of the computer version for more
 information on filtered decks.
@@ -425,11 +430,16 @@ More :: Shows a list of all available actions.
 Off :: Don't do anything. Useful if you want to disable certain swipes, tap
 zones and so on.
 
+Pause/Unpause Current Audio :: Temporarily stop or restart the currently playing audio file.
+
 Rebuild :: When in a filtered or custom study deck, rerun the search to fetch
 any cards that may newly match the criteria.
 
 Replay Audio :: Replay the card's audio. You can customize whether the audio
 in the question is replayed while the answer is shown in the computer Anki.
+
+Set Due Date :: Reschedule the currently displayed card as a review card,
+after a configurable number of days delay.
 
 Show Answer :: Reveals the answer when a card's question is shown.
 
