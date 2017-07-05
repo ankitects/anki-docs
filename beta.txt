@@ -1,0 +1,222 @@
+= Anki 2.1 Beta =
+
+== At a glance ==
+
+- Uses the same scheduling, syncing and file format as Anki 2.0.x, so you can upgrade and downgrade at will.
+- Upgraded to the latest support libraries (Python 3, Qt 5.9), bringing fixes for crashes, better handling of high resolution displays, non-Latin text, and the latest web standards.
+- Requires a modern system - Windows 7+, OSX 10.10+, or a Linux distro from around 2016+.
+- Add-ons will need to be updated to work with 2.1.
+
+== Stability ==
+
+You can be fairly confident the beta will not eat your data. 2.1 has been in
+alpha status for the last year as we waited for toolkit issues to be resolved,
+and we have not had any reports of data loss during that time. It's still a
+good idea to make backups however - please use File>Export to export 'all
+decks' with scheduling and media included before you upgrade, and consider
+doing it periodically after upgrading as well.
+
+== Add-ons ==
+
+Most add-ons will need to be updated before they'll work with Anki 2.1. When
+you install 2.1, it will create a separate folder for add-ons, and not import
+any existing ones you have installed. Some add-on authors have updated their
+add-ons to work with 2.1, and updated the description on their add-on page to
+mention that the add-on works in 2.1 as well.
+
+If you're an add-on author, you can read more about the required changes on
+https://github.com/dae/anki/blob/master/README.addons
+
+== Problems ==
+
+If you run into any issues, please let us know on the beta testing section of
+our support site:
+
+https://anki.tenderapp.com/discussions/beta-testing
+
+== Downloads ==
+
+The latest beta is Beta 1. You can get it from https://apps.ankiweb.net/downloads/beta/
+
+Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
+
+== Detailed changes ==
+
+Changes in beta1:
+
+- pulled in the latest translations
+- add cancel button to recording window
+- move stats and sync buttons to center of window
+- switch undo shortcut to work around conflicts with WebEngine
+- disable pinch to zoom gesture
+- fix spurious error code when exiting
+- fix 'browse add-ons' command failing on Linux
+
+Changes in alpha 15:
+
+- Fix for space/enter/etc being interpreted twice
+- Tweaks to reduce flicker as windows are displayed
+- Use the system background colour for the toolbar areas
+- Ensure only one copy of deck stats is shown, and make sure it's closed when the profile is unloaded
+- Fix esc key in type answer field
+- Fix deck expanded state getting reset when editing
+
+Changes in alpha 14:
+
+- Upgrade to the recently released Qt 5.9, and drop support for older versions
+- The issue with menu shortcuts conflicting with text input boxes should be gone now - this was one issue that holding up a move to beta status.
+- Windows 7+, Mac 10.10+, or Linux ~2016+ now required.
+- Fix a error when importing from Mnemosyne (thanks to Luke)
+- Fix a broken 'lots of decks' message
+- Fix an issue running mplayer on modern Linux distros
+- Fix window size not being saved in some cases (thanks to Dmitry)
+- Fix an error when closing the main window while the browser is open
+
+Changes in alpha 13:
+
+- Upgrade to Python 3.6 on Windows, which should hopefully provide us with more info about the cause of crashes. If you experience any crashes, please paste the output of your crash.log from the Anki folder, or attach it in a private ticket (https://apps.ankiweb.net/docs/manual.html#file-locations)
+- Fix for the browser getting stuck open when syncing, leading to error messages
+- Improvements to the next/prev buttons in the previewer (thanks to Glutanimate)
+- Preserve tag field focus when switching cards (thanks to Glutanimate)
+- Remove some debugging code from the browser that could cause issues/slowdowns
+- Tweak to history display in add screen (thanks to Henrik)
+
+Changes in alpha 12:
+
+- Fix an error when previewing
+- Support wildcards in tag deletion (thanks to luoliyan)
+- Support \ to escape wildcard characters in tag search (thanks to luoliyan)
+
+Changes in alpha 11:
+
+- The Windows and Linux builds will move your Anki data to a new location the first time they are run. If you'd like to switch between the alphas and the stable release, please make sure you also upgrade to the latest stable release (2.0.43) which uses the same folder locations. More info: https://apps.ankiweb.net/docs/changes.html
+- The Windows build will display a console window when Anki is opened, to help debug problems some users are having starting the app.
+- Show error on invalid search instead of just returning no matches
+- Fix an error when closing the collection on bleeding edge Linux distros
+- $ANKI_BASE env var can now be used to control base folder
+- Convert all unicode in the add cards screen and importer to a standard format, to prevent issues with tag/field searches not working.
+- Add temporary instrumentation to the browse screen to detect some issues - please report if you get any errors. Also fixed a possible cause of a crash.
+- Fix errors occurring when Anki is closed with windows like the browser still open.
+- Fix embedded fonts not working.
+- Refuse to run on Qt5.8.0, which has some major issues.
+- Allow wildcard tag deletion (thanks to luoliyan)
+- Don't add tags when deleting (thanks to luoliyan)
+- Add-on downloader now accepts multiple IDs (thanks to Dmitry)
+- Improvements to the custom study increase new/rev area (thanks to Simone)
+- Tweaks to the history button in the add screen (thanks to Henrik)
+- Show a better error if user inputs an invalid CSV delimiter (thanks to luoliyan)
+- Fix a rare bug that could cause invalid notes to be added (thanks to Glutanimate)
+- Fix typo (thanks to Andi)
+
+Changes in alpha 10:
+
+- shave a second or two off sync in some circumstances
+- fix progress window getting stuck on Ubuntu 16.10
+- fix unicode errors appearing when pasting non-latin text
+- update anki.desktop (thanks to Julian)
+
+Changes in alpha 9:
+
+- syncs are now cancellable
+- embedded fonts are now usable on macOS again
+- fix the bottom bar disappearing after edits
+- don't force XP mode on Windows, so things like the menubar will now use the modern colour prevent the backspace key from going back a page and breaking things
+- fix for 'make install' in the source release
+- helpers for addons creating buttons in the editor (thanks to Simone)
+- fix for latest sqlite versions (thanks to dequis)
+
+Changes in alpha 8:
+
+- Graphs can now be exported to PDF
+- Fix issues inputting languages like Chinese in the card layout window.
+- Possible fix for some crashes
+- Fixed Anki segfaulting on startup on some modern Linux distros
+- The Mac build should now work on 10.8+
+- Mac build now stores files in Library/Application Support like 2.0.37+.
+- Tweak the cards/fields button positions
+- Remove mention of the Del button shortcut in the More menu
+- The history button in the add screen now reflect subsequent edits (thanks to David)
+- When syncing a collection with no local cards, explain why Anki wants to download.
+- Fixes for Python 3.6
+
+Changes in alpha 7:
+
+- Fix a serious bug in media syncing that would upload invalid data. If you synced with previous versions, please see https://anki.tenderapp.com/discussions/beta-testing/203-anki-210-al...
+- Syncing now shows progress again, and uses a different underlying request library
+- Fix some other syncing errors
+- Possible fix for some crashes
+- Log some information into Documents/Anki/crash.log when Anki crashes. If you experience any crashes in the future (where Anki closes), please send us that file with information about what you were doing when Anki crashed.
+- Compress backups in the background, which speeds up profile switching & syncing
+- Fix the window not going to fullscreen properly after adding a new profile on Windows
+- Increase default size of deck options window
+- Tell webengine not to cache images to disk
+- Added a hack to preload upcoming images - it will not always work
+- Fix an error when deleting notes
+- Remove the Del key shortcut to delete notes in the review window, as a Qt bug causes it to be triggered from the type in the answer box.
+- Fix an error appearing when the undo shortcut is pressed with nothing to undo
+- Make it easier for add-ons to add new editing icons (thanks to Simone).
+
+Changes in alpha 6:
+
+- Fix audio failing to stop or overlapping
+- Fix opening of add-ons / backup folders on Windows
+
+Changes in alpha 5:
+
+- Built with latest version of the toolkit
+- Rather than completely stripping HTML or including it verbatim, paste and drag&drop now simplify the HTML as it is pasted
+- Pasted images now use a checksum of the file, so pasting the same image twice will not result in multiple files
+- Work around a Qt bug where some shortcut keys like 'f' were triggering menu items instead of entering characters in the type answer box
+- Work around the debug console shortcut not working
+- Misc other fixes (thanks to noobie, Marcio, Christoph)
+- The Linux build now includes a Makefile and can be installed system-wide
+- The Mac build is using a different packager. This should prevent the errors people were getting on startup, but has broken the ability to double click on .apkg files outside of Anki.
+
+Changes in alpha 4:
+
+- tweak fonts
+- fix entered text getting lost if closing window/switching note shortly after
+  text entered
+- fix errors when importing .apkg with media
+- fix unicode errors when playing audio files with non-latin text on osx
+- autodetect pipe in PSV files and make it easier to extend autodetection list
+- fix 'change note type' getting stuck
+- ignore harmless http error messages
+- re-enable add-on downloading
+- fix edit/delete add-on, and open add-on folder on recent linux
+- fix error when clicking on cogs in deck list
+- show more info when libraries fail to load on linux
+- fix square boxes appearing in import dialog on ubuntu 16.04
+
+Changes in alpha 3:
+
+- image support
+- fixes for syncing
+- fix duplicate paste on windows/linux
+- prevent fields from collapsing when all content deleted
+- fix card layout preview on windows/linux
+- fix 'onHeight' errors when moving rapidly through cards in browser
+- basic add-on porting docs in github
+- fix an error in logging
+- fix missing translations
+- fix 'loading' message in type in the answer
+- fix error syncing when running from usb drive
+
+Changes in alpha 2:
+
+- free memory after various dialogs closed, which should improve the memory
+  footprint
+- update the toolkit again on all but the 32 bit linux build, which should fix
+  the mac touchpad crashes and some other issues
+- re-enable syncing, which should work but will not show any progress info
+  during long uploads/downloads
+- update packaging, which may fix intermittent startup problems on linux
+- fix collection export
+- fix type in the answer
+- hide annoying message when typing/pasting in a http link
+- add-ons no longer need a separate top level file (thanks to subfusc)
+- fix scheduling not ensuring next ivl always +1 (thanks to ankitest)
+- pull requests now have automatic tests (thanks to RawToast)
+- hook for showDeckOptions (thanks to ankitest)
+- fix browser scrolling horizontally (thanks to Houssam)
+- fix y axis rendering in graphs (thanks to matthayes)
