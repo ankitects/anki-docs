@@ -42,7 +42,15 @@ Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
 
-Changes in beta1:
+Changes in beta 2:
+
+- fix the Anki data being stored in the wrong location on Windows
+- upgraded Python and Qt for the Linux build, and fixed various issues with Anki failing to start on recent Linux distros
+- show a more helpful error message when attempting to install on a Windows or Mac platform that is too old
+- clearer error message when firewall is blocking Anki
+- clean up WebEngine processes more quickly after windows are closed
+
+Changes in beta 1:
 
 - pulled in the latest translations
 - add cancel button to recording window
