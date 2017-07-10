@@ -1,5 +1,9 @@
 = Anki 2.1 Beta =
 
+== Translations ==
+
+ * на русском языке: http://finpapa.ucoz.ru/ankitest-beta.html
+
 == At a glance ==
 
 - Uses the same scheduling, syncing and file format as Anki 2.0.x, so you can upgrade and downgrade at will.
