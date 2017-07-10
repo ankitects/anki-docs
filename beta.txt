@@ -36,7 +36,7 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Downloads ==
 
-The latest beta is Beta 1. You can get it from https://apps.ankiweb.net/downloads/beta/
+The latest beta is Beta 2. You can get it from https://apps.ankiweb.net/downloads/beta/
 
 Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
