@@ -1,5 +1,10 @@
-:toc:
-_ Writing Anki 2.x Add-ons _
+++++++++++++++++++++++++++++++
+<%def name="title()">
+Writing Anki 2.x Add-ons
+</%def>
+
+<h1>Writing Anki 2.x Add-ons</h1>
+++++++++++++++++++++++++++++++
 
 = Translations =
 
@@ -323,10 +328,10 @@ object. For example, in anki/collection.py, _renderQA() calls the "mungeQA"
 filter which contains the generated HTML for the front and back of cards.
 latex.py uses this filter to convert text in LaTeX tags into images.
 
-In Anki 2.1, a hook was added for adding buttons to the editor. It can be used like so:
+In Anki 2.1, a hook was added for adding buttons to the editor. It can be used
+like so:
 
 -----
-from aqt import mw
 from aqt.utils import showInfo
 from anki.hooks import addHook
 

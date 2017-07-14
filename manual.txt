@@ -5,6 +5,7 @@ Anki Manual
 
 <h1>Anki 2.0 User Manual</h1>
 
+<!-- highlight Docs tab in header -->
 <script>
     document.getElementById("navmanual").className += " active";
 </script>
