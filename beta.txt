@@ -40,11 +40,18 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Downloads ==
 
-The latest beta is Beta 2. You can get it from https://apps.ankiweb.net/downloads/beta/
+The latest beta is Beta 3. You can get it from https://apps.ankiweb.net/downloads/beta/
 
 Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
+
+Changes in beta 3:
+
+- more fixes for Anki failing to start on some Linux distros
+- fix an issue with the HTML editoring adding br tags on Windows
+- paste non-media URLs as text instead of ignoring them
+- preserve indents and newlines when pasting text
 
 Changes in beta 2:
 

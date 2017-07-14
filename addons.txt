@@ -1,5 +1,5 @@
 :toc:
-_ Writing Anki 2.0 Add-ons _
+_ Writing Anki 2.x Add-ons _
 
 = Translations =
 
@@ -270,10 +270,11 @@ if runFilter(
     self.mw.progress.timer(100, onUpdate, False)
 -----
 
-Each filter accepts three arguments: a modified flag, the note, and the
-current field. If a filter makes no changes it returns the modified flag the
-same as it received it; if it makes a change it returns True. In this way, if
-any single add-on makes a change, the UI will reload the note to show updates.
+Each filter in this example accepts three arguments: a modified flag, the
+note, and the current field. If a filter makes no changes it returns the
+modified flag the same as it received it; if it makes a change it returns
+True. In this way, if any single add-on makes a change, the UI will reload the
+note to show updates.
 
 The Japanese Support add-on uses this hook to automatically generate one field
 from another. A slightly simplified version is presented below:
@@ -322,6 +323,27 @@ object. For example, in anki/collection.py, _renderQA() calls the "mungeQA"
 filter which contains the generated HTML for the front and back of cards.
 latex.py uses this filter to convert text in LaTeX tags into images.
 
+In Anki 2.1, a hook was added for adding buttons to the editor. It can be used like so:
+
+-----
+from aqt import mw
+from aqt.utils import showInfo
+from anki.hooks import addHook
+
+# cross out the currently selected text
+def onStrike(editor):
+    editor.web.eval("wrap('<del>', '</del>');")
+
+def addMyButton(buttons, editor):
+    editor._links['strike'] = onStrike
+    return buttons + [editor._addButton(
+        "iconname", # "/full/path/to/icon.png",
+        "strike", # link name
+        "tooltip")]
+
+addHook("setupEditorButtons", addMyButton)
+-----
+
 = Monkey Patching and Method Wrapping =
 
 If you want to modify a function that doesn't already have a hook, it's
@@ -331,6 +353,11 @@ sometimes referred to as 'monkey patching'.
 In aqt/editor.py there is a function setupButtons() which creates the buttons
 like bold, italics and so on that you see in the editor. Let's imagine you
 want to add another button in your add-on.
+
+WARNING: Anki 2.1 no longer uses setupButtons(). The code below is still
+useful to understand how monkey patching works, but for adding buttons to the
+editor please see the setupEditorButtons hook described in the previous
+section.
 
 The simplest way is to copy and paste the function from the Anki source code,
 add your text to the bottom, and then overwrite the original, like so:
