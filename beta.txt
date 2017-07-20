@@ -1,3 +1,9 @@
+++++++++++++++++++++++++++++++
+<style>
+h4 { margin-bottom: 0.5em; margin-top: 1em; }
+</style>
+++++++++++++++++++++++++++++++
+
 = Anki 2.1 Beta =
 
 == Translations ==
@@ -40,20 +46,62 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Downloads ==
 
-The latest beta is Beta 3. You can get it from https://apps.ankiweb.net/downloads/beta/
+The latest beta is Beta 4. You can get it from https://apps.ankiweb.net/downloads/beta/
 
 Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
 
-Changes in beta 3:
+=== Changes in beta 4 ===
+
+- yet more fixes for Anki failing to start on some Linux distros
+- fixed errors that could happen when add-on authors wrapped an Anki function (thanks to dequis)
+- make it easier for add-ons to extend bottom buttons (thanks to Dmitry)
+- don't load iframe content in a separate browser window
+- remove the change in beta 3 that was leading to lots of non-breaking spaces in pasted text
+
+This beta also introduces experimental support for alternative whitespace
+handling. When enabled for a note type via Tools>Manage Note Types>Options,
+the editor and reviewer will wrap your HTML content in a pre-wrap whitespace
+environment. What this means is that instead of using <div> and &amp;nbsp;
+tags/entities to denote newlines and indents, normal newline and space
+characters will be used. Things to note:
+
+- This is experimental at the moment, and may go away if major issues are
+discovered. For now, please consider it something to play around with rather
+than something to rely on.
+
+- The mobile clients do not currently support the option, though you may be
+able to get cards to display the same way when reviewing on mobile by adding
+white-space: pre-wrap to your card styling in your template.
+
+- When pasting HTML into a field, Anki will try to convert the divs and
+non-breaking spaces to more readable whitespace equivalents.
+
+- Existing notes may display differently with the option enabled, because
+whitespace is now respected. For example, the following on a card template:
+
+-----
+{{Front}}<br>
+{{Extra}}
+-----
+
+will include two newlines between the fields, because of the newline after the
+BR. To get the card to display as before, remove the <br> tag.
+
+If your note contain manually edited HTML or HTML pasted from other websites,
+they may also show differently because of the whitespace inside them.
+
+Any feedback on what works and what does not would be appreciated.
+
+=== Changes in beta 3 ===
 
 - more fixes for Anki failing to start on some Linux distros
 - fix an issue with the HTML editoring adding br tags on Windows
 - paste non-media URLs as text instead of ignoring them
 - preserve indents and newlines when pasting text
 
-Changes in beta 2:
+=== Changes in beta 2 ===
 
 - fix the Anki data being stored in the wrong location on Windows
 - upgraded Python and Qt for the Linux build, and fixed various issues with Anki failing to start on recent Linux distros
@@ -61,7 +109,7 @@ Changes in beta 2:
 - clearer error message when firewall is blocking Anki
 - clean up WebEngine processes more quickly after windows are closed
 
-Changes in beta 1:
+=== Changes in beta 1 ===
 
 - pulled in the latest translations
 - add cancel button to recording window
@@ -71,7 +119,7 @@ Changes in beta 1:
 - fix spurious error code when exiting
 - fix 'browse add-ons' command failing on Linux
 
-Changes in alpha 15:
+=== Changes in alpha 15 ===
 
 - Fix for space/enter/etc being interpreted twice
 - Tweaks to reduce flicker as windows are displayed
@@ -80,7 +128,7 @@ Changes in alpha 15:
 - Fix esc key in type answer field
 - Fix deck expanded state getting reset when editing
 
-Changes in alpha 14:
+=== Changes in alpha 14 ===
 
 - Upgrade to the recently released Qt 5.9, and drop support for older versions
 - The issue with menu shortcuts conflicting with text input boxes should be gone now - this was one issue that holding up a move to beta status.
@@ -91,7 +139,7 @@ Changes in alpha 14:
 - Fix window size not being saved in some cases (thanks to Dmitry)
 - Fix an error when closing the main window while the browser is open
 
-Changes in alpha 13:
+=== Changes in alpha 13 ===
 
 - Upgrade to Python 3.6 on Windows, which should hopefully provide us with more info about the cause of crashes. If you experience any crashes, please paste the output of your crash.log from the Anki folder, or attach it in a private ticket (https://apps.ankiweb.net/docs/manual.html#file-locations)
 - Fix for the browser getting stuck open when syncing, leading to error messages
@@ -100,13 +148,13 @@ Changes in alpha 13:
 - Remove some debugging code from the browser that could cause issues/slowdowns
 - Tweak to history display in add screen (thanks to Henrik)
 
-Changes in alpha 12:
+=== Changes in alpha 12 ===
 
 - Fix an error when previewing
 - Support wildcards in tag deletion (thanks to luoliyan)
 - Support \ to escape wildcard characters in tag search (thanks to luoliyan)
 
-Changes in alpha 11:
+=== Changes in alpha 11 ===
 
 - The Windows and Linux builds will move your Anki data to a new location the first time they are run. If you'd like to switch between the alphas and the stable release, please make sure you also upgrade to the latest stable release (2.0.43) which uses the same folder locations. More info: https://apps.ankiweb.net/docs/changes.html
 - The Windows build will display a console window when Anki is opened, to help debug problems some users are having starting the app.
@@ -127,14 +175,14 @@ Changes in alpha 11:
 - Fix a rare bug that could cause invalid notes to be added (thanks to Glutanimate)
 - Fix typo (thanks to Andi)
 
-Changes in alpha 10:
+=== Changes in alpha 10 ===
 
 - shave a second or two off sync in some circumstances
 - fix progress window getting stuck on Ubuntu 16.10
 - fix unicode errors appearing when pasting non-latin text
 - update anki.desktop (thanks to Julian)
 
-Changes in alpha 9:
+=== Changes in alpha 9 ===
 
 - syncs are now cancellable
 - embedded fonts are now usable on macOS again
@@ -144,7 +192,7 @@ Changes in alpha 9:
 - helpers for addons creating buttons in the editor (thanks to Simone)
 - fix for latest sqlite versions (thanks to dequis)
 
-Changes in alpha 8:
+=== Changes in alpha 8 ===
 
 - Graphs can now be exported to PDF
 - Fix issues inputting languages like Chinese in the card layout window.
@@ -158,7 +206,7 @@ Changes in alpha 8:
 - When syncing a collection with no local cards, explain why Anki wants to download.
 - Fixes for Python 3.6
 
-Changes in alpha 7:
+=== Changes in alpha 7 ===
 
 - Fix a serious bug in media syncing that would upload invalid data. If you synced with previous versions, please see https://anki.tenderapp.com/discussions/beta-testing/203-anki-210-al...
 - Syncing now shows progress again, and uses a different underlying request library
@@ -175,12 +223,12 @@ Changes in alpha 7:
 - Fix an error appearing when the undo shortcut is pressed with nothing to undo
 - Make it easier for add-ons to add new editing icons (thanks to Simone).
 
-Changes in alpha 6:
+=== Changes in alpha 6 ===
 
 - Fix audio failing to stop or overlapping
 - Fix opening of add-ons / backup folders on Windows
 
-Changes in alpha 5:
+=== Changes in alpha 5 ===
 
 - Built with latest version of the toolkit
 - Rather than completely stripping HTML or including it verbatim, paste and drag&drop now simplify the HTML as it is pasted
@@ -191,7 +239,7 @@ Changes in alpha 5:
 - The Linux build now includes a Makefile and can be installed system-wide
 - The Mac build is using a different packager. This should prevent the errors people were getting on startup, but has broken the ability to double click on .apkg files outside of Anki.
 
-Changes in alpha 4:
+=== Changes in alpha 4 ===
 
 - tweak fonts
 - fix entered text getting lost if closing window/switching note shortly after
@@ -207,7 +255,7 @@ Changes in alpha 4:
 - show more info when libraries fail to load on linux
 - fix square boxes appearing in import dialog on ubuntu 16.04
 
-Changes in alpha 3:
+=== Changes in alpha 3 ===
 
 - image support
 - fixes for syncing
@@ -221,7 +269,7 @@ Changes in alpha 3:
 - fix 'loading' message in type in the answer
 - fix error syncing when running from usb drive
 
-Changes in alpha 2:
+=== Changes in alpha 2 ===
 
 - free memory after various dialogs closed, which should improve the memory
   footprint
