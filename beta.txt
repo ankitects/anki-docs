@@ -52,6 +52,32 @@ Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
 
+=== Changes in beta 5 ===
+
+- Experimental MathJax support for writing equations without LaTeX - try
+something like the following on a card. Equations will pop in, as
+they are rendered after the card is shown. The next AnkiMobile beta will
+support MathJax; the other clients will need to be updated.
+
+-----
+\(\sqrt{x^2}\)
+
+$$x_3$$
+-----
+
+- LaTeX can now be rendered as a .svg file instead of a .png file, which can
+be scaled to arbitrary sizes without losing quality. You'll need to have
+dvisvgm installed, and can then enable it via Tools>Manage Note Types>Options.
+The next AnkiMobile beta will support .svgs; the other clients will need to be
+updated.
+- Fix IBus input method not working on Linux.
+- Fix superscript shortcut key.
+- Both reviewer and browser use ctrl+delete as shortcut for deleting the
+current/selected card now.
+- Fix crash when syncing on Windows.
+- Improve display of cloze and LaTeX tags when field is in RTL mode.
+- Work around ampersands appearing in deck names when running in KDE.
+
 === Changes in beta 4 ===
 
 - yet more fixes for Anki failing to start on some Linux distros
