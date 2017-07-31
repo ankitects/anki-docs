@@ -14,7 +14,7 @@ h4 { margin-bottom: 0.5em; margin-top: 1em; }
 
 - Uses the same scheduling, syncing and file format as Anki 2.0.x, so you can upgrade and downgrade at will.
 - Upgraded to the latest support libraries (Python 3, Qt 5.9), bringing fixes for crashes, better handling of high resolution displays, non-Latin text, and the latest web standards.
-- Requires a modern system - Windows 7+, OSX 10.10+, or a Linux distro from around 2016+.
+- Requires a modern system - Windows 7+, OSX 10.10+, or a Linux distro from around 2014+.
 - Add-ons will need to be updated to work with 2.1.
 
 == Stability ==
@@ -46,11 +46,33 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Downloads ==
 
-The latest beta is Beta 4. You can get it from https://apps.ankiweb.net/downloads/beta/
+The latest beta is Beta 6. You can get it from https://apps.ankiweb.net/downloads/beta/
 
 Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
+
+=== Changes in beta 6 ===
+
+Linux users: there are two Linux builds for this release. The "normal" build
+should now work on Ubuntu 14.04 and similar distributions, and should be fine
+for more modern distributions too. If you encounter a problem with the normal
+build, please try the alternate one, and let us know that the normal one is
+not working for you.
+
+Other changes:
+
+- Add a fade out/fade in transition between cards when reviewing, which
+minimises pop-in for cards using images and MathJax.
+- Render the answer at the same time as the question so it can be revealed
+instantly.
+- Fix a bug that was overriding the font of some columns in the browser when
+they shouldn't be overridden.
+- Add the ability to turn off font overriding in the "browser appearance"
+screen.
+- Fix \n appearing when hitting enter in new whitespace mode.
+- Fix translations not working on a Mac.
+- Fix the upload/download dialog not working in KDE on Linux.
 
 === Changes in beta 5 ===
 
