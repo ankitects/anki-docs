@@ -8,6 +8,13 @@
  * http://finpapa.ucoz.ru/ankitest-changes.html[по-русски] 
 
 [[latest]]
+= Changes in 2.0.46 =
+
+Released 2017-08-02.
+
+- Fix an issue where mplayer would not work for some Linux users.
+- Fix an issue with the edit screen that may have lead to crashes later on.
+
 = Changes in 2.0.45 =
 
 Released 2017-03-27.
