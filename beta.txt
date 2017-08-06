@@ -46,11 +46,36 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Downloads ==
 
-The latest beta is Beta 6. You can get it from https://apps.ankiweb.net/downloads/beta/
+The latest beta is Beta 7. You can get it from https://apps.ankiweb.net/downloads/beta/
 
 Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
+
+=== Changes in beta 7 ===
+
+- Removed the preloading code from the previous beta, as it was causing a
+number of problems.
+- Added a transition when revealing the answer - necessary now that we're not
+preloading the answer.
+- Fix the type in the answer function.
+- Reworked the focus handling in the editor, which fixes a bug that could
+cause the first field to be overwritten when navigating via the preview
+screen.
+- Fixed a similar bug triggered by dropping text onto Anki when another window
+had focus.
+- Fix gifs failing to display.
+- The mhchem module is now bundled and enabled by default, so you can typeset
+chemical equations:
+https://mhchem.github.io/MathJax-mhchem/
+- Work around MathJax failing to display when part of it is cloze deleted.
+- Possible fix for Anki failing to exit properly.
+- Fix field content appearing under the editor buttons.
+- Fix some encoding errors when generating LaTeX and showing JS errors.
+- Change the add/del tags shortcuts so they don't conflict with the jump to
+tags function.
+- Prevent some errors when holding down navigation keys/navigating too quickly.
+- Fix some issues that were preventing the Linux build from working for some users.
 
 === Changes in beta 6 ===
 
