@@ -46,11 +46,28 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Downloads ==
 
-The latest beta is Beta 7. You can get it from https://apps.ankiweb.net/downloads/beta/
+The latest beta is Beta 8. You can get it from https://apps.ankiweb.net/downloads/beta/
 
 Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
+
+=== Changes in beta 8 ===
+
+Experiment with showing the question below the answer, which makes the fade
+out/in step more natural, and means the answer will always appear in the same
+place. Please let me know if you like it or hate it. Will only work if your
+back template starts with \{\{FrontSide}} <hr id=answer>.
+
+Also:
+
+- Fixed "shortcut key" getting duplicated (thanks to David).
+- Fixed pasting of files with a hash in the filename (thanks to David).
+- Fixed some errors caused by closing a window before it had a chance to
+initialize (based on a patch by David).
+- Fixed autoplay on the answer side.
+- Fixed some issues with screens getting stuck when closing the browser window, etc.
+- Possible fix for Anki failing to run on some Windows machines.
 
 === Changes in beta 7 ===
 
