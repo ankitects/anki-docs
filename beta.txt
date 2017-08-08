@@ -46,11 +46,24 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Downloads ==
 
-The latest beta is Beta 8. You can get it from https://apps.ankiweb.net/downloads/beta/
+The latest beta is Beta 9. You can get it from https://apps.ankiweb.net/downloads/beta/
 
 Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
+
+=== Changes in beta 9 ===
+
+- Update the card layout screen to use a dropdown instead of tabs, and render
+the preview more efficiently.
+- The card layout and preview window in the browser now render cards the same
+way as the review screen.
+- Fix a bug that was preventing Anki from shutting down properly on Windows.
+- Fix a bug that was causing images not to show if the media server port was
+in use.
+- Support make install/uninstall on Linux.
+- Make the down key do the right thing when browser window opened.
+- Make it easier for add-ons to override shortcuts for a specific state.
 
 === Changes in beta 8 ===
 
