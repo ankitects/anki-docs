@@ -46,11 +46,32 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Downloads ==
 
-The latest beta is Beta 9. You can get it from https://apps.ankiweb.net/downloads/beta/
+The latest beta is Beta 10. You can get it from https://apps.ankiweb.net/downloads/beta/
 
 Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
+
+=== Changes in beta 10 ===
+
+- Improve the MathJax rendering speed, which was making the fade out/in
+animations slower than they should have been.
+- Revert the "answer on top" experiment and remove the delay when revealing
+the answer side.
+- Delays can be customized via the qFade/aFade variables in Javascript - set
+to 0 to disable.
+- Added the ability to override JS/CSS over all note types, so you can do
+things like customize the fade duration globally. More info: https://github.com/dae/anki/commit/55b782581d39f3a4b184ff3f24a59d51ad8c9e83
+- Hide sound tags in preview screen.
+- Make sure exporting doesn't try to export subfolders.
+- Fix operations like suspend not working correctly when multiple cards selected.
+- Remove border on bottom area.
+- Better support for high resolution displays on Windows.
+- Fix the toolbar in the browser not resizing to fit.
+- Display used fields in card type list.
+- Fix the focus not returning to the front field when adding cards.
+- Fix an issue that was preventing some styling in card templates from
+overriding the defaults.
 
 === Changes in beta 9 ===
 
