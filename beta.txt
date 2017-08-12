@@ -46,11 +46,29 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Downloads ==
 
-The latest beta is Beta 10. You can get it from https://apps.ankiweb.net/downloads/beta/
+You can get the latest beta from https://apps.ankiweb.net/downloads/beta/
 
 Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
+
+=== Changes in beta 11 ===
+
+- Simplify the browser window:
+** Items in the top toolbar have been moved into the menu bar.
+** The sidebar has been replaced with a dropdown menu.
+- Remove 'mark' action in favour of 'flags':
+** Flags are set on individual cards rather than the whole note.
+** A card can be set to one of four different coloured flags.
+** The reviewer and browser will show and set flags.
+** Other clients will need to be updated to display and set flags, but flagged
+cards should keep their flags when synced to older clients.
+- Limit the length of the card layout summary, and remove the ordinals.
+- Fix clozes in brackets losing formatting.
+- Restore maximize button in edit window.
+- Disable rather than hide the card type list in cloze note types.
+- Remove icons from a few screens.
+- Bundle a new mplayer on OSX which works on older CPUs.
 
 === Changes in beta 10 ===
 
