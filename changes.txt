@@ -8,6 +8,15 @@
  * http://finpapa.ucoz.ru/ankitest-changes.html[по-русски] 
 
 [[latest]]
+= Changes in 2.0.47 =
+
+Released 2017-08-16.
+
+Fixes an issue that could allow a specially crafted .apkg file to write files
+outside the media folder during import. AnkiWeb shared decks were not
+affected, but upgrading is strongly recommended if you import .apkg files from
+third party sources. A big thanks to David Bailey for discovering this issue.
+
 = Changes in 2.0.46 =
 
 Released 2017-08-02.

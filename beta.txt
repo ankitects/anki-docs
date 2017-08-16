@@ -52,6 +52,40 @@ Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
 
+=== Changes in beta 12 ===
+
+Fixes an issue that could allow a specially crafted .apkg file to write files
+outside the media folder during import. AnkiWeb shared decks were not
+affected, but upgrading is strongly recommended if you import .apkg files from
+third party sources. A big thanks to David Bailey for discovering this issue.
+2.0.47 is also available with this fix.
+
+Also:
+
+* Rewrote parts of the collection opening/closing code and window closing
+code, which should ensure the collection isn't closed until windows have a
+chance to clean up.
+* The profile manager now has a button to restore a profile to an automatic
+backup, which will take care of clearing out a corrupt collection and make
+sure backups are not rotated when restoring.
+* Added an optional sidebar to the browse screen; toggle via the Filter button.
+* Icon tweaks.
+* Ctrl+1-9 can be used to jump to the first 9 card templates in the card layout screen.
+* Add a default note type for typing in the answer.
+* Backups now include the date in the filename.
+* Backups are sent to the trash instead of being deleted outright.
+* Fix decks being moved to the default deck when dragged to the bottom (thanks
+to David Bailey)
+* Fixed some issues with field contents being updated with the wrong content.
+* Better support for DPI scales that are not multiples of 100% on Windows.
+* The Filter button now uses more obvious titles when splitting menus into
+submenus, and will split the decks and note type lists if necessary as well.
+* Tweak some shortcuts.
+* Better error when internet offline.
+* Drop support for profile passwords.
+* Fix shift+tab in the editor on Windows/Linux.
+* Restored support for the marked tag.
+
 === Changes in beta 11 ===
 
 - Simplify the browser window:
