@@ -45,7 +45,7 @@ To download a shared deck directly to your mobile device:
 
  . Ensure you're connected to the internet.
  . Tap *Add/Export* on the bottom left.
- . Choose *Download Shared Deck*. AnkiWeb will open.
+ . Choose *Shared Deck List*. AnkiWeb will open.
  . Select a category, or type in a search.
  . Tap on a deck you'd like to study.
  . Scroll down and tap *Download*.
