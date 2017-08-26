@@ -52,6 +52,32 @@ Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
 
+=== Changes in beta 13 ===
+
+Add-on authors can now upload separate files to AnkiWeb for 2.0 and 2.1
+support, and Anki 2.1 will automatically list and download the 2.1 versions.
+
+The add-on menu has been moved into a separate dialog, which supports:
+
+- checking for and downloading updates
+- deleting and disabling multiple add-ons at once
+- viewing an add-on's page
+
+Add-ons are now always stored in a single folder, and need to be uploaded as a
+.zip - please see the updated docs for more information:
+
+https://apps.ankiweb.net/docs/addons21.html#add-on-folders
+
+Also:
+
+* Helper routines in editor to make porting add-ons easier (thanks to Glutanimate)
+* Catch errors when card templates contain invalid HTML (thanks to Alicia)
+* Fix translations and shortcuts on editor buttons.
+* Revert the undo shortcut change in the previous beta.
+* The Check Media function can now fix a corrupt media database.
+* Remember export folder location.
+* Make sure debug console and tooltips closed when closing profile.
+
 === Changes in beta 12 ===
 
 Fixes an issue that could allow a specially crafted .apkg file to write files
