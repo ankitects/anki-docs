@@ -61,7 +61,7 @@ The add-ons folder is named "addons21", corresponding to Anki 2.1. If you have
 an "addons" folder, it is because you have previously used Anki 2.0.x.
 
 Each add-on uses one folder inside the add-on folder. Anki looks for a
-file called __init__.py file inside the folder, eg:
+file called `__init__.py` file inside the folder, eg:
 
   addons21/my_addon/__init__.py
 
@@ -81,7 +81,7 @@ original add-on name, when it was downloaded, and whether it's enabled or not.
 
 = A Simple Add-On =
 
-Add the following to my_first_addon/__init__.py in your add-ons folder:
+Add the following to `my_first_addon/__init__.py` in your add-ons folder:
 
 -----
 # import the main window object (mw) from aqt
@@ -619,9 +619,9 @@ accept the zip file:
 
 You can give the .zip file any name.
 
-Python automatically creates __pycache__ folders when your add-on is run.
+Python automatically creates `__pycache__` folders when your add-on is run.
 Please make sure you delete these prior to creating the zip file, as AnkiWeb
-can not accept .zip files that contain __pycache__ folders.
+can not accept .zip files that contain `__pycache__` folders.
 
 You can upload a .zip you've created to https://ankiweb.net/shared/addons/
 
