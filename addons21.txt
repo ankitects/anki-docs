@@ -65,7 +65,7 @@ file called `__init__.py` file inside the folder, eg:
 
   addons21/my_addon/__init__.py
 
-If __init__.py does not exist, Anki will ignore the folder.
+If `__init__.py` does not exist, Anki will ignore the folder.
 
 When choosing a folder name, it is recommended to stick to a-z and 0-9
 characters to avoid problems with Python's module system.
