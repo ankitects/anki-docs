@@ -30,12 +30,10 @@ doing it periodically after upgrading as well.
 
 Most add-ons will need to be updated before they'll work with Anki 2.1. When
 you install 2.1, it will create a separate folder for add-ons, and not import
-any existing ones you have installed. Some add-on authors have updated their
-add-ons to work with 2.1, and updated the description on their add-on page to
-mention that the add-on works in 2.1 as well.
+any existing ones you have installed.
 
 If you're an add-on author, you can read more about the required changes on
-https://github.com/dae/anki/blob/master/README.addons
+https://apps.ankiweb.net/docs/addons21.html
 
 == Problems ==
 
