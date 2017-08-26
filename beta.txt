@@ -78,6 +78,7 @@ Also:
 * The Check Media function can now fix a corrupt media database.
 * Remember export folder location.
 * Make sure debug console and tooltips closed when closing profile.
+* A fix for Anki failing to start on some Windows machines.
 
 === Changes in beta 12 ===
 
