@@ -67,6 +67,7 @@ Add-ons are now always stored in a single folder, and need to be uploaded as a
 .zip - please see the updated docs for more information:
 
 https://apps.ankiweb.net/docs/addons21.html#add-on-folders
+https://apps.ankiweb.net/docs/addons21.html#sharing-add-ons
 
 Also:
 
