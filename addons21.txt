@@ -1,0 +1,608 @@
+++++++++++++++++++++++++++++++
+<%def name="title()">
+Writing Anki 2.x Add-ons
+</%def>
+
+<h1>Writing Anki 2.x Add-ons</h1>
+++++++++++++++++++++++++++++++
+
+= Translations =
+
+ * 日本語: http://rs.luminousspice.com/anki2addons/
+ * по-русски: http://finpapa.ucoz.ru/ankitest-addons.html
+
+= Overview =
+
+Anki is written in a user-friendly language called Python. If you're not
+familiar with Python, please read the http://docs.python.org/tutorial/[Python
+tutorial] before proceeding with the rest of this document.
+
+Because Python is a dynamic language, add-ons are extremely powerful in Anki -
+not only can they extend the program, but they can also modify arbitrary
+aspects of it, such as altering the way scheduling works, modifying the UI,
+and so on.
+
+No special development environment is required to develop add-ons. All you
+need is a text editor. If you're on Windows or a Mac, please use the packaged
+version of Anki that's provided on the website, as there are no instructions
+available for building it from scratch on those platforms.
+
+While you can write plugins in a simple text editor like notepad, you may want
+to look into an editor that can provide syntax highlighting (colouring of the
+code) to make things easier.
+
+Anki is comprised of two parts: 
+
+'anki' contains all the "backend" code - opening collections, fetching and
+answering cards, and so on. It is used by Anki's GUI, and can also be included
+in command line programs to access Anki decks without the GUI.
+
+'aqt' contains the UI part of Anki. Anki's UI is built upon PyQt, Python
+bindings for the cross-platform GUI toolkit Qt. PyQt follows Qt's API very
+closely, so the documentation can be very useful when you want to know how to
+use a particular GUI component.
+
+* Anki 2.0.x uses http://doc.qt.io/qt-4.8/index.html[Qt 4.8]
+* Anki 2.1.x uses http://doc.qt.io/qt-5/index.html[Qt 5.9]
+
+When Anki starts up, it checks for .py files in the Documents/Anki/addons
+folder, and runs each one it finds. When add-ons are run, they typically
+modify existing code or add new menu items to provide a new feature.
+
+= A Simple Add-On =
+
+Add the following to a test.py file in your add-ons folder:
+
+-----
+# import the main window object (mw) from aqt
+from aqt import mw
+# import the "show info" tool from utils.py
+from aqt.utils import showInfo
+# import all of the Qt GUI library
+from aqt.qt import *
+
+# We're going to add a menu item below. First we want to create a function to
+# be called when the menu item is activated.
+
+def testFunction():
+    # get the number of cards in the current collection, which is stored in
+    # the main window
+    cardCount = mw.col.cardCount()
+    # show a message box
+    showInfo("Card count: %d" % cardCount)
+
+# create a new menu item, "test"
+action = QAction("test", mw)
+# set it to call testFunction when it's clicked
+action.triggered.connect(testFunction)
+# and add it to the tools menu
+mw.form.menuTools.addAction(action)
+-----
+
+Restart Anki, and you should find a 'test' item in the tools menu. Running it
+will display a dialog with the card count.
+
+If you make a mistake when entering in the plugin, Anki will show an error
+message on startup indicating where the problem is.
+
+= The Collection =
+
+All operations on a collection file are accessed via mw.col. Some basic
+examples of what you can do follow. Please note that you should put these in
+testFunction() as above. You can't run them directly in an add-on, as add-ons
+are initialized during Anki startup, before any collection or profile has been
+loaded.
+
+*Get a due card:*
+
+-----
+card = mw.col.sched.getCard()
+if not card:
+    # current deck is finished
+-----
+
+*Answer the card:*
+
+-----
+mw.col.sched.answerCard(card, ease)
+-----
+
+*Edit a note (append " new" to the end of each field):*
+
+-----
+note = card.note()
+for (name, value) in note.items():
+    note[name] = value + " new"
+note.flush()
+-----
+
+*Get card IDs for notes with tag x:*
+
+-----
+ids = mw.col.findCards("tag:x")
+-----
+
+*Get question and answer for each of those ids:*
+
+-----
+for id in ids:
+    card = mw.col.getCard(id)    
+    question = card.q()
+    answer = card.a()
+-----
+
+*Reset the scheduler after any DB changes. Note that we call reset() on the
+main window, since the GUI has to be updated as well:*
+
+-----
+mw.reset()
+-----
+
+*Import a text file into the collection*
+
+-----
+from anki.importing import TextImporter
+file = u"/path/to/text.txt"
+# select deck
+did = mw.col.decks.id("ImportDeck")
+mw.col.decks.select(did)
+# set note type for deck
+m = mw.col.models.byName("Basic")
+deck = mw.col.decks.get(did)
+deck['mid'] = m['id']
+mw.col.decks.save(deck)
+# import into the collection
+ti = TextImporter(mw.col, file)
+ti.initMapping()
+ti.run()
+-----
+    
+Almost every GUI operation has an associated function in anki, so any of
+the operations that Anki makes available can also be called in an add-on.
+
+If you want to access the collection outside of the GUI, you can do so with
+the following code:
+
+-----
+from anki import Collection
+col = Collection("/path/to/collection.anki2")
+-----
+
+If you make any modifications to the collection outside of Anki,
+you must make sure to call col.close() when you're done,
+or those changes will be lost.
+
+= The Database =
+
+When you need to perform operations that are not already supported by anki,
+you can access the database directly. Anki collections are stored in SQLite
+files. Please see the http://www.sqlite.org/lang.html[SQLite documentation]
+for more information.
+
+Anki's DB object supports the following functions:
+
+*execute() allows you to perform an insert or update operation. Use named
+arguments with ?. eg:*
+
+-----
+mw.col.db.execute("update cards set ivl = ? where id = ?", newIvl, cardId)
+-----
+
+*executemany() allows you to perform bulk update or insert operations. For
+large updates, this is much faster than calling execute() for each data point.
+eg:*
+
+-----
+data = [[newIvl1, cardId1], [newIvl2, cardId2]]
+mw.col.db.executemany(same_sql_as_above, data)
+-----
+
+*scalar() returns a single item:*
+
+-----
+showInfo("card count: %d" % mw.col.db.scalar("select count() from cards"))
+-----
+
+*list() returns a list of the first column in each row, eg [1, 2, 3]:*
+
+-----
+ids = mw.col.db.list("select id from cards limit 3")
+-----
+
+*all() returns a list of rows, where each row is a list:*
+
+-----
+ids_and_ivl = mw.col.db.all("select id, ivl from cards")
+-----
+
+*execute() can also be used to iterate over a result set without building an
+intermediate list. eg:*
+
+-----
+for id, ivl in mw.col.db.execute("select id, ivl from cards limit 3"):
+    showInfo("card id %d has ivl %d" % (id, ivl))
+-----
+
+Note that add-ons should never modify the tables in a collection, as that may
+break future versions of Anki. If you need to store plugin-specific data,
+please create a new table that is unlikely to conflict, or store the data in a
+separate file. For small configuration options, they can be stored within
+mw.col.conf, but please don't store large amounts of data there as it's copied
+on every sync.
+
+= Hooks =
+
+Hooks have been added to a few parts of the code to make writing add-ons
+easier. There are two types: 'hooks' take some arguments and return no value,
+and 'filters' take a value and return it (perhaps modified).
+
+A simple example of the former is in the leech handling. When the scheduler
+(anki/sched.py) discovers a leech, it calls:
+
+-----
+runHook("leech", card)
+-----
+
+If you wished to perform a special operation when a leech was discovered, such
+as moving the card to a "Difficult" deck, you could do it with the following
+code:
+
+-----
+from anki.hooks import addHook
+from aqt import mw
+
+def onLeech(card):
+    # can modify without .flush(), as scheduler will do it for us
+    card.did = mw.col.decks.id("Difficult")
+    # if the card was in a cram deck, we have to put back the original due
+    # time and original deck
+    card.odid = 0
+    if card.odue:
+        card.due = card.odue
+        card.odue = 0
+
+addHook("leech", onLeech)
+-----
+
+An example of a filter is in aqt/editor.py. The editor calls the
+"editFocusLost" filter each time a field loses focus, so that add-ons can
+apply changes to the note:
+
+-----
+if runFilter(
+    "editFocusLost", False, self.note, self.currentField):
+    # something updated the note; schedule reload
+    def onUpdate():
+        self.loadNote()
+        self.checkValid()
+    self.mw.progress.timer(100, onUpdate, False)
+-----
+
+Each filter in this example accepts three arguments: a modified flag, the
+note, and the current field. If a filter makes no changes it returns the
+modified flag the same as it received it; if it makes a change it returns
+True. In this way, if any single add-on makes a change, the UI will reload the
+note to show updates.
+
+The Japanese Support add-on uses this hook to automatically generate one field
+from another. A slightly simplified version is presented below:
+
+-----
+def onFocusLost(flag, n, fidx):
+    from aqt import mw
+    # japanese model?
+    if "japanese" not in n.model()['name'].lower():
+        return flag
+    # have src and dst fields?
+    for c, name in enumerate(mw.col.models.fieldNames(n.model())):
+        for f in srcFields:
+            if name == f:
+                src = f
+                srcIdx = c
+        for f in dstFields:
+            if name == f:
+                dst = f
+    if not src or not dst:
+        return flag
+    # dst field already filled?
+    if n[dst]:
+        return flag
+    # event coming from src field?
+    if fidx != srcIdx:
+        return flag
+    # grab source text
+    srcTxt = mw.col.media.strip(n[src])
+    if not srcTxt:
+        return flag
+    # update field
+    try:
+        n[dst] = mecab.reading(srcTxt)
+    except Exception, e:
+        mecab = None
+        raise
+    return True
+    
+addHook('editFocusLost', onFocusLost)
+-----
+
+The first argument of a filter is the argument that should be returned. In the
+focus lost filter this is a flag, but in other cases it may be some other
+object. For example, in anki/collection.py, _renderQA() calls the "mungeQA"
+filter which contains the generated HTML for the front and back of cards.
+latex.py uses this filter to convert text in LaTeX tags into images.
+
+In Anki 2.1, a hook was added for adding buttons to the editor. It can be used
+like so:
+
+-----
+from aqt.utils import showInfo
+from anki.hooks import addHook
+
+# cross out the currently selected text
+def onStrike(editor):
+    editor.web.eval("wrap('<del>', '</del>');")
+
+def addMyButton(buttons, editor):
+    editor._links['strike'] = onStrike
+    return buttons + [editor._addButton(
+        "iconname", # "/full/path/to/icon.png",
+        "strike", # link name
+        "tooltip")]
+
+addHook("setupEditorButtons", addMyButton)
+-----
+
+= Monkey Patching and Method Wrapping =
+
+If you want to modify a function that doesn't already have a hook, it's
+possible to overwrite that function with a custom version instead. This is
+sometimes referred to as 'monkey patching'.
+
+In aqt/editor.py there is a function setupButtons() which creates the buttons
+like bold, italics and so on that you see in the editor. Let's imagine you
+want to add another button in your add-on.
+
+WARNING: Anki 2.1 no longer uses setupButtons(). The code below is still
+useful to understand how monkey patching works, but for adding buttons to the
+editor please see the setupEditorButtons hook described in the previous
+section.
+
+The simplest way is to copy and paste the function from the Anki source code,
+add your text to the bottom, and then overwrite the original, like so:
+
+-----
+from aqt.editor import Editor
+    
+def mySetupButtons(self):
+    <copy & pasted code from original>
+    <custom add-on code>
+    
+Editor.setupButtons = mySetupButtons
+-----
+    
+This approach is fragile however, as if the original code is updated in a
+future version of Anki, you would also have to update your add-on. A better
+approach would be to save the original, and call it in our custom version:
+
+-----
+from aqt.editor import Editor
+    
+def mySetupButtons(self):
+    origSetupButtons(self)
+    <custom add-on code>
+    
+origSetupButtons = Editor.setupButtons
+Editor.setupButtons = mySetupButtons
+-----
+
+Because this is a common operation, Anki provides a function called wrap()
+which makes this a little more convenient. A real example:
+
+-----
+from anki.hooks import wrap
+from aqt.editor import Editor
+from aqt.utils import showInfo
+    
+def buttonPressed(self):
+    showInfo("pressed " + `self`)    
+
+def mySetupButtons(self):
+    # - size=False tells Anki not to use a small button
+    # - the lambda is necessary to pass the editor instance to the
+    #   callback, as we're passing in a function rather than a bound
+    #   method
+    self._addButton("mybutton", lambda s=self: buttonPressed(self),
+                    text="PressMe", size=False)
+    
+Editor.setupButtons = wrap(Editor.setupButtons, mySetupButtons)
+-----
+
+By default, wrap() runs your custom code after the original code. You can pass
+a third argument, "before", to reverse this. If you need to run code both
+before and after the original version, you can do so like so:
+
+-----
+from anki.hooks import wrap
+from aqt.editor import Editor
+    
+def mySetupButtons(self, _old):
+    <before code>
+    ret = _old(self)
+    <after code>
+    return ret
+    
+Editor.setupButtons = wrap(Editor.setupButtons, mySetupButtons, "around")
+-----
+
+If you need to modify the middle of a function rather than run code before or
+after it, there may a good argument for adding a hook to that function in the
+original code. In these situations, please post on the forum and ask for a
+hook to be added.
+
+= Qt =
+
+As mentioned in the overview, the Qt documentation is invaluable for learning
+how to display different GUI widgets.
+
+One particular thing to bear in mind is that objects are garbage collected in
+Python, so if you do something like:
+
+-----
+def myfunc():
+    widget = QWidget()
+    widget.show()
+-----
+
+...then the widget will disappear as soon as the function exits. To prevent
+this, assign top level widgets to an existing object, like:
+
+-----
+def myfunc():
+    mw.myWidget = widget = QWidget()
+    widget.show()
+-----
+
+This is often not required when you create a Qt object and give it an existing
+object as the parent, as the parent will keep a reference to the object.
+
+= Standard Modules =
+
+Anki ships with only the standard modules necessary to run the program - a
+full copy of Python is not included. For that reason, if you need to use a
+standard module that is not included with Anki, you'll need to bundle it with
+your add-on.
+
+= Debugging =
+
+If your code throws an exception, it will be caught by Anki's standard
+exception handler (which catches anything written to stderr). If you need to
+print information for debugging purposes, you can use aqt.utils.showInfo, or
+write it to stderr with sys.stderr.write("text\n").
+
+Anki also includes a REPL. From within the program, press the https://apps.ankiweb.net/docs/manual.html#debug-console[shortcut key]
+and a window will open up. You can enter expressions or statements into the
+top area, and then press ctrl+return/command+return to evaluate them. An
+example session follows:
+
+-----
+>>> mw
+<no output>
+
+>>> print(mw)
+<aqt.main.AnkiQt object at 0x10c0ddc20>
+
+>>> invalidName
+Traceback (most recent call last):
+  File "/Users/dae/Lib/anki/qt/aqt/main.py", line 933, in onDebugRet
+    exec text
+  File "<string>", line 1, in <module>
+NameError: name 'invalidName' is not defined
+
+>>> a = [a for a in dir(mw.form) if a.startswith("action")]
+... print(a)
+... print()
+... pp(a)
+['actionAbout', 'actionCheckMediaDatabase', ...]
+
+['actionAbout',
+ 'actionCheckMediaDatabase',
+ 'actionDocumentation',
+ 'actionDonate',
+ ...]
+
+>>> pp(mw.reviewer.card)
+<anki.cards.Card object at 0x112181150>
+
+>>> pp(card()) # shortcut for mw.reviewer.card.__dict__
+{'_note': <anki.notes.Note object at 0x11221da90>,
+ '_qa': [...]
+ 'col': <anki.collection._Collection object at 0x1122415d0>,
+ 'data': u'',
+ 'did': 1,
+ 'due': -1,
+ 'factor': 2350,
+ 'flags': 0,
+ 'id': 1307820012852L,
+ [...]
+}
+
+>>> pp(bcard()) # shortcut for selected card in browser
+<as above>
+-----
+
+Note that you need to explicitly print an expression in order to see what it
+evaluates to. Anki exports pp() (pretty print) in the scope to make it easier
+to quickly dump the details of objects, and the shortcut ctrl+shift+return
+will wrap the current text in the upper area with pp() and execute the result.
+
+If you're on Linux or are running Anki from source, it's also possible to
+debug your script with pdb. Place the following line somewhere in your code,
+and when Anki reaches that point it will kick into the debugger in the
+terminal:
+
+-----
+from aqt.qt import debug; debug()
+-----
+
+Alternatively you can export DEBUG=1 in your shell and it will kick into the
+debugger on an uncaught exception.
+
+= Learning More =
+
+Both anki and aqt are available at http://github.com/dae/. The
+colllection object is defined in anki's collection.py. Other useful files
+to check out are cards.py, notes.py, sched.py, models.py and decks.py.
+
+It can also be helpful to look in the aqt source to see how it's calling
+anki for a particular operation, or to learn more about the GUI.
+
+Much of the GUI is defined in designer files. You can use the Qt Designer
+program to open the .ui files and browse the GUI in a convenient way. 
+
+And finally, it can also be extremely helpful to browse other add-ons to see
+how they accomplish something.
+
+= Porting Anki 1.2 plugins =
+
+Some of the main changes to be aware of:
+
+ * Table changes: facts->notes, reviewHistory->revlog
+ * Fields are stored in the notes tables now, in a single text field 'flds'.
+   The fields are separated by \x1f.
+ * There's no cardTags table now. Use col.findCards("tag:x note:y card:z") to
+   search in a similar way to before.
+ * The scheduling code is all in sched.py; the deck code is now in
+   collection.py.
+ * If you do bulk updates of the notes table and don't use findReplace(), make
+   sure to call col.updateFieldCache()
+ * There's no Q/A cache anymore, so you can't search for text in the card
+   question or answer without generating it first.
+ * Instead of the old undo system, call mw.checkpoint("Undo Name") to save the
+   collection before you make changes. If the user undoes the operation, it
+   will revert back to the saved state.
+ * In order to ensure changes sync, if you modify notes or cards in the DB,
+   make sure you update mod and set usn to col.usn().
+ * Likewise, when you modify models or decks, make sure to call save() in the
+   relevant manager.
+ * If you set up a timer, use mw.progress.timer() to ensure the timer doesn't
+   fire in the middle of a DB operation.
+ * There's no stats table anymore, since it can't be merged when syncing. The
+   statistics now need to be derived from the revlog table.
+
+= Sharing Add-ons =
+
+For a simple one-file add-on, you can upload the .py file. For multi-file
+add-ons, please create a subfolder that acts as a Python package, and create a
+small .py file that imports that package. Using the Japanese support add-on as
+an example, the structure looks like:
+
+  japanese/file1.py
+  japanese/file2.py
+  japanese/__init__.py # can be empty; marks the folder as a package
+  japanese/<binary support files>
+  jp.py
+
+To upload a multi-file add-on, please zip up the folder and the loader .py
+file and upload the zip.
+
+Please upload add-ons to https://ankiweb.net/shared/addons/
