@@ -1,10 +1,16 @@
 ++++++++++++++++++++++++++++++
 <%def name="title()">
-Writing Anki 2.x Add-ons
+Writing Anki 2.0.x Add-ons
 </%def>
 
-<h1>Writing Anki 2.x Add-ons</h1>
+<h1>Writing Anki 2.0.x Add-ons</h1>
 ++++++++++++++++++++++++++++++
+
+= Other Versions =
+
+This document covers add-on writing for Anki 2.0.x. For instructions on
+writing add-ons for the beta builds of Anki 2.1.x, please see
+https://apps.ankiweb.net/docs/addons21.html
 
 = Translations =
 

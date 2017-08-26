@@ -1,15 +1,16 @@
 ++++++++++++++++++++++++++++++
 <%def name="title()">
-Writing Anki 2.x Add-ons
+Writing Anki 2.1.x Add-ons
 </%def>
 
-<h1>Writing Anki 2.x Add-ons</h1>
+<h1>Writing Anki 2.1.x Add-ons</h1>
 ++++++++++++++++++++++++++++++
 
-= Translations =
+= Other Versions =
 
- * 日本語: http://rs.luminousspice.com/anki2addons/
- * по-русски: http://finpapa.ucoz.ru/ankitest-addons.html
+This document covers add-on writing for the (not yet released) Anki 2.1.x. For
+instructions on writing add-ons for Anki 2.0.x, please see
+https://apps.ankiweb.net/docs/addons.html
 
 = Overview =
 
@@ -42,16 +43,45 @@ bindings for the cross-platform GUI toolkit Qt. PyQt follows Qt's API very
 closely, so the documentation can be very useful when you want to know how to
 use a particular GUI component.
 
-* Anki 2.0.x uses http://doc.qt.io/qt-4.8/index.html[Qt 4.8]
-* Anki 2.1.x uses http://doc.qt.io/qt-5/index.html[Qt 5.9]
+Anki 2.1.x uses http://doc.qt.io/qt-5/index.html[Qt 5.9]
 
-When Anki starts up, it checks for .py files in the Documents/Anki/addons
-folder, and runs each one it finds. When add-ons are run, they typically
-modify existing code or add new menu items to provide a new feature.
+When Anki starts up, it checks for modules in the add-ons folder, and runs
+each one it finds. When add-ons are run, they typically modify existing code
+or add new menu items to provide a new feature.
+
+= Add-on folders =
+
+You can access the top level add-ons folder by going to the Tools>Add-ons menu
+item in the main Anki window. Click on the View Files button, and a folder
+will pop up. If you had no add-ons installed, the top level add-ons folder
+will be shown. If you had an add-on selected, the add-on's module folder will
+be shown, and you will need to go up one level.
+
+The add-ons folder is named "addons21", corresponding to Anki 2.1. If you have
+an "addons" folder, it is because you have previously used Anki 2.0.x.
+
+Each add-on uses one folder inside the add-on folder. Anki looks for a
+file called __init__.py file inside the folder, eg:
+
+  addons21/my_addon/__init__.py
+
+If __init__.py does not exist, Anki will ignore the folder.
+
+When choosing a folder name, it is recommended to stick to a-z and 0-9
+characters to avoid problems with Python's module system.
+
+While you can use whatever folder name you wish for folders you create
+yourself, when you download an add-on from AnkiWeb, Anki will use the item's
+ID as the folder name, such as:
+
+ addons21/48927303923/__init__.py
+
+Anki will also place a meta.json file in the folder, which keeps track of the
+original add-on name, when it was downloaded, and whether it's enabled or not.
 
 = A Simple Add-On =
 
-Add the following to a test.py file in your add-ons folder:
+Add the following to my_first_addon/__init__.py in your add-ons folder:
 
 -----
 # import the main window object (mw) from aqt
@@ -436,8 +466,8 @@ Editor.setupButtons = wrap(Editor.setupButtons, mySetupButtons, "around")
 
 If you need to modify the middle of a function rather than run code before or
 after it, there may a good argument for adding a hook to that function in the
-original code. In these situations, please post on the forum and ask for a
-hook to be added.
+original code. In these situations, please post on the support site and ask
+for a hook to be added.
 
 = Qt =
 
@@ -471,6 +501,12 @@ Anki ships with only the standard modules necessary to run the program - a
 full copy of Python is not included. For that reason, if you need to use a
 standard module that is not included with Anki, you'll need to bundle it with
 your add-on.
+
+This only works with pure Python modules - modules that require C extensions
+such as numpy will not work when bundled, since your modules will not match
+the architecture Anki was packaged on. If you're doing something
+sophisticated, you'll need to get your users to install a standalone copy of
+Python instead.
 
 = Debugging =
 
@@ -549,7 +585,7 @@ debugger on an uncaught exception.
 
 = Learning More =
 
-Both anki and aqt are available at http://github.com/dae/. The
+Anki's source code is available at http://github.com/dae/. The
 colllection object is defined in anki's collection.py. Other useful files
 to check out are cards.py, notes.py, sched.py, models.py and decks.py.
 
@@ -562,47 +598,117 @@ program to open the .ui files and browse the GUI in a convenient way.
 And finally, it can also be extremely helpful to browse other add-ons to see
 how they accomplish something.
 
-= Porting Anki 1.2 plugins =
-
-Some of the main changes to be aware of:
-
- * Table changes: facts->notes, reviewHistory->revlog
- * Fields are stored in the notes tables now, in a single text field 'flds'.
-   The fields are separated by \x1f.
- * There's no cardTags table now. Use col.findCards("tag:x note:y card:z") to
-   search in a similar way to before.
- * The scheduling code is all in sched.py; the deck code is now in
-   collection.py.
- * If you do bulk updates of the notes table and don't use findReplace(), make
-   sure to call col.updateFieldCache()
- * There's no Q/A cache anymore, so you can't search for text in the card
-   question or answer without generating it first.
- * Instead of the old undo system, call mw.checkpoint("Undo Name") to save the
-   collection before you make changes. If the user undoes the operation, it
-   will revert back to the saved state.
- * In order to ensure changes sync, if you modify notes or cards in the DB,
-   make sure you update mod and set usn to col.usn().
- * Likewise, when you modify models or decks, make sure to call save() in the
-   relevant manager.
- * If you set up a timer, use mw.progress.timer() to ensure the timer doesn't
-   fire in the middle of a DB operation.
- * There's no stats table anymore, since it can't be merged when syncing. The
-   statistics now need to be derived from the revlog table.
-
 = Sharing Add-ons =
 
-For a simple one-file add-on, you can upload the .py file. For multi-file
-add-ons, please create a subfolder that acts as a Python package, and create a
-small .py file that imports that package. Using the Japanese support add-on as
-an example, the structure looks like:
+AnkiWeb expects a .zip file of the contents of an add-on module, without
+the folder name. For example, if you have a module like the following:
 
-  japanese/file1.py
-  japanese/file2.py
-  japanese/__init__.py # can be empty; marks the folder as a package
-  japanese/<binary support files>
-  jp.py
+  addons21/myaddon/__init__.py
+  addons21/myaddon/my.data
 
-To upload a multi-file add-on, please zip up the folder and the loader .py
-file and upload the zip.
+Then the zip file contents should be:
 
-Please upload add-ons to https://ankiweb.net/shared/addons/
+  __init__.py
+  my.data
+
+If you include the folder name in the zip like the following, AnkiWeb will not
+accept the zip file:
+
+ myaddon/__init__.py
+ myaddon/my.data
+
+You can give the .zip file any name.
+
+Python automatically creates __pycache__ folders when your add-on is run.
+Please make sure you delete these prior to creating the zip file, as AnkiWeb
+can not accept .zip files that contain __pycache__ folders.
+
+You can upload a .zip you've created to https://ankiweb.net/shared/addons/
+
+= Porting Anki 2.0 add-ons =
+
+Python 3
+---------
+
+Anki 2.1 requires Python 3.6 or later. After installing Python 3 on your
+machine, you can use the 2to3 tool to automatically convert your existing
+scripts to Python 3 code on a folder by folder basis, like:
+
+  2to3-3.6 --output-dir=aqt3 -W -n aqt
+  mv aqt aqt-old
+  mv aqt3 aqt
+
+Most simple code can be converted automatically, but there may be parts of the
+code that you need to manually modify.
+
+Qt5 / PyQt5
+------------
+
+The syntax for connecting signals and slots has changed in PyQt5. Recent PyQt4
+versions support the new syntax as well, so the same syntax can be used for
+both Anki 2.0 and 2.1 add-ons.
+
+More info is available at
+http://pyqt.sourceforge.net/Docs/PyQt4/new_style_signals_slots.html
+
+One add-on author reported that the following tool was useful to automatically
+convert the code:
+https://github.com/rferrazz/pyqt4topyqt5
+
+Compatibility with Anki 2.0
+----------------------------
+
+Most add-ons that affect the scheduler should require only minor changes to
+work on 2.1. Add-ons that alter the behaviour of the reviewer, browser or
+editor may require more work.
+
+If you previously distributed your add-on in a single .py file, it will now
+need to be zipped up as described in the 'sharing add-ons' section above.
+
+The Qt modules are in 'PyQt5' instead of 'PyQt4'. You can do a conditional
+import, but an easier way is to import from aqt.qt - eg
+
+  from aqt.qt import *
+
+The most difficult part is the change from the unsupported QtWebKit to
+QtWebEngine. If you do any non-trivial work with webviews, some work will be
+required to port your code to Anki 2.1, as described in the next section.
+
+Most Python 3 code will run on Python 2 as well, so it is theoretically
+possible to update your add-ons in such a way that they run on both Anki 2.0
+and 2.1. Depending on what you're doing, you may be able to do this without
+any special code, or you may need to add some if statements to run separate
+codepaths. This may be more work than it is worth however. AnkiWeb now
+supports uploading separate files for 2.0.x and 2.1.x add-ons, so you may find
+it easier to copy your code, port it to 2.1, and then upload the ported copy
+separately. You can continue to update the 2.0.x code if you wish, or avoid
+further updates if you do not have time.
+
+Webview changes
+----------------
+
+Qt 5 has dropped WebKit in favour of the Chromium-based WebEngine, so
+Anki's webviews are now using WebEngine. Of note:
+
+- You can now debug the webviews using an external Chrome instance, by setting
+  the env var QTWEBENGINE_REMOTE_DEBUGGING to 8080 prior to starting Anki,
+  then surfing to localhost:8080 in Chrome.
+- WebEngine uses a different method of communicating back to Python.
+  AnkiWebView() is a wrapper for webviews which provides a pycmd(str) function in
+  Javascript which will call the ankiwebview's onBridgeCmd(str) method. Various
+  parts of Anki's UI like reviewer.py and deckbrowser.py have had to be
+  modified to use this.
+- Javascript is evaluated asynchronously, so if you need the result of a JS
+  expression you can use ankiwebview's evalWithCallback().
+- As a result of this asynchronous behaviour, editor.saveNow() now requires a
+  callback. If your add-on performs actions in the browser, you likely need to
+  call editor.saveNow() first and then run the rest of your code in the callback.
+  Calls to .onSearch() will need to be changed to .search()/.onSearchActivated()
+  as well. See the browser's .deleteNotes() for an example.
+- Various operations that were supported by WebKit like setScrollPosition() now
+need to be implemented in javascript.
+- Page actions like mw.web.triggerPageAction(QWebEnginePage.Copy) are also
+asynchronous, and need to be rewritten to use javascript or a delay.
+- WebEngine doesn't provide a keyPressEvent() like WebKit did, so the code
+that catches shortcuts not attached to a menu or button has had to be changed.
+See the way reviewer.py calls setStateShortcuts() for an example.
