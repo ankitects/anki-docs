@@ -55,14 +55,14 @@ Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 Added a simple configuration mechanism for add-ons, intended for use when
 users would have previously had to edit an add-on's source code. Configuration
 is not lost when add-ons are updated. For more info, please see
-https://github.com/dae/anki/commit/737a8d934e8d3c20f4a24c268c94e421377893b2
+https://apps.ankiweb.net/docs/addons21.html#configuration
 
 Also:
 
 - Option for showing both sides in preview screen.
 - When a user starts Anki 2.1 for the first time, it will now import the profile data from Anki 2.0.
-- Add JS hooks to the reviewer for doing thins like automatic scrolling at the right time:
-https://github.com/dae/anki/commit/a96ddfc3fdc7f76835dc9fb221510851b2ee54b7
+- Add JS hooks to the reviewer for doing things like automatic scrolling at the right time:
+https://apps.ankiweb.net/docs/addons21.html#javascript-in-the-reviewer
 - Fix scrollbar appearing at certain DPI scales.
 - Fix 'clear flag' shortcut.
 - Add 'collection' and 'current deck' to the sidebar.
