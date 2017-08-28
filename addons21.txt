@@ -12,6 +12,10 @@ This document covers add-on writing for the (not yet released) Anki 2.1.x. For
 instructions on writing add-ons for Anki 2.0.x, please see
 https://apps.ankiweb.net/docs/addons.html
 
+= Translations =
+
+ * 日本語: http://rs.luminousspice.com/ankiaddons21/
+
 = Overview =
 
 Anki is written in a user-friendly language called Python. If you're not
