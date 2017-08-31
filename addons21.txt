@@ -257,12 +257,15 @@ for id, ivl in mw.col.db.execute("select id, ivl from cards limit 3"):
     showInfo("card id %d has ivl %d" % (id, ivl))
 -----
 
-Note that add-ons should never modify the tables in a collection, as that may
-break future versions of Anki. If you need to store plugin-specific data,
-please create a new table that is unlikely to conflict, or store the data in a
-separate file. For small configuration options, they can be stored within
-mw.col.conf, but please don't store large amounts of data there as it's copied
-on every sync.
+Add-ons should never modify the schema of existing tables, as that may
+break future versions of Anki.
+
+If you need to store addon-specific data, consider using Anki's
+<<configuration>> support.
+
+If you need the data to sync across devices, small options can be stored
+within mw.col.conf. Please don't store large amounts of data there, as
+it's sent on every sync.
 
 = Hooks =
 
@@ -532,6 +535,20 @@ In your add-on's code:
     config = mw.addonManager.getConfig(__name__)
     print("var is", config['myvar'])
 
+When updating your add-on, you can make changes to config.json. Any newly
+added keys will be merged with the existing configuration.
+
+If you change the value of existing keys in config.json, users who have
+customized their configuration will continue to see the old values unless they
+use the "restore defaults" button.
+
+If you need to programmatically modify the config, you can save your changes with:
+
+    mw.addonManager.writeConfig(__name__, config)
+
+NOTE: If no config.json file exists, getConfig() will return None - even if you have
+called writeConfig().
+
 Add-ons that manage options in their own GUI can have that GUI
 displayed when the config button is clicked:
 
@@ -647,6 +664,7 @@ program to open the .ui files and browse the GUI in a convenient way.
 And finally, it can also be extremely helpful to browse other add-ons to see
 how they accomplish something.
 
+[[sharing]]
 = Sharing Add-ons =
 
 AnkiWeb expects a .zip file of the contents of an add-on module, without
@@ -704,34 +722,55 @@ One add-on author reported that the following tool was useful to automatically
 convert the code:
 https://github.com/rferrazz/pyqt4topyqt5
 
-Compatibility with Anki 2.0
-----------------------------
-
-Most add-ons that affect the scheduler should require only minor changes to
-work on 2.1. Add-ons that alter the behaviour of the reviewer, browser or
-editor may require more work.
-
-If you previously distributed your add-on in a single .py file, it will now
-need to be zipped up as described in the 'sharing add-ons' section above.
-
 The Qt modules are in 'PyQt5' instead of 'PyQt4'. You can do a conditional
 import, but an easier way is to import from aqt.qt - eg
 
   from aqt.qt import *
 
+That will import all the Qt objects like QDialog without having to specify the
+Qt version.
+
+Single .py add-ons need their own folder
+----------------------------------------
+
+Each add-on is now stored in its own folder. If your add-on was previously
+called `demo.py`, you'll need to create a `demo` folder with an `__init__.py` file.
+
+If you don't care about 2.0 compatibility, you can just rename `demo.py` to
+`demo/__init__.py`.
+
+If you plan to support 2.0 with the same file, you can copy your original file
+into the folder (`demo.py` -> `demo/demo.py`), and then import it relatively
+by adding the following to `demo/__init__.py`:
+
+    from . import demo
+
+The folder needs to be zipped up when uploading to AnkiWeb. For more info,
+please see <<sharing,sharing add-ons>>.
+
+Supporting both 2.0 and 2.1 in one codebase
+--------------------------------------------
+
+Most Python 3 code will run on Python 2 as well, so it is possible to update
+your add-ons in such a way that they run on both Anki 2.0 and 2.1. Whether
+this is worth it depends on the changes you need to make.
+
+Most add-ons that affect the scheduler should require only minor changes to
+work on 2.1. Add-ons that alter the behaviour of the reviewer, browser or
+editor may require more work.
+
 The most difficult part is the change from the unsupported QtWebKit to
 QtWebEngine. If you do any non-trivial work with webviews, some work will be
-required to port your code to Anki 2.1, as described in the next section.
+required to port your code to Anki 2.1, and you may find it difficult to
+support both Anki versions in the one codebase.
 
-Most Python 3 code will run on Python 2 as well, so it is theoretically
-possible to update your add-ons in such a way that they run on both Anki 2.0
-and 2.1. Depending on what you're doing, you may be able to do this without
-any special code, or you may need to add some if statements to run separate
-codepaths. This may be more work than it is worth however. AnkiWeb now
-supports uploading separate files for 2.0.x and 2.1.x add-ons, so you may find
-it easier to copy your code, port it to 2.1, and then upload the ported copy
-separately. You can continue to update the 2.0.x code if you wish, or avoid
-further updates if you do not have time.
+If you find your add-on runs without modification, or requires only minor
+changes, you may find it easiest to add some if statements to your code and
+upload the same file for both 2.0.x and 2.1.x.
+
+If your add-on requires more significant changes, you may find it easier to
+stop providing updates for 2.0.x, or to maintain separate files for the two
+Anki versions.
 
 Webview Changes
 ----------------
