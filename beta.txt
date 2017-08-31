@@ -50,6 +50,20 @@ Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
 
+=== Changes in beta 15 ===
+
+- Look for changed media files when syncing, even if no files have been added
+or removed. If you have many media files and notice a slowdown when syncing,
+please let me know.
+- A fix for the UI sometimes loading improperly.
+- Various improvements to the tag completion area (thanks to Glutanimate).
+- Hotkey for "show both sides" in preview window (thanks to Glutanimate).
+- Fix margins in preferences screen.
+- Some fixes for the add-on configuration code.
+- Don't strip formatting when pasting from one field in Anki to another.
+- Check Media now catches invalid filenames on Linux systems.
+- Fix toggling of suspend etc when multiple cards selected.
+
 === Changes in beta 14 ===
 
 Added a simple configuration mechanism for add-ons, intended for use when
