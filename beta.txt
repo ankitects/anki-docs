@@ -35,6 +35,21 @@ any existing ones you have installed.
 If you're an add-on author, you can read more about the required changes on
 https://apps.ankiweb.net/docs/addons21.html
 
+== Video drivers ==
+
+If you run into crashes or black screens, your video drivers may be to blame.
+On Linux, please try start the beta with the following:
+
+    QT_OPENGL=software bin/anki
+
+On Windows, please try opening cmd.exe, and typing the following
+
+    cd ""\program files (x86)\anki"
+    set QT_OPENGL=angle bin/anki
+    anki
+
+If that doesn't help, replace 'angle' with 'software' and try again.
+
 == Problems ==
 
 If you run into any issues, please let us know on the beta testing section of
