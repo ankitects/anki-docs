@@ -84,6 +84,9 @@ ID as the folder name, such as:
 Anki will also place a meta.json file in the folder, which keeps track of the
 original add-on name, when it was downloaded, and whether it's enabled or not.
 
+You should not store user data in the add-on folder, as it's
+<<configuration,deleted when the user upgrades an add-on>>.
+
 = A Simple Add-On =
 
 Add the following to `my_first_addon/__init__.py` in your add-ons folder:
@@ -555,6 +558,15 @@ displayed when the config button is clicked:
 
     mw.addonManager.setConfigAction(__name__, myOptionsFunc)
 
+If you need to store user data in external files, avoid storing the files in
+the add-on folder, as they will be lost when the user upgrades the add-on. One
+alternative would be to store files in the documents folder:
+
+    os.path.join(
+      QStandardPaths.writableLocation(
+        QStandardPaths.DocumentsLocation),
+      "myfile.data")
+
 [[reviewjs]]
 = Javascript in the reviewer =
 
@@ -748,6 +760,13 @@ by adding the following to `demo/__init__.py`:
 
 The folder needs to be zipped up when uploading to AnkiWeb. For more info,
 please see <<sharing,sharing add-ons>>.
+
+Folders are deleted when upgrading
+-----------------------------------
+
+Avoid storing user data in your add-on's folder, as the folder is deleted when
+users download an update. Consider using the new <<configuration,config API>>
+or the documents folder instead.
 
 Supporting both 2.0 and 2.1 in one codebase
 --------------------------------------------
