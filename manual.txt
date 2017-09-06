@@ -1600,6 +1600,18 @@ manually add the fields you wish to appear.
 NOTE: It is not currently possible to use a hint field for audio -- the audio
 will play regardless of whether you've clicked on the hint link.
 
+If you want to customize the appearance or behaviour, you'll need to implement
+the hint field yourself. We can not provide any support for doing so, but the
+following code should get you started:
+
+-----
+{{#Back}}
+﻿<a class=hint href="#"
+onclick="this.style.display='none';document.getElementById('hint4753594160').style.display='inline-block';return false;">
+Show Back</a><div id="hint4753594160" class=hint style="display: none">{{Back}}</div>
+{{/Back}}
+-----
+
 [[specialfields]]
 == Special Fields ==
 
