@@ -1848,6 +1848,10 @@ note types are generated differently:
    \{\{c1::text}}.
  * For each separate number, a card will be generated.
 
+Because card generation functions differently for cloze deletion cards,
+\{\{cloze:...}} tags can not be used with a regular note type - they will only
+function properly when used with a cloze note type.
+
 Conditional generation provides a special field so you can check which card
 you are rendering. If you wanted to display the "hint1" field on the first
 cloze, and "hint2" field on the second cloze for example, you could use the
