@@ -65,6 +65,52 @@ Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
 
+=== Changes in beta 16 ===
+
+MathJax display environments now need to start with `\[` and end with `\\]`,
+instead of using `$$`. Shortcut keys have been added to the editor to make
+using these easier, but existing MathJax cards will need to be updated
+unfortunately.
+
+Backups and collection exports now use a separate .colpkg file extension,
+which allows translating of their titles and allow multiple collection exports
+to be stored in one folder. The other clients will be updated to understand
+these extensions in the future; for now if you need to interact with them, you
+can rename the file.
+
+Also:
+
+- Fixed backups not being made correctly on some systems.
+- Fixed old backups not expiring. Anki will only look for .colpkg files now,
+so you will need to manually remove your old .apkg backups.
+- Collection exporting and saving graphs to PDF now lets you choose the target
+folder, and the default folder is now the documents folder instead of the
+desktop.
+- Fix the preferences screen loading slowly, opening multiple times, and not
+closing when the collection is closed.
+- Fix preview window not closing on collection close.
+- Fix inability to preview the answer of the last card.
+- Cloze deletions should now properly remove highlighting only when in a
+MathJax environment.
+- Add-ons now have a persistent user_files folder - please see the add-on docs.
+- Tweak margins in deck options.
+- Fix searches for decks with parens in the name.
+- Fix Anki interface displaying incorrectly when Windows has an incorrect mime
+type for css files.
+- Tweaks to the text displayed when an error occurs.
+- The "oldest seen first" option in filtered decks now sorts based on last
+review instead of card modification time.
+- The prepareQuestion/prepareAnswer hooks have been merged into prepareQA -
+please see the add-on docs.
+- Don't force audio format on Windows - please let me know if you encounter
+regressions playing audio.
+- Clicking on a note type in the browser now searches with the name instead of
+the note type ID.
+- Refuse to run when locale configured incorrectly on Linux.
+- Fix remaining issues with formatting being lost when cutting and copying
+between fields.
+- Remove the trailing `<br>` when saving a field.
+
 === Changes in beta 15 ===
 
 - Look for changed media files when syncing, even if no files have been added

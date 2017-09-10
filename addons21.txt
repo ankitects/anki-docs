@@ -558,14 +558,22 @@ displayed when the config button is clicked:
 
     mw.addonManager.setConfigAction(__name__, myOptionsFunc)
 
-If you need to store user data in external files, avoid storing the files in
-the add-on folder, as they will be lost when the user upgrades the add-on. One
-alternative would be to store files in the documents folder:
+Avoid key names starting with an underscore - they are reserved for future use
+by Anki.
 
-    os.path.join(
-      QStandardPaths.writableLocation(
-        QStandardPaths.DocumentsLocation),
-      "myfile.data")
+[[userfiles]]
+= User Files =
+
+When your add-on needs configuration data other than simple keys and values,
+it can use a special folder called user_files in the root of your add-on's
+folder. Any files placed in this folder will be preserved when the add-on is
+upgraded. All other files in the add-on folder are removed on upgrade.
+
+To ensure the user_files folder is created for the user, you can put a
+README.txt or similar file inside it before zipping up your add-on.
+
+When Anki upgrades an add-on, it will ignore any files in the .zip that
+already exist in the user_files folder.
 
 [[reviewjs]]
 = Javascript in the question and answer =
@@ -797,9 +805,10 @@ please see <<sharing,sharing add-ons>>.
 Folders are deleted when upgrading
 -----------------------------------
 
-Avoid storing user data in your add-on's folder, as the folder is deleted when
-users download an update. Consider using the new <<configuration,config API>>
-or the documents folder instead.
+When an add-on is upgraded, all files in the add-on folder are deleted. The
+only exception is the special <<userfiles,user_files folder>>. If your add-on
+requires more than simple key/value configuration, make sure you store the
+associated files in the user_files folder, or it will be lost on upgrade.
 
 Supporting both 2.0 and 2.1 in one codebase
 --------------------------------------------
