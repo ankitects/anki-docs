@@ -110,6 +110,7 @@ the note type ID.
 - Fix remaining issues with formatting being lost when cutting and copying
 between fields.
 - Remove the trailing `<br>` when saving a field.
+- Fixed translations in dialog buttons.
 
 === Changes in beta 15 ===
 
