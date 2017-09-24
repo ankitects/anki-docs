@@ -514,10 +514,10 @@ standard module that is not included with Anki, you'll need to bundle it with
 your add-on.
 
 This only works with pure Python modules - modules that require C extensions
-such as numpy will not work when bundled, since your modules will not match
-the architecture Anki was packaged on. If you're doing something
-sophisticated, you'll need to get your users to install a standalone copy of
-Python instead.
+such as numpy are much more difficult to package, as you would need to compile
+them for each of the operating systems Anki supports. If you're doing something
+sophisticated, it would be easier to get your users to install a standalone
+copy of Python instead.
 
 [[configuration]]
 = Configuration =
