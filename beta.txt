@@ -65,6 +65,28 @@ Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
 
+=== Changes in beta 17 ===
+
+This release experiments with a switch from the old "mplayer" program to
+"mpv", which is a newer program based on mplayer. mpv is bundled in the
+Windows and Mac builds - Linux users will need to ensure it is available on
+the system. The change will hopefully address issues people had with audio
+being cut off or not playing properly. Please report any improvements and
+any regressions.
+
+Also:
+
+- Added --lodpi argument in an attempt to address wrong clickboxes for some
+people on Windows. If Anki suggests you use it, please right click on the Anki
+icon and add --lodpi to the command line, then start Anki again. Please report
+if it fixes or does not fix the problems.
+- Another fix for MathJax+cloze deletion.
+- Ignore math environments outside of MathJax tags.
+- Fix a problem starting Anki on systems with non-Latin hostnames.
+- Add shortcuts to the advanced menu in the editor.
+- Fix text:Field not stripping HTML if it was split over multiple lines.
+- Fix filenames not being normalized when importing.
+
 === Changes in beta 16 ===
 
 MathJax display environments now need to start with `\[` and end with `\\]`,
