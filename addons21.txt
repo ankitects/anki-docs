@@ -861,7 +861,8 @@ need to be implemented in javascript.
 asynchronous, and need to be rewritten to use javascript or a delay.
 - WebEngine doesn't provide a keyPressEvent() like WebKit did, so the code
 that catches shortcuts not attached to a menu or button has had to be changed.
-See the way reviewer.py calls setStateShortcuts() for an example.
+setStateShortcuts() fires a hook that can be used to adjust the shortcuts for
+a given state.
 
 Reviewer Changes
 ----------------
