@@ -37,10 +37,10 @@ https://apps.ankiweb.net/docs/addons21.html
 
 == Video drivers ==
 
-If you run into crashes or black screens, your video drivers may be to blame.
-On Linux, please try start the beta with the following:
+If you run into crashes or black screens, your video drivers (such as nouveau)
+may be to blame. On Linux, please try start the beta with the following:
 
-    QT_OPENGL=software bin/anki
+    QT_XCB_FORCE_SOFTWARE_OPENGL=1 bin/anki
 
 On Windows, please try opening cmd.exe, and typing the following
 
@@ -64,6 +64,14 @@ You can get the latest beta from https://apps.ankiweb.net/downloads/beta/
 Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
+
+=== Changes in beta 18 ===
+
+- If mpv is unavailable or too old, use mplayer instead.
+- Remove "unexpected DPI" message and --lodpi option; tweak handling of scaling.
+- Don't show album artwork when playing audio.
+- Increase the default number of backups, and stop sending them to the recycling bin.
+- Show field numbers in the Fields dialog.
 
 === Changes in beta 17 ===
 
