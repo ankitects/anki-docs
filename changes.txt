@@ -13,7 +13,8 @@
 Released 2017-10-11.
 
 Built with an updated Python version, that fixes some issues add-ons were
-having accessing secure sites.
+having accessing secure sites. Due to regressions with the Linux build, this
+version is only available for Windows and Mac.
 
 = Changes in 2.0.47 =
 
