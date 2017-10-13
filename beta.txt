@@ -65,6 +65,12 @@ Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
 
+=== Changes in beta 20 ===
+
+- Probable fix for intermittent startup error on Windows.
+- Fix 'not responding' process on macOS.
+- Don't capture media keys.
+
 === Changes in beta 19 ===
 
 Built with the recently released Qt 5.9.2. Please report any improvements or
