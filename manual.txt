@@ -3629,25 +3629,29 @@ is recommended.
 Running from a Flash Drive
 --------------------------
 
-Anki can be installed on a USB / flash drive and run as a portable application:
+On Windows, Anki can be installed on a USB / flash drive and run as a portable
+application. The following example assumes your USB drive is drive G.
 
  * Copy the \Program Files\Anki folder to the flash drive, so you have a
    folder like G:\Anki.
  * Create a text file called G:\anki.bat with the following text:
 
 -----
-anki\anki.exe -b \ankidata
+g:\anki\anki.exe -b g:\ankidata
 -----
 
 If you would like to prevent the black command prompt window from remaining
 open, you can instead use:
 
 -----
-start /b anki\anki.exe -b \ankidata
+start /b g:\anki\anki.exe -b g:\ankidata
 -----
 
  * Double-clicking on anki.bat should start Anki with the user data stored in
    G:\ankidata.
+
+NOTE: The full path including drive letter is required - if you try using
+`\anki\anki.exe` instead you will find syncing stops working.
 
 NOTE: Media syncing with AnkiWeb may not work if your flash drive is formatted
 as FAT32. Please format the drive as NTFS to ensure media syncs correctly.
