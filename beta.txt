@@ -81,6 +81,10 @@ Also:
 - Filter out background and font style when pasting between fields.
 - Don't leave a .wav file around when recording.
 - Drop support for experimental 'new style whitespace' handling.
+- Fix inability to paste link to .aspx file.
+- Fix media check not detecting media references in cloze deletions.
+- Ctrl+d can be used in the tag selector of custom study to deselect all tags.
+- Fix link to _anki.png in template not working.
 
 === Changes in beta 20 ===
 
