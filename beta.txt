@@ -65,6 +65,23 @@ Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
 
+=== Changes in beta 21 ===
+
+Pasting now strips more by default, such as links, headers and tables. Holding
+down the shift key while pasting will reduce the level of filtering.
+
+Also:
+
+- Pasting a link to an image or sound hosted on a HTTPS website should no longer fail.
+- Fix the question audio replaying when answer shown.
+- Make sure the interface is disabled while progress/sync bar displayed.
+- Fix error when undoing then immediately hitting enter on a type answer card.
+- Fix missing styling when answer revealed too quickly.
+- Fix shift+tab in the editor on macOS.
+- Filter out background and font style when pasting between fields.
+- Don't leave a .wav file around when recording.
+- Drop support for experimental 'new style whitespace' handling.
+
 === Changes in beta 20 ===
 
 - Probable fix for intermittent startup error on Windows.
