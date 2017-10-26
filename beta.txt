@@ -65,6 +65,12 @@ Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
 
+=== Changes in beta 22 ===
+
+- Fix hang when copying and pasting between fields.
+- Strip excess whitespace when pasting external content, which was breaking
+cloze deletions.
+
 === Changes in beta 21 ===
 
 Pasting now strips more by default, such as links, headers and tables. Holding
