@@ -65,6 +65,10 @@ Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
 
+=== Changes in beta 23 ===
+
+- Fix field contents not persisting when dragging media files onto field.
+
 === Changes in beta 22 ===
 
 - Fix hang when copying and pasting between fields.
