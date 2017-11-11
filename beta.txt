@@ -65,6 +65,14 @@ Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
 
+=== Changes in beta 24 ===
+
+- Fix stuttering when more than one audio file on a card on Windows.
+- Fix broken image links when pasting between fields.
+- Don't import styling changes if the local note type has been modified more recently.
+- Fix errors when pressing keys quickly after a sync started.
+- Fix startup crashes on some Linux distros.
+
 === Changes in beta 23 ===
 
 - Fix field contents not persisting when dragging media files onto field.
