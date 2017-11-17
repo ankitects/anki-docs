@@ -67,8 +67,10 @@ Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 === Changes in beta 25 ===
 
-This release ensures that Anki will convert remote image links when pasting
-into local ones, even if the link doesn't end with a recognizable extension.
+This release ensures that when pasting remote image links, they will be
+converted into local images even if the link doesn't end with a recognizable
+extension.
+
 If a search for 'http' in your collection reveals remote images, you can use
 https://ankiweb.net/shared/info/1293255374 to turn them into local images.
 
