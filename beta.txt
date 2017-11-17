@@ -65,6 +65,19 @@ Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
 
+=== Changes in beta 25 ===
+
+This release ensures that Anki will convert remote image links when pasting
+into local ones, even if the link doesn't end with a recognizable extension.
+If a search for 'http' in your collection reveals remote images, you can use
+https://ankiweb.net/shared/info/1293255374 to turn them into local images.
+
+Also:
+
+- Catch errors when pasting, and time out after 30 seconds.
+- Fix errors after deleting a deck with a subdeck that was the default deck.
+- Fix an error when pasting images that had previously been downloaded.
+
 === Changes in beta 24 ===
 
 - Fix stuttering when more than one audio file on a card on Windows.
