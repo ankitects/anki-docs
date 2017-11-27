@@ -2,7 +2,7 @@
  <link type="text/css" rel="stylesheet" href="/css/jquery.tocify.css"/>
  <script src="/js/jquery.min.js"></script>
  <script src="/js/jquery-ui-1.10.2.custom.min.js"></script>
- <script src="/js/jquery.tocify.min.js"></script>
+ <script src="/js/jquery.tocify.js"></script>
  <script>
      function hashGen(str, elem) {
          var val = str.replace(/[?!'"]/g, "-");
@@ -21,13 +21,20 @@
      }
 
      $(function () {
- $("#toc").tocify({hashGenerator: hashGen, theme: "none", selectors: "h2,h3"});
+ $("#toc").tocify({hashGenerator: hashGen, theme: "none", selectors: "h2,h3", showAndHide: false });
  });
  </script>
+
+<style>
+@media(max-width:768px) {
+  #toc { position: static; padding-top: 1em; }
+}
+</style>
+
 </%block>
 
 <div class="row-fluid">
-<div class="span4 hidden-phone" id="toc"></div>
+<div class="span4" id="toc"></div>
 <div class="span8 offset4">
 <style>
 .monospaced { font-family: monospace; background-color: #eee; padding-left:
