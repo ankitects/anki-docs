@@ -50,6 +50,24 @@ On Windows, please try opening cmd.exe, and typing the following
 
 If that doesn't help, replace 'angle' with 'software' and try again.
 
+Users on a 32 bit Windows install will need to use "program files" instead of
+"program files (x86)".
+
+== Scaling issues ==
+
+If you find the text is the wrong size or parts of the interface are clipped
+off, there are two environmental variables you can try:
+
+- ANKI_NOHIGHDPI=1 will turn off some of Qt's high dpi support
+- ANKI_WEBSCALE=1 will alter the scale of Anki's web views (like the deck
+list, study screen, etc), while leaving interface elements like the menu bar
+alone. Replace 1 with the desired scale, such as 1.5 or 2.
+
+Please see the above section for how to set environmental variables.
+
+If you find you need either of these environmental variables, please report on
+the beta testing site below.
+
 == Problems ==
 
 If you run into any issues, please let us know on the beta testing section of
@@ -64,6 +82,15 @@ You can get the latest beta from https://apps.ankiweb.net/downloads/beta/
 Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
+
+=== Changes in beta 26 ===
+
+- Added some environmental variables to control UI scaling - they are documented above.
+- Faster syncs when you have a lot of media and no media changes were made
+since the last sync.
+- Allow importing of files from recent Mnemosyne versions.
+- A translations fix (thanks to Piotr, and all the other people who have been
+contributing translations).
 
 === Changes in beta 25 ===
 
