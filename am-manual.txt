@@ -745,7 +745,7 @@ By editing the card styling section in the computer version, it is possible to c
 If you wanted a grey background instead of black, you could use something like:
 
 -----
-body.nightMode { background-color: #555; }
+.card.nightMode { background-color: #555; }
 -----
 
 If you have a 'myclass' style, the following would show the text in yellow when night mode is enabled:
