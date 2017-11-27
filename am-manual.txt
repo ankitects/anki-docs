@@ -294,7 +294,7 @@ The syncing screen allows you to customize cloud synchronization with AnkiWeb.
 For more information on syncing with the cloud, please see <<ankiweb,this
 section>>.
 
-Download Media :: By default, AnkiMobile will sync sounds and images as well
+Sync Sounds & Images :: By default, AnkiMobile will sync sounds and images as well
 as your cards and review history. If you disable this option, sounds and
 images will not be synced by AnkiMobile.
 Full Sync :: The full sync button allows you to force a full upload or
@@ -305,7 +305,7 @@ given a choice of whether you want to upload your collection or download it from
 AnkiWeb. Please note this option only affects how cards, notes and review
 history is transferred - it does not change how sounds and images are synced.
 
-== Review ==
+== Review: General ==
 
 The review screen allows you to customize how AnkiMobile behaves when you're
 reviewing cards.
@@ -323,6 +323,8 @@ next be shown. If you disable this option, labels like "Again", "Good" and
 "Easy" will be shown instead.
 Remaining Count :: Allows you to hide the card count, while still showing the
 answer buttons when the answer is shown.
+Feedback Ticks :: Flash a tick or cross in the top right to confirm your
+answer choice.
 Audio Buttons :: Allows you to hide the play button that appears for each
 audio file you've placed on the card. Useful if you'd rather replay audio via
 the "Replay Audio" action bound to a swipe or tap.
@@ -341,9 +343,10 @@ device inconvenient, you can use this option to disable the keyboard for all
 cards.
 Shake Action :: Allows you to customize what happens when you shake your
 device. The default action is to undo the previous answer.
+Scratchpad Pen Size :: The size of the line drawn on the scratchpad.
 
 [[scheduling]]
-=== Scheduling Options ===
+== Review: Scheduling Options ==
 
 These options affect the way Anki schedules cards in all decks.
 
@@ -357,7 +360,7 @@ remaining to review with a next repetition time in the future. The default is
 immediately if nothing else is available to show.
 
 [[actions]]
-=== Actions ===
+== Review: Actions ==
 
 AnkiMobile allows you to customize the interface, so that actions you perform
 frequently can be accomplished quickly. It's possible to assign actions to
@@ -410,13 +413,13 @@ Edit :: Edits the current card.
 
 Empty :: Removes all cards from the current filtered deck.
 
-Find:: Lets you search/browse your cards.
-
-Forget :: Turn the current card back into a new card.
-
 Filter/Cram:: Allows you to create a temporary deck based on search criteria such as
 "tag:hard". Please see the documentation of the computer version for more
 information on filtered decks.
+
+Find:: Lets you search/browse your cards.
+
+Forget :: Turn the current card back into a new card.
 
 Mark :: Adds a tag called "Marked" the current note, so it can be easily found
 in a search.
@@ -443,15 +446,22 @@ after a configurable number of days delay.
 
 Show Answer :: Reveals the answer when a card's question is shown.
 
+Study Options :: Show the study options screen.
+
 Suspend Card :: Prevent current card from being shown during review until you
 unsuspend it via the search action.
 
 Suspend Note:: Prevent all cards of current note from being shown during
 review until you unsuspend them via the search action.
 
-Tools :: Show the tools screen.
-
 Toggle Nav. Bar :: Show or hide the status bar and navigation bar at the top.
+If you've accidentally hidden the navigation bar, you can restore it by
+swiping from the far right of the study screen towards the left, then tap on
+More, then Toggle Nav. Bar.
+
+Toggle Night Mode :: Show cards as white text on a black background. The
+styling can be <<nightmode-styling,customized>> in the computer version. This
+action requires AnkiMobile 2.0.36 or later.
 
 Toggle ScratchPad :: Show or hide the writing pad, allowing you to
 practice writing characters during review. Anki will remember the on/off state
@@ -460,13 +470,15 @@ hold on it for a second to clear all strokes. On devices that support pressure
 sensitivity (iPhone 6S, iPad w/ Apple Pencil), the stroke width will depend on
 how hard you press.
 
+Tools :: Show the tools screen.
+
 Unbury Deck :: Makes any buried cards in the current deck ready for review
 again.
 
 Undo :: Undoes the last action.
 
 [[taps]]
-=== Taps ===
+== Review: Taps ==
 
 When you're reviewing, you can tap on different parts of a card in order to
 trigger different actions.
@@ -523,7 +535,7 @@ With the default settings:
  * Swiping right returns to the deck list
 
 [[toolbuttons]]
-=== Tool Buttons ===
+== Review: Tool Buttons ==
 
 In the middle of the tools screen, AnkiMobile displays 8 buttons for commonly
 used operations. By default, the actions are:
@@ -540,7 +552,7 @@ For descriptions of what each action does, please see the <<actions,action
 descriptions>> above.
 
 [[quickbar]]
-=== Quickbar ===
+== Review: Quickbar ==
 
 When studying, the middle buttons at the top of the screen are called the
 'quickbar'. By default they allow you to add cards, edit the current card,
@@ -647,11 +659,9 @@ differences:
  * There is no note type selection button or deck selection button. If you
    want to change the type of an existing note or which deck it's in, you
    currently need to do so with the computer version of Anki.
- * There are two extra buttons at the bottom of the screen. The middle button
-   allows you to perform various actions on the current card or note. Please
-   see the <<actions,action descriptions>> for more information on what each
+ * There is a "Tools" button at the top of the screen. Tapping on it will allow you to perform actions on the current card or note.
+   Please see the <<actions,action descriptions>> for more information on what each
    action does.
- * The trash icon allows you to delete the current note and all its cards.
 
 = Finding/Searching/Browsing =
 
@@ -726,6 +736,23 @@ Please note that AnkiMobile has to load the entire font into memory in order
 to use it, and fonts for Asian languages can be quite large. If you have an
 older device and notice AnkiMobile crashing frequently after installing a
 font, you may have exceeded your device's memory limits.
+
+[[nightmode-styling]]
+== Night Mode Styling ==
+
+By editing the card styling section in the computer version, it is possible to customize how cards appear when night mode is enabled.
+
+If you wanted a grey background instead of black, you could use something like:
+
+-----
+body.nightMode { background-color: #555; }
+-----
+
+If you have a 'myclass' style, the following would show the text in yellow when night mode is enabled:
+
+-----
+.nightMode .myclass { color: yellow; }
+-----
 
 == URL schemes ==
 
