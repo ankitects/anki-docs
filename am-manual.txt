@@ -802,6 +802,13 @@ If a field you provide is a link to an image or audio file, AnkiMobile will auto
 
  fldFront=http://example.com/image.jpg
 
+The link will only be downloaded if it ends with a recognized file extension.
+If your link is to a dynamic webpage, you can add a fake argument with the
+extension at the end, eg
+http://example.com/getImage?imgID=1234&fakePath=foo.jpg. Be careful to escape
+the URL before including it in the URL scheme, as otherwise ? and & characters
+will be interpreted as part of the URL scheme instead of the URL.
+
 === Dictionary Links ===
 
 The desktop version of Anki provides the ability to open a web page based on
