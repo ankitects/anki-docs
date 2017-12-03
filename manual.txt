@@ -4470,6 +4470,13 @@ If you find a string that you're unsure how to translate, or would like to
 start a discussion with fellow native speakers on the best way to translate
 something, please feel free to start a thread in the Anki forums.
 
+If the language already appears in Anki's preferences screen, updates you make
+will automatically be included in future Anki releases.
+
+If the language is not currently visible in Anki's preferences screen, please
+post on our support site and request that the language you've translated be
+added to the list.
+
 Any translations that were made at least a few hours before a new Anki release
 are automatically included in the next release. Entirely new languages need to
 be added manually, so please contact us if that applies to your translation. If
