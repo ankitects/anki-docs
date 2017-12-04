@@ -92,6 +92,8 @@ https://apps.ankiweb.net/docs/am-manual.html#night-mode-styling
 - Play any audio on the question as well when 'show both sides' enabled in preview window.
 - Fix the focus being lost when add-ons like Japanese Support change field contents.
 - Force text to wrap instead of showing a scroll bar.
+- Added Catalan translation (thanks to Guillem), and other translation updates
+thanks to other contributors.
 
 === Changes in beta 26 ===
 
