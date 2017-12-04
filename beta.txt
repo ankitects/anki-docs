@@ -83,6 +83,16 @@ Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
 
+=== Changes in beta 27 ===
+
+- Added an option to switch cards to white on black text in the preferences
+screen. To customize, see
+https://apps.ankiweb.net/docs/am-manual.html#night-mode-styling
+- Prevents shortcuts in the editor from triggering an error when no field selected.
+- Play any audio on the question as well when 'show both sides' enabled in preview window.
+- Fix the focus being lost when add-ons like Japanese Support change field contents.
+- Force text to wrap instead of showing a scroll bar.
+
 === Changes in beta 26 ===
 
 - Added some environmental variables to control UI scaling - they are documented above.
