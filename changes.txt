@@ -1186,10 +1186,6 @@ location, so that Anki 2 can find it.
 
 == Decks & Profiles ==
 
-++++++++++
-<img src="img/1-decks.png" width=341 height=318 style="float:right;margin:1em;">
-++++++++++
-
  * Instead of storing each deck in a separate file, Anki now stores all of
    your decks in a single file called a 'collection'. This makes it easy to
    move cards between decks, and different decks can now share models and
@@ -1233,10 +1229,6 @@ location, so that Anki 2 can find it.
    product of the number of new cards and reviews that are done each day.
 
 == Shared Decks ==
-
-++++++++++
-<img src="img/2-overview.png" style="float:right; margin: 1em;">
-++++++++++
 
  * Shared decks can now be browsed on AnkiWeb, and downloaded from your browser.
  * You can now rate and comment on shared decks.
@@ -1310,10 +1302,6 @@ per-lesson basis when you're ready to study them. You could do it like this:
    the order cards of different types will be mixed together, and so on.
 
 == Scheduling ==
-
-++++++++++
-<img src="img/3-review.png" style="float:right; margin: 1em;">
-++++++++++
 
  * Anki has a much-improved learning mode. When new cards are introduced or
    old cards forgotten, they can now be shown over a number of increasing
@@ -1417,9 +1405,6 @@ per-lesson basis when you're ready to study them. You could do it like this:
 
 == The Browser ==
 
-++++++++++
-<img src="img/4-browsing.png" style="float:right; margin: 1em;">
-++++++++++
 
  * Tags and decks are displayed in a panel on the left, and can be clicked to
    search for. Hold down ctrl or command while clicking to append the item to
@@ -1466,9 +1451,6 @@ per-lesson basis when you're ready to study them. You could do it like this:
 
 == Card Layout ==
 
-++++++++++
-<img src="img/5-templates.png">
-++++++++++
 
  * In Anki 1.2, {{ field }} references were automatically wrapped in style
    information. This meant that the prompt text and field text of a template
@@ -1574,9 +1556,6 @@ per-lesson basis when you're ready to study them. You could do it like this:
 
 == Graphs and Stats ==
 
-++++++++++
-<img src="img/6-graphs.png"  style="float:right; margin: 1em;">
-++++++++++
 
  * The deck statistics and graphs have been merged into a single report that
    contains both text and graphs, and they have been completely rewritten in
