@@ -2,7 +2,7 @@
  <link type="text/css" rel="stylesheet" href="/css/jquery.tocify.css?ts=1"/>
  <script src="/js/jquery.min.js"></script>
  <script src="/js/jquery-ui-1.10.2.custom.min.js"></script>
- <script src="/js/jquery.tocify.js"></script>
+ <script src="/js/jquery.tocify.js?ts=1"></script>
  <script>
      function hashGen(str, elem) {
          var val = str.replace(/[?!'"]/g, "-");
