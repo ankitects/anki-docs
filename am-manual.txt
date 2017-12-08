@@ -94,11 +94,11 @@ If you don't have regular internet access, it's still possible to copy decks
 back and forth to your device, by using iTunes.
 
 The iTunes import/export works by importing or exporting *all your decks at
-once*, in a special file called collection.apkg. This means that unlike syncing
-via AnkiWeb, you can't make changes from
-two locations at once and then merge them - you need to make sure you've imported
-any recent changes from your other device before you make changes, or you'll
-end up losing the changes made on one device.
+once*, in a special file called collection.apkg or .colpkg. This means that
+unlike syncing via AnkiWeb, you can't make changes from two locations at once
+and then merge them - you need to make sure you've imported any recent changes
+from your other device before you make changes, or you'll end up losing the
+changes made on one device.
 
 Thus the workflow you would typically use is to export your collection from
 your mobile device and import it into the computer version, make modifications
@@ -116,17 +116,16 @@ On your computer:
  . Open the computer version of Anki.
  . Choose File>Export from the menu.
 
- . Click the 'Export...' button. Make sure to leave "all decks" selected, as
- it's not possible to import individual decks into AnkiMobile. "Include
- scheduling information" must also remain checked.
- . Anki will automatically create a collection.apkg on your desktop. If the
-   file is named something else, please see the previous step again.
+ . Click the 'Export...' button. Make sure to leave "all decks" selected, and
+   "Include scheduling information" must also remain checked.
+ . Anki will automatically create a collection.apkg or .colpkg file on your desktop. If the
+   file is named something else like 'deckname.apkg', please see the previous step again.
  . Connect your Apple device to your computer via the USB cable, or wi-fi
 if you have wi-fi syncing set up in iTunes.
  . Open iTunes if it doesn't open automatically.
  . Locate Anki's file sharing section with
    http://support.apple.com/kb/HT4094[Apple's instructions].
- . Drag the collection.apkg file from your desktop into iTunes.
+ . Drag the collection.apkg or .colpkg file from your desktop into iTunes.
  . Click the sync button inside iTunes.
 
 Then in AnkiMobile, in the deck list screen:
@@ -139,9 +138,9 @@ Then in AnkiMobile, in the deck list screen:
 Once complete, the decks on your device will have been replaced with the decks
 from your desktop.
 
-When you import a collection.apkg file, Anki will avoid copying any sounds or
-images if they already exist on your mobile device, and are the same file
-size. This will make imports after the first one considerably faster if you
+When you import a collection.apkg or .colpkg file, Anki will avoid copying any
+sounds or images if they already exist on your mobile device, and are the same
+file size. This will make imports after the first one considerably faster if you
 have a lot of media files.
 
 === From mobile device to computer ===
@@ -157,8 +156,10 @@ Then on your computer:
  . Open iTunes if it doesn't open automatically.
  . Locate Anki's file sharing section with
    http://support.apple.com/kb/HT4094[Apple's instructions].
- . Drag the collection.apkg file from iTunes to your desktop.
- . Double-click on the file to start Anki.
+ . Drag the collection.apkg or .colpkg file from iTunes to your desktop.
+ . If the file ends with .colpkg, rename the file to 'collection.apkg'. This
+   step is not required if you're using the Anki 2.1 beta builds.
+ . Use File>Import in Anki to import the collection.apkg file.
  . Confirm you wish to replace, so that the deck from your mobile device
    overwrites the old data on your desktop.
  . After importing, you can delete the file on your desktop if you wish.
