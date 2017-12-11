@@ -72,15 +72,20 @@ AnkiWeb in the past, you can skip this step.
  . Visit https://ankiweb.net and click the *Sign Up* button.
  . Type in your email address and a password of your choice.
 
-Once the signup is complete, return to your computer, and simply click the
-synchronization button at the top right of the Anki window - it has two arrows
-in a circle. Anki will upload all your cards, images and audio to AnkiWeb. If
-you have a lot of media, this may take some time.
+If you have decks on your computer and would like them to be synced to AnkiMobile:
 
-Once the synchronization has completed, return to your mobile device, and tap
-*Synchronize* at the bottom of the screen. After entering your email and password,
-AnkiMobile will download all your cards and media, and remember your login
-information for next time.
+ . Open the computer version and click the sync button at the top right of the Anki window.
+ . If prompted to upload or download, choose 'upload' to send your cards to AnkiWeb.
+ . Tap Synchronize in AnkiMobile and then 'download' to grab the cards from AnkiWeb.
+
+If you have decks in your phone/iPad and would like them to be synced to the computer version:
+
+ . Tap Synchronize in AnkiMobile and then 'upload' to send the cards to AnkiWeb.
+ . Open the computer version and click the sync button at the top right of the Anki window.
+ . If prompted to upload or download, choose 'download' to grab your cards from AnkiWeb.
+
+If you have a lot of sounds or images on your cards, the first sync may take
+some time.
 
 After the first synchronization has completed, you can click the synchronize
 button again any time you wish to synchronize your changes to the cloud. Only
