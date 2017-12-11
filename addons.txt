@@ -15,7 +15,7 @@ https://apps.ankiweb.net/docs/addons21.html
 = Translations =
 
  * 日本語: http://rs.luminousspice.com/anki2addons/
- * по-русски: http://finpapa.ucoz.ru/ankitest-addons.html
+ * по-русски: http://finpapa.ucoz.ru/ankitest-addons.html#addons20
 
 = Overview =
 
