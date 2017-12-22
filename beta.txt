@@ -83,6 +83,15 @@ Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
 
+=== Changes in beta 28 ===
+
+- Added a right-click context menu to the browser card list.
+- Work around pops in the start of audio recordings.
+- Add the ability to disable certificate verification via add-on.
+- Add an option for add-ons to add buttons to the editor that are always active.
+- Refuse to run on Qt 5.10, due to current issues.
+- The cloze note type now defaults to an easier to see colour in night mode.
+
 === Changes in beta 27 ===
 
 - Added an option to switch cards to white on black text in the preferences
