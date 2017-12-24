@@ -83,6 +83,12 @@ Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
 
+=== Changes in beta 29 ===
+
+- Fix a packaging bug that was breaking the filtered deck screen.
+- Fix sound references with ampersands (thanks to Artem)
+- Use fixed margins in review screen instead of being dependent on font size.
+
 === Changes in beta 28 ===
 
 - Added a right-click context menu to the browser card list.
