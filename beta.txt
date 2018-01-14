@@ -83,6 +83,23 @@ Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
 
+=== Changes in beta 31 ===
+
+This build contains experimental scheduling changes that are not enabled by
+default. For more information, please see
+https://anki.tenderapp.com/kb/anki-ecosystem/experiment-scheduling-changes-in-anki-21
+
+- The Windows build has been switched back to mplayer, due to current issues with the mpv code.
+- The Windows installer now installs the desktop and start menu shortcuts for all users.
+- Change the way the progress dialog is implemented, which should fix some issues. Please report any regressions.
+- Tweak reviewer margins.
+- Fix CSV import error (thanks to Carl)
+- Make it easier for add-ons to override review context menu (thanks to dubiousjim)
+
+=== Changes in beta 30 ===
+
+See beta 31.
+
 === Changes in beta 29 ===
 
 - Fix a packaging bug that was breaking the filtered deck screen.
