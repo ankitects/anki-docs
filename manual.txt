@@ -3737,9 +3737,9 @@ but it's still possible for your collection to become corrupt if the files are
 modified while Anki is open, stored on a network drive, or corrupted by a bug.
 
 When you run Tools>Check Database, you will receive a message if Anki detects
-the file has been corrupted. The best way to recover from this is to restore
-from the most recent automatic backup, but if your backup is too old, then you
-can attempt to repair the corruption instead.
+the file has been corrupted. *The best way to recover from this is to restore
+from the most recent <<backups,automatic backup>>*, but if your backup is too
+old, then you can attempt to repair the corruption instead.
 
 On Linux, make sure sqlite3 is installed. On a Mac, it should be installed
 already. On Windows, download http://www.sqlite.org/sqlite-3_6_23.zip.
