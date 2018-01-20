@@ -83,6 +83,14 @@ Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
 
+=== Changes in beta 32 ===
+
+- Fix audio issues on Windows.
+- Be tolerant of invalid characters stored in notes by previous Anki versions.
+- Updates for the experimental scheduler. If you're testing the experimental
+scheduler, please disable it prior to upgrading, and enable it again after
+upgrading.
+
 === Changes in beta 31 ===
 
 This build contains experimental scheduling changes that are not enabled by
