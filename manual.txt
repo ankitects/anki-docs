@@ -4298,7 +4298,7 @@ add-ons page, linked below.
 When asked to enter text into the "debug console", please start Anki, and in the
 main window, press
 
-Ctrl+Shift+
+Ctrl+Shift+;
 
 (the control key, shift key, and semi-colon key at the same time)
 
