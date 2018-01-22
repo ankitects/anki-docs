@@ -83,6 +83,11 @@ Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
 
+=== Changes in beta 33 ===
+
+- Fix preferences screen failing to load.
+- Fix for the experimental scheduler.
+
 === Changes in beta 32 ===
 
 - Fix audio issues on Windows.
