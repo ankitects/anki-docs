@@ -83,6 +83,13 @@ Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
 
+=== Changes in beta 34 ===
+
+- Fixed error when unburying.
+- Preserve newlines when pasting text.
+- Fix field searches with _ character.
+- Preserve ordered lists when pasting.
+
 === Changes in beta 33 ===
 
 - Fix preferences screen failing to load.
