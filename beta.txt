@@ -83,6 +83,11 @@ Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
 
+=== Changes in beta 35 ===
+
+- Updates to the experimental scheduler.
+- Fix for not being able to drop some items into Anki fields.
+
 === Changes in beta 34 ===
 
 - Fixed error when unburying.
