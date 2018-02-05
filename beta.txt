@@ -83,6 +83,16 @@ Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
 
+=== Changes in beta 36 ===
+
+- Show average answer time in today stats.
+- Raise profile window when it appears on MacOS.
+- Fix "find duplicates" window scrolling to top when link clicked.
+- Catch more problems with corrupt collections.
+- Check the shift key when paste begins, not after images have been fetched.
+- Skip progress window when pasting local links.
+- Fix importing of colpkg files made with experimental scheduler.
+
 === Changes in beta 35 ===
 
 - Updates to the experimental scheduler.
