@@ -873,6 +873,21 @@ Some dictionary apps publish their URL scheme in their documentation. If
 you're using a dictionary app that doesn't, please contact the authors and ask
 them for more information.
 
+== MathJax ==
+
+AnkiMobile supports MathJax out of the box like the computer 2.1 beta releases.
+Simply place something like the following on your card:
+
+----
+This is some text \(x^2\) with an inline equation.
+----
+
+----
+An equation block:
+
+\[\sqrt{-1}\]
+----
+
 == Javascript ==
 
 The https://apps.ankiweb.net/docs/manual.html#javascript[warnings] that apply
