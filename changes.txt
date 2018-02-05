@@ -8,6 +8,14 @@
  * http://finpapa.ucoz.ru/ankitest-changes.html[по-русски] 
 
 [[latest]]
+= Changes in 2.0.49 =
+
+Released 2018-02-05.
+
+The standard Mac build is now 64 bit, which should prevent warnings in future
+macOS updates. If you're on an older machine that is 32 bit only, you'll need
+to switch to the alternate build.
+
 = Changes in 2.0.48 =
 
 Released 2017-10-11.
