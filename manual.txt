@@ -406,7 +406,7 @@ content you are learning. The standard note types are as follows:
  moon in 1969”). More information is available in the <<cloze,cloze deletion>>
  section.
 
-To add your own note types and modify existing ones, you can use Tools > Manage
+To add your own note types and modify existing ones, you can use Tools -> Manage
 Note Types from the main Anki window.
 
 NOTE: Notes and note types are common to your whole collection rather than
