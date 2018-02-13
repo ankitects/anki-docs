@@ -406,8 +406,8 @@ content you are learning. The standard note types are as follows:
  moon in 1969”). More information is available in the <<cloze,cloze deletion>>
  section.
 
-To add your own note types and modify existing ones, you can use Tools → Manage
-Note Types.
+To add your own note types and modify existing ones, you can use Tools > Manage
+Note Types from the main Anki window.
 
 NOTE: Notes and note types are common to your whole collection rather than
 limited to an individual deck. This means you can use many different types of
@@ -569,13 +569,13 @@ the front to the back, except by laboriously copying and pasting it for every
 note. By keeping content in separate fields, you make it much easier to adjust
 the layout of your cards in the future.
 
-To create a new type of note, choose Tools -> Manage Note Types. Then click
-“Add” to add a new type of note. You'll now see another screen that gives you a
-choice of note types to base the new type on. “Add” means to base the newly
-created type on one that comes with Anki. “Clone” means to base the newly
-created type on one that is already in your collection. For instance, if you’d
-created a French vocab type already, you might want to clone that when creating
-a German vocab type.
+To create a new type of note, choose Tools -> Manage Note Types from the main
+Anki window. Then click “Add” to add a new type of note. You'll now see
+another screen that gives you a choice of note types to base the new type on.
+“Add” means to base the newly created type on one that comes with Anki.
+“Clone” means to base the newly created type on one that is already in your
+collection. For instance, if you’d created a French vocab type already, you
+might want to clone that when creating a German vocab type.
 
 After choosing OK, you’ll be asked to name the new type. The subject material
 you’re studying is a good choice here – things like “Japanese”, ”Trivia”, and
