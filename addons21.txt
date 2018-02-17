@@ -184,11 +184,13 @@ file = u"/path/to/text.txt"
 # select deck
 did = mw.col.decks.id("ImportDeck")
 mw.col.decks.select(did)
-# set note type for deck
+# anki defaults to the last note type used in the selected deck
 m = mw.col.models.byName("Basic")
 deck = mw.col.decks.get(did)
 deck['mid'] = m['id']
 mw.col.decks.save(deck)
+# and puts cards in the last deck used by the note type
+m['did'] = did
 # import into the collection
 ti = TextImporter(mw.col, file)
 ti.initMapping()
