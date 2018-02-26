@@ -3023,10 +3023,10 @@ It is also possible to move all cards back to their home decks at once:
    removes the emptied deck from the deck list. No cards are deleted when you
    delete a filtered deck.
 
-NOTE: In the current implementation, if you empty or delete a filtered deck
-while cards are still in learning, they will be turned back into new cards. In
-the case of failed reviews in relearning, any remaining relearning steps will be
-skipped.
+NOTE: In the current implementation, if you create, rebuild, empty or delete a
+filtered deck while cards are still in learning, they will be turned back into
+new cards. In the case of failed reviews in relearning, any remaining relearning
+steps will be skipped.
 
 == Creating Manually ==
 
