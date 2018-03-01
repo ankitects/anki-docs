@@ -83,6 +83,18 @@ Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
 
+=== Changes in beta 37 ===
+
+- Fix some files being detected as changed when they hadn't been on macOS High Sierra.
+- On new installs, sibling burying now defaults to off, and the daily review limit defaults to 200.
+- Load add-ons in a consistent order.
+- Fix error when closing browser appearance screen.
+- Ignore the note deletion shortcut when the card list area is not focused.
+- Fix quotes being imported as HTML entities in text import.
+- Don't show 'delete unused' button when there are no unused media files.
+- Fix a 'C++ object has been deleted' message.
+- If the clipboard is locked by another process, show an error message.
+
 === Changes in beta 36 ===
 
 - Show average answer time in today stats.
