@@ -35,7 +35,7 @@ any existing ones you have installed.
 If you're an add-on author, you can read more about the required changes on
 https://apps.ankiweb.net/docs/addons21.html
 
-== Video drivers ==
+== Crashes and black screens ==
 
 If you run into crashes or black screens, your video drivers (such as nouveau)
 may be to blame. On Linux, please try start the beta with the following:
