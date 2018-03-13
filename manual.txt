@@ -3672,11 +3672,15 @@ Automatic backups do not protect against disk or computer failure, and do not
 extend to your media. To keep your collections safe, please consider making
 manual backups too.
 
-The easiest way to take a manual backup is to back up your entire Anki folder.
-Please make sure you close Anki first, as backups may be corrupt if run while
-Anki is open.
+The easiest way to make a manual backup is to use the File>Export menu item
+to export all decks with scheduling and media information included, which will
+save your data to an .apkg/.colpkg file.
 
-To restore from a backup:
+If you want to back up multiple profiles and your add-ons as well, you can
+make a complete copy of your <<files,Anki folder>>. Please make sure you close
+ Anki first, as backups may be corrupt if run while Anki is open.
+
+To restore from an automatic backup:
 
  . First create a copy of your backups folder, as each time you close Anki it
    deletes the oldest backup, and if you're trying different backup files you
