@@ -8,6 +8,13 @@
  * http://finpapa.ucoz.ru/ankitest-changes.html[по-русски] 
 
 [[latest]]
+= Changes in 2.0.51 =
+
+Released 2018-03-26.
+
+Windows-only release that works around a toolkit bug that was causing ping spikes
+every ten seconds for some Windows users.
+
 = Changes in 2.0.50 =
 
 Released 2018-03-08.
