@@ -14,8 +14,8 @@ Released 2018-03-26.
 
 Windows-only release that works around a toolkit bug that was causing ping spikes
 every ten seconds for some Windows users. If upgrading from a previous version,
-please uninstall the previous version prior to installing 2.0.51, or it will
-not address the problem.
+please uninstall the previous version prior to installing 2.0.51. Uninstalling
+will not delete your user data.
 
 = Changes in 2.0.50 =
 
