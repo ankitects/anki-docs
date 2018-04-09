@@ -45,7 +45,7 @@ may be to blame. On Linux, please try start the beta with the following:
 On Windows, please try opening cmd.exe, and typing the following
 
     cd "\program files (x86)\anki"
-    set QT_OPENGL=angle bin/anki
+    set QT_OPENGL=angle
     anki
 
 If that doesn't help, replace 'angle' with 'software' and try again.
