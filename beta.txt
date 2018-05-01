@@ -53,6 +53,11 @@ If that doesn't help, replace 'angle' with 'software' and try again.
 Users on a 32 bit Windows install will need to use "program files" instead of
 "program files (x86)".
 
+== Experimental scheduler ==
+
+Recent betas contain an optional experimental scheduler:
+https://anki.tenderapp.com/kb/anki-ecosystem/experiment-scheduling-changes-in-anki-21
+
 == Scaling issues ==
 
 If you find the text is the wrong size or parts of the interface are clipped
@@ -68,6 +73,17 @@ Please see the above section for how to set environmental variables.
 If you find you need either of these environmental variables, please report on
 the beta testing site below.
 
+== SSL errors ==
+
+Some work and school networks intercept your internet traffic, and this can
+cause errors when syncing and downloading add-ons. You can prevent the errors
+from occurring by setting the environmental variable "ANKI_NOVERIFYSSL" to "1".
+
+When you enable this option, you are telling Anki not to verify that it is
+actually talking with AnkiWeb. This means that not only your work or school,
+but also a bad actor on the local network may be able to intercept your
+syncing traffic.
+
 == Problems ==
 
 If you run into any issues, please let us know on the beta testing section of
@@ -82,6 +98,34 @@ You can get the latest beta from https://apps.ankiweb.net/downloads/beta/
 Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
+
+=== Changes in beta 38 ===
+
+The experimental scheduler can now be enabled from the preferences screen, and
+warnings about data loss have been relaxed somewhat. It is still only
+recommended for advanced users at this point.
+
+Also:
+
+- Add the missing 'custom steps' section back to the filtered deck options
+when using the regular scheduler.
+- Fixes for dragging and pasting images from web browsers.
+- Fix pastes with the middle mouse button on Linux.
+- When switching to a different window and then back to the Anki editor,
+the cursor position is no longer moved to the bottom of the field.
+- Fix a field getting overwritten when showing duplicates, and catch similar errors.
+- Restore focus to Anki window after video finishes playing.
+- Fix busy cursor in full sync screen.
+- Add space to 'waiting for editing' screen.
+- Check uploads doesn't exceed AnkiWeb limits.
+- Added an option to disable certificate validation - see "SSL errors" above.
+- Fix a "c++ object has been deleted" error message.
+- For add-on authors, pycmd() can now return a value.
+- Wording tweaks in find duplicates screen (thanks to homocomputeris)
+- Ensure mpv doesn't stay open (thanks to Dudemanguy911)
+- Support non-Latin text in config.md (thanks to ljcooke)
+- Fix the debug key shortcut on some keyboards (thanks to glutanimate)
+- Tweaks to the makefile (thanks to dsd)
 
 === Changes in beta 37 ===
 
