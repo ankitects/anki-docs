@@ -107,7 +107,7 @@ recommended for advanced users at this point.
 
 Also:
 
-- Add the missing 'custom steps' section back to the filtered deck options
+- Add the missing "custom steps" section back to the filtered deck options
 when using the regular scheduler.
 - Fixes for dragging and pasting images from web browsers.
 - Fix pastes with the middle mouse button on Linux.
@@ -116,8 +116,8 @@ the cursor position is no longer moved to the bottom of the field.
 - Fix a field getting overwritten when showing duplicates, and catch similar errors.
 - Restore focus to Anki window after video finishes playing.
 - Fix busy cursor in full sync screen.
-- Add space to 'waiting for editing' screen.
-- Check uploads doesn't exceed AnkiWeb limits.
+- Add space to "waiting for editing" screen.
+- Check uploads don't exceed AnkiWeb limits.
 - Added an option to disable certificate validation - see "SSL errors" above.
 - Fix a "c++ object has been deleted" error message.
 - For add-on authors, pycmd() can now return a value.
