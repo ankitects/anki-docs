@@ -99,6 +99,13 @@ Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
 
+=== Changes in beta 39 ===
+
+- Fixed sound tags causing freezes on Windows when users had mpv.exe
+from a previous install lying around.
+- Fixed a previously pasted image appearing instead of pasted/dropped text or
+links. The previous behaviour may also have been responsible for crashes.
+
 === Changes in beta 38 ===
 
 The experimental scheduler can now be enabled from the preferences screen, and
