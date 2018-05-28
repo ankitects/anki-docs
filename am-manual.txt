@@ -899,6 +899,26 @@ A/BUTTON elements, or elements that have an onclick handler should work as you
 expect. Adding click handlers to other nodes with addEventListener() will not
 work properly, as AnkiMobile can't detect event listeners on elements.
 
+== Furigana ==
+
+When combining the furigana/kanji/kana filters provided by the Japanese support
+add-on with cloze or hint fields, the cloze or hint fields must come second
+in your template.
+
+The following will work for example:
+
+-----
+{{furigana:cloze:Text}}
+{{kanji:hint:HintField}}
+-----
+
+The following will not
+
+-----
+{{cloze:Furigana:Text}}
+{{hint:furigana:HintField}}
+-----
+
 == Debug Log ==
 
 If you're encountering a problem with Anki and we've asked you to provide
