@@ -901,7 +901,7 @@ work properly, as AnkiMobile can't detect event listeners on elements.
 
 == Furigana ==
 
-When combining the furigana/kanji/kana filters provided by the Japanese support
+When combining the furigana/kanji/kana filters provided by the Japanese Support
 add-on with cloze or hint fields, the cloze or hint fields must come second
 in your template.
 
@@ -912,7 +912,7 @@ The following will work for example:
 {{kanji:hint:HintField}}
 -----
 
-The following will not
+The following will not:
 
 -----
 {{cloze:Furigana:Text}}
