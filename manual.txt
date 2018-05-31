@@ -3300,6 +3300,17 @@ a two line answer"
 two; this is a one line one
 -----
 
+Because quotes are used to mark where a field begins and ends, if you wish to
+include them inside your field, you need to replace a single doublequote
+with two doublequotes to "escape" them from the regular handling, like so:
+
+-----
+field one;"field two with ""escaped quotes"" inside it"
+-----
+
+When you use a spreadsheet program like Libreoffice to create the CSV file for
+you, it will automatically take care of escaping double quotes.
+
 *Use HTML new lines*:
 
 -----
