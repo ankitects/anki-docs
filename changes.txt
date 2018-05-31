@@ -8,6 +8,13 @@
  * http://finpapa.ucoz.ru/ankitest-changes.html[по-русски] 
 
 [[latest]]
+= Changes in 2.0.52 =
+
+Released 2018-05-31.
+
+Fixed a bug that could cause cards in relearning to be scheduled incorrectly when they're
+imported into a different collection.
+
 = Changes in 2.0.51 =
 
 Released 2018-03-26.
