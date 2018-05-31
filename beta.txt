@@ -103,6 +103,7 @@ Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 - Fixed a bug that could cause cards in relearning to be scheduled incorrectly when they're imported into a different collection.
 - Fixed reviews with the experimental scheduler showing up as relearning in the stats.
+- Performance improvements for users with many decks.
 - Changed stats shortcut key.
 - Attempt to restore the previous active window when mpv finishes playing a video.
 - Friendly error when internet down.
