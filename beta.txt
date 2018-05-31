@@ -99,6 +99,18 @@ Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
 
+=== Changes in beta 40 ===
+
+- Fixed a bug that could cause cards in relearning to be scheduled incorrectly when they're imported into a different collection.
+- Fixed reviews with the experimental scheduler showing up as relearning in the stats.
+- Changed stats shortcut key.
+- Attempt to restore the previous active window when mpv finishes playing a video.
+- Friendly error when internet down.
+- Fixed cloze number not incrementing properly if you made a cloze deletion
+directly after an edit (thanks to dlon).
+- Fixed handling of fonts with spaces in their names on Linux (thanks to Mark).
+- Added Armenian translation (thanks to Arman).
+
 === Changes in beta 39 ===
 
 - Fixed sound tags causing freezes on Windows when users had mpv.exe
