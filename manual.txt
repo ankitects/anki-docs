@@ -2829,18 +2829,18 @@ remove individual cards, as individual cards are controlled by the
 Find and Replace
 ----------------
 
-This option (Edit>Find and Replace) allows you to replace text in the cards you
-have selected. The regular expression option allows you to perform complex
-replacements. For example, given the following text on a card:
+This option (Edit->Find and Replace...) allows you to replace text in the notes
+you have selected. The regular expression option allows you to perform complex
+replacements. For example, given the following text in a field:
 
 -----
-<img src="pic.jpg">
+<img src="pic.jpg" />
 -----
 
 Searching for:
 
 -----
-<img src="(.+)">
+<img src="(.+?)" />
 -----
 
 And replacing with the regexp:
