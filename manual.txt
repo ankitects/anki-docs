@@ -2840,7 +2840,7 @@ replacements. For example, given the following text in a field:
 Searching for:
 
 -----
-<img src="(.+?)" />
+<img src="(.+?)"(?: /)?>
 -----
 
 And replacing with the regexp:
