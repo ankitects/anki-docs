@@ -35,14 +35,21 @@ any existing ones you have installed.
 If you're an add-on author, you can read more about the required changes on
 https://apps.ankiweb.net/docs/addons21.html
 
-== Crashes and black screens ==
+== Experimental scheduler ==
 
-If you run into crashes or black screens, your video drivers (such as nouveau)
-may be to blame. On Linux, please try start the beta with the following:
+Recent betas contain an optional experimental scheduler:
+https://anki.tenderapp.com/kb/anki-ecosystem/experiment-scheduling-changes-in-anki-21
+
+== Crashes and display issues ==
+
+If you run into crashes, black screens, or a missing menubar, your video
+drivers may be to blame.
+
+On *Linux*, please try start the beta with the following:
 
     QT_XCB_FORCE_SOFTWARE_OPENGL=1 bin/anki
 
-On Windows, please try opening cmd.exe, and typing the following
+On *Windows*, please try opening cmd.exe, and typing the following
 
     cd "\program files (x86)\anki"
     set QT_OPENGL=angle
@@ -53,15 +60,10 @@ If that doesn't help, replace 'angle' with 'software' and try again.
 Users on a 32 bit Windows install will need to use "program files" instead of
 "program files (x86)".
 
-== Experimental scheduler ==
+== Text size ==
 
-Recent betas contain an optional experimental scheduler:
-https://anki.tenderapp.com/kb/anki-ecosystem/experiment-scheduling-changes-in-anki-21
-
-== Scaling issues ==
-
-If you find the text is the wrong size or parts of the interface are clipped
-off, there are two environmental variables you can try:
+If you find the text is the wrong size, there are two environmental variables
+you can try:
 
 - ANKI_NOHIGHDPI=1 will turn off some of Qt's high dpi support
 - ANKI_WEBSCALE=1 will alter the scale of Anki's web views (like the deck
@@ -69,9 +71,6 @@ list, study screen, etc), while leaving interface elements like the menu bar
 alone. Replace 1 with the desired scale, such as 1.5 or 2.
 
 Please see the above section for how to set environmental variables.
-
-If you find you need either of these environmental variables, please report on
-the beta testing site below.
 
 == SSL errors ==
 
