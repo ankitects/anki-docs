@@ -13,7 +13,7 @@ h4 { margin-bottom: 0.5em; margin-top: 1em; }
 == At a glance ==
 
 - Uses the same scheduling, syncing and file format as Anki 2.0.x, so you can upgrade and downgrade at will.
-- Upgraded to the latest support libraries (Python 3, Qt 5.9), bringing fixes for crashes, better handling of high resolution displays, non-Latin text, and the latest web standards.
+- Upgraded to the latest support libraries (Python 3.6, Qt 5.9), bringing fixes for crashes, better handling of high resolution displays, non-Latin text, and the latest web standards.
 - Requires a modern system - Windows 7+, OSX 10.10+, or a Linux distro from around 2014+.
 - Add-ons will need to be updated to work with 2.1.
 
@@ -97,6 +97,15 @@ You can get the latest beta from https://apps.ankiweb.net/downloads/beta/
 Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
+
+=== Changes in beta 41 ===
+
+- The experimental scheduler no longer applies any interval boost for delayed
+cards that are answered Hard.
+- Fix cards being imported incorrectly when the target deck is a filtered deck.
+- Preserve scroll position in deck browser when expanding/contracting decks.
+- Fix multi-line cloze deletions not being detected correctly.
+- Tabs and newlines now preserved when pasting with ctrl/cmd+shift+v.
 
 === Changes in beta 40 ===
 
