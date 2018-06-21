@@ -750,7 +750,8 @@ font, you may have exceeded your device's memory limits.
 [[nightmode-styling]]
 == Night Mode Styling ==
 
-By editing the card styling section in the computer version, it is possible to customize how cards appear when night mode is enabled.
+By using the Edit Card Template action, it is possible to customize how cards
+appear when night mode is enabled.
 
 If you wanted a grey background instead of black, you could use something like:
 
@@ -896,8 +897,11 @@ to the computer version also apply to AnkiMobile.
 In addition to the above, another thing to be aware of in AnkiMobile is that
 your code also needs to play nicely with AnkiMobile's tap detection. Taps on
 A/BUTTON elements, or elements that have an onclick handler should work as you
-expect. Adding click handlers to other nodes with addEventListener() will not
-work properly, as AnkiMobile can't detect event listeners on elements.
+expect.
+
+If you have other elements that must receive tap events, give them
+the class 'tappable' to tell AnkiMobile 2.0.39 or later that it should pass taps
+through to the element.
 
 == Furigana ==
 
@@ -912,11 +916,26 @@ The following will work for example:
 {{kanji:hint:HintField}}
 -----
 
-The following will not:
+The following will not work in AnkiMobile before 2.0.39:
 
 -----
 {{cloze:Furigana:Text}}
-{{hint:furigana:HintField}}
+-----
+
+== Image Resizing ==
+
+When you attach an image from the photo gallery it is automatically resized
+to have a maximum length of 1024 along its longest edge.
+
+As of 2.0.39, you can customize this limit. For example, to set it to 2048,
+run the following in the computer version's
+https://apps.ankiweb.net/docs/manual.html#debug-console[debug console] then
+sync to AnkiMobile:
+
+-----
+mw.col.conf["amImageMaxSize"] = 2048
+mw.col.setMod()
+mw.col.save()
 -----
 
 == Debug Log ==
