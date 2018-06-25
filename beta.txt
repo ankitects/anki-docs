@@ -98,6 +98,12 @@ Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
 
+=== Changes in beta 42 ===
+
+- Fix suspended leeches reappearing in the experimental scheduler.
+- Fix card info dialog not remembering size.
+- Fix an issue with reporting errors when collection not open.
+
 === Changes in beta 41 ===
 
 - The experimental scheduler no longer applies any interval boost for delayed
