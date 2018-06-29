@@ -10,8 +10,7 @@ ___________________________
 = Help & Bugs =
 
 There's a dedicated https://anki.tenderapp.com/[support site] for
-questions, suggestions and bug reports. I monitor the site on a daily basis,
-and also employ someone to help answer questions.
+questions, suggestions and bug reports.
 
 = Introduction =
 
@@ -20,10 +19,14 @@ continue without your support, so it is greatly appreciated.
 
 As mentioned on the app store page, AnkiMobile is currently intended to be
 used in conjunction with Anki on your computer. While it is possible to
-download shared decks, study, and edit the content of your notes, card layout
-is currently only possible on the computer version. While this is expected
-to change over time, for now please ensure you have access to a computer in
-order to perform some of the operations mentioned below.
+download shared decks, study, and edit the content of your notes, certain
+actions are currently only possible on the computer version. While this is
+expected to change over time, for now please ensure you have access to a
+computer in order to perform some of the operations mentioned below.
+
+Some basic concepts covered in the
+https://apps.ankiweb.net/docs/manual.html[computer manual] are not repeated
+here, so please check it out if you have not already done so.
 
 = Searching =
 
