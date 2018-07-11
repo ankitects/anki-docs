@@ -951,8 +951,6 @@ a debug log, please follow the following steps:
  . Locate Anki's file sharing section with
    http://support.apple.com/kb/HT4094[Apple's instructions].
  . Drag the debug.log file on to your desktop, then attach it to your support ticket.
- . If a debug.mdb file is there too, and you're having issues with syncing,
-   please include that file as well.
 
 pass:[
 <hr>
