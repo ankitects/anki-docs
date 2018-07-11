@@ -98,6 +98,21 @@ Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
 
 == Detailed changes ==
 
+=== Changes in beta 43 ===
+
+- In the standard scheduler, filtered decks will now ignore cards in learning
+when they are built.
+- The "cram all cards" option in custom study has been divided into
+separate "cram review cards" and "preview all cards" options - the former
+has rescheduling turned on.
+- Experimental scheduler changes:
+** Card counts are no longer capped to 1000 when a deck is selected.
+** The hard factor (120% by default) can now be customized in the deck options.
+** Increase the bonus easy cards receive when reviewing early.
+- Avoid reordering existing cards when importing a text file (thanks to Mai)
+- Detect when a proxy is breaking Anki's interface.
+- Fix media check not picking up some media in cloze deletions.
+
 === Changes in beta 42 ===
 
 - Fix suspended leeches reappearing in the experimental scheduler.
