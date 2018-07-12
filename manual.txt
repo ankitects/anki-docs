@@ -2556,6 +2556,8 @@ to change it to %40, like so:
 http://user%40workdomain.com:pass@proxy.company.com:8080
 -----
 
+NOTE: Anki 2.1 expects to find HTTPS_PROXY instead of HTTP_PROXY.
+
 To set environmental variables on Windows, please see
 https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/sysdm_advancd_environmnt_addchange_variable.mspx?mfr=true
 
