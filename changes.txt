@@ -7,6 +7,81 @@
  * http://rs.luminousspice.com/changeinanki2/[日本語]
  * http://finpapa.ucoz.ru/ankitest-changes.html[по-русски] 
 
+[[v21]]
+= Changes in Anki 2.1 =
+
+== Translations ==
+
+ * на русском языке: http://finpapa.ucoz.ru/ankitest-beta.html
+
+== At a glance ==
+
+- Anki 2.1 uses the same scheduling, syncing and file format as Anki 2.0.x, so you can upgrade and downgrade at will.
+- It's built with recent support libraries (Python 3.6, Qt 5.9), bringing fixes for crashes, better handling of high resolution displays, non-Latin text, and the latest web standards.
+- It requires a modern system - Windows 7+, OSX 10.10+, or a Linux distro from around 2014+.
+- Add-ons will need to be updated to work with 2.1.
+
+== Add-ons ==
+
+Add-ons need to be updated to work with Anki 2.1.
+https://ankiweb.net/shared/addons/2.1[Some add-ons] have already been updated;
+others have not been ported yet.
+
+When you install 2.1, it will create a separate folder for add-ons, and not
+import any existing ones you have installed.
+
+If you're an add-on author, you can read more about the required changes on
+https://apps.ankiweb.net/docs/addons21.html
+
+== Experimental scheduler ==
+
+Anki 2.1 contains an optional,
+https://anki.tenderapp.com/kb/anki-ecosystem/experiment-scheduling-changes-in-anki-21[experimental scheduler]. The experimental scheduler is not compatible with
+older Anki versions.
+
+== Crashes and display issues ==
+
+If you run into crashes, black screens, or a missing menubar, your display
+drivers may be to blame.
+
+On *Linux*, please try start Anki with the following:
+
+    QT_XCB_FORCE_SOFTWARE_OPENGL=1 bin/anki
+
+On *Windows*, please try opening cmd.exe, and typing the following
+
+    cd "\program files (x86)\anki"
+    set QT_OPENGL=angle
+    anki
+
+If that doesn't help, replace 'angle' with 'software' and try again.
+
+Users on a 32 bit Windows install will need to use "program files" instead of
+"program files (x86)".
+
+== Text size ==
+
+If you find the text is the wrong size, there are two environmental variables
+you can try:
+
+- ANKI_NOHIGHDPI=1 will turn off some of Qt's high dpi support
+- ANKI_WEBSCALE=1 will alter the scale of Anki's web views (like the deck
+list, study screen, etc), while leaving interface elements like the menu bar
+alone. Replace 1 with the desired scale, such as 1.5 or 2.
+
+Please see the above section for how to set environmental variables.
+
+== SSL errors ==
+
+Some work and school networks intercept your internet traffic, and this can
+cause errors when syncing and downloading add-ons. You can prevent the errors
+from occurring by setting the environmental variable "ANKI_NOVERIFYSSL" to "1".
+
+When you enable this option, you are telling Anki not to verify that it is
+actually talking with AnkiWeb. This means that not only your work or school,
+but also a bad actor on the local network may be able to intercept your
+syncing traffic.
+
 [[latest]]
 = Changes in 2.0.52 =
 

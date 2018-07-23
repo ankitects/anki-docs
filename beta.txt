@@ -6,82 +6,14 @@ h4 { margin-bottom: 0.5em; margin-top: 1em; }
 
 = Anki 2.1 Beta =
 
-== Translations ==
-
- * на русском языке: http://finpapa.ucoz.ru/ankitest-beta.html
-
 == At a glance ==
 
-- Uses the same scheduling, syncing and file format as Anki 2.0.x, so you can upgrade and downgrade at will.
-- Upgraded to the latest support libraries (Python 3.6, Qt 5.9), bringing fixes for crashes, better handling of high resolution displays, non-Latin text, and the latest web standards.
-- Requires a modern system - Windows 7+, OSX 10.10+, or a Linux distro from around 2014+.
-- Add-ons will need to be updated to work with 2.1.
+Please see https://apps.ankiweb.net/docs/changes.html#v21 for a high-level
+summary of changes.
 
-== Stability ==
+== Downloads ==
 
-You can be fairly confident the beta will not eat your data. 2.1 has been in
-alpha status for the last year as we waited for toolkit issues to be resolved,
-and we have not had any reports of data loss during that time. It's still a
-good idea to make backups however - please use File>Export to export 'all
-decks' with scheduling and media included before you upgrade, and consider
-doing it periodically after upgrading as well.
-
-== Add-ons ==
-
-Most add-ons will need to be updated before they'll work with Anki 2.1. When
-you install 2.1, it will create a separate folder for add-ons, and not import
-any existing ones you have installed.
-
-If you're an add-on author, you can read more about the required changes on
-https://apps.ankiweb.net/docs/addons21.html
-
-== Experimental scheduler ==
-
-Recent betas contain an optional experimental scheduler:
-https://anki.tenderapp.com/kb/anki-ecosystem/experiment-scheduling-changes-in-anki-21
-
-== Crashes and display issues ==
-
-If you run into crashes, black screens, or a missing menubar, your video
-drivers may be to blame.
-
-On *Linux*, please try start the beta with the following:
-
-    QT_XCB_FORCE_SOFTWARE_OPENGL=1 bin/anki
-
-On *Windows*, please try opening cmd.exe, and typing the following
-
-    cd "\program files (x86)\anki"
-    set QT_OPENGL=angle
-    anki
-
-If that doesn't help, replace 'angle' with 'software' and try again.
-
-Users on a 32 bit Windows install will need to use "program files" instead of
-"program files (x86)".
-
-== Text size ==
-
-If you find the text is the wrong size, there are two environmental variables
-you can try:
-
-- ANKI_NOHIGHDPI=1 will turn off some of Qt's high dpi support
-- ANKI_WEBSCALE=1 will alter the scale of Anki's web views (like the deck
-list, study screen, etc), while leaving interface elements like the menu bar
-alone. Replace 1 with the desired scale, such as 1.5 or 2.
-
-Please see the above section for how to set environmental variables.
-
-== SSL errors ==
-
-Some work and school networks intercept your internet traffic, and this can
-cause errors when syncing and downloading add-ons. You can prevent the errors
-from occurring by setting the environmental variable "ANKI_NOVERIFYSSL" to "1".
-
-When you enable this option, you are telling Anki not to verify that it is
-actually talking with AnkiWeb. This means that not only your work or school,
-but also a bad actor on the local network may be able to intercept your
-syncing traffic.
+You can get the latest beta from https://apps.ankiweb.net/downloads/beta/
 
 == Problems ==
 
@@ -90,13 +22,19 @@ our support site:
 
 https://anki.tenderapp.com/discussions/beta-testing
 
-== Downloads ==
-
-You can get the latest beta from https://apps.ankiweb.net/downloads/beta/
-
-Use .exe for Windows, .dmg for Mac, and .bz2 for Linux.
-
 == Detailed changes ==
+
+=== Changes in 2.1.0rc1 ===
+
+- Fix field text not being saved when typing in the Windows IME.
+- Select current card when Browse screen appears.
+- Select current template when opening the Cards screen from Study>Edit.
+- Fix focus being changed when playing audio.
+- Remember file selector dialog state.
+- Leave space after deck:current in search screen.
+- Fix an issue with reverting to the V1 scheduler.
+- Don't create a broken file when aborting export of single deck with
+V2 sched.
 
 === Changes in beta 43 ===
 
