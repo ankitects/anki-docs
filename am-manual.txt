@@ -837,10 +837,6 @@ Like the desktop, AnkiMobile supports links to dictionary websites. In
 addition to that, you can also link to different dictionary apps that you have
 installed on your device using a URL scheme.
 
-NOTE: When tapping on a dictionary link, holding down your finger for a little
-longer than you usually tap to advance to the next card will ensure the tap is
-treated as a tap on the link and not a tap to advance.
-
 Some dictionary apps provide a URL scheme that allows you to provide a
 particular phrase to search for. For example, an app called iDict+ allows the
 following type of URL:
