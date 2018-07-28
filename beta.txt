@@ -24,6 +24,23 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.0rc2 ===
+
+This build disables hardware graphics acceleration on Windows and Linux by
+default. Please report on the beta thread if you notice any difference in
+performance or experience any problems. Hardware acceleration can be
+optionally enabled: https://apps.ankiweb.net/docs/changes.html#hwaccel
+
+Also:
+
+- Fix sync timeouts when syncing a large number of deletions.
+- Experimental scheduler changes:
+** The 'new interval %' option is applied to the scheduled interval instead of the elapsed interval.
+** Limit randomization applied to learning steps to 5 minutes, and don't modify delay for 1+ day learning cards which could cause them to be scheduled an extra day.
+- Better handle duplicate deck names.
+- Added some improvements for add-on authors (thanks to Glutanimate)
+- Fix browser getting stuck when attempting to hide last field (thanks to Glutanimate)
+
 === Changes in 2.1.0rc1 ===
 
 - Fix field text not being saved when typing in the Windows IME.

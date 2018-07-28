@@ -39,22 +39,21 @@ Anki 2.1 contains an optional,
 https://anki.tenderapp.com/kb/anki-ecosystem/experiment-scheduling-changes-in-anki-21[experimental scheduler]. The experimental scheduler is not compatible with
 older Anki versions.
 
-== Crashes and display issues ==
+[[hwaccel]]
+== Hardware acceleration ==
 
-If you run into crashes, black screens, or a missing menubar, your display
-drivers may be to blame.
+The Windows and Linux builds default to software rendering, due to issues
+with hardware acceleration on some computers. You can optionally
+enable hardware acceleration by adding --hwaccel to the command line when
+starting Anki.
 
-On *Linux*, please try start Anki with the following:
-
-    QT_XCB_FORCE_SOFTWARE_OPENGL=1 bin/anki
-
-On *Windows*, please try opening cmd.exe, and typing the following
+On Windows, Anki will try using openGL drivers by default when hardware
+acceleration is enabled. If you have buggy openGL drivers, you can
+force Anki to use DirectX instead by opening cmd.exe and typing the following:
 
     cd "\program files (x86)\anki"
     set QT_OPENGL=angle
-    anki
-
-If that doesn't help, replace 'angle' with 'software' and try again.
+    anki --hwaccel
 
 Users on a 32 bit Windows install will need to use "program files" instead of
 "program files (x86)".
