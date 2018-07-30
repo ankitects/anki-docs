@@ -7,10 +7,6 @@ _ Getting Help _
 </script>
 ++++++++++++++++++++++++++++++
 
-= Translations =
-
- * перевод http://finpapa.ucoz.ru/ankitest-help.html[на русский язык] 
-
 = Before Asking =
 
 Before asking for help, please have a look in the manual. The top of the
