@@ -3,10 +3,6 @@
 AnkiMobile 2.0 User Manual
 ___________________________
 
-= Translations =
-
- * на русском языке: http://finpapa.ucoz.ru/ankitest-am-manual.html
-
 = Help & Bugs =
 
 There's a dedicated https://anki.tenderapp.com/[support site] for
