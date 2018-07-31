@@ -8,9 +8,9 @@ Writing Anki 2.1.x Add-ons
 
 = Other Versions =
 
-This document covers add-on writing for the (not yet released) Anki 2.1.x. For
-instructions on writing add-ons for Anki 2.0.x, please see
-https://apps.ankiweb.net/docs/addons.html
+This document covers add-on writing for Anki 2.1.x. For instructions on
+writing add-ons for Anki 2.0.x, please see
+https://apps.ankiweb.net/docs/addons20.html
 
 = Translations =
 
