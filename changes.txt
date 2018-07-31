@@ -5,14 +5,9 @@
 = Translations =
 
  * http://rs.luminousspice.com/changeinanki2/[日本語]
- * http://finpapa.ucoz.ru/ankitest-changes.html[по-русски] 
 
 [[v21]]
 = Changes in Anki 2.1 =
-
-== Translations ==
-
- * на русском языке: http://finpapa.ucoz.ru/ankitest-beta.html
 
 == At a glance ==
 
