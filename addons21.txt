@@ -53,6 +53,21 @@ When Anki starts up, it checks for modules in the add-ons folder, and runs
 each one it finds. When add-ons are run, they typically modify existing code
 or add new menu items to provide a new feature.
 
+= Support =
+
+This document contains some hints to get you started, but it is not a
+comprehensive guide. To actually write an add-on, you will need to familiarize
+yourself with Anki's source code, and the source code of other add-ons that do
+similiar things to what you are trying to accomplish.
+
+Because of our limited resources, *no official support is available for add-on
+writing*. If you have any questions, you will either need to find the answers
+yourself in the source code, or post your questions on the
+https://anki.tenderapp.com/discussions/add-ons[community-supported add-on forum].
+
+You can also use the add-on forum to request someone write an add-on for you.
+You may need to offer some money before anyone becomes interested in helping you.
+
 = Add-on folders =
 
 You can access the top level add-ons folder by going to the Tools>Add-ons menu
