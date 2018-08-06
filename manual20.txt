@@ -3,9 +3,9 @@
 Anki Manual
 </%def>
 
-<h1>Anki 2.1 User Manual</h1>
+<h1>Anki 2.0 User Manual</h1>
 
-Looking for the <a href="manual20.html">Anki 2.0 user manual?</a>
+Looking for the <a href="manual.html">Anki 2.1 user manual?</a>
 
 <!-- highlight Docs tab in header -->
 <script>
@@ -15,9 +15,6 @@ Looking for the <a href="manual20.html">Anki 2.0 user manual?</a>
 
 Intro Videos
 ============
-
-These videos were made with Anki 2.0, but 2.1 functions in largely
-the same way.
 
  * http://www.youtube.com/watch?v=QS2G-k2hQyg&yt:cc=on[Shared Decks and Review Basics]
  * http://www.youtube.com/watch?v=DnbKwHEQ1mA&yt:cc=on[Switching Card Order]
@@ -928,7 +925,7 @@ different cloze deletions from the same text. These related cards are called
 'siblings'. Anki tries to ensure siblings are not shown close together, as
 that's usually not helpful.
 
-When you answer a card that has siblings, Anki can prevent the card's siblings
+When you answer a card that has siblings, Anki prevents the card's siblings
 from being shown in the same session by automatically 'burying' them. Buried
 cards are hidden from review until the clock rolls over to a new day or you
 manually unbury them using the “Unbury” button that's visible at the bottom of
@@ -936,12 +933,13 @@ the <<deckoverview,deck overview>> screen. Anki will bury siblings even if the
 siblings are not in the same deck (for instance, if you use the
 <<deckoverride,deck override>> feature).
 
-You can enable burying from the <<deckoptions,deck options>> screen - there
-are separate settings for new cards and reviews.
-
 Anki will only bury siblings that are new or review cards. It will not hide
 cards in learning, as time is of the essence for those cards. On the other
 hand, when you study a learning card, any new/review siblings will be buried.
+
+If you want to see more than one card of a note per day when learning or
+reviewing cards, you can stop Anki from burying cards in the <<deckoptions,deck
+options>>.
 
 [[studyshortcuts]]
 == Keyboard Shortcuts ==
@@ -1000,12 +998,10 @@ work like they do in a word processing program. The next two buttons allow you t
 subscript or superscript text, which is useful for chemical compounds like
 H~2~O or simple math equations like x^2^.
 
-The Fx button clears any formatting in the currently selected text.
+The icon with the red X clears any formatting in the currently selected text.
 This includes colours, bold, etc.
 
-The next two buttons allow you to change text colour.
-
-The [...] button is visible when a cloze note type is selected.
+The next button allows you to change text colour.
 
 You can use the paperclip button to select audio, images and videos from your
 computer's hard drive to attach to your notes. Alternatively, you can copy the
@@ -1014,14 +1010,15 @@ on the web and choosing 'Copy Image') and paste it into the field that you want
 to place it in. For more information about media, please see the
 <<media,media>> section.
 
-The microphone icon allows you to record from your computer’s microphone and
+The red circle button allows you to record from your computer’s microphone and
 attach the recording to the note.
 
-The last button shows more advanced features, such as editing the underlying
-HTML of a field, and shortcuts to add MathJax or <<latex,LaTeX>> to your notes.
+The last button allows you to add advanced mathematical markup called
+<<latex,LaTeX>> to your notes or edit the underlying formatting.
 
 Most of the buttons have shortcut keys. You can hover the mouse cursor over a
-button to see its shortcut.
+button to see its shortcut. For the LaTeX/HTML menu, use Ctrl+t, then t, e
+or m to select the three LaTeX types, and Ctrl+Shift+x to edit the HTML.
 
 [[cloze]]
 Cloze Deletion
@@ -1417,8 +1414,7 @@ line, you would use
 == Card Styling ==
 
 You can watch http://www.youtube.com/watch?v=F1j1Zx0mXME&yt:cc=on[a video about
-styling cards] on YouTube. The video shows Anki 2.0's interface, but the concepts
-are largely the same.
+styling cards] on YouTube.
 
 In between the front and back template is the card styling. Here you can change
 the background colour of the card, the default font, the text alignment, and so
@@ -2057,25 +2053,7 @@ add the following:
 
 Replace "Helvetica" with the name of the font you installed on your system.
 Keep "myfont" as is, as it references the font you embedded.
-
-[[nightmode]]
-== Night Mode ==
-
-You can customize the way templates appear when night mode is enabled
-in the preferences screen.
-
-If you wanted a grey background instead of black, you could use something like:
-
------
-.card.nightMode { background-color: #555; }
------
-
-If you have a 'myclass' style, the following would show the text in yellow when night mode is enabled:
-
------
-.nightMode .myclass { color: yellow; }
------
-
+ 
 == Javascript ==
 
 As Anki cards are treated like webpages, it is possible to embed some
@@ -2116,6 +2094,12 @@ you should use separate decks rather than separate profiles, except when using
 extra profiles for experimenting with changes you don't plan to sync
 to other devices.
 
+It's possible to assign a password to your profile by going to Anki's
+preferences window. Your collection is not encrypted, and people can still
+tamper with the file if they locate it on your hard disk. The password
+protection is mainly intended to make it harder for students to tamper with
+each other's decks and settings in a classroom environment.
+
 [[preferences]]
 Preferences
 -----------
@@ -2126,18 +2110,16 @@ apply only to the current profile.
 
 *Basic*
 
+The *Strip HTML* option controls whether Anki should strip the formatting from
+text you paste into the editor. By default, Anki strips the formatting from
+pasted text so that you can control formatting in your card templates instead.
+If you'd prefer the formatting to be preserved (so you can paste bolded text,
+etc), you can uncheck this option.
+
 By default Anki pastes images on the clipboard as JPG files, to save disk
 space. You can use the *Paste clipboard images as PNG* option to paste as PNG
 images instead. PNG images support transparent backgrounds and are lossless,
 but they usually result in much larger file sizes.
-
-When *night mode* is enabled, Anki will show cards as white text on a black
-background. Some card templates may need to be modified to work properly
-with this option enabled - please see <<nightmode,night mode styling>>
-for more information.
-
-The *experimental V2 scheduler* is documented here:
-https://anki.tenderapp.com/kb/anki-ecosystem/experiment-scheduling-changes-in-anki-21
 
 The first drop-down box controls how note types and decks interact. The default
 of "When adding, default to current deck" means that Anki saves the last-used
@@ -3496,29 +3478,30 @@ is exported with all the HTML formatting embedded in it.
 == Exporting Packaged Decks ==
 
 A 'packaged deck' consists of cards, notes, note types and any sounds or
-images bundled up into a file ending with .apkg or .colpkg. You can use
-packaged decks to transfer cards between people, or for backing up parts of
-your collection.
+images bundled up into a file ending with .apkg. You can use packaged decks to
+transfer cards between people, or for backing up parts of your collection. A
+packaged deck is compressed, so it will be smaller than the sum of the files
+in your profile folder.
 
 There are two different kinds of packaged decks.
 
 === Collection Package ===
 
 When you export all decks with scheduling included, this is called a
-'collection package'. Anki will copy your entire collection into a file ending
-in .colpkg, and place it on your desktop. A collection package is
+'collection package'. Anki will copy your entire collection into a file called
+"collection.apkg", and place it on your desktop. A collection package is
 used to back up your collection, or copy it to another device.
-
-Collection packages created with previous versions of Anki were called
-collection.apkg.
 
 When this file is later imported, Anki will delete all the current cards in
 the collection, and replace the collection with the items in the
-file. This is useful for copying your collection back and
+collection.apkg file. This is useful for copying your collection back and
 forth between devices.
 
 NOTE: Existing media in your collection is not deleted when you import a
-collection package. To delete unused media, use Tools>Check Media.
+collection.apkg. To delete unused media, use Tools>Check Media.
+
+NOTE: Anki's automatic backups are also collection packages. Simply double
+click on one to restore your collection to that backup.
 
 [[apkg-export]]
 === Deck Package ===
@@ -3707,7 +3690,7 @@ manual backups too.
 
 The easiest way to make a manual backup is to use the File>Export menu item
 to export all decks with scheduling and media information included, which will
-save your data to a .colpkg file.
+save your data to an .apkg/.colpkg file.
 
 If you want to back up multiple profiles and your add-ons as well, you can
 make a complete copy of your <<files,Anki folder>>. Please make sure you close
@@ -3715,16 +3698,21 @@ make a complete copy of your <<files,Anki folder>>. Please make sure you close
 
 To restore from an automatic backup:
 
-1. From the File menu, select Switch Profile to show the Profiles window.
-2. Select the profile you wish to restore on the left.
-3. Click the Open Backup... button.
-4. Choose Yes and the available backups will appear.
-5. Open a backup based on the date you wish to restore to.
-6. Check that that the backup that was restored was the one you intended. If
-you wish to try a different backup, return to step 1.
-7. Anki has disabled automatic syncing and backups while you check the backup.
-When you're happy with the backup you've selected, quit Anki and start it again
-to return to the normal behaviour.
+ . First create a copy of your backups folder, as each time you close Anki it
+   deletes the oldest backup, and if you're trying different backup files you
+   could accidentally end up deleting the backup you need. To do this, locate
+   your <<files,Anki folder>>, and copy the entire folder
+   somewhere safe, like your desktop.
+ . Open Anki and the profile you want to restore. If your profile is corrupt and
+   won't open, you can rename the User 1/collection.anki2 file to something else
+   to tell Anki to recreate an empty collection when you next open the profile.
+ . With the profile open, use File>Import and import a backup from the copy of
+   the backups folder you created on your desktop. In the file selection dialog,
+   you can set it to detail mode using one of the icons so that the modification
+   date is shown on each file - that will give you an idea of which backup you
+   need.
+ . If the backup you imported was not old enough, try an older one until you
+   locate an appropriate one.
 
 Anki also logs deleted notes to a text file called deleted.txt in your profile
 folder. These notes are in a text format that can be read by File>Import,
@@ -4067,46 +4055,14 @@ wide variety of file formats are supported, but not all of these formats will
 work on AnkiWeb and the mobile clients. MP3 audio and MP4 video seems to be
 the most universally supported.
 
-[[mathjax]]
-= MathJax support =
-
-https://www.mathjax.org[MathJax] is a modern, browser-based typesetting
-system, useful for mathematical and chemical equations. It does not
-require the installation of any extra software.
-
-MathJax is supported out of the box on Anki 2.1+ and AnkiMobile -
-AnkiDroid does not yet have built in support for it.
-
-To try it out:
-
-1. Type the following in a field:
-
-  \sqrt{x}
-
-2. Select the text you just typed.
-3. Click the rightmost button in the editor, and choose "MathJax inline" from the menu. Anki will change the text so it reads:
-
-  \(\sqrt{x}\)
-
-4. If you click the Cards... button, you'll see a preview of how the equation
-will appear when the card is reviewed.
-
-Anki's MathJax support expects content in TeX format. If you're not familiar with
-TeX formatting, please see https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference[this cheatsheet]. Please note that point 2 does not apply in Anki - Anki uses `\(` and `\)` for inline equations, and `\[` and `\\]` for display equations.
-
 [[latex]]
 = LaTeX support =
 
-LaTeX is a powerful typesetting system, useful for entering
+LaTeX is a powerful typesetting system, which is ideal for entering
 mathematical formulas, chemical formulas, musical notation and so on. Anki
 provides some support for LaTeX, allowing you to enter LaTeX code in your
 notes. When you review a card, Anki will call LaTeX and display the generated
 image instead.
-
-LaTeX is more work to set up, and images can only be generated with the
-computer version of Anki - though once generated, the images can be displayed
-by mobile clients. LaTeX does offer better support for advanced formatting
-however - if your needs are complicated, MathJax may not meet them.
 
 Installing and Assumed Knowledge
 --------------------------------
@@ -4391,8 +4347,29 @@ Anki's capabilities can be extended with add-ons. Add-ons can provide features
 like extra support for specific languages, extra control over scheduling, and
 so on.
 
-To browse the list of available add-ons, select the Tools>Add-ons menu
-item, then click on Get Add-ons.
+To browse the list of available add-ons, select the Tools>Add-ons>Browse &
+Install menu item. You can also use Tools>Add-ons to check which add-ons are
+installed.
+
+Some add-ons have options or customizations that are only accessible by
+editing them. To edit an add-on, go to Tools>Add-ons>[add-on name]>Edit.
+Please be careful when editing - special characters and whitespace is
+important, so if you see something like:
+
+-----
+    line1
+    line2
+    line3
+-----
+
+...and you accidentally change it to the following, Anki will throw an error
+when it is restarted:
+
+-----
+    line1
+   line2
+    line3
+-----
 
 Many add-on authors include their email address in the add-on, so if you need
 to get in touch with the author, editing the add-on and looking at the top of
@@ -4402,7 +4379,7 @@ If you have downloaded an add-on that is not working properly, or if you
 accidentally made a mistake when editing an add-on, you can use the "Delete"
 option in the menu to remove it.
 
-To learn how to write your own add-ons, please see the link:addons.html[add-on writing guide].
+To learn how to write your own add-ons, please see the link:addons20.html[add-on writing guide].
 
 = Contributing =
 

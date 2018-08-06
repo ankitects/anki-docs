@@ -1,13 +1,27 @@
 ++++++++++++++++++++++
-<br><br><b>Users upgrading from Anki 1: please see <a href="#v2">here</a></b>.
+<br><br>
+<b>Users upgrading from Anki 2.0: please see <a href="#v21">here</a></b>.
 ++++++++++++++++++++++
 
-= Translations =
+[[latestv21]]
+= Changes in 2.1.0 =
 
- * http://rs.luminousspice.com/changeinanki2/[日本語]
+Released 2018-08-06.
+
+The first stable release of Anki 2.1.
+
+Changes from the previous release candidate:
+
+- Don't unmaximize when reshowing browse screen.
+- Add *.webm to attach media file selector.
+- Add shortcut key for MathJax mhchem support.
 
 [[v21]]
 = Changes in Anki 2.1 =
+
+== Translations ==
+
+ * http://rs.luminousspice.com/changeinanki2/[日本語]
 
 == At a glance ==
 
@@ -34,17 +48,28 @@ Anki 2.1 contains an optional,
 https://anki.tenderapp.com/kb/anki-ecosystem/experiment-scheduling-changes-in-anki-21[experimental scheduler]. The experimental scheduler is not compatible with
 older Anki versions.
 
+== Error on startup ==
+
+If you receive a 'Failed to create OpenGL context' message when trying to start
+Anki on Windows, please post a screenshot of your video card information on
+https://anki.tenderapp.com/discussions/beta-testing/1249-error-when-starting
+and then follow the instructions in the next section.
+
 [[hwaccel]]
 == Hardware acceleration ==
 
-The Windows and Linux builds default to software rendering, due to issues
-with hardware acceleration on some computers. You can optionally
-enable hardware acceleration by adding --hwaccel to the command line when
-starting Anki.
+The Windows and Linux builds default to software rendering, due to issues with
+hardware acceleration on some computers. You can optionally enable hardware
+acceleration by adding --hwaccel to the command line when starting Anki. On
+Windows, you can automate this by right clicking on the Anki shortcut and
+choosing "Properties", then adding a space character and --hwaccel to the very
+end of the text in the Target section, ie
 
-On Windows, Anki will try using openGL drivers by default when hardware
-acceleration is enabled. If you have buggy openGL drivers, you can
-force Anki to use DirectX instead by opening cmd.exe and typing the following:
+  "c:\program files (x86)\anki\anki.exe" --hwaccel
+
+On Windows, Anki will default to using OpenGL drivers when you pass --hwaccel.
+If you have buggy OpenGL drivers, you can force Anki to use DirectX instead by
+opening cmd.exe and typing the following:
 
     cd "\program files (x86)\anki"
     set QT_OPENGL=angle
@@ -76,7 +101,17 @@ actually talking with AnkiWeb. This means that not only your work or school,
 but also a bad actor on the local network may be able to intercept your
 syncing traffic.
 
-[[latest]]
+== Fcitx on Linux ==
+
+Currently the Fcitx input method is not supported by the packaged version of
+Anki. You can still input languages like Japanese by using IBUS instead.
+
+== Earlier beta changes ==
+
+Changes during the alpha and beta period are documented
+https://apps.ankiweb.net/docs/beta.html[here].
+
+[[latestv20]]
 = Changes in 2.0.52 =
 
 Released 2018-05-31.
@@ -1231,7 +1266,7 @@ that assumed those imports would exist. One example is add-ons that import
  * Work around a few bugs caused by the mobile clients.
 
 [[v2]]
-= Changes in Anki 2 =
+= Changes in Anki 2.0 =
 
 == Translations ==
 
