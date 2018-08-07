@@ -40,7 +40,7 @@ When you install 2.1, it will create a separate folder for add-ons, and not
 import any existing ones you have installed.
 
 If you're an add-on author, you can read more about the required changes on
-https://apps.ankiweb.net/docs/addons21.html
+https://apps.ankiweb.net/docs/addons.html
 
 == Other changes ==
 
