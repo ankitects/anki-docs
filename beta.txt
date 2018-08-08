@@ -24,6 +24,26 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.1beta2 ===
+
+Detect when video drivers fail to load, and automatically switch
+to the next driver when Anki is started again.
+
+The --hwaccel option has been removed in favour of a file in your Anki
+data folder, which you only need to change once.
+
+To force hardware acceleration on Windows, run cmd.exe and type the following:
+
+  echo auto > %APPDATA%\Anki2\gldriver
+
+Available options are 'auto', 'angle', and the default 'software'.
+
+On Linux, in a terminal:
+
+  echo auto > ~/.local/share/Anki2/gldriver
+
+Available options are 'auto' or the default 'software'.
+
 === Changes in 2.1.1beta1 ===
 
 - Fix exporting of .apkg files with the regular scheduler.
