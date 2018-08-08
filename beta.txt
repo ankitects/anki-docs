@@ -4,7 +4,7 @@ h4 { margin-bottom: 0.5em; margin-top: 1em; }
 </style>
 ++++++++++++++++++++++++++++++
 
-= Anki 2.1 Beta =
+= Anki 2.1 Beta Builds =
 
 == At a glance ==
 
@@ -23,6 +23,16 @@ our support site:
 https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
+
+=== Changes in 2.1.1beta1 ===
+
+- Fix exporting of .apkg files with the regular scheduler.
+- Updated toolkit on Windows build.
+- Fix windows not showing up in tabs on OSX in full screen mode (you may
+need to close and reopen them once).
+- Convert embedded images to files when pasting HTML.
+- Fix pasting of copied images from Finder.
+- The sort field is now shown RTL when set to RTL in the field options.
 
 === Changes in 2.1.0rc2 ===
 
