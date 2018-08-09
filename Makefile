@@ -4,7 +4,7 @@ WEB = $w/
 AMHELP = ../mob/AnkiMobile/Resources/HTML/help.html
 TOC_FILES = manual.mako am-manual.mako changes.mako addons.mako \
     am-changes.mako manual.fr.mako manual.pl.mako manual.es.mako \
-    addons20.mako manual20.mako
+    addons20.mako manual20.mako knownissues20.mako knownissues21.mako
 
 all: build
 	@echo "remember to run 'make commit' to commit changes"

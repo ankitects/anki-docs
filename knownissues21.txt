@@ -1,0 +1,61 @@
+= Known issues with Anki 2.1 =
+
+[[hwaccel]]
+== Hardware acceleration ==
+
+The Windows and Linux builds default to software rendering, due to issues with
+hardware acceleration on some computers. If you have a modern system you
+can optionally enable hardware acceleration, which may result in a performance
+improvement.
+
+To force hardware acceleration on Windows, run cmd.exe and type the following:
+
+  echo auto > %APPDATA%\Anki2\gldriver
+
+Available options are 'auto', 'angle', and the default 'software'. Once
+you've run the command, Anki will use the setting the next time you start it.
+
+On Linux, in a terminal:
+
+  echo auto > ~/.local/share/Anki2/gldriver
+
+Available options are 'auto' or the default 'software'. Once you've run the
+command, Anki will use the setting the next time you start it.
+
+== Cmd+left/right on macOS ==
+
+The toolkit Anki uses does not currently support these keystrokes when editing
+cards. Fn+left/right does work instead. You can also use a third party tool
+like BetterTouchTool or Karabiner to intercept the cmd+left/right keystroke
+when you type it into Anki, and have it automatically be rewritten to use the
+function key instead.
+
+== Fcitx on Linux ==
+
+Currently the Fcitx input method is not supported by the packaged version of
+Anki. A possible workaround is posted on the support site - please
+https://anki.tenderapp.com/discussions/ankidesktop/29068-cannot-input-japanese-into-anki-21-on-linux#comment_45866909[give it a try]
+and report your experiences there.
+
+== Text size ==
+
+If you find the text is the wrong size, there are two environmental variables
+you can try:
+
+- ANKI_NOHIGHDPI=1 will turn off some of Qt's high dpi support
+- ANKI_WEBSCALE=1 will alter the scale of Anki's web views (like the deck
+list, study screen, etc), while leaving interface elements like the menu bar
+alone. Replace 1 with the desired scale, such as 1.5 or 2.
+
+Please see the above section for how to set environmental variables.
+
+== SSL errors ==
+
+Some work and school networks intercept your internet traffic, and this can
+cause errors when syncing and downloading add-ons. You can prevent the errors
+from occurring by setting the environmental variable "ANKI_NOVERIFYSSL" to "1".
+
+When you enable this option, you are telling Anki not to verify that it is
+actually talking with AnkiWeb. This means that not only your work or school,
+but also a bad actor on the local network may be able to intercept your
+syncing traffic.

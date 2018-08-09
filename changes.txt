@@ -4,6 +4,18 @@
 ++++++++++++++++++++++
 
 [[latestv21]]
+= Changes in 2.1.1 =
+
+Released 2018-08-09.
+
+- Fixed exporting of .apkg files with regular scheduler.
+- Work around Anki failing to start on some Windows machines.
+- Fix dialogs failing to show in tabs when using macOS's full screen mode.
+- Extract embedded images when pasting HTML.
+- Fix images copied from Finder not pasting properly.
+- When the sort field is set to RTL, display in RTL order in the browser.
+- Update toolkit version on Windows.
+
 = Changes in 2.1.0 =
 
 Released 2018-08-06.
@@ -64,64 +76,6 @@ https://apps.ankiweb.net/docs/beta.html[here].
 Anki 2.1 contains an optional,
 https://anki.tenderapp.com/kb/anki-ecosystem/experiment-scheduling-changes-in-anki-21[experimental scheduler]. The experimental scheduler is not compatible with
 older Anki versions.
-
-== Error on startup ==
-
-If you receive a 'Failed to create OpenGL context' message when trying to start
-Anki on Windows, please post a screenshot of your video card information on
-https://anki.tenderapp.com/discussions/beta-testing/1249-error-when-starting
-and then follow the instructions in the next section.
-
-[[hwaccel]]
-== Hardware acceleration ==
-
-The Windows and Linux builds default to software rendering, due to issues with
-hardware acceleration on some computers. You can optionally enable hardware
-acceleration by adding --hwaccel to the command line when starting Anki. On
-Windows, you can automate this by right clicking on the Anki shortcut and
-choosing "Properties", then adding a space character and --hwaccel to the very
-end of the text in the Target section, ie
-
-  "c:\program files (x86)\anki\anki.exe" --hwaccel
-
-On Windows, Anki will default to using OpenGL drivers when you pass --hwaccel.
-If you have buggy OpenGL drivers, you can force Anki to use DirectX instead by
-opening cmd.exe and typing the following:
-
-    cd "\program files (x86)\anki"
-    set QT_OPENGL=angle
-    anki --hwaccel
-
-Users on a 32 bit Windows install will need to use "program files" instead of
-"program files (x86)".
-
-== Text size ==
-
-If you find the text is the wrong size, there are two environmental variables
-you can try:
-
-- ANKI_NOHIGHDPI=1 will turn off some of Qt's high dpi support
-- ANKI_WEBSCALE=1 will alter the scale of Anki's web views (like the deck
-list, study screen, etc), while leaving interface elements like the menu bar
-alone. Replace 1 with the desired scale, such as 1.5 or 2.
-
-Please see the above section for how to set environmental variables.
-
-== SSL errors ==
-
-Some work and school networks intercept your internet traffic, and this can
-cause errors when syncing and downloading add-ons. You can prevent the errors
-from occurring by setting the environmental variable "ANKI_NOVERIFYSSL" to "1".
-
-When you enable this option, you are telling Anki not to verify that it is
-actually talking with AnkiWeb. This means that not only your work or school,
-but also a bad actor on the local network may be able to intercept your
-syncing traffic.
-
-== Fcitx on Linux ==
-
-Currently the Fcitx input method is not supported by the packaged version of
-Anki. You can still input languages like Japanese by using IBUS instead.
 
 [[latestv20]]
 = Changes in 2.0.52 =

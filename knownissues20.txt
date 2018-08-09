@@ -1,0 +1,17 @@
+= Known issues with Anki 2.0 =
+
+== Thai text ==
+
+The toolkit Anki 2.0 uses becomes very slow when you use Thai text.
+The alternate installer available on the download site uses a different toolkit
+version which does not suffer from this problem.
+
+== Windows XP support ==
+
+Please use the alternate installer on the website if you are still using
+Windows XP.
+
+== Crashes ==
+
+If you experience crashes, please try the alternate installer.
+
