@@ -1,5 +1,12 @@
 = Known issues with Anki 2.0 =
 
+== Wifi issues on Windows ==
+
+Previous versions of Anki on Windows could cause delays when using wifi,
+due to an issue in the toolkit. If upgrading from a previous version,
+please uninstall Anki before installing 2.0.51 or 2.0.52. If you updated
+without uninstalling, please uninstall Anki, then install it again.
+
 == Thai text ==
 
 The toolkit Anki 2.0 uses becomes very slow when you use Thai text.
