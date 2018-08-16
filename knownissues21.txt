@@ -33,9 +33,9 @@ function key instead.
 == Fcitx on Linux ==
 
 Currently the Fcitx input method is not supported by the packaged version of
-Anki. A possible workaround is posted on the support site - please
-https://anki.tenderapp.com/discussions/ankidesktop/29068-cannot-input-japanese-into-anki-21-on-linux#comment_45866909[give it a try]
-and report your experiences there.
+Anki. On some systems you may be able to
+https://anki.tenderapp.com/discussions/ankidesktop/29068-cannot-input-japanese-into-anki-21-on-linux#comment_45866909[link in your system libray],
+but if that does not work, the only option at the moment is to switch to using IBUS instead of Fcitx.
 
 == Text size ==
 
