@@ -10,7 +10,7 @@ improvement.
 
 To force hardware acceleration on Windows, run cmd.exe and type the following:
 
-  echo auto > %APPDATA%\Anki2\gldriver
+  echo auto > "%APPDATA%\Anki2\gldriver"
 
 Available options are 'auto', 'angle', and the default 'software'. Once
 you've run the command, Anki will use the setting the next time you start it.
@@ -47,7 +47,14 @@ you can try:
 list, study screen, etc), while leaving interface elements like the menu bar
 alone. Replace 1 with the desired scale, such as 1.5 or 2.
 
-Please see the above section for how to set environmental variables.
+On Windows you can add these to a batch file to make it easier to start Anki.
+For example, create a file called startanki.bat on your desktop with the following
+text:
+
+  set ANKI_WEBSCALE=1.5
+  "C:\Program Files (x86)\Anki\anki"
+
+After saving, you can double click on the file to start Anki with that setting.
 
 == SSL errors ==
 
