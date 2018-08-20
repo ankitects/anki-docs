@@ -4,6 +4,13 @@
 ++++++++++++++++++++++
 
 [[latestv21]]
+= Changes in 2.1.2 =
+
+Released 2018-08-20.
+
+- Add missing .apkg and .colpkg file associations.
+- Improve handling of images inlined in fields.
+
 = Changes in 2.1.1 =
 
 Released 2018-08-09.
