@@ -22,13 +22,13 @@ On Linux, in a terminal:
 Available options are 'auto' or the default 'software'. Once you've run the
 command, Anki will use the setting the next time you start it.
 
-== Cmd+left/right on macOS ==
+== Shortcuts on macOS ==
 
-The toolkit Anki uses does not currently support these keystrokes when editing
-cards. Fn+left/right does work instead. You can also use a third party tool
-like BetterTouchTool or Karabiner to intercept the cmd+left/right keystroke
-when you type it into Anki, and have it automatically be rewritten to use the
-function key instead.
+The toolkit Anki uses does not currently support some shortcuts like
+cmd+left/right or cmd+delete when editing cards. Fn+left/right does work
+instead. You can also use a third party tool like BetterTouchTool or Karabiner
+to intercept the cmd+left/right keystroke when you type it into Anki, and
+have it automatically be rewritten to use the function key instead.
 
 == Fcitx on Linux ==
 
