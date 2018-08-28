@@ -30,6 +30,11 @@ instead. You can also use a third party tool like BetterTouchTool or Karabiner
 to intercept the cmd+left/right keystroke when you type it into Anki, and
 have it automatically be rewritten to use the function key instead.
 
+== Undo shortcut ==
+
+The undo shortcut has changed due to an issue with the toolkit. The new shortcut
+is visible when clicking on the Edit menu.
+
 == Fcitx on Linux ==
 
 Currently the Fcitx input method is not supported by the packaged version of
