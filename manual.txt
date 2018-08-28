@@ -4906,8 +4906,6 @@ cards actually get, this is probably the cause.
 
 = Resources =
 
-== SuperMemo ==
-
 The SuperMemo site has a lot of good information about spaced repetition and
 memory: http://www.supermemo.com/
 
