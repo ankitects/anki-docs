@@ -4,23 +4,9 @@
 == Hardware acceleration ==
 
 The Windows and Linux builds default to software rendering, due to issues with
-hardware acceleration on some computers. If you have a modern system you
-can optionally enable hardware acceleration, which may result in a performance
-improvement.
-
-To force hardware acceleration on Windows, run cmd.exe and type the following:
-
-  echo auto > "%APPDATA%\Anki2\gldriver"
-
-Available options are 'auto', 'angle', and the default 'software'. Once
-you've run the command, Anki will use the setting the next time you start it.
-
-On Linux, in a terminal:
-
-  echo auto > ~/.local/share/Anki2/gldriver
-
-Available options are 'auto' or the default 'software'. Once you've run the
-command, Anki will use the setting the next time you start it.
+hardware acceleration on some computers. If you have a modern system, you
+can optionally enable hardware acceleration in the preferences screen,
+which may result in a performance improvement.
 
 == Shortcuts on macOS ==
 

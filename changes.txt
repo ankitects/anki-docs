@@ -4,6 +4,17 @@
 ++++++++++++++++++++++
 
 [[latestv21]]
+= Changes in 2.1.3 =
+
+Released 2018-08-30.
+
+- Hardware acceleration can now be toggled in the preferences screen on Windows/Linux.
+- Disable question fade-in during review when hardware acceleration is off.
+- Fix some add-ons leaving a blank space in the main window when Anki restarted.
+- Fix file associations on macOS.
+- Fix some unwanted text being included when pasting.
+- Fix shortcut keys like space from repeatedly triggering when held down.
+
 = Changes in 2.1.2 =
 
 Released 2018-08-20.
