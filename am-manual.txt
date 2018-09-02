@@ -35,6 +35,11 @@ page" option at the bottom to search through this page.
 
 *On a computer*, choose Find from the Edit menu in most browsers.
 
+= Privacy =
+
+No data you store in AnkiMobile is shared with us or other Anki users by default. If you use
+the optional synchronization feature, please see https://ankiweb.net/account/privacy[AnkiWeb's privacy policy].
+
 [[adding]]
 = Adding Decks =
 
