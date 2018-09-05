@@ -4,6 +4,17 @@
 ++++++++++++++++++++++
 
 [[latestv21]]
+= Changes in 2.1.4 =
+
+Released 2018-09-05.
+
+- Fix deck list getting stuck when creating filtered deck.
+- Prevent local cards being overwritten when accidentally downloading empty AnkiWeb collection.
+- Favour mark/flag colour over suspended colour in browse screen.
+- Fix new day calculation in experimental scheduler.
+- Linux theme tweaks (thanks to Glutanimate).
+- Disable view page button for locally added add-ons (thanks to upday7).
+
 = Changes in 2.1.3 =
 
 Released 2018-08-30.
