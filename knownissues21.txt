@@ -19,7 +19,8 @@ have it automatically be rewritten to use the function key instead.
 == Undo shortcut ==
 
 The undo shortcut has changed due to an issue with the toolkit. The new shortcut
-is visible when clicking on the Edit menu.
+is visible when clicking on the Edit menu. If the toolkit fixes the issue in
+the future, the shortcut will be changed back.
 
 == Copy & paste problems on Windows ==
 
