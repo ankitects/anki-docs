@@ -24,6 +24,24 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.5beta1 ===
+
+- Use selected answer button instead of default when enter/space pressed.
+- Change undo shortcut in browse screen to avoid conflict with editing functionality.
+- Ignore standard mpv config file location in favour of Anki data folder.
+- Fix importing of .apkg files when interface in German.
+- Fix translations not working on Linux after 'make install'.
+- Support newlines in type:cloze, and treat them as spaces.
+- Add browser.rowChanged hook for add-on authors.
+- Possible fix for some 'database is locked' errors.
+- Fix errors on startup when deck given an invalid name.
+- Fix sorting not working when field contains only a media reference.
+- Fix 'access denied' error not being caught properly.
+- Fix exporting of v2 colpkg when interface in non-English language.
+- Fix conditional replacement not ignoring HTML formatting.
+- Fix question fade time being forced when hardware acceleration on.
+- Add a small margin between buttons during review.
+
 === Changes in 2.1.1beta2 ===
 
 Detect when video drivers fail to load, and automatically switch
