@@ -29,7 +29,7 @@ https://anki.tenderapp.com/discussions/beta-testing
 - Use selected answer button instead of default when enter/space pressed.
 - Change undo shortcut in browse screen to avoid conflict with editing functionality.
 - Ignore standard mpv config file location in favour of Anki data folder.
-- Fix importing of .apkg files when interface in German.
+- Fix importing of .apkg files when interface in Dutch.
 - Fix translations not working on Linux after 'make install'.
 - Support newlines in type:cloze, and treat them as spaces.
 - Add browser.rowChanged hook for add-on authors.
