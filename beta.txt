@@ -24,6 +24,15 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.5beta2 ===
+
+- Fix error when hitting enter/space with no button selected.
+- V2 scheduler now respects maximum interval even if it will lead to all buttons giving the same interval.
+- Tweak margins in overview and answer button areas.
+- Ignore UI events that are received after collection has been closed.
+- Don't try to import .anki(2) files as text.
+- Added support for Lojban (thanks to giqtaqisi)
+
 === Changes in 2.1.5beta1 ===
 
 - Use selected answer button instead of default when enter/space pressed.
