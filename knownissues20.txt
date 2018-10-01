@@ -1,5 +1,11 @@
 = Known issues with Anki 2.0 =
 
+== Errors when starting ==
+
+If you receive the error "The application has failed to start because the
+configuration is incorrect", please install
+https://www.microsoft.com/en-us/download/details.aspx?id=11895
+
 == Wifi issues on Windows ==
 
 Previous versions of Anki on Windows could cause delays when using wifi,
