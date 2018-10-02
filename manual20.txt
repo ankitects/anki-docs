@@ -181,13 +181,8 @@ contributed by end-users. It's multi-platform, running on Windows, Mac OSX,
 Linux/FreeBSD, and some mobile devices. And it's considerably easier to use
 than SuperMemo.
 
-Internally, Anki's spaced repetition system is based on an older version of the
-SuperMemo algorithm called SM2. Subsequent versions have managed to squeeze out
-a little more learning efficiency, but they come at the cost of greatly
-increased complexity, and they are more susceptible to scheduling errors in
-real-world use. For a more in-depth discussion of this and the differences in
-scheduling algorithms, see the appropriate <<what-algorithm, section in the
-FAQ>>.
+Anki's spaced repetition system is based on an older version of the
+SuperMemo algorithm called <<what-algorithm, SM-2>>.
 
 [[basics]]
 The Basics
@@ -4774,40 +4769,12 @@ synchronize decks), they decided to make it freely available as well.
 [[what-algorithm]]
 == What spaced repetition algorithm does Anki use? ==
 
-Anki was originally based on the SuperMemo SM5 algorithm. However, Anki's
-default behaviour of revealing the next interval before answering a card
-revealed some fundamental problems with the SM5 algorithm. The key difference
-between SM2 and later revisions of the algorithm is this:
+Anki's algorithm is based on the SuperMemo 2 algorithm. For info on
+SM-2, please see http://www.supermemo.com/english/ol/sm2.htm
 
- * SM2 uses your performance on a card to determine the next time to schedule
-   that card
- * SM3+ use your performance on a card to determine the next time to schedule
-   that card, and similar cards
+Anki's algorithm differs from SM-2 in some respects. Notably:
 
-The latter approach promises to choose more accurate intervals by factoring in
-not just a single card's performance, but the performance as a group. If you
-are very consistent in your studies and all cards are of a very similar
-difficulty, this approach can work quite well. However, once inconsistencies
-are introduced into the equation (cards of varying difficulty, not studying at
-the same time every day), SM3+ is more prone to incorrect guesses at the next
-interval - resulting in cards being scheduled too often or too far in the
-future.
-
-Furthermore, as SM3+ dynamically adjusts the "optimum factors" table, a
-situation can often arise where answering "hard" on a card can result in a
-longer interval than answering "easy" would give. The next times are hidden
-from you in SuperMemo so the user is never aware of this.
-
-After evaluating the alternatives, the Anki author decided that near-optimum
-intervals yielded by an SM2 derivative are better than trying to obtain
-optimum intervals at the risk of incorrect guesses. An SM2 approach is
-predictable and intuitive to end users, whereas an SM3+ approach hides the
-details from the user and requires users to trust the system (even when the
-system may make mistakes in the scheduling).
-
-Anki's algorithm is based on SM2, but differs from it in some respects.
-
- * SM2 defines an initial interval of 1 day then 6 days. With Anki, you have
+ * SM-2 defines an initial interval of 1 day then 6 days. With Anki, you have
    full control over the length of the initial learning steps. Anki
    understands that it can be necessary to see a new card a number of times
    before you're able to memorize it, and those initial "failures" don't mean
@@ -4824,23 +4791,20 @@ Anki's algorithm is based on SM2, but differs from it in some respects.
    interval calculation, so you receive a boost to cards that you were late in
    answering but still remembered.
 
- * Like SM2, Anki's failure button resets the card interval by default. But
-   the user can choose to make the card take some steps back rather than being
+ * Like SM-2, Anki's failure button resets the card interval by default. But
+   the user can choose to have the card's interval reduced instead of being
    reset completely. Also, you can elect to review failed mature cards on a
    different day, instead of the same day.
 
  * 'Remembered easily' not only increments the ease factor, but adds an extra
    bonus to the current interval calculation. Thus, answering 'remembered
-   easily' is a little more aggressive than the standard SM2 algorithm.
+   easily' is a little more aggressive than the standard SM-2 algorithm.
 
  * Successive failures while cards are in learning do not result in further
-   decreases to the card's ease. A common complaint with the standard SM
-   algorithms is that repeated failings of a card cause the card to get stuck
+   decreases to the card's ease. A common complaint with the standard SM-2
+   algorithm is that repeated failings of a card cause the card to get stuck
    in "low interval hell". In Anki, the initial acquisition process does not
    influence a card's ease.
-
-For a description of the SM2 algorithm, please see
-http://www.supermemo.com/english/ol/sm2.htm
 
 You can also check out 'sched.py' in Anki’s source code for the scheduling
 code. Here is a summary (see the <<deckoptions,deck options>> section for the
@@ -4880,6 +4844,44 @@ the same ratings from sticking together and always coming up for review on the
 same day. This fuzz does not appear on the interval buttons, so if you’re
 noticing a slight discrepancy between what you select and the intervals your
 cards actually get, this is probably the cause.
+
+== Why doesn't Anki use SuperMemo's latest algorithm? ==
+
+The simple answer is that SuperMemo's latest algorithm is proprietary, and
+requires licensing. As Anki is an open source application, it can only make use
+of algorithms that have been made freely available.
+
+We're inclined to believe SuperMemo when they say their newer algorithms are
+more efficient, but feel that to a certain extent, it is a case of diminishing
+returns. The gains achieved by moving from a traditional study routine to
+SM-2 are already great, and by sticking with an open algorithm, your learning
+data is not locked into a single product.
+
+Ultimately it's up to you to decide - if access to the latest and greatest
+scheduler is a higher priority than the things that Anki brings to the table,
+you may want to check out SuperMemo to see if it is a good fit for you.
+
+== What about SM-5? ==
+
+Anki's scheduler was originally based on
+https://www.supermemo.com/english/ol/sm5.htm[SM-5]. Anki's default of showing
+the next interval above each ease button revealed problems with the
+implementation - harder cards could end up with greater interval increases
+than easy ones, and the ease factors sometimes grew to the point where a
+single review could result in a 20-30x increase in interval.
+
+An attempt was made at the time to correct this by smoothing the optimal
+factors matrix - applying a cap on the maximum factor and enforcing a minimum
+difference between adjacent ease factors. This addressed the above problems,
+but resulted in an optimal factors matrix that had very little room to move,
+and the conclusion drawn at the time was that SM-5 was not an improvement over
+SM-2.
+
+While SM-5 clearly wasn't working for Anki, in hindsight, it may not have been
+fair to assume the issues we encountered were due to fundamental problems with
+the algorithm. SuperMemo have subsequently stated that the description of the
+SM-5 algorithm listed on their website is incomplete, so it is possible the
+problems we encountered do not exist in SuperMemo's proprietary implementation.
 
 = Resources =
 
