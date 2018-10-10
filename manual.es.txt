@@ -611,7 +611,7 @@ Si tu necesitas crear espacios cloze con texto superpuesto, añade otro campo de
 -----
 Campo Texto1: {{c1::Canberra fue fundada}} en 1913
 
-Campo Texto2: {{c1::Canberra}} fue fundada en 1913
+Campo Texto2: {{c2::Canberra}} fue fundada en 1913
 -----
 
 El tipo de nota cloze viene por defecto con un campo extra denominado Extra, el cual se muestra en el lado de respuesta de cada tarjeta. Puede ser usado, como su nombre lo indica, para añadir información extra relacionada con lo que tengas en el campo de texto.
