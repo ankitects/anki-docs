@@ -1,12 +1,21 @@
 = Known issues with Anki 2.1 =
 
 [[hwaccel]]
-== Hardware acceleration ==
+== Hardware acceleration and startup issues ==
 
 The Windows and Linux builds default to software rendering, due to issues with
 hardware acceleration on some computers. If you have a modern system, you
 can optionally enable hardware acceleration in the preferences screen,
 which may result in a performance improvement.
+
+If Anki shows an error message on startup on Windows and restarting it
+a few times does not help, you can manually change the video driver by running
+the following in cmd.exe:
+
+  echo auto > %APPDATA%\Anki2\gldriver
+
+If that does not help, please replace 'auto' with 'angle' and try start Anki
+again.
 
 == Shortcuts on macOS ==
 
