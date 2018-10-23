@@ -4089,6 +4089,10 @@ will appear when the card is reviewed.
 Anki's MathJax support expects content in TeX format. If you're not familiar with
 TeX formatting, please see https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference[this cheatsheet]. Please note that point 2 does not apply in Anki - Anki uses `\(` and `\)` for inline equations, and `\[` and `\\]` for display equations.
 
+NOTE: If you want to use newlines in a MathJax expression, please use
+Shift+Enter instead of just Enter, as a normal newline will prevent MathJax
+from working correctly.
+
 [[latex]]
 = LaTeX support =
 
