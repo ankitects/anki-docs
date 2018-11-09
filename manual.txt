@@ -3044,7 +3044,8 @@ It is also possible to move all cards back to their home decks at once:
 NOTE: In the current implementation, if you create, rebuild, empty or delete a
 filtered deck while cards are still in learning, they will be turned back into
 new cards. In the case of failed reviews in relearning, any remaining relearning
-steps will be skipped.
+steps will be skipped. This has been fixed in the
+https://anki.tenderapp.com/kb/anki-ecosystem/experiment-scheduling-changes-in-anki-21[experimental scheduler].
 
 == Creating Manually ==
 
