@@ -8,8 +8,8 @@ h4 { margin-bottom: 0.5em; margin-top: 1em; }
 
 == At a glance ==
 
-Please see https://apps.ankiweb.net/docs/changes.html#v21 for a high-level
-summary of changes.
+If you're new to Anki 2.1, please see https://apps.ankiweb.net/docs/changes.html#v21
+for a high-level summary of changes.
 
 == Downloads ==
 
