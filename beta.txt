@@ -24,6 +24,67 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.6beta1 ===
+
+Downloads are now split into a standard and alternate version.
+
+*The standard version*:
+
+- Is built with the latest toolkit, which fixes various issues.
+- Changes the undo shortcut back to Ctrl+Z or Command+Z like Anki 2.0.
+- Includes a separate anki-console.exe executable in the Windows build that
+may be useful for add-on authors.
+- Includes support for the fcitx input method and a gtk2 theme
+in the Linux build.
+
+You can switch between the standard and alternate 2.1.6 without problems.
+If you move back to a previous Anki 2.1 release, your sync login details
+and window positions will be lost, and will need to be set again.
+
+*The standard version has updated requirements*:
+
+- The Windows build only supports 64 bit Windows 7 or later, and will
+not run on a 32 bit install.
+- The Mac build requires macOS 10.12 or later.
+- The Linux build requires a Linux distribution from approximately 2016
+or later.
+
+The alternate version is similar to previous Anki 2.1 releases, and is
+built with an older toolkit. It will run on some older systems that
+the standard version will not, but as it is not as up to date it may be
+missing bugfixes and security improvements that the standard version includes.
+
+*The alternate version (-alt) will run on*:
+
+- Windows 7 32 bit or 64 bit installs
+- Mac 10.10 or later.
+- A Linux distro from around 2014 or later.
+
+*In addition to the toolkit upgrade, there have been some changes in Anki itself*:
+
+- Improvements to the Browse screen and flagging:
+** Search text is normalized, which fixes problems searching for unicode
+characters with multiple possible encodings.
+** The selection is now partially transparent, allowing you to see the underyling
+colours of the rows.
+** The screen doesn't scroll when performing actions that don't change the
+selection count.
+** Flags now toggle on and off, and the separate clear flag action has been removed.
+** The second flag is now orange instead of purple.
+- Prevent errors caused by the user adding a field reference to itself on a field.
+- Better handle issues with the deck list, such as decks that are missing a
+parent deck.
+- Anki should now be able to function even if a system proxy is configured
+for localhost connections.
+- Fix font size being copied when pasting between Anki fields with bold text.
+- Pasting a link with shift held down now creates a clickable link.
+- Fixed an issue with the bulk remove tags option where tags with similar names
+could be removed as well.
+- Fixed an error that occurred with very long filenames on Windows.
+- Fixed an issue running dvisvg on some Linux installs.
+- The Browse screen's sidebar now defaults to on.
+- Fixed a race condition that could cause two copies of Anki to open.
+
 === Changes in 2.1.5beta2 ===
 
 - Fix error when hitting enter/space with no button selected.
