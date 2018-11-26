@@ -7,6 +7,8 @@
 
 = Changes in 2.1.5 =
 
+Released 2018-10-01.
+
 - Use selected answer button instead of default when enter/space pressed.
 - Change undo shortcut in browse screen to avoid conflict with editing functionality.
 - Ignore standard mpv config file location in favour of Anki data folder.

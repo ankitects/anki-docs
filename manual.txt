@@ -1200,7 +1200,7 @@ editing a note, the preview will be based on the content of that note. If you
 opened the window from Tools -> Manage Note Types, Anki will display each
 field's name in parentheses in place of content.
 
-At the bottom of the window is a More button that gives you options to rename
+At the top right of the window is an Options button that gives you options to rename
 or reorder the cards, as well as the following two options:
 
 [[deckoverride]]

@@ -17,6 +17,15 @@ the following in cmd.exe:
 If that does not help, please replace 'auto' with 'angle' and try start Anki
 again.
 
+== Interface speed ==
+
+Even if you enable hardware acceleration as mentioned above, you may find
+Anki takes longer to start and show new windows - especially if your computer
+is not the fastest. This is caused by the use of a newer web toolkit, which
+brings new features and security improvements, but is unfortunately more
+resource intensive. The web toolkit older Anki versions use has been abandoned
+at this point, so it is no longer an option for future releases.
+
 == Shortcuts on macOS ==
 
 The toolkit Anki uses does not currently support some shortcuts like
