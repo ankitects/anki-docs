@@ -24,6 +24,25 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.6beta2 ===
+
+Please also see the beta1 notes.
+
+- Fixed Asian language input on recent Windows 10 installs.
+- Importing apkgs is now more verbose about how notes have been handled.
+- Find&replace now only shows fields relevant to the notes you've selected,
+and is case insensitive.
+- Fix card list not updating when editing HTML.
+- When adding media to cards, Anki now will automatically rename the
+filenames if they're too long.
+- The experimental scheduler now regularly checks if new learning cards
+have become due.
+- Handle invalid add-on config (thanks to Arthur).
+- Enforce template ordering when card templates are reordered after card
+creation (thanks to Arthur).
+- Don't change deck when Esc pressed in deck chooser (thanks to David)
+- Fix a problem on initial startup when English not the default language.
+
 === Changes in 2.1.6beta1 ===
 
 Downloads are now split into a standard and alternate version.
