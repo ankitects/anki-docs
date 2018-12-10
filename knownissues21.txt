@@ -1,12 +1,12 @@
 = Known issues with Anki 2.1 =
 
 [[hwaccel]]
-== Hardware acceleration and startup issues ==
+== Hardware acceleration and startup issues on Windows/Linux ==
 
-The Windows and Linux builds default to software rendering, due to issues with
-hardware acceleration on some computers. If you have a modern system, you
-can optionally enable hardware acceleration in the preferences screen,
-which may result in a performance improvement.
+The standard Anki builds use hardware acceleration by default, and the
+alternate builds do not. If you experience graphical issues, or problems
+starting Anki, changing the hardware acceleration setting in Anki's preferences
+screen may help.
 
 If Anki shows an error message on startup on Windows and restarting it
 a few times does not help, you can manually change the video driver by running
@@ -26,19 +26,17 @@ brings new features and security improvements, but is unfortunately more
 resource intensive. The web toolkit older Anki versions use has been abandoned
 at this point, so it is no longer an option for future releases.
 
-== Shortcuts on macOS ==
+== Shortcuts ==
 
-The toolkit Anki uses does not currently support some shortcuts like
-cmd+left/right or cmd+delete when editing cards. Fn+left/right does work
+The undo shortcut is different in the alternate version due to an issue
+with the toolkit. You can discover the alternate shortcut by looking at the
+Edit menu of the main screen.
+
+On macOS, the alternate build does not support some shortcuts like
+cmd+left/right when editing cards. Fn+left/right does work
 instead. You can also use a third party tool like BetterTouchTool or Karabiner
 to intercept the cmd+left/right keystroke when you type it into Anki, and
 have it automatically be rewritten to use the function key instead.
-
-== Undo shortcut ==
-
-The undo shortcut has changed due to an issue with the toolkit. The new shortcut
-is visible when clicking on the Edit menu. If the toolkit fixes the issue in
-the future, the shortcut will be changed back.
 
 == Copy & paste problems on Windows ==
 
@@ -49,10 +47,9 @@ Anki uses can have trouble when such programs are running.
 
 == Fcitx on Linux ==
 
-Currently the Fcitx input method is not supported by the packaged version of
-Anki. On some systems you may be able to
-https://anki.tenderapp.com/discussions/ankidesktop/29068-cannot-input-japanese-into-anki-21-on-linux#comment_45866909[link in your system libray],
-but if that does not work, the only option at the moment is to switch to using IBUS instead of Fcitx.
+The standard Anki build includes fcitx support, but it may not work on all
+distributions. If you are unable to use fcitx, you may want to run Anki from
+source, or switch to a different input method.
 
 == Text size ==
 
@@ -69,7 +66,7 @@ For example, create a file called startanki.bat on your desktop with the followi
 text:
 
   set ANKI_WEBSCALE=1.5
-  "C:\Program Files (x86)\Anki\anki"
+  start "C:\Program Files (x86)\Anki\anki"
 
 After saving, you can double click on the file to start Anki with that setting.
 

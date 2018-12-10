@@ -1,5 +1,11 @@
 = Known issues with Anki 2.0 =
 
+== No longer supported ==
+
+No further updates to Anki 2.0 are expected, as the toolkit it was built on
+has been discontinued. To minimize the risk of bugs and security issues,
+please consider upgrading to Anki 2.1.
+
 == Errors when starting ==
 
 If you receive the error "The application has failed to start because the
