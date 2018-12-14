@@ -2077,7 +2077,8 @@ As Anki cards are treated like webpages, it is possible to embed some
 Javascript on your cards via inline script tags in the template (loading
 external files using src= is not supported). As this is an advanced feature, we
 can not guarantee any particular Javascript will work, and can not provide any
-assistance when things are not working. If in doubt, it's best to avoid it.
+assistance when things are not working, or when things break in the future.
+If in doubt, it is best to avoid it.
 
 Each Anki client may implement card display differently, so you will need to
 test the behaviour across platforms. A number of clients are implemented
