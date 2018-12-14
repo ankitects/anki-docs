@@ -24,6 +24,19 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.7beta1 (0769bf7a) ===
+
+Beta builds now use the next release name (eg "2.1.7"), but can be identified
+in the about screen by the build number (eg "0769bf7a").
+
+- Fix problems searching for some non-Latin text in decks/note type names.
+- Ensure cgi and uuid modules are available to add-ons.
+- Improvements to the Windows installer.
+- Automatically restart mpv if it stops responding.
+- Don't convert non-Latin characters in add-on configuration to
+difficult-to-read escape codes.
+- Add a bottom border to the menubar on Windows 10.
+
 === Changes in 2.1.6beta2 ===
 
 Please also see the beta1 notes.
