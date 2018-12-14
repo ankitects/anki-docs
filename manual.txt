@@ -2075,10 +2075,14 @@ If you have a 'myclass' style, the following would show the text in yellow when 
 
 As Anki cards are treated like webpages, it is possible to embed some
 Javascript on your cards via inline script tags in the template (loading
-external files using src= is not supported). As this is an advanced feature, we
-can not guarantee any particular Javascript will work, and can not provide any
-assistance when things are not working, or when things break in the future.
-If in doubt, it is best to avoid it.
+external files using src= is not supported).
+
+Because Javascript is an advanced feature and so many things can go wrong,
+**Javascript functionality is provided without any support or warranty**. We
+can not provide any assistance with writing Javascript, and can not guarantee
+any code you have written will continue to work without modification in future
+Anki updates. If you are not comfortable addressing any issues you encounter
+on your own, then please avoid using Javascript.
 
 Each Anki client may implement card display differently, so you will need to
 test the behaviour across platforms. A number of clients are implemented
