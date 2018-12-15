@@ -24,6 +24,14 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.7beta2 (a6c34fd7) ===
+
+- Fix "QPushButton has been deleted" error messages after a problem
+occurs changing note types.
+- Fix errors during "Check Database" that are just a byproduct of a previous
+operation that failed.
+- Another fix for non-Latin characters in add-on configuration.
+
 === Changes in 2.1.7beta1 (0769bf7a) ===
 
 Beta builds now use the next release name (eg "2.1.7"), but can be identified
