@@ -5,6 +5,22 @@
 
 [[latestv21]]
 
+= Changes in 2.1.7 =
+
+Released 2018-12-17.
+
+- Fix "QPushButton has been deleted" error messages after a problem
+occurs changing note types.
+- Fix errors during "Check Database" that are just a byproduct of a previous
+operation that failed.
+- Fix problems searching for some non-Latin text in decks/note type names.
+- Ensure cgi and uuid modules are available to add-ons.
+- Improvements to the Windows installer.
+- Automatically restart mpv if it stops responding.
+- Don't convert non-Latin characters in add-on configuration to
+difficult-to-read escape codes.
+- Add a bottom border to the menubar on Windows 10.
+
 = Changes in 2.1.6 =
 
 Released 2018-12-10.
@@ -37,7 +53,7 @@ built with an older toolkit. It will run on some older systems that
 the standard version will not, but as it is not as up to date, it may be
 missing bugfixes and security improvements that the standard version includes.
 
-*The alternate version (-alt) will run on*:
+*The alternate version will run on*:
 
 - Windows 7 32 bit or 64 bit installs
 - Mac 10.10 or later.
