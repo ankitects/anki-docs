@@ -24,6 +24,13 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.8beta1 (c740723e) ===
+
+A Linux-only beta:
+
+- Fix gtk2 theme and fcitx module not being included.
+- Detect nouveau graphics drivers and automatically switch to software rendering.
+
 === Changes in 2.1.7beta2 (a6c34fd7) ===
 
 - Fix "QPushButton has been deleted" error messages after a problem
