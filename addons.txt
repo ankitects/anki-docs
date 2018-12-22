@@ -893,7 +893,7 @@ Add-on Configuration
 
 Many small 2.0 add-ons relied on users editing the sourcecode to customize them. This is no longer a good idea in 2.1, because changes made by the user will be overwritten when they check for and download updates. 2.1 provides a <<configuration>> system to work around this. If you need to continue supporting 2.0 as well, you could use code like the following:
 
-  if getattr(mw.addonsManager, "getConfig", None):
+  if getattr(getattr(mw, "addonManager", None), "getConfig", None):
       config = mw.addonManager.getConfig(__name__)
   else:
       config = dict(optionA=123, optionB=456)
