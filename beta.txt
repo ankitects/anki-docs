@@ -24,6 +24,14 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.8beta2 (71e0c880) ===
+
+- Fix startup on Windows 8.
+- Fix field content appearing under editor buttons.
+- Better handle an error when recording.
+- Fix improper handling of collections with deck errors.
+- Fix duplicate deck names being created due to text encoding.
+
 === Changes in 2.1.8beta1 (c740723e) ===
 
 A Linux-only beta:
