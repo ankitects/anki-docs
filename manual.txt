@@ -2342,6 +2342,12 @@ wait to reshow a card. The default is 100 years; you can decrease this to a
 smaller number if you're willing to trade extra study time for higher
 retention.
 
+*Hard interval* specifies what the next interval will be when you press the
+Hard button. The percentage is relative to the previous interval, eg
+with a default 120%, a card with a 10 day interval will be given 12 days.
+This option is only available when the experimental scheduler is enabled in the
+preferences.
+
 Turning off *bury related...* will prevent Anki from <<siblings,burying
 siblings>>, and instead Anki will just try to avoid showing siblings directly
 after one another in the same session.
