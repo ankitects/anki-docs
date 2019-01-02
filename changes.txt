@@ -5,6 +5,18 @@
 
 [[latestv21]]
 
+= Changes in 2.1.8 =
+
+Released 2019-01-02.
+
+- Fix startup on Windows 8.
+- Fix field content appearing under editor buttons.
+- Better handle an error when recording.
+- Fix improper handling of collections with deck errors.
+- Fix duplicate deck names being created due to text encoding.
+- Fix gtk2 theme and fcitx module not being included.
+- Detect nouveau graphics drivers and automatically switch to software rendering.
+
 = Changes in 2.1.7 =
 
 Released 2018-12-17.
