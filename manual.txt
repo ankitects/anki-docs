@@ -1018,6 +1018,9 @@ HTML of a field, and shortcuts to add MathJax or <<latex,LaTeX>> to your notes.
 Most of the buttons have shortcut keys. You can hover the mouse cursor over a
 button to see its shortcut.
 
+When pasting text, Anki will strip most formatting by default. If you hold
+down the shift key while pasting, Anki will preserve more formatting.
+
 [[cloze]]
 Cloze Deletion
 --------------
@@ -2505,6 +2508,12 @@ accidentally deleted a deck on one side and want to restore the deck rather
 than having its deletion synchronized), you can check the "On next sync, force
 changes in one direction" box in Tools>Preferences>Network, then sync as usual.
 (You'll be given the option to choose which side you want to use.)
+
+NOTE: Forcing a one way sync only affects card syncing - media is synced as
+normal. If you have files that you want to remove from AnkiWeb, please ensure
+your client is fully in sync first. After syncing is up to date, any files
+you remove (eg via the Check Media function) will be removed from AnkiWeb on
+the following sync.
 
 [[mergingconflicts]]
 Merging Conflicts
