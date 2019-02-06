@@ -43,7 +43,7 @@ issues it was causing some users.
 - Make sure info/warning dialogs appear on top.
 - Fixed an issue with just-typed text not being saved when using the mouse to
 save/add a card.
-- Added support for {{CardFlag}}, which is either empty, or in the format "flagN"
+- Added support for \{\{CardFlag}}, which is either empty, or in the format "flagN"
 where N is 1-4.
 - Fix bulk flag changes in Browse screen not syncing.
 - Fix advanced menu in editor not showing shortcut keys.
