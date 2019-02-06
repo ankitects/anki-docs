@@ -24,6 +24,37 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.9beta1 (b06b70f7) ===
+
+V2 scheduler users: Please switch to the normal scheduler before updating,
+then switch back after updating. After updating, please run Tools>Check Database.
+The DB check will fix some graph display problems, and
+switching the scheduler version will update your review history so that the
+graphs correctly show previous 'good' and 'easy' answers for learning cards
+in the answer buttons graph.
+
+- Update standard build to latest toolkit version.
+- Hardware acceleration defaults to off again on Windows/Linux, due to the
+issues it was causing some users.
+- Fix BR tags being included in empty fields (thanks to David and zjosua)
+- Optimize field repositioning (thanks to Arthur)
+- Fix a crash when copying/cutting with an empty selection (thanks to David)
+- Avoid screen flash when undoing reviews.
+- Make sure info/warning dialogs appear on top.
+- Fixed an issue with just-typed text not being saved when using the mouse to
+save/add a card.
+- Added support for {{CardFlag}}, which is either empty, or in the format "flagN"
+where N is 1-4.
+- Fix bulk flag changes in Browse screen not syncing.
+- Fix advanced menu in editor not showing shortcut keys.
+- When UI fails to load after resuming computer from sync, show a tooltip and
+automatically refresh.
+- Clean up old mplayer instances after a crash so that profile renaming works.
+- Fix add-on list not refreshing when toggling enabled in latest toolkit.
+- Fix cursor jumping on first click in "Edit Current" area on Windows.
+- Preserve whitespace when pasting plain text.
+- Prevent errors caused by a timer firing after collection is unloaded.
+
 === Changes in 2.1.8beta2 (71e0c880) ===
 
 - Fix startup on Windows 8.
