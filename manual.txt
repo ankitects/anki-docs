@@ -920,8 +920,7 @@ more fine-grained ordering of new cards, you can change the order in the
 Recall from <<basics,the basics>> that Anki can create more than one card for
 each thing you input, such as a front->back card and a back->front card, or two
 different cloze deletions from the same text. These related cards are called
-'siblings'. Anki tries to ensure siblings are not shown close together, as
-that's usually not helpful.
+'siblings'.
 
 When you answer a card that has siblings, Anki can prevent the card's siblings
 from being shown in the same session by automatically 'burying' them. Buried
