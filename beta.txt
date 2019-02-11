@@ -26,6 +26,10 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 === Changes in 2.1.9beta1 (b06b70f7) ===
 
+[Removed due to a bug when switching schedulers - please avoid switching
+the scheduler with the beta, and restore from a backup if you did. A new
+beta will be out in a day or so.]
+
 V2 scheduler users: Please switch to the normal scheduler before updating,
 then switch back after updating. After updating, please run Tools>Check Database.
 The DB check will fix some graph display problems, and
