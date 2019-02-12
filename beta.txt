@@ -24,18 +24,35 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.9beta2 (7f8b4b89) ===
+
+There was a bug in 2.1.9beta1 when switching between the v1 and v2 schedulers.
+If you changed the scheduler in 2.1.9beta1, please restore from an automatic
+backup made prior to using beta1, in order to correct your review history.
+
+When you switch between schedulers using beta2, it will adjust the answers in
+your review history for learning cards, to account for the fact that the 2nd button
+was 'good' in the old scheduler, and is 'hard' in the new one. If you take a
+screenshot of your 'answer buttons' graph prior to changing the scheduler,
+you should find only the learning cards change. Please note that this means
+if you downgrade to the normal scheduler, any 'hard' answers will be treated
+as 'good' in that graph.
+
+Also:
+
+- Fix an error loading the graphs when the v2 scheduler was recently enabled.
+- This beta also includes an experimental fix for windows being shown off-screen
+on multi-monitor setups - please let me know if it helps or causes any
+regressions.
+
 === Changes in 2.1.9beta1 (b06b70f7) ===
 
-[Removed due to a bug when switching schedulers - please avoid switching
-the scheduler with the beta, and restore from a backup if you did. A new
-beta will be out in a day or so.]
+A bug was discovered in this beta that made incorrect changes to your review
+history when switching between schedulers. If you changed the scheduler
+using this beta, please restore your collection from an automatic backup that
+was made prior to updating, in order to correct your review history.
 
-V2 scheduler users: Please switch to the normal scheduler before updating,
-then switch back after updating. After updating, please run Tools>Check Database.
-The DB check will fix some graph display problems, and
-switching the scheduler version will update your review history so that the
-graphs correctly show previous 'good' and 'easy' answers for learning cards
-in the answer buttons graph.
+Changes:
 
 - Update standard build to latest toolkit version.
 - Hardware acceleration defaults to off again on Windows/Linux, due to the
