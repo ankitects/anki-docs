@@ -24,13 +24,13 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
-=== Changes in 2.1.9beta2 (7f8b4b89) ===
+=== Changes in 2.1.9beta3 (bca31bf3) ===
 
 There was a bug in 2.1.9beta1 when switching between the v1 and v2 schedulers.
 If you changed the scheduler in 2.1.9beta1, please restore from an automatic
 backup made prior to using beta1, in order to correct your review history.
 
-When you switch between schedulers using beta2, it will adjust the answers in
+When you switch between schedulers using beta2+, it will adjust the answers in
 your review history for learning cards, to account for the fact that the 2nd button
 was 'good' in the old scheduler, and is 'hard' in the new one. If you take a
 screenshot of your 'answer buttons' graph prior to changing the scheduler,
@@ -38,7 +38,13 @@ you should find only the learning cards change. Please note that this means
 if you downgrade to the normal scheduler, any 'hard' answers will be treated
 as 'good' in that graph.
 
-Also:
+- Ensure a full sync is forced when restoring from a backup.
+- Ensure full window is on screen when displaying windows on a changed
+screen layout.
+- Improvements to the add-ons, debug console, and error screens (thanks to Glutanimate)
+- Ensure \{\{Deck}} shows the correct deck when adding (thanks to Arthur)
+
+=== Changes in 2.1.9beta2 (7f8b4b89) ===
 
 - Fix an error loading the graphs when the v2 scheduler was recently enabled.
 - This beta also includes an experimental fix for windows being shown off-screen
