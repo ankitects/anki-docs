@@ -24,7 +24,7 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
-=== Changes in 2.1.9beta3 (bca31bf3) ===
+=== Changes in 2.1.9beta4 (a0b9b6c0) ===
 
 There was a bug in 2.1.9beta1 when switching between the v1 and v2 schedulers.
 If you changed the scheduler in 2.1.9beta1, please restore from an automatic
@@ -37,6 +37,10 @@ screenshot of your 'answer buttons' graph prior to changing the scheduler,
 you should find only the learning cards change. Please note that this means
 if you downgrade to the normal scheduler, any 'hard' answers will be treated
 as 'good' in that graph.
+
+- Fix a memory leak in the 'edit current card' dialog.
+
+=== Changes in 2.1.9beta3 (bca31bf3) ===
 
 - Ensure a full sync is forced when restoring from a backup.
 - Ensure full window is on screen when displaying windows on a changed
