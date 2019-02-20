@@ -3,19 +3,22 @@
 [[hwaccel]]
 == Hardware acceleration and startup issues on Windows/Linux ==
 
-The standard Anki builds use hardware acceleration by default, and the
-alternate builds do not. If you experience graphical issues, or problems
-starting Anki, changing the hardware acceleration setting in Anki's preferences
-screen may help.
+Hardware acceleration defaults to off on Windows and Linux. Enabling it in
+the preferences screen and restarting Anki may make Anki's interface more
+responsive, but some users may experience missing menubars, blank windows
+or crashes when it is enabled.
 
-If Anki shows an error message on startup on Windows and restarting it
-a few times does not help, you can manually change the video driver by running
-the following in cmd.exe:
+On Windows if you're unable to get to Anki's preferences screen and restarting
+Anki a few times does not help, you may need to manually adjust the graphics
+driver. You can do this by starting cmd.exe and typing the following:
 
   echo auto > %APPDATA%\Anki2\gldriver
 
-If that does not help, please replace 'auto' with 'angle' and try start Anki
-again.
+There are three settings you can try 'auto', 'angle', and 'software'.
+
+On Linux, you can write either 'auto' or 'software' into
+~/.local/share/Anki2/gldriver to adjust the driver. Please note that if you're
+using nouveau, it is known to be buggy and it only supports software mode.
 
 == Interface speed ==
 

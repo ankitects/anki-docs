@@ -5,6 +5,43 @@
 
 [[latestv21]]
 
+= Changes in 2.1.9 =
+
+Released 2019-02-20.
+
+- Update standard build to latest toolkit version.
+- Hardware acceleration defaults to off again on Windows/Linux, due to the
+issues it was causing some users. If you were not experiencing any issues,
+turning hardware acceleration back on in the preferences screen is recommended.
+- Various statistics fixes for the V2 scheduler, including an automatic remapping
+of button 2/3 in the review history when moving back and forth between scheduler
+versions so the "answer buttons" graph displays correctly.
+- Fix BR tags being included in empty fields (thanks to David and zjosua)
+- Optimize field repositioning (thanks to Arthur)
+- Fix a crash when copying/cutting with an empty selection (thanks to David)
+- Avoid screen flash when undoing reviews.
+- Make sure info/warning dialogs appear on top.
+- Fixed an issue with just-typed text not being saved when using the mouse to
+save/add a card.
+- Added support for \{\{CardFlag}}, which is either empty, or in the format "flagN"
+where N is 1-4.
+- Fix bulk flag changes in Browse screen not syncing.
+- Fix advanced menu in editor not showing shortcut keys.
+- When UI fails to load after resuming computer from sync, show a tooltip and
+automatically refresh.
+- Clean up old mplayer instances after a crash so that profile renaming works.
+- Fix add-on list not refreshing when toggling enabled in latest toolkit.
+- Fix cursor jumping on first click in "Edit Current" area on Windows.
+- Preserve whitespace when pasting plain text.
+- Prevent errors caused by a timer firing after collection is unloaded.
+- Ensure a full sync is forced when restoring from a backup.
+- Ensure full window is on screen when displaying windows on a changed
+screen layout.
+- Improvements to the add-ons, debug console, and error screens (thanks to Glutanimate)
+- Ensure \{\{Deck}} shows the correct deck when adding (thanks to Arthur)
+- Ensure windows don't get shown off-screen.
+- Remember add-on window size and position.
+
 = Changes in 2.1.8 =
 
 Released 2019-01-02.
