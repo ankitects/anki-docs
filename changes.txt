@@ -5,7 +5,7 @@
 
 [[latestv21]]
 
-= Changes in 2.1.9 =
+= Changes in 2.1.9 (ae67c976) =
 
 Released 2019-02-20.
 
@@ -42,7 +42,7 @@ screen layout.
 - Ensure windows don't get shown off-screen.
 - Remember add-on window size and position.
 
-= Changes in 2.1.8 =
+= Changes in 2.1.8 (71e0c880) =
 
 Released 2019-01-02.
 
