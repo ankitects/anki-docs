@@ -17,7 +17,7 @@ turning hardware acceleration back on in the preferences screen is recommended.
 of button 2/3 in the review history when moving back and forth between scheduler
 versions so the "answer buttons" graph displays correctly.
 - Fix BR tags being included in empty fields (thanks to David and zjosua)
-- Optimize field repositioning (thanks to Arthur)
+- Optimize card template repositioning (thanks to Arthur)
 - Fix a crash when copying/cutting with an empty selection (thanks to David)
 - Avoid screen flash when undoing reviews.
 - Make sure info/warning dialogs appear on top.
