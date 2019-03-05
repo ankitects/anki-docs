@@ -1130,7 +1130,9 @@ extra information.
 
 The cloze note type is treated specially by Anki, and cannot be created based
 on a regular note type. If you wish to customize it, please make sure to clone
-the existing Cloze type instead of another type of note.
+the existing Cloze type instead of another type of note. Things like formatting
+can be customized, but it is not possible to add extra card templates to the
+cloze note type.
 
 Inputting Foreign Characters and Accents
 ----------------------------------------
