@@ -24,6 +24,20 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.10beta1 (73761b59) ===
+
+- Allow decreasing daily limits in custom study.
+- Add option to strip html in export.
+- Avoid nbsp for single spaces when pasting text.
+- Fix preview screen flashing when moving between cards.
+- Improvements to the add-ons screen (thanks to Glutanimate).
+- Support .ankiaddon bundles (thanks to Glutanimate).
+- Improve subpixel antialiasing on some machines (thanks to Glutanimate).
+- Add a button to copy debug info to about screen (thanks to Glutanimate).
+- Fix problem running from source on Windows (thanks to dlon).
+- Allow add-ons to serve files from mediasrv (thanks to Glutanimate).
+- More user-friendly error messages for some network errors.
+
 === Changes in 2.1.9beta4 (a0b9b6c0) ===
 
 There was a bug in 2.1.9beta1 when switching between the v1 and v2 schedulers.
