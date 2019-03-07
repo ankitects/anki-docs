@@ -24,6 +24,13 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.10beta2 (0543df7d) ===
+
+- Improve Japanese interface font on Windows 10, and make it possible for
+translators to change the font for other languages that need it as well.
+- Fix inability to start if problem occurs on first run.
+- Revert a change in the last beta that broke a bunch of add-ons.
+
 === Changes in 2.1.10beta1 (73761b59) ===
 
 - Allow decreasing daily limits in custom study.
