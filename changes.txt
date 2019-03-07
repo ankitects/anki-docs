@@ -5,6 +5,25 @@
 
 [[latestv21]]
 
+= Changes in 2.1.10 (22d6feed) =
+
+Released 2019-03-07.
+
+- Add option to strip html in export.
+- Avoid nbsp for single spaces when pasting text.
+- Fix preview screen flashing when moving between cards.
+- Improvements to the add-ons screen (thanks to Glutanimate).
+- Support .ankiaddon bundles (thanks to Glutanimate).
+- Improve subpixel antialiasing on some machines (thanks to Glutanimate).
+- Improve Japanese interface font on Windows 10, and make it possible for
+translators to change the font for other languages that need it as well.
+- Fix inability to start if problem occurs on first run.
+- Allow decreasing daily limits in custom study.
+- Add a button to copy debug info to about screen (thanks to Glutanimate).
+- Fix problem running from source on Windows (thanks to dlon).
+- Allow add-ons to serve files from mediasrv (thanks to Glutanimate).
+- More user-friendly error messages for some network errors.
+
 = Changes in 2.1.9 (ae67c976) =
 
 Released 2019-02-20.
