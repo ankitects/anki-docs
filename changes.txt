@@ -5,6 +5,15 @@
 
 [[latestv21]]
 
+= Changes in 2.1.11 (3cf770c7) =
+
+Released 2019-03-11.
+
+- Change Undo shortcut back to Ctrl+Alt+Z/Cmd+Opt+Z in Browse screen,
+to prevent accidentally undoing non-text changes when editing fields.
+- Revert a previous card template optimization that could cause an error.
+- Suppress a spurious error message that could occur when editing.
+
 = Changes in 2.1.10 (22d6feed) =
 
 Released 2019-03-07.
