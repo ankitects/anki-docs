@@ -24,6 +24,23 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.12beta1 (380d59f7) ===
+
+- Tweaks to the 'deck age' graph binning (thanks to Jian).
+- Fix memory leak in card layout screen.
+- Fix preview window in browser sometimes not updating.
+- Fix card counts not updating when a review is undone.
+- Switch to mplayer on the alternate OS X build, as mpv was not working on
+some older machines.
+- Make sure mpv doesn't attempt to load scripts from default location.
+- Fix an error that could occur on startup on some Windows installs.
+- Fix an issue checking for add-on updates (thanks to Glutanimate).
+- Fix fields appearing under editor buttons.
+- Fix an issue that could prevent profile renaming/deletion on Windows.
+- Change focus outline colour on Windows.
+- Work around a Qt issue that could cause AltGr+key combinations to trigger
+a shortcut (thanks to dlon).
+
 === Changes in 2.1.10beta2 (0543df7d) ===
 
 - Improve Japanese interface font on Windows 10, and make it possible for
