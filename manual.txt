@@ -31,7 +31,8 @@ videos] instead.
 Translations
 ============
 
-This page translated into other languages:
+Volunteers have contributed translations of this manual. The translations
+may not always be up to date.
 
  * https://apps.ankiweb.net/docs/manual.id.html[Bahasa Indonesia]
  * http://www.dennisproksch.de/anki[Deutsch]
@@ -43,10 +44,9 @@ This page translated into other languages:
  * http://wikiwiki.jp/rage2050/?FrontPage[日本語]
  * http://www.ankichina.net/anki20.html[简体中文]
 
-These translations are contributed by volunteers. If you would like to help
-translate the manual into a different language, or you would like to look at
-the translations that are currently in progress, please see the
-<<translatingmanual,translating the manual>> section.
+If you would like to help translate the manual into a different language, or
+you would like to look at the translations that are currently in progress,
+please see the <<translatingmanual,translating the manual>> section.
 
 Introduction
 ============
