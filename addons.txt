@@ -737,8 +737,13 @@ how they accomplish something.
 [[sharing]]
 = Sharing Add-ons =
 
-AnkiWeb expects a .zip file of the contents of an add-on module, without
-the folder name. For example, if you have a module like the following:
+== Sharing via AnkiWeb ==
+
+You can package up an add-on for distribution by zipping it up, and giving
+it a name ending in .ankiaddon.
+
+The top level folder should not be included in the zip file. For example, if
+you have a module like the following:
 
   addons21/myaddon/__init__.py
   addons21/myaddon/my.data
@@ -754,13 +759,30 @@ accept the zip file:
  myaddon/__init__.py
  myaddon/my.data
 
-You can give the .zip file any name.
+On Unix-based machines, you can create a properly-formed file with the following
+command:
+
+ $ cd myaddon && zip -r ../myaddon.ankiaddon *
 
 Python automatically creates `__pycache__` folders when your add-on is run.
 Please make sure you delete these prior to creating the zip file, as AnkiWeb
-can not accept .zip files that contain `__pycache__` folders.
+can not accept zip files that contain `__pycache__` folders.
 
-You can upload a .zip you've created to https://ankiweb.net/shared/addons/
+Once you've created a .ankiaddon file, you can use the Upload button on
+https://ankiweb.net/shared/addons/ to share the add-on with others.
+
+== Sharing outside AnkiWeb ==
+
+If you wish to distribute .ankiaddon files outside of AnkiWeb, your add-on
+folder needs to contain a 'manifest.json' file. The file should contain
+at least two keys: 'package' specifies the folder name the add-on will be
+stored in, and 'name' specifies the name that will be shown to the user. You
+can optionally include a 'conflicts' key which is a list of other packages
+that conflict with the add-on, and a 'mod' key which specifies when the add-on
+was updated.
+
+When Anki downloads add-ons from AnkiWeb, only the conflicts key is used
+from the manifest.
 
 = Porting Anki 2.0 add-ons =
 
@@ -824,7 +846,7 @@ Folders are deleted when upgrading
 When an add-on is upgraded, all files in the add-on folder are deleted. The
 only exception is the special <<userfiles,user_files folder>>. If your add-on
 requires more than simple key/value configuration, make sure you store the
-associated files in the user_files folder, or it will be lost on upgrade.
+associated files in the user_files folder, or they will be lost on upgrade.
 
 Supporting both 2.0 and 2.1 in one codebase
 --------------------------------------------
