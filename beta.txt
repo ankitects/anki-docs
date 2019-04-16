@@ -24,6 +24,21 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.12beta3 (4a2f39e8) ===
+
+- The Mac build now uses the new hardened runtime on Mojave - please report
+any regressions you may notice.
+- Fix possible blank window on startup on Windows.
+- Revert AltGr change in Beta1 due to side effects - it's been moved into an add-on.
+- Fix some issues with previewing.
+- Disable add-on config button when not appropriate (thanks to Glutanimate).
+- Add-ons hosted on AnkiWeb can now define conflicts in the manifest file.
+- Other minor fixes.
+
+=== Changes in 2.1.12beta2 (380d59f7) ===
+
+- See beta3.
+
 === Changes in 2.1.12beta1 (380d59f7) ===
 
 - Tweaks to the 'deck age' graph binning (thanks to Jian).
