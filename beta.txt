@@ -24,6 +24,16 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.12beta4 (eef86bf3) ===
+
+This is a candidate for the next stable release, so if you encounter any
+issues, please let me know as soon as you can.
+
+- Fix an error caused by missing note types.
+- A possible workaround for the audio player getting stuck on Macs.
+- A few other minor fixes.
+- Display the installed version in the Windows uninstall screen.
+
 === Changes in 2.1.12beta3 (4a2f39e8) ===
 
 - The Mac build now uses the new hardened runtime on Mojave - please report
