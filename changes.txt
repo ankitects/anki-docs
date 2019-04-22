@@ -5,6 +5,30 @@
 
 [[latestv21]]
 
+= Changes in 2.1.12 (eef86bf3) =
+
+Released 2019-04-23.
+
+- Fix an issue that could prevent profile renaming/deletion on Windows.
+- Fix fields appearing under editor buttons.
+- Fix memory leak in card layout screen.
+- Fix some issues with previewing in the Browse screen.
+- Fix card counts not updating when a review is undone.
+- Fix an error that could occur on startup on some Windows installs.
+- The Mac build now uses the new hardened runtime on Mojave.
+- Change focus outline colour on Windows.
+- Fix an error caused by missing note types.
+- A possible workaround for the audio player getting stuck on Macs.
+- Display the installed version in the Windows uninstall screen.
+- Fix an issue checking for add-on updates (thanks to Glutanimate).
+- Disable add-on config button when not appropriate (thanks to Glutanimate).
+- Tweaks to the 'deck age' graph binning (thanks to Jian).
+- Add-ons hosted on AnkiWeb can now define conflicts in the manifest file.
+- Switch to mplayer on the alternate OS X build, as mpv was not working on
+some older machines.
+- Make sure mpv doesn't attempt to load scripts from default location.
+- Other minor fixes.
+
 = Changes in 2.1.11 (3cf770c7) =
 
 Released 2019-03-11.
