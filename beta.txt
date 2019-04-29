@@ -24,6 +24,11 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.13beta2 (bcb422be) ===
+
+- Fix a packaging error that was preventing startup.
+- Fix relearning cards being given learning step count in V2 scheduler.
+
 === Changes in 2.1.13beta1 (9ce1f051) ===
 
 - Fix formatting getting lost when copying&pasting between fields on macOS.
