@@ -24,6 +24,18 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.13beta1 (9ce1f051) ===
+
+- Fix formatting getting lost when copying&pasting between fields on macOS.
+- Fix some issues that cause the main window to get stuck.
+- Fix an empty deck list sometimes appearing when restoring from a backup.
+- Fix Anki hanging after an error occurs during startup.
+- Fix error caused by profile with trailing space on Windows.
+- Fix error message when syncing with an unconfirmed email address.
+- Use jsonschema for add-on manifests (thanks to Erez).
+- Warn in DB check when high due numbers are encountered.
+- Improve error messages on full disk and failed add-on deletion.
+
 === Changes in 2.1.12beta4 (eef86bf3) ===
 
 This is a candidate for the next stable release, so if you encounter any
