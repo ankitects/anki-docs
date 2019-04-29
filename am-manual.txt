@@ -808,6 +808,10 @@ is called "Text", the key would be "fldText". The field text is interpreted as
 HTML, so if you wanted a newline in the text you'd use something like "line
 1<br>line 2".
 
+Special characters in the URL must be escaped. For example, if you have spaces
+in a field, they must be represented with `%20`. If you're using the
+Shortcuts app, there is a URL encode action which you may find useful.
+
 The remaining keys are optional:
 
 - tags=<tags separated by space>
