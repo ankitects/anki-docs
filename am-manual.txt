@@ -170,9 +170,9 @@ Then on your computer:
  . Locate Anki's file sharing section with
    http://support.apple.com/kb/HT4094[Apple's instructions].
  . Drag the collection.apkg or .colpkg file from iTunes to your desktop.
- . If the file ends with .colpkg, rename the file to 'collection.apkg'. This
-   step is not required if you're using the Anki 2.1 beta builds.
- . Use File>Import in Anki to import the collection.apkg file.
+ . If you're still using Anki 2.0 on your computer, rename the file to
+   'collection.apkg'. This step is not required if you're using the Anki 2.1.
+ . Use File>Import in Anki to import the file.
  . Confirm you wish to replace, so that the deck from your mobile device
    overwrites the old data on your desktop.
  . After importing, you can delete the file on your desktop if you wish.
@@ -881,8 +881,8 @@ them for more information.
 
 == MathJax ==
 
-AnkiMobile supports MathJax out of the box like the computer 2.1 beta releases.
-Simply place something like the following on your card:
+AnkiMobile supports MathJax out of the box. Simply place something like the
+following on your card:
 
 ----
 This is some text \(x^2\) with an inline equation.
