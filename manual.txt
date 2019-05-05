@@ -2486,11 +2486,11 @@ filesystem.
 Conflicts
 ---------
 
-Reviews and note edits can be merged, so if you review or edit on two
-different devices before syncing, Anki will preserve your changes from both
-locations. If the same card has been reviewed in two different locations, both
-reviews will be marked in the revision history, and the card will be kept in
-the state it was when it was most recently answered.
+Under normal circumstances, reviews and note edits can be merged, so if you
+review or edit on two different devices before syncing, Anki will preserve
+your changes from both locations. If the same card has been reviewed in two
+different locations, both reviews will be marked in the revision history, and
+the card will be kept in the state it was when it was most recently answered.
 
 There are certain changes that Anki is unable to merge. These mainly relate to
 the format of notes: things like adding a new field, or removing a card
@@ -2499,10 +2499,22 @@ you, and give you the option of aborting the operation. If you choose to
 continue, you'll be asked to choose whether to keep the local copy or the copy
 on AnkiWeb when your collection is next synchronized.
 
-If you choose Upload to make the content on AnkiWeb a copy of the content on
-your local device, you then need to sync any other devices you use, and choose
-Download, so they too have the same content. Once all devices have the same
-content, future syncs will be able to merge again.
+If certain problems are detected while syncing, it will also force a one way
+sync. If you find this consistently happens, please post on our support site.
+
+When a one way sync is required, you need to choose whether you wish to keep
+the collection on your local device, or the collection on AnkiWeb. If changes have
+been made on both ends, only changes on one end can be preserved.
+
+If you choose Upload, the content on your local device will be sent to AnkiWeb.
+You then need to sync your other devices, and choose "Download" to have them
+grab a copy of that content. 
+
+If you choose Download, it will replace any local changes you've made with
+the data that is on AnkiWeb.
+
+Once all devices are in sync, future syncs will return to the normal behaviour
+of merging changes from both ends.
 
 If you wish to force a full upload or download (for example, because you
 accidentally deleted a deck on one side and want to restore the deck rather
