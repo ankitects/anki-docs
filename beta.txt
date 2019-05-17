@@ -24,6 +24,19 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.13beta3 (3ba55990) ===
+
+This is a candidate for the next stable release, so if you encounter any
+issues, please let me know as soon as you can.
+
+- Fix preview window failing to appear when 'show both sides' enabled.
+- Removing trailing BR tag when pasting into an empty field.
+- Don't throw an error when non-Latin text in the Javascript console can't be shown.
+- Double click on add-ons to edit their configuration (thanks to lovac42).
+- Fix the window icon in a few screens (thanks to John).
+- Don't highlight the deck selection button in the add screen on Windows.
+- Improve the default 'type in the answer' note type.
+
 === Changes in 2.1.13beta2 (bcb422be) ===
 
 - Fix a packaging error that was preventing startup.
@@ -42,9 +55,6 @@ https://anki.tenderapp.com/discussions/beta-testing
 - Improve error messages on full disk and failed add-on deletion.
 
 === Changes in 2.1.12beta4 (eef86bf3) ===
-
-This is a candidate for the next stable release, so if you encounter any
-issues, please let me know as soon as you can.
 
 - Fix an error caused by missing note types.
 - A possible workaround for the audio player getting stuck on Macs.
