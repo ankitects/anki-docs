@@ -5,6 +5,28 @@
 
 [[latestv21]]
 
+= Changes in 2.1.13 (3ba55990) =
+
+Released 2019-05-20.
+
+- Fix formatting getting lost when copying&pasting between fields on macOS.
+- Fix some issues that cause the main window to get stuck.
+- Fix an empty deck list sometimes appearing when restoring from a backup.
+- Fix Anki hanging after an error occurs during startup.
+- Fix error caused by profile with trailing space on Windows.
+- Fix error message when syncing with an unconfirmed email address.
+- Use jsonschema for add-on manifests (thanks to Erez).
+- Warn in DB check when high due numbers are encountered.
+- Improve error messages on full disk and failed add-on deletion.
+- Fix relearning cards being given learning step count in V2 scheduler.
+- Fix preview window failing to appear when 'show both sides' enabled.
+- Removing trailing BR tag when pasting into an empty field.
+- Don't throw an error when non-Latin text in the Javascript console can't be shown.
+- Double click on add-ons to edit their configuration (thanks to lovac42).
+- Fix the window icon in a few screens (thanks to John).
+- Don't highlight the deck selection button in the add screen on Windows.
+- Improve the default 'type in the answer' note type.
+
 = Changes in 2.1.12 (eef86bf3) =
 
 Released 2019-04-23.
