@@ -2029,34 +2029,6 @@ Styling>> instructions above.
 NOTE: Please make sure the filenames match exactly. If the file is called
 arial.TTF and you write arial.ttf in your card templates, it will not work.
 
-=== Fonts on a Mac ===
-
-Embedded fonts currently do not work on OS X. It is still possible to use
-custom fonts, but they need to be installed system wide.
-
-To install a font on your system, please see http://support.apple.com/kb/HT2435?viewlocale=en_US&locale=en_US
-
-You can set up Anki to use the system font on a Mac computer, and an embedded
-font elsewhere.
-
-On your front or back template, wrap the field you want to style in the following
-code, replacing "FieldName" with the name of your field.
-
------
-<span class="mystyle">{{FieldName}}</span>
------
-
-In the styling section, in addition to the font-face line described above,
-add the following:
-
------
-.mystyle { font-family: myfont; }
-.mac .mystyle { font-family: Helvetica; }
------
-
-Replace "Helvetica" with the name of the font you installed on your system.
-Keep "myfont" as is, as it references the font you embedded.
-
 [[nightmode]]
 == Night Mode ==
 
