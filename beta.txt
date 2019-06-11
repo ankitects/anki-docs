@@ -24,6 +24,13 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.14beta1 (c7201b0c) ===
+
+- Fix an issue with steps getting lost when learning cards moved out of a V2 filtered deck.
+- Fix lost space when pasting indented text.
+- Limit image height relative to window height, not document height.
+- Fix deck list being re-rendered unnecessarily.
+
 === Changes in 2.1.13beta3 (3ba55990) ===
 
 This is a candidate for the next stable release, so if you encounter any
