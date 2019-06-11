@@ -24,7 +24,7 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
-=== Changes in 2.1.14beta1 (c7201b0c) ===
+=== Changes in 2.1.14beta1 (702788c8) ===
 
 - Fix an issue with steps getting lost when learning cards moved out of a V2 filtered deck.
 - Fix lost space when pasting indented text.
