@@ -2559,10 +2559,12 @@ If you need a proxy to access the internet, Anki should automatically pick up
 your system proxy settings if you're on Windows or OS X, and will honour the
 HTTP_PROXY environment variable if you're on another platform.
 
-Please note that advanced proxy setup via .pac or .wpad files is not supported
-in Anki.
+Anki will only be able to pick up your system settings if a proxy is manually
+configured, and does not require a password. If your system uses automatic
+proxy setup, or uses a proxy that requires a username and password, you will
+need to manually tell Anki the proxy configuration.
 
-To override the system proxy settings on Windows or OS X, define a HTTP_PROXY
+To tell Anki your proxy settings, define a HTTPS_PROXY
 environmental variable that points to the proxy server. It will look like:
 
 -----
@@ -2576,24 +2578,21 @@ to change it to %40, like so:
 http://user%40workdomain.com:pass@proxy.company.com:8080
 -----
 
-NOTE: Anki 2.1 expects to find HTTPS_PROXY instead of HTTP_PROXY.
+NOTE: Anki 2.0 expects to find HTTP_PROXY instead of HTTPS_PROXY.
 
 To set environmental variables on Windows, please see
 https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/sysdm_advancd_environmnt_addchange_variable.mspx?mfr=true
 
 If you're on a Mac, please see http://stackoverflow.com/questions/135688/setting-environment-variables-in-os-x
 
-NOTE: The toolkit Anki is built on is unfortunately not currently able to
-pick up your proxy username and password from your system settings. This means
-that if you use a proxy that requires authentication, syncing will fail. In
-this case, you will need to use an environmental variable that defines your
-proxy details as described above, or use a personal proxy server that you
-route traffic through, which in turn connects to the upstream proxy that requires
-authentication.
-
 NOTE: Heavily locked down networks that intercept secure connections and present
-their own certificate instead may cause Anki to throw up SSL errors. We do not
-support using Anki in such environments.
+their own certificate instead may cause Anki to throw up SSL errors. In such
+environments, you may be able to work around the errors with
+https://ankiweb.net/shared/info/878367706
+
+NOTE: An alternative solution is to install a local proxy server, and point
+that proxy server at your normal proxy server. You can then tell Anki to use
+the local proxy, which will redirect requests to the proxy you normally use.
 
 [[browser]]
 = Browser =
