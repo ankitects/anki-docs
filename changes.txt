@@ -5,6 +5,19 @@
 
 [[latestv21]]
 
+= Changes in 2.1.14 (7b93e985) =
+
+Released 2019-06-27.
+
+- Fix a bug in the V2 scheduler that would cause partially learnt cards
+removed from filtered decks to revert to an earlier state.
+- Fix a bug in the handling of relearning cards when switching back to
+the V1 scheduler.
+- Fix lost space when pasting indented text.
+- Limit image height relative to window height, not document height.
+- Fix deck list being re-rendered unnecessarily.
+- Remove the 'unable to connect to local port' message.
+
 = Changes in 2.1.13 (3ba55990) =
 
 Released 2019-05-20.
