@@ -5,9 +5,9 @@
 
 [[latestv21]]
 
-= Changes in 2.1.14 (7b93e985) =
+= Changes in 2.1.14 =
 
-Released 2019-06-27.
+Released 2019-06-27, build 7b93e985.
 
 - Fix a bug in the V2 scheduler that would cause partially learnt cards
 removed from filtered decks to revert to an earlier state.
@@ -18,9 +18,9 @@ the V1 scheduler.
 - Fix deck list being re-rendered unnecessarily.
 - Remove the 'unable to connect to local port' message.
 
-= Changes in 2.1.13 (3ba55990) =
+= Changes in 2.1.13 =
 
-Released 2019-05-20.
+Released 2019-05-20, build 3ba55990.
 
 - Fix formatting getting lost when copying&pasting between fields on macOS.
 - Fix some issues that cause the main window to get stuck.
@@ -40,9 +40,9 @@ Released 2019-05-20.
 - Don't highlight the deck selection button in the add screen on Windows.
 - Improve the default 'type in the answer' note type.
 
-= Changes in 2.1.12 (eef86bf3) =
+= Changes in 2.1.12 =
 
-Released 2019-04-23.
+Released 2019-04-23, build eef86bf3.
 
 - Fix an issue that could prevent profile renaming/deletion on Windows.
 - Fix fields appearing under editor buttons.
@@ -64,18 +64,18 @@ some older machines.
 - Make sure mpv doesn't attempt to load scripts from default location.
 - Other minor fixes.
 
-= Changes in 2.1.11 (3cf770c7) =
+= Changes in 2.1.11 =
 
-Released 2019-03-11.
+Released 2019-03-11, build 3cf770c7.
 
 - Change Undo shortcut back to Ctrl+Alt+Z/Cmd+Opt+Z in Browse screen,
 to prevent accidentally undoing non-text changes when editing fields.
 - Revert a previous card template optimization that could cause an error.
 - Suppress a spurious error message that could occur when editing.
 
-= Changes in 2.1.10 (22d6feed) =
+= Changes in 2.1.10 =
 
-Released 2019-03-07.
+Released 2019-03-07, build 22d6feed.
 
 - Add option to strip html in export.
 - Avoid nbsp for single spaces when pasting text.
@@ -92,9 +92,9 @@ translators to change the font for other languages that need it as well.
 - Allow add-ons to serve files from mediasrv (thanks to Glutanimate).
 - More user-friendly error messages for some network errors.
 
-= Changes in 2.1.9 (ae67c976) =
+= Changes in 2.1.9 =
 
-Released 2019-02-20.
+Released 2019-02-20, build ae67c976.
 
 - Update standard build to latest toolkit version.
 - Hardware acceleration defaults to off again on Windows/Linux, due to the
@@ -129,9 +129,9 @@ screen layout.
 - Ensure windows don't get shown off-screen.
 - Remember add-on window size and position.
 
-= Changes in 2.1.8 (71e0c880) =
+= Changes in 2.1.8 =
 
-Released 2019-01-02.
+Released 2019-01-02, build 71e0c880.
 
 - Fix startup on Windows 8.
 - Fix field content appearing under editor buttons.
