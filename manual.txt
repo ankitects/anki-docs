@@ -1186,9 +1186,9 @@ read it.)
 You can configure the cards Anki should create and what should be shown on them
 when adding or editing material by clicking on the “Cards...” button. At the
 top of the window you'll see a set of tabs, one for each card type. You can
-click the plus on the right if you'd like to add another card type to the
+click Options -> Add Card Type if you'd like to add another card type to the
 current note type. Similarly, if you'd like to delete one, you can do so by
-clicking the X on the tab.
+clicking Options -> Remove Card Type.
 
 On the top left is the front template, on the bottom left is the back
 template, and in between them is the card styling section.
