@@ -2543,7 +2543,7 @@ Firewalls
 
 Anki needs to be able to make outbound HTTPS connections to sync. At a minimum
 it must be able to connect to ankiweb.net, sync.ankiweb.net and
-syncN.ankiweb.net, where N is number between 3 and 6. These domains may change
+syncN.ankiweb.net, where N is number between 2 and 6. These domains may change
 over time, and the IP addresses they point to may also change, so we recommend
 you allow wildcard access to *.ankiweb.net to reduce the chance of the
 firewall rules needing to be updated in the future.
