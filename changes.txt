@@ -5,6 +5,18 @@
 
 [[latestv21]]
 
+= Changes in 2.1.15 =
+
+Released 2019-08-22, build 442df9d6.
+
+- The V2 scheduler now fully randomizes review cards due on a given day.
+- Fix add-ons errors on Windows when profile path was short.
+- Fix flag changes in Browse screen not syncing.
+- Cleanup recording wav file when recording canceled.
+- Fix the window icon on Wayland (thanks to Wilco).
+- Add a progress bar to media deletion.
+- Other minor changes.
+
 = Changes in 2.1.14 =
 
 Released 2019-06-27, build 7b93e985.
