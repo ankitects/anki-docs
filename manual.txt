@@ -1305,8 +1305,8 @@ or div instead.
 You can watch http://www.youtube.com/watch?v=5tYObQ3ocrw&yt:cc=on[a video about
 this feature] on YouTube.
 
-If you'd like to type in the answer and have Anki compare your input to the
-real answer, you can do so by changing your template. Imagine your front
+If you'd like to type in the answer and have Anki compare your input to
+one of the fields, you can do so by changing your template. Imagine your front
 and back templates look like:
 
 -----
