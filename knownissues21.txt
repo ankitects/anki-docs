@@ -14,7 +14,9 @@ driver. You can do this by starting cmd.exe and typing the following:
 
   echo auto > %APPDATA%\Anki2\gldriver
 
-There are three settings you can try 'auto', 'angle', and 'software'.
+There are three settings you can try: 'auto', 'angle', and 'software'. If
+you have problems both when hardware acceleration is turned on and turned off
+in the preferences, it's worth giving 'angle' a go.
 
 On Linux, you can write either 'auto' or 'software' into
 ~/.local/share/Anki2/gldriver to adjust the driver. Please note that if you're
