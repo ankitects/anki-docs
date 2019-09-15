@@ -681,7 +681,7 @@ Paintbrush :: Only available in iOS 13+. Sets the text color.
 Camera :: Allows you to add media files from the camera, microphone, photo
 library or from a file. On iPads, the mic button is shown separately.
 
-Square root :: Shortcuts to subscript/superscript, and <<mathjax,MathJax>>.
+Square root :: Only available in iOS 13+. Shortcuts to subscript/superscript, and <<mathjax,MathJax>>.
 
 Eye :: Shows a preview of how the card will appear when reviewed.
 
