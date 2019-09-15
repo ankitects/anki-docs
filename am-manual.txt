@@ -192,24 +192,25 @@ customize this number in the deck options if you'd like.
 To study cards in a deck, simply tap on the deck, and AnkiMobile will switch
 to study mode.
 
-If you wish to delete a deck, swipe your finger from right to left over it,
-and a delete button will appear.
+If you wish to rename or delete a deck, swipe your finger from right to left
+over it, and buttons will appear.
 
-To rename a deck, hold your finger on a deck for about a second.
+At the top of the screen, you'll see four buttons.
 
-At the top of the screen, you'll see two buttons. The question mark opens
-this help page, and the gear/cog button opens the AnkiMobile preferences
-screen.
+- The question mark opens this help page
+- The graph icon opens the deck statistics screen.
+- The magnifying glass opens the card browser.
+- The gear/cog opens the preferences screen.
 
 On the bottom of the screen, there are two more buttons. *Add/Export* allows
 you to download shared decks, add/create an empty deck, and import/export
 .apkg files from iTunes. *Synchronize* synchronizes your cards with the cloud.
 
-The synchronize button will turn yellow if you have made changes that need to
+The synchronize button will change color if you have made changes that need to
 be synchronized to AnkiWeb, or if changes are waiting on AnkiWeb that need to
 be synchronized to the device. One of the changes that Anki synchronizes to
-other clients is the current deck, so tapping on a deck will turn the
-button yellow even if you do not study any cards.
+other clients is the current deck, so tapping on a deck will change the button
+color, even if you do not study any cards.
 
 = The Study Screen =
 
@@ -222,9 +223,9 @@ any cards are waiting to be studied, a card's question will be shown to you.
 
 If you wish to change to a different deck, you can do so by tapping the top
 left button. The next three buttons allow you to add cards, edit the current
-card, and search/browse all cards. The top right button will open up the
-<<tools,tools screen>>, where you can modify deck options and access more card
-actions.
+card, and search/browse all cards.
+
+The gear/cog in the bottom right will open up the <<tools,tools screen>>.
 
 On the bottom of the screen you'll see three numbers. From the left, these
 correspond to new cards, learning cards, and cards to review. These are
@@ -247,15 +248,14 @@ If you are studying content for which it is useful to sketch something before
 showing the answer on the card (e.g., characters in a foreign language),
 AnkiMobile provides a feature called the 'scratchpad' (the analogous feature is
 called the 'whiteboard' in AnkiDroid). You can enable the scratchpad by
-adding the 'Toggle ScratchPad' <<actions,action>> to a <<taps,tap>>, swipe,
-quickbar action, or tool button, or by tapping on the tools screen, then
-choosing More and then Toggle ScratchPad. 
+tapping on the tools button, then "Scratchpad".
 
 When you've finished the cards that are due to be studied today, you'll be
 shown a congratulations message. If you have other decks, you can tap the top
-left button to return to the decks list and select a different one. You can
-tap the home button to close Anki and save your progress at any time, whether
-you have completed the day's reviews or not.
+left button to return to the decks list and select a different one.
+
+You can tap the home button to close Anki and save your progress at any time,
+whether you have completed the day's reviews or not.
 
 If you wish to keep studying the same cards after the congratulations message
 is displayed, please see the <<filtered,filtered deck>> section.
@@ -267,21 +267,145 @@ You can also press 'r' to repeat the audio on the current card.
 [[tools]]
 = The Tools Screen =
 
-The tools screen will open when you tap on the top right button while
-studying.
+The tools screen will open when you tap on the gear/cog icon in the study screen.
 
-*Study Options* allows you to configure options related to the current deck,
-such as the number of new cards and reviews to introduce each day. Which
-options are show will depend on if the deck you have selected is a filtered
-deck or a regular deck.
+On the top right, there are buttons that will adjust the text size on your cards.
 
-*Font Scale* allows you to increase or decrease the size of the text on cards
-without modifying how they appear on a computer. It is not specific to a deck
-- when changed, it changes all cards in all decks in the same way. For more
-precise control over the appearance of cards, you can edit your card templates
-in the computer version of Anki.
+The "Frequent Actions" section contains some commonly used actions. You can
+rearrange the actions there or remove actions by holding your finger on a button
+for a second or so.
 
-*Tool Buttons*: Please see the <<toolbuttons,tool buttons>> section.
+Below the "Frequent Actions" section is a list of all available actions in
+AnkiMobile. You can add these actions to the "Frequent Actions" section by
+long-pressing on them.
+
+[[actions]]
+== Action List ==
+
+The following actions can be run from the tools button, or by assigning them to
+a tap, swipe, or the top bar in the preferences.
+
+Add :: Opens a new window to add cards to the deck.
+
+Answer "Again" :: When the answer screen is shown, choose the red
+button, indicating you wish to review the card again soon. This is useful when
+you forgot a card or wish to review it more frequently.
+
+Answer "Hard" :: When the answer screen is shown and there are four buttons,
+choose the second button from the left, indicating you found the card hard to
+remember.
+
+Answer "Good" :: When the answer screen is shown, choose the green button.
+This is the button you should end up using the most.
+
+Answer "Easy" :: When the answer screen is shown, choose the button on the
+right, indicating you found the card too easy to remember and would like a
+much longer delay.
+
+Auto Advance :: Allows you to automatically reveal the answer, and
+automatically rate or bury cards. You can customize the behaviour in the
+preferences screen.
+
+Bottom Bar :: Hides or shows the bottom bar, where the answer buttons and card
+counts are shown.
+
+Browse :: Opens the card browser, where you can search for and modify cards.
+
+Bury Card :: Hides the current card from review. It will be shown again
+the next day, or when you manually unbury cards.
+
+Bury Note :: Hides the current note from review. It will be shown again the
+next day, or when you manually unbury cards.
+
+Card Info :: Shows information about the current card.
+
+Card Template :: Allows you to edit the card template, changing which fields
+are shown on the front and back of the card, and the card styling.
+
+Current Audio +5s :: Jump forward 5 seconds in the currently playing audio.
+
+Current Audio -5s :: Jump backward 5 seconds in the currently playing audio.
+
+Custom Study :: Allows you to study outside of the normal schedule. Please see
+the documentation of the computer version for more information on custom study
+presets.
+
+Deck Statistics :: Shows graphs and statistics about your deck or collection.
+
+Decks :: Returns to the deck list.
+
+Delete Note :: Deletes the currently shown note and all of its cards. If
+you're not studying in multiple directions, this will just delete a single
+card.
+
+Edit :: Edits the current card.
+
+Empty :: Removes all cards from the current filtered deck.
+
+Filter/Cram:: Allows you to create a temporary deck based on search criteria such as
+"tag:hard". Please see the documentation of the computer version for more
+information on filtered decks.
+
+Flag 1 - 4 :: Sets or clears the card's flag. Flagging cards allows you to find
+them easily in the browse screen later.
+
+Mark :: Adds a tag called "Marked" to the current note, so it can be easily
+found in a search.
+
+Mark & Bury :: Marks the card, then buries it.
+
+Mark & Suspend :: Marks the card, then suspends it.
+
+Night Mode :: Switch the interface between light and dark mode. On iOS 13,
+use the system dark mode setting instead.
+
+Off :: Don't do anything. Useful if you want to disable certain swipes, tap
+zones and so on. Not shown in the tools screen.
+
+Pause Audio :: Temporarily stops or restarts the currently playing audio file.
+
+Rebuild :: When in a filtered or custom study deck, rerun the search to fetch
+any cards that may newly match the criteria.
+
+Record Voice :: Allows you to create a temporary recording of your voice, to
+compare it to audio that you have on your card.
+ 
+Replay Audio :: Replay the card's audio. You can customize whether the audio
+in the question is replayed while the answer is shown in the computer Anki.
+
+Reset Card :: Turn the current card back into a new card.
+
+Scratchpad :: Show or hide the writing pad, allowing you to
+practice writing characters during review. Anki will remember the on/off state
+for each card type. You can tap once on the undo button to undo a stroke, or
+hold on it for a second to clear all strokes. On devices that support pressure
+sensitivity (iPhone 6S, iPad w/ Apple Pencil), the stroke width will depend on
+how hard you press.
+
+Scratchpad Size :: Alters the size of the scratchpad window.
+
+Set Due Date :: Make the card a review card if it is not already one,
+and make it due in the number of days you specify. If you choose 0 days,
+the card will be ready to review immediately.
+
+Show Answer :: Reveals the answer when a card's question is shown.
+
+Study Options :: Show the study options screen.
+
+Suspend Card :: Prevent current card from being shown during review until you
+unsuspend it via the search action.
+
+Suspend Note:: Prevent all cards of current note from being shown during
+review until you unsuspend them via the search action.
+
+Top bar :: Show or hide the bar at the top of the screen.
+
+Tools :: Show the tools screen.
+
+Unbury Deck :: Makes any buried cards in the current deck ready for review
+again.
+
+Undo :: Undoes the last review.
 
 [[studyopts]]
 = Study Options =
@@ -290,7 +414,7 @@ The study options can be accessed from the <<tools,tools>> screen. Almost all
 the options available in the computer version can also be adjusted in
 AnkiMobile. For a description of what everything does, please see the
 https://apps.ankiweb.net/docs/manual.html#deckoptions[computer documentation]. While
-some of the options have different wording, the behave the same as the
+some of the options have different wording, the behaviour is the same as the
 computer version.
 
 = Preferences =
@@ -319,178 +443,75 @@ given a choice of whether you want to upload your collection or download it from
 AnkiWeb. Please note this option only affects how cards, notes and review
 history is transferred - it does not change how sounds and images are synced.
 
-== Review: General ==
+== Review  ==
 
 The review screen allows you to customize how AnkiMobile behaves when you're
 reviewing cards.
 
-Scheduling, taps, swipes, tool buttons and quickbar are covered in their
-own sections further below.
-
-Force Orientation :: Allows you to force the reviewing screen to stay in
-portrait mode or landscape mode.
-Answer Buttons :: Allows you to hide the answer buttons at the bottom of the
-screen, if you prefer to answer via taps/swipes.
-Button Size :: Lets you control the size of the answer buttons.
-Next Times :: By default, the answer buttons will display the time a card will
-next be shown. If you disable this option, labels like "Again", "Good" and
-"Easy" will be shown instead.
-Remaining Count :: Allows you to hide the card count, while still showing the
-answer buttons when the answer is shown.
 Feedback Ticks :: Flash a tick or cross in the top right to confirm your
 answer choice.
+
+Tools Overlay Button :: Show the gear/cog icon on the study screen. If you
+prefer not to see it, you can assign the tools action to the top bar instead.
+Tools Overlay Position :: Allows you to put the tools button on the left.
+
 Audio Buttons :: Allows you to hide the play button that appears for each
 audio file you've placed on the card. Useful if you'd rather replay audio via
 the "Replay Audio" action bound to a swipe or tap.
-Always Duck + Ignore Mute :: While AnkiMobile is running, any music that is
-playing in other apps will be played at a reduced volume to make it easier to
-hear the audio on your cards. When enabled, this option will also allow audio
-to play automatically even when the mute/vibrate/silent switch is turned on.
+
+Always Duck + Ignore Mute :: When enabled, AnkiMobile will quieten any music
+you have playing in the background, and will automatically play audio even
+when the mute/vibrate/silent switch is turned on.
+
 Answer Keeps Zoom :: By default, if you have zoomed in on a card, the screen
 will zoom out when you reveal the answer. If you enable this option,
 AnkiMobile will not zoom out.
+
 Never Type Answer :: If you have set up your cards to ask you to type in the
 answer (as explained in https://apps.ankiweb.net/docs/manual.html#templates[this
 section] of the desktop manual), AnkiMobile will display a keyboard on such
 cards and allow you to check your answer. If you find typing on a mobile
 device inconvenient, you can use this option to disable the keyboard for all
 cards.
+
 Shake Action :: Allows you to customize what happens when you shake your
 device. The default action is to undo the previous answer.
-Scratchpad Pen Size :: The size of the line drawn on the scratchpad.
 
 [[scheduling]]
-== Review: Scheduling Options ==
+== Review: Scheduling ==
 
 These options affect the way Anki schedules cards in all decks.
 
 New/Review Order :: Whether Anki should introduce new cards before, after, or
 together with review cards.
+
 Day Starts :: Controls when a new day starts and new cards become available.
 Default is 04:00, which means new cards become available at 4AM.
+
 Learn Ahead Minutes :: The number of minutes to look ahead when the only cards
 remaining to review with a next repetition time in the future. The default is
 20 minutes, which means cards due to show in 10 minutes will be shown
 immediately if nothing else is available to show.
 
-[[actions]]
-== Review: Actions ==
+== Review: Notifications ==
 
-AnkiMobile allows you to customize the interface, so that actions you perform
-frequently can be accomplished quickly. It's possible to assign actions to
-taps, swipes, buttons on the top bar and buttons in the tools screen.
+When enabled, Anki will display an alert at the selected time of day,
+reminding you to study and telling you how many reviews are waiting.
 
-The following actions are available:
+== Review: Top Bar ==
 
-Add :: Opens a new window to add cards to the deck.
+You can assign frequently used actions to the top bar for convenient access.
+For an explanation of the available actions, please see the <<actions,actions list>>.
 
-Answer "Again" :: When the answer screen is shown, choose the red
-button, indicating you wish to review the card again soon. This is useful when
-you forgot a card or wish to review it more frequently.
+== Review: Bottom Bar ==
 
-Answer "Hard" :: When the answer screen is shown and there are four buttons,
-choose the second button from the left, indicating you found the card hard to
-remember.
+Show Bottom Bar :: Hides or shows the bottom area that shows the answer buttons and card counts.
 
-Answer "Good" :: When the answer screen is shown, choose the green button.
-This is the button you should end up using the most.
+Remaining Count :: Whether to show the card counts when the question side of a card is being shown.
 
-Answer "Easy" :: When the answer screen is shown, choose the button on the
-right, indicating you found the card too easy to remember and would like a
-much longer delay.
+Answer Buttons :: Whether to show the answer buttons on the answer side of a card.
 
-Bury Card :: Hides the current card from review. It will be shown again
-the next day, or when you manually unbury cards.
-
-Bury Note :: Hides the current note from review. It will be shown again the
-next day, or when you manually unbury cards.
-
-Card Info :: Shows information about the current card.
-
-Current Audio +5s :: Jump forward 5 seconds in the currently playing audio.
-
-Current Audio -5s :: Jump backward 5 seconds in the currently playing audio.
-
-Custom Study :: Allows you to study outside of the normal schedule. Please see
-the documentation of the computer version for more information on custom study
-presets.
-
-Deck List :: Returns to the deck list.
-
-Deck Statistics :: Shows graphs and statistics about your deck or collection.
-
-Delete Note :: Deletes the currently shown note and all of its cards. If
-you're not studying in multiple directions, this will just delete a single
-card.
-
-Edit :: Edits the current card.
-
-Empty :: Removes all cards from the current filtered deck.
-
-Filter/Cram:: Allows you to create a temporary deck based on search criteria such as
-"tag:hard". Please see the documentation of the computer version for more
-information on filtered decks.
-
-Find:: Lets you search/browse your cards.
-
-Forget :: Turn the current card back into a new card.
-
-Mark :: Adds a tag called "Marked" the current note, so it can be easily found
-in a search.
-
-Mark & Bury :: Marks the card, then buries it.
-
-Mark & Suspend :: Marks the card, then suspends it.
-
-More :: Shows a list of all available actions.
-
-Off :: Don't do anything. Useful if you want to disable certain swipes, tap
-zones and so on.
-
-Pause/Unpause Current Audio :: Temporarily stop or restart the currently playing audio file.
-
-Rebuild :: When in a filtered or custom study deck, rerun the search to fetch
-any cards that may newly match the criteria.
-
-Replay Audio :: Replay the card's audio. You can customize whether the audio
-in the question is replayed while the answer is shown in the computer Anki.
-
-Set Due Date :: Make the card a review card if it is not already one,
-and make it due in the number of days you specify. If you choose 0 days,
-the card will be ready to review immediately.
-
-Show Answer :: Reveals the answer when a card's question is shown.
-
-Study Options :: Show the study options screen.
-
-Suspend Card :: Prevent current card from being shown during review until you
-unsuspend it via the search action.
-
-Suspend Note:: Prevent all cards of current note from being shown during
-review until you unsuspend them via the search action.
-
-Toggle Nav. Bar :: Show or hide the status bar and navigation bar at the top.
-If you've accidentally hidden the navigation bar, you can restore it by
-swiping from the far right of the study screen towards the left, then tap on
-More, then Toggle Nav. Bar.
-
-Toggle Night Mode :: Show cards as white text on a black background. The
-styling can be <<nightmode-styling,customized>> in the computer version. This
-action requires AnkiMobile 2.0.36 or later.
-
-Toggle ScratchPad :: Show or hide the writing pad, allowing you to
-practice writing characters during review. Anki will remember the on/off state
-for each card type. You can tap once on the undo button to undo a stroke, or
-hold on it for a second to clear all strokes. On devices that support pressure
-sensitivity (iPhone 6S, iPad w/ Apple Pencil), the stroke width will depend on
-how hard you press.
-
-Tools :: Show the tools screen.
-
-Unbury Deck :: Makes any buried cards in the current deck ready for review
-again.
-
-Undo :: Undoes the last action.
+Next Times :: Whether to show the next study time above each of the answer buttons.
 
 [[taps]]
 == Review: Taps ==
@@ -535,12 +556,15 @@ This allows you to tap on the left side of the screen to trigger the red
 button, and the right side of the screen to trigger the green button. Taps
 near the middle of the screen will be ignored.
 
-=== Swipes ===
+You can assign frequently used actions to taps for convenient access.
+For an explanation of the available actions, please see the <<actions,actions list>>.
+
+== Review: Swipes ==
 
 You can also swipe up, down, left or right across a card to trigger an action.
 
 To ensure swipes don't interfere with your ability to scroll on a large card
-or select text, a swipe must begin from the left or right side of the screen.
+or select text, a swipe must begin from the far left or right side of the screen.
 Begin by placing your finger on the left or right side of the screen, and then
 move it up, down, left or right to trigger the relevant swipe.
 
@@ -549,46 +573,40 @@ With the default settings:
  * Swiping left displays the tools window
  * Swiping right returns to the deck list
 
-[[toolbuttons]]
-== Review: Tool Buttons ==
+You can assign frequently used actions to swipes for convenient access.
+For an explanation of the available actions, please see the <<actions,actions list>>.
 
-In the middle of the tools screen, AnkiMobile displays 8 buttons for commonly
-used operations. By default, the actions are:
+== Review: Scratchpad ==
 
-[width="30%",cols="^.^1,^.^1"]
-|=====
-|Mark|Delete Note
-|Undo|Card Info
-|Bury Note|Deck Statistics
-|Custom Study|More
-|=====
+Ignore Fingers :: When enabled, the scratchpad will only respond to the Apple Pencil.
 
-For descriptions of what each action does, please see the <<actions,action
-descriptions>> above.
+Undo Clears All :: Reverses the behaviour of the undo button, so a quick tap clears
+everything, and a long press clears the last stroke.
 
-[[quickbar]]
-== Review: Quickbar ==
+Scratchpad Below Buttons :: Whether the scratchpad should be placed above or below
+the bottom bar.
 
-When studying, the middle buttons at the top of the screen are called the
-'quickbar'. By default they allow you to add cards, edit the current card,
-and search/browse cards.
+== Review: Auto Advance ==
+
+Wait for audio :: Don't advance until the current audio stops playing.
+
+Answer action :: Whether to bury the card, answer it, show a popup reminder, or do nothing.
 
 == Theme ==
 
-The theme screen allows you to customize the colours AnkiMobile uses for the
-interface: the buttons, background image and so on.
+The theme screen allows you to customize the bar colours AnkiMobile uses. The available
+options will depend on whether night mode or iOS 13's dark mode is enabled.
 
-To customize the appearance of your cards, it's currently necessary to adjust
-the appearance in the computer version and then sync or copy your cards over to
-AnkiMobile. For more information, please see
-https://apps.ankiweb.net/docs/manual.html#templates[this section] of the computer
-version's manual.
+To customize the appearance of your cards, you'll need to alter your card
+templates. You can do this using the Card Template action in the tools screen,
+or by using the computer version. For more info, please see
+http://www.youtube.com/watch?v=F1j1Zx0mXME&yt:cc=on
 
 == Profiles ==
 
 Profiles allow multiple users to study with the same device. You can add
-profiles from the settings screen. To remove a profile, hold down on it
-for a few seconds.
+profiles from the settings screen. To rename or remove a profile, swipe to the
+left on it.
 
 Each profile needs to be synced with its own AnkiWeb account. Please be careful
 not to sync two profiles with the same AnkiWeb ID, as this could lead to data
@@ -650,19 +668,27 @@ to add. For more information about note types, please see the introduction in
 the https://apps.ankiweb.net/docs/manual.html#basics[computer version's manual].
 
 When you tap on a field, a keyboard will come up, allowing you to type in
-information. You can use the next and previous buttons to move between fields,
-and the done button to hide the keyboard.
+information. You can use the next and previous buttons to move between fields.
 
-The camera icon allows you to add an image to your note, either via your
-device's camera (if it has one), or from your photo library. The microphone
-icon allows you to record your voice and place it into a field.
+The toolbar has the following icons:
+
+B I U :: Mark the text as bold, italics or underline.
+
+Fx :: Remove formatting.
+
+Paintbrush :: Only available in iOS 13+. Sets the text color.
+
+Camera :: Allows you to add media files from the camera, microphone, photo
+library or from a file. On iPads, the mic button is shown separately.
+
+Square root :: Shortcuts to subscript/superscript, and <<mathjax,MathJax>>.
+
+Eye :: Shows a preview of how the card will appear when reviewed.
+
+</> :: Reveals the underlying HTML that fields are comprised of.
 
 When you've typed in the content of a note, hit the save button to add it to
 your collection.
-
-The magnifying glass at the bottom allows you to see a preview of the card(s)
-which would be added. You'll need to hide the keyboard to make the icon
-visible.
 
 = Editing =
 
@@ -672,20 +698,19 @@ The edit screen is similar to the adding screen mentioned above, with some key
 differences:
 
  * There is no note type selection button or deck selection button. If you
-   want to change the type of an existing note or which deck it's in, you
-   currently need to do so with the computer version of Anki.
+   want to change the type of an existing note, you currently need to do so
+   with the computer version of Anki.
+
  * There is a "Tools" button at the top of the screen. Tapping on it will allow you to perform actions on the current card or note.
    Please see the <<actions,action descriptions>> for more information on what each
    action does.
 
-= Finding/Searching/Browsing =
+= Browsing =
 
-You can search or browse your deck by tapping the "Find" button while
+You can search or browse your deck by tapping the "Browse" button while
 reviewing.
 
-The find screen starts by displaying a search bar with the text:
-`deck:current`, and displaying the keyboard. If you tap the return button on
-the keyboard, AnkiMobile will display all cards in the current deck.
+The browse screen will show all the cards in the current deck by default.
 
 You can type text into the search box in order to limit the cards further. If
 you only wanted to show cards in the current deck that contain the text
@@ -703,12 +728,16 @@ does, allowing you to perform quite complex searches. Some examples:
 For a full list of the possibilities, please see the section in the
 https://apps.ankiweb.net/docs/manual.html#searching[desktop manual].
 
-When a search returns one or more cards, you can tap on a card to edit it, or
-perform various actions like previewing it, deleting it, showing information
-about it, and so on.
+Tapping the Filter button will reveal a list of filters you can apply, like
+the side bar in the computer version. Tapping on a line will replace the
+current search; you can also swipe on a line to add to the existing search
+instead.
 
-Cards that are matched in a search will show all the note text, with the card
-template's name at the front, like "[Front] first field; second field".
+The Options button will allow you to change what is shown in the left and
+right columns, and change the order cards are shown in.
+
+The Select button allows you to select multiple cards at once, and then perform
+actions on them like changing their deck, or suspending them.
 
 [[filtered]]
 = Filtered Decks =
@@ -756,7 +785,7 @@ font, you may have exceeded your device's memory limits.
 == Night Mode Styling ==
 
 By using the Edit Card Template action, it is possible to customize how cards
-appear when night mode is enabled.
+appear when night mode/dark mode is enabled.
 
 If you wanted a grey background instead of black, you could use something like:
 
@@ -879,6 +908,7 @@ Some dictionary apps publish their URL scheme in their documentation. If
 you're using a dictionary app that doesn't, please contact the authors and ask
 them for more information.
 
+[[mathjax]]
 == MathJax ==
 
 AnkiMobile supports MathJax out of the box. Simply place something like the
