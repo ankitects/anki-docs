@@ -588,9 +588,9 @@ the bottom bar.
 
 == Review: Auto Advance ==
 
-Wait for audio :: Don't advance until the current audio stops playing.
+Wait for Audio :: Don't advance until the current audio stops playing.
 
-Answer action :: Whether to bury the card, answer it, show a popup reminder, or do nothing.
+Answer Action :: Whether to bury the card, answer it, show a popup reminder, or do nothing.
 
 == Theme ==
 
