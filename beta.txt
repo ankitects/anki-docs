@@ -24,6 +24,29 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.16beta1 (2e7b7560) ===
+
+This build updates the translation handling as part of the move to Crowdin.
+Some languages were missing some plural forms in the past - in order to prevent
+errors, the missing forms have been copied from the highest previous plural.
+
+If you'd like to contribute to the translation effort, please see
+https://apps.ankiweb.net/docs/manual.html#translating-anki
+
+Also:
+
+- Fix qtwebengineprocesses not being cleaned up when stats window closed.
+- Allow smaller window when editing current card.
+- Support pasting multiple URLs at once.
+- Add ability to force software rendering on old Macs (thanks to Mike)
+- A fix for case insensitive field name handling in find&replace (thanks to lovac42)
+- Fix non-integer intervals being imported from Mnemosyne (thanks to Blauelf)
+- Clear undo queue when changing scheduler (thanks to lovac42)
+- Default to not closing add window (thanks to Aidan)
+- Sort new cards separately when sorting by ease (thanks to Arthur)
+- Fix a bug in the V2 scheduler.
+- Properly handle backslashes in the replacement section of Find&Replace.
+
 === Changes in 2.1.15beta1 (442df9d6) ===
 
 This is a candidate for the next stable release, so if you encounter any
