@@ -4477,82 +4477,6 @@ Sharing Add-ons
 
 Please see the add-on documentation above.
 
-App Translations
-----------------
-
-Translations can be done directly from the
-https://translations.launchpad.net/anki/trunk[translation website].
-
-Launchpad will guess which languages you can translate based on the country
-you're connecting from. If the language you want to translate to doesn't
-appear, sign up for a launchpad account, and in your profile, click the '!'
-next to preferred languages to the language you want to translate.
-
-There are some special markers in text that you need to be aware of, and
-careful when translating:
-
- * A string like `Cards: %d` or `Error: %s` means that the %d/%s part will be
-   replaced with some other value. The characters must remain the same in the
-   translation, so a translation may look like `カード: %d`.
- * The same applies to text like `%(a)d of %(b)d` - it would be
-   translated like `%(a)d von %(b)d`. If you need to reverse A and B in your
-   language, that's fine as long as the text remains the same.
- * Menu items have an & to indicate which character is the shortcut key, such
-   as `&File`. In languages that use roman text, you can place the & over
-   a different character such as `&Datei`; in other languages there may be a
-   different convention. Japanese for example includes the roman character
-   afterwards instead, like `ファイル (&F)`
- * Some strings have plural support, so that "0 cards", "1 card", "5 cards"
-   can be represented properly in your language. In these instances you'll
-   need to enter the 2 or 3 different forms.
-
-Sometimes it will not be clear what a string refers to, and you may want to
-see the context. Below every string to be translated, you'll see a line like
-this:
-
------
-Located in ../dtop/aqt/deckbrowser.py:299
------
-
-If you strip off the first "../dtop" section, you're left with something like
-"aqt/deckbrowser.py:299". You can then visit https://github.com/dae/anki/,
-locate the same filename, and click on it. The file will be displayed with
-line numbers on the left, and by matching up the line numbers (they may differ
-by a few lines sometimes), you may be able to get a better understanding of
-what the string refers to.
-
-If you see 'forms' in the string like the above example, the strings will
-generally be obvious. If you do need to understand the context however, things
-are a little more complicated, as those files are automatically generated from
-an interface description instead. Please go to
-https://github.com/dae/anki/tree/master/designer and locate the same
-filename and click on it. We can't rely on line numbers in this case, so
-please use the browser's find option to find the string in the file. The lines
-immediately surrounding the found text may give a clue as to its meaning.
-
-If you find a string that you're unsure how to translate, or would like to
-start a discussion with fellow native speakers on the best way to translate
-something, please feel free to start a thread in the Anki forums.
-
-If the language already appears in Anki's preferences screen, updates you make
-will automatically be included in future Anki releases.
-
-If the language is not currently visible in Anki's preferences screen, please
-post on our support site and request that the language you've translated be
-added to the list.
-
-Any translations that were made at least a few hours before a new Anki release
-are automatically included in the next release. Entirely new languages need to
-be added manually, so please contact us if that applies to your translation. If
-you'd like to see your name in the About screen as a contributor, please drop
-Damien a line.
-
-If you'd like to try out your translations without waiting for a new release,
-you can export a .mo file from the translation website. If you then move that
-.mo file into Anki's installation folder, overwriting an existing .mo file
-with the same language code (in the locale folder), Anki will display the new
-translations when it is next started.
-
 [[translatingmanual]]
 Translating the Manual
 ----------------------
@@ -4593,6 +4517,134 @@ Contributing Code
 Anki's source code is available at https://github.com/dae/anki
 
 Before contributing, please see the README.contributing file in that repo.
+
+[[translating]]
+= Translating Anki =
+
+If you'd like to help translate Anki into your native language, your help
+would be most appreciated! Please drop us a line on the
+https://anki.tenderapp.com/discussions/private[support site], indicating
+which language(s) you'd like to translate, and we can send
+you an invite.
+
+== Suggestions & Copyright ==
+
+The translation site we use provides automatic suggestions for translations
+based on the text people have entered into other projects. This makes writing
+translations easier, but also requires us to contribute any translations we
+make back to other projects as well. For this reason, we ask that you release
+any contributions you make on the translation site into the public domain.
+
+== Glossary ==
+
+When you open the translations site, you should see two items to translate:
+"glossary", and "interface". The "glossary" is a small list of important terms
+that are frequently used in Anki's interface, and the "interface" contains all
+the text used in Anki.
+
+It's best to start on the glossary first, as it's small, and the terms are
+frequently used. The glossary contains terms like:
+
+-----
+deck
+
+Context: From "card deck" - a group of cards.
+-----
+
+You only need to translate the word or phrase at the top - please do not
+translate the context part.
+
+Once the glossary is done, you can start on the interface. Any glossary terms
+that appear in the interface will be underlined, and you can click on them to
+insert the glossary translation. This helps keep translations consistent.
+
+== Context ==
+
+For each phrase that requires translation, you can see some context to help
+understand where the phrase will be used. For example, for the phrase "A big
+thanks to everyone who has provided translations, bug reports, and suggestions",
+the context might appear as:
+
+~~~~~
+#: ../dtop/aqt/about.py:146
+~~~~~
+
+The context lists which file(s) the text appears in, and the line numbers in
+the file. In this case, we can guess that this file is related to the About
+screen.
+
+If you strip off the first "../dtop" section, you're left with something like
+"aqt/about.py:146". You can then visit https://github.com/dae/anki/,
+locate the same filename, and click on it. The file will be displayed with
+line numbers on the left, and by matching up the line numbers (they may differ
+by a few lines sometimes), you may be able to get a better understanding of
+what the string refers to.
+
+== Formatting ==
+
+When translating, some phrases contain special markers in the text, which
+indicate extra text will be put in the marker's place. For example, a string
+like `Cards: %d` or `Error: %%` means that the %d/%s part will be replaced
+with some other value, such as `Cards: 10`, or `Error: file not found`. When
+writing your translation, please leave the special markers as they are, such as
+`カード: %d`.
+
+Sometimes the text will contain named replacement markers, so that the text
+can be reordered. For example, `%(a)d of %(b)d` - it would be
+translated like `%(a)d von %(b)d`. If you need to reverse A and B in your
+language (eg `%(b)dの%(a)d`), that's fine as long as the names remain the same.
+
+In some languages, words change depending on the associated number, such as
+"1 dog" vs "2 dogs". You may be prompted to enter different words for "one" and
+"many" for some phrases, depending on the plural forms your language uses.
+
+When translating numbered/plural items, please translate all cases, or none.
+If you partially translate a numbered item, it will cause problems.
+
+Menu items have an & to indicate which character is the shortcut key, such
+as `&File`. In languages that use roman text, you can place the & over
+a different character such as `&Datei`; in other languages there may be a
+different convention. Japanese for example includes the roman character
+afterwards instead, like `ファイル (&F)`
+
+== Getting Help ==
+
+If you're not sure how something should be translated, there are a couple of
+things you can do:
+
+- Clicking on "TM and MT suggestions" will show how similar text has been
+translated in other projects on the translation site in the past. If the text
+looks correct, you can click on it to automatically add it as a translation.
+
+- If the text has been translated in another language already, you can click on
+"Other Languages" to see how it was translated in the other language.
+
+- If your browser window is wide enough, there is a comments section on the right,
+where you can post questions, and see what other people have said.
+
+== Testing ==
+
+Each time a new Anki beta is released, it will include any translation
+changes that were made since the last time. Please give the betas a try, so
+you can see how your translations appear in the app. There's a beta testing
+section on the support site that you can follow for beta updates.
+
+When translating, please try to keep the translations about the same length as
+the original English text. If it is not possible, and you find that text is
+not appearing properly in a beta (such as two labels overlapping), please
+report the issue on the support site.
+
+When testing the betas, if you notice that some text is not translatable,
+please report this on the support site so it can be fixed.
+
+If you'd like to try out your translations without waiting for a new release,
+you can export a .po file from the translation website. You can then use a tool
+like POEdit to convert the .po to a .mo file. If you then move that
+.mo file into Anki's installation folder, overwriting an existing .mo file
+with the same language code (in the locale folder), Anki will display the new
+translations when it is next started.
+
+Thank you again for your help!
 
 Frequently Asked Questions
 ==========================
