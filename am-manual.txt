@@ -592,6 +592,27 @@ Wait for Audio :: Don't advance until the current audio stops playing.
 
 Answer Action :: Whether to bury the card, answer it, show a popup reminder, or do nothing.
 
+== Review: Gamepads ==
+
+From AnkiMobile 2.0.53+, you can control the study screen with a game
+controller on iOS 13+. The controller must be supported by iOS, and already
+paired with your iOS device. Please see the following page for supported
+controllers, and how to set them up:
+
+https://support.apple.com/en-au/HT210414
+
+The gamepads section of the preferences allows you to configure which actions are
+triggered when each button is pressed. You can assign an action to each direction
+on the d-pad, but the analog thumbpads can not be customized - they will always
+scroll the card up or down.
+
+== General ==
+
+Legacy Editor :: When enabled, Anki uses an older editor that has fewer
+features. It is provided for users stuck on iOS 12 or earlier, who use
+right-to-left languages. If you are on iOS 13 or don't use a right-to-left language,
+the regular editor is a better choice.
+
 == Theme ==
 
 The theme screen allows you to customize the bar colours AnkiMobile uses. The available
@@ -678,8 +699,11 @@ Fx :: Remove formatting.
 
 Paintbrush :: Only available in iOS 13+. Sets the text color.
 
-Camera :: Allows you to add media files from the camera, microphone, photo
+Paperclip/Camera :: Allows you to add media files from the camera, microphone, photo
 library or from a file. On iPads, the mic button is shown separately.
+
+Pen :: Only available on iPads on iOS 13+. Allows you to draw an image and attach it
+to the card. You can later edit a drawn image by holding two fingers on it.
 
 Square root :: Only available in iOS 13+. Shortcuts to subscript/superscript, and <<mathjax,MathJax>>.
 
@@ -955,6 +979,15 @@ The following will not work in AnkiMobile before 2.0.39:
 
 -----
 {{cloze:Furigana:Text}}
+-----
+
+== Play Buttons ==
+
+You can change the size of the play buttons by placing the following in your
+card template, adjusting 32 to suit.
+
+-----
+img.playImage { width: 32px; height: 32px; }
 -----
 
 == Image Resizing ==
