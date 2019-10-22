@@ -2047,6 +2047,22 @@ If you have a 'myclass' style, the following would show the text in yellow when 
 .nightMode .myclass { color: yellow; }
 -----
 
+== Fading and Scrolling ==
+
+Anki will automatically scroll to the answer by default. It looks for a HTML
+element with id=answer, and scrolls to that. You can place the id on a different
+element to adjust the scrolling position, or remove the id=answer to turn off
+scrolling.
+
+The question side of a card fades in by default. If you wish to adjust this
+delay, you can place the following at the top of your front card template:
+
+-----
+<script>qFade=100; if (typeof anki !== 'undefined') anki.qFade=qFade;</script>
+-----
+
+100 (milliseconds) is the default; set to 0 to disable fading.
+
 == Javascript ==
 
 As Anki cards are treated like webpages, it is possible to embed some

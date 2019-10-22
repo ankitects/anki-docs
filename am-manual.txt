@@ -477,6 +477,11 @@ cards.
 Shake Action :: Allows you to customize what happens when you shake your
 device. The default action is to undo the previous answer.
 
+Double Tap Prevention :: This option ignores a second tap when two taps are made
+in quick succession, so that you don't accidentally reveal the answer or advance
+to the next card. If you review your cards very quickly, you may wish to select
+a shorter detection time.
+
 [[scheduling]]
 == Review: Scheduling ==
 
