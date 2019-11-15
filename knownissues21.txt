@@ -96,11 +96,11 @@ On Windows, you can create a .bat file as described in the Text size section abo
 
 On Mac, you can open Terminal.app, then start Anki with the following command:
 
-ANKI_NOVERIFYSSL=1 open /Applications/Anki.app
+  ANKI_NOVERIFYSSL=1 open /Applications/Anki.app
 
 On Linux, use the following in a terminal:
 
-ANKI_NOVERIFYSSL=1 anki
+  ANKI_NOVERIFYSSL=1 anki
 
 Once you've started Anki with SSL disabled, you can download the following
 add-on to make the change permanent:
