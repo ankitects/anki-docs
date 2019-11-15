@@ -91,3 +91,19 @@ When you enable this option, you are telling Anki not to verify that it is
 actually talking with AnkiWeb. This means that not only your work or school,
 but also a bad actor on the local network may be able to intercept your
 syncing traffic.
+
+On Windows, you can create a .bat file as described in the Text size section above.
+
+On Mac, you can open Terminal.app, then start Anki with the following command:
+
+ANKI_NOVERIFYSSL=1 open /Applications/Anki.app
+
+On Linux, use the following in a terminal:
+
+ANKI_NOVERIFYSSL=1 anki
+
+Once you've started Anki with SSL disabled, you can download the following
+add-on to make the change permanent:
+
+https://ankiweb.net/shared/info/878367706
+
