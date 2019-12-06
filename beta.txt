@@ -24,6 +24,27 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.16beta2 (bceb4feb) ===
+
+- Pasting now includes formatting by default.
+- Preserve foreground/background color when pasting.
+- Preserve bold/italic/underline when pasting from Google Docs.
+- When pasting with the shift key, bold/italics/underline is also stripped.
+- Draw preview screen more quickly.
+- Fix race condition in preview screen (thanks to Håkon).
+- Use --exact with dvsvgm to prevent truncated subscript/superscript in LaTeX.
+- Various small fixes.
+
+Thanks to Arthur for contributing a number of fixes:
+
+- Newly created cards could be given the wrong due number.
+- Sticky fields were ignored when closing the add card window.
+- Adding a note type forced a full sync.
+- Remove shortcut keys from translations.
+- Documentation changes for translators.
+- Case not being preserved when changing a deck's parent.
+- Hide default deck in other screens when empty.
+
 === Changes in 2.1.16beta1 (2e7b7560) ===
 
 This build updates the translation handling as part of the move to Crowdin.
