@@ -24,6 +24,16 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.16beta3 (bb62a3c1) ===
+
+- Remove the 'experimental' label from the new scheduler.
+- New installs default to the new scheduler.
+- You can now import and export decks with scheduling enabled in the new scheduler.
+- Fix bold/italics/underline pasting that broke in the last beta.
+- Hide empty Default deck in deck picker (thanks to Arthur).
+- Add an extra day to the interval when using Easy on a relearning card.
+- Preserve surrounding styling when making cloze deletions.
+
 === Changes in 2.1.16beta2 (bceb4feb) ===
 
 - Pasting now includes formatting by default.
