@@ -2066,8 +2066,7 @@ delay, you can place the following at the top of your front card template:
 == Javascript ==
 
 As Anki cards are treated like webpages, it is possible to embed some
-Javascript on your cards via inline script tags in the template (loading
-external files using src= is not supported).
+Javascript on your cards via the card template.
 
 Because Javascript is an advanced feature and so many things can go wrong,
 **Javascript functionality is provided without any support or warranty**. We
