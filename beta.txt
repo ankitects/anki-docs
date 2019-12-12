@@ -24,6 +24,11 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.16beta4 () ===
+
+- Syncing should work properly now when you change timezones without visiting AnkiWeb.
+- Ensure learning cards in filtered decks with 'order due' show in template order.
+
 === Changes in 2.1.16beta3 (bb62a3c1) ===
 
 - Remove the 'experimental' label from the new scheduler.
