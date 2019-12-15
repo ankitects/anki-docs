@@ -24,6 +24,15 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.17beta1 (81bdd860) ===
+
+A Windows-only build, built with the latest toolkit version. Please report
+any improvements or regressions.
+
+If you've previously customized the DPI/Scaling as described on
+https://apps.ankiweb.net/docs/knownissues21.html#text-size, please try
+running the beta without the customizations and report how you go.
+
 === Changes in 2.1.16beta4 (4bc33e2f) ===
 
 - Syncing should work properly now when you change timezones without visiting AnkiWeb.
