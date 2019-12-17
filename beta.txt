@@ -24,6 +24,21 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.17beta2 () ===
+
+A Windows-only build, built with the latest toolkit version. Please report
+any improvements or regressions.
+
+If you've previously customized the DPI/Scaling as described on
+https://apps.ankiweb.net/docs/knownissues21.html#text-size, please try
+running the beta without the customizations and report how you go.
+
+In beta 2:
+
+- Alter the way DPI scaling is handled.
+- Remove help button from some Window titles.
+- Alter a change made in .16 that could break some editor add-ons.
+
 === Changes in 2.1.17beta1 (81bdd860) ===
 
 A Windows-only build, built with the latest toolkit version. Please report
