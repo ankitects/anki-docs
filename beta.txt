@@ -24,7 +24,18 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
-=== Changes in 2.1.17beta2 () ===
+=== Changes in 2.1.17beta3 (da942617) ===
+
+Another Windows-only build.
+
+- Improved the performance of the browse screen's sidebar.
+- If you use any add-ons that alter the sidebar, you will need to disable
+them prior to upgrading, as add-on authors will need to modify their code
+to work with the new implementation.
+- Added an option in the preferences screen to adjust the UI size.
+- Fixed a regression in the way duplicate deck names were handled.
+
+=== Changes in 2.1.17beta2 (ff6b58c2) ===
 
 A Windows-only build, built with the latest toolkit version. Please report
 any improvements or regressions.
@@ -43,10 +54,6 @@ In beta 2:
 
 A Windows-only build, built with the latest toolkit version. Please report
 any improvements or regressions.
-
-If you've previously customized the DPI/Scaling as described on
-https://apps.ankiweb.net/docs/knownissues21.html#text-size, please try
-running the beta without the customizations and report how you go.
 
 === Changes in 2.1.16beta4 (4bc33e2f) ===
 
