@@ -24,6 +24,11 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.17beta4 (bfcc8379) ===
+
+The standard Mac and Linux builds have now been updated to the new toolkit
+as well - please report any regressions.
+
 === Changes in 2.1.17beta3 (da942617) ===
 
 Another Windows-only build.
