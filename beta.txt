@@ -24,6 +24,13 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.17beta5 (518cc442) ===
+
+- Changing large note types is significantly faster.
+- Fix a bug that was preventing new profiles from being created.
+- Fix a bug in the handling of MathJax+Cloze (thanks to Michal).
+- Fix missing border when the user has modified the interface scale.
+
 === Changes in 2.1.17beta4 (bfcc8379) ===
 
 The standard Mac and Linux builds have now been updated to the new toolkit
