@@ -24,6 +24,17 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.17beta6 (4cead7ef) ===
+
+- Added a beta label to the experimental scheduler,
+as a timezone corner case needs to be addressed before
+general release.
+- Fixed sidebar background on Windows 10.
+- Fixed building from source on 32 bit Linux.
+- Fixed alternate template syntax not being recognized.
+- Automatically remove ':' from field names when opening the
+card templates screen, as it conflicts with the template syntax.
+
 === Changes in 2.1.17beta5 (518cc442) ===
 
 - Changing large note types is significantly faster.
