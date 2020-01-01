@@ -4351,6 +4351,11 @@ will not work, but
 -----
 
 will (and LaTeX ignores spaces in math mode, so your equation will render the same).
+Another option is to use a HTML comment:
+
+-----
+{{c1::[$]\frac{foo}{\frac{bar}{baz}<!-- -->}[/$] blah blah blah.}}
+-----
 
 
 Unsafe commands
