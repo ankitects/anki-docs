@@ -4359,6 +4359,13 @@ option is to use a HTML comment:
 {{c1::[$]\frac{foo}{\frac{bar}{baz}<!-- -->}[/$] blah blah blah.}}
 -----
 
+You may use either workaround if you need to use the `::` character sequence
+within the Cloze-deleted text. The first card generated for the following
+note text will read `[~type~] in C++ is a type-safe union`:
+
+-----
+{{c1::std:<!-- -->:variant::~type~}} in C++ is a {{c2::type-safe union}}
+-----
 
 
 Unsafe commands
