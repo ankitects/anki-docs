@@ -24,6 +24,18 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.17beta7 (a4d38d65) ===
+
+- Added an option to tag updated notes when importing (thanks to Erez).
+- Install add-ons by double clicking on their files (thanks to Glutanimate).
+Currently only on Linux; support for Windows/Mac will be added soon.
+- The alternate Windows build now uses Python 3.8/Qt 5.12.
+- The alternate Mac build now uses Python 3.8.
+- The alternate Linux build has been dropped.
+
+A bunch of behind-the-scenes changes to the code in this release. If you
+notice any regressions, please post on the beta testing thread.
+
 === Changes in 2.1.17beta6 (4cead7ef) ===
 
 - Added a beta label to the experimental scheduler,
