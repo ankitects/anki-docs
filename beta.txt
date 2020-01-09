@@ -24,6 +24,14 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.17beta8 (f4fb7319) ===
+
+- Minimum Python version is now 3.7.
+- Updated the way templates are rendered. If you notice any problems or
+messages printed to the console, please post on the support site.
+- Double-clicking on .ankiaddon files should now work on Mac and Windows as well.
+- Bug fix for tag updated notes feature (thanks to Erez).
+
 === Changes in 2.1.17beta7 (a4d38d65) ===
 
 - Added an option to tag updated notes when importing (thanks to Erez).
