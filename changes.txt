@@ -8,6 +8,7 @@
 = Changes in 2.1.17 =
 
 Released 2019-01-11, build c69ccb50.
+Linux version repackaged on 2019-01-12 to fix a 'make install' issue.
 
 - Improved the performance of the browse screen's sidebar for users with
 many decks/tags.
