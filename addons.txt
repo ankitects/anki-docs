@@ -382,7 +382,7 @@ in the review screen. You've looked at the source code in reviewer.py, and seen
 the following line in the showQuestion() function:
 
 -----
-gui_hooks.run_reviewer_showing_question_hook(card)
+gui_hooks.reviewer_showing_question_hook(card)
 -----
 
 To register a function to be called when this hook is run, you can do the
@@ -406,14 +406,16 @@ and qt/aqt/gui_hooks.py files and find a "rendered_card_template_filter" that
 looks promising:
 
 -----
-def run_rendered_card_template_filter(
-    text: str,
-    side: str,
-    fields: Dict[str, str],
-    notetype: Dict[str, Any],
-    data: QAData,
-    col: anki.storage._Collection,
-) -> str:
+    def __call__(
+        self,
+        text: str,
+        side: str,
+        fields: Dict[str, str],
+        notetype: Dict[str, Any],
+        data: QAData,
+        col: anki.storage._Collection,
+    ) -> str:
+...
 -----
 
 To use this in your add-on, you'd use code like the following:
