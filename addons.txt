@@ -18,36 +18,34 @@ https://apps.ankiweb.net/docs/addons20.html
 
 = Overview =
 
-Anki is written in a user-friendly language called Python. If you're not
-familiar with Python, please read the http://docs.python.org/tutorial/[Python
-tutorial] before proceeding with the rest of this document.
+Anki is primarily written in a user-friendly language called Python. If you're
+not familiar with Python, please read the http://docs.python
+.org/tutorial/[Python tutorial] before proceeding with the rest of this
+document.
 
 Because Python is a dynamic language, add-ons are extremely powerful in Anki -
 not only can they extend the program, but they can also modify arbitrary
 aspects of it, such as altering the way scheduling works, modifying the UI,
 and so on.
 
-No special development environment is required to develop add-ons. All you
-need is a text editor. If you're on Windows or a Mac, please use the packaged
-version of Anki that's provided on the website, as there are no instructions
-available for building it from scratch on those platforms.
-
-While you can write plugins in a simple text editor like notepad, you may want
-to look into an editor that can provide syntax highlighting (colouring of the
-code) to make things easier.
+While it is possible to develop Anki add-ons with just a plain text editor,
+you can make your life easier by using a proper code editor/IDE -  please see
+the IDE & Type Hints section below for more information.
 
 Anki is comprised of two parts: 
 
-'anki' contains all the "backend" code - opening collections, fetching and
-answering cards, and so on. It is used by Anki's GUI, and can also be included
-in command line programs to access Anki decks without the GUI.
+'anki' in the pylib folder contains most of the "backend" code - opening
+collections, fetching and answering cards, and so on. It is used by Anki's
+GUI, and can also be included in command line programs to access Anki decks
+without the GUI.
 
-'aqt' contains the UI part of Anki. Anki's UI is built upon PyQt, Python
-bindings for the cross-platform GUI toolkit Qt. PyQt follows Qt's API very
-closely, so the documentation can be very useful when you want to know how to
-use a particular GUI component.
+'aqt' in the qt folder contains the UI part of Anki. Anki's UI is built upon
+PyQt, Python bindings for the cross-platform GUI toolkit Qt. PyQt follows Qt's
+API very closely, so the documentation can be very useful when you want to
+know how to use a particular GUI component.
 
-Anki 2.1.x uses http://doc.qt.io/qt-5/index.html[Qt 5.9]
+Anki 2.1.x uses http://doc.qt.io/qt-5/index.html[Qt 5.9/5.12/5.14] depending
+on the build.
 
 When Anki starts up, it checks for modules in the add-ons folder, and runs
 each one it finds. When add-ons are run, they typically modify existing code
@@ -67,6 +65,76 @@ https://anki.tenderapp.com/discussions/add-ons[community-supported add-on forum]
 
 You can also use the add-on forum to request someone write an add-on for you.
 You may need to offer some money before anyone becomes interested in helping you.
+
+= IDE & Type Hints =
+
+The free community edition of PyCharm has good out of the box support for Python:
+https://www.jetbrains.com/pycharm/. You can also use other editors like Visual
+Studio Code, but the instructions in this section will cover PyCharm.
+
+Anki's codebase has recently been updated to add type hints to some commonly
+used parts of the code. While the type hinting is not yet complete, it is
+already making development easier by providing better code completion, and
+by catching errors using tools like mypy. As an add-on author, you can take
+advantage of this type hinting as well.
+
+To get started with your first add-on:
+
+- Open PyCharm and create a new project.
+- Right click/ctrl+click on your project on the left and create a new
+Python package called "myaddon"
+
+Now you'll need to fetch Anki's bundled source code so you can get type
+completion. Download the anki-...whl and aqt-...whl file corresponding to the
+version you want to target from https://github.com/ankitects/anki-typecheck
+and place them in the top of your project (in the same folder as the venv and
+myaddon folders).
+
+Click on Python Console in the bottom left and type the following in:
+
+-----
+import glob, subprocess
+
+subprocess.check_call(["pip", "install", "mypy", "*glob.glob("*.whl")])
+-----
+
+Once it completes, you should now have code completion. Try it out by
+double clicking on the `__init__.py` file and typing
+
+-----
+from hooks import r
+-----
+
+and you should see completions pop up.
+
+You can use mypy to type check your code, which will catch some cases
+where you've called Anki functions incorrectly. Click on Terminal in the
+bottom left, and type 'mypy addon'. After some processing, it will
+show a success or tell you any mistakes you've made. For example, if you
+specified a hook incorrectly:
+
+-----
+from aqt import gui_hooks
+
+def myfunc():
+  print("myfunc")
+
+gui_hooks.reviewer_showing_question_hook.append(myfunc)
+-----
+
+Then mypy will report:
+
+-----
+myaddon/__init__.py:5: error: Argument 1 to "append" of "list" has incompatible type "Callable[[], Any]"; expected "Callable[[Card], None]"
+Found 1 error in 1 file (checked 1 source file)
+-----
+
+Which is telling you that the showing_question hook expects a func which
+takes a card as the first argument, eg
+
+-----
+def myfunc(card)
+-----
 
 = Add-on folders =
 
@@ -100,6 +168,10 @@ original add-on name, when it was downloaded, and whether it's enabled or not.
 
 You should not store user data in the add-on folder, as it's
 <<configuration,deleted when the user upgrades an add-on>>.
+
+If you followed the steps in the IDE section above, you can either copy
+your myaddon folder into Anki's add-on folder to test it, or a Mac or Linux,
+create a symlink from the folder's original location into your add-ons folder.
 
 = A Simple Add-On =
 
@@ -287,14 +359,86 @@ If you need the data to sync across devices, small options can be stored
 within mw.col.conf. Please don't store large amounts of data there, as
 it's sent on every sync.
 
-= Hooks =
+= Hooks & Filters =
 
-Hooks have been added to a few parts of the code to make writing add-ons
-easier. There are two types: 'hooks' take some arguments and return no value,
-and 'filters' take a value and return it (perhaps modified).
+Hooks are the way you should connect your add-on code to Anki. If the function
+you want to alter doesn't already have a hook, please see the section below
+about adding new hooks.
 
-A simple example of the former is in the leech handling. When the scheduler
-(anki/sched.py) discovers a leech, it calls:
+There are two different kinds of "hooks":
+
+- "Hooks" are functions that don't return anything. They are run for their
+side effects, and may sometimes alter the objects they have been passed.
+
+- "Filters" are functions that return their first argument, after maybe
+changing it. An example filter is one that takes the rendered card output,
+and adds something to it.
+
+= New Style Hooks =
+
+For Anki 2.1.18 beta+.
+
+Imagine you wish to show a message each time the front side of a card is shown
+in the review screen. You've looked at the source code in reviewer.py, and seen
+the following line in the showQuestion() function:
+
+-----
+gui_hooks.run_reviewer_showing_question_hook(card)
+-----
+
+To register a function to be called when this hook is run, you can do the
+following in your add-on:
+
+-----
+from aqt import gui_hooks
+
+def myfunc(card):
+  print("question shown")
+
+gui_hooks.reviewer_showing_question_hook.append(myfunc)
+-----
+
+Multiple add-ons can register for the same hook or filter - they will all be
+called in turn.
+
+Now say you wish to write an add-on that adds some text to every card when
+it is shown during review. You have a look in the pylib/anki/hooks.py file
+and qt/aqt/gui_hooks.py files and find a "rendered_card_template_filter" that
+looks promising:
+
+-----
+def run_rendered_card_template_filter(
+    text: str,
+    side: str,
+    fields: Dict[str, str],
+    notetype: Dict[str, Any],
+    data: QAData,
+    col: anki.storage._Collection,
+) -> str:
+-----
+
+To use this in your add-on, you'd use code like the following:
+
+-----
+from anki import hooks
+
+def myfunc(card_text, q_or_a, fields, notetype, data, col):
+  return card_text + "<br><br>Hello World!"
+
+hooks.rendered_card_template_filter.append(myfunc)
+-----
+
+Most of the new style hooks will also call the legacy hooks (described below),
+so old add-ons will continue to work, but add-on authors are encouraged to
+update to the new style as it allows for code completion and better error
+checking.
+
+= Legacy Hook Handling =
+
+Parts of Anki's codebase still use an older hook handling method:
+runHook(), addHook() and runFilter().
+
+For example, when the scheduler (anki/sched.py) discovers a leech, it calls:
 
 -----
 runHook("leech", card)
@@ -409,11 +553,34 @@ def addMyButton(buttons, editor):
 addHook("setupEditorButtons", addMyButton)
 -----
 
+= Adding Hooks =
+
+If you want to modify a function that doesn't already have a hook, please
+submit a pull request that adds the hooks you need. To do this, you'll
+need to download Anki's full source code - the type hints covered in the
+IDE section are not enough.
+
+The hook definitions are located in pylib/tools/genhooks.py and
+qt/tools/genhooks.py. When 'make develop' is run, the build scripts will
+automatically update the hook files with the definitions listed there.
+
+When adding new hooks, please try to use descriptive names and follow the
+style of the current hooks.
+
 = Monkey Patching and Method Wrapping =
 
 If you want to modify a function that doesn't already have a hook, it's
 possible to overwrite that function with a custom version instead. This is
 sometimes referred to as 'monkey patching'.
+
+Monkey patching is useful in the testing stage, and while waiting for
+new hooks to be integrated into Anki. But please don't rely on it long term,
+as monkey patching is very fragile, and will tend to break as Anki is updated
+in the future.
+
+The only exception to the above is if you're making extensive changes to Anki
+where adding new hooks would be impractical. In that case, you may unfortunately
+need to modify your add-on periodically as Anki is updated.
 
 In aqt/editor.py there is a function setupButtons() which creates the buttons
 like bold, italics and so on that you see in the editor. Let's imagine you
@@ -490,11 +657,6 @@ def mySetupButtons(self, _old):
     
 Editor.setupButtons = wrap(Editor.setupButtons, mySetupButtons, "around")
 -----
-
-If you need to modify the middle of a function rather than run code before or
-after it, there may a good argument for adding a hook to that function in the
-original code. In these situations, please post on the support site and ask
-for a hook to be added.
 
 = Qt =
 
