@@ -375,7 +375,7 @@ and adds something to it.
 
 = New Style Hooks =
 
-For Anki 2.1.18 beta+.
+For Anki 2.1.19 betas and later.
 
 Imagine you wish to show a message each time the front side of a card is shown
 in the review screen. You've looked at the source code in reviewer.py, and seen
