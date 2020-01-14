@@ -5,6 +5,13 @@
 
 [[latestv21]]
 
+= Changes in 2.1.18 =
+
+Released 2020-01-14, build fb9d59fe.
+
+- Fixed Anki failing to start for some users updating from Anki 2.0.
+- Fixed the alternate Windows build failing to start on Windows 8.
+
 = Changes in 2.1.17 =
 
 Released 2020-01-11, build c69ccb50.
