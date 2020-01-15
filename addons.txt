@@ -140,6 +140,14 @@ first argument, eg
 def myfunc(card)
 -----
 
+The bulk of this document was written before type hints were introduced to
+Anki, so they are not shown in the code samples. It is possible to use type
+hints in your add-on code however, and if you are not a beginner to
+programming, they are recommended. An example add-on that uses hints is
+available here:
+
+https://github.com/ankitects/anki-addons/blob/master/code/field_filter_demo/__init__.py
+
 = Add-on folders =
 
 You can access the top level add-ons folder by going to the Tools>Add-ons menu
@@ -414,11 +422,6 @@ Now say you wish to write an add-on that adds some text to every card when
 it is shown during review. An easy way to see all hooks at a glance is to look
 at pylib/tools/genhooks.py and qt/tools/genhooks_gui.py. You see the following
 in genhooks.py that looks promising:
-
-
-You have a look in the pylib/anki/hooks.py file
-and qt/aqt/gui_hooks.py files and find a "card_did_rendered_card_template_filter" that
-looks promising:
 
 -----
     Hook(
