@@ -6,6 +6,9 @@ Writing Anki 2.1.x Add-ons
 <h1>Writing Anki 2.1.x Add-ons</h1>
 ++++++++++++++++++++++++++++++
 
+:filter_demo_url: https://github.com/ankitects/anki-addons/blob/master/code/field_filter_demo/__init__.py
+
+
 = Other Versions =
 
 This document covers add-on writing for Anki 2.1.x. For instructions on
@@ -149,7 +152,7 @@ hints in your add-on code however, and if you are not a beginner to
 programming, they are recommended. An example add-on that uses hints is
 available here:
 
-https://github.com/ankitects/anki-addons/blob/master/code/field_filter_demo/__init__.py
+{filter_demo_url}
 
 = Add-on folders =
 
