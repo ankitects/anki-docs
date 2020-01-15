@@ -101,10 +101,15 @@ Once it completes, you should now have code completion. Try it out by
 double clicking on the `__init__.py` file and typing
 
 -----
-from hooks import r
+from aqt import gui_hooks
+gui_hooks.
 -----
 
 and you should see completions pop up.
+
+*Please note that you can not run your add-on from within PyCharm - you
+will get errors.* Add-ons need to be run from within Anki, which is covered
+in the next section.
 
 You can use mypy to type check your code, which will catch some cases
 where you've called Anki functions incorrectly. Click on Terminal in the
@@ -118,7 +123,7 @@ from aqt import gui_hooks
 def myfunc():
   print("myfunc")
 
-gui_hooks.reviewer_showing_question_hook.append(myfunc)
+gui_hooks.reviewer_did_show_answer.append(myfunc)
 -----
 
 Then mypy will report:
@@ -128,8 +133,8 @@ myaddon/__init__.py:5: error: Argument 1 to "append" of "list" has incompatible 
 Found 1 error in 1 file (checked 1 source file)
 -----
 
-Which is telling you that the showing_question hook expects a func which
-takes a card as the first argument, eg
+Which is telling you that the hook expects a func which takes a card as the
+first argument, eg
 
 -----
 def myfunc(card)
@@ -366,23 +371,28 @@ about adding new hooks.
 
 There are two different kinds of "hooks":
 
-- "Hooks" are functions that don't return anything. They are run for their
-side effects, and may sometimes alter the objects they have been passed.
+- Regular hooks are functions that don't return anything. They are run for
+their side effects, and may sometimes alter the objects they have been passed,
+such as inserting an extra item in a list.
 
 - "Filters" are functions that return their first argument, after maybe
 changing it. An example filter is one that takes the rendered card output,
 and adds something to it.
 
+The distinction is necessary because some data types in Python can be
+modified directly, and others can only be modified by creating a changed
+copy (such as strings).
+
 = New Style Hooks =
 
-For Anki 2.1.19 betas and later.
+For Anki 2.1.20 betas and later.
 
 Imagine you wish to show a message each time the front side of a card is shown
 in the review screen. You've looked at the source code in reviewer.py, and seen
 the following line in the showQuestion() function:
 
 -----
-gui_hooks.reviewer_showing_question_hook(card)
+gui_hooks.reviewer_did_show_question(card)
 -----
 
 To register a function to be called when this hook is run, you can do the
@@ -392,31 +402,42 @@ following in your add-on:
 from aqt import gui_hooks
 
 def myfunc(card):
-  print("question shown")
+  print("question shown, card question is:", card.q())
 
-gui_hooks.reviewer_showing_question_hook.append(myfunc)
+gui_hooks.reviewer_did_show_question.append(myfunc)
 -----
 
 Multiple add-ons can register for the same hook or filter - they will all be
 called in turn.
 
 Now say you wish to write an add-on that adds some text to every card when
-it is shown during review. You have a look in the pylib/anki/hooks.py file
-and qt/aqt/gui_hooks.py files and find a "rendered_card_template_filter" that
+it is shown during review. An easy way to see all hooks at a glance is to look
+at pylib/tools/genhooks.py and qt/tools/genhooks_gui.py. You see the following
+in genhooks.py that looks promising:
+
+
+You have a look in the pylib/anki/hooks.py file
+and qt/aqt/gui_hooks.py files and find a "card_did_rendered_card_template_filter" that
 looks promising:
 
 -----
-    def __call__(
-        self,
-        text: str,
-        side: str,
-        fields: Dict[str, str],
-        notetype: Dict[str, Any],
-        data: QAData,
-        col: anki.storage._Collection,
-    ) -> str:
-...
+    Hook(
+        name="card_did_render",
+        args=[
+            "text: str",
+            "side: str",
+            "fields: Dict[str, str]",
+            "notetype: Dict[str, Any]",
+            "data: QAData",
+            "col: anki.storage._Collection",
+        ],
+        return_type="str",
+        legacy_hook="mungeQA",
+        doc="Can modify the resulting text after rendering completes.",
+    ),
 -----
+
+We can see some documentation for this hook, and the arguments it takes.
 
 To use this in your add-on, you'd use code like the following:
 
@@ -424,10 +445,14 @@ To use this in your add-on, you'd use code like the following:
 from anki import hooks
 
 def myfunc(card_text, q_or_a, fields, notetype, data, col):
-  return card_text + "<br><br>Hello World!"
+  if q_or_a == "q":
+    return card_text + "Hello World!"
 
-hooks.rendered_card_template_filter.append(myfunc)
+hooks.card_did_render.append(myfunc)
 -----
+
+When Anki is restarted, you should see 'Hello World!' appear at the
+bottom of every question.
 
 Most of the new style hooks will also call the legacy hooks (described below),
 so old add-ons will continue to work, but add-on authors are encouraged to
@@ -436,7 +461,7 @@ checking.
 
 = Legacy Hook Handling =
 
-Parts of Anki's codebase still use an older hook handling method:
+Older versions of Anki used a different hook system, using the functions
 runHook(), addHook() and runFilter().
 
 For example, when the scheduler (anki/sched.py) discovers a leech, it calls:
@@ -565,8 +590,7 @@ The hook definitions are located in pylib/tools/genhooks.py and
 qt/tools/genhooks.py. When 'make develop' is run, the build scripts will
 automatically update the hook files with the definitions listed there.
 
-When adding new hooks, please try to use descriptive names and follow the
-style of the current hooks.
+Please see README.contributing in the source code for more information.
 
 = Monkey Patching and Method Wrapping =
 
