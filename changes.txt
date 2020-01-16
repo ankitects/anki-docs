@@ -5,6 +5,14 @@
 
 [[latestv21]]
 
+= Changes in 2.1.19 =
+
+Released 2020-01-16, build 3c8690ae.
+
+- Fix formatting and images getting lost when creating cloze deletions.
+- Added an option to the preferences screen to strip formatting by default.
+- Fix the preview button shortcut key not working.
+
 = Changes in 2.1.18 =
 
 Released 2020-01-14, build fb9d59fe.
