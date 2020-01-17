@@ -24,6 +24,15 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.20beta1 (fa564772) ===
+
+- A new hook system for add-ons - please see the post on the beta testing section
+of the support site.
+- Changes to the way cards are rendered that will break some add-ons - please
+see the post on the beta testing section of the support site.
+- Tweaks to the 'tag updated notes' feature (thanks to Erez)
+- Fix cards being sorted in wrong order when added after the note was created (thanks to Arthur)
+
 === Changes in 2.1.17beta8 (f4fb7319) ===
 
 - Minimum Python version is now 3.7.
