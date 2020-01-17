@@ -6,7 +6,7 @@ Writing Anki 2.1.x Add-ons
 <h1>Writing Anki 2.1.x Add-ons</h1>
 ++++++++++++++++++++++++++++++
 
-:filter_demo_url: https://github.com/ankitects/anki-addons/blob/master/code/field_filter_demo/__init__.py
+:demo_url: https://github.com/ankitects/anki-addons/blob/master/demos/
 
 
 = Other Versions =
@@ -70,6 +70,10 @@ You may need to offer some money before anyone becomes interested in helping you
 
 = IDE & Type Hints =
 
+NOTE: This section covers things that will be in Anki 2.1.20, which at the
+time of writing, is still in beta. If you are using an earlier Anki version,
+please skip this section.
+
 The free community edition of PyCharm has good out of the box support for Python:
 https://www.jetbrains.com/pycharm/. You can also use other editors like Visual
 Studio Code, but the instructions in this section will cover PyCharm.
@@ -129,9 +133,6 @@ def myfunc():
 gui_hooks.reviewer_did_show_answer.append(myfunc)
 -----
 
-(Please note that the hook in the above snippet will not be available until
-2.1.20 is released.)
-
 Then mypy will report:
 
 -----
@@ -149,10 +150,10 @@ def myfunc(card)
 The bulk of this document was written before type hints were introduced to
 Anki, so they are not shown in the code samples. It is possible to use type
 hints in your add-on code however, and if you are not a beginner to
-programming, they are recommended. An example add-on that uses hints is
+programming, they are recommended. Example add-ons that use type hints are
 available here:
 
-{filter_demo_url}
+{demo_url}
 
 = Add-on folders =
 
@@ -397,9 +398,12 @@ The distinction is necessary because some data types in Python can be
 modified directly, and others can only be modified by creating a changed
 copy (such as strings).
 
+[[new-hooks]]
 = New Style Hooks =
 
-For Anki 2.1.20 betas and later.
+NOTE: This section covers things that will be in Anki 2.1.20, which at the
+time of writing, is still in beta. If you are using an earlier Anki version,
+please skip this section.
 
 Imagine you wish to show a message each time the front side of a card is shown
 in the review screen. You've looked at the source code in reviewer.py, and seen
@@ -424,49 +428,28 @@ gui_hooks.reviewer_did_show_question.append(myfunc)
 Multiple add-ons can register for the same hook or filter - they will all be
 called in turn.
 
-Now say you wish to write an add-on that adds some text to every card when
-it is shown during review. An easy way to see all hooks at a glance is to look
-at pylib/tools/genhooks.py and qt/tools/genhooks_gui.py. You see the following
-in genhooks.py that looks promising:
+An easy way to see all hooks at a glance is to look at pylib/tools/genhooks.py
+and qt/tools/genhooks_gui.py.
 
------
-    Hook(
-        name="card_did_render",
-        args=[
-            "text: str",
-            "side: str",
-            "fields: Dict[str, str]",
-            "notetype: Dict[str, Any]",
-            "data: QAData",
-            "col: anki.storage._Collection",
-        ],
-        return_type="str",
-        legacy_hook="mungeQA",
-        doc="Can modify the resulting text after rendering completes.",
-    ),
------
+If you have set up type completion as described in an earlier section, you
+can also see the hooks in your IDE:
 
-We can see some documentation for this hook, and the arguments it takes.
++++++
+<video controls autoplay loop muted>
+ <source src="img/autocomplete.mp4" type="video/mp4">
+</video>
++++++
 
-To use this in your add-on, you'd use code like the following:
+In the above video, holding the command/ctrl key down while hovering will
+show a tooltip, including arguments and documentation if it exists. The
+argument names and types for the callback can be seen on the bottom line.
 
------
-from anki import hooks
-
-def myfunc(card_text, q_or_a, fields, notetype, data, col):
-  if q_or_a == "q":
-    return card_text + "Hello World!"
-
-hooks.card_did_render.append(myfunc)
------
-
-When Anki is restarted, you should see 'Hello World!' appear at the
-bottom of every question.
+For some examples of how the new hooks are used, please see {demo_url}.
 
 Most of the new style hooks will also call the legacy hooks (described below),
-so old add-ons will continue to work, but add-on authors are encouraged to
-update to the new style as it allows for code completion and better error
-checking.
+so old add-ons will continue to work for now, but add-on authors are
+encouraged to update to the new style as it allows for code completion, and
+better error checking.
 
 = Legacy Hook Handling =
 
