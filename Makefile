@@ -19,7 +19,7 @@ save:
 
 build: $(MAKO)
 	@echo building mako
-	@rsync -a *.mako *.png *.pdf *.html $(WEB)/docs/
+	@rsync -a *.mako *.png *.pdf *.html img $(WEB)/docs/
 
 $(TOC_FILES): TOC := 1
 
