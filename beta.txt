@@ -24,12 +24,26 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.20beta2 (c9a46268) ===
+
+- Anki will now check for add-on updates once a day.
+- Disabled add-ons are now included in the check as well.
+- If a user attempts to install an add-on that doesn't support the version
+they're on, Anki will now prevent them from doing so.
+- The 'max supported version' that add-on authors can specify in AnkiWeb
+is now used to prevent users from downloading add-ons that won't work on
+their Anki version, and to disable add-ons when they update to a new version.
+- Fix incorrect delay being logged when Hard is used on the first learning step
+in the V2 scheduler.
+- The editor no longer modifies percent-escaped text outside of image tags.
+- Fix an extra linebreak being left in a field when an image is attached
+to an empty field.
+
 === Changes in 2.1.20beta1 (fa564772) ===
 
-- A new hook system for add-ons - please see the post on the beta testing section
-of the support site.
 - Changes to the way cards are rendered that will break some add-ons - please
-see the post on the beta testing section of the support site.
+  see https://anki.tenderapp.com/discussions/beta-testing/1706-anki-2120-updates-to-card-template-rendering[here]
+- A new hook system for add-ons - please see https://anki.tenderapp.com/discussions/beta-testing/1704-anki-2120-updates-to-the-hook-system[here]
 - Tweaks to the 'tag updated notes' feature (thanks to Erez)
 - Fix cards being sorted in wrong order when added after the note was created (thanks to Arthur)
 
