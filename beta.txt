@@ -24,6 +24,36 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.20beta3 (95b497cc) ===
+
+- You can now use `{{tts en_US:Field}}` on your card templates to use the
+text to speech support built into Windows and macOS, changing the language
+code as necessary.
+- You can specify the voices you'd prefer - the first available one
+will be used. Eg. `{{tts ja_JP voices=Apple_Otoya,Microsoft_Haruka:Field}}`.
+The voices you specify must match the language.
+- In addition to the built in TTS, there is an example add-on that uses gTTS
+available here: https://ankiweb.net/shared/info/391644525
+- To see all available voices, use the following in the debug console:
+
+-----
+for p in aqt.sound.av_player.players:
+  if v := getattr(p, 'get_available_voices', None): pp(v())
+-----
+
+- Audio buttons are now shown on the card, and can be turned off in the
+preferences. They will show for both regular audio and text to speech.
+- Added shortcut keys in the review screen to pause and jump forward/backward
+5 seconds.
+- Anki now starts a new copy of mplayer for each audio file on Windows,
+which avoids the need to create temporary files. If you notice any problems
+related to this, please let me know.
+- Add-ons that modified the audio code may break with this update.
+- For add-on authors, some more examples using the new hook system are
+available on the following page, including ported versions of the clickable
+tags and additional card fields add-ons:
+https://github.com/ankitects/anki-addons/tree/master/demos
+
 === Changes in 2.1.20beta2 (c9a46268) ===
 
 - Anki will now check for add-on updates once a day.
