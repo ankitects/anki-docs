@@ -24,6 +24,13 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.20beta4 (98041059) ===
+
+- The night mode option now turns the interface dark as well. Please
+report any areas that don't display properly.
+- Fix mplayer window popping up on Windows.
+- Alter the way negated conditionals are handled in card generation.
+
 === Changes in 2.1.20beta3 (95b497cc) ===
 
 - You can now use `{{tts en_US:Field}}` on your card templates to use the
