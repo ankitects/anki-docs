@@ -391,8 +391,8 @@ their side effects, and may sometimes alter the objects they have been passed,
 such as inserting an extra item in a list.
 
 - "Filters" are functions that return their first argument, after maybe
-changing it. An example filter is one that takes the rendered card output,
-and adds something to it.
+changing it. An example filter is one that takes the text of a field during
+card display, and returns an altered version.
 
 The distinction is necessary because some data types in Python can be
 modified directly, and others can only be modified by creating a changed

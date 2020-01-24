@@ -24,11 +24,26 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.20beta5 (d428b3b4) ===
+
+- Fix issues loading mpv on Mac/Linux.
+- Replay buttons now appear in {{FrontSide}}.
+- Replay buttons are shown in card layout and preview screens, but
+are not yet clickable.
+- More changes to the card display code, which will break more
+add-ons I'm afraid.
+- The template hooks have been updated - please see
+https://github.com/ankitects/anki-addons/commits/master for required
+changes.
+- A few colour fixes for night mode.
+- A change from Arthur that fixes one issue that was breaking add-ons.
+- Invert LaTeX in night mode (thanks to zjosua).
+- Support specifying min/max versions in .ankiaddon files.
+
 === Changes in 2.1.20beta4 (98041059) ===
 
 - The night mode option now turns the interface dark as well. Please
-report any areas that don't display properly. The filtered deck
-colour and scrollbars are already on the todo list.
+report any areas that don't display properly.
 - Fix mplayer window popping up on Windows.
 - Alter the way negated conditionals are handled in card generation.
 
