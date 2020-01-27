@@ -24,6 +24,16 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.20beta6 (23f13a31) ===
+
+- TTS tags now accept a 'speed=1.0' option to control voice speed.
+- Adding {{tts-voices:}} to your template will show all available voices.
+- Replay audio buttons now clickable in card layout and preview screens.
+- Fix autoplay of audio in the preview screen.
+- Fix Anki filtering spaces out of pasted sound files.
+- Fix add-ons being marked as incompatible when they weren't.
+- Handle AnkiWeb's new support for multiple add-on versions.
+
 === Changes in 2.1.20beta5 (d428b3b4) ===
 
 - Fix issues loading mpv on Mac/Linux.
