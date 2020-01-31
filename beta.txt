@@ -24,6 +24,19 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.20beta7 (77912aa2/c70badcd) ===
+
+- Foreground and background colours in text are now ignored
+when pasting in night mode.
+- On macOS, the system theme will be used when dark mode is active.
+- Qt has been downgraded to 5.13 on macOS to facilitate the above.
+- The audio replay buttons are smaller by default, and can be styled using fill and stroke on '.replay-button svg [circle|path]'.
+- Night mode now also used .night_mode - if you notice any problems
+with this please let me know.
+- Disabled elastic scrolling in webviews to work around a Qt bug.
+- Progress dialogs no longer pop up immediately.
+- Minor night mode tweaks.
+
 === Changes in 2.1.20beta6 (23f13a31) ===
 
 - TTS tags now accept a 'speed=1.0' option to control voice speed.

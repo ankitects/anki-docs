@@ -2667,7 +2667,8 @@ examples:
  -cat :: finds notes without the word "cat".
  -cat -mouse :: finds notes with neither "cat" nor "mouse".
  -(cat or mouse) :: same as the above.
- "a dog" :: finds notes with the exact phrase "a dog" on them
+ "a dog" :: finds notes with the exact sequence of characters "a dog" on them,
+ such as "atta dog", but not "dog a" or "adog".
  -"a dog" :: finds notes without the exact phrase "a dog"
   d_g :: finds notes with d, <a letter>, g, like dog, dig, dug, and so on.
   d*g :: finds notes with d, <zero or more letters>, g, like dg, dog, dung, etc.
@@ -2839,10 +2840,11 @@ reviewing by clicking the "preview" button next to the search box. Note that
 this will not display any type answer fields on your cards, which makes it
 easier to preview cards quickly.
 
-Toolbar
+Menu
 -------
 
-Up the top of the browser window is the toolbar.
+Up the top of the browser window (or screen on a Mac) is the menu. You can also
+access it quickly by right clicking on command+clicking on the card list area.
 
 'Info' shows various information about the currently selected card, including
 its review history. For more information, see the <<stats,statistics>> section.
@@ -2898,7 +2900,7 @@ http://docs.python.org/library/re.html for the particular format Anki uses.
 Finding Duplicates
 ------------------
 
-You can use the Edit>Find Duplicates option to search for notes that have the
+You can use the Notes>Find Duplicates option to search for notes that have the
 same content. When you open the window, Anki will look at all of your note
 types and present a list of all possible fields. If you want to look for
 duplicates in the "Back" field, you'd select it from the list and then click
