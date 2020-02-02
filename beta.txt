@@ -24,7 +24,17 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
-=== Changes in 2.1.20beta7 (77912aa2/c70badcd) ===
+=== Changes in 2.1.20beta8 (5d91580c) ===
+
+- Emptying a filtered deck in the V2 scheduler no longer unsuspends suspended cards inside it.
+- Added an option in the preferences to not interrupt the currently playing audio when answering.
+- In night mode, the scrollbar style is now consistent in and out of webviews.
+- Lighter buttons and scrollbars in night mode.
+- Fix the white lines showing on macOS dark mode in the browse screen.
+- Fix some misaligned dialogs in night mode.
+- Fix building from a .tar.gz file.
+
+=== Changes in 2.1.20beta7 (77912aa2/c70badcd/a4764e2a) ===
 
 - Foreground and background colours in text are now ignored
 when pasting in night mode.
