@@ -820,6 +820,9 @@ The Voice section will only show options for your current language. To add
 voices for other languages, tap on "Rotor Languages", and after selecting
 another language, you will have a chance to download voices.
 
+Like regular audio, text to speech will not play automatically when your
+device's mute/vibrate switch is enabled.
+
 == Custom Fonts ==
 
 AnkiMobile allows you to use non-system fonts on your cards. To set them up,
