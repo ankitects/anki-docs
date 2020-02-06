@@ -1412,6 +1412,48 @@ line, you would use
 {{Field 2}}
 -----
 
+[[text-to-speech]]
+== Text to Speech ==
+
+NOTE: This feature requires Anki 2.1.20, or AnkiMobile 2.0.56. AnkiDroid
+does not currently support this method.
+
+To have Anki read the Front field in a US English voice, you can place
+the following in your card template:
+
+-----
+{{tts en_US:Front}}
+-----
+
+On Windows, MacOS, and iOS, Anki will use the OS's built in voices. On Linux,
+no voices are built in, but voices can be provided by add-ons, such as
+https://ankiweb.net/shared/info/391644525[this one].
+
+To see a list of all available languages/voices, place the following on your
+card template:
+
+-----
+{{tts-voices:}}
+-----
+
+If there are multiple voices that support your chosen language, you can
+specify desired voices in a list, and Anki will choose the first available
+voice. For example:
+
+-----
+{{tts ja_JP voices=Apple_Otoya,Microsoft_Haruka:Field}}
+-----
+
+This would use Otoya when on an Apple device, and Haruka when on a Windows PC.
+
+Specifing a different speed is possible in some TTS implementations:
+
+-----
+{{tts fr_FR speed=0.8:SomeField}}
+-----
+
+Both speed and voices are optional, but the language must be included.
+
 [[cardstyling]]
 == Card Styling ==
 
