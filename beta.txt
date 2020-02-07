@@ -24,6 +24,11 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.20beta9 (1fbd925f) ===
+
+- Standard Windows and Linux builds updated to latest Qt.
+- More legible colours in the stats screens in night mode.
+
 === Changes in 2.1.20beta8 (5d91580c) ===
 
 - Emptying a filtered deck in the V2 scheduler no longer unsuspends suspended cards inside it.
