@@ -1454,6 +1454,18 @@ Specifing a different speed is possible in some TTS implementations:
 
 Both speed and voices are optional, but the language must be included.
 
+On a Mac, you can customize the available voices:
+
+- Open the System Preferences screen.
+- Click on Accessibility.
+- Click on Speech.
+- Click on the system voice dropdown, and choose Customize.
+
+Some voices sound better than others, so experiment to choose the one you
+prefer. Please note that the Siri voice can only be used by Apple apps. Once
+you've installed new voices, you'll need to restart Anki for the new voices
+to become available.
+
 [[cardstyling]]
 == Card Styling ==
 
@@ -1618,6 +1630,23 @@ install them on your computer or mobile device. Please see the
 
 Please see the <<cardstyling,card styling>> section for more information on the
 styling options you can use here.
+
+[[audio-replay-buttons]]
+== Audio Replay Buttons ==
+
+When audio or text to speech is included on your cards, Anki will show buttons
+you can click on to replay the audio.
+
+If you prefer not to see the buttons, you can hide them in the preferences screen.
+
+You can customize their appearance in your card styling, for example, to make
+them smaller and coloured, you could use the following:
+
+-----
+.replay-button { width: 20px; }
+.replay-button svg circle { fill: blue; }
+.replay-button svg path { stroke: white; fill: green; }
+-----
 
 == Hint Fields ==
 
@@ -4356,6 +4385,15 @@ Anki cards:
 -----
 
 == LaTeX Conflicts ==
+
+NOTE: As of Anki 2.1.20 / AnkiMobile 2.0.56, this workaround is no longer required,
+as `{{field}}` text inside fields no longer causes problems. If you need to
+support AnkiDroid or older Anki versions and want to keep using this syntax,
+please make sure you place the `{{=<% %>=}}` string at the very top of your
+front and back template, as recent Anki versions will not recognize it anywhere
+but the start.
+
+For older versions:
 
 It's not uncommon for {{ and }} to pop up in LaTeX code when writing
 mathematical equations. To ensure that your LaTeX equations don't conflict

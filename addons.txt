@@ -101,7 +101,7 @@ Click on Python Console in the bottom left and type the following in:
 -----
 import glob, subprocess
 
-subprocess.check_call(["pip", "install", "mypy", "*glob.glob("*.whl")])
+subprocess.check_call(["pip", "install", "mypy", *glob.glob("*.whl")])
 -----
 
 Once it completes, you should now have code completion. Try it out by

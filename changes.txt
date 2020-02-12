@@ -5,6 +5,73 @@
 
 [[latestv21]]
 
+= Changes in 2.1.20 =
+
+Release TBA.
+
+Template changes:
+
+The way Anki combines your card templates and fields has been updated. Many
+users will not notice a difference, but if you encounter error messages inside
+the review screen and opening and closing the Cards screen from the editing
+area does not resolve the issue,
+please see https://anki.tenderapp.com/kb/problems/card-template-has-a-problem[this support page].
+
+Add-ons that alter the way cards are shown may
+https://anki.tenderapp.com/discussions/beta-testing/1706-anki-2120-updates-to-card-template-rendering[need to be updated].
+
+Audio changes:
+
+- Text to speech is now https://apps.ankiweb.net/docs/manual.html#text-to-speech[supported in card templates].
+- Audio buttons are now shown on the card, and can be turned off in the
+preferences. They will show for both regular audio and text to speech.
+- You can https://apps.ankiweb.net/docs/manual.html#audio-replay-buttons[customize the size and colour].
+- Added shortcut keys in the review screen to pause and jump forward/backward 5 seconds.
+- Anki now starts a new copy of mplayer for each audio file on Windows,
+which avoids the need to create temporary files.
+- Added an option in the preferences to not interrupt the currently playing audio when answering.
+- Fix multiple spaces in filenames from getting truncated when pasting sound files.
+
+Night mode:
+
+- The night mode option in the preferences screen now turns the interface
+dark as well.
+- On macOS, when the system is in dark mode, Anki will switch to night mode
+automatically.
+- Invert LaTeX in night mode (thanks to zjosua).
+- Some of the colours in areas like the graphs could be improved - pull
+requests with included screenshots of the changes would be appreciated.
+
+Add-on changes:
+
+- Anki will now check for add-on updates automatically once a day.
+- Disabled add-ons are now included in the check as well.
+- Add-on authors can specify the minimum and maximum Anki version they support, and add-ons will be automatically
+disabled when running on an unsupported Anki version.
+- Add-on authors can now upload different add-on versions for different Anki versions, and Anki will download the correct one.
+- A new hook system for add-ons - please see https://anki.tenderapp.com/discussions/beta-testing/1704-anki-2120-updates-to-the-hook-system[here].
+- For add-on authors, some more examples using the new hook system are
+available on the following page, including ported versions of the clickable
+tags and additional card fields add-ons:
+https://github.com/ankitects/anki-addons/tree/master/demos
+
+Other changes:
+
+- Added the ability to export selected notes from the Browse screen (thanks to Arthur).
+- Updated to a newer toolkit.
+- Emptying a filtered deck in the V2 scheduler no longer unsuspends suspended cards inside it.
+- Fix incorrect delay being logged when Hard is used on the first learning step
+in the V2 scheduler.
+- The editor no longer modifies percent-escaped text outside of image tags.
+- Fix an extra linebreak being left in a field when an image is attached
+to an empty field.
+- Tweaks to the 'tag updated notes' feature (thanks to Erez)
+- Fix cards being sorted in wrong order when added after the note was created (thanks to Arthur)
+- Disabled elastic scrolling in webviews to work around a Qt bug.
+- Don't filter em/strong tags when pasting.
+- Fix error when double-clicking the open profile button.
+- Constrain image width in editor to the field width.
+
 = Changes in 2.1.19 =
 
 Released 2020-01-16, build 3c8690ae.

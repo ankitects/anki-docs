@@ -24,6 +24,21 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.20beta10 (d0284f75) ===
+
+For a full list of changes since 2.1.19, please see https://apps.ankiweb.net/docs/changes.html
+
+- Added the ability to export selected notes from the Browse screen, thanks to Arthur.
+- Don't filter em/strong tags when pasting.
+- Fix rendering of question/answer column in browse screen.
+- Clearer error when conditional replacement closing tags are switched.
+- Show whether template errors occurred on the front or back template.
+- Drawings done in AnkiMobile now appear correctly in night mode.
+- Work around HTML editor sometimes failing to appear on macOS.
+- Fix error when double-clicking the open profile button.
+- Constrain image width in editor to the field width.
+- Tweaks to replay audio button alignment/outline.
+
 === Changes in 2.1.20beta9 (1fbd925f) ===
 
 - Standard Windows and Linux builds updated to latest Qt.
