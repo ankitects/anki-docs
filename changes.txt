@@ -7,7 +7,7 @@
 
 = Changes in 2.1.20 =
 
-Release TBA.
+Released 2020-02-14, build 47a1bf8b.
 
 Template changes:
 
