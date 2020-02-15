@@ -70,9 +70,8 @@ You may need to offer some money before anyone becomes interested in helping you
 
 = IDE & Type Hints =
 
-NOTE: This section covers things that will be in Anki 2.1.20, which at the
-time of writing, is still in beta. If you are using an earlier Anki version,
-please skip this section.
+NOTE: This section covers things that are in Anki 2.1.20. If you are using
+an earlier Anki version, please skip this section.
 
 The free community edition of PyCharm has good out of the box support for Python:
 https://www.jetbrains.com/pycharm/. You can also use other editors like Visual
@@ -401,9 +400,8 @@ copy (such as strings).
 [[new-hooks]]
 = New Style Hooks =
 
-NOTE: This section covers things that will be in Anki 2.1.20, which at the
-time of writing, is still in beta. If you are using an earlier Anki version,
-please skip this section.
+NOTE: This section covers things that are in Anki 2.1.20. If you are using an
+earlier Anki version, please skip this section.
 
 Imagine you wish to show a message each time the front side of a card is shown
 in the review screen. You've looked at the source code in reviewer.py, and seen

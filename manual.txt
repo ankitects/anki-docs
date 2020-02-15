@@ -2912,7 +2912,7 @@ this will not display any type answer fields on your cards, which makes it
 easier to preview cards quickly.
 
 Menu
--------
+----
 
 Up the top of the browser window (or screen on a Mac) is the menu. You can also
 access it quickly by right clicking on command+clicking on the card list area.
