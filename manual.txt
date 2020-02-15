@@ -2938,7 +2938,7 @@ remove individual cards, as individual cards are controlled by the
 Find and Replace
 ----------------
 
-This option (Edit->Find and Replace...) allows you to replace text in the notes
+This option (Notes->Find and Replace...) allows you to replace text in the notes
 you have selected. The regular expression option allows you to perform complex
 replacements. For example, given the following text in a field:
 
@@ -2971,7 +2971,7 @@ http://docs.python.org/library/re.html for the particular format Anki uses.
 Finding Duplicates
 ------------------
 
-You can use the Notes>Find Duplicates option to search for notes that have the
+You can use the Notes->Find Duplicates option to search for notes that have the
 same content. When you open the window, Anki will look at all of your note
 types and present a list of all possible fields. If you want to look for
 duplicates in the "Back" field, you'd select it from the list and then click
