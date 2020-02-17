@@ -24,6 +24,49 @@ https://anki.tenderapp.com/discussions/beta-testing
 
 == Detailed changes ==
 
+=== Changes in 2.1.21beta1 (683b7983) ===
+
+Before trying this beta, please back up your collection and media files,
+as a lot has changed under the hood. Please keep an eye on the contents
+of your media folder until this update receives more testing.
+
+Media syncing improvements:
+
+- Media syncing now happens in the background, so you can continue using
+Anki while the media sync completes.
+- Aside from syncing at open and close, Anki will sync any media changes
+every 15-20 minutes.
+- You can click on the sync button while the spinner is active to monitor
+progress.
+- Long filenames and problematic characters should be handled smoothly now,
+instead of causing syncing errors.
+- Anki should no longer sometimes forget to download files when a media
+sync fails due to network errors.
+- When media files are added within Anki, Anki now marks them
+in the database immediately, which can make things faster for people with
+slower disks if they are not modifying the media folder externally.
+
+Media check improvements:
+
+- The Check Media function now shows progress, and can be interrupted.
+- There is now a separate button to generate missing LaTeX.
+- If LaTeX fails to build, the problem card will be revealed in the browse
+screen.
+- When Anki finds files that are too long or would cause errors on some
+operating systems, it will automatically rename them and update your notes
+to point to the new filename.
+
+Both media sync and the media check now place deleted files in a media.trash
+folder inside your profile, instead of placing the files in the system trash.
+Any files that have been sitting in that folder for a week or more will be
+deleted permanently when you next run a media check.
+
+Other changes:
+
+- Updates to the translation infrastructure - please see https://anki.tenderapp.com/discussions/announcements/138-more-updates-to-ankis-translations
+- Improvements to the readability of the scheduling code (thanks to Arthur)
+- More hooks for add-on authors (thanks to Arthur & Aristotelis)
+
 === Changes in 2.1.20beta10 (d0284f75) ===
 
 For a full list of changes since 2.1.19, please see https://apps.ankiweb.net/docs/changes.html
