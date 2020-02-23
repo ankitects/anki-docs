@@ -1013,12 +1013,8 @@ The following will not work in AnkiMobile before 2.0.39:
 
 == Play Buttons ==
 
-You can change the size of the play buttons by placing the following in your
-card template, adjusting 32 to suit.
-
------
-img.playImage { width: 32px; height: 32px; }
------
+To change the styling of the audio replay buttons, please see
+https://apps.ankiweb.net/docs/manual.html#audio-replay-buttons
 
 == Image Resizing ==
 
@@ -1051,134 +1047,10 @@ a debug log, please follow the following steps:
 = Translating AnkiMobile =
 
 If you'd like to help translate AnkiMobile into your native language, your
-help would be most appreciated! Please drop us a line on the
-https://anki.tenderapp.com/discussions/private[support site], indicating which
-language(s) you'd like to translate, and we can send you an invite.
+help would be most appreciated! Please see the following page for
+more information:
 
-== Suggestions & Copyright ==
-
-The translation site we use provides automatic suggestions for translations
-based on the text people have entered into other projects. This makes writing
-translations easier, but also requires us to contribute any translations we
-make back to other projects as well. For this reason, we ask that you release
-any contributions you make on the translation site into the public domain.
-
-== Glossary ==
-
-When you open the translations site, you should see two items to translate:
-"glossary", and "interface". The "glossary" is a small list of important terms
-that are frequently used in Anki's interface, and the "interface" contains all
-the text used in AnkiMobile.
-
-It's best to start on the glossary first, as it's small, and the terms are
-frequently used. The glossary contains terms like:
-
------
-deck
-
-Context: From "card deck" - a group of cards.
------
-
-You only need to translate the word or phrase at the top - please do not
-translate the context part.
-
-Once the glossary is done, you can start on the interface. Any glossary terms
-that appear in the interface will be underlined, and you can click on them to
-insert the glossary translation. This helps keep translations consistent.
-
-== Context ==
-
-For each phrase that requires translation, you can see some context to help
-understand where the phrase will be used. For example, for the phrase "A big
-thanks to everyone who has provided translations, bug reports, and suggestions",
-the context might appear as:
-
-~~~~~
-src/i18n/en.lproj/Localizable.strings
-thanks-contributors
-About Screen
-~~~~~
-
-- The first line can be ignored.
-- The second line may be the same as the phrase, or may be a short summary.
-- The third line lists the parts of AnkiMobile the phrase is used in, and
-may sometimes include extra comments to help.
-
-Some parts that may need more explanation:
-
-Actions, Actions Manager :: These are the various functions you can access
-from the tools screen, or by assigning them to a tap, swipe or the top bar.
-Actions have a normal description, and a short description that is used when
-they are placed in the top bar - for example, `Show Answer` becomes `S.Ans`
-when shown in its short form. When translating, please try to use a
-translation that is about the same length.
-
-Edit Screen :: The screen shown when using the Add and Edit actions.
-
-Standard Models :: Note types like "Basic (and reversed card)"
-
-Syncer :: Part of the sync feature.
-
-Utils :: Utilities used by various parts of AnkiMobile's code.
-
-== Formatting ==
-
-When translating, some phrases contain special markers in the text, which
-indicate extra text will be put in the marker's place. For example, a string
-like `Cards: %d` or `Error: %@` means that the %d/%@ part will be replaced
-with some other value, such as `Cards: 10`, or `Error: file not found`. When
-writing your translation, please leave the special markers as they are, such as
-`カード: %d`.
-
-Sometimes the text will contain more than one replacement marker, like `%1$d
-of %2$d` to represent something like `2 of 5`. You can reorder the markers if
-it makes more sense in your language, eg `%2$dの%1$d` to represent something
-like `5の2`.
-
-In some languages, words change depending on the associated number, such as
-"1 dog" vs "2 dogs". You may be prompted to enter different words for "one" and
-"many" for some phrases.
-
-When translating numbered/plural items, please translate all cases, or none.
-If you partially translate a numbered item, it will cause problems.
-
-The ampersand symbol (`&`) needs to be written as `&nbsp;`.
-
-== Getting Help ==
-
-If you're not sure how something should be translated, there are a couple of
-things you can do:
-
-- Clicking on "TM and MT suggestions" will show how similar text has been
-translated in other projects on the translation site in the past. If the text
-looks correct, you can click on it to automatically add it as a translation.
-
-- If the text has been translated in another language already, you can click on
-"Other Languages" to see how it was translated in the other language.
-
-- If your browser window is wide enough, there is a comments section on the right,
-where you can post questions, and see what other people have said.
-
-== Testing ==
-
-Each time a new AnkiMobile beta is released, it will include any translation
-changes that were made since the last time. Please give the betas a try, so
-you can see how your translations appear in the app. If you're not already a
-beta tester, a signup link will be included with the invite to the beta
-testing site.
-
-When translating, please try to keep the translations about the same length as
-the original English text. If it is not possible, and you find that text is
-not appearing properly in a beta (such as two labels overlapping), please
-report the issue on the support site.
-
-When testing the betas, if you notice that some text is not translatable,
-please report this on the support site so it can be fixed.
-
-Thank you again for your help!
-
-
-
+https://ankitects.github.io/translating/#/
 
 pass:[
 <hr>
