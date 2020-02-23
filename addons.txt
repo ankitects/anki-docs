@@ -1,1 +1,3 @@
+= Moved =
+
 This page has moved to https://ankitects.github.io/addon-docs/#/
