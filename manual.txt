@@ -1643,7 +1643,7 @@ You can customize their appearance in your card styling, for example, to make
 them smaller and coloured, you could use the following:
 
 -----
-.replay-button { width: 20px; }
+.replay-button svg { width: 20px; height: 20px; }
 .replay-button svg circle { fill: blue; }
 .replay-button svg path { stroke: white; fill: green; }
 -----
