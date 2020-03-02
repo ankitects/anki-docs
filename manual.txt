@@ -1474,7 +1474,7 @@ styling cards] on YouTube. The video shows Anki 2.0's interface, but the concept
 are largely the same.
 
 In between the front and back template is the card styling. Here you can change
-the background colour of the card, the default font, the text alignment, and so
+the background color of the card, the default font, the text alignment, and so
 on.
 
 NOTE: This is 'not' where you change the font for type answer
