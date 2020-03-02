@@ -2200,16 +2200,8 @@ for more information.
 
 When using macOS in dark mode, recent Anki versions will automatically
 switch to night mode. If you want to force Anki to use light mode while
-using the rest of your system in dark mode, you can open Terminal.app,
-and paste the following line, hitting enter at the end.
-
------
-defaults write net.ankiweb.dtop NSRequiresAquaSystemAppearance -bool yes
------
-
-After doing so, please start Anki again, and make sure night mode is
-disabled in the preferences screen. If you want to undo this change,
-change 'yes' to 'no' in the above command.
+using the rest of your system in dark mode, please install Anki 2.1.21beta3
+or later, and install the -alternate version rather than the -standard one.
 
 The *Anki 2.1 scheduler* is documented here:
 https://anki.tenderapp.com/kb/anki-ecosystem/experiment-scheduling-changes-in-anki-21
