@@ -1501,10 +1501,11 @@ The standard options available to you are:
  background-color ::
   The color of the card background.
 
-NOTE: Some CSS properties as 'font-family' and 'font-size' may be inline styles for
-element components as the ID seletor '#typeans'. Therefore, to override them,
-it is required to add the '!important' keyword to override the inline styles 
-(which have the highest priority). For example: '#typeans { font-size: 50px !important; }'
+NOTE: Some CSS properties as 'font-size' may be inline styles for element components.
+Therefore, to override them, it is required to add the '!important' keyword to
+override the inline styles (which have the highest priority). For example:
+'#typeans { font-size: 50px !important; }'. Instead of using CSS, you can also
+change the 'font-size' and 'font-family' by <<fields,customizing fields>>.
 
 Any CSS can be placed in the styling section – advanced users may wish to do
 things like add a background image or gradient, for example. If you’re
