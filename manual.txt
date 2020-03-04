@@ -1357,7 +1357,8 @@ code#typeans { font-family: "myfontname"; }
 
 Advanced users can override the default type-answer colours with the css
 classes 'typeGood', 'typeBad' and 'typeMissed'. AnkiMobile supports 'typeGood'
-and 'typeBad', but not 'typeMissed'.
+and 'typeBad', but not 'typeMissed'. For other CSS style selectors, you can see
+some styling file as '\Anki\aqt_data\web\reviewer.css' shipped with Anki.
 
 It is also possible to type in the answer for cloze deletion cards. To do this,
 add \{\{type:cloze:Text}} to both the front and back template, so the back looks
