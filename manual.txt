@@ -1357,7 +1357,7 @@ code#typeans { font-family: "myfontname"; }
 
 Which will affect the following HTML for the answer comparison:
 -----
-res = "<div><code id=typeans>" + res + "</code></div>"
+<code id=typeans>...</code>
 -----
 
 Advanced users can override the default type-answer colours with the css
