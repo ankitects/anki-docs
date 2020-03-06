@@ -1348,11 +1348,16 @@ it is not useful for comparing against a field that is comprised on multiple
 lines.
 
 Anki uses a monospaced font for the answer comparison so that the “provided”
-and “correct” sections line up. If you wish to override the font, you can put
-the following at the bottom of your styling section:
+and “correct” sections line up. If you wish to override the font for the answer 
+comparison, you can put the following at the bottom of your styling section:
 
 -----
 code#typeans { font-family: "myfontname"; }
+-----
+
+Which will affect the following HTML for the answer comparison:
+-----
+res = "<div><code id=typeans>" + res + "</code></div>"
 -----
 
 Advanced users can override the default type-answer colours with the css
