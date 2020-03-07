@@ -1,3 +1,7 @@
 = Moved =
 
 Please see https://docs.ankiweb.net
+
++++++
+<script src="redir.js">
++++++
